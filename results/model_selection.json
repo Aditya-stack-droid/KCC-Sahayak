@@ -1,0 +1,86 @@
+{
+  "results": {
+    "emb_lr": {
+      "silver": 0.8972,
+      "gold": 0.7333,
+      "gold_en": 0.9,
+      "gold_hinglish": 0.5,
+      "gold_hi": 0.8,
+      "hinglish_perturbed": 0.48,
+      "selection_score": 0.7693
+    },
+    "word_svc": {
+      "silver": 0.9133,
+      "gold": 0.8133,
+      "gold_en": 0.9,
+      "gold_hinglish": 0.86,
+      "gold_hi": 0.68,
+      "hinglish_perturbed": 0.82,
+      "selection_score": 0.8283
+    },
+    "char_svc": {
+      "silver": 0.9254,
+      "gold": 0.8733,
+      "gold_en": 0.88,
+      "gold_hinglish": 0.88,
+      "gold_hi": 0.86,
+      "hinglish_perturbed": 0.856,
+      "selection_score": 0.8804
+    },
+    "combo_lr_C10_w1": {
+      "silver": 0.9355,
+      "gold": 0.9,
+      "gold_en": 0.94,
+      "gold_hinglish": 0.9,
+      "gold_hi": 0.86,
+      "hinglish_perturbed": 0.884,
+      "selection_score": 0.9049
+    },
+    "combo_lr_C10_w2": {
+      "silver": 0.9355,
+      "gold": 0.8533,
+      "gold_en": 0.94,
+      "gold_hinglish": 0.8,
+      "gold_hi": 0.82,
+      "hinglish_perturbed": 0.78,
+      "selection_score": 0.8689
+    },
+    "combo_lr_C10_w3": {
+      "silver": 0.9274,
+      "gold": 0.82,
+      "gold_en": 0.9,
+      "gold_hinglish": 0.74,
+      "gold_hi": 0.82,
+      "hinglish_perturbed": 0.704,
+      "selection_score": 0.8379
+    },
+    "combo_lr_C30_w1": {
+      "silver": 0.9395,
+      "gold": 0.8933,
+      "gold_en": 0.94,
+      "gold_hinglish": 0.88,
+      "gold_hi": 0.86,
+      "hinglish_perturbed": 0.876,
+      "selection_score": 0.9039
+    },
+    "combo_lr_C30_w2": {
+      "silver": 0.9355,
+      "gold": 0.8533,
+      "gold_en": 0.94,
+      "gold_hinglish": 0.8,
+      "gold_hi": 0.82,
+      "hinglish_perturbed": 0.76,
+      "selection_score": 0.8639
+    },
+    "combo_lr_C30_w3": {
+      "silver": 0.9355,
+      "gold": 0.8333,
+      "gold_en": 0.9,
+      "gold_hinglish": 0.76,
+      "gold_hi": 0.84,
+      "hinglish_perturbed": 0.716,
+      "selection_score": 0.8479
+    }
+  },
+  "selected": "combo_lr_C10_w1"
+}

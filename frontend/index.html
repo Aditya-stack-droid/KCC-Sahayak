@@ -1,0 +1,326 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>KCC-Sahayak | Voice-First KCC Triage</title>
+<link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>🌾</text></svg>">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;500;600;700;800&family=Inter:wght@400;500;600;700&family=Noto+Sans+Devanagari:wght@400;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="assets/css/styles.css">
+</head>
+<body>
+<div class="bg-decor" aria-hidden="true"></div>
+
+<!-- NAV -->
+<header class="nav" id="nav">
+  <div class="nav-inner">
+    <a href="#home" class="brand"><span class="brand-mark">🌾</span><span class="brand-text">KCC-<span class="accent">Sahayak</span></span></a>
+    <nav class="nav-links" id="navLinks">
+      <a href="#home">Home</a>
+      <a href="#demo">Live Demo</a>
+      <a href="#advisor">Advisor Console <span class="nav-count" id="navPending" hidden>0</span></a>
+      <a href="#operations">Operations</a>
+      <a href="#evaluation">Evaluation</a>
+      <a href="#system">System</a>
+      <a href="#about">About</a>
+    </nav>
+    <div class="nav-actions">
+      <span class="lang-pill" title="The app understands English, Roman-script Hindi and Devanagari Hindi">EN · Hinglish · <span lang="hi">हिं</span></span>
+      <button id="themeToggle" class="icon-btn" title="Toggle theme" aria-label="Toggle dark/light theme">
+        <svg class="icon-sun" viewBox="0 0 24 24" width="18" height="18"><path fill="currentColor" d="M12 7a5 5 0 100 10 5 5 0 000-10zm0-5a1 1 0 011 1v2a1 1 0 11-2 0V3a1 1 0 011-1zm0 18a1 1 0 011 1v2a1 1 0 11-2 0v-2a1 1 0 011-1zM4.22 4.22a1 1 0 011.42 0l1.41 1.41A1 1 0 115.64 7.05L4.22 5.64a1 1 0 010-1.42zm12.73 12.73a1 1 0 011.41 0l1.42 1.41a1 1 0 11-1.42 1.42l-1.41-1.42a1 1 0 010-1.41zM1 12a1 1 0 011-1h2a1 1 0 110 2H2a1 1 0 01-1-1zm18 0a1 1 0 011-1h2a1 1 0 110 2h-2a1 1 0 01-1-1zM4.22 19.78a1 1 0 010-1.41l1.42-1.42a1 1 0 111.41 1.42l-1.41 1.41a1 1 0 01-1.42 0zM16.95 5.64a1 1 0 010-1.42l1.41-1.41a1 1 0 111.42 1.42l-1.42 1.41a1 1 0 01-1.41 0z"/></svg>
+        <svg class="icon-moon" viewBox="0 0 24 24" width="18" height="18"><path fill="currentColor" d="M21 12.79A9 9 0 1111.21 3 7 7 0 0021 12.79z"/></svg>
+      </button>
+      <button id="navToggle" class="icon-btn nav-burger" aria-label="Toggle menu" aria-expanded="false">
+        <svg viewBox="0 0 24 24" width="18" height="18"><path fill="currentColor" d="M3 6h18v2H3V6zm0 5h18v2H3v-2zm0 5h18v2H3v-2z"/></svg>
+      </button>
+    </div>
+  </div>
+</header>
+
+<!-- HERO -->
+<section class="hero" id="home">
+  <div class="hero-media">
+    <img src="assets/images/hero-farmers.jpg" alt="Farmers in an Indian field" loading="eager">
+    <div class="hero-scrim"></div>
+  </div>
+  <div class="hero-content">
+    <p class="eyebrow">Kisan Call Centre &middot; voice-first query triage</p>
+    <h1>Every farmer call deserves<br><span class="accent">an instant answer —</span><br>or an honest human.</h1>
+    <p class="hero-sub">
+      KCC-Sahayak listens to a farmer's query in English, Hinglish or Hindi, works out what is being asked,
+      finds the closest verified answer from past Kisan Call Centre resolutions, and decides — transparently —
+      whether to answer at once or hand the call to a real Farm Tele Advisor.
+    </p>
+    <div class="hero-cta">
+      <a href="#demo" class="btn btn-primary">Try the live pipeline</a>
+      <a href="#evaluation" class="btn btn-ghost">See the honest numbers</a>
+    </div>
+    <div class="hero-stats">
+      <div class="hstat"><span class="hstat-num" data-stat="corpus">—</span><span class="hstat-label">logged Q/A pairs searched</span></div>
+      <div class="hstat"><span class="hstat-num" data-stat="silver_acc">—</span><span class="hstat-label">intent accuracy, held-out calls</span></div>
+      <div class="hstat"><span class="hstat-num" data-stat="gold_acc">—</span><span class="hstat-label">on independent EN / Hinglish / Hindi queries</span></div>
+      <div class="hstat"><span class="hstat-num" data-stat="sel_acc">—</span><span class="hstat-label">accuracy of the auto-answered subset</span></div>
+    </div>
+  </div>
+</section>
+
+<!-- LIVE DEMO -->
+<section class="section" id="demo">
+  <div class="section-head">
+    <p class="section-eyebrow">Live demo</p>
+    <h2>Ask it the way a farmer would</h2>
+    <p class="section-sub">Speak, or type in English, Hinglish or Devanagari Hindi. Every stage below is the real pipeline running on this machine — the result is logged, and anything escalated lands in the Advisor Console.</p>
+  </div>
+
+  <div class="demo-grid">
+    <div class="panel input-panel">
+      <div class="panel-title">1 &middot; Ask a question</div>
+      <div class="mic-wrap">
+        <button id="micBtn" class="mic-btn" aria-label="Record voice query">
+          <svg viewBox="0 0 24 24" width="28" height="28"><path fill="currentColor" d="M12 15a3 3 0 003-3V6a3 3 0 00-6 0v6a3 3 0 003 3zm5-3a5 5 0 01-10 0H5a7 7 0 006 6.92V21h2v-2.08A7 7 0 0019 12h-2z"/></svg>
+        </button>
+        <canvas id="waveCanvas" width="220" height="56"></canvas>
+      </div>
+      <p class="mic-status" id="micStatus">Tap the microphone to speak</p>
+
+      <div class="divider"><span>or type</span></div>
+      <textarea id="textInput" placeholder="e.g. mere gehu mein peela rust aa gaya hai, kya spray karun?" rows="3"></textarea>
+
+      <div class="chip-tabs" role="tablist" aria-label="Sample language">
+        <button class="chip-tab active" data-style="en" role="tab">English</button>
+        <button class="chip-tab" data-style="hinglish" role="tab">Hinglish</button>
+        <button class="chip-tab" data-style="hi" role="tab">हिंदी</button>
+      </div>
+      <div class="sample-chips" id="sampleChips" aria-label="Sample queries"></div>
+
+      <button id="submitBtn" class="btn btn-primary btn-block"><span id="submitBtnText">Run through pipeline</span></button>
+
+      <details class="threshold-box">
+        <summary>Safety gate settings</summary>
+        <div class="threshold-row">
+          <label for="confSlider">Intent confidence threshold <span id="confVal">0.70</span></label>
+          <input type="range" id="confSlider" min="0" max="1" step="0.05" value="0.70">
+        </div>
+        <div class="threshold-row">
+          <label for="simSlider">Retrieval similarity threshold <span id="simVal">0.55</span></label>
+          <input type="range" id="simSlider" min="0" max="1" step="0.05" value="0.55">
+        </div>
+        <label class="check"><input type="checkbox" id="screenToggle" checked> Screen the retrieved answer for dosage / chemical advice</label>
+        <p class="threshold-hint">Tighten the thresholds to auto-answer less but more safely. This is the accuracy-vs-automation trade-off the project is built around. High-stakes categories always escalate regardless.</p>
+      </details>
+    </div>
+
+    <div class="panel pipeline-panel">
+      <div class="panel-title">2 &middot; Watch it move through the pipeline</div>
+      <div class="pipeline-flow" id="pipelineFlow">
+        <div class="stage" data-stage="asr">
+          <div class="stage-icon">🎙️</div>
+          <div class="stage-body">
+            <div class="stage-name">Speech-to-text <span class="stage-tag">Whisper small</span></div>
+            <div class="stage-out" data-out="asr">Waiting for input…</div>
+          </div>
+          <div class="stage-status"></div>
+        </div>
+        <div class="stage-connector"></div>
+        <div class="stage" data-stage="intent">
+          <div class="stage-icon">🧠</div>
+          <div class="stage-body">
+            <div class="stage-name">Intent <span class="stage-tag" id="intentTag">multilingual encoder + classifier</span></div>
+            <div class="stage-out" data-out="intent">—</div>
+            <div class="top3" id="intentTop3"></div>
+          </div>
+          <div class="stage-status"></div>
+        </div>
+        <div class="stage-connector"></div>
+        <div class="stage" data-stage="entities">
+          <div class="stage-icon">🌱</div>
+          <div class="stage-body">
+            <div class="stage-name">Entities <span class="stage-tag">crop / pest glossary</span></div>
+            <div class="stage-out" data-out="entities">—</div>
+          </div>
+          <div class="stage-status"></div>
+        </div>
+        <div class="stage-connector"></div>
+        <div class="stage" data-stage="retrieval">
+          <div class="stage-icon">🔎</div>
+          <div class="stage-body">
+            <div class="stage-name">Retrieval <span class="stage-tag">hybrid dense + TF-IDF</span></div>
+            <div class="stage-out" data-out="retrieval">—</div>
+            <div class="conf-bar"><div class="conf-fill" data-fill="retrieval"></div></div>
+          </div>
+          <div class="stage-status"></div>
+        </div>
+        <div class="stage-connector"></div>
+        <div class="stage" data-stage="gate">
+          <div class="stage-icon">🚦</div>
+          <div class="stage-body">
+            <div class="stage-name">Safety gate</div>
+            <div class="stage-out" data-out="gate">—</div>
+          </div>
+          <div class="stage-status"></div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="decision-card" id="decisionCard" hidden>
+    <div class="decision-badge" id="decisionBadge"></div>
+    <div class="decision-body">
+      <h3 id="decisionTitle"></h3>
+      <p id="decisionReason"></p>
+      <div id="answerBlock" class="answer-block" hidden>
+        <div class="answer-label">Suggested answer</div>
+        <p id="answerText"></p>
+        <div class="answer-actions">
+          <button class="btn btn-ghost btn-sm" id="copyAnswerBtn">Copy</button>
+          <button class="btn btn-ghost btn-sm" id="fbUp" aria-label="Helpful">👍 Helpful</button>
+          <button class="btn btn-ghost btn-sm" id="fbDown" aria-label="Not helpful">👎 Not helpful</button>
+        </div>
+      </div>
+      <div id="escalateBlock" class="escalate-block" hidden>
+        <p>This query is now waiting in the <a href="#advisor">Advisor Console</a>. When an advisor answers it, the answer is added to the system's memory.</p>
+      </div>
+      <details class="candidates" id="candidatesBox">
+        <summary>Closest logged questions</summary>
+        <ol id="candidatesList"></ol>
+      </details>
+    </div>
+  </div>
+
+  <div class="history-wrap">
+    <div class="panel-title">Recent queries (from the log)</div>
+    <div id="historyList" class="history-list"><p class="empty-hint">Queries you run will appear here.</p></div>
+  </div>
+</section>
+
+<!-- ADVISOR CONSOLE -->
+<section class="section section-alt" id="advisor">
+  <div class="section-head">
+    <p class="section-eyebrow">Human in the loop</p>
+    <h2>Advisor console</h2>
+    <p class="section-sub">Escalated queries wait here for a Farm Tele Advisor. Each answer is returned to the farmer and added to the retrieval memory, so a similar question later finds a verified answer first.</p>
+  </div>
+  <div class="advisor-grid">
+    <div class="panel queue-panel">
+      <div class="queue-head">
+        <div class="panel-title">Waiting for an advisor</div>
+        <button class="btn btn-ghost btn-sm" id="refreshQueue">Refresh</button>
+      </div>
+      <div id="queueList" class="queue-list"><p class="empty-hint">Nothing is waiting. Run a high-stakes query in the demo (for example a pest or fertiliser question) to see one appear.</p></div>
+    </div>
+    <div class="panel resolve-panel" id="resolvePanel">
+      <div class="panel-title">Answer the farmer</div>
+      <div id="resolveEmpty" class="empty-hint">Select a waiting query on the left.</div>
+      <div id="resolveForm" hidden>
+        <div class="resolve-q" id="resolveQ"></div>
+        <div class="resolve-meta" id="resolveMeta"></div>
+        <div class="answer-label">Suggested from history (for reference)</div>
+        <div id="resolveCandidates" class="resolve-cands"></div>
+        <label class="answer-label" for="advisorAnswer">Your answer</label>
+        <textarea id="advisorAnswer" rows="4" placeholder="Write the advice you would give this farmer…"></textarea>
+        <label class="check"><input type="checkbox" id="addMemory" checked> Add this answer to the system's memory</label>
+        <button class="btn btn-primary" id="resolveBtn">Send answer</button>
+      </div>
+      <div class="panel-title" style="margin-top:28px">Recently resolved</div>
+      <div id="resolvedList" class="queue-list"><p class="empty-hint">No resolved queries yet.</p></div>
+    </div>
+  </div>
+</section>
+
+<!-- OPERATIONS -->
+<section class="section" id="operations">
+  <div class="section-head">
+    <p class="section-eyebrow">Operations</p>
+    <h2>What the system is doing right now</h2>
+    <p class="section-sub">Live figures from the query log on this machine — not the offline evaluation. Run a few demo queries and watch them move.</p>
+  </div>
+  <div class="stat-cards" id="opsCards">
+    <div class="stat-card"><div class="stat-value" data-ops="total">0</div><div class="stat-label">queries handled</div></div>
+    <div class="stat-card"><div class="stat-value" data-ops="automation_rate">—</div><div class="stat-label">answered automatically</div></div>
+    <div class="stat-card"><div class="stat-value" data-ops="pending">0</div><div class="stat-label">waiting for an advisor</div></div>
+    <div class="stat-card"><div class="stat-value" data-ops="resolved">0</div><div class="stat-label">resolved by advisors</div></div>
+    <div class="stat-card"><div class="stat-value" data-ops="avg_latency_ms">—</div><div class="stat-label">average response time</div></div>
+    <div class="stat-card"><div class="stat-value" data-ops="satisfaction">—</div><div class="stat-label">farmer feedback: helpful</div></div>
+  </div>
+  <div class="chart-grid">
+    <div class="panel chart-panel"><div class="panel-title">Queries by category</div><div class="chart-canvas-wrap"><canvas id="opsTypeChart"></canvas></div></div>
+    <div class="panel chart-panel"><div class="panel-title">Language of incoming queries</div><div class="chart-canvas-wrap"><canvas id="opsRegChart"></canvas></div></div>
+  </div>
+</section>
+
+<!-- EVALUATION -->
+<section class="section section-alt" id="evaluation">
+  <div class="section-head">
+    <p class="section-eyebrow">Evaluation</p>
+    <h2>The honest numbers</h2>
+    <p class="section-sub">An earlier version of this project reported 99% accuracy. That number measured agreement with a keyword rule, not understanding. This page shows what changed once the labels, the test sets and the baselines were done properly.</p>
+  </div>
+
+  <div class="callout-row" id="evalCallouts"></div>
+
+  <div class="panel">
+    <div class="panel-title">Intent accuracy by system and language</div>
+    <div class="table-wrap"><table class="data-table" id="intentTable"></table></div>
+    <p class="chart-note">Silver = held-out corpus queries labelled by meaning. Gold = 150 independently written queries (50 English, 50 Hinglish, 50 Hindi). “Hinglish*” re-spells every Hinglish query at random to test that a model isn't just memorising spellings.</p>
+  </div>
+
+  <div class="chart-grid">
+    <div class="panel chart-panel"><div class="panel-title">Accuracy of what gets auto-answered</div><div class="chart-canvas-wrap"><canvas id="selChart"></canvas></div><p class="chart-note" id="selNote"></p></div>
+    <div class="panel chart-panel"><div class="panel-title">Old keyword labels vs. meaning-based labels</div><div class="chart-canvas-wrap"><canvas id="agreeChart"></canvas></div><p class="chart-note" id="agreeNote"></p></div>
+  </div>
+
+  <div class="facts-grid" id="evalFacts"></div>
+</section>
+
+<!-- SYSTEM -->
+<section class="section" id="system">
+  <div class="section-head">
+    <p class="section-eyebrow">System design</p>
+    <h2>One encoder, five decisions</h2>
+    <p class="section-sub">Unlike earlier KCC-NLP systems that start from already-typed text and always answer, KCC-Sahayak starts from speech and treats “should we answer at all?” as a first-class decision.</p>
+  </div>
+  <div class="arch-grid">
+    <div class="arch-card"><h4>1 &middot; Speech-to-text</h4><p>Whisper transcribes the call. Tested on synthetic speech only — see Evaluation.</p></div>
+    <div class="arch-card"><h4>2 &middot; Intent</h4><p>A multilingual sentence encoder plus a calibrated classifier assigns one of 10 KCC query types. Hindi works through the encoder's cross-lingual alignment.</p></div>
+    <div class="arch-card"><h4>3 &middot; Entities</h4><p>A crop and pest glossary tags what the farmer mentions.</p></div>
+    <div class="arch-card"><h4>4 &middot; Retrieval</h4><p>Dense and TF-IDF search over ~125,000 logged Q/A pairs, plus every answer a human advisor has given since.</p></div>
+    <div class="arch-card highlight"><h4>5 &middot; Safety gate</h4><p>Auto-answers only if the category is low-risk, confidence and similarity clear their thresholds, <em>and</em> the answer text contains no dosage or chemical advice. Otherwise: a human.</p></div>
+  </div>
+  <div class="gallery">
+    <img src="assets/images/mustard-field.jpg" alt="Mustard field near Chandigarh">
+    <img src="assets/images/tractor-field.jpg" alt="Tractor preparing a wheat field in Punjab">
+    <img src="assets/images/farmer-fertilizer.jpg" alt="Indian farmer applying fertilizer">
+  </div>
+</section>
+
+<!-- ABOUT -->
+<section class="section section-alt" id="about">
+  <div class="section-head">
+    <p class="section-eyebrow">About the project</p>
+    <h2>What this is, and what it is not</h2>
+  </div>
+  <div class="about-grid">
+    <div class="about-text">
+      <p>The Kisan Call Centre has answered every farmer query through a live human advisor since 2004. KCC-Sahayak is a triage layer, not a replacement: it automates the routine, low-risk questions and routes everything else to a person.</p>
+      <ul class="about-list" id="aboutList"></ul>
+    </div>
+    <div class="about-card">
+      <h4>Grounded in the literature</h4>
+      <p>Differs from KisanQRS (text-only, always answers), AgriLLM (generative, no safety gate) and KrushiMitra (classical ML), and applies the reject-option framing of Chow (1970) and Geifman &amp; El-Yaniv (2017) to a live helpline.</p>
+    </div>
+  </div>
+</section>
+
+<footer class="footer">
+  <p>KCC-Sahayak · a voice-first, confidence-gated triage framework for Kisan Call Centre query resolution.</p>
+  <p class="footer-sub">Images: Wikimedia Commons (CC0 / CC BY-SA), credits in the project.</p>
+</footer>
+
+<div id="toast" class="toast" hidden></div>
+
+<script src="https://cdn.jsdelivr.net/npm/chart.js@4.4.4/dist/chart.umd.min.js"></script>
+<script src="assets/js/app.js"></script>
+</body>
+</html>

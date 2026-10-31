@@ -1,0 +1,104 @@
+{
+  "chosen_C": 30,
+  "n_train": 3000,
+  "keyword_rules": {
+    "silver": {
+      "accuracy": 0.6694,
+      "macro_f1": 0.6792
+    },
+    "gold": {
+      "accuracy": 0.3733,
+      "macro_f1": 0.437
+    },
+    "gold_en": {
+      "accuracy": 0.7,
+      "macro_f1": 0.7202
+    },
+    "gold_hinglish": {
+      "accuracy": 0.32,
+      "macro_f1": 0.3353
+    },
+    "gold_hi": {
+      "accuracy": 0.1,
+      "macro_f1": 0.0182
+    }
+  },
+  "tfidf_svc": {
+    "silver": {
+      "accuracy": 0.9052,
+      "macro_f1": 0.8899
+    },
+    "gold": {
+      "accuracy": 0.4067,
+      "macro_f1": 0.4415
+    },
+    "gold_en": {
+      "accuracy": 0.76,
+      "macro_f1": 0.7427
+    },
+    "gold_hinglish": {
+      "accuracy": 0.36,
+      "macro_f1": 0.3449
+    },
+    "gold_hi": {
+      "accuracy": 0.1,
+      "macro_f1": 0.0182
+    }
+  },
+  "old_distilbert": {
+    "silver": {
+      "accuracy": 0.6573,
+      "macro_f1": 0.6701
+    },
+    "gold": {
+      "accuracy": 0.3333,
+      "macro_f1": 0.3824
+    },
+    "gold_en": {
+      "accuracy": 0.66,
+      "macro_f1": 0.6859
+    },
+    "gold_hinglish": {
+      "accuracy": 0.24,
+      "macro_f1": 0.2301
+    },
+    "gold_hi": {
+      "accuracy": 0.1,
+      "macro_f1": 0.0182
+    }
+  },
+  "minilm_lr": {
+    "silver": {
+      "accuracy": 0.9214,
+      "macro_f1": 0.8939
+    },
+    "gold": {
+      "accuracy": 0.56,
+      "macro_f1": 0.5607
+    },
+    "gold_en": {
+      "accuracy": 0.76,
+      "macro_f1": 0.7353
+    },
+    "gold_hinglish": {
+      "accuracy": 0.24,
+      "macro_f1": 0.1908
+    },
+    "gold_hi": {
+      "accuracy": 0.68,
+      "macro_f1": 0.6694
+    }
+  },
+  "minilm_lr_gold_per_class": {
+    "Animal Husbandry": 0.667,
+    "Cultural Practices": 0.733,
+    "Fisheries": 0.667,
+    "Government Scheme": 0.933,
+    "Market Price": 0.4,
+    "Nutrient Management": 0.4,
+    "Other": 0.4,
+    "Plant Protection": 0.733,
+    "Varietal Information": 0.533,
+    "Weather": 0.133
+  }
+}

@@ -1,0 +1,16 @@
+{
+  "n": 3496,
+  "keyword_vs_semantic_agreement": 0.6751,
+  "distribution": {
+    "Plant Protection": 790,
+    "Cultural Practices": 540,
+    "Nutrient Management": 458,
+    "Animal Husbandry": 441,
+    "Government Scheme": 336,
+    "Fisheries": 274,
+    "Varietal Information": 264,
+    "Other": 179,
+    "Weather": 151,
+    "Market Price": 63
+  }
+}

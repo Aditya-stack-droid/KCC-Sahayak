@@ -1,0 +1,198 @@
+\documentclass[11pt]{article}
+\usepackage[a4paper,margin=1in]{geometry}
+\usepackage{mathptmx}
+\usepackage[T1]{fontenc}
+\usepackage{microtype}
+\usepackage{booktabs}
+\usepackage{graphicx}
+\usepackage[table]{xcolor}
+\usepackage{amsmath}
+\usepackage{url}
+\usepackage[hidelinks]{hyperref}
+\usepackage{enumitem}
+\setlist{nosep,leftmargin=*}
+\input{generated/numbers}
+
+\newcommand{\figormissing}[3]{\IfFileExists{figures/#1.pdf}{\includegraphics[width=#2]{figures/#1.pdf}}{\fbox{\parbox{#2}{\centering\small figure #1 pending}}}}
+\newcommand{\tabormissing}[1]{\IfFileExists{generated/#1.tex}{\input{generated/#1}}{\textit{(table pending)}}}
+
+\title{Beyond 99\%: Auditing the Kisan Call Centre Corpus and a\\Safety-Gated Triage Design for Multilingual Farmer Queries}
+\author{[Author names and affiliations]}
+\date{}
+
+\begin{document}
+\maketitle
+
+\begin{abstract}
+Logs of India's Kisan Call Centre (KCC) are the obvious training data for automating farmer helplines, but reported results on them are hard to interpret.
+We audit a public KCC corpus of \corpusRows{} query--answer pairs and find that (i) keyword-derived intent labels agree with labels assigned by meaning only \kwAgree{} of the time; (ii) a TF-IDF baseline matches a fine-tuned multilingual transformer on the original test labels (\tfidfOldTest{} vs.\ \bertOldTest{}); (iii) \nearDup{} of test queries have a near-duplicate in training, so retrieval looks far better on repeated questions (\retNearDup{} category match) than on novel ones (\retNovel{}); (iv) \callLogShare{} of logged answers are call-log notes such as ``explained in details'' rather than advice; and (v) the corpus is overwhelmingly Assamese: only \haryanaMentions{} queries mention a Haryana place.
+After relabelling \annN{} queries by meaning and writing an independent 150-query set in English, Hinglish and Hindi, a classifier over a multilingual sentence embedding and character $n$-grams reaches \silverAcc{} (95\% CI \silverAccCI{}) on held-out calls and \goldAcc{} on the independent set (Hindi \goldHi{}, Hinglish \goldHing{}, \hingPert{} under random re-spelling), statistically indistinguishable from a character $n$-gram SVM; the decisive ingredient is spoken-style training text, without which accuracy on the independent set falls to \noAugGold{}.
+We pair it with a triage policy that auto-answers only low-risk, non-time-sensitive queries whose retrieved answer is real advice with no dosage or chemical instruction, and escalates the rest to a human advisor whose answers are fed back into retrieval.
+In an ablation, confidence thresholds alone auto-answer \covThrOnly{} of held-out queries but \violThrOnly{} of those violate the safety policy; the full gate answers \covFull{} with \violFull{} violations.
+All labels are LLM-assisted and, at the time of writing, only partly human-verified (human--LLM $\kappa=\humKappa{}$); speech was evaluated on synthetic audio only.
+We release the code, annotations, gold set and audit scripts.
+\end{abstract}
+
+\section{Introduction}
+The Kisan Call Centre (KCC), launched in 2004, answers farmers' questions by telephone through human Farm Tele Advisors (FTAs). Every query, however routine, consumes advisor time, while years of logged question--answer pairs sit largely unused. Recent work retrieves or generates answers from these logs \cite{kisanqrs,agrillm}, and deployed assistants such as Farmer.Chat offer voice and Hindi access at scale \cite{farmerchat}. Two questions are rarely asked together: \emph{how much of the reported performance is real}, and \emph{when should such a system refuse to answer?}
+
+We make four contributions.
+\begin{enumerate}
+\item \textbf{A corpus audit} showing label validity, test-set leakage, answer quality and geography problems that inflate or misdescribe results on the public KCC logs (Section~\ref{sec:audit}).
+\item \textbf{Meaning-based annotation and an independent gold set} in three registers (English, Roman-script Hindi, Devanagari Hindi), plus a spelling-perturbation stress test, giving a more defensible estimate of multilingual intent accuracy (Section~\ref{sec:intent}).
+\item \textbf{A safety-gated triage policy} with two rules we found necessary in practice: screen the \emph{retrieved answer} for dosage and chemical advice, and never reuse logged answers for time-sensitive topics. We quantify each rule by ablation (Section~\ref{sec:gate}).
+\item \textbf{A human-in-the-loop design and open tooling}: an advisor queue whose answers re-enter retrieval, and scripts for human verification (Cohen's $\kappa$) and full reproduction.
+\end{enumerate}
+
+\section{Related work}
+\textbf{KCC data.} KisanQRS \cite{kisanqrs} clusters and retrieves answers over KCC text; AgriLLM \cite{agrillm} fine-tunes language models on about four million Tamil Nadu KCC queries; earlier work applies classical classifiers to query categories. All start from already-transcribed text and, to our knowledge, none reports a decision to \emph{not} answer. We did not replicate these systems, so we make no claim about their reported numbers; we show that the effects below appear in our setting and motivate re-examining them.
+
+\textbf{Voice and deployed advisory.} Farmer.Chat \cite{farmerchat} serves farmers over messaging apps with voice and image input, and an independent evaluation is under way. A recent benchmark evaluates ASR on Hindi, Telugu and Odia agricultural speech \cite{agriasr}. Our work differs in focusing on the refusal/escalation decision and on evaluation validity for KCC logs.
+
+\textbf{Selective prediction.} The reject option dates to Chow \cite{chow}; Geifman and El-Yaniv \cite{geifman} study selective classification for deep networks and Kamath et al.\ \cite{kamath} study abstention under domain shift in question answering. Calibration is commonly repaired by temperature scaling \cite{guo}. We apply these ideas to a helpline and add content-level and temporal rules that confidence alone cannot express.
+
+\textbf{Evaluation validity.} Label errors in test sets \cite{northcutt} and train--test overlap \cite{lewisoverlap} are known to distort benchmark conclusions; weak supervision by rules \cite{ratner} trades label quality for scale. Large language models are increasingly used as annotators \cite{gilardi}; we use one, and disclose it.
+
+\section{Data and annotation}
+\label{sec:data}
+\textbf{Corpus.} We use a public mirror of the government's KCC question--answer records (\corpusRows{} unique pairs after cleaning). The corpus has no state or language column, no audio, and no query-type label.
+
+\textbf{Meaning-based annotation.} We sample \annN{} queries stratified by the (hidden) keyword label, with a lexical-diversity filter, and label them by what the farmer is asking, using ten classes and written guidelines (plant protection, nutrient management, weather, government scheme, market price, varietal information, animal husbandry, fisheries, cultural practices, other). Labelling was performed by an LLM assistant following the guidelines, without human verification. 3{,}000 queries form the training pool and 496 a held-out \emph{silver} test.
+
+\textbf{Independent gold set.} We wrote 150 queries (15 per class) in natural first-person speech: 50 English, 50 Hinglish, 50 Devanagari Hindi. They are not drawn from the corpus. The same assistant wrote queries and labels, so the set is independent of the training data but not of the annotator (Section~\ref{sec:threats}).
+
+\textbf{Spoken-style augmentation.} The corpus is terse advisor-log text; farmers speak differently. We added 1{,}200 paraphrases (400 training queries $\times$ English, Hinglish, Hindi) written in spoken style. Training sources are disjoint from the silver and gold sets.
+
+\textbf{Answer-quality filter.} Many logged answers record that advice was given rather than the advice itself. A typo-tolerant filter (Section~\ref{sec:system}) removes these from retrieval.
+
+\section{System}
+\label{sec:system}
+One multilingual sentence encoder (paraphrase-multilingual-MiniLM-L12-v2 \cite{reimersmulti}) feeds two heads.
+
+\textbf{Intent.} A logistic regression over the concatenation of the sentence embedding and character $n$-gram (2--5) TF-IDF features. The embedding carries cross-lingual meaning; the character $n$-grams carry in-language evidence and tolerate spelling variation. Probabilities are temperature-scaled on out-of-fold logits \cite{guo} ($T=\calT{}$).
+
+\textbf{Retrieval.} Dense nearest-neighbour search \cite{faiss} fused with TF-IDF: candidates from both are scored $\alpha\cdot\text{dense}+(1-\alpha)\cdot\text{tfidf}$ with $\alpha=\alphaChosen{}$ chosen on held-out answer F1. Only informative answers are indexed. Answers written by human advisors after deployment are added to a memory searched alongside the corpus.
+
+\textbf{Entities.} A crop and pest glossary tags mentions for display and logging.
+
+\textbf{Safety gate.} A query is auto-answered only if all hold: (1) its predicted type is not high-stakes (plant protection, nutrient management, government scheme); (2) it is not time-sensitive (weather, market price), because a logged answer is stale by construction; (3) intent confidence $\ge 0.70$; (4) retrieval similarity $\ge 0.55$ and the closest logged question is classified into the same topic as the query; (5) the answer is real advice rather than a call-log note; (6) the answer contains no dosage or chemical instruction (regular-expression screen). Otherwise it is escalated with a stated reason. Rules (2), (4)'s topic check, (5) and (6) were added after observing failures in demonstration: the system once auto-sent ``unable to resolve'', once sent a fertiliser dose in answer to a variety question, and once answered a Hinglish question about a buffalo's milk with a government-scheme form, because dense retrieval is weak for Roman-script Hindi. Candidates whose own predicted topic matches the query are ranked first.
+
+\textbf{Speech.} Whisper \cite{whisper} (small) transcribes audio before the pipeline.
+
+\section{Corpus audit}
+\label{sec:audit}
+\textbf{Label validity.} Keyword labels agree with meaning-based labels on only \kwAgree{} of the \annN{} annotated queries (Figure~\ref{fig:conf}). The largest class, \texttt{Other}, mixes genuine plant-protection, cultural-practice and animal-husbandry questions that merely lacked a trigger word.
+
+\textbf{Agreement is not accuracy.} The originally shipped DistilBERT trained on keyword labels scores \bertOldTest{} on the keyword-labelled test set, and a TF-IDF classifier scores \tfidfOldTest{}: both are reproducing the rules. Scored against meaning-based labels the same DistilBERT reaches \oldAccMeaning{}, and our model agrees with the keyword labels only \prodAgreeKw{} of the time.
+
+\textbf{Leakage.} \nearDup{} of original test queries have a training neighbour with cosine similarity $\ge 0.95$. Retrieval matches the query's category \retNearDup{} of the time on those, but \retNovel{} on novel queries (similarity $<0.80$).
+
+\textbf{Answer quality.} \callLogShare{} of logged answers are call-log notes (``explained in details'', ``transferred to expert'').
+
+\textbf{Geography.} Only \haryanaMentions{} of \corpusRows{} queries mention a Haryana place, while about \assamMentions{} mention Assam places or Assamese crop terms. Results on this corpus should not be described as Haryana-specific.
+
+\begin{figure}[t]\centering
+\figormissing{label_confusion}{0.45\linewidth}{}
+\caption{Row-normalised confusion between keyword-rule labels (rows) and meaning-based labels (columns) on the \annN{} annotated queries.}
+\label{fig:conf}
+\end{figure}
+
+\section{Intent classification}
+\label{sec:intent}
+\textbf{Setup.} Accuracy on the silver test ($n=496$) and the gold set ($n=150$, 50 per register), with 95\% bootstrap intervals (2{,}000 resamples) and exact McNemar tests against our model. Hinglish$^*$ re-spells each Hinglish query at random (vowel shortening, \textit{sh/ch/kh/th/dh} simplification, $w\!\to\!v$), averaged over five seeds, to test reliance on one author's spelling.
+
+\begin{table}[t]\centering\small
+\tabormissing{table_main}
+\caption{Intent accuracy (\%). Silver: held-out corpus queries labelled by meaning. Gold: independent queries. Hing.$^*$: Hinglish with random re-spelling.}
+\label{tab:main}
+\end{table}
+
+\textbf{Results.} Table~\ref{tab:main} compares systems; Table~\ref{tab:abl} ablates the model. Our model reaches \silverAcc{} on silver (\silverAccCI{}) and \goldAcc{} on gold; per register, English \goldEn{}, Hinglish \goldHing{}, Hindi \goldHi{}.
+
+\textbf{Statistical comparison.} The model is numerically best, but \emph{not significantly better than a character $n$-gram SVM}: McNemar $p=\mcCharSilver{}$ on silver and $p=\mcCharGold{}$ on gold. It is significantly better than word TF-IDF on gold ($p=\mcWordGold{}$; silver $p=\mcWordSilver{}$) and than the sentence embedding alone ($p=\mcEmbGold{}$ on gold). Under random re-spelling the two are tied (\hingPert{} vs.\ \charSvmHingPert{}). Models trained on the original keyword labels are far worse than all others ($p<0.001$).
+
+\textbf{What the components buy.} (i) \emph{Spoken-style augmentation is the dominant factor.} Without it the same model scores \noAugSilver{} on silver but only \noAugGold{} on gold (Hinglish \noAugHing{}); the in-distribution test completely hides this gap between advisor-log text and how farmers speak. (ii) \emph{The sentence embedding buys zero-shot cross-lingual transfer.} With no Hindi training data, the embedding-only model reaches \embNoAugHi{} on Hindi, whereas a character $n$-gram model reaches \charNoAugHi{}. (iii) Once target-language training text exists, character $n$-grams alone are competitive, so the embedding's added value is robustness rather than a measurable accuracy gain on our test set. (iv) \emph{Repeated questions inflate accuracy even for our model:} \silverDup{} on near-duplicates versus \silverNovel{} on novel queries (Table~\ref{tab:nov}).
+
+\begin{table}[t]\centering\small
+\tabormissing{table_ablation}
+\caption{Ablation (accuracy, \%).}
+\label{tab:abl}
+\end{table}
+
+\begin{table}[t]\centering\small
+\tabormissing{table_novelty}
+\caption{Silver accuracy by similarity of the test query to the nearest training query.}
+\label{tab:nov}
+\end{table}
+
+\begin{figure}[t]\centering
+\figormissing{learning_curve}{0.5\linewidth}{}
+\caption{Accuracy vs.\ number of annotated training queries (mean $\pm$ s.d., 3 seeds, no augmentation).}
+\label{fig:lc}
+\end{figure}
+
+\section{Triage policy}
+\label{sec:gate}
+\textbf{Metrics.} \emph{Coverage} is the fraction auto-answered; \emph{selective accuracy} is intent accuracy on that subset; a \emph{violation} is an auto-answer the policy forbids: the query truly belongs to a high-stakes or time-sensitive class (it was mis-routed), or the sent text contains dosage/chemical advice or is a call-log note.
+
+\begin{table}[t]\centering\small
+\tabormissing{table_gate}
+\caption{Gate ablation (\%): coverage, selective accuracy and violation rate among auto-answered queries.}
+\label{tab:gate}
+\end{table}
+
+\textbf{Results.} At default thresholds the deployed gate auto-answers \selCovSilver{} of silver queries with \selAccSilver{} intent accuracy, and \selCovGold{} of gold queries with \selAccGold{}. Table~\ref{tab:gate} shows that thresholds alone are not a safe policy: they auto-answer \covThrOnly{} of silver queries, of which \violThrOnly{} violate policy; the full gate answers \covFull{} with \violFull{}. On a separate 3{,}000-query sample, with the category rules already applied, \scrRiskyOff{} of the answers the gate would otherwise have sent contained dosage or chemical text (coverage \scrCovOff{} without the screen, \scrCovOn{} with it): a query's category does not bound the risk of the text returned. The price of safety is coverage: roughly three quarters of queries are escalated to a human. The remaining violations are mis-routed queries, not unsafe text (see Section~\ref{sec:threats}). The topic-consistency check reduces the share of auto-answers whose retrieved question belongs to a different topic from \offTopicBefore{} to \offTopicAfter{} (silver). Calibration reduced out-of-fold expected calibration error from \eceOofBefore{} to \eceOofAfter{}; on the silver set it was already well calibrated (\eceSilBefore{} vs.\ \eceSilAfter{}).
+
+\begin{figure}[t]\centering
+\figormissing{selective}{0.5\linewidth}{}
+\caption{Accuracy of the auto-answered subset against coverage, over a grid of confidence and similarity thresholds.}
+\label{fig:sel}
+\end{figure}
+
+\section{Retrieval and speech}
+\textbf{Hybrid retrieval.} Scored by token-level F1 against the advisor's real answer (rows whose gold answer is itself a call-log note excluded; $n=\hyN{}$, of which $\hyNovelN{}$ novel), fusing TF-IDF with dense search changes answer F1 from \fDense{} (dense only) to \fHybrid{} overall, and from \fDenseNovel{} to \fHybridNovel{} on novel queries (TF-IDF only: \fTfidf{}; Table~\ref{tab:hy}).
+
+\begin{table}[t]\centering\small
+\tabormissing{table_hybrid}
+\caption{Answer F1 against the advisor's answer vs.\ fusion weight.}
+\label{tab:hy}
+\end{table}
+
+\textbf{Speech.} On \voiceN{} English gold queries rendered with synthetic text-to-speech and transcribed by Whisper small, the mean word error rate is \werMean{}; intent accuracy is \voiceTextAcc{} on typed text and \voiceAsrAcc{} after recognition. Synthetic speech is cleaner than real phone-line speech, so this is an upper bound; Hindi and Hinglish speech were not tested.
+
+\section{Threats to validity and limitations}
+\label{sec:threats}
+\begin{itemize}
+\item \textbf{Single, non-human annotator.} All labels (training, silver, gold) were produced by one LLM assistant. Human--LLM agreement on a 250-query sample is $\kappa=\humKappa{}$ (human--human $\kappa=\hhKappa{}$); until it is complete, accuracy figures should be read as agreement with that annotator.
+\item \textbf{Author overlap.} The gold queries and the augmentation paraphrases share an author; the spelling-perturbation test and the held-out silver set mitigate but do not remove this. Hindi and Hinglish results are likely optimistic.
+\item \textbf{Small test sets.} Fifty queries per register give intervals of roughly $\pm 8$ points.
+\item \textbf{Violation metric.} ``Violation'' is a policy-compliance measure defined by us, not an independent measure of harm. Text-based violations reach zero under the full gate partly \emph{by construction}, since the gate's screen and the metric use the same rules; the informative residual is the mis-routing rate (a truly high-stakes or time-sensitive query classified as low-risk) and the coverage cost. We did not have agronomists judge whether any answer was actually correct or harmful.
+\item \textbf{Data scope.} Assamese-dominated, English advisor logs, no audio; no Haryana data was used.
+\item \textbf{Speech.} Synthetic English only.
+\item \textbf{No user study}, no comparison to a retrieval-augmented language model.
+\end{itemize}
+
+\section{Ethics and disclosure}
+Labelling and the gold set were produced with an LLM assistant; software was largely written with AI assistance. No personal data about farmers is used; the corpus is public. The system is a triage aid: high-stakes advice is never auto-sent, and an unverified system should not be deployed to farmers without agronomist review. Photographs in the demo are used under their Wikimedia Commons licences.
+
+\section{Conclusion}
+On the public KCC logs, headline accuracy depends heavily on how labels, test sets and answers are constructed. Measured against meaning, with an independent multilingual test set and honest baselines, a simple classifier is accurate enough to route queries (a character $n$-gram SVM is statistically as good as our embedding-based model once spoken-style training text exists), and a content-aware, time-aware gate makes automation substantially safer than confidence thresholds alone. The decisive next steps are human verification of the labels, real farmer speech, and agronomist review of auto-answers.
+
+\begin{thebibliography}{99}\small
+\bibitem{kisanqrs} M.~Z.~U.~Rehman, D.~Raghuvanshi, N.~Kumar. KisanQRS: A deep learning-based automated query-response system for agricultural decision-making. \emph{Computers and Electronics in Agriculture}, 213:108180, 2023.
+\bibitem{agrillm} K.~Didwania, P.~Seth, A.~Kasliwal, A.~Agarwal. AgriLLM: Harnessing transformers for farmer queries. arXiv:2407.04721, 2024.
+\bibitem{farmerchat} Digital Green. Farmer.Chat. \url{https://farmer.chat}, accessed 2026.
+\bibitem{agriasr} M.~S.~Chandrashekar, V.~Singh, L.~Pedapudi. Benchmarking automatic speech recognition for Indian languages in agricultural contexts. arXiv:2602.03868, 2026.
+\bibitem{chow} C.~K.~Chow. On optimum recognition error and reject tradeoff. \emph{IEEE Trans.\ Information Theory}, 16(1):41--46, 1970.
+\bibitem{geifman} Y.~Geifman, R.~El-Yaniv. Selective classification for deep neural networks. In \emph{NeurIPS}, 2017.
+\bibitem{kamath} A.~Kamath, R.~Jia, P.~Liang. Selective question answering under domain shift. In \emph{ACL}, 2020.
+\bibitem{guo} C.~Guo, G.~Pleiss, Y.~Sun, K.~Q.~Weinberger. On calibration of modern neural networks. In \emph{ICML}, 2017.
+\bibitem{reimersmulti} N.~Reimers, I.~Gurevych. Making monolingual sentence embeddings multilingual using knowledge distillation. In \emph{EMNLP}, 2020.
+\bibitem{whisper} A.~Radford et al. Robust speech recognition via large-scale weak supervision. In \emph{ICML}, 2023.
+\bibitem{faiss} J.~Johnson, M.~Douze, H.~J\'egou. Billion-scale similarity search with GPUs. \emph{IEEE Trans.\ Big Data}, 7(3):535--547, 2021.
+\bibitem{northcutt} C.~G.~Northcutt, A.~Athalye, J.~Mueller. Pervasive label errors in test sets destabilize machine learning benchmarks. In \emph{NeurIPS Datasets and Benchmarks}, 2021.
+\bibitem{lewisoverlap} P.~Lewis, P.~Stenetorp, S.~Riedel. Question and answer test-train overlap in open-domain question answering datasets. In \emph{EACL}, 2021.
+\bibitem{ratner} A.~Ratner et al. Data programming: Creating large training sets, quickly. In \emph{NeurIPS}, 2016.
+\bibitem{gilardi} F.~Gilardi, M.~Alizadeh, M.~Kubli. ChatGPT outperforms crowd workers for text-annotation tasks. \emph{PNAS}, 120(30), 2023.
+\end{thebibliography}
+\end{document}

@@ -1,0 +1,7 @@
+{
+  "n": 3000,
+  "coverage_without_screening": 0.2917,
+  "coverage_with_screening": 0.1723,
+  "auto_answers_with_dosage_or_chemical_text_without_screening": 0.4091,
+  "auto_answers_with_dosage_or_chemical_text_with_screening": 0.0
+}

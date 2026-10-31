@@ -1,0 +1,104 @@
+{
+  "chosen_C": 10,
+  "n_train": 4200,
+  "keyword_rules": {
+    "silver": {
+      "accuracy": 0.6694,
+      "macro_f1": 0.6792
+    },
+    "gold": {
+      "accuracy": 0.3733,
+      "macro_f1": 0.437
+    },
+    "gold_en": {
+      "accuracy": 0.7,
+      "macro_f1": 0.7202
+    },
+    "gold_hinglish": {
+      "accuracy": 0.32,
+      "macro_f1": 0.3353
+    },
+    "gold_hi": {
+      "accuracy": 0.1,
+      "macro_f1": 0.0182
+    }
+  },
+  "tfidf_svc": {
+    "silver": {
+      "accuracy": 0.9133,
+      "macro_f1": 0.8938
+    },
+    "gold": {
+      "accuracy": 0.8133,
+      "macro_f1": 0.8155
+    },
+    "gold_en": {
+      "accuracy": 0.9,
+      "macro_f1": 0.9006
+    },
+    "gold_hinglish": {
+      "accuracy": 0.86,
+      "macro_f1": 0.861
+    },
+    "gold_hi": {
+      "accuracy": 0.68,
+      "macro_f1": 0.6852
+    }
+  },
+  "old_distilbert": {
+    "silver": {
+      "accuracy": 0.6573,
+      "macro_f1": 0.6701
+    },
+    "gold": {
+      "accuracy": 0.3333,
+      "macro_f1": 0.3824
+    },
+    "gold_en": {
+      "accuracy": 0.66,
+      "macro_f1": 0.6859
+    },
+    "gold_hinglish": {
+      "accuracy": 0.24,
+      "macro_f1": 0.2301
+    },
+    "gold_hi": {
+      "accuracy": 0.1,
+      "macro_f1": 0.0182
+    }
+  },
+  "minilm_lr": {
+    "silver": {
+      "accuracy": 0.9052,
+      "macro_f1": 0.871
+    },
+    "gold": {
+      "accuracy": 0.7333,
+      "macro_f1": 0.736
+    },
+    "gold_en": {
+      "accuracy": 0.92,
+      "macro_f1": 0.9208
+    },
+    "gold_hinglish": {
+      "accuracy": 0.48,
+      "macro_f1": 0.4808
+    },
+    "gold_hi": {
+      "accuracy": 0.8,
+      "macro_f1": 0.7986
+    }
+  },
+  "minilm_lr_gold_per_class": {
+    "Animal Husbandry": 0.8,
+    "Cultural Practices": 0.667,
+    "Fisheries": 0.8,
+    "Government Scheme": 0.8,
+    "Market Price": 0.933,
+    "Nutrient Management": 0.6,
+    "Other": 0.6,
+    "Plant Protection": 0.733,
+    "Varietal Information": 0.8,
+    "Weather": 0.6
+  }
+}

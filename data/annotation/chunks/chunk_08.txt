@@ -1,0 +1,250 @@
+a2000 | fungal rot in brinjal
+a2001 | asking about basal fertilizers dose of fertilizers in saali paddy
+a2002 | query regarding variety of toria.
+a2003 | asking about mortality of fish due to heavy plankton bloom
+a2004 | farmer asking query regarding relief for flood affected paddy field.
+a2005 | asking about the control of curling of leaf in cabbage
+a2006 | asking about control ofleaf diseases in arecanut plant
+a2007 | asking about storage of potato seed tubers
+a2008 | control of bacterial wilt in brinjal
+a2009 | asking that her cow is repeating heat after 5-month of ai.
+a2010 | 07 jun rainfall(mm) : 0 temp(max/min):0 / 0 humidity(max/min)0 / 0 wind:0
+a2011 | asking the contact details of the directorate of agriculture officem, kamrup divison.
+a2012 | asking recommended fertilizer dose of sali rice
+a2013 | asking about the season for sowing coriander.
+a2014 | asking about fertilizer dose of wheat
+a2015 | query about a cow does not conceive after repeated ai,presently last ai given 17 days back
+a2016 | asking about the nutrient managemnet
+a2017 | asking about papaya query
+a2018 | asked about fish production.
+a2019 | asked about dosage of urea and ssp in pond water.
+a2020 | query regarding a pig
+a2021 | asking about seed treatment of chilli
+a2022 | telling that he wants to purchase a power tiller under chief minister's asam vikash yojana scheme. so, what criterias are to be followed.
+a2023 | asking about the source of procurement of improve breed of goat.
+a2024 | farmer asking query regarding potato
+a2025 | asking about spacing of brinjal
+a2026 | shoot borer control measure
+a2027 | asking about the age of castration in case of goat.
+a2028 | asking about the micronutrient used in paddy
+a2029 | asking about the line of treatment for severe diarrohoea as well as offfed condition in piglet
+a2030 | query regarding pest infestation in pumpkin
+a2031 | asking about root rot in cowpea
+a2032 | query regarding drumstick variety.
+a2033 | asking about foliar fertilizer application in sesame.
+a2034 | query regarding a jerseycow [ 1 st lactation ] showing the signs of hardening of udder with decrease milk production --
+a2035 | brinjal problem
+a2036 | asking about the medixcine for goat
+a2037 | asking for water management in rice
+a2038 | asking for control of fruit borer
+a2039 | asking about variety of tomato
+a2040 | asking about the nutrient in coconut
+a2041 | asking about the seed procurement of sunflower seeds
+a2042 | query regarding fish feed
+a2043 | farmer asking query regarding bitter gourd
+a2044 | asking that his femal buffalo is suffering.
+a2045 | asking that his local poultry are suffering from respiratory distress.
+a2046 | querry regarding weateher report
+a2047 | asked about paddy
+a2048 | asking about vaterinary quires
+a2049 | asking about seed rate of chilli
+a2050 | asking about availability of paddy seeds.
+a2051 | query regarding tea cultivation
+a2052 | asking for the variety of toria
+a2053 | query regarding management of nutrient in mustard.
+a2054 | control of leaf eatting caterpiler in bhindi
+a2055 | asking about the cultivation practices of banana.
+a2056 | query about the low level of oxygen in pond
+a2057 | asking for rainfall possibility
+a2058 | asking for rice bug problem
+a2059 | asking about fruit rot in pumkin
+a2060 | 03 jun rainfall(mm) : 0 temp(max/min):0 / 0 humidity(max/min)0 / 0 wind:0
+a2061 | asking about insect problem in paddy
+a2062 | asking about the control of rice blast in paddy
+a2063 | asking about the treatment of cough of a goat.
+a2064 | asking about seed procurement of lemon grass and citronella
+a2065 | regarding paddy (dhan) crop insurance.
+a2066 | asking for name of rice variety for late transplanting after flood
+a2067 | query regarding any harmful effect of poultry litter in paddy field.
+a2068 | enhance m asking for any crop booster name which when sprayed can ore production.
+a2069 | asking about the loan for a broiler farm.
+a2070 | asking about lime application in fish pond
+a2071 | asking that her 8-month old calf deficate blood with stool sometime.
+a2072 | query regarding fish mortality due to aquatic weeds (pistia).
+a2073 | asking about govt scheme
+a2074 | problem of root rot in betelvine.
+a2075 | query regarding subsidised tractor
+a2076 | query related to pm kisan
+a2077 | rainfall (mm) report in darrang
+a2078 | querry regarding pest infestation in cowpea
+a2079 | asking about the way to get kcc loan
+a2080 | asking about plant hopper management in rice field.
+a2081 | query regarding fish death due to excess algal bloom
+a2082 | asked about variety of cabbage
+a2083 | asking about fungal disease in banana
+a2084 | asking about availability of good qwality seeds
+a2085 | asking about timing of top dressing in rice
+a2086 | asking about vaccination of adult duck.
+a2087 | seed rate of sali joha rice
+a2088 | query regarding for improvement of egg production in duck
+a2089 | asking about the planting season in papaya
+a2090 | asking about the flower dropping problem
+a2091 | asking about the source of khaki kembel ducklings.
+a2092 | asking about the fertilizer dose for mango after 2 months of planting in nursery stage.
+a2093 | asking about the fertilizer dose in potato
+a2094 | asking about some variety of ahu rice.
+a2095 | asking about kisan credit center
+a2096 | asking about sowing time and spacing
+a2097 | asking about the fish feeding during winter season.
+a2098 | asking about the use of growth promoter in rice.
+a2099 | shoot borer in sugar cane
+a2100 | asking for control of ckracking knolkhol
+a2101 | query regarding mastitis: the goat has given birth 2 days ago. udder is inflammed and red.
+a2102 | asking for the contact no. of krishi vigyan kendra, dhubri
+a2103 | asking about lime application
+a2104 | blight in potato
+a2105 | asking spacing of transplanted paddy
+a2106 | asking about price of combine harvester
+a2107 | query regarding rti of acow
+a2108 | asking for the control of fungal wilt in rice
+a2109 | asking about procurement of water pump
+a2110 | asking about on farm storage of seed potatoes.
+a2111 | asking about issue related to kisan credit card.
+a2112 | problem of late blight intomato.
+a2113 | asking the msp of paddy
+a2114 | asking for rat control
+a2115 | want to know about pruning in litchi
+a2116 | asking about the breeding problem of a cow.
+a2117 | asking about the control of bud rot in arecanut
+a2118 | control of pod borer in black gram
+a2119 | query regarding rainfall data in ghilamara block of lakhimpur district
+a2120 | query regarding cracking of knol-khol
+a2121 | asking about the agricultural training
+a2122 | asking about stem borer problem in rice cultivation.
+a2123 | late blight of potato
+a2124 | gas formation in pond water
+a2125 | query regarding variety of bhutjalakia (king chilly)
+a2126 | asking about the nutrient management and flowering in marigold
+a2127 | asking for loan in fishery sector.
+a2128 | asking about the hybrid variaty for boro rice and seed rate /bigha for transplanting
+a2129 | asking about the fertilizer doses of arecanut on fifth year.
+a2130 | asking about rubber scheme
+a2131 | query regarding fertilizer dose and variety of jute.
+a2132 | query regarding application of fertilizer dose in coconut
+a2133 | asking about the fertilizer doses of arecanut.
+a2134 | asking about the scheme to purchase drip irrigation system for horticultural crops.
+a2135 | asking about the micro nutrient management in paddy
+a2136 | price of paddy
+a2137 | control of attack of aphids
+a2138 | asking control of aphid attack in mustard
+a2139 | asking for kisaan credit card
+a2140 | control of leaf eatting caterpiller in sponge gourd
+a2141 | asking about control of fungal infection in tomato
+a2142 | asking about the pumpkin variety
+a2143 | asking about cultural practices of chili
+a2144 | asking about pm kisan benificary status
+a2145 | query about a nine month calf becoming lean & thin, sometimes loose motion
+a2146 | asking about control measure of hairy caterpillar
+a2147 | asking about control measure of root rot in chilli
+a2148 | query regarding pmkisan.
+a2149 | asking about procurement of subsidized machinery
+a2150 | asking for the rate of planofix in rapeseed
+a2151 | asking about poultry farm injection procedure
+a2152 | asking about the chillies viral disease
+a2153 | query regarding for some local chicken -- before introducing the farm premises should be wash with ' q for all ' as recommanded / light the room with 40 watt or 60 watt bulb depending upon the necessity
+a2154 | query regarding goat: suffering from eye infection, poor health.
+a2155 | asking about the nutrient management of coconut
+a2156 | asking about the irrigation management in mustard
+a2157 | asking about pm kisan maan dhan scheme.
+a2158 | asking about the variety name of black gram
+a2159 | asking query about spacing in pes
+a2160 | asking about the sowing time of bittergourd
+a2161 | asking about nutrient management in cowpea
+a2162 | query regarding leaf spot of bean
+a2163 | asking about micronutrient for chillies
+a2164 | fertilizer requirment in banana
+a2165 | fertilzer dose for coconut aged more than 6 years
+a2166 | asking about the medicine for cow
+a2167 | asking about seed sowing of hybrid rice
+a2168 | query regarding procurement of tractor/power tiller in subsidized rate
+a2169 | query regarding suspected poisoning of a cow
+a2170 | asking about control of rice gandhi bug
+a2171 | date rainfall (mm) temp (max/min) humidity (max/min) wind 26 apr 0 0 / 0 0 / 0 0 26 apr 0 0 / 0 0 / 0 0
+a2172 | query regarding a calf[ sixteen - month -old ] showing the signs of suspected clostridium chouvei infection [ true black quarter] --
+a2173 | asking about vatiety of papaya.
+a2174 | problem of back rot in betel vine.
+a2175 | want to know regarding fertilizer application in potato
+a2176 | asking about the some seed company names for maize seeds
+a2177 | asking about he local poultry
+a2178 | asking about the training institute on broiler management
+a2179 | fertilizer requirment in cucumber as basal dose
+a2180 | asking about the fertilizer doses of cabbage
+a2181 | asking about the market information
+a2182 | yelloish colour in banana leaves
+a2183 | asking about minimum support price for paddy.
+a2184 | regarding oxygen depletion in fish pond
+a2185 | asking about the some micro nutrient product name for maize
+a2186 | asking about rainfall percentage in his district
+a2187 | asking about the season of planting of watermelon
+a2188 | asking about the varieties name of okra
+a2189 | asking about transplanting
+a2190 | fertilizer requirment in ridge gourd
+a2191 | asking about control measure of aphids in bhindi
+a2192 | asking about bending of branch due to heavy rainfall
+a2193 | asking about regular mortality of fish
+a2194 | query regarding the brand name of mineral mixture for cattle , & use of anthalmintic in in pregnant cow with advance stage of pregnency
+a2195 | querry regarding varieties of potato
+a2196 | veterinary related quary
+a2197 | control of purple blotch in garlic
+a2198 | asking for the control of ganoderma wilt in coconut
+a2199 | asked about complaint issue for kisan credit card
+a2200 | asking about pending in transaction of pm kisan
+a2201 | liming schedule of fish pond
+a2202 | query regarding poultrymanagement. he has 1 month old chicks, but vaccine has not given.
+a2203 | asking about cultivation of hybrid boro rice
+a2204 | asking about cultivation practice of capsicum
+a2205 | fish death due to discoloration of water
+a2206 | asking about the fertilizer dose of chilli
+a2207 | asking for vitamin dose
+a2208 | asked about the control measure of flower drop of litchi.
+a2209 | asking about vety. training
+a2210 | asking about dose of celcron in ridge gourd
+a2211 | asking about irrigation time of potato
+a2212 | query regarding bank cheque book.
+a2213 | asking about the fertilizer uses for coconut tree.
+a2214 | asking about the govt schemes to avail power tiller.
+a2215 | asking about the rate of rice for sale.
+a2216 | asking that how to avail kisan credit card facility.
+a2217 | asking for tractor availibility scheme
+a2218 | asking about availability of earthworm for vermicompost preparation.,
+a2219 | asking about wather data of sonitpur
+a2220 | asking about some early varieties of radish.
+a2221 | asking about rainfall of dhalpukhuri block of hojai district
+a2222 | asking about vaccination schedule in poultry.
+a2223 | asking about the plant protection measure in rice
+a2224 | disease related arecanut
+a2225 | asking about the control measure of insects in banana
+a2226 | query regarding leaf spot
+a2227 | query related to fisheries training
+a2228 | asking about bacterial disease in turmeric
+a2229 | want to know regarding physiological disorder in tomato
+a2230 | query regarding goat suffering from acute dirrea and death.
+a2231 | chances of rain in cachar district
+a2232 | asking about the way improve crop growth in sugarcane
+a2233 | asking about the seed treatment in chilli
+a2234 | asking about the fertilizer doses in ridge gourd
+a2235 | --asking about pm kisan samman nidhi yojona
+a2236 | pump in subsidy
+a2237 | query govt scheme seed for seedlings and loan
+a2238 | query regarding pmfby
+a2239 | asking about the nutrient management in pumpkin
+a2240 | asking control of stem borer pest attack in boro rice
+a2241 | query: white diarrhoea of duck.
+a2242 | asking about the control measure for rice stem borer.
+a2243 | quary related to robi crops
+a2244 | asking abnout the control measure of froot borrer
+a2245 | asking about the feeding method and cleaning water in pond
+a2246 | asking about liming in pond
+a2247 | fibrosis after mastitis
+a2248 | asking about the nutrient management in ridge gourd
+a2249 | asking about the cultivation of maize

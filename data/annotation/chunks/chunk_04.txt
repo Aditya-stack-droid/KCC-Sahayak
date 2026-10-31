@@ -1,0 +1,250 @@
+a1000 | asking about the availability of kisan credit card
+a1001 | query regarding management of nematodes.
+a1002 | asking about store house pest control
+a1003 | asking about diarrohea of poultry ,feed supplement and vaccination of duck
+a1004 | asking about training on maintanace of farm machinary.
+a1005 | asking about application of nutrient
+a1006 | querry regarding rice ridge gall in sali paddy
+a1007 | asking for the irrigation process of garlic crop.
+a1008 | asking about control measure of late blight in potato
+a1009 | asking about water of pond
+a1010 | asking about the control measure for downy mildew
+a1011 | query regarding control of leafcurl disease in chilli.
+a1012 | asking about fertlizer dose coconut
+a1013 | seed rate of ahu rice
+a1014 | asking about the fertilizer
+a1015 | asking about the interest of kcc
+a1016 | asking about flowering of papaya
+a1017 | asking about control measure of cercospora leaf spot
+a1018 | flower drop in litchi
+a1019 | asking about procurement of verms for vermicomposting
+a1020 | query regarding nutrient management in litchi
+a1021 | query regarding ascitis( suspected ) of a cow ( in the neck region )
+a1022 | asking for some good variety names of boro rice suitable & recommended for cultivation in his zone.
+a1023 | query regarding varieties of mustard
+a1024 | asking about the control of fruit fly in ashgourd
+a1025 | asking about the fish feeding technique
+a1026 | asking about some recommended ealry variety of cabbage
+a1027 | asking about the vaccination schedule against viral disease for a broiler farm.
+a1028 | query related to spacing in maize
+a1029 | asking about over green of pond water
+a1030 | asking for fish pond management
+a1031 | asking about importance of lime in fish pond
+a1032 | asking about hispa problem in rice cultivation
+a1033 | asking for mandi about sesamum
+a1034 | asking about the control-measure of tympany in goat of about 4 months old
+a1035 | asking about the agricultural technology website of assam agricultural university.
+a1036 | want to know regarding micronutrient use in citrus
+a1037 | asked about fish farming management
+a1038 | want to know regarding blight disease in potato
+a1039 | querry regarding seed rate of wheat
+a1040 | nutrient management of coconut
+a1041 | query regarding poisoning of a cow
+a1042 | asking about pond fertilization and feeding of carps in fish pond
+a1043 | asking sowing time of papaya
+a1044 | asked where to get training on fish culture.
+a1045 | asking about the control measure for fruit fly in bottle gourd
+a1046 | asking about the spacing of cabbage
+a1047 | asking about training on mushroom cultivation.
+a1048 | asking about topdressing in rice
+a1049 | control measures of mites
+a1050 | asking about fertilizer dose apply urea 12kg/bigha, ssp 30kg/bigha and mop 3 kg/bigha crop booster @ 25/10 lit of water 30 days after sowing
+a1051 | asking about mode of application of fertilizer in maize
+a1052 | asking for seed rate of toria
+a1053 | asking about the loan in agriculture
+a1054 | asking about sowing time for tomato, chilli
+a1055 | 31 may rainfall(mm) : 6.0 temp(max/min):33.5 / 19.0 humidity(max/min)70.0 / 89.0 wind:1.9
+a1056 | asking about where to purchase or the available of hybrid rice varieties seed
+a1057 | asking for dose of nimsin
+a1058 | asking about the the cultivation practices of bhindi
+a1059 | wanthed to know the field preparation of paddy
+a1060 | query regarding pest attack in bamboo
+a1061 | query regarding seed rate of direct seeded ahu rice.
+a1062 | sking about rainfall
+a1063 | asking about the seed bed nursery for paddy
+a1064 | query regarding decrease let down of milk from acow
+a1065 | asking for any crop booster name to be sprayed in his mustard crop cultivation for a better yield.
+a1066 | asking about the stem rot of bhut jalokia
+a1067 | want to know about fertilizer requirment in jute
+a1068 | asking about sowing time of turmeric.
+a1069 | asking about control of late blight in potato
+a1070 | asking about the recommended fertilizer dose for litchi at the age of 2-3 years
+a1071 | query regarding varrietes of coconut
+a1072 | asking about treament of mastitis in cow.
+a1073 | asking about the sowing time of maize
+a1074 | query regarding vaccination for o-8 days poultry
+a1075 | asking about the seedling treatment in paddy
+a1076 | asking about water quality management
+a1077 | wanted to know how to increase the production of tea
+a1078 | asking for fertilizer requirement in a 9 year old plant
+a1079 | asking about the govt scheme for rice cultivation
+a1080 | asking about the control of fungal disease in jute
+a1081 | asking about procurement of seeds.
+a1082 | regarding nutrient application in black pepper
+a1083 | asking about the source of good breed goat for farming.
+a1084 | quary relating water management
+a1085 | asking about names of summer green gram varieties and package of ptactice
+a1086 | asking for harvesting process
+a1087 | asking about vaccination schedule of duck
+a1088 | blight desease of potato
+a1089 | asking about the time of sowing and varieties of sesamum.
+a1090 | asking about market information for rice
+a1091 | asking for the stages of fertilizer applications for the main field in case of arize- 6444 variety to cultivate as boro rice.
+a1092 | query about kisan credit card(kcc).
+a1093 | regarding rainfall prediction in coming days
+a1094 | asking about the control of powdery mildew in brinjal
+a1095 | weed control measure
+a1096 | query regarding control measures of fungal diseases in potato
+a1097 | how to increase oxygen in pond water
+a1098 | asking about liver suppliment for poultry.
+a1099 | asking about the fertilizer requirement for top dressing in paddy
+a1100 | asking about control of cut worms in potato
+a1101 | asking about some variety name of cauliflower
+a1102 | query regarding management of leaf blight disease and premature fruit droping of coconut.
+a1103 | asking about spacing of cowpea
+a1104 | asking about the nutrient management in rice
+a1105 | asking about seed rate of paddy and seed treatment
+a1106 | asked about ornamental fish marketing
+a1107 | fish death due to gas production
+a1108 | problem of aphids in chilli.
+a1109 | asking about the nutrient management in betelvine
+a1110 | asking about some multi micronutrient for tea garden.
+a1111 | asking about agriculture training.
+a1112 | control of shoot borer pest attack in sugarcane
+a1113 | asking about the training on bee keeping
+a1114 | query regarding urea, pm kisan etc.
+a1115 | asking about fruit drop
+a1116 | asking about the sowing time of onion
+a1117 | query regarding farmer id
+a1118 | want to know variety of bhindi
+a1119 | fertililizer dose of coconut
+a1120 | asking about the control of fungal diseases of bottle gourd
+a1121 | asking about micro nutrient management of ridge gourd
+a1122 | asking about the brinjal variety
+a1123 | asking for time of irrigation
+a1124 | control measures of browning
+a1125 | querry regarding rainfall data in jorhat district
+a1126 | asking about the govt assistance for irrigation
+a1127 | querry regarding wilting in raddish
+a1128 | fungal wilt of tomato
+a1129 | farmer asking query regarding avocado planting.
+a1130 | asking about the vitamin for goat
+a1131 | asking about pm kisan saman nidhi
+a1132 | asking about the govt. scheme
+a1133 | asked about carp variety in carp culture.
+a1134 | query regarding phompsis blight
+a1135 | asking about control measure of stem borer in boro rice
+a1136 | white diarrhoea in duckling
+a1137 | selection of dairy cattle
+a1138 | quary related to disease in ginger
+a1139 | asking about the nutrient management in watermelon
+a1140 | cultural practices of ridge gourd
+a1141 | asking about the green house making techniques , materials required for it and any subsidy related to it
+a1142 | asking about the nutrient deficiency in rice
+a1143 | asking about the procurement of machinery from the agriculture department.
+a1144 | asking about the fertilizer dose for tomato.
+a1145 | asking about the loan.
+a1146 | asking about the rate of dusting malathian on soil and spacing in potato
+a1147 | asking about the treatment of infection of ear of a pig.
+a1148 | asking about the vaccination scheduled against viral diseases.
+a1149 | asking about availability of tractor subsidy in nalbari district
+a1150 | asking about pm kisan helpline number
+a1151 | asking about stem borer
+a1152 | query regarding some duck i --for the vaccine
+a1153 | asking about thee control measurees against fungal wilting in brinjal.
+a1154 | asking about the ungermination of okra seed
+a1155 | control of cut worm in paddy
+a1156 | asking about the citrus spacing
+a1157 | asking about how sms can be stop
+a1158 | asking about the soil healh card
+a1159 | asking about thecontrol of insects in pea
+a1160 | query regarding management of rice hispa.
+a1161 | asking about kissan credit card
+a1162 | asking about the control measure against powdery mildew in cowpea.
+a1163 | irrigation practice during emergence
+a1164 | fertilizer dose for potato
+a1165 | asking about the spacing for arecanut
+a1166 | query related to cotrol of termite in field
+a1167 | query regarding variety of ahu rice.
+a1168 | query of govt. schemes
+a1169 | anthracnose disease problem in chilli
+a1170 | farmer asking query about chilly.
+a1171 | asking about treatment of crack in udder in cow.
+a1172 | asking about good varity of hybrid ridge gourd seeds
+a1173 | asking about the control of rotting of pea
+a1174 | asking about the spacing of tomato cultivation.
+a1175 | asking about planting time of sesamum
+a1176 | query regarding fish species ratio of carps
+a1177 | asked abt carp culture system
+a1178 | asking about control of aphids in cowpea
+a1179 | asking about the wrather forecast of dhemaji district.
+a1180 | asking about the insects pest problem in cabbage
+a1181 | asking about the procedure for nursery preparation for papaya.
+a1182 | complaining against bank ( pnb )
+a1183 | asking about seed company
+a1184 | 1)no proper milk production for last 10 days from a caving cow 2)infection at feet of another cow
+a1185 | asking about fertilizer doses of cabbage.
+a1186 | asking about control measure wilt on chilli
+a1187 | asking about fertilizer dose of coconut
+a1188 | asking about management of swarming caterpillar in rice
+a1189 | asking about winter care of fish pond
+a1190 | asking about the vaccination schedule of a broiler farm.
+a1191 | asking about the varieties of sesamum and fertilizer dose of sesamum.
+a1192 | asking about the nutrient management in spine gourd
+a1193 | query regarding broiler
+a1194 | asking about the vitamin used in raddish
+a1195 | query regarding labour cost of harvesting of rice.
+a1196 | query regarding training on bee keeping
+a1197 | asking for seedling age for transplanting
+a1198 | asking where to avail training on mushroom production
+a1199 | query regarding water of pond covering an area of approx 1 bigh land
+a1200 | veterinery query
+a1201 | asking about varieties of boro paddy and its procurement.
+a1202 | asking about yesterday's market price of vegetables of different district of assam
+a1203 | asking for the minimum support price for rice declared by the govt. of assam.
+a1204 | query regarding nursery management
+a1205 | query regarding antracnose
+a1206 | asking for the control of fruit fly
+a1207 | asking about the medicine for cattle
+a1208 | asking about fasal bima yozna
+a1209 | asking about immatured nut drop
+a1210 | fruit cracking in mango
+a1211 | asking about deficiency disorder in cabbage
+a1212 | asking about some micro-nutrient name for chilli
+a1213 | asking about yellowing of leaf of brinjal and toamto and fertilizer dose in bitter gourd
+a1214 | asking about spacing of bottle gourd
+a1215 | asking about seed rate of cabbage
+a1216 | asking about the orchid and other flower gardening training
+a1217 | asking about bijli variety of chilli
+a1218 | asking for the manures and fertilizers dose of cabbage in terms of per bigha of land for cauliflower crop cultivation.
+a1219 | asking about micronutrient for maize
+a1220 | asking about fertilzer dose for mustard
+a1221 | yellow vein mosaic
+a1222 | asked about nursery pond management
+a1223 | querry regarding coconut fertilizer dose
+a1224 | aasking about pm kisaan mandhan yojana
+a1225 | farmer asked a query regarding solar pump.
+a1226 | asking about fish ulcer
+a1227 | telling that his brother has cultivated bhindi in their farm land. now as the produce is almost ready for harvest and to sell, aphids and caterpillars has started damaging. asking the control measure for the same.
+a1228 | asking about anthracnose problem in chillies
+a1229 | asking about the time for sowing of black gram and green gram.
+a1230 | asking about the fertilizer doses for toria.
+a1231 | aksed about the integrated pig cum fish farming.
+a1232 | query about a calf suffering from dysentry
+a1233 | query regarding fertilizer dose of rice
+a1234 | asking that where to get training for bee keeping.
+a1235 | asking about variety of boro rice
+a1236 | asking about fertilizer does and lime does in fish pond
+a1237 | query regarding regarding debility ( weak ness in leg, unable to bear the body weight ) of a cow having 3 month of pregnency
+a1238 | asking about the remedy to red coloration of rice seedlings
+a1239 | asking about fertilizer dose of paddy
+a1240 | asking for goat production
+a1241 | control measure of oxygen depletion in fish pond
+a1242 | asking about the variety of arise rice
+a1243 | viral attack in brinjal
+a1244 | asking about the pear cultivation practices
+a1245 | asking about fertilizer dose of potato.
+a1246 | asking about timing of cultivation of banana
+a1247 | asking about the control measure for caterpillar in tea
+a1248 | asking about the seed rate of arahar
+a1249 | asking about the disease of chillis

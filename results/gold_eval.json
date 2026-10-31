@@ -1,0 +1,87 @@
+{
+  "n": 150,
+  "majority_class": {
+    "all": {
+      "accuracy": 0.1,
+      "macro_f1": 0.0182
+    },
+    "en": {
+      "accuracy": 0.1,
+      "macro_f1": 0.0182
+    },
+    "hinglish": {
+      "accuracy": 0.1,
+      "macro_f1": 0.0182
+    },
+    "hi": {
+      "accuracy": 0.1,
+      "macro_f1": 0.0182
+    }
+  },
+  "keyword_rules": {
+    "all": {
+      "accuracy": 0.3733,
+      "macro_f1": 0.437
+    },
+    "en": {
+      "accuracy": 0.7,
+      "macro_f1": 0.7202
+    },
+    "hinglish": {
+      "accuracy": 0.32,
+      "macro_f1": 0.3353
+    },
+    "hi": {
+      "accuracy": 0.1,
+      "macro_f1": 0.0182
+    }
+  },
+  "tfidf_linearsvc": {
+    "all": {
+      "accuracy": 0.36,
+      "macro_f1": 0.412
+    },
+    "en": {
+      "accuracy": 0.66,
+      "macro_f1": 0.6689
+    },
+    "hinglish": {
+      "accuracy": 0.32,
+      "macro_f1": 0.3353
+    },
+    "hi": {
+      "accuracy": 0.1,
+      "macro_f1": 0.0182
+    }
+  },
+  "finetuned_distilbert": {
+    "all": {
+      "accuracy": 0.3333,
+      "macro_f1": 0.3824
+    },
+    "en": {
+      "accuracy": 0.66,
+      "macro_f1": 0.6859
+    },
+    "hinglish": {
+      "accuracy": 0.24,
+      "macro_f1": 0.2301
+    },
+    "hi": {
+      "accuracy": 0.1,
+      "macro_f1": 0.0182
+    }
+  },
+  "finetuned_distilbert_per_class_acc": {
+    "Animal Husbandry": 0.267,
+    "Cultural Practices": 0.067,
+    "Fisheries": 0.267,
+    "Government Scheme": 0.533,
+    "Market Price": 0.133,
+    "Nutrient Management": 0.467,
+    "Other": 0.867,
+    "Plant Protection": 0.267,
+    "Varietal Information": 0.333,
+    "Weather": 0.133
+  }
+}
