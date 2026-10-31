@@ -81,8 +81,8 @@ keyword labels but 65.7% against labels by meaning.
   Use `scripts/18_review_tools.py` to measure human agreement (Cohen's kappa).
 - The gold set and the augmentation paraphrases share an author, so Hindi/Hinglish figures are
   likely optimistic. At n=50 per language intervals are about +/-8 points.
-- **The corpus is overwhelmingly Assamese, not Haryanvi.** Data.gov.in's Haryana export is
-  CAPTCHA-gated and was not obtained. Nothing here is Haryana-specific.
+- **Scope: the public multi-state KCC corpus, not one state.** It is mostly Assamese in content, and
+  no state-specific (e.g. Haryana) results are claimed. The pipeline itself is state-independent.
 - The data is English advisor-log text with no audio. Speech was tested on synthetic speech only.
 - "Policy violation" is a rule-based compliance measure defined by us, not independent evidence of
   harm; no agronomist has judged answer correctness. Auto-answers are terse log text.

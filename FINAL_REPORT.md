@@ -54,4 +54,4 @@ agronomist review; no user study; no comparison to a retrieval-augmented LLM.
 1. Two human annotators fill `data/review/review_sheet.csv`; run `scripts/18_review_tools.py score`.
 2. Record real Hindi/English spoken queries; evaluate ASR.
 3. Agronomist review of auto-answers.
-4. Obtain the Haryana-only export from data.gov.in.
+4. Optional: re-run on a state-specific KCC export, since the pipeline is state-independent.

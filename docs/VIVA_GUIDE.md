@@ -44,10 +44,10 @@ word TF-IDF and than embeddings alone. The embedding's value is **zero-shot Hind
 Hindi training data, versus 4% for character n-grams. Training on spoken-style text was the decisive
 factor: without it accuracy on the independent set drops from 90% to 60%.
 
-**Q. Why "Haryana"?**
-The brief targeted Haryana, but the public corpus has no state column and is overwhelmingly
-**Assamese** (17 of 138,875 queries mention a Haryana place). The official Haryana export is
-CAPTCHA-protected. The design is state-independent; I did not claim Haryana results.
+**Q. Which data did you use, and is it state-specific?**
+The public multi-state KCC corpus (about 139,000 queries with advisor answers). It has no state column
+and is mostly Assamese in content, so I report results on this corpus and make no state-specific claim.
+The pipeline is state-independent and can be re-run on any KCC export.
 
 **Q. What is new?**
 Not voice or retrieval on their own (Farmer.Chat, AgriLLM and KisanQRS exist). The contributions are
@@ -76,7 +76,7 @@ wrote and escalates the dangerous categories. I did not compare against an LLM+R
 
 **Q. What would you do next?**
 Human verification with two annotators; real recorded speech; an agronomist reviewing auto-answers;
-the Haryana-only export; an LLM+RAG comparison.
+a state-specific KCC export; an LLM+RAG comparison.
 
 ## Do NOT say
 - "99% accurate" or "the whole model is X% accurate".

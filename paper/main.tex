@@ -167,7 +167,7 @@ One multilingual sentence encoder (paraphrase-multilingual-MiniLM-L12-v2 \cite{r
 \item \textbf{Author overlap.} The gold queries and the augmentation paraphrases share an author; the spelling-perturbation test and the held-out silver set mitigate but do not remove this. Hindi and Hinglish results are likely optimistic.
 \item \textbf{Small test sets.} Fifty queries per register give intervals of roughly $\pm 8$ points.
 \item \textbf{Violation metric.} ``Violation'' is a policy-compliance measure defined by us, not an independent measure of harm. Text-based violations reach zero under the full gate partly \emph{by construction}, since the gate's screen and the metric use the same rules; the informative residual is the mis-routing rate (a truly high-stakes or time-sensitive query classified as low-risk) and the coverage cost. We did not have agronomists judge whether any answer was actually correct or harmful.
-\item \textbf{Data scope.} Assamese-dominated, English advisor logs, no audio; no Haryana data was used.
+\item \textbf{Data scope.} Assamese-dominated, English advisor logs, no audio; no state-specific export was used; the pipeline itself is state-independent.
 \item \textbf{Speech.} Synthetic English only.
 \item \textbf{No user study}, no comparison to a retrieval-augmented language model.
 \end{itemize}
