@@ -1,8 +1,8 @@
 {
   "corpus_audit": {
     "corpus_rows": 124987,
-    "answers_that_are_call_log_notes": 10218,
-    "share_answers_that_are_call_log_notes": 0.0818,
+    "answers_that_are_call_log_notes": 10936,
+    "share_answers_that_are_call_log_notes": 0.0875,
     "weak_test_near_duplicate_share_ge_0.95": 0.7073,
     "weak_test_near_duplicate_share_ge_0.90": 0.8353,
     "weak_test_novel_share_lt_0.80": 0.0493,

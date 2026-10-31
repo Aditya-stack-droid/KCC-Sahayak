@@ -55,9 +55,9 @@ kya spray karun"* (escalated: pest advice), *"आज मंडी में स�
 | Intent accuracy, independent gold set (n=150) | **90.0%** (85-95): English 94%, Hinglish 90%, Hindi 86% |
 | Hinglish with random re-spelling | 85.6% |
 | Same model **without** spoken-style training text, gold set | 60.0% |
-| Gate: share auto-answered / accuracy of those / policy violations (held-out) | 26.0% / 96.1% / 2.3% |
+| Gate: share auto-answered / accuracy of those / policy violations (held-out) | 26.4% / 95.4% / 2.3% |
 | Confidence thresholds alone (no safety rules) | 92.3% auto-answered, **72.3% policy violations** |
-| Answer F1 vs advisor's real answer: dense -> hybrid (novel queries) | 0.452 -> 0.468 (0.189 -> 0.247) |
+| Answer F1 vs advisor's real answer: dense -> hybrid (novel queries) | 0.451 -> 0.467 (0.189 -> 0.245) |
 
 Honest comparisons:
 - A plain **character n-gram SVM is statistically indistinguishable** from the deployed model
@@ -70,7 +70,7 @@ Honest comparisons:
 
 Corpus audit (`results/research_eval.json`): keyword labels agree with labels by meaning only
 **67.5%** of the time; **70.7%** of the original test queries have a near-duplicate in training;
-**8.2%** of logged answers are call-log notes rather than advice; only **17 of 138,875** queries
+**8.7%** of logged answers are call-log notes rather than advice; only **17 of 138,875** queries
 mention a Haryana place while about 5,840 mention Assam. The old DistilBERT scored 99.5% against
 keyword labels but 65.7% against labels by meaning.
 

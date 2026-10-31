@@ -21,7 +21,7 @@ advisor's answer teaches the system. It is not a replacement for advisors.
 |---|---|
 | Intent accuracy, independent 3-language test set (n=150) | **90%** (95% CI 85-95): English 94, Hinglish 90, Hindi 86 |
 | Intent accuracy, held-out corpus calls (n=496) | **93.5%** (92-96) |
-| Safe-gate result | answers about a quarter of queries, ~96% accurate on those, ~2% policy violations |
+| Safe-gate result | answers about a quarter of queries, ~95% accurate on those, ~2% policy violations |
 | Without safety rules (thresholds only) | answers ~92% of queries but ~72% of them break safety policy |
 
 "Overall accuracy of the whole model" is **not a single number**, because the system deliberately

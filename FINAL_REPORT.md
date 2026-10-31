@@ -24,7 +24,7 @@ advisor console, operations, evaluation pages).
 | Intent accuracy, held-out calls (n=496) | 93.5% (95% CI 92-96) |
 | Intent accuracy, independent gold set (n=150) | 90.0% (85-95); EN 94 / Hinglish 90 / Hindi 86 |
 | Without spoken-style training text (gold) | 60.0% |
-| Gate: auto-answered / accuracy of those / policy violations | 26.0% / 96.1% / 2.3% |
+| Gate: auto-answered / accuracy of those / policy violations | 26.4% / 95.4% / 2.3% |
 | Thresholds only, no safety rules | 92.3% auto-answered, 72.3% policy violations |
 
 **What to say about overall accuracy:** about 90% intent accuracy on an independent
@@ -35,7 +35,7 @@ number because the system deliberately refuses to answer about three quarters of
 - keyword labels agree with meaning-based labels only 67.5% of the time;
 - on the original test set a TF-IDF baseline (99.8%) matched the fine-tuned transformer (99.5%);
 - 70.7% of original test queries have a near-duplicate in training;
-- 8.2% of logged answers are call-log notes ("explained in details"), not advice;
+- 8.7% of logged answers are call-log notes ("explained in details"), not advice;
 - only 17 of 138,875 queries mention a Haryana place; the corpus is overwhelmingly Assamese.
 
 ## Honest comparisons
