@@ -1,0 +1,100 @@
+a0001 | Other | asking about storage of potatos for seed purpose.
+a0008 | Fisheries | water quality management in pond water
+a0011 | Plant Protection | asking about weedicide for rice cultivation
+a0019 | Government Scheme | asking about the pm kisan online application.
+a0022 | Government Scheme | asking about pm kisan samman nidhi yojona
+a0032 | Other | query regarding agricultural training programmes
+a0047 | Weather | asking about when the rainfall is going to be available.
+a0075 | Market Price | asking about the market information to sale adult pig.
+a0077 | Fisheries | query regarding fish feed and growth rate in winter season.
+a0086 | Fisheries | how to release spawn in pond
+a0102 | Government Scheme | pm kisan samman nidhi status
+a0106 | Varietal Information | asking about some varieties and sowing time of mustard.
+a0111 | Nutrient Management | asking about the recommended fertilizer dose for mango
+a0116 | Other | query regarding farmers training programme
+a0128 | Government Scheme | asking about the fasal bima yojana
+a0135 | Weather | asking about rainfall (mm)prediction in dhemaji
+a0141 | Nutrient Management | micro nutrient requirment in ridge gourd
+a0145 | Plant Protection | query regarding cotrol measures of fungal diseases in tea
+a0149 | Cultural Practices | asking about the seedling age for transplanting in the main field
+a0163 | Market Price | farmer asking query regarding procurement of paddy by fci.
+a0165 | Government Scheme | asking about agril loan
+a0166 | Animal Husbandry | asking to know about decrease milk production in a cow
+a0196 | Animal Husbandry | asking about long hoof problem in goat.
+a0199 | Animal Husbandry | asking about cow query
+a0200 | Varietal Information | asking about the paddy variety in flood affected area
+a0204 | Varietal Information | asking about the variety of sugarcane
+a0205 | Market Price | farmer asking query regarding msp of rice
+a0206 | Market Price | query regarding msp of sesamum and market informtion.
+a0207 | Other | asking about training programme
+a0214 | Weather | tell me about rainfall
+a0239 | Weather | asking for predicted rainfall in dibrugarh district
+a0249 | Government Scheme | asking about kisan credit card registration.
+a0252 | Fisheries | asking about pond preparation
+a0274 | Government Scheme | asking about different schemes in agriculture
+a0276 | Cultural Practices | asking about pumpkin sowing time and variety
+a0279 | Other | asking about how to storage onion
+a0281 | Other | asking about on faem storage of seed potatoes
+a0302 | Market Price | asking about selling the products to the government
+a0331 | Fisheries | asking about the pond management
+a0342 | Plant Protection | asking about about control of gandhi bug in rice
+a0348 | Weather | querry regarding rainfall (mm) prediction in jorhat
+a0352 | Other | asking contact address of marketing officer and regulated market committee
+a0364 | Other | qury regarding harvesting and storage of wheat for dairy purose.
+a0381 | Nutrient Management | asking about fertilizer application of potato.
+a0385 | Animal Husbandry | query regarding for improving health in cow
+a0396 | Weather | want to know about predicted rainfall in nagaon
+a0400 | Fisheries | asked about control of algal bloom and fungal disease
+a0411 | Varietal Information | asking for high yielding okra variety
+a0419 | Cultural Practices | query regarding spacing of chilly
+a0434 | Varietal Information | asking about some variety name of tomato.
+a0438 | Weather | rainfall (mm) temp (max/min) humidity (max/min) wind 25 apr 0 0 / 0 0 / 0 0 25 apr 0 0 / 0 0 / 0 0
+a0451 | Market Price | asking about msp of jute and sesamum
+a0453 | Varietal Information | query regarding varities of mustard
+a0454 | Animal Husbandry | query regarding heat stress
+a0467 | Weather | query regarding rainfall of matia block of goalpara block
+a0469 | Market Price | asking about commodity daily price rate
+a0473 | Weather | reagrding rainfall patern in the coming days
+a0484 | Nutrient Management | regarding eisenia fetida earthworm procurement for vermicompost production
+a0500 | Weather | rainfall (mm) data in the coming 5 days
+a0505 | Other | asking about training of mushroom production
+a0534 | Varietal Information | asking about the varieties of some vegetables.
+a0553 | Animal Husbandry | query about a cow have treated for mastities but seems to be repeated
+a0581 | Plant Protection | control of fungal disease in broccoli
+a0589 | Plant Protection | problem of leaf eating caterpiller in black gram.
+a0590 | Fisheries | asking about mortality of fish after stocking
+a0602 | Market Price | query regarding procurement of paddy by fci.
+a0614 | Varietal Information | asking about black rice seed availability
+a0619 | Government Scheme | query regarding not getting the six installment of pm kisan samman nidhi.
+a0623 | Government Scheme | asked about pm maan dhan yojana
+a0628 | Other | asking about the horticulture training
+a0634 | Other | asking about the training on floriculture
+a0636 | Fisheries | want to know fish nutrition
+a0640 | Market Price | asked about market informain of ornamental fishes in guwahati.
+a0654 | Government Scheme | asking about the sericulture scheme
+a0655 | Government Scheme | telling that he wants to know in details about the rkvy scheme for stw & lpp.
+a0659 | Plant Protection | asking control measure of bacterial leaf blight in rice
+a0664 | Nutrient Management | asking about the fertiliser doses of potato
+a0677 | Cultural Practices | asking about some plant growth regulators for tea garden.
+a0727 | Market Price | wanted to know about nearest market
+a0732 | Government Scheme | asking about the beneficiary status of pm kisan
+a0736 | Animal Husbandry | asking about correction of bad habbit for poultry.
+a0739 | Fisheries | querry regarding where to find quality fish seed in lakhimpur
+a0742 | Government Scheme | asking about pradhan mantri kisan mandhan scheme.
+a0748 | Weather | asking about the maximum temperature in sivasagar district and jorhat district on 26-06-2015.
+a0758 | Government Scheme | asking about pm man dhan yojana
+a0760 | Nutrient Management | query regarding fertilizer dose of arecanut
+a0762 | Market Price | asking about contact for buying of duckling and market price of duckling for rearing.
+a0791 | Cultural Practices | asking about pruning in citrus
+a0792 | Other | asked where to get training on magur culture..
+a0817 | Cultural Practices | asking for the spacing of brinjal
+a0821 | Fisheries | asking about liming in aquaculture pond
+a0843 | Plant Protection | query regarding control measures of helopeltis in tea
+a0852 | Nutrient Management | querry regarding dose of dap
+a0857 | Plant Protection | query regarding management of wilt in cabbage nursery.
+a0865 | Plant Protection | asking about pest control in ridge gourd.
+a0874 | Varietal Information | quary on good variety of sesame
+a0882 | Varietal Information | wanted to know the name of improved seeds of tomato
+a0897 | Varietal Information | asking about duration of indo american hybrid rice
+a0925 | Varietal Information | asking about some variety for paddy
+a0945 | Plant Protection | query regarding contrl of blight in tomato.

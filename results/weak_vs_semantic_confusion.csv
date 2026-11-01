@@ -1,0 +1,11 @@
+weak_label,Animal Husbandry,Cultural Practices,Fisheries,Government Scheme,Market Price,Nutrient Management,Other,Plant Protection,Varietal Information,Weather
+Animal Husbandry,274,1,6,1,1,2,4,2,0,0
+Cultural Practices,0,191,1,1,0,1,88,4,5,0
+Fisheries,0,0,217,3,2,0,11,0,0,0
+Government Scheme,0,0,1,284,0,1,4,1,0,0
+Market Price,3,63,5,13,59,3,8,3,18,0
+Nutrient Management,0,11,4,1,1,378,1,6,6,0
+Other,86,196,21,33,0,68,55,185,52,4
+Plant Protection,55,1,10,0,0,3,0,572,0,0
+Varietal Information,15,65,6,0,0,1,8,13,183,0
+Weather,8,12,3,0,0,1,0,4,0,147

@@ -1,0 +1,100 @@
+a0962 ### What kind of rain can we expect in Sivasagar this week? ### sivasagar mein is hafte kaisi baarish hogi ### शिवसागर में इस हफ्ते कैसी बारिश होगी?
+a0971 ### What can I do to protect my potatoes from late blight? ### aloo ko pachheta jhulsa se kaise bachaun ### आलू को पछेती झुलसा से कैसे बचाऊं?
+a0983 ### What kind of grass should I grow to feed my goats? ### bakriyon ko khilane ke liye kaun si ghaas ugaun ### बकरियों को खिलाने के लिए कौन सी घास उगाऊं?
+a0988 ### How many fish fingerlings should I put in a small pond of one katha? ### ek katha ke talab mein machhli ke kitne bachche daalun ### एक कट्ठा के तालाब में मछली के कितने बच्चे डालूं?
+a0989 ### Is there a late-season cauliflower variety I can grow? ### kya phoolgobhi ki koi der se hone wali kism hai ### क्या फूलगोभी की कोई देर से होने वाली किस्म है?
+a0994 ### Is it going to rain soon? ### baarish jaldi hone wali hai kya ### बारिश जल्दी होने वाली है क्या?
+a0995 ### Can you suggest a few mustard variety names? ### sarson ki kuch kismon ke naam suggest karo ### सरसों की कुछ किस्मों के नाम सुझाइए
+a1002 ### Insects are spoiling the grain in my godown, how do I get rid of them? ### godam mein anaj mein keede lag gaye hain, unhe kaise hataun ### गोदाम में अनाज में कीड़े लग गए हैं, उन्हें कैसे हटाऊं?
+a1003 ### My ducks have loose motions, what supplement and vaccine should I give? ### meri batakhon ko dast lage hain, kaun si dawai aur teeka lagwaun ### मेरी बत्तखों को दस्त लगे हैं, कौन सी दवा और टीका लगवाऊं?
+a1004 ### Where can I learn to repair and maintain farm machines? ### kheti ki machine ki marammat sikhne ki training kahan milegi ### खेती की मशीनों की मरम्मत सीखने का प्रशिक्षण कहां मिलेगा?
+a1009 ### What should I check in my pond water to keep fish healthy? ### machhli ke liye talab ke paani mein kya kya dekhna chahiye ### मछली के लिए तालाब के पानी में क्या-क्या देखना चाहिए?
+a1022 ### Which boro rice varieties would you recommend for my area? ### mere ilake ke liye boro dhan ki kaun si kismein theek rahengi ### मेरे इलाके के लिए बोरो धान की कौन सी किस्में ठीक रहेंगी?
+a1063 ### How do I prepare a nursery bed for raising paddy seedlings? ### dhan ki paudh ke liye nursery ki kyari kaise banaun ### धान की पौध के लिए नर्सरी की क्यारी कैसे बनाऊं?
+a1065 ### Is there any booster I can spray on my mustard to get a better yield? ### sarson ki zyada paidawar ke liye kaun sa booster chhidak sakta hoon ### सरसों की ज्यादा पैदावार के लिए कौन सा बूस्टर छिड़क सकता हूं?
+a1084 ### How should I manage water in my fields? ### khet mein paani ka intezaam kaise karun ### खेत में पानी का प्रबंधन कैसे करूं?
+a1093 ### What's the rain outlook for the next few days? ### agle kuch dino ke liye baarish ka kya anuman hai ### अगले कुछ दिनों के लिए बारिश का क्या अनुमान है?
+a1097 ### The fish are gasping at the surface, how can I get more oxygen into the pond? ### machhliyan paani ki sateh par haanf rahi hain, talab mein oxygen kaise badhaun ### मछलियां पानी की सतह पर हांफ रही हैं, तालाब में ऑक्सीजन कैसे बढ़ाऊं?
+a1104 ### What nutrients does my rice crop need and when? ### dhan ki fasal ko kaun se poshak tatv kab chahiye ### धान की फसल को कौन से पोषक तत्व कब चाहिए?
+a1106 ### Where can I market ornamental fish that I breed? ### main jo sajawati machhli paalta hoon use kahan bechun ### मैं जो सजावटी मछली पालता हूं उसे कहां बेचूं?
+a1113 ### Where can I get training in bee keeping? ### madhumakkhi palan ki training kahan milegi ### मधुमक्खी पालन का प्रशिक्षण कहां मिलेगा?
+a1141 ### How do I build a greenhouse and is there any subsidy for it? ### greenhouse kaise banate hain aur kya is par subsidy milti hai ### ग्रीनहाउस कैसे बनाते हैं और क्या इस पर सब्सिडी मिलती है?
+a1145 ### Is there any loan available for farmers? ### kya kisano ke liye koi loan milta hai ### क्या किसानों के लिए कोई ऋण मिलता है?
+a1186 ### My chilli plants are wilting, how do I save them? ### meri mirch ke paudhe murjha rahe hain, unhe kaise bachaun ### मेरी मिर्च के पौधे मुरझा रहे हैं, उन्हें कैसे बचाऊं?
+a1189 ### How should I take care of my fish pond in winter? ### sardi mein machhli ke talab ki dekhbhal kaise karun ### सर्दी में मछली के तालाब की देखभाल कैसे करूं?
+a1198 ### Where can I get trained in growing mushrooms? ### mushroom ugane ki training kahan se loon ### मशरूम उगाने की ट्रेनिंग कहां से लूं?
+a1202 ### What were the vegetable prices in the markets yesterday? ### kal alag alag mandiyon mein sabziyon ke kya bhav the ### कल अलग-अलग मंडियों में सब्जियों के क्या भाव थे?
+a1204 ### How do I manage my nursery properly? ### apni nursery ka sahi se prabandhan kaise karun ### अपनी नर्सरी का सही से प्रबंधन कैसे करूं?
+a1211 ### My cabbage leaves look discoloured, is it a nutrient deficiency? ### gobhi ke patte rang badal rahe hain, kya poshan ki kami hai ### पत्तागोभी के पत्ते रंग बदल रहे हैं, क्या पोषण की कमी है?
+a1218 ### How much manure and fertiliser should I give per bigha for cauliflower? ### phoolgobhi mein ek bigha ke liye kitni khaad aur urvarak dena hai ### फूलगोभी में एक बीघा के लिए कितनी खाद और उर्वरक देना है?
+a1220 ### What fertiliser dose is right for my mustard? ### meri sarson ke liye khaad ki kitni matra sahi hai ### मेरी सरसों के लिए खाद की कितनी मात्रा सही है?
+a1238 ### My rice seedlings are turning red, how do I fix it? ### dhan ki paudh laal ho rahi hai, iska ilaaj kya hai ### धान की पौध लाल हो रही है, इसका इलाज क्या है?
+a1243 ### A virus seems to have hit my brinjal plants, what can I do? ### lagta hai baingan ke paudhon mein virus lag gaya hai, kya karun ### लगता है बैंगन के पौधों में वायरस लग गया है, क्या करूं?
+a1254 ### What distance should I leave between tomato plants? ### tamatar ke paudhon ke beech kitni doori chhodni chahiye ### टमाटर के पौधों के बीच कितनी दूरी छोड़नी चाहिए?
+a1265 ### Can I raise fish in a field inside my tea garden? ### kya main chai ke bagan ke khet mein machhli pal sakta hoon ### क्या मैं चाय के बागान के खेत में मछली पाल सकता हूं?
+a1289 ### Where do I get mushroom spawn? ### mushroom ka beej kahan se milega ### मशरूम का बीज कहां से मिलेगा?
+a1294 ### How can I get a Kisan Credit Card? ### kisan credit card kaise milta hai ### किसान क्रेडिट कार्ड कैसे मिलता है?
+a1295 ### Is there any scheme for fish farmers? ### machhli palne walon ke liye koi yojana hai kya ### मछली पालने वालों के लिए कोई योजना है क्या?
+a1304 ### Where can I take training on fish breeding? ### machhli ke prajanan ki training kahan se lun ### मछली प्रजनन की ट्रेनिंग कहां से लूं?
+a1308 ### What is the procedure to get a loan on a Kisan Credit Card? ### kisan credit card par loan lene ki prakriya kya hai ### किसान क्रेडिट कार्ड पर ऋण लेने की प्रक्रिया क्या है?
+a1322 ### My plants are wilting from the roots up, could it be fusarium wilt, how do I control it? ### paudhe jad se sookh rahe hain, fusarium wilt ho sakta hai, kaise rokun ### पौधे जड़ से सूख रहे हैं, फ्यूजेरियम विल्ट हो सकता है, कैसे रोकूं?
+a1331 ### How much urea should I top-dress my paddy with and when? ### dhan mein urea ki upari khuraak kab aur kitni deni hai ### धान में यूरिया की ऊपरी खुराक कब और कितनी देनी है?
+a1334 ### My cow's eye is watering all the time, what is wrong? ### meri gaay ki aankh se lagataar paani beh raha hai, kya hua hai ### मेरी गाय की आंख से लगातार पानी बह रहा है, क्या हुआ है?
+a1340 ### My goat has had diarrhoea since morning, what should I give her? ### meri bakri ko subah se dast ho rahe hain, kya dun ### मेरी बकरी को सुबह से दस्त हो रहे हैं, क्या दूं?
+a1358 ### Where can I buy French bean seed? ### french bean ka beej kahan se kharidun ### फ्रेंच बीन का बीज कहां से खरीदूं?
+a1362 ### How should I prepare a new pond for fish? ### machhli ke liye naya talab kaise taiyar karun ### मछली के लिए नया तालाब कैसे तैयार करूं?
+a1363 ### Are there any farmer training and exposure visits I can join? ### kya koi kisan training ya bhraman karyakram hai jisme main shamil ho sakun ### क्या कोई किसान प्रशिक्षण या भ्रमण कार्यक्रम है जिसमें मैं शामिल हो सकूं?
+a1407 ### There are gas bubbles and a bad smell in my nursery pond, what should I do? ### nursery wale talab mein bulbule aur badboo aa rahi hai, kya karun ### नर्सरी वाले तालाब में बुलबुले और बदबू आ रही है, क्या करूं?
+a1414 ### Is it going to rain today in Barpeta? ### aaj barpeta mein baarish hogi kya ### आज बारपेटा में बारिश होगी क्या?
+a1427 ### Termites are eating my crop, how do I control them? ### deemak meri fasal kha rahi hai, inhe kaise rokun ### दीमक मेरी फसल खा रही है, इन्हें कैसे रोकूं?
+a1428 ### My cow has just calved, how can I get her to give more milk? ### meri gaay ne abhi bachhda diya hai, zyada doodh kaise lun ### मेरी गाय ने अभी बछड़ा दिया है, ज्यादा दूध कैसे लूं?
+a1429 ### Is there a scheme to get a tractor or power tiller at a lower cost? ### kya tractor ya power tiller sasta dilane ki koi yojana hai ### क्या ट्रैक्टर या पावर टिलर सस्ता दिलाने की कोई योजना है?
+a1433 ### Which weedicide should I use in my field? ### mere khet mein kaun si weedicide use karun ### मेरे खेत में कौन सी खरपतवारनाशी दवा इस्तेमाल करूं?
+a1453 ### Does the government give training on biofloc fish farming? ### kya sarkar biofloc machhli palan ki training deti hai ### क्या सरकार बायोफ्लॉक मछली पालन की ट्रेनिंग देती है?
+a1458 ### Which paddy varieties can stand waterlogging? ### dhan ki kaun si kismein pani bharne par bhi tik jati hain ### धान की कौन सी किस्में पानी भरने पर भी टिक जाती हैं?
+a1467 ### How much fertiliser do I need for one bigha of unirrigated land? ### bina sinchai wali ek bigha zameen mein kitni khaad lagegi ### बिना सिंचाई वाली एक बीघा जमीन में कितनी खाद लगेगी?
+a1471 ### What is the USSD service for farmers and how do I use it? ### kisano ke liye ussd service kya hai aur kaise use karun ### किसानों के लिए यूएसएसडी सेवा क्या है और कैसे इस्तेमाल करूं?
+a1474 ### Can you give me the phone number of the Krishi Vigyan Kendra at Bilasipara? ### bilasipara krishi vigyan kendra ka phone number chahiye ### बिलासीपारा कृषि विज्ञान केंद्र का फोन नंबर चाहिए
+a1478 ### How should I grow mustard from start to harvest? ### sarson ki kheti shuru se katai tak kaise karun ### सरसों की खेती शुरू से कटाई तक कैसे करूं?
+a1486 ### Which website do I use to fill the PM-Kisan form online? ### pm kisan ka form online bharne ki website kaun si hai ### पीएम किसान का फॉर्म ऑनलाइन भरने की वेबसाइट कौन सी है?
+a1497 ### How much cucumber seed do I need per acre? ### ek acre ke liye kheere ka kitna beej chahiye ### एक एकड़ के लिए खीरे का कितना बीज चाहिए?
+a1513 ### What are the market rates in Sonitpur district today? ### aaj sonitpur zile mein mandi ke bhav kya hain ### आज सोनितपुर जिले में मंडी के भाव क्या हैं?
+a1517 ### Can I get a loan to buy a tractor? ### kya tractor kharidne ke liye loan mil sakta hai ### क्या ट्रैक्टर खरीदने के लिए ऋण मिल सकता है?
+a1519 ### Will it rain over the next five days? ### kya agle paanch dinon mein baarish hogi ### क्या अगले पांच दिनों में बारिश होगी?
+a1520 ### Stem borer has attacked my paddy, how can I control it? ### dhan mein tana chhedak kida lag gaya hai, kaise rokun ### धान में तना छेदक कीड़ा लग गया है, कैसे रोकूं?
+a1522 ### Where can I get training in pig farming? ### suar palan ki training kahan milegi ### सूअर पालन की ट्रेनिंग कहां मिलेगी?
+a1533 ### Which marigold variety is best for me? ### mere liye genda ki kaun si kism sabse achi hai ### मेरे लिए गेंदे की कौन सी किस्म सबसे अच्छी है?
+a1534 ### How much rain did Amguri block get? ### amguri block mein kitni baarish hui ### अमगुड़ी ब्लॉक में कितनी बारिश हुई?
+a1538 ### Do my ducklings need a calcium supplement? ### kya meri batakh ke bachchon ko calcium ki zarurat hai ### क्या मेरे बत्तख के बच्चों को कैल्शियम की जरूरत है?
+a1540 ### What is the recommended fertiliser dose for chilli? ### mirch ke liye khaad ki sahi matra kya hai ### मिर्च के लिए खाद की सही मात्रा क्या है?
+a1546 ### Where can I find out about farm tools and machinery? ### kheti ke auzaar aur machine ke baare mein jaankari kahan milegi ### खेती के औजार और मशीनों की जानकारी कहां मिलेगी?
+a1563 ### When is the best time to plant banana? ### kela lagane ka sabse achha samay kya hai ### केला लगाने का सबसे अच्छा समय क्या है?
+a1566 ### I want to start a broiler poultry farm, what should I know? ### main broiler murgi farm shuru karna chahta hoon, kya jaanna zaroori hai ### मैं ब्रॉयलर मुर्गी फार्म शुरू करना चाहता हूं, क्या जानना जरूरी है?
+a1569 ### Borers are damaging my French beans, how can I control them? ### french bean ki fali mein kida lag gaya hai, kaise rokun ### फ्रेंच बीन की फली में कीड़ा लग गया है, कैसे रोकूं?
+a1577 ### How much lentil seed should I use? ### masoor ka kitna beej daalna chahiye ### मसूर का कितना बीज डालना चाहिए?
+a1578 ### How often should I irrigate my crop? ### meri fasal mein kitni baar sinchai karni chahiye ### मेरी फसल में कितनी बार सिंचाई करनी चाहिए?
+a1581 ### I need to speak to a veterinary expert, how can I reach one? ### mujhe pashu doctor se baat karni hai, kaise sampark karun ### मुझे पशु चिकित्सक से बात करनी है, कैसे संपर्क करूं?
+a1582 ### How much did it rain in Goalpara on the 29th of July? ### 29 july ko goalpara mein kitni baarish hui thi ### 29 जुलाई को गोलपारा में कितनी बारिश हुई थी?
+a1586 ### How often should I water my potato crop? ### aloo ki fasal ko kitni baar paani dena chahiye ### आलू की फसल को कितनी बार पानी देना चाहिए?
+a1591 ### What will the weather be like until the 20th of April? ### 20 april tak mausam kaisa rahega ### 20 अप्रैल तक मौसम कैसा रहेगा?
+a1593 ### How much mustard seed do I need to sow? ### sarson ka kitna beej boun ### सरसों का कितना बीज बोऊं?
+a1597 ### What does a Jersey cow cost? ### jersey gaay ka kya daam hai ### जर्सी गाय का क्या दाम है?
+a1598 ### How do I get my goat inseminated artificially? ### apni bakri ka kritrim garbhadhan kaise karwaun ### अपनी बकरी का कृत्रिम गर्भाधान कैसे करवाऊं?
+a1601 ### What fertiliser should I apply on my betel vine? ### paan ki bel mein kaunsi khaad daalni chahiye ### पान की बेल में कौन सी खाद डालनी चाहिए?
+a1604 ### What are the basics of looking after a fish pond? ### machhli ke talab ki dekhbhal ki buniyadi baatein kya hain ### मछली के तालाब की देखभाल की बुनियादी बातें क्या हैं?
+a1619 ### Where can I sell seed? ### beej kahan bech sakta hoon ### बीज कहां बेच सकता हूं?
+a1631 ### My litchi flowers are dropping off, how do I stop it? ### meri leechi ke phool jhad rahe hain, kaise rokun ### मेरी लीची के फूल झड़ रहे हैं, कैसे रोकूं?
+a1632 ### Why have I not received my PM-Kisan instalment? ### mujhe pm kisan ki kist kyon nahi mili ### मुझे पीएम किसान की किस्त क्यों नहीं मिली?
+a1634 ### How do I grow leafy vegetables properly? ### patte wali sabziyan sahi tareeke se kaise ugaun ### पत्ते वाली सब्जियां सही तरीके से कैसे उगाऊं?
+a1650 ### How much fertiliser does coriander need? ### dhaniya ko kitni khaad chahiye ### धनिया को कितनी खाद चाहिए?
+a1651 ### What distance should I keep when planting king chilli? ### bhoot jolokia lagate samay kitni doori rakhni chahiye ### भूत जोलोकिया लगाते समय कितनी दूरी रखनी चाहिए?
+a1657 ### Where is the market and what are they paying today? ### mandi kahan hai aur aaj kya bhav chal raha hai ### मंडी कहां है और आज क्या भाव चल रहा है?
+a1659 ### What is the price of brinjal in the market? ### baingan ka mandi mein kya bhav hai ### बैंगन का मंडी में क्या भाव है?
+a1667 ### What are the chances of rain in rural Kamrup? ### kamrup grameen mein baarish hone ki kitni sambhavna hai ### कामरूप ग्रामीण में बारिश होने की कितनी संभावना है?
+a1680 ### Where can I get training in mushroom cultivation? ### mushroom ki kheti ki training kahan milegi ### मशरूम की खेती की ट्रेनिंग कहां मिलेगी?
+a1696 ### How do I raise fish scientifically, and what about ornamental fish? ### machhli palan vaigyanik tareeke se kaise karun, sajawati machhli ka bhi batao ### मछली पालन वैज्ञानिक तरीके से कैसे करूं, सजावटी मछली के बारे में भी बताइए
+a1697 ### How much has it rained in Ghilamara block? ### ghilamara block mein kitni baarish hui hai ### घिलामारा ब्लॉक में कितनी बारिश हुई है?
+a1726 ### What are the best practices for running a fish pond? ### machhli ka talab chalane ke achhe tareeke kya hain ### मछली का तालाब चलाने के अच्छे तरीके क्या हैं?
+a1736 ### How heavy will the rain be in Dhemaji over the next five days? ### agle paanch din dhemaji mein baarish kitni tez hogi ### अगले पांच दिन धेमाजी में बारिश कितनी तेज होगी?
+a1747 ### Where can I get training on honey bee farming? ### madhumakkhi palan ki training kahan se milegi ### मधुमक्खी पालन की ट्रेनिंग कहां से मिलेगी?
+a1758 ### When should I vaccinate my broiler chickens? ### apne broiler murgiyon ko teeka kab lagwana chahiye ### अपने ब्रॉयलर मुर्गियों को टीका कब लगवाना चाहिए?

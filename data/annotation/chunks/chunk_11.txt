@@ -1,0 +1,250 @@
+a2750 | asking about doing soil treatment before sowing cabbage
+a2751 | asking remedy for stem rot in papaya
+a2752 | asking about death of fish in morning
+a2753 | asking about control measure of powdery mildew in bitter ground
+a2754 | top dresssing in chilli
+a2755 | asking about control measure of canker
+a2756 | asking about the facility for training.
+a2757 | asking about the transplanting age of seedlings in sri(system of rice intensification) method.
+a2758 | query regarding variety of black gram.
+a2759 | asking for control of borer in sugarcane
+a2760 | farmer asking query regarding control of damping off in tomato.
+a2761 | query regarding plant protection of pointed gourd.
+a2762 | asking about the control measure against blast disease in boro paddy.
+a2763 | disease in brinjal
+a2764 | asking for todays predicted rainfall in tinsukia
+a2765 | control measure of cracking of fruit
+a2766 | asking about the sowing season of onion.
+a2767 | query regarding elongation of hoof of a goat
+a2768 | asking about nutrient deficiency on paddy
+a2769 | asking about fish growth
+a2770 | asked about carp feeding habits.
+a2771 | fertilizer reqiurment in lemon in two years old plants
+a2772 | query regarding management of white fly in bottle gourd. sprayimidachloprid 1ml/liter of water 3 times at 5 days interval in the evening time in the absence of rain.
+a2773 | asking about fruitborer of brinjal
+a2774 | want to know spacing in lemon
+a2775 | asked what type of fishes are available for cultivation particularly i the climate condition of assam
+a2776 | asking about the nutrient deficiency in jack fruits
+a2777 | asked pond constuction management for carp cultue.
+a2778 | asking about ideal pond size for grow out pond
+a2779 | owner reported that a brooding hen showing high rise of temperature
+a2780 | asking about variety of brinjal
+a2781 | asking about asking about pm fasal bima yojana
+a2782 | asking for govt scheme of agriculture
+a2783 | asking about the application of lime and for increasing oxygen in the pond.
+a2784 | query regarding snail attack in brinjal
+a2785 | asking about bottle gourd query
+a2786 | asking about sowing of tomato seeds
+a2787 | asking about the variety of sugercane
+a2788 | asking about the blight in potato
+a2789 | asking about the control of helopeltis in tea
+a2790 | asking about the early sown variety of cabbage.
+a2791 | disaese problem in fresh bean
+a2792 | asking about caterpillers control.
+a2793 | rainfall(mm) prediction in lakhimpur district
+a2794 | asking about scheme availability.....
+a2795 | asking about spacing of betel vine
+a2796 | asking for the spacing gap between malbhog banana
+a2797 | asking control of leaf rot in coconut tree
+a2798 | querry regarding rainfall (mm) in nagaon
+a2799 | asking about the fertilizer use in potato
+a2800 | asking about time and seed rate of onion
+a2801 | asking about the treatment of white diarrhoea of poultry farm.
+a2802 | asking about the spacing for semi dwarf rice varity
+a2803 | asking for the seed rate of potato in terms of per bigha of land along with the spacing for potato crop cultivation.
+a2804 | asking about tractor loan
+a2805 | asking about the control of erwinia rot of banana.
+a2806 | asking about remedy for fungal leaf blight in maize
+a2807 | asking planting time for banana
+a2808 | asking about the cuttings & grafting of litchi plant.
+a2809 | asked abt veterinary
+a2810 | query regarding fish mortality due to oxygen dipletion.
+a2811 | asking about fertilizer doses of brinjal
+a2812 | asking for names of varities and field preparation of pea
+a2813 | asking for early matured variety
+a2814 | 25 may rainfall(mm) : 18.0 temp(max/min):0.0 / 17.6 humidity(max/min)0.0 / 96.0 wind:1.9
+a2815 | asking about the spacing of bitter gourd
+a2816 | asking about sowing time of daincha<green manure>.
+a2817 | asked about solution for immature fruit drop in coconut
+a2818 | asking about the time of sowing of radish .
+a2819 | control of yellow stem borer pest attack in paddy
+a2820 | query regarding management of caterpillars and other leaf eaters.
+a2821 | asking about the benefit of borax in cabbage .
+a2822 | query regarding pest management in organic method.
+a2823 | white flies in marigold
+a2824 | asking about the spacing for brinjal cultivation
+a2825 | askinga about pm kisan samman nidhi yojona,
+a2826 | asking about the fertilizer dose in arecanut
+a2827 | asked about feed available in the market for fish culture.
+a2828 | asking about cultural practices of boro paddy
+a2829 | 1.control measures of bacterial wilt and fungal wilt in tomato. 2.control measures of leaf curl and flower drop in chilli. 3.control measures of pseudostemborer of banana.
+a2830 | asking about control measure of cracking of litchi fruits
+a2831 | asking about the control of bihar hairy caterpillar in mustard
+a2832 | querry regarding rainfall(mm) data
+a2833 | asking about wilting problem in capsicum
+a2834 | asking about the pm kisan maan dhan yojna
+a2835 | asking about application process for pm kisan
+a2836 | query regarding fungal infection in papaya.
+a2837 | asking for control of late blight in tomato
+a2838 | asking about vermi composting
+a2839 | asking for the control of blb in rice cultivation
+a2840 | asking about the micronutrient used in dolichosbean
+a2841 | asking about rainfall possibility for the next days
+a2842 | asking about the medicine for pig
+a2843 | asking about the spacing for banana cultivar-malbhog
+a2844 | asking about the water manage in wheat
+a2845 | query regarding control of fruit drop in pointed gourd
+a2846 | query regarding goat
+a2847 | asking about the variety name of ridge gourd.
+a2848 | asking about the varieties grown under sali rice
+a2849 | query regarding fertilizers market.
+a2850 | asking about nursery bed preparation, varieties, time of sowing, spacing, manure and fertilizer of cabbage
+a2851 | query regarding feeding in pond
+a2852 | asking about the availability of certified seeds of ranjit paddy variety in bongaigaon.
+a2853 | query regarding pigary farm
+a2854 | want to know regarding storage of seed for next year
+a2855 | asking about the pest attack in black gram leaves
+a2856 | asking about asking about pm kisan
+a2857 | asked about issues regarding receiving of government subsidy
+a2858 | ashking about govt. scheme
+a2859 | asking about spacing rate of banana
+a2860 | control of fruit borer in mango
+a2861 | query regarding plant protection in beans
+a2862 | asking about the growth regulator of mustard
+a2863 | asking about control of virus in chilli
+a2864 | asking about cultivation practices
+a2865 | asking about calcium suppliment for bitch.
+a2866 | asked about cat fish culture
+a2867 | asking about the control of fruit drop in brinjal
+a2868 | asking about the stunted growth in cabbage
+a2869 | asking about excessive algal bloom in pond
+a2870 | asking the fertilizer dose of arecanut in the 3rd year stage.
+a2871 | farmer askinng query regarding control of leaf spot in lemon.
+a2872 | asking for the micro nutrient requirement in cucumber
+a2873 | query regarding control measures of termite in bottle gourd
+a2874 | query regarding information of 0ne or two nos of cow for rearing
+a2875 | asking about transplanting of 5 years old plant
+a2876 | asking about sowing time of rajmah.
+a2877 | pacakge of practice in coconut
+a2878 | asking about anestrus in cow having eight month calf.
+a2879 | query regarding control measures of fruit rot in ridge gourd
+a2880 | asking about disease management of duck (loss of apetite ) and also donot vaccination till now
+a2881 | query regarding control,measures of termite in potato
+a2882 | asking about the micronutrient used in spongegourd
+a2883 | query regarding nutrient management in betelvine
+a2884 | asking about water stagnation in crop field
+a2885 | wanted to know the spacing of marigold
+a2886 | asking some recommended variety of ground nut
+a2887 | asking about brown spot of rice
+a2888 | asking about the proper planting time of banana.
+a2889 | query regarding broiler farming
+a2890 | asking for the fertilizer dose for coconut tree in the 5th year stage.
+a2891 | asking about papaya variety
+a2892 | query regarding leaf curl virus in cucumber.
+a2893 | asking about the pest control in chilli
+a2894 | asking about spacing of banana
+a2895 | asking about goverenment scheme
+a2896 | asking bout the spacing requirement for arecanut
+a2897 | asking for transport of coconut seedlings from assam to rajasthan
+a2898 | regarding control of attack of gundhi bug in paddy crop
+a2899 | asking about spacing of brinjal cultivation.
+a2900 | anestrous in cow
+a2901 | asking about treatment of pain and inflammation in cow.
+a2902 | asking about cultivation practice of potato
+a2903 | asking about ussd scheme for farmers
+a2904 | asking about how to increase milk of a cow.
+a2905 | asking about chief minister sa sajuli yojana
+a2906 | query regarding control measures of leaf curling in cowpea
+a2907 | asking for the control of aphids in french bean
+a2908 | query related to litchi
+a2909 | asking about hybrid variety for boro paddy
+a2910 | 31 may rainfall(mm) : 0 temp(max/min):0 / 0 humidity(max/min)0 / 0 wind:0
+a2911 | asking about the cultural practices in papaya
+a2912 | asking about location of poultry farms in dibrugargh district
+a2913 | asking planting time of ginger
+a2914 | asking about the fish feed.
+a2915 | asking about reason of fish death
+a2916 | asking about loan against pond construction
+a2917 | asking that he will cultivate rice next year and wants to know market price for more value.
+a2918 | asking for the micro nutrient requirement in ridge gourd
+a2919 | asked about the suitable short duration variety of arahar for assam condition
+a2920 | asking about the micronutrient use in tomato
+a2921 | query regarding rainfall of agamoni, dhubri.
+a2922 | vet ralated query
+a2923 | asking about the cultural practices of black gram field
+a2924 | agriculture loan (kcc)
+a2925 | asking about the way to induce female flower in papaya for fruit bearing.
+a2926 | querry regarding rainfall of darrang district
+a2927 | asking about govt. scheme for goatery farming.
+a2928 | asking about doe of fertilizer of areca nut.
+a2929 | asking about pm kisaan pension yojana
+a2930 | asking for the seed treatment of potato
+a2931 | asking about r2b vaccine of her local bird.
+a2932 | query about certificate course in agriculture or training program.
+a2933 | asking about the control measure for bacterial wilt in cucumber.
+a2934 | asking about the control of wasp attack in pumpkin
+a2935 | asking about seed requirement of lentil per bigha
+a2936 | control of crown chocking in coconut
+a2937 | asking about the high yielding hybrid seed variety
+a2938 | asking about the wilting of long yard bean
+a2939 | asking regarding making of kisan credit card
+a2940 | asking about variety of boro rice varieties are beenadhan 11, sahabhagi, arize,
+a2941 | control measure turmite in sugarcane
+a2942 | query regarding irrigation management in wheat.
+a2943 | querry regardin bank loan against fish farming
+a2944 | asking about the gobt. scheme
+a2945 | query regarding spacing of french bean.
+a2946 | asking about thefertilizer dose of tea
+a2947 | asking about early variety of cauliflower
+a2948 | query regarding assistance to form fpo
+a2949 | asking about poisoning case in a calf.
+a2950 | kidling goat does not allowed to suck milk to one of the kid
+a2951 | querry regarding micronutrient application in brinjal
+a2952 | query regarding helopeltis
+a2953 | asking about the deworming of a cow.
+a2954 | asking about nutrient management in pumpkin
+a2955 | control measure of bacterial wilt of tomato
+a2956 | asking about training of hydroponic culture
+a2957 | call related to pm kisan
+a2958 | asking for the control measure against potato cut worms.
+a2959 | asking about the chances of rain in jorhat
+a2960 | call related to fishery
+a2961 | query regarding species ratio of carp
+a2962 | asking about the mulching in ridge gourd
+a2963 | query about medication of goat
+a2964 | asking about fertilizer application of hybreed boro paddy
+a2965 | asking about the training for horticultural proucts.
+a2966 | query regarding nutrient management in chilli
+a2967 | aksed about the fish cum poultry farming.
+a2968 | asking about the varieties of marigold
+a2969 | asking about discolour of water in fish pond
+a2970 | regarding suitable tomato variety for planting
+a2971 | regarding fertilizer availability.
+a2972 | fertilizer management in jute
+a2973 | asking about the use use of green harvest all crops in ridge gourd.
+a2974 | asking about the spacing for potato
+a2975 | asking about the roof top cultivation
+a2976 | asking for fish pond management procedure
+a2977 | asking about some variety of tea.
+a2978 | query regrading mustard cultivation
+a2979 | asking about the topdressing of fertilizer during panicle initiation stage
+a2980 | farmer asking query regarding management of bud rot in coconut.
+a2981 | query reagarding bought leaf market information
+a2982 | asking for the control of mite and flower drop
+a2983 | query regarding bhut jolokia
+a2984 | asking about the name of f1 variety of papaya.
+a2985 | asking about training on potato cultivation
+a2986 | asking about the control measure of yellow stem borer pest attack in paddy cultivation.
+a2987 | asking about control measure of wasp in snake gourd
+a2988 | problem of root rot in spine gourd.
+a2989 | want to know regarding cultivation of banana
+a2990 | asking about the control measure to control gundhi bug infestation in paddy field.
+a2991 | query regarding management of root rot.
+a2992 | asking about the market to sell bao paddy in higher rate.
+a2993 | asking about vitamin application in banana and regarding loan from bank
+a2994 | asking that why dhaincha is cultivated ?
+a2995 | asking about the micro nutrient use in cucumber
+a2996 | asked about pm kisan account status
+a2997 | asking about the kvk address
+a2998 | asking about dose of rogor
+a2999 | asking about stocking density of fish fingerling in 1 katha of water area

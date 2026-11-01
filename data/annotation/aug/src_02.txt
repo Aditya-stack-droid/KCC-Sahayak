@@ -1,0 +1,100 @@
+a1761 | Weather | query regarding rainfall data for matia block of goalpara district
+a1762 | Government Scheme | asking about the kisan credit card for loan.
+a1773 | Fisheries | asking about the vitamin for fish
+a1787 | Varietal Information | improved variety of rice
+a1789 | Plant Protection | control measure of fruit fly of brinjal
+a1793 | Government Scheme | asking about pradhan mantri kian maan dhan yojana
+a1795 | Weather | asking about predicted rainfall in his district
+a1809 | Market Price | asking about market information
+a1818 | Nutrient Management | asing about the fertilizer of chiili
+a1819 | Nutrient Management | want to know fertilizer requirement in boro paddy as basal dose
+a1837 | Other | query related to agriculture
+a1839 | Plant Protection | asking about the control measure of flower droping
+a1868 | Weather | contineous rain prevails in the area for last 3 days destroy their crops
+a1873 | Animal Husbandry | asking about treatment of mastitis in cow.
+a1878 | Nutrient Management | asking about vitamin application
+a1884 | Weather | regarding rainfall patern for tommorrow
+a1907 | Varietal Information | query regarding procurement of hybrid seeds
+a1913 | Nutrient Management | asking about fertilizer does in potato culture
+a1923 | Cultural Practices | asking about the cultural practices of potato
+a1925 | Cultural Practices | asking about the planting distance and number of plants/bigha for arecanut.
+a1937 | Animal Husbandry | query regarding some local chicken
+a1950 | Plant Protection | asking about the control measure of powdery mildew disease infestation in cucumber.
+a1956 | Market Price | asking about the minimum support price of paddy recommended by govt of india
+a1962 | Other | query regarding seasonal flowers
+a1965 | Nutrient Management | query regarding nutrient requirement of rice.
+a1973 | Animal Husbandry | asking about breeding problem in cow.
+a1977 | Plant Protection | asking about the weed management on paddy
+a1984 | Varietal Information | asking variety of papaya
+a1996 | Government Scheme | asking about kisan credit card online apply issue
+a2001 | Nutrient Management | asking about basal fertilizers dose of fertilizers in saali paddy
+a2005 | Plant Protection | asking about the control of curling of leaf in cabbage
+a2012 | Nutrient Management | asking recommended fertilizer dose of sali rice
+a2018 | Fisheries | asked about fish production.
+a2027 | Animal Husbandry | asking about the age of castration in case of goat.
+a2032 | Varietal Information | query regarding drumstick variety.
+a2037 | Cultural Practices | asking for water management in rice
+a2039 | Varietal Information | asking about variety of tomato
+a2040 | Nutrient Management | asking about the nutrient in coconut
+a2041 | Varietal Information | asking about the seed procurement of sunflower seeds
+a2046 | Weather | querry regarding weateher report
+a2068 | Nutrient Management | enhance m asking for any crop booster name which when sprayed can ore production.
+a2073 | Government Scheme | asking about govt scheme
+a2086 | Animal Husbandry | asking about vaccination of adult duck.
+a2099 | Plant Protection | shoot borer in sugar cane
+a2106 | Market Price | asking about price of combine harvester
+a2107 | Animal Husbandry | query regarding rti of acow
+a2113 | Market Price | asking the msp of paddy
+a2119 | Weather | query regarding rainfall data in ghilamara block of lakhimpur district
+a2121 | Other | asking about the agricultural training
+a2142 | Varietal Information | asking about the pumpkin variety
+a2154 | Animal Husbandry | query regarding goat: suffering from eye infection, poor health.
+a2165 | Nutrient Management | fertilzer dose for coconut aged more than 6 years
+a2171 | Weather | date rainfall (mm) temp (max/min) humidity (max/min) wind 26 apr 0 0 / 0 0 / 0 0 26 apr 0 0 / 0 0 / 0 0
+a2215 | Market Price | asking about the rate of rice for sale.
+a2223 | Plant Protection | asking about the plant protection measure in rice
+a2257 | Animal Husbandry | query regarding a cow for milk production
+a2264 | Animal Husbandry | asking about treatment of fever in pig.
+a2274 | Plant Protection | asking about does of gamoxin
+a2282 | Government Scheme | asking about non receipt of third installment of pm kisan samman nidhi yojna
+a2294 | Market Price | asking about the market price for tomato
+a2298 | Animal Husbandry | asking about source of semen and source of liquid nitrogen for artificial insemination in cow.
+a2311 | Other | asking about veterinary training programmes
+a2312 | Other | asking about training of mushroom cultivation
+a2314 | Varietal Information | asking about some variety name of potato.
+a2321 | Nutrient Management | asking about post transplanting fertilizer dose of rice.
+a2325 | Animal Husbandry | query regarding the brahma cattle breed
+a2331 | Market Price | asking about the rate of paddy in darrang district.
+a2339 | Weather | asking about the wether in sibsagar
+a2345 | Market Price | asking for market information of garchuk
+a2346 | Market Price | asking about market availability of aloe vera
+a2348 | Other | asking about fishery experts
+a2359 | Fisheries | aksing about the numbers of fish and chicken required in one bigha pond.
+a2363 | Market Price | asking about fish market
+a2370 | Plant Protection | asking about fruit fly problem in ridge gourd
+a2372 | Cultural Practices | asking about the sowing time of ahu rice ( transeplanted).
+a2385 | Cultural Practices | asking about seed rate of maize
+a2389 | Fisheries | asking for the recomended dose of lime to maintain good water qwality in a fish pond
+a2395 | Animal Husbandry | asking about breed of goat
+a2403 | Market Price | asking about name of msp selling point
+a2404 | Nutrient Management | query regarding nutrient management in ridge gourd.
+a2408 | Cultural Practices | asking about the planting time of cow pea.
+a2414 | Varietal Information | query regarding variety of okra.
+a2415 | Varietal Information | query regarding borodhan variety
+a2417 | Plant Protection | asking about the control of yellow stem borer in paddy
+a2423 | Other | query regarding medicinal plant
+a2428 | Fisheries | query related to oxygen level in pond
+a2429 | Other | query regarding green house
+a2438 | Cultural Practices | asking about seed rate of cowpea.
+a2447 | Market Price | query regarding tulsi market information
+a2467 | Plant Protection | asking for the control measure against rice case worm in boro rice crop cultivation.
+a2469 | Animal Husbandry | query regarding ill health in pig.
+a2479 | Animal Husbandry | asking that he has a jersey cross cow and a calf of 20 days old. cow is giving less milk and wants do deworming.
+a2485 | Nutrient Management | asking about source of vermicompost
+a2505 | Other | stated that the retail outlet of his locality selling fertlizer in high price
+a2513 | Other | want to know training of mushroom cultivation
+a2515 | Varietal Information | asking some variety of cucumber
+a2524 | Government Scheme | query regarding non receipt of pm kisan installment
+a2533 | Nutrient Management | asking about the nutreint management in arecanut
+a2537 | Government Scheme | asking about banking process for kcc loan
+a2547 | Government Scheme | query about pm kisan smman nidhi.

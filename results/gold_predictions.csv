@@ -1,0 +1,151 @@
+id,text,label,style,pred_distilbert,conf_distilbert,pred_tfidf,pred_rules,minilm_top1_q,minilm_top1_sim,minilm_top1_type,tfidf_top1_type
+g000,"My wheat leaves have orange powdery spots all over and it is spreading fast to the neighbouring rows, which spray should I use?",Plant Protection,en,Plant Protection,0.9997,Plant Protection,Plant Protection,asking about the foliar spray in tomato,0.6363,Plant Protection,Government Scheme
+g001,"Tiny white insects fly up whenever I touch my cotton plants and the leaves are sticky, what is the remedy?",Plant Protection,en,Other,0.9996,Other,Other,insect damaging leafs,0.7143,Other,Government Scheme
+g002,"The tomato plants in my polyhouse suddenly dried up from the base even though I water them regularly, is it some disease?",Plant Protection,en,Plant Protection,0.9998,Other,Plant Protection,asking about management of damping off disease in tomato plant.,0.7423,Plant Protection,Plant Protection
+g003,"Pink caterpillars are eating the bolls of my cotton, how do I stop them before the next picking?",Plant Protection,en,Other,0.9995,Other,Other,asking about control of leaf-eating caterpillar,0.6945,Plant Protection,Weather
+g004,"Brown patches with a yellow ring are showing up on potato leaves after the cloudy days, what should be done?",Plant Protection,en,Plant Protection,0.9839,Other,Other,asking about yellowing of leaves of potato,0.7343,Plant Protection,Other
+g005,"meri sarson ki fasal mein chepa lag gaya hai, patte chipchipe ho gaye hain, kaunsi dawai dalun",Plant Protection,hinglish,Other,0.9995,Other,Other,muza khua puk,0.69,Other,Varietal Information
+g006,gehu mein peela rust aa gaya hai kya spray karna chahiye,Plant Protection,hinglish,Plant Protection,0.9997,Plant Protection,Plant Protection,muza khua puk,0.674,Other,Plant Protection
+g007,"dhan ke paudhe mein tana chedak ka hamla ho gaya hai, iska ilaaj batao",Plant Protection,hinglish,Other,0.9991,Other,Other,muza khua puk,0.6972,Other,Plant Protection
+g008,mere aam ke ped par safed powder jaisa kuch aa raha hai aur phool jhad rahe hain,Plant Protection,hinglish,Other,0.9984,Other,Other,deseases in bettle vien,0.7413,Other,Other
+g009,"kapas mein safed makkhi bahut ho gayi hai, kya karu",Plant Protection,hinglish,Other,0.9995,Other,Other,sked about mukhya mantri krishi sa sajuli yojana and pm maan dhan joyana,0.8023,Government Scheme,Other
+g010,"मेरी गेहूं की फसल में पत्तियां पीली पड़ रही हैं और उन पर जंग जैसे धब्बे हैं, कौन सी दवा डालूं?",Plant Protection,hi,Other,0.9989,Other,Other,asking for remedy against borer in maize,0.6343,Plant Protection,Plant Protection
+g011,"धान में तना छेदक कीट लग गया है, इसका उपचार बताइए",Plant Protection,hi,Other,0.9982,Other,Other,asking about the pest problem.,0.7149,Plant Protection,Plant Protection
+g012,"टमाटर के पौधे मुरझा रहे हैं और जड़ के पास सड़न है, क्या करें?",Plant Protection,hi,Other,0.9991,Other,Other,circospora leaf spot.,0.7953,Plant Protection,Plant Protection
+g013,"सरसों में माहू का प्रकोप बहुत ज्यादा है, कौन सा कीटनाशक छिड़कें?",Plant Protection,hi,Other,0.9989,Other,Other,want to know regarding pest attack in wheat,0.8462,Plant Protection,Plant Protection
+g014,"आलू की पत्तियों पर काले धब्बे पड़ गए हैं, झुलसा रोग से कैसे बचाएं?",Plant Protection,hi,Other,0.999,Other,Other,asking about the control of leaf curl diseases of potato,0.7515,Plant Protection,Plant Protection
+g015,How much urea and DAP should I put per acre for wheat sowing in sandy loam soil?,Nutrient Management,en,Nutrient Management,0.9993,Nutrient Management,Nutrient Management,asking about what crop could be done in sandy loam soil for rabi season,0.6984,Other,Other
+g016,"My paddy is pale green and growing slowly, do I need to give zinc or more nitrogen?",Nutrient Management,en,Nutrient Management,0.9934,Nutrient Management,Nutrient Management,asking about the fertilizer dose and application of zinc in paddy,0.7299,Nutrient Management,Varietal Information
+g017,Which fertiliser schedule should I follow for mustard if I only have compost and a little SSP?,Nutrient Management,en,Nutrient Management,0.9997,Nutrient Management,Nutrient Management,asking about fertilizer requirement in mustard,0.7093,Nutrient Management,Plant Protection
+g018,What is the correct dose of potash for sugarcane at the second irrigation stage?,Nutrient Management,en,Nutrient Management,0.9996,Nutrient Management,Nutrient Management,asking about the recommended fertilizer dose for sugarcane.,0.8234,Nutrient Management,Other
+g019,"My sugarcane leaves show white stripes between the veins, is it a micronutrient deficiency and what should I apply?",Nutrient Management,en,Nutrient Management,0.9997,Nutrient Management,Nutrient Management,asking about the sugarcane micronutrient,0.6868,Nutrient Management,Nutrient Management
+g020,ek bigha gehu mein kitna urea aur dap dalna chahiye,Nutrient Management,hinglish,Nutrient Management,0.9992,Nutrient Management,Nutrient Management,muza khua puk,0.7254,Other,Nutrient Management
+g021,dhan mein zinc ki kami ke liye kitna zinc sulphate daalna hai,Nutrient Management,hinglish,Nutrient Management,0.9988,Nutrient Management,Nutrient Management,asking for cultural practices of rice and dose of zinc sulphate,0.6648,Nutrient Management,Nutrient Management
+g022,gobar ki khaad kitni matra mein daalun aloo ki buwai se pehle,Nutrient Management,hinglish,Other,0.9992,Other,Other,muza khua puk,0.7618,Other,Nutrient Management
+g023,kapas ko pehli sinchai ke baad kaunsi khaad deni chahiye,Nutrient Management,hinglish,Other,0.9994,Other,Other,deseases in brinjal,0.809,Other,Government Scheme
+g024,nitrogen kab aur kitna dena hai makke ki fasal mein,Nutrient Management,hinglish,Other,0.9993,Other,Other,muza khua puk,0.6125,Other,Plant Protection
+g025,प्रति एकड़ गेहूं में यूरिया और डीएपी की कितनी मात्रा डालनी चाहिए?,Nutrient Management,hi,Other,0.9992,Other,Other,asking about the amount of dap for maize plant.,0.8106,Nutrient Management,Plant Protection
+g026,"धान की पत्तियां पीली हैं, क्या जिंक की कमी है और कितना जिंक सल्फेट डालें?",Nutrient Management,hi,Other,0.999,Other,Other,asking about the yellowing of leaves in paddy.,0.6399,Plant Protection,Plant Protection
+g027,सरसों की फसल में सल्फर कब और कितना देना चाहिए?,Nutrient Management,hi,Other,0.9989,Other,Other,asking for the fertilizers doses in terms of per bigha of land for colocasia crop cultivation.,0.6742,Other,Plant Protection
+g028,आलू में खाद की मात्रा कितनी रखनी चाहिए?,Nutrient Management,hi,Other,0.9991,Other,Other,asking about the nutrient dose in potato,0.8344,Nutrient Management,Plant Protection
+g029,गन्ने में पोटाश कब डालें?,Nutrient Management,hi,Other,0.9992,Other,Other,asking about the sowing time of frence bean,0.7279,Varietal Information,Plant Protection
+g030,Is it going to rain in the next three days? I want to decide whether to harvest my wheat now.,Weather,en,Weather,0.9835,Other,Weather,contineous rain prevails in the area for last 3 days destroy their crops,0.6382,Weather,Weather
+g031,Will there be frost this week in my area? My potato crop is at a vulnerable stage.,Weather,en,Other,0.9993,Other,Weather,asking about soil pest problem in potato,0.697,Plant Protection,Other
+g032,"What is the temperature forecast for next week, I am planning to sow maize.",Weather,en,Weather,0.9761,Weather,Weather,query regarding crop season for maize,0.7004,Other,Government Scheme
+g033,"A hailstorm warning has been issued, should I do anything to protect my standing crop?",Weather,en,Other,0.9995,Other,Weather,asking about the way to improve crop health after damage done by hail storm.,0.7029,Other,Other
+g034,"When will the monsoon arrive in Haryana this year, I am waiting to transplant paddy.",Weather,en,Other,0.9988,Other,Other,asking about time for transplanting lahi paddy.,0.5397,Cultural Practices,Other
+g035,"agle teen din mein baarish hogi kya, fasal kaatni hai",Weather,hinglish,Other,0.9995,Other,Other,muza khua puk,0.7177,Other,Government Scheme
+g036,is hafte paala padne ka khatra hai kya,Weather,hinglish,Other,0.9993,Other,Other,muza khua pest,0.7201,Plant Protection,Animal Husbandry
+g037,"mausam kaisa rahega agle hafte, bijai karni hai",Weather,hinglish,Other,0.9992,Other,Other,muza khua puk,0.7047,Other,Plant Protection
+g038,aandhi aur olavrishti ki chetavani hai kya hamare ilake mein,Weather,hinglish,Other,0.9995,Other,Other,sked about mukhya mantri krishi sa sajuli yojana and pm maan dhan joyana,0.7262,Government Scheme,Plant Protection
+g039,monsoon kab tak aayega is saal,Weather,hinglish,Other,0.999,Other,Other,gandhi bug in boro rice,0.5888,Other,Other
+g040,अगले हफ्ते बारिश होने की संभावना है क्या?,Weather,hi,Other,0.9991,Other,Other,regarding chance of rain in coming days,0.8364,Weather,Plant Protection
+g041,"इस हफ्ते पाला पड़ने की चेतावनी है क्या, आलू की फसल लगी है",Weather,hi,Other,0.9989,Other,Other,asking about the stage of harvesting of potato.,0.8172,Cultural Practices,Plant Protection
+g042,"कल मौसम कैसा रहेगा, कटाई करनी है",Weather,hi,Other,0.9991,Other,Other,asking about rainy days within this week,0.658,Other,Plant Protection
+g043,आंधी और ओलावृष्टि का अलर्ट है क्या हमारे जिले में?,Weather,hi,Other,0.9989,Other,Other,regarding rainfall in coming days,0.661,Weather,Plant Protection
+g044,इस साल मानसून कब आएगा?,Weather,hi,Other,0.999,Other,Other,asking about when the rainfall is going to be available.,0.6129,Weather,Plant Protection
+g045,How can I apply for a Kisan Credit Card and what documents does the bank need?,Government Scheme,en,Government Scheme,0.7937,Government Scheme,Government Scheme,asking about how to apply kisan credit card,0.8838,Government Scheme,Government Scheme
+g046,"I have not received my PM-Kisan instalment for two quarters, where do I check the status?",Government Scheme,en,Other,0.9995,Government Scheme,Other,asking about not receiving pm kisan installment,0.6424,Government Scheme,Government Scheme
+g047,Is there a subsidy available for installing drip irrigation on a two acre farm?,Government Scheme,en,Government Scheme,0.9987,Government Scheme,Government Scheme,asking for irrigation practices,0.7652,Cultural Practices,Government Scheme
+g048,"My crop was destroyed by hail, how do I claim crop insurance under PMFBY?",Government Scheme,en,Government Scheme,0.9975,Government Scheme,Government Scheme,query about crop insurance; pmfby.,0.7634,Government Scheme,Government Scheme
+g049,What loan schemes are available for buying a tractor and how much subsidy does the government give?,Government Scheme,en,Government Scheme,0.9991,Government Scheme,Government Scheme,asking about govt subsidy scheme of tractor,0.8504,Government Scheme,Other
+g050,"kisan credit card kaise banwaye, kaun se documents lagenge",Government Scheme,hinglish,Government Scheme,0.9991,Government Scheme,Government Scheme,kisan credit card,0.7968,Government Scheme,Government Scheme
+g051,"pm kisan ki kist nahi aayi, status kahan dekhun",Government Scheme,hinglish,Government Scheme,0.9966,Government Scheme,Government Scheme,aking about pm kisan samman nidhi,0.8419,Government Scheme,Government Scheme
+g052,drip irrigation par subsidy kaise milegi,Government Scheme,hinglish,Government Scheme,0.9984,Government Scheme,Government Scheme,asking about irrigation in toria,0.8288,Cultural Practices,Cultural Practices
+g053,"fasal bima ka claim kaise karna hai, ole se fasal kharab ho gayi",Government Scheme,hinglish,Other,0.9994,Other,Other,muza khua puk,0.72,Other,Government Scheme
+g054,tractor ke liye loan aur subsidy ki yojana batao,Government Scheme,hinglish,Government Scheme,0.9991,Government Scheme,Government Scheme,tractor loan,0.7355,Government Scheme,Government Scheme
+g055,किसान क्रेडिट कार्ड बनवाने के लिए क्या दस्तावेज चाहिए?,Government Scheme,hi,Other,0.9993,Other,Other,query regarding agriculture credit card.,0.7186,Government Scheme,Plant Protection
+g056,"पीएम किसान की किस्त नहीं आई, स्थिति कहां देखूं?",Government Scheme,hi,Other,0.9992,Other,Other,asking about the farmer friend,0.6602,Other,Plant Protection
+g057,ड्रिप सिंचाई पर सरकार से कितनी सब्सिडी मिलती है?,Government Scheme,hi,Other,0.9983,Other,Other,asking about the irrigation supply from govt supply,0.7045,Cultural Practices,Plant Protection
+g058,"फसल बीमा का दावा कैसे करें, ओलावृष्टि से फसल खराब हो गई",Government Scheme,hi,Other,0.9983,Other,Other,asking about the insurance of crop.,0.8359,Government Scheme,Plant Protection
+g059,ट्रैक्टर खरीदने के लिए कौन सी सरकारी ऋण योजना है?,Government Scheme,hi,Other,0.9991,Other,Other,asking about the tractor loan,0.7906,Government Scheme,Plant Protection
+g060,What is the going rate for mustard in the nearest mandi today?,Market Price,en,Other,0.9996,Market Price,Market Price,asking about the seed rate for mustard,0.7772,Varietal Information,Varietal Information
+g061,"Should I hold my wheat in storage or sell now, do you think prices will go up in the next few weeks?",Market Price,en,Other,0.9978,Other,Other,asking about the storage of wheat,0.615,Other,Other
+g062,What is the MSP of paddy this year and where can I sell at that price?,Market Price,en,Market Price,0.9833,Market Price,Market Price,price of paddy,0.6978,Market Price,Market Price
+g063,Which market gives the best price for onions in Haryana right now?,Market Price,en,Market Price,0.9879,Market Price,Market Price,asked about some suitable onion varieties for assam condition.,0.7582,Other,Market Price
+g064,Are cotton prices expected to fall after the new arrivals?,Market Price,en,Other,0.9977,Other,Other,query regarding cotton cultivation,0.6109,Other,Fisheries
+g065,aaj mandi mein sarson ka bhav kya chal raha hai,Market Price,hinglish,Other,0.9994,Market Price,Market Price,sked about mukhya mantri krishi sa sajuli yojana and pm maan dhan joyana,0.7454,Government Scheme,Market Price
+g066,"gehu abhi bechun ya rok kar rakhun, bhav badhega kya",Market Price,hinglish,Other,0.9993,Other,Other,muza khua puk,0.7354,Other,Plant Protection
+g067,dhan ka msp kitna hai is saal,Market Price,hinglish,Other,0.9988,Market Price,Market Price,tell me pradhan mantri kisan samman nidhi yojana ?,0.7708,Government Scheme,Market Price
+g068,pyaaz ka sabse accha rate kis mandi mein mil raha hai,Market Price,hinglish,Other,0.9992,Market Price,Market Price,sked about mukhya mantri krishi sa sajuli yojana and pm maan dhan joyana,0.6891,Government Scheme,Market Price
+g069,kapas ka bhav gir jayega kya,Market Price,hinglish,Other,0.9994,Other,Other,muza khua puk,0.7909,Other,Animal Husbandry
+g070,आज मंडी में सरसों का भाव क्या चल रहा है?,Market Price,hi,Other,0.9955,Other,Other,psuedostem borer.,0.6613,Plant Protection,Plant Protection
+g071,"गेहूं अभी बेचूं या रोक कर रखूं, भाव बढ़ेगा क्या?",Market Price,hi,Other,0.999,Other,Other,asking about availability of wheat seed.,0.6717,Varietal Information,Plant Protection
+g072,इस साल धान का न्यूनतम समर्थन मूल्य कितना है?,Market Price,hi,Other,0.999,Other,Other,asking minimum support price of paddy for the year 2015-2016,0.7328,Market Price,Plant Protection
+g073,प्याज का सबसे अच्छा भाव किस मंडी में मिल रहा है?,Market Price,hi,Other,0.9983,Other,Other,query regarding salty taste of milk of alactaying cow .,0.5789,Animal Husbandry,Plant Protection
+g074,कपास के दाम गिरने वाले हैं क्या?,Market Price,hi,Other,0.9976,Other,Other,asking sowing time of cotton,0.6189,Varietal Information,Plant Protection
+g075,Which wheat variety gives the highest yield for late sowing in December?,Varietal Information,en,Varietal Information,0.9981,Varietal Information,Varietal Information,information regarding for the suitable sowing season of wheat?,0.79,Cultural Practices,Cultural Practices
+g076,Can you suggest a short duration paddy variety that matures before the winter?,Varietal Information,en,Varietal Information,0.9981,Varietal Information,Varietal Information,wanted to know one short duration variety of paddy,0.7114,Varietal Information,Other
+g077,Where can I get certified seed of a hybrid tomato that resists leaf curl?,Varietal Information,en,Plant Protection,0.9997,Varietal Information,Varietal Information,asking about availability of hybrid tomato seeds,0.8137,Varietal Information,Varietal Information
+g078,Which mustard variety is best for a low rainfall area with salty soil?,Varietal Information,en,Varietal Information,0.9966,Varietal Information,Weather,asking about the varieties of mustard and to treat/drench the soil,0.6923,Other,Varietal Information
+g079,Tell me the name of a good bajra hybrid for the sandy areas of Haryana.,Varietal Information,en,Varietal Information,0.9963,Varietal Information,Varietal Information,asking about some hybrid variety of bhindi.,0.6395,Varietal Information,Nutrient Management
+g080,late buwai ke liye gehu ki kaun si kism sabse achi hai,Varietal Information,hinglish,Other,0.9992,Other,Other,tell me pradhan mantri kisan samman nidhi yojana ?,0.7941,Government Scheme,Plant Protection
+g081,dhan ki kam samay mein pakne wali kism batao,Varietal Information,hinglish,Other,0.9934,Other,Other,muza khua puk,0.7329,Other,Nutrient Management
+g082,sarson ki kaun si variety khaare paani mein ho sakti hai,Varietal Information,hinglish,Varietal Information,0.9979,Varietal Information,Varietal Information,muza khua puk,0.74,Other,Varietal Information
+g083,tamatar ke acche beej kahan se milenge,Varietal Information,hinglish,Other,0.9992,Other,Other,psuedostem borer .,0.8394,Plant Protection,Nutrient Management
+g084,bajre ki sabse zyada paidawar wali kism kaun si hai,Varietal Information,hinglish,Other,0.9976,Other,Other,muza pest,0.657,Plant Protection,Plant Protection
+g085,देर से बुवाई के लिए गेहूं की कौन सी किस्म सबसे अच्छी है?,Varietal Information,hi,Other,0.999,Other,Other,suitable variety of wheat,0.8088,Varietal Information,Plant Protection
+g086,धान की कम समय में पकने वाली किस्म बताइए,Varietal Information,hi,Other,0.999,Other,Other,asking about the sowing time of arize rice,0.7826,Varietal Information,Plant Protection
+g087,सरसों की कौन सी किस्म खारे पानी में हो सकती है?,Varietal Information,hi,Other,0.9985,Other,Other,asking about surfacing of fish in pond,0.7272,Fisheries,Plant Protection
+g088,टमाटर का प्रमाणित बीज कहां से मिलेगा?,Varietal Information,hi,Other,0.998,Other,Other,asking about the sources of seeds,0.8623,Other,Plant Protection
+g089,बाजरे की सबसे ज्यादा पैदावार वाली किस्म कौन सी है?,Varietal Information,hi,Other,0.999,Other,Other,stem rot o betelvine,0.6571,Plant Protection,Plant Protection
+g090,"My buffalo has reduced her milk after calving and is not eating well, what should I feed her?",Animal Husbandry,en,Animal Husbandry,0.9977,Animal Husbandry,Animal Husbandry,asking about treatment of low milk production in buffalo.,0.8028,Animal Husbandry,Animal Husbandry
+g091,When should I vaccinate my cow against foot and mouth disease?,Animal Husbandry,en,Plant Protection,0.9997,Plant Protection,Plant Protection,asking about the treatment of foot and mouth disease in cow.,0.8001,Plant Protection,Plant Protection
+g092,"My goat has had loose motions and has not eaten since yesterday, what treatment can I give?",Animal Husbandry,en,Animal Husbandry,0.9981,Animal Husbandry,Animal Husbandry,asking about treatment of simple indigestion of goat.,0.7449,Plant Protection,Animal Husbandry
+g093,What is the right ration for dairy cows to increase milk fat?,Animal Husbandry,en,Animal Husbandry,0.9976,Animal Husbandry,Animal Husbandry,asking about increase milk level in cow,0.8938,Animal Husbandry,Animal Husbandry
+g094,"Hens in my poultry shed are dying suddenly with a swollen head, what could be the reason?",Animal Husbandry,en,Animal Husbandry,0.9976,Animal Husbandry,Animal Husbandry,asking about sudden death in poultry.,0.7526,Animal Husbandry,Animal Husbandry
+g095,"meri bhains ne doodh dena kam kar diya hai, kya khilaun",Animal Husbandry,hinglish,Other,0.9994,Other,Other,tell me pradhan mantri kisan samman nidhi yojana ?,0.7538,Government Scheme,Other
+g096,gaay ko khurpka mouthpaka ka teeka kab lagwana chahiye,Animal Husbandry,hinglish,Other,0.9994,Other,Other,muza khua puk,0.7937,Other,Plant Protection
+g097,"bakri ko dast lag gaye hain, kya ilaaj karun",Animal Husbandry,hinglish,Other,0.9994,Other,Other,muza khua puk,0.813,Other,Plant Protection
+g098,pashuon ke liye hara chara kaun sa lagaun jo zyada doodh de,Animal Husbandry,hinglish,Other,0.9992,Other,Other,muza khua puk,0.7805,Other,Other
+g099,murgiyon mein ranikhet bimari ka ilaaj kya hai,Animal Husbandry,hinglish,Other,0.9993,Other,Other,sked about mukhya mantri krishi sa sajuli yojana and pm maan dhan joyana,0.7686,Government Scheme,Plant Protection
+g100,"मेरी भैंस ने दूध कम कर दिया है, क्या खिलाऊं?",Animal Husbandry,hi,Other,0.999,Other,Other,asking about treatment of less quantity of milk.,0.6992,Plant Protection,Plant Protection
+g101,गाय को खुरपका-मुंहपका का टीका कब लगवाना चाहिए?,Animal Husbandry,hi,Other,0.9988,Other,Other,asking about the vaccination schedule of a cow.,0.8327,Animal Husbandry,Plant Protection
+g102,"बकरी को दस्त लग गए हैं, क्या इलाज करें?",Animal Husbandry,hi,Other,0.9991,Other,Other,asking about remedy bloat in goat,0.7417,Animal Husbandry,Plant Protection
+g103,ज्यादा दूध के लिए कौन सा हरा चारा बोना चाहिए?,Animal Husbandry,hi,Other,0.9991,Other,Other,for higher milk production,0.7322,Animal Husbandry,Plant Protection
+g104,मुर्गियों में रानीखेत बीमारी का इलाज क्या है?,Animal Husbandry,hi,Other,0.999,Other,Other,asking about the treatment of poultry disease,0.8597,Plant Protection,Plant Protection
+g105,How do I prepare a pond for fish farming and which species grow well in Haryana?,Fisheries,en,Fisheries,0.998,Fisheries,Fisheries,pond preparation for fish culture,0.8205,Fisheries,Nutrient Management
+g106,"My fish are floating at the surface every morning, is there an oxygen problem in the pond?",Fisheries,en,Fisheries,0.998,Fisheries,Fisheries,query regarding oxygen problem in fish pond,0.8265,Fisheries,Fisheries
+g107,What is the right stocking density for rohu and catla in a one acre pond?,Fisheries,en,Fisheries,0.9975,Fisheries,Fisheries,asking about stocking density of a pond,0.7978,Fisheries,Other
+g108,What feed should I give to carp fingerlings in the first month?,Fisheries,en,Other,0.9996,Other,Other,regarding type of feed for the fish fingerlings,0.7404,Fisheries,Other
+g109,"White spots have appeared on my fish, how can I treat the pond water?",Fisheries,en,Fisheries,0.998,Fisheries,Fisheries,asked how to get rid of red spot disease in fish pond.,0.7321,Plant Protection,Fisheries
+g110,machhli palan ke liye talab kaise taiyar karein,Fisheries,hinglish,Other,0.999,Other,Other,muza khua puk,0.8012,Other,Plant Protection
+g111,"talab mein machhliyan subah ke samay upar aa rahi hain, kya karun",Fisheries,hinglish,Other,0.9993,Other,Other,sked about mukhya mantri krishi sa sajuli yojana and pm maan dhan joyana,0.7769,Government Scheme,Plant Protection
+g112,rohu aur catla ke bachche kitne daalne chahiye ek acre mein,Fisheries,hinglish,Other,0.9995,Other,Other,desease of chilli,0.6758,Other,Other
+g113,machhli ko kya chara dena chahiye,Fisheries,hinglish,Other,0.9994,Other,Other,muza khua puk,0.8137,Other,Other
+g114,"machhliyon mein safed daane ho gaye hain, dawai batao",Fisheries,hinglish,Other,0.9995,Other,Other,desease of chilli,0.7366,Other,Other
+g115,मछली पालन के लिए तालाब कैसे तैयार करें?,Fisheries,hi,Other,0.996,Other,Other,pond preparation for fish culture,0.9063,Fisheries,Plant Protection
+g116,"तालाब में सुबह मछलियां ऊपर आ रही हैं, क्या करें?",Fisheries,hi,Other,0.999,Other,Other,asking about why fish gulping surface of water in morning time.,0.7827,Fisheries,Plant Protection
+g117,एक एकड़ तालाब में रोहू और कतला के कितने बच्चे डालें?,Fisheries,hi,Other,0.999,Other,Other,regarding numbers of fingerlings to be stocked in 1 bigha pond,0.6388,Fisheries,Plant Protection
+g118,मछलियों को कौन सा दाना देना चाहिए?,Fisheries,hi,Other,0.9992,Other,Other,asking about fish,0.8429,Fisheries,Plant Protection
+g119,"मछलियों पर सफेद दाग हो गए हैं, इलाज बताइए",Fisheries,hi,Other,0.9991,Other,Other,asked about the prevention of skin lesions in fishes,0.7592,Other,Plant Protection
+g120,What is the best time and seed rate for sowing wheat after the paddy harvest?,Cultural Practices,en,Varietal Information,0.9951,Varietal Information,Varietal Information,querry regarding sowing time of wheat,0.838,Varietal Information,Varietal Information
+g121,How many irrigations does mustard need and at what growth stages?,Cultural Practices,en,Other,0.9996,Other,Other,asking about the irrigation system for mustard,0.8153,Cultural Practices,Other
+g122,What spacing should I keep when transplanting paddy seedlings?,Cultural Practices,en,Cultural Practices,0.9955,Cultural Practices,Cultural Practices,asking spacing of transplanted paddy,0.8238,Cultural Practices,Other
+g123,When should I prune my guava orchard and how much should I cut back?,Cultural Practices,en,Other,0.9995,Other,Other,asking about the fertilizer dose of guava plant.,0.707,Nutrient Management,Other
+g124,"Can I grow a pulse as an intercrop in my sugarcane field, and how?",Cultural Practices,en,Other,0.9879,Other,Other,asking about field preparation for sugarcane,0.6809,Other,Other
+g125,dhan katne ke baad gehu kab boun aur beej kitna lagega,Cultural Practices,hinglish,Other,0.9989,Other,Other,deseases in bettle vien,0.6643,Other,Other
+g126,sarson mein kitni sinchai karni chahiye,Cultural Practices,hinglish,Other,0.9994,Other,Other,desease of chilli,0.7629,Other,Government Scheme
+g127,dhan ki ropai mein paudhe se paudhe ki doori kitni rakhein,Cultural Practices,hinglish,Other,0.9988,Other,Other,muza khua puk,0.7375,Other,Nutrient Management
+g128,amrood ki kat-chhant kab karni chahiye,Cultural Practices,hinglish,Other,0.9994,Other,Other,asked about feeding habit of cat fishes.,0.7241,Other,Plant Protection
+g129,ganne ke beech mein dal ki intercropping kaise karein,Cultural Practices,hinglish,Other,0.9994,Cultural Practices,Cultural Practices,muza khua puk,0.6098,Other,Cultural Practices
+g130,धान के बाद गेहूं की बुवाई का सही समय और बीज दर क्या है?,Cultural Practices,hi,Other,0.9989,Other,Other,querry regarding sowing time of wheat,0.8409,Varietal Information,Plant Protection
+g131,सरसों में कितनी सिंचाई करनी चाहिए?,Cultural Practices,hi,Other,0.9991,Other,Other,asking about the duration for maitaining water level in paddy.,0.7209,Other,Plant Protection
+g132,धान की रोपाई में पौधे से पौधे की दूरी कितनी रखें?,Cultural Practices,hi,Other,0.9986,Other,Other,asking about the planting distance for pea,0.7936,Other,Plant Protection
+g133,अमरूद के बाग की कटाई-छंटाई कब करें?,Cultural Practices,hi,Other,0.999,Other,Other,asking about planting time.,0.7316,Other,Plant Protection
+g134,गन्ने के बीच में दलहन की अंतर्वर्ती खेती कैसे करें?,Cultural Practices,hi,Other,0.9992,Other,Other,asking for cultivation pactices,0.7938,Other,Plant Protection
+g135,Where is the nearest soil testing laboratory and how do I collect the sample?,Other,en,Other,0.9995,Other,Other,nearest soil testing lab,0.9238,Other,Other
+g136,What moisture level should grain have before I put it in a storage bin?,Other,en,Other,0.9995,Other,Other,asking about control measure of lesser grain borer,0.6512,Plant Protection,Plant Protection
+g137,"I want to start mushroom cultivation at home, how do I begin?",Other,en,Other,0.9996,Other,Other,asking for mushroom cultivation,0.8037,Other,Other
+g138,How do I register with an agriculture university for a one week training course?,Other,en,Cultural Practices,0.9958,Cultural Practices,Cultural Practices,asking about agriculture diploma course,0.7703,Other,Other
+g139,Can you give me the phone number of the district agriculture office?,Other,en,Other,0.9994,Other,Other,asking about the contact details of district agriculture office,0.8788,Other,Other
+g140,mitti ki jaanch kahan hoti hai aur sample kaise lena hai,Other,hinglish,Other,0.9991,Other,Other,muza khua puk,0.6901,Other,Other
+g141,anaj ko bhandaran karne se pehle kitni nami honi chahiye,Other,hinglish,Other,0.9991,Other,Other,deseases in bettle vien,0.7959,Other,Nutrient Management
+g142,ghar par mushroom ki kheti kaise shuru karun,Other,hinglish,Other,0.9995,Other,Other,cultivation of cip/ khapna/ jinuk,0.7032,Other,Other
+g143,krishi vigyan kendra mein training ke liye kahan naam likhwaun,Other,hinglish,Cultural Practices,0.988,Cultural Practices,Cultural Practices,asking about training organised by krishi vigyan kendra,0.7484,Cultural Practices,Other
+g144,zila krishi adhikari ka phone number chahiye,Other,hinglish,Other,0.9995,Other,Other,"asking for the phone number of krishi vigyan kendra, tezpur.",0.7912,Other,Other
+g145,मिट्टी की जांच कहां होती है और नमूना कैसे लें?,Other,hi,Other,0.9991,Other,Other,asking about where to test the soil,0.8864,Other,Plant Protection
+g146,अनाज भंडारण से पहले उसमें कितनी नमी होनी चाहिए?,Other,hi,Other,0.9992,Other,Other,asking for short duration variety of wheat,0.6983,Varietal Information,Plant Protection
+g147,घर पर मशरूम की खेती कैसे शुरू करें?,Other,hi,Other,0.9991,Other,Other,asking for cultivation pactices,0.7147,Other,Plant Protection
+g148,कृषि विज्ञान केंद्र में प्रशिक्षण के लिए नाम कहां लिखवाएं?,Other,hi,Other,0.9991,Other,Other,asked about where to take training on agriculture,0.8532,Cultural Practices,Plant Protection
+g149,जिला कृषि अधिकारी का फोन नंबर चाहिए,Other,hi,Other,0.9987,Other,Other,asking for hailakandi agriculture office phone number,0.8162,Other,Plant Protection

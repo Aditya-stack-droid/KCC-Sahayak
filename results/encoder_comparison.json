@@ -1,0 +1,201 @@
+{
+  "n_train": 4200,
+  "n_silver": 496,
+  "n_gold": 150,
+  "reference": "minilm (deployed) | emb + char-tfidf LR",
+  "results": {
+    "minilm (deployed) | emb-only LR": {
+      "silver": 0.8992,
+      "silver_ci": [
+        0.873,
+        0.9254
+      ],
+      "gold": 0.74,
+      "gold_ci": [
+        0.6667,
+        0.8068
+      ],
+      "gold_en": 0.9,
+      "gold_hinglish": 0.52,
+      "gold_hi": 0.8,
+      "mcnemar_vs_deployed_gold": {
+        "only_other_right": 2,
+        "only_deployed_right": 25,
+        "p": 0.0
+      },
+      "mcnemar_vs_deployed_silver": {
+        "only_other_right": 6,
+        "only_deployed_right": 24,
+        "p": 0.0014
+      }
+    },
+    "minilm (deployed) | emb + char-tfidf LR": {
+      "silver": 0.9355,
+      "silver_ci": [
+        0.9153,
+        0.9556
+      ],
+      "gold": 0.8933,
+      "gold_ci": [
+        0.84,
+        0.94
+      ],
+      "gold_en": 0.94,
+      "gold_hinglish": 0.88,
+      "gold_hi": 0.86
+    },
+    "labse | emb-only LR": {
+      "silver": 0.8992,
+      "silver_ci": [
+        0.873,
+        0.9234
+      ],
+      "gold": 0.7933,
+      "gold_ci": [
+        0.7267,
+        0.86
+      ],
+      "gold_en": 0.86,
+      "gold_hinglish": 0.66,
+      "gold_hi": 0.86,
+      "mcnemar_vs_deployed_gold": {
+        "only_other_right": 8,
+        "only_deployed_right": 23,
+        "p": 0.0107
+      },
+      "mcnemar_vs_deployed_silver": {
+        "only_other_right": 14,
+        "only_deployed_right": 32,
+        "p": 0.0114
+      }
+    },
+    "labse | emb + char-tfidf LR": {
+      "silver": 0.9315,
+      "silver_ci": [
+        0.9093,
+        0.9517
+      ],
+      "gold": 0.9,
+      "gold_ci": [
+        0.8533,
+        0.9467
+      ],
+      "gold_en": 0.92,
+      "gold_hinglish": 0.88,
+      "gold_hi": 0.9,
+      "mcnemar_vs_deployed_gold": {
+        "only_other_right": 7,
+        "only_deployed_right": 6,
+        "p": 1.0
+      },
+      "mcnemar_vs_deployed_silver": {
+        "only_other_right": 9,
+        "only_deployed_right": 11,
+        "p": 0.8238
+      }
+    },
+    "muril | emb-only LR": {
+      "silver": 0.8508,
+      "silver_ci": [
+        0.8165,
+        0.881
+      ],
+      "gold": 0.84,
+      "gold_ci": [
+        0.78,
+        0.9
+      ],
+      "gold_en": 0.92,
+      "gold_hinglish": 0.74,
+      "gold_hi": 0.86,
+      "mcnemar_vs_deployed_gold": {
+        "only_other_right": 8,
+        "only_deployed_right": 16,
+        "p": 0.1516
+      },
+      "mcnemar_vs_deployed_silver": {
+        "only_other_right": 12,
+        "only_deployed_right": 54,
+        "p": 0.0
+      }
+    },
+    "muril | emb + char-tfidf LR": {
+      "silver": 0.9194,
+      "silver_ci": [
+        0.8931,
+        0.9435
+      ],
+      "gold": 0.8467,
+      "gold_ci": [
+        0.7932,
+        0.9
+      ],
+      "gold_en": 0.86,
+      "gold_hinglish": 0.86,
+      "gold_hi": 0.82,
+      "mcnemar_vs_deployed_gold": {
+        "only_other_right": 6,
+        "only_deployed_right": 13,
+        "p": 0.1671
+      },
+      "mcnemar_vs_deployed_silver": {
+        "only_other_right": 7,
+        "only_deployed_right": 15,
+        "p": 0.1338
+      }
+    },
+    "indicbertv2 | emb-only LR": {
+      "silver": 0.8992,
+      "silver_ci": [
+        0.873,
+        0.9254
+      ],
+      "gold": 0.86,
+      "gold_ci": [
+        0.8,
+        0.9133
+      ],
+      "gold_en": 0.96,
+      "gold_hinglish": 0.66,
+      "gold_hi": 0.96,
+      "mcnemar_vs_deployed_gold": {
+        "only_other_right": 11,
+        "only_deployed_right": 16,
+        "p": 0.4421
+      },
+      "mcnemar_vs_deployed_silver": {
+        "only_other_right": 15,
+        "only_deployed_right": 33,
+        "p": 0.0133
+      }
+    },
+    "indicbertv2 | emb + char-tfidf LR": {
+      "silver": 0.9335,
+      "silver_ci": [
+        0.9113,
+        0.9556
+      ],
+      "gold": 0.9133,
+      "gold_ci": [
+        0.8667,
+        0.9533
+      ],
+      "gold_en": 0.92,
+      "gold_hinglish": 0.88,
+      "gold_hi": 0.94,
+      "mcnemar_vs_deployed_gold": {
+        "only_other_right": 7,
+        "only_deployed_right": 4,
+        "p": 0.5488
+      },
+      "mcnemar_vs_deployed_silver": {
+        "only_other_right": 8,
+        "only_deployed_right": 9,
+        "p": 1.0
+      }
+    }
+  },
+  "fine_tuned_included": false,
+  "partial": true,
+  "note": "PARTIAL run stopped early: MiniLM, LaBSE, MuRIL (frozen) done; IndicBERTv2 frozen and all fine-tuning still to run (scripts/21_encoder_comparison.py --ft)."
+}

@@ -1,0 +1,12 @@
+\begin{tabular}{lrrrrrr}
+\toprule
+System & Silver & Gold & EN & Hinglish & Hindi & Hing.$^{*}$ \\
+\midrule
+Keyword rules (original labeller) & 66.9 & 37.3 & 70.0 & 32.0 & 10.0 & 32.0 \\
+DistilBERT trained on keyword labels & 65.7 & 33.3 & 66.0 & 24.0 & 10.0 & -- \\
+Word TF-IDF + SVM & 91.3 & 81.3 & 90.0 & 86.0 & 68.0 & 83.2 \\
+Character TF-IDF + SVM & 92.5 & 87.3 & 88.0 & 88.0 & 86.0 & 86.0 \\
+Sentence embedding + LR & 90.5 & 74.0 & 92.0 & 50.0 & 80.0 & 48.0 \\
+\rowcolor{gray!15} Embedding + char TF-IDF + LR (ours) & 93.5 & 90.0 & 94.0 & 90.0 & 86.0 & 85.6 \\
+\bottomrule
+\end{tabular}

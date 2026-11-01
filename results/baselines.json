@@ -1,0 +1,76 @@
+{
+  "intent_weak_label_test": {
+    "majority_class": {
+      "all": {
+        "accuracy": 0.388,
+        "macro_f1": 0.0559
+      },
+      "novel_only": {
+        "accuracy": 0.2095,
+        "macro_f1": 0.0346
+      }
+    },
+    "keyword_rules": {
+      "all": {
+        "accuracy": 1.0,
+        "macro_f1": 1.0
+      },
+      "novel_only": {
+        "accuracy": 1.0,
+        "macro_f1": 1.0
+      }
+    },
+    "tfidf_linearsvc": {
+      "all": {
+        "accuracy": 0.998,
+        "macro_f1": 0.9949
+      },
+      "novel_only": {
+        "accuracy": 0.9932,
+        "macro_f1": 0.9661
+      }
+    },
+    "finetuned_distilbert": {
+      "all": {
+        "accuracy": 0.995,
+        "macro_f1": 0.9847
+      },
+      "novel_only": {
+        "accuracy": 0.9797,
+        "macro_f1": 0.8378
+      }
+    },
+    "n": 3000,
+    "n_novel": 148
+  },
+  "retrieval": {
+    "n": 3000,
+    "n_novel": 148,
+    "tfidf": {
+      "category_match_all": 0.9153,
+      "category_match_novel": 0.6689,
+      "answer_token_f1_all": 0.4397,
+      "answer_token_f1_novel": 0.2238
+    },
+    "minilm_faiss": {
+      "category_match_all": 0.933,
+      "category_match_novel": 0.7365,
+      "answer_token_f1_all": 0.4348,
+      "answer_token_f1_novel": 0.1719
+    },
+    "gold_retrieval_by_style": {
+      "en": {
+        "minilm_category_match": 0.6,
+        "tfidf_category_match": 0.42
+      },
+      "hinglish": {
+        "minilm_category_match": 0.16,
+        "tfidf_category_match": 0.36
+      },
+      "hi": {
+        "minilm_category_match": 0.52,
+        "tfidf_category_match": 0.1
+      }
+    }
+  }
+}

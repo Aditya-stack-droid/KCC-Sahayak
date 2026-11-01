@@ -1,0 +1,100 @@
+a2553 | Nutrient Management | fertilizer requirement for banana
+a2558 | Market Price | asking about market information of milk
+a2566 | Plant Protection | asking about the control measure wilt on tomato
+a2571 | Government Scheme | asking about advantages of mkisan scheme.
+a2582 | Weather | query regarding rainfall of sibsagar, sibsagar.
+a2588 | Plant Protection | growth problem in litchi
+a2591 | Weather | querry regarding rainfall(mm0 prediction in darang district
+a2600 | Market Price | asking about market price of hybrid boro rice
+a2604 | Animal Husbandry | asking about the source of information of pure pig breed.
+a2616 | Plant Protection | asking about control measure of anthracnose
+a2618 | Cultural Practices | asking about time of sowing
+a2622 | Market Price | asking about the price of power tiller
+a2624 | Fisheries | asked about carp disease problem
+a2626 | Government Scheme | asking about last date for pm kisan
+a2641 | Market Price | asking about increase in price of fertiliser
+a2649 | Fisheries | regarding oxygen depletion problem in fish pond
+a2654 | Other | asking about training for flower plantation
+a2666 | Fisheries | regarding prevention of oxygen depletion in fish pond
+a2694 | Fisheries | asking about liming of pond
+a2703 | Weather | asking about the waether forecast
+a2713 | Plant Protection | pest problem in chilli
+a2764 | Weather | asking for todays predicted rainfall in tinsukia
+a2770 | Fisheries | asked about carp feeding habits.
+a2772 | Plant Protection | query regarding management of white fly in bottle gourd. sprayimidachloprid 1ml/liter of water 3 times at 5 days interval in the evening time in the absence of rain.
+a2776 | Nutrient Management | asking about the nutrient deficiency in jack fruits
+a2780 | Varietal Information | asking about variety of brinjal
+a2786 | Cultural Practices | asking about sowing of tomato seeds
+a2790 | Varietal Information | asking about the early sown variety of cabbage.
+a2799 | Nutrient Management | asking about the fertilizer use in potato
+a2810 | Fisheries | query regarding fish mortality due to oxygen dipletion.
+a2835 | Government Scheme | asking about application process for pm kisan
+a2841 | Weather | asking about rainfall possibility for the next days
+a2849 | Market Price | query regarding fertilizers market.
+a2852 | Varietal Information | asking about the availability of certified seeds of ranjit paddy variety in bongaigaon.
+a2869 | Fisheries | asking about excessive algal bloom in pond
+a2888 | Cultural Practices | asking about the proper planting time of banana.
+a2899 | Cultural Practices | asking about spacing of brinjal cultivation.
+a2902 | Cultural Practices | asking about cultivation practice of potato
+a2915 | Fisheries | asking about reason of fish death
+a2917 | Market Price | asking that he will cultivate rice next year and wants to know market price for more value.
+a2921 | Weather | query regarding rainfall of agamoni, dhubri.
+a2927 | Government Scheme | asking about govt. scheme for goatery farming.
+a2937 | Varietal Information | asking about the high yielding hybrid seed variety
+a2939 | Government Scheme | asking regarding making of kisan credit card
+a2945 | Cultural Practices | query regarding spacing of french bean.
+a2956 | Other | asking about training of hydroponic culture
+a2957 | Government Scheme | call related to pm kisan
+a2958 | Plant Protection | asking for the control measure against potato cut worms.
+a2967 | Fisheries | aksed about the fish cum poultry farming.
+a2981 | Market Price | query reagarding bought leaf market information
+a2987 | Plant Protection | asking about control measure of wasp in snake gourd
+a2996 | Government Scheme | asked about pm kisan account status
+a3004 | Varietal Information | asking about the varieties
+a3018 | Market Price | asking about the automatic mandi rate of potato
+a3023 | Varietal Information | asking about variety of rice
+a3040 | Animal Husbandry | asking for improving health codition in cow
+a3053 | Fisheries | asking about mortality of fish
+a3063 | Government Scheme | asking about argil loan
+a3066 | Other | asking about procurement of training related to beekeeping
+a3072 | Varietal Information | asking about some variety name of chilli.
+a3073 | Other | query regarding a.i training
+a3078 | Cultural Practices | asking about planting procedure of banana
+a3087 | Weather | query regarding rainfall for kalaigaon block of udalguri district
+a3093 | Cultural Practices | query regarding boosting of production in betel vine
+a3095 | Animal Husbandry | white diarrhoea in local poultry
+a3105 | Cultural Practices | asking about late sowing of paddy
+a3106 | Animal Husbandry | query about dog bite to a goat
+a3116 | Weather | rainfall (mm) prediction in dibrugarh district
+a3132 | Varietal Information | asking early maturity variety of cabbage
+a3146 | Nutrient Management | asking about fertilizer dose for capsicum
+a3148 | Nutrient Management | query regarding fertilizer dose of boro rice.
+a3158 | Cultural Practices | query regarding spacing of cauliflower, cabbage, brinjal
+a3160 | Plant Protection | asking about control measure of rotting of leaves in laisak
+a3199 | Plant Protection | problem of fungal wilt in french bean.
+a3224 | Market Price | query about selling of rice
+a3233 | Animal Husbandry | query regarding some cattle showinegthe signs of fmd
+a3236 | Cultural Practices | asking about seed bed preparation for paddy.
+a3243 | Nutrient Management | asking about the recommended fertilizer dose for maize
+a3248 | Cultural Practices | asking about the spacing of boro paddy for transplanting.
+a3252 | Varietal Information | asked about the suitable variety of brinjal for assam condition.
+a3253 | Other | asking about curd production from milk.
+a3254 | Market Price | asking about market price of maize
+a3269 | Fisheries | asking about the comp[osite fish cultutre.
+a3278 | Animal Husbandry | asking about the diarrhoea in poultry.
+a3283 | Fisheries | aksed about the composite fish culture.
+a3289 | Cultural Practices | asking about cultivation practice of chilli.
+a3291 | Fisheries | asking about fishery quiries
+a3311 | Varietal Information | asking for availibility of boro rice seed
+a3313 | Government Scheme | asking about pmkisan installment
+a3315 | Fisheries | asking about mineral mixture for feeding in pond
+a3375 | Nutrient Management | asking about the nutrient management in pomegranate
+a3376 | Fisheries | control measure of low do and deteriorated water quality
+a3387 | Animal Husbandry | query regardind mating of a goat.
+a3437 | Weather | asking about the rainfall
+a3444 | Nutrient Management | asking about top dressing of urea
+a3457 | Animal Husbandry | query regarding regurdation of a lactationg cow
+a3470 | Weather | asked for rainfall data for the coming six days
+a3473 | Animal Husbandry | asking about treatment of worms infestation in calf.
+a3484 | Cultural Practices | asking about harvesting of papaya
+a3495 | Animal Husbandry | asking about treatment of worms infestation cow.

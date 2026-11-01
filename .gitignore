@@ -1,0 +1,26 @@
+# environment
+.venv/
+__pycache__/
+*.pyc
+.pytest_cache/
+.claude/
+
+# large trained artefacts (rebuild with the scripts, see README)
+models/
+*.safetensors
+*.faiss
+*.npy
+*.pt
+
+# local runtime state
+data/app.db
+*.log
+
+# LaTeX build junk (the compiled paper/main.pdf is kept)
+paper/*.aux
+paper/*.log
+paper/*.out
+paper/*.toc
+
+# blind-review answer key must not reach annotators
+data/review/answer_key_DO_NOT_SHARE.csv

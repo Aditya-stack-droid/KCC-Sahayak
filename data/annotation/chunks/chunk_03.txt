@@ -1,0 +1,250 @@
+a0750 | asking use of tracel in brinjal
+a0751 | querry regarding rainfall(mm) in golaghat district
+a0752 | asking about the how to preparation of rice seed
+a0753 | asking about the fertilizer dose of bitter gourd.
+a0754 | asking about borax application in cabbage field
+a0755 | asked range of ph in fish pond..
+a0756 | asking about spacing of chilli.
+a0757 | asking about flower drop
+a0758 | asking about pm man dhan yojana
+a0759 | asking about the insects pest in rice
+a0760 | query regarding fertilizer dose of arecanut
+a0761 | asking about lemon query
+a0762 | asking about contact for buying of duckling and market price of duckling for rearing.
+a0763 | control measure of antharcnose disease in chilli.
+a0764 | asking about inclusion of mushroom in pm fasal bima yojana
+a0765 | asking about the spacing required for arecanut
+a0766 | query regarding management of bunchy top disease of banana.
+a0767 | asking about the control measure against fruit rot in chilli.
+a0768 | asking about control of fruit rot in chilli
+a0769 | asking for the control of pithium rot
+a0770 | asking about growth hormone application in papaya
+a0771 | asking about the control of weeds
+a0772 | asking about pumpkin query
+a0773 | asking about the variety name of ridgegourd
+a0774 | asking about pm kisan nidhi online form fill up
+a0775 | asking about worms infestation in piglet.
+a0776 | querru regarding seed treatment for tomato seed
+a0777 | asking that he wants to register his pig farm.
+a0778 | asking about the control of rice hispa in paddy
+a0779 | asking about the rhiome rot in ginger
+a0780 | asking use of urea phosphate as foliar spray in pumpkin
+a0781 | asking about the fertilizer dose for mustard
+a0782 | package of practice
+a0783 | asking about the govt. scheme on agriculture
+a0784 | asking for fert application in arecanut
+a0785 | micro nutrient spray in chilli
+a0786 | asking about application of vitamin
+a0787 | asking that his 10 days old 2 broiler chicks are suffering from lameness.
+a0788 | asking about the fertilizer doses for chillies
+a0789 | want to know about preparation of seed bed for paddy
+a0790 | asking about stunted growtg in cabbage
+a0791 | asking about pruning in citrus
+a0792 | asked where to get training on magur culture..
+a0793 | asking about pm kisan scheme application procedure.
+a0794 | query about fruit and shoot of brinjal.
+a0795 | query regarding fertilizer dose of chilly
+a0796 | asking about the remedy for non fruiting in bottle gourd
+a0797 | asking about the recommended fertilizer dose for coconut at the age of fifth year.
+a0798 | asking about leaf spot disease
+a0799 | asking about binding problem
+a0800 | control of frog in fish pond
+a0801 | query regarding nutrient management.
+a0802 | asking about the treatment of milk fever in a cow.
+a0803 | feed for fishes
+a0804 | asking about spacing and control of damping off in pumpkin
+a0805 | asking about how to start fish farming
+a0806 | asking aboutb the use of micronutrient in mustard.
+a0807 | asking the planting time and the spacing distance of brinjal including the preventive measure against fruit borers.
+a0808 | 19 may rainfall(mm) : 0 temp(max/min):0 / 0 humidity(max/min)0 / 0 wind:0
+a0809 | asking about the cultivation practices of cabbage
+a0810 | asking about control measure of rat in paddy field
+a0811 | control measures of gundhi bug
+a0812 | query regarding artificial insemination of goat [ local goat with the beetal germ plasm ]
+a0813 | fertilier requirment in sali paddy as basal dose
+a0814 | asking about polyhouse subsidy scheme
+a0815 | query regarding vaccine fmd, h.s.&b.q. vaccine.
+a0816 | farmer wants to know about the pm kisan scheme status ?
+a0817 | asking for the spacing of brinjal
+a0818 | asking about the paddy cultivation practices
+a0819 | asking about the length of gestation period in cow.
+a0820 | asking about the control of late blight of potato
+a0821 | asking about liming in aquaculture pond
+a0822 | asking recommended fertilizer dose of hybrid paddy
+a0823 | query regarding early let down of milk through the 2 nos of teat of a heifer bearing last month of gestation period
+a0824 | telling that he has cultivated cucumber on a land of 2 bigha. now, as the plants have started fruiting, aphids and jesids has started causing damages. asking the control measure for the same.
+a0825 | asking suggestion to increase milk of a cow.
+a0826 | asking about liming doses in fish pond
+a0827 | asking about liver suppliment for cow.
+a0828 | query regarding bottle gourd pest problem
+a0829 | asking about the deactivation of free message service.
+a0830 | asking about fish ulcer disease
+a0831 | asking about non payment of 5th installment under pm kisan
+a0832 | asking about the market place of magur seed
+a0833 | asking about agricultural insurance for rabi crops
+a0834 | removal of unwanted fish from pond
+a0835 | asking about the controlling measure for stem borer of rice.
+a0836 | asking about micronutrient requirement for brinjal
+a0837 | querry regarding pest infection in brinjal
+a0838 | asking about infestation of scale insect
+a0839 | asking about the treatment of eye infection of a cow.
+a0840 | asking about the fertilizer requirement in ridge gourd.
+a0841 | micro nutrient deficiency
+a0842 | asking for gandgi bug problem solution
+a0843 | query regarding control measures of helopeltis in tea
+a0844 | asking about improving productivity of beans
+a0845 | asking about control of red ants in potato
+a0846 | asking about the control measure of insect infestation
+a0847 | asking about treatment of worms infestation in buffalo.
+a0848 | asking spacing of ridge gourd
+a0849 | seeking loan on govts subsidy scheme to construct new pond
+a0850 | query regarding fish spawn procuction
+a0851 | problem of leaf minor in citrus.
+a0852 | querry regarding dose of dap
+a0853 | asking about how to avail loan on teak cultivation
+a0854 | asking about the varieties of chilli.
+a0855 | asking about the yellow vein mosaic and fruit and shoot borer of okra
+a0856 | pond water management
+a0857 | query regarding management of wilt in cabbage nursery.
+a0858 | farmer asked a query regarding sowing time of chilli and brinjal.
+a0859 | asking about some variety of sali rice.
+a0860 | asking about greenish diarrhoea in duck.
+a0861 | asking about dolichos bean pest problem
+a0862 | irrigation system in radish
+a0863 | desease of paddy
+a0864 | asking about the source of phosphorous fertilizer.
+a0865 | asking about pest control in ridge gourd.
+a0866 | asking about the nutrient management in bhindi
+a0867 | asking about the recomended doses of fertilizers of wheat.
+a0868 | asking about dap application time
+a0869 | asking about the control of stem borer pest attack in mango
+a0870 | asking about the composite fish farming
+a0871 | query about diarhoria to 7 days old broiler chicks
+a0872 | asking about gap between liming, manuring & stocking of fish seed in pond.
+a0873 | hispa problem in rice
+a0874 | quary on good variety of sesame
+a0875 | asking about where to get qwality fish seed
+a0876 | asking about the nutrient management in bottlegourd
+a0877 | asking about beetle attack in banana
+a0878 | query regarding fertizer dose of potato
+a0879 | asking about spacing of ground nut
+a0880 | asking about how to bring the cow back into heat
+a0881 | asking about cucumber query
+a0882 | wanted to know the name of improved seeds of tomato
+a0883 | asking about soil insect problem in potato
+a0884 | query regarding pm kisan. he is not getting 6th installment.
+a0885 | fertilizer requirment in hybrid boro rice
+a0886 | asked abt kcc loan
+a0887 | asking about the dhaincha in the paddy field
+a0888 | asking about the harvesting process
+a0889 | asking for the procedure of field preparation to cultivate brinjal crop.
+a0890 | asking about the vitamin requirement in pumpkin.
+a0891 | asking about the controlling measure for crown rot diseases of coconut.
+a0892 | asking about hybrid varity
+a0893 | roting in ash gourd
+a0894 | asking predicted rainfall for today in jorhat district
+a0895 | asking for the control measure against leaf blight in chilli
+a0896 | nutrition of bhendi
+a0897 | asking about duration of indo american hybrid rice
+a0898 | asking about the age of castration period of a dog.
+a0899 | query regarding poultry farm
+a0900 | asking about the control measure of khaira disease on paddy
+a0901 | asking about the spacing in arecanut
+a0902 | brinjal borere
+a0903 | control of caseworm in maize
+a0904 | asking about the nutrient management of mustard
+a0905 | asking about subsidy of tractor
+a0906 | asking for pest problem
+a0907 | asking about the topdressing of fertilizer in rice
+a0908 | asking about what type of vegetables for sowing in this time.
+a0909 | farmer asking query regarding nutrient management in ber.
+a0910 | asking about online form fill up website for pm kisan nidhi
+a0911 | query regarding maturity of harvesting of maize for animal feeding.
+a0912 | asking about bloat of a calf.
+a0913 | asking about the control of gandhi bug in paddy
+a0914 | asking about the application of lime in field
+a0915 | enquired about the loan facilities provided by the govt
+a0916 | asking seed rate,spacing and fertilizer dose of okra
+a0917 | asking about credit card.
+a0918 | asking for mangaemwent of coconut
+a0919 | asked about agri
+a0920 | query regarding lactation of a local cattle
+a0921 | asking about the treatment of mange infestation of a goat.
+a0922 | asking for credit for pond preparation
+a0923 | querry regarding rainfall(mm) prediction in golaghat
+a0924 | asking about blast in rice
+a0925 | asking about some variety for paddy
+a0926 | query regarding water management in potato
+a0927 | asking about the source of information of khaki-chembel duck.
+a0928 | asking about the spacing of paddy.
+a0929 | query regarding seed rate of dhaincha.
+a0930 | query regarding nursery management for sowing cabbage.
+a0931 | asking about the fertilizer dose of sali paddy.
+a0932 | asking about late sali varity
+a0933 | asking about the nutrient use in bhindi
+a0934 | asking about application of fertilizer in tomato
+a0935 | want to know about micro nutrient requirment in spine gourd
+a0936 | query regarding varrietes of toria
+a0937 | asking about some variety name of black gram
+a0938 | asking about the fertilizer dose for coconut
+a0939 | asking about the training institute of sandal wood plantation and marketting.
+a0940 | asking about the inescts pest problem in chillies
+a0941 | cultural practices of chillies
+a0942 | asking about the hybrid seed pumkin
+a0943 | query regarding selling of jute fibre.
+a0944 | query regarding copntrol measures of leaf curling in chilli
+a0945 | query regarding contrl of blight in tomato.
+a0946 | asking about the nutrient management in beans
+a0947 | asked about cat fish diseases.
+a0948 | asking about that papaya seed not germinate in 1 week
+a0949 | asking about spacing of sponge gourd
+a0950 | query regarding fertilization of fish pond
+a0951 | asking about seed rate of rice
+a0952 | asking about control measure of bacterial leaf spot
+a0953 | asking for oxygen depletion problem
+a0954 | asking about fertilizer doses of rice
+a0955 | asking about the nutrition of a cow.
+a0956 | asking about the seed rate of onion
+a0957 | asking about micronuitrient for brinjal
+a0958 | asking about the pond preparation
+a0959 | query regarding management of wilting.
+a0960 | asked about the stocking density of fish in 1.5 bighas of water body
+a0961 | hispa problem in rice seedling
+a0962 | asking about rainfall (mm) prediction fir the district of sivsagar
+a0963 | asking about compensation for failure of boro paddt provided by state govt.
+a0964 | asking about seed rate of okra.
+a0965 | asking about vitamin for rice
+a0966 | asking about seed rate of aijong rice
+a0967 | asking about the hatching time of duck egg.
+a0968 | asking that his 1year old calf is very weak.
+a0969 | asking for fertilizer dose in one katha of bhindi
+a0970 | asking for the procedure of seed bed preparation to raise seedlings to cultivate paddy as sali rice.
+a0971 | asking for any plant protection measures to be adopted against late blight disease in potato
+a0972 | asking about diarrhoea in calf.
+a0973 | querry regarding expected rainfall (mm) in lakhimpur
+a0974 | asking about the scheme about national bamboo mission.
+a0975 | asking about the spacing requirement for basmati
+a0976 | asking about the fertiliser dose of 1 year lemon
+a0977 | asking about the variety of bittergourd
+a0978 | querry regarding rainfall(mm) prediction in dhubri district
+a0979 | asking fertiliser dose of cauliflower in crop growth stage
+a0980 | asked about varieties of carp to be cultured in fish pond.
+a0981 | query regarding nursery pond
+a0982 | asking about the sowing season of cucumber.
+a0983 | name of grass for goatary
+a0984 | asking for name of summer black gram variety for sowing after harvesting of mustard
+a0985 | damping off of chillies seedling
+a0986 | query regarding a cow showing the signs ofdecrease milk flow fron one quarter , [suspected to be acute mastitis
+a0987 | asked for fishery development officer phone number
+a0988 | want to number of fish fingerling needed in his pond of size 1 katha
+a0989 | asking about late variety of coliflower
+a0990 | asking about nutrient application in mustard
+a0991 | control of downy mildew in sponge gourd
+a0992 | regarding pm kisan sammanidhi
+a0993 | asked about seed rate of wheat in 1 bvigha area
+a0994 | asking about trhe rain fall
+a0995 | .asking about some variety name of mustard
+a0996 | asking about the tea expert and citrus training programme
+a0997 | asking for name of variety for post flood late planted variety
+a0998 | asking about the pest control
+a0999 | asking about the training for tea cultivation

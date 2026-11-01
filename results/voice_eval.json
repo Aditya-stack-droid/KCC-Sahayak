@@ -1,0 +1,19 @@
+{
+  "n": 50,
+  "mean_wer": 0.0146,
+  "median_wer": 0.0,
+  "intent_accuracy_typed_text": 0.94,
+  "intent_accuracy_after_asr": 0.94,
+  "prediction_unchanged_by_asr": 1.0,
+  "baseline_no_vocab_hint": {
+    "mean_wer": 0.034,
+    "intent_accuracy_after_asr": 0.92
+  },
+  "domain_terms_fixed": 11,
+  "domain_terms_broken": 1,
+  "asr_model": "openai-whisper small (with agricultural vocabulary hint)",
+  "caveats": [
+    "speech is synthetic Windows TTS (clean audio) -- an upper bound on real phone-line farmer speech",
+    "English voices only; Hindi / Hinglish speech was not tested"
+  ]
+}

@@ -1,0 +1,100 @@
+a0962 | Weather | asking about rainfall (mm) prediction fir the district of sivsagar
+a0971 | Plant Protection | asking for any plant protection measures to be adopted against late blight disease in potato
+a0983 | Animal Husbandry | name of grass for goatary
+a0988 | Fisheries | want to number of fish fingerling needed in his pond of size 1 katha
+a0989 | Varietal Information | asking about late variety of coliflower
+a0994 | Weather | asking about trhe rain fall
+a0995 | Varietal Information | .asking about some variety name of mustard
+a1002 | Plant Protection | asking about store house pest control
+a1003 | Animal Husbandry | asking about diarrohea of poultry ,feed supplement and vaccination of duck
+a1004 | Other | asking about training on maintanace of farm machinary.
+a1009 | Fisheries | asking about water of pond
+a1022 | Varietal Information | asking for some good variety names of boro rice suitable & recommended for cultivation in his zone.
+a1063 | Cultural Practices | asking about the seed bed nursery for paddy
+a1065 | Nutrient Management | asking for any crop booster name to be sprayed in his mustard crop cultivation for a better yield.
+a1084 | Cultural Practices | quary relating water management
+a1093 | Weather | regarding rainfall prediction in coming days
+a1097 | Fisheries | how to increase oxygen in pond water
+a1104 | Nutrient Management | asking about the nutrient management in rice
+a1106 | Market Price | asked about ornamental fish marketing
+a1113 | Other | asking about the training on bee keeping
+a1141 | Government Scheme | asking about the green house making techniques , materials required for it and any subsidy related to it
+a1145 | Government Scheme | asking about the loan.
+a1186 | Plant Protection | asking about control measure wilt on chilli
+a1189 | Fisheries | asking about winter care of fish pond
+a1198 | Other | asking where to avail training on mushroom production
+a1202 | Market Price | asking about yesterday's market price of vegetables of different district of assam
+a1204 | Cultural Practices | query regarding nursery management
+a1211 | Nutrient Management | asking about deficiency disorder in cabbage
+a1218 | Nutrient Management | asking for the manures and fertilizers dose of cabbage in terms of per bigha of land for cauliflower crop cultivation.
+a1220 | Nutrient Management | asking about fertilzer dose for mustard
+a1238 | Nutrient Management | asking about the remedy to red coloration of rice seedlings
+a1243 | Plant Protection | viral attack in brinjal
+a1254 | Cultural Practices | asking about the recommended spacing for tomato cultivation.
+a1265 | Fisheries | asked about rearing of fishes in a tea plantation field
+a1289 | Varietal Information | asking about seed of mushroom
+a1294 | Government Scheme | asking about how to get kishan credit card
+a1295 | Government Scheme | asked about scheme related to fishery
+a1304 | Other | wanted to know where to take training on fish breeding.
+a1308 | Government Scheme | asking about the procedure for obtaining kisan credit card loan.
+a1322 | Plant Protection | asking about control of fusarium wilt
+a1331 | Nutrient Management | asking about the amount and time of top dressing of urea in sali paddy.
+a1334 | Animal Husbandry | query regarding lacrimation in eye of acow
+a1340 | Animal Husbandry | asking that his goat is suffering from diarrhea.
+a1358 | Varietal Information | asking about procurement of seed of french bean
+a1362 | Fisheries | asking for pond preparation methodology
+a1363 | Other | query regarding training and exposure visit
+a1407 | Fisheries | asking about gas formation in nursery fish pond
+a1414 | Weather | asking predicted rainfall for today in barpeta district
+a1427 | Plant Protection | asking about the control measure of termite
+a1428 | Animal Husbandry | query about increase milk production of a newly calving cow
+a1429 | Government Scheme | askingb about the availability of any scheme for tractor or powertiller etc.
+a1433 | Plant Protection | asking about the weedicide
+a1453 | Other | asked about the training of biofloc from government.
+a1458 | Varietal Information | want to know names of water logging variety for paddy
+a1467 | Nutrient Management | wanted to know the amount of fertilizer required in one bigha of unirrigated land
+a1471 | Other | query regarding ussd scheme
+a1474 | Other | asking ph. no of kvk bilasipara
+a1478 | Cultural Practices | asking about the cultural practices in mustard
+a1486 | Government Scheme | asking about online form fill up site gor pmkisan scheme
+a1497 | Cultural Practices | asking about the seed rate of cucumber
+a1513 | Market Price | query regarding market information for sonitpur district
+a1517 | Government Scheme | asking about loan for tractor
+a1519 | Weather | rainfall for next 5 days
+a1520 | Plant Protection | asking for control of rice stem borer
+a1522 | Other | asking about training for pig farming
+a1533 | Varietal Information | asking about some variety of marigold .
+a1534 | Weather | query regarding rainfall data for amguri block of sivasagar district
+a1538 | Animal Husbandry | asking about calcium suppliment for ducklings.
+a1540 | Nutrient Management | asking recommended fertilizer dose of chilli
+a1546 | Other | asking about agricultural equipments or machinary
+a1563 | Cultural Practices | asking about the planting time of banana.
+a1566 | Animal Husbandry | asking about the poultry farming<broiller farm>
+a1569 | Plant Protection | asking about the control measure of fruit borer infestation in french bean
+a1577 | Cultural Practices | query regarding seed rate of masur.
+a1578 | Cultural Practices | query regarding irrigation management.
+a1581 | Other | asking for the veterinary expert.
+a1582 | Weather | want to know about rainfall in goalpara district on 29th july
+a1586 | Cultural Practices | asking about irrigation in potato
+a1591 | Weather | asking about waether forecast up to 20 th april,2016
+a1593 | Cultural Practices | asking about the mustard seed rate
+a1597 | Market Price | asking about cost of jersey cow.
+a1598 | Animal Husbandry | query regarding insemination of goat
+a1601 | Nutrient Management | asking about the fertilizer application in betel vine
+a1604 | Fisheries | asking about general management of pond
+a1619 | Market Price | asking about market for seed
+a1631 | Plant Protection | control of flower drop in litchi
+a1632 | Government Scheme | asking about the reason for not availing pm kisan installment.
+a1634 | Cultural Practices | asking about cultural practices of leafy vegetable
+a1650 | Nutrient Management | querry regarding fertilizer dose in coriander
+a1651 | Cultural Practices | asking for spacing of bhut jalokia
+a1657 | Market Price | asking about the market
+a1659 | Market Price | asking about market price of brinjal
+a1667 | Weather | asking for the probability of rainfall occurance in kamrup(rural)
+a1680 | Other | asking about the training programme to avial for mushroom cultivation.
+a1696 | Fisheries | asking about the scintific fish raring and raring of ornamental fish.
+a1697 | Weather | query regarding rainfall data of ghilamara block
+a1726 | Fisheries | asking about pond management practices
+a1736 | Weather | asking about rainfall intensity of dhemaji district for 5 days.
+a1747 | Other | asking aboutt the honey culture training
+a1758 | Animal Husbandry | query regarding vaccination in broiler
