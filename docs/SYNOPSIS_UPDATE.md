@@ -25,18 +25,18 @@ ablation. The full stack uses open-source models and can be re-run on any state'
 | Original plan | What was done | Reason |
 |---|---|---|
 | Scoped to Haryana (Hindi/Haryanvi) | Public multi-state KCC corpus; English, Hinglish and Hindi tested | The official Haryana export is CAPTCHA-protected; the public corpus has almost no Haryana rows. Scope reduced to the available data; the pipeline is state-independent. |
-| Fine-tune MuRIL / IndicBERT | Multilingual MiniLM encoder + char-n-gram head. MuRIL, IndicBERTv2 and LaBSE were compared (`results/encoder_comparison.json`) | **[fill: result of the comparison]** |
+| Fine-tune MuRIL / IndicBERT | Multilingual MiniLM encoder + char-n-gram head. MuRIL, IndicBERTv2 and LaBSE were compared (`results/encoder_comparison.json`) | MuRIL, IndicBERTv2 and LaBSE were compared on the same data; none is significantly better than MiniLM (MuRIL is lower on the independent set, IndicBERTv2 about 2 points higher but within noise at n=150). MiniLM kept for its size and speed. End-to-end fine-tuning of MuRIL/IndicBERTv2 was not completed (out of memory on an 8 GB CPU laptop); only frozen encoders were compared. |
 | Labels from KCC query types | Labels assigned by meaning (LLM-assisted, human verification pending) | Keyword-rule labels agree with meaning only 67.5%; the first model's 99% was an artefact of that. |
 | FAISS retrieval | Hybrid dense + TF-IDF retrieval, call-log notes filtered, topic-aware ranking | Pure dense retrieval returned "unable to resolve" notes and off-topic answers. |
-| Whisper on Haryanvi/telephone audio | Synthetic English speech only: WER **[fill]** with a farming-vocabulary hint | Real recordings still to be collected. |
+| Whisper on Haryanvi/telephone audio | Synthetic English speech only: WER 1.5% (3.4% without the hint) with a farming-vocabulary hint | Real recordings still to be collected. |
 
 ## Results slide (replace the placeholder after the final run)
-- Intent accuracy, independent 3-language gold set (n=150): **[fill]**
-- Intent accuracy, held-out corpus calls (n=496): **[fill]**
-- Safe gate: auto-answers **[fill]**% of queries, **[fill]**% correct on those, **[fill]**% policy violations
-- Without the safety rules: answers **[fill]**% but **[fill]**% break policy
-- Encoder comparison (MiniLM vs LaBSE vs MuRIL vs IndicBERTv2, frozen and fine-tuned): **[fill]**
-- Retrieval vs KisanQRS-style baseline (answer F1 vs advisor answer): **[fill]**
+- Intent accuracy, independent 3-language gold set (n=150): **90%** (95% CI 85-95): English 94, Hinglish 90, Hindi 86
+- Intent accuracy, held-out corpus calls (n=496): **93.5%** (95% CI 92-96)
+- Safe gate: auto-answers **24.6%** of queries, **95.1%** correct on those, **2.5%** policy violations (held-out)
+- Without the safety rules: answers **92.5%** but **71.7%** of those break policy
+- Encoder comparison, same data and head for every encoder (silver / gold accuracy, embedding + char n-grams): MiniLM (deployed) 93.5 / 89.3; LaBSE 93.1 / 90.0; MuRIL 91.9 / 84.7; IndicBERTv2 93.3 / 91.3. No encoder is significantly different from the deployed one (McNemar p >= 0.17, gold n=150), so the choice is not evidence that MuRIL/IndicBERT are worse or better here. End-to-end fine-tuning was **not completed**: it crashed out of memory on this 8 GB CPU laptop, so only the frozen-encoder comparison is reported.
+- Retrieval vs KisanQRS-style baseline (answer F1 vs advisor answer, n=2,737): KisanQRS-style 0.459 vs ours 0.467 (+0.008, small); the clear gain is that call-log notes returned fall from 4.6% to 0.2%. The KisanQRS-style row is a simplified re-implementation of its retrieval idea, not their LSTM system.
 
 ## Fixes to the synopsis and slides
 - USNs: Aditya Hubly and Ankur P B have different USNs in the .docx and the .pptx. Confirm and correct.

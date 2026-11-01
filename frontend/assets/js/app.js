@@ -147,7 +147,8 @@
     const auto = r.decision === "AUTO_ANSWER";
     card.className = `decision-card ${auto ? "answer" : "escalate"}`;
     $("decisionBadge").textContent = auto ? "✅" : "🚦";
-    $("decisionTitle").textContent = auto ? "Answered automatically" : "Sent to a human advisor";
+    $("decisionQuestion").textContent = r.input_text ? `Your question: “${r.input_text}”` : "";
+    $("decisionTitle").textContent = auto ? "Answered automatically" : "No automatic answer: sent to a human advisor";
     $("decisionReason").textContent = r.decision_reason;
     $("answerBlock").hidden = !auto;
     $("escalateBlock").hidden = auto;
@@ -155,6 +156,24 @@
     $("candidatesList").innerHTML = r.retrieved_top3.filter((c) => c.matched_question).map((c) =>
       `<li><span class="cand-sim">${pct(c.similarity, 0)}</span> “${esc(c.matched_question)}”${c.source === "advisor" ? ' <span class="badge answer">advisor-verified</span>' : ""}<div class="cand-ans">${esc(c.answer)}</div></li>`).join("");
     loadHistory(); loadQueue(); loadOps();
+    card.scrollIntoView({ behavior: "smooth", block: "center" });
+    renderCompare(r, auto);
+  }
+
+  // Second opinion from Gemini (optional; needs GEMINI_API_KEY on the server). Display only: it never changes the decision.
+  function renderCompare(r, auto) {
+    const box = $("compareBox"), top = (r.retrieved_top3 || []).find((c) => c.answer);
+    box.hidden = false;
+    $("cmpCorpus").hidden = auto || !top;     // when auto-answered, the corpus answer is already shown above
+    if (!auto && top) { $("cmpCorpusText").textContent = top.answer; $("cmpCorpusQ").textContent = `Matched past question: “${top.matched_question}” (${pct(top.similarity, 0)} match)`; }
+    const out = $("cmpGeminiText"), id = r.query_id;
+    out.className = ""; out.textContent = "Asking Gemini…";
+    post("/gemini", { text: r.input_text }).then((g) => {
+      if (state.lastId !== id) return;          // a newer query replaced this one
+      if (!g.available) { out.className = "cmp-muted"; out.textContent = "Gemini is not set up on this server (add GEMINI_API_KEY to .env)."; }
+      else if (g.error || !g.text) { out.className = "cmp-muted"; out.textContent = g.error || "No suggestion returned."; }
+      else out.textContent = g.text;
+    }).catch(() => { if (state.lastId === id) { out.className = "cmp-muted"; out.textContent = "Could not get a Gemini suggestion."; } });
   }
 
   // ------------------------------------------------------------------ query
@@ -340,6 +359,14 @@
     const v = s.voice_eval; if (v) facts.push(["Voice", `Whisper small on synthetic English speech: word error rate ${pct(v.mean_wer)}; intent accuracy ${pct(v.intent_accuracy_typed_text, 0)} on typed text vs ${pct(v.intent_accuracy_after_asr, 0)} after speech recognition (n=${v.n}). Real phone-line speech will be harder.`]);
     const mc = re.mcnemar_vs_production && re.mcnemar_vs_production["char TF-IDF + SVM"];
     if (mc) facts.push(["Is the deployed model really better?", `Not significantly better than a plain character n-gram SVM (McNemar p = ${mc.silver.p_value.toFixed(2)} held-out, ${mc.gold_all.p_value.toFixed(2)} gold). It is clearly better than word TF-IDF and than embeddings alone. The embedding's real value is transfer to Hindi when no Hindi training text exists.`]);
+    const ec = s.encoder_comparison;
+    if (ec && ec.results) {
+      const rows = Object.entries(ec.results).filter(([k]) => k.includes("char-tfidf") || k.includes("classification head"))
+        .map(([k, x]) => `${k.split(" |")[0]}: ${pct(x.silver, 1)} held-out, ${pct(x.gold, 1)} gold`);
+      facts.push(["Encoder comparison (MuRIL / IndicBERT vs the deployed MiniLM)", `${rows.join(" · ")}. Same training data and head for every encoder${ec.partial ? " (partial run)" : ""}. The gold set has only n=${ec.n_gold}, so gaps of a few points are within noise.`]);
+    }
+    const rb = s.retrieval_baselines;
+    if (rb && rb.systems) facts.push(["Retrieval vs a KisanQRS-style baseline", Object.entries(rb.systems).map(([k, x]) => `${k}: F1 ${x.f1.toFixed(3)}, ${pct(x.call_log_note_rate, 1)} call-log notes returned`).join(" · ") + `. The KisanQRS-style row is a simplified re-implementation of its retrieval idea (n=${rb.n}).`]);
     const nv = re.novelty_silver; if (nv) facts.push(["Novel vs repeated questions", Object.entries(nv).map(([k, x]) => `${k}: ${pct(x.accuracy, 0)} (n=${x.n})`).join(" · ")]);
     const lc = re.learning_curve; if (lc) { const ks = Object.keys(lc); facts.push(["How much annotation is needed", `Held-out accuracy rises from ${pct(lc[ks[0]].silver_mean, 0)} with ${ks[0]} labelled queries to ${pct(lc[ks[ks.length - 1]].silver_mean, 0)} with ${ks[ks.length - 1]}.`]); }
     $("evalFacts").innerHTML = facts.map((f) => `<div class="fact"><h4>${f[0]}</h4><p>${f[1]}</p></div>`).join("");

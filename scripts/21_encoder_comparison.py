@@ -7,7 +7,7 @@ the silver test (n=496) and the independent gold set (en / hinglish / hi, n=150)
 Frozen encoders  : mean-pooled embedding -> [embedding || char-n-gram TF-IDF] -> logistic regression
                    (identical head to the deployed model), plus an embedding-only head.
 Fine-tuned (--ft): the encoder is fine-tuned end to end with a linear classification layer
-                   (what the synopsis proposed). CPU only, so a short schedule.
+                   (what the synopsis proposed). CPU only, so a short schedule and frozen word embeddings.
 
 Outputs: results/encoder_comparison.json
 Usage:   .venv/Scripts/python.exe scripts/21_encoder_comparison.py [--ft]
@@ -70,7 +70,12 @@ def finetune(name, train, evals, epochs=3, bs=16, lr=3e-5, seed=0):
     idx = {c: i for i, c in enumerate(classes)}
     tok = AutoTokenizer.from_pretrained(name)
     model = AutoModelForSequenceClassification.from_pretrained(name, num_labels=len(classes))
-    opt = torch.optim.AdamW(model.parameters(), lr=lr, weight_decay=0.01)
+    # The 200k-token word-embedding matrix is ~70% of these models' parameters; freezing it keeps AdamW
+    # state small enough for an 8 GB laptop (the first full fine-tune crashed with exit code 4).
+    for n_, p_ in model.named_parameters():
+        if "word_embeddings" in n_:
+            p_.requires_grad = False
+    opt = torch.optim.AdamW([p_ for p_ in model.parameters() if p_.requires_grad], lr=lr, weight_decay=0.01)
     texts, y = list(train["text"]), np.array([idx[c] for c in train["label"]])
     steps = epochs * int(np.ceil(len(texts) / bs))
     sched = torch.optim.lr_scheduler.LambdaLR(opt, lambda s: min(1.0, (s + 1) / (0.1 * steps)) * max(0.0, (steps - s) / steps))

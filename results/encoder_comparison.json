@@ -196,6 +196,6 @@
     }
   },
   "fine_tuned_included": false,
-  "partial": true,
-  "note": "PARTIAL run stopped early: MiniLM, LaBSE, MuRIL (frozen) done; IndicBERTv2 frozen and all fine-tuning still to run (scripts/21_encoder_comparison.py --ft)."
+  "partial": false,
+  "note": "Frozen-encoder comparison complete (MiniLM, LaBSE, MuRIL, IndicBERTv2). End-to-end fine-tuning of MuRIL/IndicBERTv2 was NOT completed: the CPU run crashed out of memory (even with frozen word embeddings on a retry) and was stopped. Run `scripts/21_encoder_comparison.py --ft` on a machine with more RAM or a GPU."
 }

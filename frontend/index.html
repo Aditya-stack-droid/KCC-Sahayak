@@ -168,10 +168,11 @@
   <div class="decision-card" id="decisionCard" hidden>
     <div class="decision-badge" id="decisionBadge"></div>
     <div class="decision-body">
+      <div class="decision-q" id="decisionQuestion"></div>
       <h3 id="decisionTitle"></h3>
       <p id="decisionReason"></p>
       <div id="answerBlock" class="answer-block" hidden>
-        <div class="answer-label">Suggested answer</div>
+        <div class="answer-label">Answer to your question</div>
         <p id="answerText"></p>
         <div class="answer-actions">
           <button class="btn btn-ghost btn-sm" id="copyAnswerBtn">Copy</button>
@@ -181,6 +182,17 @@
       </div>
       <div id="escalateBlock" class="escalate-block" hidden>
         <p>This query is now waiting in the <a href="#advisor">Advisor Console</a>. When an advisor answers it, the answer is added to the system's memory.</p>
+      </div>
+      <div class="compare-box" id="compareBox" hidden>
+        <div class="cmp-card" id="cmpCorpus" hidden>
+          <div class="cmp-label">From the KCC corpus <span>closest past advisor answer · reference only, not verified for your case</span></div>
+          <p id="cmpCorpusText"></p>
+          <small id="cmpCorpusQ"></small>
+        </div>
+        <div class="cmp-card cmp-gemini" id="cmpGemini">
+          <div class="cmp-label">Gemini suggestion <span>AI-generated · not verified · never sent automatically</span></div>
+          <p id="cmpGeminiText">Asking Gemini…</p>
+        </div>
       </div>
       <details class="candidates" id="candidatesBox">
         <summary>Closest logged questions</summary>

@@ -28,6 +28,7 @@ from answer_quality import is_informative  # noqa: E402
 from confidence_gate import GateThresholds, answer_risk, decide  # noqa: E402
 from glossary import HIGH_STAKES_TYPES, TIME_SENSITIVE_TYPES  # noqa: E402
 from pipeline import KCCSahayakPipeline  # noqa: E402
+from query_match import coverage_problem  # noqa: E402
 
 RES = ROOT / "results"
 
@@ -51,14 +52,16 @@ def probe(pipe, texts):
         cands = pipe.retrieve(t, emb, k=3, query_type=label)
         top = cands[0] if cands else {"similarity": 0.0, "answer": "", "type": None}
         rows.append({"pred": label, "conf": conf, "sim": top["similarity"], "answer": top["answer"],
-                     "rtype": top.get("type")})
+                     "rtype": top.get("type"),
+                     "cov": coverage_problem(t, top.get("matched_question", ""), top.get("answer", "")) if top.get("matched_question") else None})
     return pd.DataFrame(rows)
 
 
 def auto_mask(df, th):
     """Boolean array: would the gate auto-answer each row under thresholds `th`?"""
-    return np.array([decide(p, c, s, th, a, retrieved_type=rt).action == "AUTO_ANSWER"
-                     for p, c, s, a, rt in zip(df["pred"], df["conf"], df["sim"], df["answer"], df["rtype"])])
+    return np.array([decide(p, c, s, th, a, retrieved_type=rt, coverage_problem=cv).action == "AUTO_ANSWER"
+                     for p, c, s, a, rt, cv in zip(df["pred"], df["conf"], df["sim"], df["answer"], df["rtype"],
+                                                   [c if isinstance(c, str) else None for c in df["cov"]])])
 
 
 def main():
@@ -122,7 +125,7 @@ def main():
         "3_+time_sensitive_rule": GateThresholds(block_high_stakes=True, block_time_sensitive=True, screen_answer=False,
                                                  require_topic_match=False),
         "4_+answer_screening": GateThresholds(require_topic_match=False),
-        "5_+topic_match(full)": GateThresholds(),
+        "5_+topic_match(full)": GateThresholds(),  # topic + crop/comparison coverage
     }
     for _th in list(configs.values())[:2]:
         _th.require_topic_match = False

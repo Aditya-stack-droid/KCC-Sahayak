@@ -70,6 +70,15 @@ On synthetic English speech, Whisper small had a ~3% word error rate and intent 
 points. It mishears farming words ("mandi" -> "monday"), so I added a vocabulary hint (see
 `results/voice_eval.json`). Real farmer speech and Hindi speech are untested.
 
+**Q. Why not MuRIL or IndicBERT, as your synopsis said?**
+I compared MiniLM, LaBSE, MuRIL and IndicBERTv2 on the same data and head. None is significantly different from
+the deployed MiniLM (gold 89.3 / 90.0 / 84.7 / 91.3, n=150, McNemar p >= 0.17), so I kept the smaller, faster one.
+This does not show Indic models are worse; the test set is too small to separate them.
+
+**Q. Did you compare with KisanQRS?**
+Only a simplified version of its retrieval idea (equal-weight lexical + semantic), not its LSTM layer. Answer F1 was
+0.459 vs 0.467 for mine, a small gain. The clear benefit is that my screening drops call-log notes from 4.6% to 0.2%.
+
 **Q. Why not an LLM?**
 Generative models can invent pesticide doses. This system only returns text a human advisor actually
 wrote and escalates the dangerous categories. I did not compare against an LLM+RAG baseline (listed as future work).

@@ -1,0 +1,58 @@
+{
+  "n": 2737,
+  "n_novel": 137,
+  "tuned_alpha": 0.4,
+  "systems": {
+    "lexical only (TF-IDF)": {
+      "f1": 0.4475,
+      "f1_ci": [
+        0.4363,
+        0.4586
+      ],
+      "f1_novel": 0.2245,
+      "call_log_note_rate": 0.0552,
+      "dosage_or_chemical_rate": 0.7157
+    },
+    "dense only (MiniLM)": {
+      "f1": 0.4422,
+      "f1_ci": [
+        0.431,
+        0.4529
+      ],
+      "f1_novel": 0.1854,
+      "call_log_note_rate": 0.0468,
+      "dosage_or_chemical_rate": 0.7168
+    },
+    "KisanQRS-style (alpha=0.5, no screening)": {
+      "f1": 0.4588,
+      "f1_ci": [
+        0.4469,
+        0.47
+      ],
+      "f1_novel": 0.2166,
+      "call_log_note_rate": 0.0457,
+      "dosage_or_chemical_rate": 0.7139
+    },
+    "ours: hybrid (alpha=0.4), no screening": {
+      "f1": 0.459,
+      "f1_ci": [
+        0.4477,
+        0.4699
+      ],
+      "f1_novel": 0.2382,
+      "call_log_note_rate": 0.0479,
+      "dosage_or_chemical_rate": 0.7117
+    },
+    "ours: hybrid (alpha=0.4) + note screening (deployed)": {
+      "f1": 0.4673,
+      "f1_ci": [
+        0.4564,
+        0.4785
+      ],
+      "f1_novel": 0.2448,
+      "call_log_note_rate": 0.0018,
+      "dosage_or_chemical_rate": 0.7336
+    }
+  },
+  "caveat": "KisanQRS-style row is a simplified re-implementation of its retrieval idea, not the paper's LSTM system. Scored on rows whose advisor answer is itself informative."
+}

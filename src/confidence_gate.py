@@ -83,6 +83,7 @@ def decide(
     thresholds: GateThresholds = GateThresholds(),
     answer: str | None = None,
     retrieved_type: str | None = None,
+    coverage_problem: str | None = None,
 ) -> GateDecision:
     if thresholds.block_high_stakes and query_type in HIGH_STAKES_TYPES:
         return GateDecision(
@@ -115,6 +116,12 @@ def decide(
             "ESCALATE",
             f"the closest logged question is about '{retrieved_type}', not '{query_type}': likely an off-topic answer",
             "topic_mismatch",
+        )
+    if thresholds.require_topic_match and coverage_problem:
+        return GateDecision(
+            "ESCALATE",
+            f"no solid answer in the corpus: {coverage_problem}",
+            "no_solid_match",
         )
     if thresholds.screen_answer and answer is not None and not is_informative(answer):
         return GateDecision(

@@ -31,6 +31,7 @@ sys.path.insert(0, str(ROOT / "src"))
 sys.path.insert(0, str(ROOT / "backend"))
 
 import db  # noqa: E402
+import gemini  # noqa: E402
 from confidence_gate import GateThresholds  # noqa: E402
 from pipeline import KCCSahayakPipeline  # noqa: E402
 
@@ -82,6 +83,8 @@ def build_stats() -> dict:
         "hybrid_retrieval": _load_json("hybrid_retrieval.json"),
         "voice_eval": _load_json("voice_eval.json"),
         "model_selection": _load_json("model_selection.json"),
+        "encoder_comparison": _load_json("encoder_comparison.json"),
+        "retrieval_baselines": _load_json("retrieval_baselines.json"),
     }
     curve = RESULTS_DIR / "risk_coverage_curve.csv"
     if curve.exists():
@@ -94,6 +97,13 @@ def build_stats() -> dict:
 @asynccontextmanager
 async def lifespan(app: FastAPI):
     db.init()
+    needed = [ROOT / "models" / "intent_embed_lr" / "model.joblib",
+              ROOT / "models" / "retrieval_index" / "kcc_index.faiss",
+              ROOT / "models" / "retrieval_index" / "embeddings.npy"]
+    missing = [str(p.relative_to(ROOT)) for p in needed if not p.exists()]
+    if missing:
+        raise RuntimeError("Model files missing: " + ", ".join(missing)
+                           + ". First-time setup: run `python scripts/setup_models.py` (about 10-20 minutes, once), then start again.")
     print("Loading KCC-Sahayak pipeline ...")
     pipe = KCCSahayakPipeline()
     for r in db.resolved_for_memory():
@@ -199,6 +209,21 @@ def query(req: QueryRequest):
         screen_answer=req.screen_answer,
     )
     return _run_and_log(req.text.strip(), None, th, "text")
+
+
+class GeminiRequest(BaseModel):
+    text: str = Field(min_length=2, max_length=1000)
+
+
+@app.get("/api/gemini/status")
+def gemini_status():
+    return {"configured": gemini.configured(), "model": gemini.model_name()}
+
+
+@app.post("/api/gemini")
+def gemini_suggestion(req: GeminiRequest):
+    """Second opinion only. Never affects the gate decision and is not stored."""
+    return gemini.suggest(req.text)
 
 
 @app.post("/api/transcribe")

@@ -132,3 +132,15 @@ def test_topic_check_can_be_disabled():
 
 def test_single_word_transfer_note_is_not_informative():
     assert not is_informative("transfer")
+
+
+def test_no_solid_match_escalates_with_the_reason():
+    d = decide("Varietal Information", 0.95, 0.9, answer=SAFE_ANSWER, retrieved_type="Varietal Information",
+               coverage_problem="the farmer asked about cucumber, which the closest logged question does not mention")
+    assert d.action == "ESCALATE" and d.code == "no_solid_match" and "cucumber" in d.reason
+
+
+def test_coverage_check_can_be_disabled():
+    th = GateThresholds(require_topic_match=False)
+    d = decide("Varietal Information", 0.95, 0.9, th, answer=SAFE_ANSWER, coverage_problem="x")
+    assert d.action == "AUTO_ANSWER"

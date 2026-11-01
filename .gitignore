@@ -5,11 +5,12 @@ __pycache__/
 .pytest_cache/
 .claude/
 
-# large trained artefacts (rebuild with the scripts, see README)
-models/
+# large trained artefacts: not on GitHub (too big). Everything small that the app needs IS committed;
+# the two big retrieval files are rebuilt by `python scripts/setup_models.py`.
+models/intent_classifier/
+models/retrieval_index/embeddings.npy
+models/retrieval_index/kcc_index.faiss
 *.safetensors
-*.faiss
-*.npy
 *.pt
 
 # local runtime state
@@ -24,3 +25,7 @@ paper/*.toc
 
 # blind-review answer key must not reach annotators
 data/review/answer_key_DO_NOT_SHARE.csv
+results/cache/
+
+# secrets (Gemini API key)
+.env
