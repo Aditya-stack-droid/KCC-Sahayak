@@ -19,7 +19,7 @@ from collections import OrderedDict
 from pathlib import Path
 
 ROOT = Path(__file__).resolve().parents[1]
-DEFAULT_MODEL = "gemini-2.5-flash"
+DEFAULT_MODEL = "gemini-3.5-flash"
 ENDPOINT = "https://generativelanguage.googleapis.com/v1beta/models/{model}:generateContent"
 TIMEOUT_S = 25
 
@@ -75,7 +75,7 @@ def suggest(text: str) -> dict:
     body = {
         "systemInstruction": {"parts": [{"text": SYSTEM_PROMPT}]},
         "contents": [{"role": "user", "parts": [{"text": key_text}]}],
-        "generationConfig": {"temperature": 0.3, "maxOutputTokens": 400},
+        "generationConfig": {"temperature": 0.3, "maxOutputTokens": 2048},
     }
     req = urllib.request.Request(
         ENDPOINT.format(model=model), data=json.dumps(body).encode("utf-8"), method="POST",

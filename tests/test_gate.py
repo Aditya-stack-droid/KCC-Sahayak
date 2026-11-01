@@ -144,3 +144,14 @@ def test_coverage_check_can_be_disabled():
     th = GateThresholds(require_topic_match=False)
     d = decide("Varietal Information", 0.95, 0.9, th, answer=SAFE_ANSWER, coverage_problem="x")
     assert d.action == "AUTO_ANSWER"
+
+
+def test_veterinary_drug_and_schedule_are_flagged():
+    assert answer_risk("suggested to administer moxel-d inj.1/mly daily for three consecutive days.")
+    assert answer_risk("give oxytetracycline bolus twice daily")
+    assert answer_risk("deworm with albendazole 10 mg")
+
+
+def test_plain_animal_advice_is_not_flagged():
+    assert answer_risk("keep the animal in a clean shaded shed and provide fresh water") is None
+    assert answer_risk("vaccination against foot and mouth disease is done twice a year at the veterinary hospital") is None

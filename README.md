@@ -83,8 +83,8 @@ downloaded from a public Hugging Face mirror of the Government of India's Kisan 
 | Intent accuracy, independent gold set (n=150) | **90.0%** (85-95): English 94%, Hinglish 90%, Hindi 86% |
 | Hinglish with random re-spelling | 85.6% |
 | Same model **without** spoken-style training text, gold set | 60.0% |
-| Gate: share auto-answered / accuracy of those / policy violations (held-out) | 24.6% / 95.1% / 2.5% |
-| Confidence thresholds alone (no safety rules) | 92.5% auto-answered, **71.7% policy violations** |
+| Gate: share auto-answered / accuracy of those / policy violations (held-out) | 24.0% / 95.0% / 2.5% |
+| Confidence thresholds alone (no safety rules) | 92.5% auto-answered, **72.3% policy violations** |
 | Answer F1 vs advisor's real answer: dense -> hybrid (novel queries) | 0.451 -> 0.467 (0.189 -> 0.245) |
 
 Honest comparisons:

@@ -24,8 +24,8 @@ advisor console, operations, evaluation pages).
 | Intent accuracy, held-out calls (n=496) | 93.5% (95% CI 92-96) |
 | Intent accuracy, independent gold set (n=150) | 90.0% (85-95); EN 94 / Hinglish 90 / Hindi 86 |
 | Without spoken-style training text (gold) | 60.0% |
-| Gate: auto-answered / accuracy of those / policy violations | 24.6% / 95.1% / 2.5% |
-| Thresholds only, no safety rules | 92.5% auto-answered, 71.7% policy violations |
+| Gate: auto-answered / accuracy of those / policy violations | 24.0% / 95.0% / 2.5% |
+| Thresholds only, no safety rules | 92.5% auto-answered, 72.3% policy violations |
 | Encoders (MiniLM / LaBSE / MuRIL / IndicBERTv2), gold | 89.3 / 90.0 / 84.7 / 91.3, none significantly different |
 | Retrieval answer F1: KisanQRS-style vs ours | 0.459 vs 0.467 (small); call-log notes returned 4.6% -> 0.2% |
 

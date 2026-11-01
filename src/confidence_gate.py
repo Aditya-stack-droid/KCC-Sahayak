@@ -46,6 +46,16 @@ _CHEMICALS = re.compile(
     re.IGNORECASE,
 )
 
+# Veterinary medicine: injections, tablets, boluses, drenches, antibiotics, plus per-day dosing schedules.
+_VET_DRUG = re.compile(
+    r"\b(?:inj(?:ection)?s?\b\.?|tabs?\b\.?|tablets?|bolus|boluses|syrup|drench(?:es)?|antibiotics?|anthelmintics?|"
+    r"dewormers?|deworming|ointment|oxytetracycline|ivermectin|albendazole|fenbendazole|vitamin\s*[abdek]\b)"
+    r"|\b\d+(?:\.\d+)?\s*(?:mg|iu|cc|mly|mls?)\b"
+    r"|\b(?:daily|twice|thrice)\s+for\s+\d+\s+days?\b"
+    r"|\bfor\s+(?:three|two|four|five|\d+)\s+consecutive\s+days?\b",
+    re.IGNORECASE,
+)
+
 
 def answer_risk(answer: str | None) -> str | None:
     """Return a short reason if the answer text carries dosage/chemical
@@ -56,6 +66,8 @@ def answer_risk(answer: str | None) -> str | None:
         return "dosage/quantity instruction"
     if _CHEMICALS.search(answer):
         return "chemical or spray recommendation"
+    if _VET_DRUG.search(answer):
+        return "veterinary drug or treatment schedule"
     return None
 
 
