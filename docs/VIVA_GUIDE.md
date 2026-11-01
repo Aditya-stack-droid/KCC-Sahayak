@@ -77,7 +77,7 @@ This does not show Indic models are worse; the test set is too small to separate
 
 **Q. Did you compare with KisanQRS?**
 Only a simplified version of its retrieval idea (equal-weight lexical + semantic), not its LSTM layer. Answer F1 was
-0.459 vs 0.467 for mine, a small gain. The clear benefit is that my screening drops call-log notes from 4.6% to 0.2%.
+0.459 vs 0.468 for mine, a small gain. The clear benefit is that my screening drops call-log notes from 4.6% to 0.0%.
 
 **Q. Why not an LLM?**
 Generative models can invent pesticide doses. This system only returns text a human advisor actually

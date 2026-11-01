@@ -85,11 +85,11 @@ downloaded from a public Hugging Face mirror of the Government of India's Kisan 
 | Same model **without** spoken-style training text, gold set | 60.0% |
 | Gate: share auto-answered / accuracy of those / policy violations (held-out) | 24.0% / 95.0% / 2.5% |
 | Confidence thresholds alone (no safety rules) | 92.5% auto-answered, **72.3% policy violations** |
-| Answer F1 vs advisor's real answer: dense -> hybrid (novel queries) | 0.451 -> 0.467 (0.189 -> 0.245) |
+| Answer F1 vs advisor's real answer: dense -> hybrid (novel queries) | 0.452 -> 0.468 (0.189 -> 0.245) |
 
 Honest comparisons:
 - Encoder comparison (scripts/21, same data and head; silver / gold): MiniLM (deployed) 93.5 / 89.3, LaBSE 93.1 / 90.0, MuRIL 91.9 / 84.7, IndicBERTv2 93.3 / 91.3. None differs significantly from the deployed encoder (McNemar p >= 0.17, gold n=150).
-- Retrieval vs a KisanQRS-style baseline (simplified re-implementation of its retrieval idea, not its LSTM): answer F1 0.459 vs 0.467, a small gain; the clear benefit of our screening is call-log notes returned falling from 4.6% to 0.2%.
+- Retrieval vs a KisanQRS-style baseline (simplified re-implementation of its retrieval idea, not its LSTM): answer F1 0.459 vs 0.468, a small gain; the clear benefit of our screening is call-log notes returned falling from 4.6% to 0.0%.
 - A plain **character n-gram SVM is statistically indistinguishable** from the deployed model
   (McNemar p = 0.40 held-out, 0.48 gold). The deployed model is significantly better than word
   TF-IDF on gold (p = 0.015) and than embeddings alone (p < 0.001).

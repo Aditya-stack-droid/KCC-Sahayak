@@ -11,7 +11,7 @@
       ],
       "f1_novel": 0.2245,
       "call_log_note_rate": 0.0552,
-      "dosage_or_chemical_rate": 0.7157
+      "dosage_or_chemical_rate": 0.7252
     },
     "dense only (MiniLM)": {
       "f1": 0.4422,
@@ -21,7 +21,7 @@
       ],
       "f1_novel": 0.1854,
       "call_log_note_rate": 0.0468,
-      "dosage_or_chemical_rate": 0.7168
+      "dosage_or_chemical_rate": 0.7242
     },
     "KisanQRS-style (alpha=0.5, no screening)": {
       "f1": 0.4588,
@@ -31,7 +31,7 @@
       ],
       "f1_novel": 0.2166,
       "call_log_note_rate": 0.0457,
-      "dosage_or_chemical_rate": 0.7139
+      "dosage_or_chemical_rate": 0.7234
     },
     "ours: hybrid (alpha=0.4), no screening": {
       "f1": 0.459,
@@ -41,17 +41,17 @@
       ],
       "f1_novel": 0.2382,
       "call_log_note_rate": 0.0479,
-      "dosage_or_chemical_rate": 0.7117
+      "dosage_or_chemical_rate": 0.7216
     },
     "ours: hybrid (alpha=0.4) + note screening (deployed)": {
-      "f1": 0.4673,
+      "f1": 0.4677,
       "f1_ci": [
-        0.4564,
-        0.4785
+        0.4568,
+        0.4791
       ],
-      "f1_novel": 0.2448,
-      "call_log_note_rate": 0.0018,
-      "dosage_or_chemical_rate": 0.7336
+      "f1_novel": 0.2452,
+      "call_log_note_rate": 0.0,
+      "dosage_or_chemical_rate": 0.7417
     }
   },
   "caveat": "KisanQRS-style row is a simplified re-implementation of its retrieval idea, not the paper's LSTM system. Scored on rows whose advisor answer is itself informative."

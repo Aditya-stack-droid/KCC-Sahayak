@@ -32,7 +32,9 @@ sys.path.insert(0, str(ROOT / "backend"))
 
 import db  # noqa: E402
 import gemini  # noqa: E402
-from confidence_gate import GateThresholds  # noqa: E402
+from answer_quality import is_informative  # noqa: E402
+from confidence_gate import GateThresholds, answer_risk  # noqa: E402
+from query_match import coverage_problem  # noqa: E402
 from pipeline import KCCSahayakPipeline  # noqa: E402
 
 FRONTEND_DIR = ROOT / "frontend"
@@ -140,6 +142,9 @@ def _serialize(result: dict, source: str, latency_ms: float) -> dict:
                 "answer": r["answer"],
                 "source": r.get("source", "corpus"),
                 "topic": r.get("type"),
+                # fit to show a farmer as a reference: real advice, no dose/chemical text, and it addresses the question
+                "reference_ok": bool(r["answer"]) and is_informative(r["answer"]) and answer_risk(r["answer"]) is None
+                                and coverage_problem(result["input_text"], r.get("matched_question", ""), r["answer"]) is None,
             }
             for r in result["retrieved_top3"]
         ],

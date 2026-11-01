@@ -27,7 +27,7 @@ advisor console, operations, evaluation pages).
 | Gate: auto-answered / accuracy of those / policy violations | 24.0% / 95.0% / 2.5% |
 | Thresholds only, no safety rules | 92.5% auto-answered, 72.3% policy violations |
 | Encoders (MiniLM / LaBSE / MuRIL / IndicBERTv2), gold | 89.3 / 90.0 / 84.7 / 91.3, none significantly different |
-| Retrieval answer F1: KisanQRS-style vs ours | 0.459 vs 0.467 (small); call-log notes returned 4.6% -> 0.2% |
+| Retrieval answer F1: KisanQRS-style vs ours | 0.459 vs 0.468 (small); call-log notes returned 4.6% -> 0.0% |
 
 **What to say about overall accuracy:** about 90% intent accuracy on an independent
 three-language test set (93.5% on held-out calls); "whole-system accuracy" is not a single

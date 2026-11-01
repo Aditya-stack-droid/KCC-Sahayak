@@ -162,9 +162,10 @@
 
   // Second opinion from Gemini (optional; needs GEMINI_API_KEY on the server). Display only: it never changes the decision.
   function renderCompare(r, auto) {
-    const box = $("compareBox"), top = (r.retrieved_top3 || []).find((c) => c.answer);
+    const box = $("compareBox"), top = (r.retrieved_top3 || []).find((c) => c.reference_ok);
     box.hidden = false;
-    $("cmpCorpus").hidden = auto || !top;     // when auto-answered, the corpus answer is already shown above
+    $("cmpCorpus").hidden = auto;     // when auto-answered, the corpus answer is already shown above
+    if (!auto && !top) { $("cmpCorpusText").textContent = "No solid answer in the KCC corpus for this question."; $("cmpCorpusQ").textContent = "The closest past answers were off-topic, contained a dose or chemical instruction, or were only call-log notes."; }
     if (!auto && top) { $("cmpCorpusText").textContent = top.answer; $("cmpCorpusQ").textContent = `Matched past question: “${top.matched_question}” (${pct(top.similarity, 0)} match)`; }
     const out = $("cmpGeminiText"), id = r.query_id;
     out.className = ""; out.textContent = "Asking Gemini…";

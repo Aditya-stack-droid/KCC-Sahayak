@@ -120,3 +120,9 @@ def test_empty_audio_upload_is_rejected(client):
 def test_pipeline_not_ready_returns_503(client, monkeypatch):
     monkeypatch.setitem(app_module.state, "pipeline", None)
     assert client.post("/api/query", json={"text": "anything at all"}).status_code == 503
+
+
+def test_reference_answers_with_chemical_text_are_marked_not_ok(client):
+    r = client.post("/api/query", json={"text": "pest on my wheat"}).json()
+    assert r["retrieved_top3"][0]["answer"] == "spray something"
+    assert r["retrieved_top3"][0]["reference_ok"] is False

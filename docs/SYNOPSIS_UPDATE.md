@@ -36,7 +36,7 @@ ablation. The full stack uses open-source models and can be re-run on any state'
 - Safe gate: auto-answers **24.0%** of queries, **95.0%** correct on those, **2.5%** policy violations (held-out)
 - Without the safety rules: answers **92.5%** but **72.3%** of those break policy
 - Encoder comparison, same data and head for every encoder (silver / gold accuracy, embedding + char n-grams): MiniLM (deployed) 93.5 / 89.3; LaBSE 93.1 / 90.0; MuRIL 91.9 / 84.7; IndicBERTv2 93.3 / 91.3. No encoder is significantly different from the deployed one (McNemar p >= 0.17, gold n=150), so the choice is not evidence that MuRIL/IndicBERT are worse or better here. End-to-end fine-tuning was **not completed**: it crashed out of memory on this 8 GB CPU laptop, so only the frozen-encoder comparison is reported.
-- Retrieval vs KisanQRS-style baseline (answer F1 vs advisor answer, n=2,737): KisanQRS-style 0.459 vs ours 0.467 (+0.008, small); the clear gain is that call-log notes returned fall from 4.6% to 0.2%. The KisanQRS-style row is a simplified re-implementation of its retrieval idea, not their LSTM system.
+- Retrieval vs KisanQRS-style baseline (answer F1 vs advisor answer, n=2,737): KisanQRS-style 0.459 vs ours 0.468 (+0.009, small); the clear gain is that call-log notes returned fall from 4.6% to 0.0%. The KisanQRS-style row is a simplified re-implementation of its retrieval idea, not their LSTM system.
 
 ## Fixes to the synopsis and slides
 - USNs: Aditya Hubly and Ankur P B have different USNs in the .docx and the .pptx. Confirm and correct.
