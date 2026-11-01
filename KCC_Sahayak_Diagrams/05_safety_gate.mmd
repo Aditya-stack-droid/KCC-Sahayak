@@ -1,0 +1,16 @@
+flowchart TD
+    S[Pipeline result] --> C1{Predicted type in HIGH_STAKES?}
+    C1 -->|yes| E1[ESCALATE: high_stakes]
+    C1 -->|no| C2{Predicted type in TIME_SENSITIVE?}
+    C2 -->|yes| E2[ESCALATE: time_sensitive]
+    C2 -->|no| C3{Intent confidence < 0.70?}
+    C3 -->|yes| E3[ESCALATE: low_intent]
+    C3 -->|no| C4{Dense similarity < 0.55?}
+    C4 -->|yes| E4[ESCALATE: low_retrieval]
+    C4 -->|no| C5{Retrieved topic != query type?}
+    C5 -->|yes| E5[ESCALATE: topic_mismatch]
+    C5 -->|no| C6{Retrieved answer is a call-log note?}
+    C6 -->|yes| E6[ESCALATE: uninformative_answer]
+    C6 -->|no| C7{Answer has dosage or chemical text?}
+    C7 -->|yes| E7[ESCALATE: risky_answer]
+    C7 -->|no| A[AUTO_ANSWER<br/>return retrieved text + confidence + similarity]

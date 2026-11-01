@@ -1,0 +1,56 @@
+flowchart TB
+    subgraph P["Presentation layer (static HTML/CSS/JS)"]
+        F[Farmer Live Demo]
+        A[Advisor Console]
+        O[Operations Dashboard]
+        E[Evaluation Dashboard]
+    end
+    subgraph API["API layer — FastAPI (backend/app.py)"]
+        Q1[POST /api/query]
+        Q2[POST /api/transcribe]
+        Q3[GET /api/queue<br/>POST /api/queue/id/resolve]
+        Q4[POST /api/queries/id/feedback]
+        Q5[GET /api/ops/summary<br/>GET /api/stats]
+    end
+    subgraph NLP["NLP and decision layer (src/pipeline.py)"]
+        L[Language / register detection]
+        W[Whisper ASR — voice only]
+        M[Multilingual encoder<br/>MiniLM-L12-v2, 384-d]
+        I[Intent head<br/>embedding + char 2-5 TF-IDF<br/>logistic regression + temperature]
+        N[Entity tagger<br/>crop / pest gazetteer]
+        R[Hybrid retriever<br/>FAISS top-200 union TF-IDF top-200]
+        G[Safety gate<br/>7 ordered checks]
+        AA[AUTO_ANSWER]
+        ES[ESCALATE + reason code]
+    end
+    subgraph DATA["Data and artefact layer"]
+        C[(Raw KCC corpus<br/>139,542 Q/A)]
+        S[(Processed splits<br/>train 111,100 / val 13,887 / test 13,888)]
+        X[(FAISS + TF-IDF indexes<br/>124,987 vectors)]
+        DB[(SQLite app.db<br/>audit log + advisor queue)]
+        RS[(results/*.json)]
+    end
+    F --> Q1
+    F --> Q2
+    A --> Q3
+    A --> Q4
+    O --> Q5
+    E --> Q5
+    Q1 --> L
+    Q2 --> W
+    W --> L
+    L --> M
+    M --> I
+    M --> R
+    L --> N
+    I --> G
+    R --> G
+    G --> AA
+    G --> ES
+    ES --> DB
+    AA --> DB
+    DB --> O
+    C --> S
+    S --> X
+    X --> R
+    RS --> E

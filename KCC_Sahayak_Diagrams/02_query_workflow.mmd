@@ -1,0 +1,11 @@
+flowchart TD
+    A[Farmer input: voice file or typed text] --> B[Register detection hi / hinglish / en<br/>optional Whisper transcription and normalisation]
+    B --> C[Sentence embedding MiniLM 384-d, normalised]
+    C --> D[Intent classification calibrated LR<br/>+ crop / pest entity tagging]
+    D --> E[Hybrid retrieval over 124,987 logged Q/A pairs<br/>FAISS dense union TF-IDF; informative answers only; advisor memory]
+    E --> G{Safety gate}
+    G -->|fails any check| H[ESCALATE<br/>reason code shown to farmer<br/>query enters pending advisor queue]
+    G -->|all checks pass| I[AUTO_ANSWER<br/>return closest logged advisor answer<br/>log in SQLite, feedback +1 / -1]
+    H --> J[Advisor Console<br/>human FTA writes an answer]
+    J --> K[Advisor answer returned to farmer<br/>and appended to retrieval memory]
+    K -.-> E

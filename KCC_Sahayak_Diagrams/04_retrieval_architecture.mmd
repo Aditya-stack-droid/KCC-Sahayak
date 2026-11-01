@@ -1,0 +1,10 @@
+flowchart TB
+    Q[Query text + 384-d embedding] --> D[FAISS IndexFlatIP<br/>124,987 vectors, top-200]
+    Q --> T[TF-IDF matrix<br/>word 1-2 grams, top-200]
+    D --> U[Candidate union up to 400 ids]
+    T --> U
+    U --> M[Informative-answer mask<br/>removes call-log notes]
+    M --> F[Fused score<br/>alpha * dense + (1-alpha) * tfidf<br/>alpha = 0.40]
+    F --> R[Topic-aware re-ranking<br/>same-topic candidates first]
+    R --> K[Top-3 candidates<br/>dense similarity kept for the gate]
+    AM[Advisor memory<br/>human answers since deployment] -.-> U

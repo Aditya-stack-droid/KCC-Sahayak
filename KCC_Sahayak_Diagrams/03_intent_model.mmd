@@ -1,0 +1,9 @@
+flowchart LR
+    Q[Input query<br/>English / Hinglish / Hindi] --> E[Frozen MiniLM multilingual encoder<br/>384-d, L2-normalised]
+    E --> D[Dense block 384 features x weight]
+    Q --> T[Char n-gram TF-IDF<br/>char_wb 2-5 grams, min_df 2, sublinear]
+    D --> H[Horizontal concatenation [emb || tfidf]]
+    T --> H
+    H --> LR[Multinomial logistic regression<br/>C = 10, 10 classes]
+    LR --> TS[Temperature scaling p = softmax z / T, T = 0.75]
+    TS --> O[Calibrated probabilities<br/>top-1 label, confidence, top-3]

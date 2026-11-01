@@ -1,0 +1,27 @@
+flowchart TB
+    subgraph REAL["Real KCC log text (green)"]
+        G1[data.gov.in / IndiaAI KCC transcript catalogue<br/>Open Government Licence - India]
+        G2[Kaggle mirror by D. Koushik<br/>Farmers Call Query KCC Data<br/>2 columns: questions, answers]
+        G3[data/raw/kcc_mapping_full.csv<br/>139,542 rows, no state/date/language/audio]
+        G1 --> G2 --> G3
+        G3 --> C[Cleaning + weak labels<br/>138,875 rows, 80/10/10 split]
+        C --> S[Stratified sample<br/>3,496 queries: 3,000 train / 496 test]
+    end
+    subgraph SYN["Synthetic / LLM-generated (amber)"]
+        L[LLM-assisted meaning labels<br/>Claude, written guidelines, no human verification]
+        SIL[Silver test set<br/>496 meaning-labelled corpus queries]
+        AUG[Spoken-style augmentation<br/>400 train queries x 3 registers = 1,200 paraphrases]
+        GOLD[Independent gold set<br/>150 LLM-written queries: 50 EN / 50 Hinglish / 50 HI]
+        TTS[Synthetic speech<br/>Windows SAPI TTS, 50 English gold queries]
+    end
+    S --> L --> SIL
+    S --> AUG
+    GOLD --> TTS
+    SIL --> MOD[Models and indexes<br/>MiniLM + LR head, FAISS, TF-IDF]
+    AUG --> MOD
+    MOD --> RES[results/*.json]
+    TTS --> RES
+    subgraph HUMAN["Human check (red) — not performed"]
+        HR[review_sheet.csv<br/>250 rows, 0 labels]
+    end
+    SIL -. intended verification .-> HR
