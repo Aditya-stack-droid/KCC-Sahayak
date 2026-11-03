@@ -1,0 +1,193 @@
+{
+  "protocol": {
+    "dataset": "experiments/conflict_detection/data/conflict_pairs.csv",
+    "synthetic": true,
+    "provenance": "hand-authored for this evaluation; not real advisor data; not expert-verified",
+    "matching": "pair-level any-conflict; per-kind binary over all pairs",
+    "dose_gap_tolerance": 0.5,
+    "max_answers_per_scan": 5,
+    "bootstrap": {
+      "n_boot": 2000,
+      "seed": 0,
+      "percentile": 95
+    },
+    "no_model_training": true
+  },
+  "n_pairs": 77,
+  "n_gold_conflict": 52,
+  "n_gold_no_conflict": 25,
+  "binary": {
+    "tp": 47,
+    "fp": 0,
+    "fn": 5,
+    "precision": 1.0,
+    "recall": 0.9038,
+    "f1": 0.9495,
+    "tn": 25,
+    "n": 77,
+    "accuracy": 0.9351,
+    "f1_95ci": {
+      "low": 0.8989,
+      "high": 0.9901,
+      "mean": 0.9504,
+      "n_boot": 2000,
+      "seed": 0
+    }
+  },
+  "subsets": {
+    "challenge": {
+      "tp": 4,
+      "fp": 0,
+      "fn": 5,
+      "precision": 1.0,
+      "recall": 0.4444,
+      "f1": 0.6154,
+      "tn": 1,
+      "n": 10,
+      "accuracy": 0.5,
+      "f1_95ci": {
+        "low": 0.2222,
+        "high": 0.875,
+        "mean": 0.5964,
+        "n_boot": 2000,
+        "seed": 0
+      }
+    },
+    "core": {
+      "tp": 43,
+      "fp": 0,
+      "fn": 0,
+      "precision": 1.0,
+      "recall": 1.0,
+      "f1": 1.0,
+      "tn": 24,
+      "n": 67,
+      "accuracy": 1.0,
+      "f1_95ci": {
+        "low": 1.0,
+        "high": 1.0,
+        "mean": 1.0,
+        "n_boot": 2000,
+        "seed": 0
+      }
+    }
+  },
+  "per_kind": {
+    "dosage": {
+      "tp": 19,
+      "fp": 0,
+      "fn": 2,
+      "precision": 1.0,
+      "recall": 0.9048,
+      "f1": 0.95,
+      "support": 21
+    },
+    "product": {
+      "tp": 12,
+      "fp": 0,
+      "fn": 1,
+      "precision": 1.0,
+      "recall": 0.9231,
+      "f1": 0.96,
+      "support": 13
+    },
+    "basis": {
+      "tp": 5,
+      "fp": 0,
+      "fn": 1,
+      "precision": 1.0,
+      "recall": 0.8333,
+      "f1": 0.9091,
+      "support": 6
+    },
+    "dimension": {
+      "tp": 4,
+      "fp": 0,
+      "fn": 0,
+      "precision": 1.0,
+      "recall": 1.0,
+      "f1": 1.0,
+      "support": 4
+    },
+    "interval": {
+      "tp": 3,
+      "fp": 0,
+      "fn": 0,
+      "precision": 1.0,
+      "recall": 1.0,
+      "f1": 1.0,
+      "support": 3
+    },
+    "polarity": {
+      "tp": 4,
+      "fp": 0,
+      "fn": 1,
+      "precision": 1.0,
+      "recall": 0.8,
+      "f1": 0.8889,
+      "support": 5
+    }
+  },
+  "severity_counts": {
+    "high": 38,
+    "medium": 9
+  },
+  "errors": [
+    {
+      "pair_id": "h01",
+      "gold_conflict": true,
+      "predicted_conflict": false,
+      "gold_kinds": [
+        "product"
+      ],
+      "predicted_kinds": [],
+      "explanations": []
+    },
+    {
+      "pair_id": "h02",
+      "gold_conflict": true,
+      "predicted_conflict": false,
+      "gold_kinds": [
+        "dosage"
+      ],
+      "predicted_kinds": [],
+      "explanations": []
+    },
+    {
+      "pair_id": "h03",
+      "gold_conflict": true,
+      "predicted_conflict": false,
+      "gold_kinds": [
+        "dosage"
+      ],
+      "predicted_kinds": [],
+      "explanations": []
+    },
+    {
+      "pair_id": "h04",
+      "gold_conflict": true,
+      "predicted_conflict": false,
+      "gold_kinds": [
+        "polarity"
+      ],
+      "predicted_kinds": [],
+      "explanations": []
+    },
+    {
+      "pair_id": "h05",
+      "gold_conflict": true,
+      "predicted_conflict": false,
+      "gold_kinds": [
+        "basis"
+      ],
+      "predicted_kinds": [],
+      "explanations": []
+    }
+  ],
+  "limitations": [
+    "The pair set is small and hand-authored by the same person who wrote the rules.",
+    "Per-kind support for dimension/basis is too small for stable estimates; wide uncertainty is expected.",
+    "A detected conflict means the rules fired; it is not proof that either answer is agronomically wrong.",
+    "Negation is clause-local and heuristic; complex conditional advice is out of scope."
+  ]
+}

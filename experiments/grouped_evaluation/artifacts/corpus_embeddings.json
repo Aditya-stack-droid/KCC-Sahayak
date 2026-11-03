@@ -1,0 +1,10 @@
+{
+  "model": "paraphrase-multilingual-MiniLM-L12-v2",
+  "n": 138875,
+  "dim": 384,
+  "reused_from_shipped_index": 124987,
+  "encoded_rows": 13888,
+  "encode_seconds": 24.4,
+  "normalised": true,
+  "source": "data/processed/full_labeled.csv + models/retrieval_index/embeddings.npy"
+}

@@ -1,0 +1,7 @@
+{
+  "key": "annotated_texts",
+  "n": 3496,
+  "sha1": "1123d84e1a1304fe1768a9c089e02fd7989f5ef1",
+  "model": "paraphrase-multilingual-MiniLM-L12-v2",
+  "dim": 384
+}

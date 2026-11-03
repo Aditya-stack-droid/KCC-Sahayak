@@ -1,0 +1,6 @@
+id,language,gold_types,pred_types,false_positive_spans,false_negative_spans,redacted_text,notes
+en-name-initials,en,PERSON,,,PERSON@11-23,My name is [PERSON].,hard: initials are not supported by the name heuristics
+en-honorific-lowercase,en,PERSON,,,PERSON@4-9,mr. [PERSON] advised a neem spray.,hard: honorific matching is case-sensitive
+en-phone-dots,en,PHONE,,,PHONE@5-16,Call [PHONE] now.,hard: dot-grouped mobile is not supported
+en-phone-trunk-zero,en,PHONE,,,PHONE@5-16,Call [PHONE] now.,hard: Indian trunk prefix 0 is not supported
+hin-name-lowercase-surname,hinglish,PERSON,PERSON,PERSON@10-15,PERSON@10-22,mera naam [PERSON] hai,hard: lowercase surname is only partially captured

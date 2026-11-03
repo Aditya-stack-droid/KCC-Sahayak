@@ -1,0 +1,1750 @@
+{
+  "protocol": {
+    "grouping": "exact normalised question + MiniLM cosine >= 0.95, transitive union-find",
+    "split": "StratifiedGroupKFold on meaning labels; 7 folds; fold 0 test; 5 seeds",
+    "model": "MiniLM embedding + char_wb 2-5 TF-IDF -> LogisticRegression C=10, emb_weight=1.0",
+    "buckets": "max cosine to grouped training side: <0.80 novel, 0.80-0.90 similar, >=0.90 near-duplicate",
+    "seeds": [
+      0,
+      1,
+      2,
+      3,
+      4
+    ],
+    "primary_estimate": "refit model on grouped train (with augmentation restricted to train groups)"
+  },
+  "annotation_counts": {
+    "annotated_total": 3496,
+    "paraphrases_total": 1200,
+    "gold_total": 150
+  },
+  "per_seed": {
+    "0": {
+      "train": 2996,
+      "test": 500,
+      "train_paraphrases_included": 1038,
+      "test_paraphrases_excluded": 162,
+      "max_similarity_to_training": {
+        "ge_0.95": 0.0,
+        "ge_0.90": 0.156,
+        "lt_0.80": 0.372
+      },
+      "models": {
+        "with_augmentation": {
+          "n": 500,
+          "accuracy": 0.942,
+          "accuracy_ci95": [
+            0.922,
+            0.962
+          ],
+          "macro_precision": 0.9422,
+          "macro_recall": 0.9189,
+          "macro_f1": 0.9286,
+          "weighted_precision": 0.9424,
+          "weighted_recall": 0.942,
+          "weighted_f1": 0.9416,
+          "per_class": {
+            "Animal Husbandry": {
+              "precision": 0.9839,
+              "recall": 0.9683,
+              "f1": 0.976,
+              "support": 63
+            },
+            "Cultural Practices": {
+              "precision": 0.8987,
+              "recall": 0.9221,
+              "f1": 0.9103,
+              "support": 77
+            },
+            "Fisheries": {
+              "precision": 0.9722,
+              "recall": 0.8974,
+              "f1": 0.9333,
+              "support": 39
+            },
+            "Government Scheme": {
+              "precision": 0.9574,
+              "recall": 0.9375,
+              "f1": 0.9474,
+              "support": 48
+            },
+            "Market Price": {
+              "precision": 1.0,
+              "recall": 0.7778,
+              "f1": 0.875,
+              "support": 9
+            },
+            "Nutrient Management": {
+              "precision": 0.9692,
+              "recall": 0.9692,
+              "f1": 0.9692,
+              "support": 65
+            },
+            "Other": {
+              "precision": 0.8333,
+              "recall": 0.7692,
+              "f1": 0.8,
+              "support": 26
+            },
+            "Plant Protection": {
+              "precision": 0.9483,
+              "recall": 0.9735,
+              "f1": 0.9607,
+              "support": 113
+            },
+            "Varietal Information": {
+              "precision": 0.9024,
+              "recall": 0.9737,
+              "f1": 0.9367,
+              "support": 38
+            },
+            "Weather": {
+              "precision": 0.9565,
+              "recall": 1.0,
+              "f1": 0.9778,
+              "support": 22
+            }
+          },
+          "n_train_annotated": 2996,
+          "n_train_paraphrases": 1038,
+          "n_test": 500
+        },
+        "no_augmentation": {
+          "n": 500,
+          "accuracy": 0.944,
+          "accuracy_ci95": [
+            0.924,
+            0.964
+          ],
+          "macro_precision": 0.9496,
+          "macro_recall": 0.9184,
+          "macro_f1": 0.9308,
+          "weighted_precision": 0.9452,
+          "weighted_recall": 0.944,
+          "weighted_f1": 0.9433,
+          "per_class": {
+            "Animal Husbandry": {
+              "precision": 0.9841,
+              "recall": 0.9841,
+              "f1": 0.9841,
+              "support": 63
+            },
+            "Cultural Practices": {
+              "precision": 0.8889,
+              "recall": 0.9351,
+              "f1": 0.9114,
+              "support": 77
+            },
+            "Fisheries": {
+              "precision": 0.9459,
+              "recall": 0.8974,
+              "f1": 0.9211,
+              "support": 39
+            },
+            "Government Scheme": {
+              "precision": 0.9787,
+              "recall": 0.9583,
+              "f1": 0.9684,
+              "support": 48
+            },
+            "Market Price": {
+              "precision": 1.0,
+              "recall": 0.7778,
+              "f1": 0.875,
+              "support": 9
+            },
+            "Nutrient Management": {
+              "precision": 0.9538,
+              "recall": 0.9538,
+              "f1": 0.9538,
+              "support": 65
+            },
+            "Other": {
+              "precision": 0.95,
+              "recall": 0.7308,
+              "f1": 0.8261,
+              "support": 26
+            },
+            "Plant Protection": {
+              "precision": 0.9565,
+              "recall": 0.9735,
+              "f1": 0.9649,
+              "support": 113
+            },
+            "Varietal Information": {
+              "precision": 0.881,
+              "recall": 0.9737,
+              "f1": 0.925,
+              "support": 38
+            },
+            "Weather": {
+              "precision": 0.9565,
+              "recall": 1.0,
+              "f1": 0.9778,
+              "support": 22
+            }
+          },
+          "n_train_annotated": 2996,
+          "n_train_paraphrases": 0,
+          "n_test": 500
+        }
+      },
+      "gold_with_augmentation": {
+        "n": 150,
+        "accuracy": 0.8933,
+        "accuracy_ci95": [
+          0.8467,
+          0.94
+        ],
+        "macro_precision": 0.9089,
+        "macro_recall": 0.8933,
+        "macro_f1": 0.8936,
+        "weighted_precision": 0.9089,
+        "weighted_recall": 0.8933,
+        "weighted_f1": 0.8936,
+        "per_class": {
+          "Animal Husbandry": {
+            "precision": 1.0,
+            "recall": 0.9333,
+            "f1": 0.9655,
+            "support": 15
+          },
+          "Cultural Practices": {
+            "precision": 0.7143,
+            "recall": 1.0,
+            "f1": 0.8333,
+            "support": 15
+          },
+          "Fisheries": {
+            "precision": 0.9333,
+            "recall": 0.9333,
+            "f1": 0.9333,
+            "support": 15
+          },
+          "Government Scheme": {
+            "precision": 1.0,
+            "recall": 0.9333,
+            "f1": 0.9655,
+            "support": 15
+          },
+          "Market Price": {
+            "precision": 0.875,
+            "recall": 0.9333,
+            "f1": 0.9032,
+            "support": 15
+          },
+          "Nutrient Management": {
+            "precision": 0.8,
+            "recall": 0.8,
+            "f1": 0.8,
+            "support": 15
+          },
+          "Other": {
+            "precision": 1.0,
+            "recall": 0.7333,
+            "f1": 0.8462,
+            "support": 15
+          },
+          "Plant Protection": {
+            "precision": 0.8333,
+            "recall": 1.0,
+            "f1": 0.9091,
+            "support": 15
+          },
+          "Varietal Information": {
+            "precision": 0.9333,
+            "recall": 0.9333,
+            "f1": 0.9333,
+            "support": 15
+          },
+          "Weather": {
+            "precision": 1.0,
+            "recall": 0.7333,
+            "f1": 0.8462,
+            "support": 15
+          }
+        },
+        "by_style": {
+          "en": 0.92,
+          "hinglish": 0.9,
+          "hi": 0.86
+        }
+      },
+      "deployed_artifact_on_grouped_test": {
+        "n": 500,
+        "accuracy": 0.994,
+        "accuracy_ci95": [
+          0.986,
+          1.0
+        ],
+        "macro_precision": 0.9941,
+        "macro_recall": 0.9927,
+        "macro_f1": 0.9933,
+        "weighted_precision": 0.9941,
+        "weighted_recall": 0.994,
+        "weighted_f1": 0.994,
+        "per_class": {
+          "Animal Husbandry": {
+            "precision": 1.0,
+            "recall": 1.0,
+            "f1": 1.0,
+            "support": 63
+          },
+          "Cultural Practices": {
+            "precision": 0.9872,
+            "recall": 1.0,
+            "f1": 0.9935,
+            "support": 77
+          },
+          "Fisheries": {
+            "precision": 1.0,
+            "recall": 0.9744,
+            "f1": 0.987,
+            "support": 39
+          },
+          "Government Scheme": {
+            "precision": 1.0,
+            "recall": 0.9792,
+            "f1": 0.9895,
+            "support": 48
+          },
+          "Market Price": {
+            "precision": 1.0,
+            "recall": 1.0,
+            "f1": 1.0,
+            "support": 9
+          },
+          "Nutrient Management": {
+            "precision": 1.0,
+            "recall": 1.0,
+            "f1": 1.0,
+            "support": 65
+          },
+          "Other": {
+            "precision": 0.963,
+            "recall": 1.0,
+            "f1": 0.9811,
+            "support": 26
+          },
+          "Plant Protection": {
+            "precision": 0.9912,
+            "recall": 1.0,
+            "f1": 0.9956,
+            "support": 113
+          },
+          "Varietal Information": {
+            "precision": 1.0,
+            "recall": 0.9737,
+            "f1": 0.9867,
+            "support": 38
+          },
+          "Weather": {
+            "precision": 1.0,
+            "recall": 1.0,
+            "f1": 1.0,
+            "support": 22
+          }
+        },
+        "share_test_seen_in_deployed_training_pool": 0.85,
+        "note": "The deployed head was trained on the original 3,000-row pool; rows counted above were seen during its training and make its grouped-test score an upper bound. The refit rows are the primary leakage-resistant estimate."
+      }
+    },
+    "1": {
+      "train": 2995,
+      "test": 501,
+      "train_paraphrases_included": 1065,
+      "test_paraphrases_excluded": 135,
+      "max_similarity_to_training": {
+        "ge_0.95": 0.0,
+        "ge_0.90": 0.1437,
+        "lt_0.80": 0.3872
+      },
+      "models": {
+        "with_augmentation": {
+          "n": 501,
+          "accuracy": 0.9321,
+          "accuracy_ci95": [
+            0.9102,
+            0.9541
+          ],
+          "macro_precision": 0.9333,
+          "macro_recall": 0.909,
+          "macro_f1": 0.9166,
+          "weighted_precision": 0.9324,
+          "weighted_recall": 0.9321,
+          "weighted_f1": 0.9298,
+          "per_class": {
+            "Animal Husbandry": {
+              "precision": 0.9254,
+              "recall": 0.9841,
+              "f1": 0.9538,
+              "support": 63
+            },
+            "Cultural Practices": {
+              "precision": 0.9103,
+              "recall": 0.9103,
+              "f1": 0.9103,
+              "support": 78
+            },
+            "Fisheries": {
+              "precision": 0.9024,
+              "recall": 0.9487,
+              "f1": 0.925,
+              "support": 39
+            },
+            "Government Scheme": {
+              "precision": 0.9583,
+              "recall": 0.9583,
+              "f1": 0.9583,
+              "support": 48
+            },
+            "Market Price": {
+              "precision": 0.8889,
+              "recall": 0.8889,
+              "f1": 0.8889,
+              "support": 9
+            },
+            "Nutrient Management": {
+              "precision": 0.9265,
+              "recall": 0.9545,
+              "f1": 0.9403,
+              "support": 66
+            },
+            "Other": {
+              "precision": 0.9375,
+              "recall": 0.5769,
+              "f1": 0.7143,
+              "support": 26
+            },
+            "Plant Protection": {
+              "precision": 0.9397,
+              "recall": 0.9732,
+              "f1": 0.9561,
+              "support": 112
+            },
+            "Varietal Information": {
+              "precision": 0.9444,
+              "recall": 0.8947,
+              "f1": 0.9189,
+              "support": 38
+            },
+            "Weather": {
+              "precision": 1.0,
+              "recall": 1.0,
+              "f1": 1.0,
+              "support": 22
+            }
+          },
+          "n_train_annotated": 2995,
+          "n_train_paraphrases": 1065,
+          "n_test": 501
+        },
+        "no_augmentation": {
+          "n": 501,
+          "accuracy": 0.9321,
+          "accuracy_ci95": [
+            0.9102,
+            0.9541
+          ],
+          "macro_precision": 0.9278,
+          "macro_recall": 0.9191,
+          "macro_f1": 0.918,
+          "weighted_precision": 0.933,
+          "weighted_recall": 0.9321,
+          "weighted_f1": 0.9298,
+          "per_class": {
+            "Animal Husbandry": {
+              "precision": 0.9242,
+              "recall": 0.9683,
+              "f1": 0.9457,
+              "support": 63
+            },
+            "Cultural Practices": {
+              "precision": 0.9342,
+              "recall": 0.9103,
+              "f1": 0.9221,
+              "support": 78
+            },
+            "Fisheries": {
+              "precision": 0.9024,
+              "recall": 0.9487,
+              "f1": 0.925,
+              "support": 39
+            },
+            "Government Scheme": {
+              "precision": 0.9583,
+              "recall": 0.9583,
+              "f1": 0.9583,
+              "support": 48
+            },
+            "Market Price": {
+              "precision": 0.8182,
+              "recall": 1.0,
+              "f1": 0.9,
+              "support": 9
+            },
+            "Nutrient Management": {
+              "precision": 0.9275,
+              "recall": 0.9697,
+              "f1": 0.9481,
+              "support": 66
+            },
+            "Other": {
+              "precision": 0.9375,
+              "recall": 0.5769,
+              "f1": 0.7143,
+              "support": 26
+            },
+            "Plant Protection": {
+              "precision": 0.931,
+              "recall": 0.9643,
+              "f1": 0.9474,
+              "support": 112
+            },
+            "Varietal Information": {
+              "precision": 0.9444,
+              "recall": 0.8947,
+              "f1": 0.9189,
+              "support": 38
+            },
+            "Weather": {
+              "precision": 1.0,
+              "recall": 1.0,
+              "f1": 1.0,
+              "support": 22
+            }
+          },
+          "n_train_annotated": 2995,
+          "n_train_paraphrases": 0,
+          "n_test": 501
+        }
+      },
+      "gold_with_augmentation": {
+        "n": 150,
+        "accuracy": 0.8933,
+        "accuracy_ci95": [
+          0.8467,
+          0.94
+        ],
+        "macro_precision": 0.9074,
+        "macro_recall": 0.8933,
+        "macro_f1": 0.8922,
+        "weighted_precision": 0.9074,
+        "weighted_recall": 0.8933,
+        "weighted_f1": 0.8922,
+        "per_class": {
+          "Animal Husbandry": {
+            "precision": 0.9333,
+            "recall": 0.9333,
+            "f1": 0.9333,
+            "support": 15
+          },
+          "Cultural Practices": {
+            "precision": 0.75,
+            "recall": 1.0,
+            "f1": 0.8571,
+            "support": 15
+          },
+          "Fisheries": {
+            "precision": 0.9375,
+            "recall": 1.0,
+            "f1": 0.9677,
+            "support": 15
+          },
+          "Government Scheme": {
+            "precision": 1.0,
+            "recall": 0.9333,
+            "f1": 0.9655,
+            "support": 15
+          },
+          "Market Price": {
+            "precision": 0.875,
+            "recall": 0.9333,
+            "f1": 0.9032,
+            "support": 15
+          },
+          "Nutrient Management": {
+            "precision": 0.8667,
+            "recall": 0.8667,
+            "f1": 0.8667,
+            "support": 15
+          },
+          "Other": {
+            "precision": 1.0,
+            "recall": 0.7333,
+            "f1": 0.8462,
+            "support": 15
+          },
+          "Plant Protection": {
+            "precision": 0.7778,
+            "recall": 0.9333,
+            "f1": 0.8485,
+            "support": 15
+          },
+          "Varietal Information": {
+            "precision": 0.9333,
+            "recall": 0.9333,
+            "f1": 0.9333,
+            "support": 15
+          },
+          "Weather": {
+            "precision": 1.0,
+            "recall": 0.6667,
+            "f1": 0.8,
+            "support": 15
+          }
+        },
+        "by_style": {
+          "en": 0.92,
+          "hinglish": 0.9,
+          "hi": 0.86
+        }
+      },
+      "deployed_artifact_on_grouped_test": {
+        "n": 501,
+        "accuracy": 0.994,
+        "accuracy_ci95": [
+          0.986,
+          1.0
+        ],
+        "macro_precision": 0.9835,
+        "macro_recall": 0.983,
+        "macro_f1": 0.9832,
+        "weighted_precision": 0.994,
+        "weighted_recall": 0.994,
+        "weighted_f1": 0.994,
+        "per_class": {
+          "Animal Husbandry": {
+            "precision": 0.9844,
+            "recall": 1.0,
+            "f1": 0.9921,
+            "support": 63
+          },
+          "Cultural Practices": {
+            "precision": 1.0,
+            "recall": 1.0,
+            "f1": 1.0,
+            "support": 78
+          },
+          "Fisheries": {
+            "precision": 1.0,
+            "recall": 1.0,
+            "f1": 1.0,
+            "support": 39
+          },
+          "Government Scheme": {
+            "precision": 1.0,
+            "recall": 0.9792,
+            "f1": 0.9895,
+            "support": 48
+          },
+          "Market Price": {
+            "precision": 0.8889,
+            "recall": 0.8889,
+            "f1": 0.8889,
+            "support": 9
+          },
+          "Nutrient Management": {
+            "precision": 1.0,
+            "recall": 1.0,
+            "f1": 1.0,
+            "support": 66
+          },
+          "Other": {
+            "precision": 0.9615,
+            "recall": 0.9615,
+            "f1": 0.9615,
+            "support": 26
+          },
+          "Plant Protection": {
+            "precision": 1.0,
+            "recall": 1.0,
+            "f1": 1.0,
+            "support": 112
+          },
+          "Varietal Information": {
+            "precision": 1.0,
+            "recall": 1.0,
+            "f1": 1.0,
+            "support": 38
+          },
+          "Weather": {
+            "precision": 1.0,
+            "recall": 1.0,
+            "f1": 1.0,
+            "support": 22
+          }
+        },
+        "share_test_seen_in_deployed_training_pool": 0.8363,
+        "note": "The deployed head was trained on the original 3,000-row pool; rows counted above were seen during its training and make its grouped-test score an upper bound. The refit rows are the primary leakage-resistant estimate."
+      }
+    },
+    "2": {
+      "train": 2996,
+      "test": 500,
+      "train_paraphrases_included": 1005,
+      "test_paraphrases_excluded": 195,
+      "max_similarity_to_training": {
+        "ge_0.95": 0.002,
+        "ge_0.90": 0.146,
+        "lt_0.80": 0.394
+      },
+      "models": {
+        "with_augmentation": {
+          "n": 500,
+          "accuracy": 0.932,
+          "accuracy_ci95": [
+            0.91,
+            0.952
+          ],
+          "macro_precision": 0.9221,
+          "macro_recall": 0.9273,
+          "macro_f1": 0.9235,
+          "weighted_precision": 0.9323,
+          "weighted_recall": 0.932,
+          "weighted_f1": 0.9315,
+          "per_class": {
+            "Animal Husbandry": {
+              "precision": 0.9683,
+              "recall": 0.9683,
+              "f1": 0.9683,
+              "support": 63
+            },
+            "Cultural Practices": {
+              "precision": 0.9067,
+              "recall": 0.8718,
+              "f1": 0.8889,
+              "support": 78
+            },
+            "Fisheries": {
+              "precision": 0.925,
+              "recall": 0.9487,
+              "f1": 0.9367,
+              "support": 39
+            },
+            "Government Scheme": {
+              "precision": 0.9574,
+              "recall": 0.9375,
+              "f1": 0.9474,
+              "support": 48
+            },
+            "Market Price": {
+              "precision": 0.9,
+              "recall": 1.0,
+              "f1": 0.9474,
+              "support": 9
+            },
+            "Nutrient Management": {
+              "precision": 0.9844,
+              "recall": 0.9692,
+              "f1": 0.9767,
+              "support": 65
+            },
+            "Other": {
+              "precision": 0.8182,
+              "recall": 0.6923,
+              "f1": 0.75,
+              "support": 26
+            },
+            "Plant Protection": {
+              "precision": 0.9474,
+              "recall": 0.9643,
+              "f1": 0.9558,
+              "support": 112
+            },
+            "Varietal Information": {
+              "precision": 0.814,
+              "recall": 0.9211,
+              "f1": 0.8642,
+              "support": 38
+            },
+            "Weather": {
+              "precision": 1.0,
+              "recall": 1.0,
+              "f1": 1.0,
+              "support": 22
+            }
+          },
+          "n_train_annotated": 2996,
+          "n_train_paraphrases": 1005,
+          "n_test": 500
+        },
+        "no_augmentation": {
+          "n": 500,
+          "accuracy": 0.93,
+          "accuracy_ci95": [
+            0.908,
+            0.95
+          ],
+          "macro_precision": 0.9348,
+          "macro_recall": 0.9144,
+          "macro_f1": 0.9221,
+          "weighted_precision": 0.9304,
+          "weighted_recall": 0.93,
+          "weighted_f1": 0.9289,
+          "per_class": {
+            "Animal Husbandry": {
+              "precision": 0.9683,
+              "recall": 0.9683,
+              "f1": 0.9683,
+              "support": 63
+            },
+            "Cultural Practices": {
+              "precision": 0.8831,
+              "recall": 0.8718,
+              "f1": 0.8774,
+              "support": 78
+            },
+            "Fisheries": {
+              "precision": 0.925,
+              "recall": 0.9487,
+              "f1": 0.9367,
+              "support": 39
+            },
+            "Government Scheme": {
+              "precision": 0.92,
+              "recall": 0.9583,
+              "f1": 0.9388,
+              "support": 48
+            },
+            "Market Price": {
+              "precision": 1.0,
+              "recall": 0.8889,
+              "f1": 0.9412,
+              "support": 9
+            },
+            "Nutrient Management": {
+              "precision": 0.9844,
+              "recall": 0.9692,
+              "f1": 0.9767,
+              "support": 65
+            },
+            "Other": {
+              "precision": 0.8947,
+              "recall": 0.6538,
+              "f1": 0.7556,
+              "support": 26
+            },
+            "Plant Protection": {
+              "precision": 0.9391,
+              "recall": 0.9643,
+              "f1": 0.9515,
+              "support": 112
+            },
+            "Varietal Information": {
+              "precision": 0.8333,
+              "recall": 0.9211,
+              "f1": 0.875,
+              "support": 38
+            },
+            "Weather": {
+              "precision": 1.0,
+              "recall": 1.0,
+              "f1": 1.0,
+              "support": 22
+            }
+          },
+          "n_train_annotated": 2996,
+          "n_train_paraphrases": 0,
+          "n_test": 500
+        }
+      },
+      "gold_with_augmentation": {
+        "n": 150,
+        "accuracy": 0.88,
+        "accuracy_ci95": [
+          0.8333,
+          0.9267
+        ],
+        "macro_precision": 0.8998,
+        "macro_recall": 0.88,
+        "macro_f1": 0.8805,
+        "weighted_precision": 0.8998,
+        "weighted_recall": 0.88,
+        "weighted_f1": 0.8805,
+        "per_class": {
+          "Animal Husbandry": {
+            "precision": 0.9333,
+            "recall": 0.9333,
+            "f1": 0.9333,
+            "support": 15
+          },
+          "Cultural Practices": {
+            "precision": 0.6667,
+            "recall": 0.9333,
+            "f1": 0.7778,
+            "support": 15
+          },
+          "Fisheries": {
+            "precision": 0.9333,
+            "recall": 0.9333,
+            "f1": 0.9333,
+            "support": 15
+          },
+          "Government Scheme": {
+            "precision": 1.0,
+            "recall": 0.8667,
+            "f1": 0.9286,
+            "support": 15
+          },
+          "Market Price": {
+            "precision": 0.875,
+            "recall": 0.9333,
+            "f1": 0.9032,
+            "support": 15
+          },
+          "Nutrient Management": {
+            "precision": 0.8667,
+            "recall": 0.8667,
+            "f1": 0.8667,
+            "support": 15
+          },
+          "Other": {
+            "precision": 1.0,
+            "recall": 0.7333,
+            "f1": 0.8462,
+            "support": 15
+          },
+          "Plant Protection": {
+            "precision": 0.7895,
+            "recall": 1.0,
+            "f1": 0.8824,
+            "support": 15
+          },
+          "Varietal Information": {
+            "precision": 0.9333,
+            "recall": 0.9333,
+            "f1": 0.9333,
+            "support": 15
+          },
+          "Weather": {
+            "precision": 1.0,
+            "recall": 0.6667,
+            "f1": 0.8,
+            "support": 15
+          }
+        },
+        "by_style": {
+          "en": 0.92,
+          "hinglish": 0.86,
+          "hi": 0.86
+        }
+      },
+      "deployed_artifact_on_grouped_test": {
+        "n": 500,
+        "accuracy": 0.996,
+        "accuracy_ci95": [
+          0.99,
+          1.0
+        ],
+        "macro_precision": 0.9966,
+        "macro_recall": 0.9962,
+        "macro_f1": 0.9963,
+        "weighted_precision": 0.9961,
+        "weighted_recall": 0.996,
+        "weighted_f1": 0.996,
+        "per_class": {
+          "Animal Husbandry": {
+            "precision": 1.0,
+            "recall": 1.0,
+            "f1": 1.0,
+            "support": 63
+          },
+          "Cultural Practices": {
+            "precision": 1.0,
+            "recall": 0.9872,
+            "f1": 0.9935,
+            "support": 78
+          },
+          "Fisheries": {
+            "precision": 1.0,
+            "recall": 0.9744,
+            "f1": 0.987,
+            "support": 39
+          },
+          "Government Scheme": {
+            "precision": 1.0,
+            "recall": 1.0,
+            "f1": 1.0,
+            "support": 48
+          },
+          "Market Price": {
+            "precision": 1.0,
+            "recall": 1.0,
+            "f1": 1.0,
+            "support": 9
+          },
+          "Nutrient Management": {
+            "precision": 1.0,
+            "recall": 1.0,
+            "f1": 1.0,
+            "support": 65
+          },
+          "Other": {
+            "precision": 1.0,
+            "recall": 1.0,
+            "f1": 1.0,
+            "support": 26
+          },
+          "Plant Protection": {
+            "precision": 0.9912,
+            "recall": 1.0,
+            "f1": 0.9956,
+            "support": 112
+          },
+          "Varietal Information": {
+            "precision": 0.9744,
+            "recall": 1.0,
+            "f1": 0.987,
+            "support": 38
+          },
+          "Weather": {
+            "precision": 1.0,
+            "recall": 1.0,
+            "f1": 1.0,
+            "support": 22
+          }
+        },
+        "share_test_seen_in_deployed_training_pool": 0.878,
+        "note": "The deployed head was trained on the original 3,000-row pool; rows counted above were seen during its training and make its grouped-test score an upper bound. The refit rows are the primary leakage-resistant estimate."
+      }
+    },
+    "3": {
+      "train": 2996,
+      "test": 500,
+      "train_paraphrases_included": 1029,
+      "test_paraphrases_excluded": 171,
+      "max_similarity_to_training": {
+        "ge_0.95": 0.0,
+        "ge_0.90": 0.12,
+        "lt_0.80": 0.402
+      },
+      "models": {
+        "with_augmentation": {
+          "n": 500,
+          "accuracy": 0.942,
+          "accuracy_ci95": [
+            0.922,
+            0.962
+          ],
+          "macro_precision": 0.9492,
+          "macro_recall": 0.8988,
+          "macro_f1": 0.9163,
+          "weighted_precision": 0.9432,
+          "weighted_recall": 0.942,
+          "weighted_f1": 0.9405,
+          "per_class": {
+            "Animal Husbandry": {
+              "precision": 0.9403,
+              "recall": 1.0,
+              "f1": 0.9692,
+              "support": 63
+            },
+            "Cultural Practices": {
+              "precision": 0.881,
+              "recall": 0.961,
+              "f1": 0.9193,
+              "support": 77
+            },
+            "Fisheries": {
+              "precision": 1.0,
+              "recall": 0.95,
+              "f1": 0.9744,
+              "support": 40
+            },
+            "Government Scheme": {
+              "precision": 0.9792,
+              "recall": 0.9792,
+              "f1": 0.9792,
+              "support": 48
+            },
+            "Market Price": {
+              "precision": 1.0,
+              "recall": 0.5556,
+              "f1": 0.7143,
+              "support": 9
+            },
+            "Nutrient Management": {
+              "precision": 0.9692,
+              "recall": 0.9545,
+              "f1": 0.9618,
+              "support": 66
+            },
+            "Other": {
+              "precision": 0.9,
+              "recall": 0.72,
+              "f1": 0.8,
+              "support": 25
+            },
+            "Plant Protection": {
+              "precision": 0.9469,
+              "recall": 0.9469,
+              "f1": 0.9469,
+              "support": 113
+            },
+            "Varietal Information": {
+              "precision": 0.9211,
+              "recall": 0.9211,
+              "f1": 0.9211,
+              "support": 38
+            },
+            "Weather": {
+              "precision": 0.9545,
+              "recall": 1.0,
+              "f1": 0.9767,
+              "support": 21
+            }
+          },
+          "n_train_annotated": 2996,
+          "n_train_paraphrases": 1029,
+          "n_test": 500
+        },
+        "no_augmentation": {
+          "n": 500,
+          "accuracy": 0.938,
+          "accuracy_ci95": [
+            0.916,
+            0.958
+          ],
+          "macro_precision": 0.9362,
+          "macro_recall": 0.8935,
+          "macro_f1": 0.9103,
+          "weighted_precision": 0.9381,
+          "weighted_recall": 0.938,
+          "weighted_f1": 0.9364,
+          "per_class": {
+            "Animal Husbandry": {
+              "precision": 0.9394,
+              "recall": 0.9841,
+              "f1": 0.9612,
+              "support": 63
+            },
+            "Cultural Practices": {
+              "precision": 0.869,
+              "recall": 0.9481,
+              "f1": 0.9068,
+              "support": 77
+            },
+            "Fisheries": {
+              "precision": 1.0,
+              "recall": 0.95,
+              "f1": 0.9744,
+              "support": 40
+            },
+            "Government Scheme": {
+              "precision": 0.9792,
+              "recall": 0.9792,
+              "f1": 0.9792,
+              "support": 48
+            },
+            "Market Price": {
+              "precision": 0.8333,
+              "recall": 0.5556,
+              "f1": 0.6667,
+              "support": 9
+            },
+            "Nutrient Management": {
+              "precision": 0.9697,
+              "recall": 0.9697,
+              "f1": 0.9697,
+              "support": 66
+            },
+            "Other": {
+              "precision": 0.8947,
+              "recall": 0.68,
+              "f1": 0.7727,
+              "support": 25
+            },
+            "Plant Protection": {
+              "precision": 0.9304,
+              "recall": 0.9469,
+              "f1": 0.9386,
+              "support": 113
+            },
+            "Varietal Information": {
+              "precision": 0.9459,
+              "recall": 0.9211,
+              "f1": 0.9333,
+              "support": 38
+            },
+            "Weather": {
+              "precision": 1.0,
+              "recall": 1.0,
+              "f1": 1.0,
+              "support": 21
+            }
+          },
+          "n_train_annotated": 2996,
+          "n_train_paraphrases": 0,
+          "n_test": 500
+        }
+      },
+      "gold_with_augmentation": {
+        "n": 150,
+        "accuracy": 0.8733,
+        "accuracy_ci95": [
+          0.82,
+          0.9267
+        ],
+        "macro_precision": 0.8881,
+        "macro_recall": 0.8733,
+        "macro_f1": 0.8742,
+        "weighted_precision": 0.8881,
+        "weighted_recall": 0.8733,
+        "weighted_f1": 0.8742,
+        "per_class": {
+          "Animal Husbandry": {
+            "precision": 0.9286,
+            "recall": 0.8667,
+            "f1": 0.8966,
+            "support": 15
+          },
+          "Cultural Practices": {
+            "precision": 0.6818,
+            "recall": 1.0,
+            "f1": 0.8108,
+            "support": 15
+          },
+          "Fisheries": {
+            "precision": 0.875,
+            "recall": 0.9333,
+            "f1": 0.9032,
+            "support": 15
+          },
+          "Government Scheme": {
+            "precision": 1.0,
+            "recall": 0.9333,
+            "f1": 0.9655,
+            "support": 15
+          },
+          "Market Price": {
+            "precision": 0.8667,
+            "recall": 0.8667,
+            "f1": 0.8667,
+            "support": 15
+          },
+          "Nutrient Management": {
+            "precision": 0.8667,
+            "recall": 0.8667,
+            "f1": 0.8667,
+            "support": 15
+          },
+          "Other": {
+            "precision": 0.9167,
+            "recall": 0.7333,
+            "f1": 0.8148,
+            "support": 15
+          },
+          "Plant Protection": {
+            "precision": 0.8125,
+            "recall": 0.8667,
+            "f1": 0.8387,
+            "support": 15
+          },
+          "Varietal Information": {
+            "precision": 0.9333,
+            "recall": 0.9333,
+            "f1": 0.9333,
+            "support": 15
+          },
+          "Weather": {
+            "precision": 1.0,
+            "recall": 0.7333,
+            "f1": 0.8462,
+            "support": 15
+          }
+        },
+        "by_style": {
+          "en": 0.92,
+          "hinglish": 0.84,
+          "hi": 0.86
+        }
+      },
+      "deployed_artifact_on_grouped_test": {
+        "n": 500,
+        "accuracy": 0.984,
+        "accuracy_ci95": [
+          0.972,
+          0.994
+        ],
+        "macro_precision": 0.9887,
+        "macro_recall": 0.9846,
+        "macro_f1": 0.9866,
+        "weighted_precision": 0.9841,
+        "weighted_recall": 0.984,
+        "weighted_f1": 0.984,
+        "per_class": {
+          "Animal Husbandry": {
+            "precision": 1.0,
+            "recall": 1.0,
+            "f1": 1.0,
+            "support": 63
+          },
+          "Cultural Practices": {
+            "precision": 0.961,
+            "recall": 0.961,
+            "f1": 0.961,
+            "support": 77
+          },
+          "Fisheries": {
+            "precision": 1.0,
+            "recall": 0.975,
+            "f1": 0.9873,
+            "support": 40
+          },
+          "Government Scheme": {
+            "precision": 1.0,
+            "recall": 1.0,
+            "f1": 1.0,
+            "support": 48
+          },
+          "Market Price": {
+            "precision": 1.0,
+            "recall": 1.0,
+            "f1": 1.0,
+            "support": 9
+          },
+          "Nutrient Management": {
+            "precision": 0.9701,
+            "recall": 0.9848,
+            "f1": 0.9774,
+            "support": 66
+          },
+          "Other": {
+            "precision": 1.0,
+            "recall": 0.96,
+            "f1": 0.9796,
+            "support": 25
+          },
+          "Plant Protection": {
+            "precision": 0.9825,
+            "recall": 0.9912,
+            "f1": 0.9868,
+            "support": 113
+          },
+          "Varietal Information": {
+            "precision": 0.9737,
+            "recall": 0.9737,
+            "f1": 0.9737,
+            "support": 38
+          },
+          "Weather": {
+            "precision": 1.0,
+            "recall": 1.0,
+            "f1": 1.0,
+            "support": 21
+          }
+        },
+        "share_test_seen_in_deployed_training_pool": 0.852,
+        "note": "The deployed head was trained on the original 3,000-row pool; rows counted above were seen during its training and make its grouped-test score an upper bound. The refit rows are the primary leakage-resistant estimate."
+      }
+    },
+    "4": {
+      "train": 2996,
+      "test": 500,
+      "train_paraphrases_included": 1035,
+      "test_paraphrases_excluded": 165,
+      "max_similarity_to_training": {
+        "ge_0.95": 0.0,
+        "ge_0.90": 0.128,
+        "lt_0.80": 0.368
+      },
+      "models": {
+        "with_augmentation": {
+          "n": 500,
+          "accuracy": 0.938,
+          "accuracy_ci95": [
+            0.916,
+            0.958
+          ],
+          "macro_precision": 0.9328,
+          "macro_recall": 0.9161,
+          "macro_f1": 0.9177,
+          "weighted_precision": 0.94,
+          "weighted_recall": 0.938,
+          "weighted_f1": 0.9356,
+          "per_class": {
+            "Animal Husbandry": {
+              "precision": 0.9531,
+              "recall": 0.9683,
+              "f1": 0.9606,
+              "support": 63
+            },
+            "Cultural Practices": {
+              "precision": 0.8987,
+              "recall": 0.9103,
+              "f1": 0.9045,
+              "support": 78
+            },
+            "Fisheries": {
+              "precision": 0.9048,
+              "recall": 0.9744,
+              "f1": 0.9383,
+              "support": 39
+            },
+            "Government Scheme": {
+              "precision": 0.9583,
+              "recall": 0.9583,
+              "f1": 0.9583,
+              "support": 48
+            },
+            "Market Price": {
+              "precision": 0.8,
+              "recall": 0.8889,
+              "f1": 0.8421,
+              "support": 9
+            },
+            "Nutrient Management": {
+              "precision": 0.9538,
+              "recall": 0.9538,
+              "f1": 0.9538,
+              "support": 65
+            },
+            "Other": {
+              "precision": 1.0,
+              "recall": 0.56,
+              "f1": 0.7179,
+              "support": 25
+            },
+            "Plant Protection": {
+              "precision": 0.9565,
+              "recall": 0.9735,
+              "f1": 0.9649,
+              "support": 113
+            },
+            "Varietal Information": {
+              "precision": 0.9024,
+              "recall": 0.9737,
+              "f1": 0.9367,
+              "support": 38
+            },
+            "Weather": {
+              "precision": 1.0,
+              "recall": 1.0,
+              "f1": 1.0,
+              "support": 22
+            }
+          },
+          "n_train_annotated": 2996,
+          "n_train_paraphrases": 1035,
+          "n_test": 500
+        },
+        "no_augmentation": {
+          "n": 500,
+          "accuracy": 0.942,
+          "accuracy_ci95": [
+            0.922,
+            0.962
+          ],
+          "macro_precision": 0.935,
+          "macro_recall": 0.9168,
+          "macro_f1": 0.9177,
+          "weighted_precision": 0.944,
+          "weighted_recall": 0.942,
+          "weighted_f1": 0.9389,
+          "per_class": {
+            "Animal Husbandry": {
+              "precision": 0.9538,
+              "recall": 0.9841,
+              "f1": 0.9688,
+              "support": 63
+            },
+            "Cultural Practices": {
+              "precision": 0.9103,
+              "recall": 0.9103,
+              "f1": 0.9103,
+              "support": 78
+            },
+            "Fisheries": {
+              "precision": 0.9048,
+              "recall": 0.9744,
+              "f1": 0.9383,
+              "support": 39
+            },
+            "Government Scheme": {
+              "precision": 0.9583,
+              "recall": 0.9583,
+              "f1": 0.9583,
+              "support": 48
+            },
+            "Market Price": {
+              "precision": 0.8,
+              "recall": 0.8889,
+              "f1": 0.8421,
+              "support": 9
+            },
+            "Nutrient Management": {
+              "precision": 0.9552,
+              "recall": 0.9846,
+              "f1": 0.9697,
+              "support": 65
+            },
+            "Other": {
+              "precision": 1.0,
+              "recall": 0.52,
+              "f1": 0.6842,
+              "support": 25
+            },
+            "Plant Protection": {
+              "precision": 0.9649,
+              "recall": 0.9735,
+              "f1": 0.9692,
+              "support": 113
+            },
+            "Varietal Information": {
+              "precision": 0.9024,
+              "recall": 0.9737,
+              "f1": 0.9367,
+              "support": 38
+            },
+            "Weather": {
+              "precision": 1.0,
+              "recall": 1.0,
+              "f1": 1.0,
+              "support": 22
+            }
+          },
+          "n_train_annotated": 2996,
+          "n_train_paraphrases": 0,
+          "n_test": 500
+        }
+      },
+      "gold_with_augmentation": {
+        "n": 150,
+        "accuracy": 0.88,
+        "accuracy_ci95": [
+          0.8267,
+          0.9333
+        ],
+        "macro_precision": 0.8933,
+        "macro_recall": 0.88,
+        "macro_f1": 0.8805,
+        "weighted_precision": 0.8933,
+        "weighted_recall": 0.88,
+        "weighted_f1": 0.8805,
+        "per_class": {
+          "Animal Husbandry": {
+            "precision": 0.875,
+            "recall": 0.9333,
+            "f1": 0.9032,
+            "support": 15
+          },
+          "Cultural Practices": {
+            "precision": 0.7368,
+            "recall": 0.9333,
+            "f1": 0.8235,
+            "support": 15
+          },
+          "Fisheries": {
+            "precision": 0.8235,
+            "recall": 0.9333,
+            "f1": 0.875,
+            "support": 15
+          },
+          "Government Scheme": {
+            "precision": 1.0,
+            "recall": 0.9333,
+            "f1": 0.9655,
+            "support": 15
+          },
+          "Market Price": {
+            "precision": 0.9333,
+            "recall": 0.9333,
+            "f1": 0.9333,
+            "support": 15
+          },
+          "Nutrient Management": {
+            "precision": 0.8667,
+            "recall": 0.8667,
+            "f1": 0.8667,
+            "support": 15
+          },
+          "Other": {
+            "precision": 1.0,
+            "recall": 0.7333,
+            "f1": 0.8462,
+            "support": 15
+          },
+          "Plant Protection": {
+            "precision": 0.7647,
+            "recall": 0.8667,
+            "f1": 0.8125,
+            "support": 15
+          },
+          "Varietal Information": {
+            "precision": 0.9333,
+            "recall": 0.9333,
+            "f1": 0.9333,
+            "support": 15
+          },
+          "Weather": {
+            "precision": 1.0,
+            "recall": 0.7333,
+            "f1": 0.8462,
+            "support": 15
+          }
+        },
+        "by_style": {
+          "en": 0.94,
+          "hinglish": 0.84,
+          "hi": 0.86
+        }
+      },
+      "deployed_artifact_on_grouped_test": {
+        "n": 500,
+        "accuracy": 0.994,
+        "accuracy_ci95": [
+          0.986,
+          1.0
+        ],
+        "macro_precision": 0.996,
+        "macro_recall": 0.9969,
+        "macro_f1": 0.9964,
+        "weighted_precision": 0.9941,
+        "weighted_recall": 0.994,
+        "weighted_f1": 0.994,
+        "per_class": {
+          "Animal Husbandry": {
+            "precision": 1.0,
+            "recall": 1.0,
+            "f1": 1.0,
+            "support": 63
+          },
+          "Cultural Practices": {
+            "precision": 0.9747,
+            "recall": 0.9872,
+            "f1": 0.9809,
+            "support": 78
+          },
+          "Fisheries": {
+            "precision": 1.0,
+            "recall": 1.0,
+            "f1": 1.0,
+            "support": 39
+          },
+          "Government Scheme": {
+            "precision": 1.0,
+            "recall": 1.0,
+            "f1": 1.0,
+            "support": 48
+          },
+          "Market Price": {
+            "precision": 1.0,
+            "recall": 1.0,
+            "f1": 1.0,
+            "support": 9
+          },
+          "Nutrient Management": {
+            "precision": 0.9848,
+            "recall": 1.0,
+            "f1": 0.9924,
+            "support": 65
+          },
+          "Other": {
+            "precision": 1.0,
+            "recall": 1.0,
+            "f1": 1.0,
+            "support": 25
+          },
+          "Plant Protection": {
+            "precision": 1.0,
+            "recall": 0.9823,
+            "f1": 0.9911,
+            "support": 113
+          },
+          "Varietal Information": {
+            "precision": 1.0,
+            "recall": 1.0,
+            "f1": 1.0,
+            "support": 38
+          },
+          "Weather": {
+            "precision": 1.0,
+            "recall": 1.0,
+            "f1": 1.0,
+            "support": 22
+          }
+        },
+        "share_test_seen_in_deployed_training_pool": 0.854,
+        "note": "The deployed head was trained on the original 3,000-row pool; rows counted above were seen during its training and make its grouped-test score an upper bound. The refit rows are the primary leakage-resistant estimate."
+      }
+    }
+  },
+  "aggregate": {
+    "accuracy": {
+      "mean": 0.9372,
+      "sd": 0.0045,
+      "values": [
+        0.942,
+        0.9321,
+        0.932,
+        0.942,
+        0.938
+      ]
+    },
+    "macro_f1": {
+      "mean": 0.9205,
+      "sd": 0.0048,
+      "values": [
+        0.9286,
+        0.9166,
+        0.9235,
+        0.9163,
+        0.9177
+      ]
+    },
+    "weighted_f1": {
+      "mean": 0.9358,
+      "sd": 0.0047,
+      "values": [
+        0.9416,
+        0.9298,
+        0.9315,
+        0.9405,
+        0.9356
+      ]
+    },
+    "no_augmentation_accuracy": {
+      "mean": 0.9372,
+      "sd": 0.0054
+    },
+    "novelty_bucket_accuracy_with_augmentation": {
+      "novel": {
+        "mean": 0.9025,
+        "sd": 0.0107,
+        "n_seeds": 5
+      },
+      "similar": {
+        "mean": 0.958,
+        "sd": 0.0122,
+        "n_seeds": 5
+      },
+      "near_duplicate": {
+        "mean": 0.963,
+        "sd": 0.0219,
+        "n_seeds": 5
+      }
+    },
+    "novelty_bucket_counts_seed0": {
+      "novel": 186,
+      "similar": 236,
+      "near_duplicate": 78
+    }
+  },
+  "original_split_reference": {
+    "source": "results/research_eval.json (original row-level split, LLM labels)",
+    "silver_accuracy": 0.9355,
+    "silver_ci95": [
+      0.9153,
+      0.9556
+    ],
+    "gold_accuracy": 0.9,
+    "note": "Reference only; not comparable one-for-one because the split differs."
+  },
+  "limitations": [
+    "Meaning labels are LLM-generated, not human-verified; this pipeline removes split leakage, not annotator bias.",
+    "The annotated pool is 3,496 queries; stratified grouping can only redistribute these rows.",
+    "Grouping uses a k=64 candidate cap and a 0.95 threshold; residual high-similarity pairs are reported per seed.",
+    "The gold set shares its author with the paraphrases, so its numbers remain optimistic."
+  ]
+}

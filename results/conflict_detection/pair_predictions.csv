@@ -1,0 +1,78 @@
+pair_id,subset,gold_conflict,predicted_conflict,gold_kinds,predicted_kinds,max_severity,explanations,text_a,text_b
+d01,core,True,True,dosage,dosage,high,dosage differs for urea: 50 kg per acre vs 20 kg per acre (about 2.5x apart),Apply urea 50 kg per acre at sowing.,Apply urea 20 kg per acre at sowing.
+d02,core,True,True,dosage,dosage,high,dosage differs for chlorpyrifos: 2 ml per litre vs 5 ml per litre (about 2.5x apart),Spray 2 ml chlorpyrifos per litre of water.,Spray 5 ml chlorpyrifos per litre of water.
+d03,core,True,True,dosage,dosage,high,dosage differs for mancozeb: 20 gm in 10 litre vs 40 gm in 10 litre (about 2.0x apart),Mix 20 gm mancozeb in 10 litre water.,Mix 40 gm mancozeb in 10 litre water.
+d04,core,True,True,dosage,dosage,high,dosage differs for zinc sulphate: 1 kg per bigha vs 4 kg per bigha (about 4.0x apart),Apply 1 kg zinc sulphate per bigha.,Apply 4 kg zinc sulphate per bigha.
+d05,core,True,True,dosage,dosage,high,dosage differs for pendimethalin: 500 ml per acre vs 1 litre per acre (about 2.0x apart),Use 500 ml pendimethalin per acre.,Use 1 litre pendimethalin per acre.
+d06,core,True,True,dosage,dosage,high,dosage differs for fym: 2 quintal per acre vs 50 kg per acre (about 4.0x apart),Apply 2 quintal FYM per acre.,Apply 50 kg FYM per acre.
+d07,core,True,True,dosage,dosage,high,dosage differs for imidacloprid: 1 ml in 1 litre vs 1 ml in 2 litre (about 2.0x apart),Dilute 1 ml imidacloprid in 1 litre water.,Dilute 1 ml imidacloprid in 2 litre water.
+d08,core,True,True,dosage,dosage,high,dosage differs for dap: 10 kg per acre vs 25 kg per acre (about 2.5x apart),Apply 10 kg DAP per acre.,Apply 25 kg DAP per acre.
+d09,core,True,True,dosage,dosage,high,dosage differs for carbendazim: 2 g per litre vs 1 g per litre (about 2.0x apart),Apply 2 g carbendazim per litre.,Apply 1 g carbendazim per litre.
+d10,core,False,False,,,,,Apply urea 10 kg per acre.,Apply urea 12 kg per acre.
+d11,core,False,False,,,,,Apply urea 2-3 kg per acre.,Apply urea 3 kg per acre.
+d12,core,False,False,,,,,Apply 500 gm urea per plant.,Apply 0.5 kg urea per plant.
+d13,core,False,False,,,,,Apply 2% urea spray.,Apply 2 percent urea solution.
+d14,core,False,False,,,,,Apply 1 kg urea per 2 acres.,Apply 0.5 kg urea per acre.
+d15,core,True,True,dosage,dosage,high,dosage differs for urea: 1 kg per 2 acres vs 1 kg per acre (about 2.0x apart),Apply 1 kg urea per 2 acres.,Apply 1 kg urea per acre.
+d16,core,True,True,dosage,dosage,high,dosage differs for urea: 40 kg per acre vs 20 kg per 2 acres (about 4.0x apart),Apply 40 kg urea per acre.,Apply 20 kg urea per 2 acres.
+d17,core,True,True,dimension,dimension,medium,the same product is dosed in incompatible units (mass vs volume),Apply 5 kg urea.,Apply 5 litre urea.
+d18,core,True,True,dimension,dimension,medium,the same product is dosed in incompatible units (mass vs volume),Spray 10 gm sulphur per litre.,Spray 10 ml sulphur per litre.
+d19,core,True,True,dosage,dosage,high,dosage differs for dichlorvos: 2 ml per litre vs 8 ml per litre (about 4.0x apart),Spray 2 ml dichlorvos per litre.,Spray 8 ml dichlorvos per litre.
+d20,core,True,True,dosage,dosage,high,dosage differs for zinc sulphate: 4 kg per acre vs 8 kg per acre (about 2.0x apart),Apply 4 kg zinc sulphate per acre.,Apply 8 kg zinc sulphate per acre.
+p01,core,True,True,product,product,high,different products recommended: rogor vs mancozeb,Spray rogor for aphid control.,Spray mancozeb for aphid control.
+p02,core,True,True,product,product,high,different products recommended: urea vs dap,Apply urea at sowing.,Apply DAP at sowing.
+p03,core,True,True,product,product,high,different products recommended: chlorpyrifos vs imidacloprid,Use chlorpyrifos 2 ml per litre.,Use imidacloprid 2 ml per litre.
+p04,core,True,True,product,product,high,different products recommended: neem vs malathion,Spray neem oil in the evening.,Spray malathion in the evening.
+p05,core,True,True,product,product,high,different products recommended: captan vs carbendazim,Apply captan 3 g per litre.,Apply carbendazim 3 g per litre.
+p06,core,True,True,product,product,high,different products recommended: glyphosate vs pendimethalin,Use glyphosate before sowing.,Use pendimethalin before sowing.
+p07,core,True,True,product,product,high,different products recommended: copper oxychloride vs bordeaux,Spray copper oxychloride.,Spray bordeaux mixture.
+p08,core,False,False,,,,,Apply MOP at flowering.,Apply potash at flowering.
+p09,core,False,False,,,,,Apply urea or DAP.,Apply urea.
+p10,core,True,True,product,product,high,different products recommended: vermicompost vs fym,Add vermicompost to the nursery.,Add FYM to the nursery.
+p11,core,False,False,,,,,Apply urea.,Contact the agriculture officer for details.
+p12,core,False,False,,,,,Spray neem oil.,Spray neem kernel extract.
+p13,core,True,True,product,product,high,different products recommended: urea vs dap,Apply 50 kg urea per acre.,Apply 50 kg DAP per acre.
+p14,core,True,True,product,product,high,different products recommended: rogor vs mancozeb,Spray rogor 2 ml per litre.,Spray mancozeb 5 gm per litre.
+p15,core,True,True,product,product,high,different products recommended: ammonium sulphate vs urea,Apply ammonium sulphate.,Apply urea.
+b01,core,True,True,basis,basis,medium,"doses use different, non-convertible bases (area:acre vs area:bigha); the amounts cannot be compared directly",Apply 50 kg urea per acre.,Apply 50 kg urea per bigha.
+b02,core,True,True,dosage,dosage,high,dosage differs for urea: 50 kg per hectare vs 50 kg per acre (about 2.5x apart),Apply 50 kg urea per hectare.,Apply 50 kg urea per acre.
+b03,core,True,True,basis,basis,medium,"doses use different, non-convertible bases (plant:plant vs area:acre); the amounts cannot be compared directly",Apply 2 kg urea per plant.,Apply 2 kg urea per acre.
+b04,core,True,True,basis,basis,medium,"doses use different, non-convertible bases (area:bigha vs area:acre); the amounts cannot be compared directly",Apply 2 kg zinc sulphate per bigha.,Apply 2 kg zinc sulphate per acre.
+b05,core,True,True,basis,basis,medium,"doses use different, non-convertible bases (area:kanal vs area:acre); the amounts cannot be compared directly",Apply 1 kg urea per kanal.,Apply 1 kg urea per hectare.
+b06,core,True,True,dosage,dosage,high,dosage differs for chlorpyrifos: 2 ml per litre vs 2 ml per 10 litre (about 10.0x apart),Spray 2 ml chlorpyrifos per litre.,Spray 2 ml chlorpyrifos per 10 litre.
+b07,core,True,True,dimension,dimension,medium,the same product is dosed in incompatible units (mass vs volume),Spray 20 gm copper oxychloride per litre.,Spray 20 ml copper oxychloride per litre.
+b08,core,True,True,dimension,dimension,medium,the same product is dosed in incompatible units (mass vs volume),Apply 10 kg DAP.,Apply 10 litre DAP.
+i01,core,True,True,interval,interval,high,application interval differs: after 5 days vs after 15 days,Spray after 5 days.,Spray after 15 days.
+i02,core,False,False,,,,,Repeat after 10 days.,Repeat after 12 days.
+i03,core,True,True,interval,interval,high,application interval differs: interval of 5 days vs interval of 15 days,Spray at an interval of 5 days.,Spray at an interval of 15 days.
+i04,core,False,False,,,,,Apply again after 7 days.,Apply again after 7 days.
+i05,core,True,True,interval,interval,high,application interval differs: after 5 days vs after 20 days,Apply again after 5 days.,Apply again after 20 days.
+i06,core,False,False,,,,,Spray at 5 day interval.,Spray at 5 day interval.
+x01,core,True,True,polarity,polarity,high,one answer advises against chlorpyrifos while the other recommends it,Do not spray chlorpyrifos.,Spray chlorpyrifos 2 ml per litre.
+x02,core,True,True,polarity,polarity,high,one answer advises against urea while the other recommends it,Avoid urea at sowing.,Apply urea at sowing.
+x03,core,False,False,,,,,Do not spray chlorpyrifos.,Do not apply chlorpyrifos.
+x04,core,False,False,,,,,Never use glyphosate.,Glyphosate is not recommended.
+x05,core,False,False,,,,,Do not apply urea; instead spray neem oil.,Spray neem oil.
+x06,core,True,True,product,product,high,different products recommended: dap vs urea,Do not use DAP.,Use urea.
+x07,core,True,True,polarity,polarity,high,one answer advises against urea while the other recommends it,Do not apply urea.,Apply 20 kg urea per acre.
+x08,core,True,True,polarity,polarity,high,one answer advises against chlorpyrifos while the other recommends it,Avoid chlorpyrifos.,Chlorpyrifos 2 ml per litre is effective.
+c01,core,False,False,,,,,Apply urea 50 kg per acre.,Sell wheat at the mandi.
+c02,core,False,False,,,,,Apply urea 50 kg per acre at sowing.,Apply 50 kg urea per acre.
+c03,core,False,False,,,,,Apply urea 50 kg per acre in wheat.,Apply urea 50 kg per acre in paddy.
+c04,core,False,False,,,,,Available in 500 gm pack.,Apply 500 gm urea per acre.
+c05,core,False,False,,,,,Urea price is Rs 266 per bag.,Apply 50 kg urea per acre.
+c06,core,False,False,,,,,Contact the KVK for soil testing.,Visit the district agriculture office.
+c07,core,True,True,basis,basis,medium,"doses use different, non-convertible bases (area:acre vs area:bigha); the amounts cannot be compared directly",Apply 2 kg urea per acre.,Apply 2 kg urea per bigha.
+c08,core,False,False,,,,,Spray 2 ml per litre in the evening.,Spray 2 ml per litre.
+c09,core,False,False,,,,,Apply 50 kg urea per acre.,Apply 50 kg urea per acre.
+c10,core,False,False,,,,,Mix 2 ml neem oil in 1 litre water.,Mix 2 ml neem oil in 1 litre water at dusk.
+h01,challenge,True,False,product,,,,Spray r0gor for aphid control.,Spray mancozeb for aphid control.
+h02,challenge,True,False,dosage,,,,Apply 2 sachet urea per acre.,Apply 5 sachet urea per acre.
+h03,challenge,True,False,dosage,,,,Apply 1 bag urea per acre.,Apply 3 bag urea per acre.
+h04,challenge,True,False,polarity,,,,Do not spray any chemical.,Spray chlorpyrifos 2 ml per litre.
+h05,challenge,True,False,basis,,,,यूरिया 50 किलो प्रति एकड़ डालें।,यूरिया 50 किलो प्रति बीघा डालें।
+h06,challenge,True,True,dosage,dosage,high,dosage differs: 2 किलो vs 5 किलो (about 2.5x apart),यूरिया २ किलो प्रति एकड़ डालें।,यूरिया ५ किलो प्रति एकड़ डालें।
+h07,challenge,True,True,dosage,dosage,high,dosage differs: 50 kg per acre vs 20 kg per acre (about 2.5x apart),Apply ur3a 50 kg per acre.,Apply urea 20 kg per acre.
+h08,challenge,True,True,dosage,dosage,high,dosage differs: 2 ml per litre vs 5 ml per litre (about 2.5x apart),Spray chlorpyriphos 2 ml per litre.,Spray chlorpyrifos 5 ml per litre.
+h09,challenge,False,False,,,,,Apply 2 kg urea per acre.,Apply 2 kg urea per acre.
+h10,challenge,True,True,dosage,dosage,high,dosage differs: 2 ml per litre vs 5 ml per litre (about 2.5x apart),Spray 2 ml per litre of the same insecticide.,Spray 5 ml per litre of the same insecticide.

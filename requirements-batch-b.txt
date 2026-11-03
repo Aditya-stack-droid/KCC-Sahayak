@@ -1,0 +1,20 @@
+# Batch B environment (verified 2026-11-03, macOS arm64, Python 3.12.13)
+#
+# No new dependency is required. This file documents the versions actually used
+# so Batch B results can be reproduced. It does not replace requirements.txt.
+
+numpy==2.5.4
+pandas==3.1.0
+scikit-learn==1.9.1
+scipy==1.18.1
+sentence-transformers==6.2.0
+faiss-cpu==1.15.1
+joblib==1.6.0
+torch==2.15.0
+transformers==5.22.1
+pytest==9.2.0
+
+# Not installed and not used in Phase 0:
+#   presidio-analyzer / presidio-anonymizer
+# Custom recognizers are the primary PII approach; Presidio remains optional and
+# requires explicit approval before installation.

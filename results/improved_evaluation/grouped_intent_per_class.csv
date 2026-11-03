@@ -1,0 +1,11 @@
+seed,label,precision,recall,f1,support
+0,Animal Husbandry,0.9839,0.9683,0.976,63
+0,Cultural Practices,0.8987,0.9221,0.9103,77
+0,Fisheries,0.9722,0.8974,0.9333,39
+0,Government Scheme,0.9574,0.9375,0.9474,48
+0,Market Price,1.0,0.7778,0.875,9
+0,Nutrient Management,0.9692,0.9692,0.9692,65
+0,Other,0.8333,0.7692,0.8,26
+0,Plant Protection,0.9483,0.9735,0.9607,113
+0,Varietal Information,0.9024,0.9737,0.9367,38
+0,Weather,0.9565,1.0,0.9778,22

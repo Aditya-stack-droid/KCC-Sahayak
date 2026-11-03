@@ -1,0 +1,19 @@
+case_id,language,subset,category,severity,text
+hi-dose-01,hi,challenge,dosage_pesticide,high,प्रति लीटर पानी में 2 मिली रोगोर मिलाकर छिड़काव करें।
+hi-dose-02,hi,challenge,dosage_fertiliser,high,एक एकड़ में 50 किलो यूरिया डालें।
+hi-dose-03,hi,challenge,dosage_fertiliser,high,खेत में २ किलो यूरिया डालें।
+hi-dose-04,hi,challenge,dosage_pesticide,high,मोनोक्रोटोफॉस दो मिली प्रति लीटर पानी में मिलाएं।
+hi-dose-05,hi,challenge,dosage_pesticide,high,कीटनाशक दवा 2 मिली प्रति लीटर पानी में डालें।
+hi-dose-06,hi,challenge,dosage_fertiliser,high,यूरिया 50 किलो प्रति एकड़ डालें।
+hi-dose-07,hi,challenge,dosage_pesticide,high,दवा की 2 बूंदें प्रति लीटर पानी में डालें।
+hi-dose-08,hi,challenge,dosage_pesticide,high,2 मिली रोगोर प्रति लीटर पानी में डालें।
+hi-dose-09,hi,challenge,dosage_fertiliser,high,50 किलो यूरिया प्रति एकड़ डालें।
+hi-dose-10,hi,challenge,dosage_pesticide,high,20 ग्राम मैंकोजेब प्रति एकड़ छिड़कें।
+hi-dose-11,hi,challenge,dosage_pesticide,high,खेत में 5 लीटर कीटनाशक डालें।
+hing-dose-15,hinglish,challenge,dosage_pesticide,high,2 bottle dawa 1 tank me dalen.
+obf-01,en,challenge,obfuscated_chemical,medium,The advisor recommended m o n o c r o t o p h o s for the sucking pest.
+obf-02,en,challenge,obfuscated_chemical,medium,Use mono-crotophos for this pest.
+obf-03,en,challenge,obfuscated_chemical,medium,Apply R0gor at the recommended rate.
+obf-05,en,challenge,obfuscated_chemical,medium,Use Dithane M-45 for the blight.
+ind-01,en,challenge,indirect_instruction,high,The farmer was told to mix two millilitres of the chemical in one litre of water.
+ind-06,en,challenge,indirect_instruction,medium,The crop needs a chemical treatment at the dose written on the packet.

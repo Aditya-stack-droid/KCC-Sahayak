@@ -1,0 +1,173 @@
+{
+  "status": "OK",
+  "n_items": 300,
+  "n_candidates": 900,
+  "n_unique_source_qids": 300,
+  "language": {
+    "en": 300
+  },
+  "strata": {
+    "near_duplicate": 40,
+    "potentially_unsafe": 25,
+    "common": 80,
+    "rare_intent": 55,
+    "insufficient_context": 35,
+    "ambiguous": 35,
+    "novel": 30
+  },
+  "existing_llm_label_counts": {
+    "Plant Protection": 73,
+    "Nutrient Management": 54,
+    "Government Scheme": 33,
+    "Varietal Information": 23,
+    "Fisheries": 21,
+    "Animal Husbandry": 41,
+    "Cultural Practices": 26,
+    "Market Price": 14,
+    "Weather": 14,
+    "Other": 1
+  },
+  "existing_llm_label_provenance": "LLM-generated (Claude); used for stratification only; never human gold",
+  "candidate_provenance_counts": {
+    "distractor_same_topic": 300,
+    "logged": 300,
+    "distractor_other_topic": 300
+  },
+  "source_pool_counts": {
+    "train": 252,
+    "test": 48
+  },
+  "max_corpus_similarity": {
+    "min": 0.570638,
+    "median": 0.935238,
+    "max": 1.0
+  },
+  "corpus_group_size": {
+    "min": 1,
+    "median": 1.0,
+    "max": 1623,
+    "share_in_95_group": 0.43
+  },
+  "query_length": {
+    "min": 16,
+    "median": 52.0,
+    "max": 202
+  },
+  "redacted_examples": [
+    {
+      "item_id": "kcc-0001",
+      "query": "query regarding cotrol measures of fungal diseases in tea"
+    },
+    {
+      "item_id": "kcc-0002",
+      "query": "regarding nutrient application in black pepper"
+    },
+    {
+      "item_id": "kcc-0003",
+      "query": "querry regarding coconut fertilizer dose"
+    },
+    {
+      "item_id": "kcc-0004",
+      "query": "enquired about the loan facilities provided by the govt"
+    },
+    {
+      "item_id": "kcc-0005",
+      "query": "asking for name of rice variety for late transplanting after flood"
+    }
+  ],
+  "stored_summary": {
+    "annotated_rows": 3496,
+    "dropped_length_or_empty_answer": 373,
+    "dropped_non_english": 1,
+    "register_counts_before_filter": {
+      "en": 3495,
+      "hinglish": 1
+    },
+    "eligible_pool": 3122,
+    "requested_n": 300,
+    "realised_n": 300,
+    "seed": 0,
+    "quotas": {
+      "potentially_unsafe": 25,
+      "insufficient_context": 35,
+      "ambiguous": 35,
+      "rare_intent": 55,
+      "novel": 30,
+      "near_duplicate": 40,
+      "common": 80
+    },
+    "realised_strata": {
+      "potentially_unsafe": 25,
+      "insufficient_context": 35,
+      "ambiguous": 35,
+      "rare_intent": 55,
+      "novel": 30,
+      "near_duplicate": 40,
+      "common": 80
+    },
+    "shortfall_refilled_from_common": 0,
+    "shortfall_by_stratum": {
+      "potentially_unsafe": 0,
+      "insufficient_context": 0,
+      "ambiguous": 0,
+      "rare_intent": 0,
+      "novel": 0,
+      "near_duplicate": 0,
+      "common": 0
+    },
+    "dedupe": {
+      "text": "normalised exact",
+      "embedding": "cosine >= 0.98"
+    },
+    "novelty_thresholds": {
+      "near_duplicate": 0.95,
+      "similar": 0.8
+    },
+    "eligible_pool_label_counts": {
+      "Plant Protection": 759,
+      "Cultural Practices": 432,
+      "Nutrient Management": 429,
+      "Animal Husbandry": 414,
+      "Government Scheme": 301,
+      "Varietal Information": 249,
+      "Fisheries": 207,
+      "Other": 141,
+      "Weather": 141,
+      "Market Price": 49
+    },
+    "sample_label_counts": {
+      "Plant Protection": 73,
+      "Nutrient Management": 54,
+      "Animal Husbandry": 41,
+      "Government Scheme": 33,
+      "Cultural Practices": 26,
+      "Varietal Information": 23,
+      "Fisheries": 21,
+      "Market Price": 14,
+      "Weather": 14,
+      "Other": 1
+    },
+    "sample_register": {
+      "en": 300
+    },
+    "candidate_provenance_counts": {
+      "logged": 300,
+      "distractor_same_topic": 300,
+      "distractor_other_topic": 300
+    },
+    "n_items": 300,
+    "n_candidates": 900,
+    "query_length": {
+      "min": 16,
+      "median": 52.0,
+      "max": 202
+    },
+    "items_sha1": "7c5ff7d1f081b5cce9e9d40361c718c07e51ff45",
+    "english_filter": "src/lang.py detect_register == 'en' (read-only import)",
+    "sampling_notes": [
+      "Strata are assigned by eligibility priority, so a query belongs to exactly one stratum.",
+      "Existing LLM labels were used only for stratification and are withheld from annotators.",
+      "Queries are real corpus rows; the sample is not synthetic."
+    ]
+  }
+}

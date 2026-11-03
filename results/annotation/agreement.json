@@ -1,0 +1,129 @@
+{
+  "generated_at": "2026-11-03T12:58:19+00:00",
+  "n_items_in_sample": 300,
+  "n_annotation_records": 0,
+  "annotators": [],
+  "n_items_annotated": 0,
+  "labels_are_human": true,
+  "expert_verified": false,
+  "notes": [
+    "Kappa values here would be computed from human annotation files only.",
+    "The existing LLM labels are compared separately under human_vs_llm.",
+    "Missing labels are handled by complete-case per pair; counts are reported."
+  ],
+  "tasks": {
+    "intent": {
+      "annotators": [],
+      "n_units": 0,
+      "n_units_multi_annotated": 0,
+      "n_units_single_annotated": 0,
+      "pairs": {},
+      "fleiss": null,
+      "fleiss_reason": null,
+      "status": "PENDING",
+      "reason": "fewer than two independent annotators"
+    },
+    "safety": {
+      "annotators": [],
+      "n_units": 0,
+      "n_units_multi_annotated": 0,
+      "n_units_single_annotated": 0,
+      "pairs": {},
+      "fleiss": null,
+      "fleiss_reason": null,
+      "status": "PENDING",
+      "reason": "fewer than two independent annotators"
+    },
+    "out_of_scope": {
+      "annotators": [],
+      "n_units": 0,
+      "n_units_multi_annotated": 0,
+      "n_units_single_annotated": 0,
+      "pairs": {},
+      "fleiss": null,
+      "fleiss_reason": null,
+      "status": "PENDING",
+      "reason": "fewer than two independent annotators"
+    },
+    "ambiguous": {
+      "annotators": [],
+      "n_units": 0,
+      "n_units_multi_annotated": 0,
+      "n_units_single_annotated": 0,
+      "pairs": {},
+      "fleiss": null,
+      "fleiss_reason": null,
+      "status": "PENDING",
+      "reason": "fewer than two independent annotators"
+    },
+    "retrieval_relevance": {
+      "per_candidate": {},
+      "aggregate": {
+        "annotators": [],
+        "n_units": 0,
+        "n_units_multi_annotated": 0,
+        "n_units_single_annotated": 0,
+        "pairs": {},
+        "fleiss": null,
+        "fleiss_reason": null,
+        "status": "PENDING",
+        "reason": "fewer than two independent annotators"
+      },
+      "status": "PENDING"
+    },
+    "answer_quality": {
+      "per_candidate": {},
+      "aggregate": {
+        "annotators": [],
+        "n_units": 0,
+        "n_units_multi_annotated": 0,
+        "n_units_single_annotated": 0,
+        "pairs": {},
+        "fleiss": null,
+        "fleiss_reason": null,
+        "status": "PENDING",
+        "reason": "fewer than two independent annotators"
+      },
+      "status": "PENDING"
+    },
+    "answer_safety": {
+      "per_candidate": {},
+      "aggregate": {
+        "annotators": [],
+        "n_units": 0,
+        "n_units_multi_annotated": 0,
+        "n_units_single_annotated": 0,
+        "pairs": {},
+        "fleiss": null,
+        "fleiss_reason": null,
+        "status": "PENDING",
+        "reason": "fewer than two independent annotators"
+      },
+      "status": "PENDING"
+    }
+  },
+  "human_vs_llm": {
+    "reference": "existing LLM-generated intent labels (Claude), not human or expert labels",
+    "annotators": {},
+    "status": "PENDING",
+    "reason": "no human intent labels available"
+  },
+  "set_tasks": {
+    "multi_intent": {
+      "annotators": [],
+      "n_units": 0,
+      "pairs": {},
+      "metric": "set agreement (kappa is not defined for label sets)",
+      "status": "PENDING"
+    },
+    "missing_context": {
+      "annotators": [],
+      "n_units": 0,
+      "pairs": {},
+      "metric": "set agreement (kappa is not defined for label sets)",
+      "status": "PENDING"
+    }
+  },
+  "status": "PENDING",
+  "reason": "fewer than two independent annotators have returned sheets; no human-human kappa exists yet"
+}

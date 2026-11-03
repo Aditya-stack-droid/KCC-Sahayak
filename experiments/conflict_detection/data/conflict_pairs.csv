@@ -1,0 +1,78 @@
+pair_id,text_a,text_b,gold_conflict,gold_kinds,subset,synthetic,provenance
+d01,Apply urea 50 kg per acre at sowing.,Apply urea 20 kg per acre at sowing.,true,dosage,core,true,hand-authored for the Batch B conflict-detection evaluation; not real advisor data
+d02,Spray 2 ml chlorpyrifos per litre of water.,Spray 5 ml chlorpyrifos per litre of water.,true,dosage,core,true,hand-authored for the Batch B conflict-detection evaluation; not real advisor data
+d03,Mix 20 gm mancozeb in 10 litre water.,Mix 40 gm mancozeb in 10 litre water.,true,dosage,core,true,hand-authored for the Batch B conflict-detection evaluation; not real advisor data
+d04,Apply 1 kg zinc sulphate per bigha.,Apply 4 kg zinc sulphate per bigha.,true,dosage,core,true,hand-authored for the Batch B conflict-detection evaluation; not real advisor data
+d05,Use 500 ml pendimethalin per acre.,Use 1 litre pendimethalin per acre.,true,dosage,core,true,hand-authored for the Batch B conflict-detection evaluation; not real advisor data
+d06,Apply 2 quintal FYM per acre.,Apply 50 kg FYM per acre.,true,dosage,core,true,hand-authored for the Batch B conflict-detection evaluation; not real advisor data
+d07,Dilute 1 ml imidacloprid in 1 litre water.,Dilute 1 ml imidacloprid in 2 litre water.,true,dosage,core,true,hand-authored for the Batch B conflict-detection evaluation; not real advisor data
+d08,Apply 10 kg DAP per acre.,Apply 25 kg DAP per acre.,true,dosage,core,true,hand-authored for the Batch B conflict-detection evaluation; not real advisor data
+d09,Apply 2 g carbendazim per litre.,Apply 1 g carbendazim per litre.,true,dosage,core,true,hand-authored for the Batch B conflict-detection evaluation; not real advisor data
+d10,Apply urea 10 kg per acre.,Apply urea 12 kg per acre.,false,,core,true,hand-authored for the Batch B conflict-detection evaluation; not real advisor data
+d11,Apply urea 2-3 kg per acre.,Apply urea 3 kg per acre.,false,,core,true,hand-authored for the Batch B conflict-detection evaluation; not real advisor data
+d12,Apply 500 gm urea per plant.,Apply 0.5 kg urea per plant.,false,,core,true,hand-authored for the Batch B conflict-detection evaluation; not real advisor data
+d13,Apply 2% urea spray.,Apply 2 percent urea solution.,false,,core,true,hand-authored for the Batch B conflict-detection evaluation; not real advisor data
+d14,Apply 1 kg urea per 2 acres.,Apply 0.5 kg urea per acre.,false,,core,true,hand-authored for the Batch B conflict-detection evaluation; not real advisor data
+d15,Apply 1 kg urea per 2 acres.,Apply 1 kg urea per acre.,true,dosage,core,true,hand-authored for the Batch B conflict-detection evaluation; not real advisor data
+d16,Apply 40 kg urea per acre.,Apply 20 kg urea per 2 acres.,true,dosage,core,true,hand-authored for the Batch B conflict-detection evaluation; not real advisor data
+d17,Apply 5 kg urea.,Apply 5 litre urea.,true,dimension,core,true,hand-authored for the Batch B conflict-detection evaluation; not real advisor data
+d18,Spray 10 gm sulphur per litre.,Spray 10 ml sulphur per litre.,true,dimension,core,true,hand-authored for the Batch B conflict-detection evaluation; not real advisor data
+d19,Spray 2 ml dichlorvos per litre.,Spray 8 ml dichlorvos per litre.,true,dosage,core,true,hand-authored for the Batch B conflict-detection evaluation; not real advisor data
+d20,Apply 4 kg zinc sulphate per acre.,Apply 8 kg zinc sulphate per acre.,true,dosage,core,true,hand-authored for the Batch B conflict-detection evaluation; not real advisor data
+p01,Spray rogor for aphid control.,Spray mancozeb for aphid control.,true,product,core,true,hand-authored for the Batch B conflict-detection evaluation; not real advisor data
+p02,Apply urea at sowing.,Apply DAP at sowing.,true,product,core,true,hand-authored for the Batch B conflict-detection evaluation; not real advisor data
+p03,Use chlorpyrifos 2 ml per litre.,Use imidacloprid 2 ml per litre.,true,product,core,true,hand-authored for the Batch B conflict-detection evaluation; not real advisor data
+p04,Spray neem oil in the evening.,Spray malathion in the evening.,true,product,core,true,hand-authored for the Batch B conflict-detection evaluation; not real advisor data
+p05,Apply captan 3 g per litre.,Apply carbendazim 3 g per litre.,true,product,core,true,hand-authored for the Batch B conflict-detection evaluation; not real advisor data
+p06,Use glyphosate before sowing.,Use pendimethalin before sowing.,true,product,core,true,hand-authored for the Batch B conflict-detection evaluation; not real advisor data
+p07,Spray copper oxychloride.,Spray bordeaux mixture.,true,product,core,true,hand-authored for the Batch B conflict-detection evaluation; not real advisor data
+p08,Apply MOP at flowering.,Apply potash at flowering.,false,,core,true,hand-authored for the Batch B conflict-detection evaluation; not real advisor data
+p09,Apply urea or DAP.,Apply urea.,false,,core,true,hand-authored for the Batch B conflict-detection evaluation; not real advisor data
+p10,Add vermicompost to the nursery.,Add FYM to the nursery.,true,product,core,true,hand-authored for the Batch B conflict-detection evaluation; not real advisor data
+p11,Apply urea.,Contact the agriculture officer for details.,false,,core,true,hand-authored for the Batch B conflict-detection evaluation; not real advisor data
+p12,Spray neem oil.,Spray neem kernel extract.,false,,core,true,hand-authored for the Batch B conflict-detection evaluation; not real advisor data
+p13,Apply 50 kg urea per acre.,Apply 50 kg DAP per acre.,true,product,core,true,hand-authored for the Batch B conflict-detection evaluation; not real advisor data
+p14,Spray rogor 2 ml per litre.,Spray mancozeb 5 gm per litre.,true,product,core,true,hand-authored for the Batch B conflict-detection evaluation; not real advisor data
+p15,Apply ammonium sulphate.,Apply urea.,true,product,core,true,hand-authored for the Batch B conflict-detection evaluation; not real advisor data
+b01,Apply 50 kg urea per acre.,Apply 50 kg urea per bigha.,true,basis,core,true,hand-authored for the Batch B conflict-detection evaluation; not real advisor data
+b02,Apply 50 kg urea per hectare.,Apply 50 kg urea per acre.,true,dosage,core,true,hand-authored for the Batch B conflict-detection evaluation; not real advisor data
+b03,Apply 2 kg urea per plant.,Apply 2 kg urea per acre.,true,basis,core,true,hand-authored for the Batch B conflict-detection evaluation; not real advisor data
+b04,Apply 2 kg zinc sulphate per bigha.,Apply 2 kg zinc sulphate per acre.,true,basis,core,true,hand-authored for the Batch B conflict-detection evaluation; not real advisor data
+b05,Apply 1 kg urea per kanal.,Apply 1 kg urea per hectare.,true,basis,core,true,hand-authored for the Batch B conflict-detection evaluation; not real advisor data
+b06,Spray 2 ml chlorpyrifos per litre.,Spray 2 ml chlorpyrifos per 10 litre.,true,dosage,core,true,hand-authored for the Batch B conflict-detection evaluation; not real advisor data
+b07,Spray 20 gm copper oxychloride per litre.,Spray 20 ml copper oxychloride per litre.,true,dimension,core,true,hand-authored for the Batch B conflict-detection evaluation; not real advisor data
+b08,Apply 10 kg DAP.,Apply 10 litre DAP.,true,dimension,core,true,hand-authored for the Batch B conflict-detection evaluation; not real advisor data
+i01,Spray after 5 days.,Spray after 15 days.,true,interval,core,true,hand-authored for the Batch B conflict-detection evaluation; not real advisor data
+i02,Repeat after 10 days.,Repeat after 12 days.,false,,core,true,hand-authored for the Batch B conflict-detection evaluation; not real advisor data
+i03,Spray at an interval of 5 days.,Spray at an interval of 15 days.,true,interval,core,true,hand-authored for the Batch B conflict-detection evaluation; not real advisor data
+i04,Apply again after 7 days.,Apply again after 7 days.,false,,core,true,hand-authored for the Batch B conflict-detection evaluation; not real advisor data
+i05,Apply again after 5 days.,Apply again after 20 days.,true,interval,core,true,hand-authored for the Batch B conflict-detection evaluation; not real advisor data
+i06,Spray at 5 day interval.,Spray at 5 day interval.,false,,core,true,hand-authored for the Batch B conflict-detection evaluation; not real advisor data
+x01,Do not spray chlorpyrifos.,Spray chlorpyrifos 2 ml per litre.,true,polarity,core,true,hand-authored for the Batch B conflict-detection evaluation; not real advisor data
+x02,Avoid urea at sowing.,Apply urea at sowing.,true,polarity,core,true,hand-authored for the Batch B conflict-detection evaluation; not real advisor data
+x03,Do not spray chlorpyrifos.,Do not apply chlorpyrifos.,false,,core,true,hand-authored for the Batch B conflict-detection evaluation; not real advisor data
+x04,Never use glyphosate.,Glyphosate is not recommended.,false,,core,true,hand-authored for the Batch B conflict-detection evaluation; not real advisor data
+x05,Do not apply urea; instead spray neem oil.,Spray neem oil.,false,,core,true,hand-authored for the Batch B conflict-detection evaluation; not real advisor data
+x06,Do not use DAP.,Use urea.,true,product,core,true,hand-authored for the Batch B conflict-detection evaluation; not real advisor data
+x07,Do not apply urea.,Apply 20 kg urea per acre.,true,polarity,core,true,hand-authored for the Batch B conflict-detection evaluation; not real advisor data
+x08,Avoid chlorpyrifos.,Chlorpyrifos 2 ml per litre is effective.,true,polarity,core,true,hand-authored for the Batch B conflict-detection evaluation; not real advisor data
+c01,Apply urea 50 kg per acre.,Sell wheat at the mandi.,false,,core,true,hand-authored for the Batch B conflict-detection evaluation; not real advisor data
+c02,Apply urea 50 kg per acre at sowing.,Apply 50 kg urea per acre.,false,,core,true,hand-authored for the Batch B conflict-detection evaluation; not real advisor data
+c03,Apply urea 50 kg per acre in wheat.,Apply urea 50 kg per acre in paddy.,false,,core,true,hand-authored for the Batch B conflict-detection evaluation; not real advisor data
+c04,Available in 500 gm pack.,Apply 500 gm urea per acre.,false,,core,true,hand-authored for the Batch B conflict-detection evaluation; not real advisor data
+c05,Urea price is Rs 266 per bag.,Apply 50 kg urea per acre.,false,,core,true,hand-authored for the Batch B conflict-detection evaluation; not real advisor data
+c06,Contact the KVK for soil testing.,Visit the district agriculture office.,false,,core,true,hand-authored for the Batch B conflict-detection evaluation; not real advisor data
+c07,Apply 2 kg urea per acre.,Apply 2 kg urea per bigha.,true,basis,core,true,hand-authored for the Batch B conflict-detection evaluation; not real advisor data
+c08,Spray 2 ml per litre in the evening.,Spray 2 ml per litre.,false,,core,true,hand-authored for the Batch B conflict-detection evaluation; not real advisor data
+c09,Apply 50 kg urea per acre.,Apply 50 kg urea per acre.,false,,core,true,hand-authored for the Batch B conflict-detection evaluation; not real advisor data
+c10,Mix 2 ml neem oil in 1 litre water.,Mix 2 ml neem oil in 1 litre water at dusk.,false,,core,true,hand-authored for the Batch B conflict-detection evaluation; not real advisor data
+h01,Spray r0gor for aphid control.,Spray mancozeb for aphid control.,true,product,challenge,true,hand-authored for the Batch B conflict-detection evaluation; not real advisor data
+h02,Apply 2 sachet urea per acre.,Apply 5 sachet urea per acre.,true,dosage,challenge,true,hand-authored for the Batch B conflict-detection evaluation; not real advisor data
+h03,Apply 1 bag urea per acre.,Apply 3 bag urea per acre.,true,dosage,challenge,true,hand-authored for the Batch B conflict-detection evaluation; not real advisor data
+h04,Do not spray any chemical.,Spray chlorpyrifos 2 ml per litre.,true,polarity,challenge,true,hand-authored for the Batch B conflict-detection evaluation; not real advisor data
+h05,यूरिया 50 किलो प्रति एकड़ डालें।,यूरिया 50 किलो प्रति बीघा डालें।,true,basis,challenge,true,hand-authored for the Batch B conflict-detection evaluation; not real advisor data
+h06,यूरिया २ किलो प्रति एकड़ डालें।,यूरिया ५ किलो प्रति एकड़ डालें।,true,dosage,challenge,true,hand-authored for the Batch B conflict-detection evaluation; not real advisor data
+h07,Apply ur3a 50 kg per acre.,Apply urea 20 kg per acre.,true,dosage,challenge,true,hand-authored for the Batch B conflict-detection evaluation; not real advisor data
+h08,Spray chlorpyriphos 2 ml per litre.,Spray chlorpyrifos 5 ml per litre.,true,dosage,challenge,true,hand-authored for the Batch B conflict-detection evaluation; not real advisor data
+h09,Apply 2 kg urea per acre.,Apply 2 kg urea per acre.,false,,challenge,true,hand-authored for the Batch B conflict-detection evaluation; not real advisor data
+h10,Spray 2 ml per litre of the same insecticide.,Spray 5 ml per litre of the same insecticide.,true,dosage,challenge,true,hand-authored for the Batch B conflict-detection evaluation; not real advisor data

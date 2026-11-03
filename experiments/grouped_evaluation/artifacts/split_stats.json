@@ -1,0 +1,220 @@
+{
+  "corpus": {
+    "n_splits": 10,
+    "counts": {
+      "train": 111213,
+      "val": 13831,
+      "test": 13831
+    },
+    "group_checks": {
+      "train_test_group_overlap": 0,
+      "train_val_group_overlap": 0,
+      "val_test_group_overlap": 0
+    },
+    "n_groups": 48674,
+    "class_share": {
+      "Plant Protection": 0.3875,
+      "Other": 0.2986,
+      "Nutrient Management": 0.1431,
+      "Varietal Information": 0.0463,
+      "Government Scheme": 0.0461,
+      "Animal Husbandry": 0.0344,
+      "Fisheries": 0.0226,
+      "Cultural Practices": 0.0133,
+      "Market Price": 0.0049,
+      "Weather": 0.0032
+    }
+  },
+  "annotated": {
+    "0": {
+      "n_train": 2996,
+      "n_test": 500,
+      "n_train_aug": 1038,
+      "n_test_aug_excluded": 162,
+      "group_checks": {
+        "train_test_group_overlap": 0,
+        "train_val_group_overlap": 0,
+        "val_test_group_overlap": 0
+      },
+      "class_distribution": {
+        "train": {
+          "Animal Husbandry": 378,
+          "Cultural Practices": 463,
+          "Fisheries": 235,
+          "Government Scheme": 288,
+          "Market Price": 54,
+          "Nutrient Management": 393,
+          "Other": 153,
+          "Plant Protection": 677,
+          "Varietal Information": 226,
+          "Weather": 129
+        },
+        "test": {
+          "Animal Husbandry": 63,
+          "Cultural Practices": 77,
+          "Fisheries": 39,
+          "Government Scheme": 48,
+          "Market Price": 9,
+          "Nutrient Management": 65,
+          "Other": 26,
+          "Plant Protection": 113,
+          "Varietal Information": 38,
+          "Weather": 22
+        }
+      },
+      "test_class_max_abs_share_deviation": 0.001
+    },
+    "1": {
+      "n_train": 2995,
+      "n_test": 501,
+      "n_train_aug": 1065,
+      "n_test_aug_excluded": 135,
+      "group_checks": {
+        "train_test_group_overlap": 0,
+        "train_val_group_overlap": 0,
+        "val_test_group_overlap": 0
+      },
+      "class_distribution": {
+        "train": {
+          "Animal Husbandry": 378,
+          "Cultural Practices": 462,
+          "Fisheries": 235,
+          "Government Scheme": 288,
+          "Market Price": 54,
+          "Nutrient Management": 392,
+          "Other": 153,
+          "Plant Protection": 678,
+          "Varietal Information": 226,
+          "Weather": 129
+        },
+        "test": {
+          "Animal Husbandry": 63,
+          "Cultural Practices": 78,
+          "Fisheries": 39,
+          "Government Scheme": 48,
+          "Market Price": 9,
+          "Nutrient Management": 66,
+          "Other": 26,
+          "Plant Protection": 112,
+          "Varietal Information": 38,
+          "Weather": 22
+        }
+      },
+      "test_class_max_abs_share_deviation": 0.0024
+    },
+    "2": {
+      "n_train": 2996,
+      "n_test": 500,
+      "n_train_aug": 1005,
+      "n_test_aug_excluded": 195,
+      "group_checks": {
+        "train_test_group_overlap": 0,
+        "train_val_group_overlap": 0,
+        "val_test_group_overlap": 0
+      },
+      "class_distribution": {
+        "train": {
+          "Animal Husbandry": 378,
+          "Cultural Practices": 462,
+          "Fisheries": 235,
+          "Government Scheme": 288,
+          "Market Price": 54,
+          "Nutrient Management": 393,
+          "Other": 153,
+          "Plant Protection": 678,
+          "Varietal Information": 226,
+          "Weather": 129
+        },
+        "test": {
+          "Animal Husbandry": 63,
+          "Cultural Practices": 78,
+          "Fisheries": 39,
+          "Government Scheme": 48,
+          "Market Price": 9,
+          "Nutrient Management": 65,
+          "Other": 26,
+          "Plant Protection": 112,
+          "Varietal Information": 38,
+          "Weather": 22
+        }
+      },
+      "test_class_max_abs_share_deviation": 0.002
+    },
+    "3": {
+      "n_train": 2996,
+      "n_test": 500,
+      "n_train_aug": 1029,
+      "n_test_aug_excluded": 171,
+      "group_checks": {
+        "train_test_group_overlap": 0,
+        "train_val_group_overlap": 0,
+        "val_test_group_overlap": 0
+      },
+      "class_distribution": {
+        "train": {
+          "Animal Husbandry": 378,
+          "Cultural Practices": 463,
+          "Fisheries": 234,
+          "Government Scheme": 288,
+          "Market Price": 54,
+          "Nutrient Management": 392,
+          "Other": 154,
+          "Plant Protection": 677,
+          "Varietal Information": 226,
+          "Weather": 130
+        },
+        "test": {
+          "Animal Husbandry": 63,
+          "Cultural Practices": 77,
+          "Fisheries": 40,
+          "Government Scheme": 48,
+          "Market Price": 9,
+          "Nutrient Management": 66,
+          "Other": 25,
+          "Plant Protection": 113,
+          "Varietal Information": 38,
+          "Weather": 21
+        }
+      },
+      "test_class_max_abs_share_deviation": 0.0016
+    },
+    "4": {
+      "n_train": 2996,
+      "n_test": 500,
+      "n_train_aug": 1035,
+      "n_test_aug_excluded": 165,
+      "group_checks": {
+        "train_test_group_overlap": 0,
+        "train_val_group_overlap": 0,
+        "val_test_group_overlap": 0
+      },
+      "class_distribution": {
+        "train": {
+          "Animal Husbandry": 378,
+          "Cultural Practices": 462,
+          "Fisheries": 235,
+          "Government Scheme": 288,
+          "Market Price": 54,
+          "Nutrient Management": 393,
+          "Other": 154,
+          "Plant Protection": 677,
+          "Varietal Information": 226,
+          "Weather": 129
+        },
+        "test": {
+          "Animal Husbandry": 63,
+          "Cultural Practices": 78,
+          "Fisheries": 39,
+          "Government Scheme": 48,
+          "Market Price": 9,
+          "Nutrient Management": 65,
+          "Other": 25,
+          "Plant Protection": 113,
+          "Varietal Information": 38,
+          "Weather": 22
+        }
+      },
+      "test_class_max_abs_share_deviation": 0.0015
+    }
+  }
+}

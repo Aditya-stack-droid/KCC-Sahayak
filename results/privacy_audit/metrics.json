@@ -1,0 +1,525 @@
+{
+  "dataset": {
+    "path": "experiments/privacy/data/synthetic_pii_eval.csv",
+    "n_examples": 87,
+    "synthetic": true,
+    "languages": {
+      "en": 47,
+      "hi": 21,
+      "hinglish": 19
+    },
+    "entity_counts": {
+      "AADHAAR": 10,
+      "BANK_ACCOUNT": 4,
+      "EMAIL": 8,
+      "IFSC": 2,
+      "PERSON": 22,
+      "PHONE": 23,
+      "URL": 1
+    },
+    "negative_or_ambiguous_examples": 31
+  },
+  "synthetic": true,
+  "n_examples": 87,
+  "policies": {
+    "balanced": {
+      "policy": "balanced",
+      "synthetic": true,
+      "matching": "strict exact span + entity type",
+      "overall": {
+        "tp": 65,
+        "fp": 1,
+        "fn": 5,
+        "precision": 0.9848,
+        "recall": 0.9286,
+        "f1": 0.9559,
+        "documents": 87,
+        "gold_entities": 70,
+        "predicted_entities": 66,
+        "exact_document_matches": 82,
+        "exact_document_rate": 0.9425,
+        "false_positive_rate_document_level": 0.0,
+        "negative_documents": 31,
+        "negative_documents_with_false_positive": 0,
+        "f1_95ci": {
+          "low": 0.9077,
+          "high": 0.9882,
+          "mean": 0.955,
+          "n_boot": 2000,
+          "seed": 0
+        }
+      },
+      "per_type": {
+        "PHONE": {
+          "tp": 21,
+          "fp": 0,
+          "fn": 2,
+          "precision": 1.0,
+          "recall": 0.913,
+          "f1": 0.9545,
+          "gold": 23,
+          "pred": 21
+        },
+        "EMAIL": {
+          "tp": 8,
+          "fp": 0,
+          "fn": 0,
+          "precision": 1.0,
+          "recall": 1.0,
+          "f1": 1.0,
+          "gold": 8,
+          "pred": 8
+        },
+        "PERSON": {
+          "tp": 19,
+          "fp": 1,
+          "fn": 3,
+          "precision": 0.95,
+          "recall": 0.8636,
+          "f1": 0.9048,
+          "gold": 22,
+          "pred": 20
+        },
+        "AADHAAR": {
+          "tp": 10,
+          "fp": 0,
+          "fn": 0,
+          "precision": 1.0,
+          "recall": 1.0,
+          "f1": 1.0,
+          "gold": 10,
+          "pred": 10
+        },
+        "IFSC": {
+          "tp": 2,
+          "fp": 0,
+          "fn": 0,
+          "precision": 1.0,
+          "recall": 1.0,
+          "f1": 1.0,
+          "gold": 2,
+          "pred": 2
+        },
+        "BANK_ACCOUNT": {
+          "tp": 4,
+          "fp": 0,
+          "fn": 0,
+          "precision": 1.0,
+          "recall": 1.0,
+          "f1": 1.0,
+          "gold": 4,
+          "pred": 4
+        },
+        "URL": {
+          "tp": 1,
+          "fp": 0,
+          "fn": 0,
+          "precision": 1.0,
+          "recall": 1.0,
+          "f1": 1.0,
+          "gold": 1,
+          "pred": 1
+        }
+      },
+      "per_language": {
+        "en": {
+          "documents": 47,
+          "negative_documents": 19,
+          "negative_with_fp": 0,
+          "precision": 1.0,
+          "recall": 0.8857,
+          "f1": 0.9394,
+          "fpr_document_level": 0.0
+        },
+        "hinglish": {
+          "documents": 19,
+          "negative_documents": 5,
+          "negative_with_fp": 0,
+          "precision": 0.9474,
+          "recall": 0.9474,
+          "f1": 0.9474,
+          "fpr_document_level": 0.0
+        },
+        "hi": {
+          "documents": 21,
+          "negative_documents": 7,
+          "negative_with_fp": 0,
+          "precision": 1.0,
+          "recall": 1.0,
+          "f1": 1.0,
+          "fpr_document_level": 0.0
+        }
+      },
+      "errors": [
+        {
+          "id": "en-name-initials",
+          "language": "en",
+          "gold_types": [
+            "PERSON"
+          ],
+          "pred_types": [],
+          "false_positive_spans": [],
+          "false_negative_spans": [
+            "PERSON@11-23"
+          ],
+          "gold_entities": [
+            "PERSON"
+          ],
+          "notes": "hard: initials are not supported by the name heuristics",
+          "redacted_text": "My name is [PERSON]."
+        },
+        {
+          "id": "en-honorific-lowercase",
+          "language": "en",
+          "gold_types": [
+            "PERSON"
+          ],
+          "pred_types": [],
+          "false_positive_spans": [],
+          "false_negative_spans": [
+            "PERSON@4-9"
+          ],
+          "gold_entities": [
+            "PERSON"
+          ],
+          "notes": "hard: honorific matching is case-sensitive",
+          "redacted_text": "mr. [PERSON] advised a neem spray."
+        },
+        {
+          "id": "en-phone-dots",
+          "language": "en",
+          "gold_types": [
+            "PHONE"
+          ],
+          "pred_types": [],
+          "false_positive_spans": [],
+          "false_negative_spans": [
+            "PHONE@5-16"
+          ],
+          "gold_entities": [
+            "PHONE"
+          ],
+          "notes": "hard: dot-grouped mobile is not supported",
+          "redacted_text": "Call [PHONE] now."
+        },
+        {
+          "id": "en-phone-trunk-zero",
+          "language": "en",
+          "gold_types": [
+            "PHONE"
+          ],
+          "pred_types": [],
+          "false_positive_spans": [],
+          "false_negative_spans": [
+            "PHONE@5-16"
+          ],
+          "gold_entities": [
+            "PHONE"
+          ],
+          "notes": "hard: Indian trunk prefix 0 is not supported",
+          "redacted_text": "Call [PHONE] now."
+        },
+        {
+          "id": "hin-name-lowercase-surname",
+          "language": "hinglish",
+          "gold_types": [
+            "PERSON"
+          ],
+          "pred_types": [
+            "PERSON"
+          ],
+          "false_positive_spans": [
+            "PERSON@10-15"
+          ],
+          "false_negative_spans": [
+            "PERSON@10-22"
+          ],
+          "gold_entities": [
+            "PERSON"
+          ],
+          "notes": "hard: lowercase surname is only partially captured",
+          "redacted_text": "mera naam [PERSON] hai"
+        }
+      ]
+    },
+    "strict": {
+      "policy": "strict",
+      "synthetic": true,
+      "matching": "strict exact span + entity type",
+      "overall": {
+        "tp": 63,
+        "fp": 1,
+        "fn": 7,
+        "precision": 0.9844,
+        "recall": 0.9,
+        "f1": 0.9403,
+        "documents": 87,
+        "gold_entities": 70,
+        "predicted_entities": 64,
+        "exact_document_matches": 80,
+        "exact_document_rate": 0.9195,
+        "false_positive_rate_document_level": 0.0,
+        "negative_documents": 31,
+        "negative_documents_with_false_positive": 0,
+        "f1_95ci": {
+          "low": 0.8868,
+          "high": 0.9793,
+          "mean": 0.9394,
+          "n_boot": 2000,
+          "seed": 0
+        }
+      },
+      "per_type": {
+        "PHONE": {
+          "tp": 19,
+          "fp": 0,
+          "fn": 4,
+          "precision": 1.0,
+          "recall": 0.8261,
+          "f1": 0.9048,
+          "gold": 23,
+          "pred": 19
+        },
+        "EMAIL": {
+          "tp": 8,
+          "fp": 0,
+          "fn": 0,
+          "precision": 1.0,
+          "recall": 1.0,
+          "f1": 1.0,
+          "gold": 8,
+          "pred": 8
+        },
+        "PERSON": {
+          "tp": 19,
+          "fp": 1,
+          "fn": 3,
+          "precision": 0.95,
+          "recall": 0.8636,
+          "f1": 0.9048,
+          "gold": 22,
+          "pred": 20
+        },
+        "AADHAAR": {
+          "tp": 10,
+          "fp": 0,
+          "fn": 0,
+          "precision": 1.0,
+          "recall": 1.0,
+          "f1": 1.0,
+          "gold": 10,
+          "pred": 10
+        },
+        "IFSC": {
+          "tp": 2,
+          "fp": 0,
+          "fn": 0,
+          "precision": 1.0,
+          "recall": 1.0,
+          "f1": 1.0,
+          "gold": 2,
+          "pred": 2
+        },
+        "BANK_ACCOUNT": {
+          "tp": 4,
+          "fp": 0,
+          "fn": 0,
+          "precision": 1.0,
+          "recall": 1.0,
+          "f1": 1.0,
+          "gold": 4,
+          "pred": 4
+        },
+        "URL": {
+          "tp": 1,
+          "fp": 0,
+          "fn": 0,
+          "precision": 1.0,
+          "recall": 1.0,
+          "f1": 1.0,
+          "gold": 1,
+          "pred": 1
+        }
+      },
+      "per_language": {
+        "en": {
+          "documents": 47,
+          "negative_documents": 19,
+          "negative_with_fp": 0,
+          "precision": 1.0,
+          "recall": 0.8571,
+          "f1": 0.9231,
+          "fpr_document_level": 0.0
+        },
+        "hinglish": {
+          "documents": 19,
+          "negative_documents": 5,
+          "negative_with_fp": 0,
+          "precision": 0.9444,
+          "recall": 0.8947,
+          "f1": 0.9189,
+          "fpr_document_level": 0.0
+        },
+        "hi": {
+          "documents": 21,
+          "negative_documents": 7,
+          "negative_with_fp": 0,
+          "precision": 1.0,
+          "recall": 1.0,
+          "f1": 1.0,
+          "fpr_document_level": 0.0
+        }
+      },
+      "errors": [
+        {
+          "id": "en-phone-bare",
+          "language": "en",
+          "gold_types": [
+            "PHONE"
+          ],
+          "pred_types": [],
+          "false_positive_spans": [],
+          "false_negative_spans": [
+            "PHONE@6-16"
+          ],
+          "gold_entities": [
+            "PHONE"
+          ],
+          "notes": "ambiguous: standalone 10-digit number; balanced policy accepts",
+          "redacted_text": "Reach [PHONE]."
+        },
+        {
+          "id": "en-name-initials",
+          "language": "en",
+          "gold_types": [
+            "PERSON"
+          ],
+          "pred_types": [],
+          "false_positive_spans": [],
+          "false_negative_spans": [
+            "PERSON@11-23"
+          ],
+          "gold_entities": [
+            "PERSON"
+          ],
+          "notes": "hard: initials are not supported by the name heuristics",
+          "redacted_text": "My name is [PERSON]."
+        },
+        {
+          "id": "en-honorific-lowercase",
+          "language": "en",
+          "gold_types": [
+            "PERSON"
+          ],
+          "pred_types": [],
+          "false_positive_spans": [],
+          "false_negative_spans": [
+            "PERSON@4-9"
+          ],
+          "gold_entities": [
+            "PERSON"
+          ],
+          "notes": "hard: honorific matching is case-sensitive",
+          "redacted_text": "mr. [PERSON] advised a neem spray."
+        },
+        {
+          "id": "en-phone-dots",
+          "language": "en",
+          "gold_types": [
+            "PHONE"
+          ],
+          "pred_types": [],
+          "false_positive_spans": [],
+          "false_negative_spans": [
+            "PHONE@5-16"
+          ],
+          "gold_entities": [
+            "PHONE"
+          ],
+          "notes": "hard: dot-grouped mobile is not supported",
+          "redacted_text": "Call [PHONE] now."
+        },
+        {
+          "id": "en-phone-trunk-zero",
+          "language": "en",
+          "gold_types": [
+            "PHONE"
+          ],
+          "pred_types": [],
+          "false_positive_spans": [],
+          "false_negative_spans": [
+            "PHONE@5-16"
+          ],
+          "gold_entities": [
+            "PHONE"
+          ],
+          "notes": "hard: Indian trunk prefix 0 is not supported",
+          "redacted_text": "Call [PHONE] now."
+        },
+        {
+          "id": "hin-name-lowercase-surname",
+          "language": "hinglish",
+          "gold_types": [
+            "PERSON"
+          ],
+          "pred_types": [
+            "PERSON"
+          ],
+          "false_positive_spans": [
+            "PERSON@10-15"
+          ],
+          "false_negative_spans": [
+            "PERSON@10-22"
+          ],
+          "gold_entities": [
+            "PERSON"
+          ],
+          "notes": "hard: lowercase surname is only partially captured",
+          "redacted_text": "mera naam [PERSON] hai"
+        },
+        {
+          "id": "hin-multi",
+          "language": "hinglish",
+          "gold_types": [
+            "EMAIL",
+            "PERSON",
+            "PHONE"
+          ],
+          "pred_types": [
+            "EMAIL",
+            "PERSON"
+          ],
+          "false_positive_spans": [],
+          "false_negative_spans": [
+            "PHONE@10-20"
+          ],
+          "gold_entities": [
+            "PERSON",
+            "PHONE",
+            "EMAIL"
+          ],
+          "notes": "positive: multiple entities",
+          "redacted_text": "[PERSON] ji, [PHONE], [EMAIL]"
+        }
+      ]
+    }
+  },
+  "created_at": "2026-11-03T11:21:38+00:00",
+  "environment": {
+    "python": "3.12.13",
+    "platform": "macOS-26.6.2-arm64-arm-64bit",
+    "machine": "arm64",
+    "versions": {
+      "numpy": "2.5.4",
+      "pandas": "3.1.0",
+      "sklearn": "1.9.1",
+      "scipy": "1.18.1",
+      "sentence_transformers": "6.2.0",
+      "faiss": "1.15.1",
+      "joblib": "1.6.0",
+      "torch": "2.15.0",
+      "transformers": "5.22.1",
+      "pytest": "9.2.0"
+    }
+  }
+}

@@ -2,6 +2,7 @@
 
 **Repository:** `KCC-Sahayak` (branch `improvements`, single commit `cf6aab3`, “Initial commit from ZIP source”)
 **Audit date:** 1 November 2026
+**Last updated:** 3 November 2026 — post-audit improvement status added as §10; §11 remains the artefact index.
 **Auditor role:** independent technical audit; no application, training script, dataset or model file was modified.
 **Companion documents:** `KCC_Sahayak_Research_Report.pdf`, `KCC_Sahayak_Research_Report.docx`, `KCC_Sahayak_Presentation.pptx`, `KCC_Sahayak_Diagrams/`.
 
@@ -20,6 +21,8 @@
 | Are there unsupported claims? | **Yes.** The paper’s “only partly human-verified” and “no personal data” statements, the use of 124,987 as the “cleaned” corpus size, and several stale generated numbers are unsupported or incorrect. |
 
 **Most important finding:** the quantitative results are more honest than the surrounding prose. The model is real and the main metrics reproduce; the evidence base (labels, gold set, speech) is synthetic, and the paper overstates the extent of human verification and privacy protection.
+
+**Update, 3 November 2026:** Batch A (grouped, leakage-resistant evaluation) and Batch B (privacy, annotation infrastructure, answer conflict detection, adversarial safety evaluation) were added **around** the audited system. Nothing in `src/`, `backend/`, `data/`, `models/` or any original result file was changed. The findings above remain the audit of record for the shipped project; current status, newly verified metrics, known limitations and remaining gaps are in §10.
 
 ---
 
@@ -156,7 +159,7 @@ Status labels: **VERIFIED** (independently reproduced), **PARTIALLY VERIFIED** (
 | Calibration ECE silver 0.0177→0.0237 | `calibration.json` | Yes | **0.0177 / 0.0237** | VERIFIED | Recomputed from saved head |
 | Calibration ECE out-of-fold 0.0381→0.0060 | `calibration.json` | No | — | NOT REPRODUCED | Requires 5-fold refit; not attempted |
 | Encoder comparison: IndicBERTv2 91.3% > deployed 89.3% | `encoder_comparison.json` | No | — | PARTIALLY VERIFIED | File declares itself partial; fine-tuning not run |
-| 41 unit/API tests pass | `tests/` | Yes | **41 passed** | VERIFIED | `pytest -q` |
+| 41 unit/API tests pass | `tests/` | Yes | **41 passed** | VERIFIED | `pytest -q` at audit time; the suite is now 161 tests across legacy + Batch A/B files (§10.2) |
 | Demo query “which tomato variety is good for me?” auto-answered | `README.md` | Yes | AUTO_ANSWER, similarity 0.845 | VERIFIED | Run with `OMP_NUM_THREADS=1`; Hinglish pest and Hindi price queries escalated |
 | Original 99% accuracy claim | Earlier project version | No | Keyword agreement only | INCORRECT | Withdrawn in README; same model scores 65.7% against meaning labels |
 | Paper: 8.2% call-log answers | `paper/generated/numbers.tex` | Yes | **8.75%** | INCORRECT | Stale generated asset |
@@ -382,7 +385,236 @@ You should **not** claim:
 
 ---
 
-## 10. Audit artefact index
+## 10. Post-audit improvement status (Batch A – Improvement 2), 3 November 2026
+
+This section records work completed **after** the audit above. It is additive:
+the audited code paths, datasets, models and original result files are
+unchanged, and no original finding is retracted. Everything is classified by
+evidence type; no result in this section is human-validated.
+
+### 10.1 Status at a glance
+
+| Workstream | Status | Location | Evidence class |
+|---|---|---|---|
+| Batch A — grouped, leakage-resistant evaluation | Complete | `experiments/grouped_evaluation/`, `results/improved_evaluation/` | Corpus evaluation with LLM labels; relevance is a weak-label topical proxy |
+| Batch B Phase 1 — PII detection/redaction | Complete (synthetic evaluation) | `experiments/privacy/`, `results/privacy_audit/` | Synthetic, same-author test set |
+| Batch B Phase 2 — human annotation infrastructure | Infrastructure complete; **annotation PENDING** | `experiments/annotation/`, `results/annotation/` | No human labels exist yet |
+| Improvement 1 — answer conflict detection | Complete (synthetic pairs + descriptive corpus scan) | `experiments/conflict_detection/`, `results/conflict_detection/` | Synthetic authored pairs; rule-fire rates |
+| Improvement 2 — adversarial safety evaluation | Complete (synthetic adversarial set) | `experiments/safety_evaluation/`, `results/safety_evaluation/` | Synthetic authored cases; production rules unmodified |
+| Improvement 3 — out-of-scope detection | **Not started** | — | — |
+
+### 10.2 Verified test counts
+
+| Suite | File(s) | Tests |
+|---|---|---:|
+| Original project | `tests/test_api.py` (10), `test_gate.py` (22), `test_text_utils.py` (9) | **41** |
+| Batch A | `tests/unit/test_grouped_evaluation.py` | 11 |
+| Pre-Batch-B total | — | **52** |
+| Batch B Phase 1 | `tests/unit/test_privacy.py` | 36 |
+| Batch B Phase 2 | `tests/unit/test_annotation.py` | 30 |
+| Improvement 1 | `tests/unit/test_conflict_detection.py` | 30 |
+| Improvement 2 | `tests/unit/test_adversarial_safety.py` | 13 |
+| **Current full suite** | `pytest -q` with `OMP_NUM_THREADS=1` | **161 passed** |
+
+**Correction:** intermediate Batch B summaries described “52 original
+tests”. That label was wrong: 52 was the pre-Batch-B total (41 original +
+11 Batch A). The original suite has always been 41 tests. The mislabel did not
+affect any metric or pass/fail result; it is corrected here and in the
+Batch B experiment log.
+
+### 10.3 Batch A — grouped evaluation (corpus, LLM labels)
+
+Grouped corpus split (exact-normalised-question + MiniLM cosine ≥ 0.95,
+transitive union-find; `StratifiedGroupKFold`): **125,044** index rows,
+**13,831** test rows. Leakage after grouping: **0.09%** of test queries have a
+≥0.95 neighbour in the index (69.94% ≥0.90; 6.15% below 0.80).
+
+Intent refit (MiniLM + char n-gram TF-IDF → LR), five seeds:
+
+| Metric | Mean ± SD |
+|---|---|
+| Accuracy | **0.9372 ± 0.0045** |
+| Macro F1 | **0.9205 ± 0.0048** |
+| Weighted F1 | 0.9358 ± 0.0047 |
+| Accuracy without paraphrases | 0.9372 ± 0.0054 |
+
+Novelty buckets (seed 0 counts): near-duplicate 78 → 0.9630 ± 0.0219;
+similar 236 → 0.9580 ± 0.0122; novel 186 → **0.9025 ± 0.0107**.
+
+Retrieval (dense, all 13,831 test rows): topic match@1 **0.8519** (95% CI
+[0.8462, 0.8576]), Recall@5 0.9508, MRR@10 0.8961, nDCG@5 0.9071, answer
+token-F1 0.3213. On the identical 3,000-query sample: dense 0.8403 vs hybrid
+(α=0.4) **0.8733** topic match@1; answer F1 0.3220 vs 0.3800. Novel-query topic
+match@1 0.7812.
+
+Caveat unchanged from the audit: labels are LLM-generated and relevance is a
+weak-label topical proxy, so these numbers describe retrieval of same-topic
+logged answers, **not** agronomic correctness. The original row-level reference
+(93.55% silver; 70.73% near-duplicate share) is not directly comparable.
+
+### 10.4 Batch B Phase 1 — privacy (synthetic)
+
+87 hand-authored synthetic examples (47 English, 21 Hindi, 19 Hinglish;
+70 gold entities; 31 negative/ambiguous), strict exact span+type matching:
+
+| Policy | TP | FP | FN | Precision | Recall | F1 | F1 95% CI |
+|---|---:|---:|---:|---:|---:|---:|---|
+| balanced | 65 | 1 | 5 | 0.9848 | 0.9286 | **0.9559** | [0.9077, 0.9882] |
+| strict | 63 | 1 | 7 | 0.9844 | 0.9000 | 0.9403 | [0.8868, 0.9793] |
+
+Document-level false-positive rate is 0.0 on 31 negative documents. These are
+synthetic, same-author results; **no corpus prevalence or recall claim is made**,
+and redaction is not integrated into the production gate or backend.
+
+### 10.5 Batch B Phase 2 — annotation infrastructure (PENDING)
+
+The workflow exists and is tested (300-item stratified English sample, two
+independent blinded annotators, Cohen/Fleiss kappa, confusion matrices,
+disagreement and adjudication tracking, QC, offline UI). **No human has labelled
+any item**: `results/annotation/agreement.json` and `qc.json` both report
+`status: PENDING`, all pair tables are empty and no adjudication exists.
+Therefore:
+
+- human–human kappa: **not computed** (no data);
+- human–LLM kappa: **not computed** (no human labels);
+- expert verification and adjudicated ground truth: **do not exist**.
+
+The 300 items and their candidate answers are real corpus text, but the labels
+are LLM-produced and were used only for stratification. They must not be called
+human gold labels.
+
+### 10.6 Improvement 1 — answer conflict detection (synthetic + descriptive)
+
+Deterministic rules over quantities/units/bases/products/intervals/negation;
+the module never merges answers and only escalates. Authored synthetic pair set
+(**77 pairs**: 52 conflict, 25 no-conflict; 67 core, 10 challenge), bootstrap
+2,000 resamples, seed 0:
+
+| TP | FP | FN | TN | Precision | Recall | F1 | F1 95% CI |
+|---:|---:|---:|---:|---:|---:|---:|---|
+| 47 | 0 | 5 | 25 | 1.0000 | 0.9038 | **0.9495** | [0.8989, 0.9901] |
+
+Core subset F1 1.0000 (n=67); challenge subset F1 0.6154, recall 0.4444 (n=10).
+Five challenge misses are reported, not tuned away (brand vs active ingredient,
+implicit per-acre vs per-bigha, indirect negation, interval stated once).
+
+Descriptive corpus scan (Batch A grouped metadata, 1,000 sampled multi-answer
+groups): 4,918 pairs compared, 1,258 pairs (25.58%) and 382 groups (38.20%)
+flagged. These are **rule-fire rates**, not confirmed errors; no expert
+adjudication exists.
+
+### 10.7 Improvement 2 — adversarial safety evaluation (synthetic)
+
+Production `src/confidence_gate.py` imported **read-only** (SHA-256 recorded in
+`metrics.json`; `modified_for_this_evaluation: false`). 149 authored cases:
+81 unsafe, 58 safe, 10 ambiguous (excluded from P/R/F1).
+
+| View | TP | FP | FN | TN | Precision | Recall | F1 | F1 95% CI | Accuracy |
+|---|---:|---:|---:|---:|---:|---:|---:|---|---:|
+| Content rule (`answer_risk`) | 63 | 23 | 18 | 35 | 0.7326 | 0.7778 | **0.7545** | [0.6790, 0.8208] | 0.7050 |
+| Gate, content-only slice | 63 | 24 | 18 | 34 | 0.7241 | 0.7778 | 0.7500 | [0.6750, 0.8182] | 0.6978 |
+
+The four figures requested for verification are **confirmed against
+`results/safety_evaluation/metrics.json`**: precision **0.7326**, recall
+**0.7778**, F1 **0.7545**, missed unsafe cases **18 of 81** (false-safe rate
+0.2222). The gate-slice F1 is **0.7500**, a different measurement on the same
+cases; the two must not be quoted interchangeably.
+
+Subsets: core (58) recall 1.0000, F1 0.8136; challenge (81) recall 0.6842, F1
+0.7222. Languages: English recall 0.8889, Hinglish 0.9375, **Hindi 0.0000
+(0/11)**. False escalations 23 of 58 safe cases (0.3966). Severity of the 18
+missed unsafe cases: 13 high, 5 medium.
+
+Documented bypasses (not fixed, because the rules were deliberately not tuned
+to this test set): Devanagari units/product names, letter-spaced or
+hyphenated/digit-substituted brand names, number words without a Latin unit
+token, and non-standard measures (`bottle`, `tank`, `bori`). Because the set is
+synthetic and same-author, these scores are **not** real-world safety estimates,
+and detecting a pattern is not evidence of agronomic correctness.
+
+### 10.8 Metric classification and comparability
+
+| Evidence class | Where it appears |
+|---|---|
+| **Human-validated / expert-reviewed** | **None.** No human labels, no kappa, no agronomist review, no adjudicated ground truth. |
+| **Corpus evaluation with LLM labels** | Original 93.75% silver / 90.0% gold; Batch A grouped intent 0.9372 and grouped retrieval scores. |
+| **Synthetic evaluation** | Phase 1 PII metrics; Improvement 1 pair metrics; Improvement 2 adversarial metrics; original synthetic speech WER. |
+| **Descriptive corpus statistics** | Improvement 1 rule-fire rates; original leakage and call-log-note shares. |
+| **Pending** | Human annotation, human–human/human–LLM agreement, expert safety review, real Hindi/Hinglish speech, PII prevalence on the corpus. |
+
+The F1 values in §10 are **not comparable with each other**: 0.9559 (PII entity
+span detection), 0.9495 (pairwise conflict detection on authored pairs), 0.8136
+and 0.7222 (conflict detection subsets) and 0.7545 (safety-rule detection) score
+different tasks on different, non-overlapping samples. Averaging or combining
+them would be meaningless.
+
+### 10.9 Integrity and protection verification
+
+- Full suite: **161 passed** (`OMP_NUM_THREADS=1`, macOS).
+- Original + Batch A manifest (`baseline_hashes.json`): **270 files**, 0 changed,
+  0 missing, 0 additions.
+- Pre-Improvement-1 snapshot: **308 files**, 0 changed, 0 missing.
+- Post-Improvement-1 snapshot: **325 files**, 0 changed, 0 missing, 0 additions.
+- Full protection inventory (`batch_b_protection_full.json`): **339 files** —
+  220 original, 50 Batch A, 14 Phase 1, 24 Phase 2, 17 Improvement 1,
+  13 Improvement 2, 1 inventory config — 0 changed, 0 missing, 0 unexpected
+  additions before this documentation update.
+- Pre-existing uncommitted state preserved: `results/calibration.json`,
+  `results/hybrid_retrieval.json`, `results/model_selection.json`,
+  `scripts/13_hybrid_retrieval.py` (26 insertions / 26 deletions total) and the
+  untracked `.venv312/`.
+- No production source (`src/`, `backend/`), model, dataset or experiment output
+  was modified by any Batch A/B improvement.
+- **Expected exception:** this audit file is itself hash-recorded, and the task
+  required editing it in place. After the update the verification scripts report
+  exactly one changed protected file — `KCC_Sahayak_Verification_Audit.md` — and
+  nothing else. The change is documentation only.
+
+### 10.10 Issues discovered during this consistency check
+
+1. **Test-count label (documentation only).** Intermediate summaries called 52
+   tests “original”; the correct split is 41 original + 11 Batch A = 52 before
+   Batch B, and 161 now (§10.2). No test was skipped or weakened.
+2. **Stale “41 tests” row in §3.2.** It was accurate at audit time but no longer
+   describes `pytest -q` now that `tests/unit/` exists; annotated rather than
+   rewritten, and the current count is reported in §10.2.
+3. **Safety F1 has two values.** Rule-level 0.7545 and gate-slice 0.7500 are
+   both current and correct for different views; they are labelled explicitly.
+   A single number cannot stand for both.
+4. **No other numeric drift found.** Phase 1, Phase 2, Improvement 1 and
+   Improvement 2 log tables match their saved JSON artefacts; the Batch A
+   reports match `grouped_intent.json` and `grouped_retrieval.json`.
+5. **Unchanged limitations.** Grouped retrieval used one split seed; Phase 1 has
+   no corpus scan; Improvement 1 has no expert adjudication; Improvement 2 is
+   synthetic-only; the annotation study remains PENDING.
+
+### 10.11 Remaining research gaps
+
+- Complete the 300-query human annotation (two independent annotators), report
+  human–human and human–LLM kappa, adjudicate disagreements; extend to Hindi and
+  Hinglish items.
+- Independent agronomist review of a stratified sample of auto-answers and
+  flagged conflicts, reporting harm severity rather than similarity.
+- Real Hindi/Hinglish telephone speech, with WER/CER under noise and downstream
+  intent/retrieval/safety effects.
+- PII prevalence measured on the real corpus (not only the synthetic set) and
+  redaction wired into indexing/display behind an access-controlled design.
+- Multi-seed retrieval evaluation and multi-reference answer scoring.
+- Out-of-scope detection, multi-intent handling and missing-context
+  clarification (Improvement 3 onwards) — not started.
+- Learned risk classification compared with the regex backstop, with
+  coverage–risk curves and validated thresholds.
+
+**Bottom line after Batch A/B:** the system is better evaluated (grouped split,
+multiple seeds, conflict and safety stress tests) but the evidence base is still
+synthetic or LLM-labelled. The strongest defensible claim remains the
+grouped-split intent and retrieval performance on real logged text, with the
+explicit caveat that labels are LLM-generated. No claim of human verification,
+expert agronomic correctness or real-world safety is supported.
+
+---
+
+## 11. Audit artefact index
 
 | Artefact | Purpose |
 |---|---|

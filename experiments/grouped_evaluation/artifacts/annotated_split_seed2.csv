@@ -1,0 +1,3497 @@
+id,qid,group_id,label,split
+a0000,73928,14732,Cultural Practices,train
+a0001,74664,3175,Other,train
+a0002,13947,13947,Plant Protection,train
+a0003,54196,54196,Market Price,train
+a0004,74359,74161,Weather,train
+a0005,117725,443,Nutrient Management,train
+a0006,526,526,Plant Protection,train
+a0007,77630,1359,Animal Husbandry,train
+a0008,10739,10739,Fisheries,train
+a0009,11260,11260,Cultural Practices,train
+a0010,61173,9342,Cultural Practices,test
+a0011,43582,42796,Plant Protection,train
+a0012,58680,58680,Plant Protection,train
+a0013,136400,136400,Cultural Practices,train
+a0014,99859,99859,Government Scheme,train
+a0015,91558,54270,Plant Protection,test
+a0016,76141,76141,Animal Husbandry,train
+a0017,117083,2287,Nutrient Management,train
+a0018,3014,3014,Government Scheme,train
+a0019,64298,64298,Government Scheme,train
+a0020,7463,7463,Other,test
+a0021,72053,72053,Animal Husbandry,train
+a0022,5148,2888,Government Scheme,train
+a0023,42994,3944,Plant Protection,train
+a0024,55516,1962,Varietal Information,train
+a0025,29673,2825,Government Scheme,train
+a0026,15129,15129,Plant Protection,train
+a0027,48612,48612,Plant Protection,train
+a0028,61063,61063,Plant Protection,test
+a0029,125609,67794,Cultural Practices,test
+a0030,80311,80311,Plant Protection,train
+a0031,16663,16663,Cultural Practices,test
+a0032,134639,3607,Other,train
+a0033,282,282,Cultural Practices,train
+a0034,16597,259,Animal Husbandry,train
+a0035,114994,37105,Varietal Information,train
+a0036,25062,25062,Weather,train
+a0037,12615,4391,Animal Husbandry,train
+a0038,98689,98689,Cultural Practices,train
+a0039,72153,39449,Cultural Practices,train
+a0040,81688,81688,Plant Protection,train
+a0041,53776,2279,Cultural Practices,train
+a0042,56299,56299,Fisheries,train
+a0043,29801,14527,Government Scheme,train
+a0044,13910,13910,Cultural Practices,train
+a0045,123659,123659,Cultural Practices,train
+a0046,135861,1238,Plant Protection,test
+a0047,67761,67761,Weather,train
+a0048,19415,17137,Other,test
+a0049,38729,38729,Government Scheme,train
+a0050,58800,58800,Market Price,train
+a0051,23400,1088,Plant Protection,train
+a0052,84915,84915,Plant Protection,train
+a0053,94445,94445,Cultural Practices,train
+a0054,29337,296,Plant Protection,train
+a0055,28478,28478,Other,train
+a0056,29892,4996,Government Scheme,train
+a0057,59103,10755,Fisheries,test
+a0058,67790,14394,Plant Protection,train
+a0059,121233,2023,Nutrient Management,train
+a0060,3820,3820,Plant Protection,test
+a0061,95218,15719,Plant Protection,train
+a0062,136291,136291,Animal Husbandry,train
+a0063,90968,14792,Plant Protection,test
+a0064,136751,26205,Animal Husbandry,train
+a0065,50591,1660,Nutrient Management,train
+a0066,56475,5279,Nutrient Management,train
+a0067,96532,8221,Plant Protection,test
+a0068,103964,3082,Plant Protection,train
+a0069,134725,134725,Weather,train
+a0070,38749,2432,Plant Protection,test
+a0071,47355,47355,Nutrient Management,train
+a0072,126843,1967,Nutrient Management,train
+a0073,69433,4720,Animal Husbandry,train
+a0074,104265,202,Nutrient Management,train
+a0075,50223,50223,Market Price,train
+a0076,134919,29054,Nutrient Management,train
+a0077,115648,115648,Fisheries,train
+a0078,40612,40612,Government Scheme,train
+a0079,138727,3328,Government Scheme,train
+a0080,29642,29642,Cultural Practices,test
+a0081,120671,41069,Nutrient Management,train
+a0082,63790,63790,Government Scheme,test
+a0083,110396,110396,Cultural Practices,train
+a0084,118906,39228,Cultural Practices,train
+a0085,61624,13096,Nutrient Management,train
+a0086,42421,42421,Fisheries,train
+a0087,31248,10495,Nutrient Management,train
+a0088,101691,101691,Nutrient Management,train
+a0089,130469,130469,Government Scheme,train
+a0090,105816,105816,Weather,train
+a0091,134944,134923,Animal Husbandry,train
+a0092,81721,3889,Cultural Practices,train
+a0093,98156,98156,Cultural Practices,train
+a0094,8093,8093,Nutrient Management,train
+a0095,127163,86,Plant Protection,train
+a0096,10558,10558,Plant Protection,train
+a0097,31759,2046,Nutrient Management,train
+a0098,47149,47149,Fisheries,train
+a0099,82429,82429,Plant Protection,test
+a0100,117769,2493,Other,train
+a0101,32709,32709,Cultural Practices,train
+a0102,117753,99859,Government Scheme,train
+a0103,78387,78387,Weather,train
+a0104,93052,2113,Varietal Information,train
+a0105,25453,5904,Varietal Information,test
+a0106,64995,39214,Varietal Information,train
+a0107,83114,3669,Nutrient Management,train
+a0108,8108,2590,Animal Husbandry,train
+a0109,123287,17664,Plant Protection,test
+a0110,28447,28447,Cultural Practices,train
+a0111,19698,1762,Nutrient Management,train
+a0112,117608,117608,Varietal Information,test
+a0113,77638,77638,Animal Husbandry,train
+a0114,117201,2046,Nutrient Management,train
+a0115,93391,93391,Plant Protection,train
+a0116,46696,46696,Other,train
+a0117,32770,5655,Fisheries,train
+a0118,6963,6963,Weather,train
+a0119,35999,4803,Nutrient Management,test
+a0120,35958,35958,Cultural Practices,train
+a0121,103159,41061,Plant Protection,test
+a0122,45497,45497,Animal Husbandry,train
+a0123,81725,81725,Animal Husbandry,train
+a0124,63954,61792,Other,train
+a0125,133460,7746,Fisheries,train
+a0126,125696,499,Nutrient Management,test
+a0127,115081,115081,Plant Protection,train
+a0128,52426,37394,Government Scheme,test
+a0129,486,486,Animal Husbandry,train
+a0130,97448,49674,Nutrient Management,train
+a0131,104803,104803,Government Scheme,train
+a0132,128290,128290,Varietal Information,train
+a0133,88929,88929,Varietal Information,train
+a0134,3562,3562,Government Scheme,train
+a0135,120505,120505,Weather,train
+a0136,73410,14146,Nutrient Management,train
+a0137,127144,38228,Animal Husbandry,train
+a0138,113124,3057,Plant Protection,train
+a0139,45280,1571,Plant Protection,train
+a0140,77582,77582,Nutrient Management,train
+a0141,11347,1796,Nutrient Management,test
+a0142,16882,332,Varietal Information,test
+a0143,63332,23672,Nutrient Management,train
+a0144,114566,578,Government Scheme,train
+a0145,94564,19307,Plant Protection,train
+a0146,65056,25726,Nutrient Management,test
+a0147,121611,75920,Nutrient Management,train
+a0148,133795,133795,Cultural Practices,train
+a0149,120896,16023,Cultural Practices,train
+a0150,8052,8052,Nutrient Management,test
+a0151,82229,82229,Animal Husbandry,train
+a0152,131561,65524,Other,test
+a0153,114727,114727,Animal Husbandry,train
+a0154,80120,71717,Animal Husbandry,train
+a0155,49385,49385,Government Scheme,train
+a0156,59702,8,Plant Protection,train
+a0157,87651,87651,Other,train
+a0158,135853,21391,Animal Husbandry,train
+a0159,29767,29767,Plant Protection,train
+a0160,70015,1277,Weather,train
+a0161,70258,2590,Animal Husbandry,train
+a0162,41052,9824,Fisheries,train
+a0163,138237,138237,Market Price,train
+a0164,92204,125,Plant Protection,train
+a0165,434,434,Government Scheme,test
+a0166,37139,7,Animal Husbandry,train
+a0167,18093,31,Animal Husbandry,train
+a0168,48411,48411,Nutrient Management,train
+a0169,137330,137330,Weather,train
+a0170,94494,94494,Plant Protection,train
+a0171,138529,138529,Plant Protection,train
+a0172,118080,118080,Cultural Practices,train
+a0173,46404,46404,Animal Husbandry,test
+a0174,16916,16916,Market Price,train
+a0175,28226,28226,Cultural Practices,train
+a0176,79035,4161,Animal Husbandry,train
+a0177,87406,87406,Cultural Practices,train
+a0178,46731,4725,Fisheries,train
+a0179,40060,40060,Plant Protection,train
+a0180,49639,16483,Fisheries,train
+a0181,129591,65185,Cultural Practices,train
+a0182,48566,177,Varietal Information,train
+a0183,78956,78956,Animal Husbandry,train
+a0184,11682,4365,Fisheries,test
+a0185,26722,26722,Varietal Information,train
+a0186,42276,42276,Plant Protection,test
+a0187,118400,504,Cultural Practices,train
+a0188,70993,3444,Plant Protection,test
+a0189,55498,141,Varietal Information,train
+a0190,129837,129837,Cultural Practices,train
+a0191,38690,8796,Cultural Practices,train
+a0192,63709,53341,Cultural Practices,train
+a0193,85311,20489,Other,test
+a0194,50518,603,Animal Husbandry,train
+a0195,82587,61773,Plant Protection,train
+a0196,109520,109520,Animal Husbandry,test
+a0197,45423,1950,Government Scheme,train
+a0198,37941,296,Plant Protection,train
+a0199,28121,14227,Animal Husbandry,train
+a0200,80565,80565,Varietal Information,train
+a0201,61860,61860,Fisheries,train
+a0202,55064,30233,Cultural Practices,train
+a0203,65120,65120,Varietal Information,train
+a0204,100290,3452,Varietal Information,train
+a0205,102339,102339,Market Price,train
+a0206,54993,54993,Market Price,train
+a0207,114758,1931,Other,train
+a0208,4967,4841,Fisheries,train
+a0209,58420,58420,Nutrient Management,train
+a0210,64935,47640,Government Scheme,train
+a0211,137916,137916,Fisheries,train
+a0212,114820,114820,Government Scheme,train
+a0213,124643,1174,Plant Protection,test
+a0214,4494,4494,Weather,train
+a0215,28818,28818,Cultural Practices,train
+a0216,113275,113275,Varietal Information,train
+a0217,7864,7864,Cultural Practices,train
+a0218,94145,94145,Government Scheme,train
+a0219,106591,106591,Cultural Practices,train
+a0220,6058,6058,Plant Protection,train
+a0221,9147,9041,Weather,train
+a0222,107530,83879,Other,test
+a0223,90213,90213,Animal Husbandry,train
+a0224,102034,102034,Varietal Information,train
+a0225,106286,106286,Plant Protection,train
+a0226,78168,14886,Plant Protection,train
+a0227,120605,120605,Other,train
+a0228,40617,40617,Fisheries,train
+a0229,45631,45631,Government Scheme,train
+a0230,89919,89919,Animal Husbandry,train
+a0231,13661,443,Nutrient Management,train
+a0232,2969,2969,Government Scheme,train
+a0233,62963,1428,Fisheries,train
+a0234,44253,2124,Plant Protection,train
+a0235,18672,2497,Cultural Practices,train
+a0236,48226,48226,Other,train
+a0237,59459,7047,Varietal Information,train
+a0238,17967,31,Animal Husbandry,train
+a0239,94453,94453,Weather,train
+a0240,6252,3653,Cultural Practices,train
+a0241,24671,24671,Animal Husbandry,train
+a0242,136316,2972,Nutrient Management,train
+a0243,119536,119536,Weather,train
+a0244,71416,12931,Nutrient Management,train
+a0245,70622,13929,Cultural Practices,train
+a0246,68709,15613,Plant Protection,train
+a0247,123171,123171,Weather,train
+a0248,63061,27750,Cultural Practices,train
+a0249,3155,3155,Government Scheme,train
+a0250,67141,5824,Animal Husbandry,test
+a0251,60349,14675,Plant Protection,train
+a0252,24327,3666,Fisheries,train
+a0253,95373,1681,Plant Protection,train
+a0254,66840,9661,Varietal Information,test
+a0255,3716,3716,Government Scheme,train
+a0256,14622,14622,Cultural Practices,train
+a0257,79563,79563,Fisheries,train
+a0258,110335,110335,Varietal Information,train
+a0259,92865,16165,Plant Protection,train
+a0260,8165,7762,Nutrient Management,train
+a0261,12028,12028,Plant Protection,test
+a0262,13505,13505,Animal Husbandry,train
+a0263,73711,743,Plant Protection,train
+a0264,51972,51972,Weather,train
+a0265,82399,82399,Varietal Information,train
+a0266,35114,35114,Weather,train
+a0267,127106,73197,Plant Protection,train
+a0268,131275,90433,Cultural Practices,train
+a0269,84981,84981,Nutrient Management,train
+a0270,119589,23036,Cultural Practices,train
+a0271,114723,3101,Government Scheme,train
+a0272,83407,39,Government Scheme,train
+a0273,122781,122781,Plant Protection,train
+a0274,65102,1083,Government Scheme,test
+a0275,90708,90708,Plant Protection,test
+a0276,30700,30700,Cultural Practices,train
+a0277,62007,7961,Cultural Practices,train
+a0278,107304,107304,Cultural Practices,train
+a0279,35022,35022,Other,train
+a0280,62503,1626,Plant Protection,train
+a0281,41902,19578,Other,train
+a0282,20200,20200,Fisheries,train
+a0283,134035,165,Varietal Information,test
+a0284,52599,52599,Animal Husbandry,train
+a0285,98553,318,Plant Protection,train
+a0286,35093,35093,Fisheries,train
+a0287,68371,24,Nutrient Management,train
+a0288,75264,34499,Cultural Practices,train
+a0289,15366,15366,Animal Husbandry,train
+a0290,34317,8868,Cultural Practices,train
+a0291,30005,30005,Government Scheme,train
+a0292,130342,21340,Plant Protection,train
+a0293,86041,6686,Nutrient Management,train
+a0294,112836,32334,Nutrient Management,test
+a0295,80255,164,Plant Protection,train
+a0296,134589,134503,Weather,train
+a0297,45768,2477,Varietal Information,train
+a0298,112848,112848,Plant Protection,train
+a0299,40075,2748,Plant Protection,train
+a0300,4738,4738,Animal Husbandry,train
+a0301,99992,31821,Nutrient Management,train
+a0302,29437,29437,Market Price,test
+a0303,3821,329,Government Scheme,train
+a0304,37312,885,Nutrient Management,train
+a0305,86320,86320,Cultural Practices,train
+a0306,93201,45,Cultural Practices,train
+a0307,41360,2496,Plant Protection,train
+a0308,95330,95330,Cultural Practices,train
+a0309,129252,129252,Plant Protection,train
+a0310,38407,38407,Varietal Information,test
+a0311,25879,25879,Other,train
+a0312,1807,1807,Animal Husbandry,train
+a0313,26597,26597,Plant Protection,test
+a0314,99127,53017,Nutrient Management,train
+a0315,91237,91237,Animal Husbandry,test
+a0316,80076,4391,Animal Husbandry,train
+a0317,128470,128470,Animal Husbandry,test
+a0318,54427,54427,Cultural Practices,train
+a0319,21497,21497,Other,train
+a0320,30809,30809,Government Scheme,train
+a0321,123881,123881,Cultural Practices,train
+a0322,4427,1957,Government Scheme,train
+a0323,75999,5552,Animal Husbandry,train
+a0324,127281,2615,Nutrient Management,train
+a0325,29,29,Plant Protection,train
+a0326,133162,31626,Plant Protection,train
+a0327,71200,71200,Nutrient Management,train
+a0328,128213,15876,Plant Protection,train
+a0329,73579,29407,Nutrient Management,train
+a0330,26358,26358,Animal Husbandry,train
+a0331,54595,650,Fisheries,train
+a0332,88371,88371,Plant Protection,train
+a0333,42351,42351,Varietal Information,train
+a0334,4451,4451,Weather,train
+a0335,106501,106501,Government Scheme,test
+a0336,118323,17224,Animal Husbandry,train
+a0337,129413,14461,Cultural Practices,train
+a0338,18112,52,Animal Husbandry,train
+a0339,51660,51660,Fisheries,train
+a0340,70962,175,Animal Husbandry,train
+a0341,26809,26809,Plant Protection,train
+a0342,47110,498,Plant Protection,train
+a0343,19715,589,Fisheries,train
+a0344,75595,32566,Government Scheme,train
+a0345,79595,79595,Cultural Practices,train
+a0346,52235,14353,Cultural Practices,train
+a0347,34590,589,Fisheries,train
+a0348,71394,71394,Weather,train
+a0349,111576,111576,Nutrient Management,train
+a0350,63425,202,Varietal Information,train
+a0351,89241,15623,Cultural Practices,train
+a0352,24155,24155,Other,test
+a0353,56010,56010,Other,train
+a0354,6492,6492,Varietal Information,train
+a0355,61310,61310,Plant Protection,train
+a0356,59115,59115,Weather,train
+a0357,58576,58576,Fisheries,test
+a0358,3475,3475,Nutrient Management,train
+a0359,43362,43362,Plant Protection,train
+a0360,118626,118626,Animal Husbandry,train
+a0361,30847,30847,Cultural Practices,train
+a0362,42780,42780,Nutrient Management,train
+a0363,124455,1188,Varietal Information,train
+a0364,15005,15005,Other,train
+a0365,9732,48,Plant Protection,train
+a0366,138410,138410,Varietal Information,train
+a0367,7730,7730,Other,train
+a0368,16602,16602,Government Scheme,train
+a0369,85422,13321,Nutrient Management,train
+a0370,109945,354,Plant Protection,train
+a0371,101822,10640,Cultural Practices,train
+a0372,122559,122559,Plant Protection,train
+a0373,98636,4022,Animal Husbandry,train
+a0374,112398,112398,Plant Protection,test
+a0375,66100,66100,Plant Protection,train
+a0376,3472,39,Government Scheme,train
+a0377,120318,120318,Cultural Practices,test
+a0378,22164,22164,Animal Husbandry,train
+a0379,42241,3053,Other,train
+a0380,38028,8424,Animal Husbandry,train
+a0381,85397,146,Nutrient Management,train
+a0382,27978,27978,Nutrient Management,train
+a0383,60785,60785,Nutrient Management,train
+a0384,101105,101105,Fisheries,train
+a0385,80983,80983,Animal Husbandry,train
+a0386,91624,14321,Cultural Practices,train
+a0387,87295,86134,Cultural Practices,train
+a0388,102050,102050,Government Scheme,train
+a0389,71799,4571,Nutrient Management,test
+a0390,56633,7806,Nutrient Management,train
+a0391,13644,2348,Nutrient Management,test
+a0392,25748,12154,Plant Protection,train
+a0393,16852,9211,Cultural Practices,train
+a0394,72830,72830,Animal Husbandry,train
+a0395,125168,68320,Animal Husbandry,train
+a0396,60623,60468,Weather,train
+a0397,33800,33,Nutrient Management,train
+a0398,58121,58121,Cultural Practices,train
+a0399,6336,6336,Animal Husbandry,train
+a0400,65025,65025,Fisheries,train
+a0401,91917,91917,Weather,train
+a0402,95775,95775,Weather,train
+a0403,123781,123781,Cultural Practices,test
+a0404,71349,56,Plant Protection,train
+a0405,134650,134650,Cultural Practices,train
+a0406,76269,76269,Cultural Practices,train
+a0407,120929,5940,Plant Protection,train
+a0408,35069,35069,Weather,train
+a0409,114978,2519,Plant Protection,train
+a0410,25399,24,Nutrient Management,train
+a0411,46485,46485,Varietal Information,train
+a0412,52921,31802,Cultural Practices,train
+a0413,134510,134510,Varietal Information,train
+a0414,137793,2503,Other,train
+a0415,45151,1796,Nutrient Management,test
+a0416,13881,13881,Animal Husbandry,train
+a0417,122080,15428,Cultural Practices,train
+a0418,120044,32052,Cultural Practices,train
+a0419,27908,27908,Cultural Practices,train
+a0420,16203,56,Plant Protection,train
+a0421,90777,90777,Government Scheme,train
+a0422,19916,589,Fisheries,train
+a0423,98982,98982,Nutrient Management,train
+a0424,79498,79498,Other,train
+a0425,47295,50,Varietal Information,train
+a0426,47175,47175,Fisheries,train
+a0427,48014,2166,Plant Protection,test
+a0428,101458,13380,Plant Protection,train
+a0429,85946,31,Animal Husbandry,train
+a0430,104478,9961,Varietal Information,train
+a0431,117293,45231,Animal Husbandry,train
+a0432,51360,743,Plant Protection,train
+a0433,11820,11820,Plant Protection,train
+a0434,49173,165,Varietal Information,test
+a0435,134499,3044,Government Scheme,test
+a0436,133683,14353,Cultural Practices,train
+a0437,72612,72612,Plant Protection,train
+a0438,8675,2838,Weather,test
+a0439,108355,108355,Cultural Practices,train
+a0440,21017,12195,Market Price,train
+a0441,112149,2571,Animal Husbandry,train
+a0442,48560,91,Animal Husbandry,train
+a0443,42195,42195,Nutrient Management,train
+a0444,29811,2910,Government Scheme,train
+a0445,56175,56175,Fisheries,train
+a0446,59009,24,Nutrient Management,train
+a0447,119773,1188,Varietal Information,train
+a0448,38008,38008,Plant Protection,train
+a0449,97885,146,Nutrient Management,train
+a0450,22007,22007,Varietal Information,train
+a0451,101793,101793,Market Price,train
+a0452,133441,133441,Government Scheme,train
+a0453,23854,332,Varietal Information,test
+a0454,136193,136193,Animal Husbandry,train
+a0455,93024,93024,Nutrient Management,train
+a0456,10605,1450,Nutrient Management,test
+a0457,45226,25358,Fisheries,train
+a0458,35498,35498,Cultural Practices,train
+a0459,118752,350,Fisheries,train
+a0460,54544,1163,Nutrient Management,train
+a0461,79417,79417,Fisheries,train
+a0462,119541,1467,Other,train
+a0463,109075,109075,Plant Protection,train
+a0464,116647,116647,Government Scheme,train
+a0465,121605,2636,Cultural Practices,train
+a0466,65130,39442,Government Scheme,train
+a0467,8928,8928,Weather,train
+a0468,25222,25222,Varietal Information,train
+a0469,39963,39963,Market Price,train
+a0470,3230,3230,Animal Husbandry,train
+a0471,31307,9096,Animal Husbandry,train
+a0472,52936,27140,Plant Protection,test
+a0473,6902,6902,Weather,train
+a0474,133102,133102,Animal Husbandry,train
+a0475,46890,601,Nutrient Management,test
+a0476,123295,5566,Varietal Information,train
+a0477,79807,79807,Plant Protection,train
+a0478,34561,34561,Nutrient Management,train
+a0479,77773,7852,Cultural Practices,train
+a0480,55815,5904,Cultural Practices,test
+a0481,71947,296,Plant Protection,train
+a0482,24944,1464,Plant Protection,train
+a0483,65658,65658,Government Scheme,test
+a0484,66353,66353,Nutrient Management,test
+a0485,98690,2838,Weather,test
+a0486,71303,12931,Nutrient Management,train
+a0487,133822,12547,Varietal Information,train
+a0488,60913,60913,Plant Protection,train
+a0489,64549,5,Fisheries,train
+a0490,43269,259,Animal Husbandry,train
+a0491,15294,15294,Animal Husbandry,train
+a0492,54636,8175,Government Scheme,train
+a0493,88106,88106,Plant Protection,train
+a0494,79101,45199,Animal Husbandry,train
+a0495,138279,138279,Government Scheme,train
+a0496,54649,54649,Nutrient Management,train
+a0497,29661,29661,Fisheries,train
+a0498,129088,412,Cultural Practices,train
+a0499,137463,28195,Other,train
+a0500,135706,135706,Weather,train
+a0501,27781,2643,Varietal Information,train
+a0502,81799,7757,Nutrient Management,train
+a0503,109243,1257,Cultural Practices,train
+a0504,108212,24,Nutrient Management,train
+a0505,14457,1387,Other,train
+a0506,20811,20811,Nutrient Management,train
+a0507,74690,1133,Animal Husbandry,train
+a0508,11546,4191,Fisheries,train
+a0509,98281,60073,Animal Husbandry,train
+a0510,88664,7,Animal Husbandry,train
+a0511,90751,90751,Government Scheme,test
+a0512,37141,37141,Animal Husbandry,train
+a0513,102250,2999,Market Price,train
+a0514,114320,114320,Animal Husbandry,train
+a0515,48331,48331,Plant Protection,train
+a0516,63876,63876,Cultural Practices,train
+a0517,57089,57089,Nutrient Management,train
+a0518,104818,20600,Cultural Practices,train
+a0519,122737,15428,Cultural Practices,train
+a0520,43386,7786,Other,train
+a0521,90927,90927,Animal Husbandry,train
+a0522,66065,66065,Varietal Information,test
+a0523,102671,200,Animal Husbandry,train
+a0524,24986,24986,Plant Protection,train
+a0525,121201,972,Government Scheme,train
+a0526,20553,774,Fisheries,train
+a0527,95058,95058,Animal Husbandry,train
+a0528,69752,1730,Plant Protection,train
+a0529,105303,105303,Varietal Information,train
+a0530,79381,79381,Animal Husbandry,train
+a0531,43727,43727,Plant Protection,train
+a0532,6334,2763,Cultural Practices,train
+a0533,29412,29412,Nutrient Management,train
+a0534,30775,30775,Varietal Information,train
+a0535,66001,2046,Nutrient Management,train
+a0536,89113,2310,Plant Protection,test
+a0537,77732,1931,Other,train
+a0538,124755,5273,Other,train
+a0539,83830,83830,Nutrient Management,train
+a0540,54928,54928,Nutrient Management,train
+a0541,60341,60341,Cultural Practices,train
+a0542,30213,26061,Animal Husbandry,train
+a0543,60178,641,Fisheries,train
+a0544,83067,83067,Cultural Practices,train
+a0545,69628,69628,Plant Protection,train
+a0546,28553,5931,Nutrient Management,test
+a0547,33466,520,Plant Protection,test
+a0548,67167,39449,Cultural Practices,train
+a0549,126115,82,Plant Protection,train
+a0550,126080,126080,Cultural Practices,train
+a0551,63953,63953,Government Scheme,train
+a0552,58795,58795,Cultural Practices,train
+a0553,100464,100464,Animal Husbandry,train
+a0554,49414,49414,Plant Protection,test
+a0555,22626,22626,Weather,train
+a0556,33809,350,Fisheries,train
+a0557,61047,6848,Nutrient Management,train
+a0558,4302,4302,Cultural Practices,train
+a0559,14723,5279,Nutrient Management,train
+a0560,20049,504,Cultural Practices,train
+a0561,59715,329,Government Scheme,train
+a0562,66057,66057,Government Scheme,train
+a0563,102848,9696,Animal Husbandry,train
+a0564,138822,138822,Cultural Practices,train
+a0565,121994,121994,Plant Protection,train
+a0566,22258,10978,Cultural Practices,test
+a0567,39363,39363,Animal Husbandry,train
+a0568,74045,1967,Nutrient Management,train
+a0569,55440,3452,Varietal Information,train
+a0570,3198,39,Government Scheme,train
+a0571,111636,111636,Plant Protection,train
+a0572,74440,24871,Fisheries,train
+a0573,83570,83570,Cultural Practices,train
+a0574,39544,4857,Nutrient Management,train
+a0575,134820,134820,Other,train
+a0576,101211,132,Animal Husbandry,train
+a0577,94482,94482,Nutrient Management,train
+a0578,25911,25911,Nutrient Management,train
+a0579,138060,5325,Varietal Information,test
+a0580,134033,134033,Animal Husbandry,train
+a0581,106322,106322,Plant Protection,train
+a0582,8698,2838,Weather,test
+a0583,96248,96248,Cultural Practices,train
+a0584,132556,132556,Other,train
+a0585,52659,3444,Plant Protection,test
+a0586,79078,175,Animal Husbandry,train
+a0587,131034,37006,Plant Protection,train
+a0588,37708,1153,Plant Protection,train
+a0589,125068,125068,Plant Protection,train
+a0590,88753,88753,Fisheries,train
+a0591,67939,1321,Plant Protection,train
+a0592,93914,1067,Cultural Practices,train
+a0593,76365,54548,Nutrient Management,train
+a0594,90938,2888,Government Scheme,train
+a0595,49598,3053,Other,train
+a0596,100618,100618,Plant Protection,train
+a0597,38867,38867,Nutrient Management,train
+a0598,40706,130,Plant Protection,train
+a0599,67194,938,Fisheries,test
+a0600,64351,8645,Plant Protection,train
+a0601,41752,41752,Government Scheme,train
+a0602,66214,66214,Market Price,train
+a0603,93606,32,Varietal Information,train
+a0604,118179,48494,Plant Protection,train
+a0605,17686,8094,Varietal Information,train
+a0606,16936,16936,Cultural Practices,train
+a0607,45714,45714,Plant Protection,train
+a0608,97743,97743,Other,train
+a0609,30243,30243,Plant Protection,train
+a0610,76992,76992,Nutrient Management,train
+a0611,3254,3254,Government Scheme,train
+a0612,138167,39280,Government Scheme,test
+a0613,2937,2937,Government Scheme,train
+a0614,117549,62948,Varietal Information,train
+a0615,129817,129817,Government Scheme,train
+a0616,49025,49025,Nutrient Management,train
+a0617,18186,18186,Cultural Practices,train
+a0618,20294,20294,Animal Husbandry,train
+a0619,137368,4978,Government Scheme,train
+a0620,23206,49,Plant Protection,test
+a0621,79237,16087,Cultural Practices,train
+a0622,113577,113577,Plant Protection,train
+a0623,107038,2888,Government Scheme,train
+a0624,49526,9957,Cultural Practices,train
+a0625,125192,125192,Fisheries,train
+a0626,19926,24,Nutrient Management,train
+a0627,120916,141,Varietal Information,train
+a0628,120197,14859,Other,train
+a0629,29736,29736,Cultural Practices,train
+a0630,717,717,Cultural Practices,train
+a0631,58594,3444,Plant Protection,test
+a0632,51826,51826,Animal Husbandry,train
+a0633,79654,6277,Animal Husbandry,train
+a0634,75432,17137,Other,test
+a0635,117799,117799,Varietal Information,train
+a0636,84995,10755,Fisheries,test
+a0637,53034,45656,Varietal Information,test
+a0638,104169,20115,Plant Protection,train
+a0639,58114,58114,Animal Husbandry,train
+a0640,128704,128704,Market Price,train
+a0641,66691,18036,Plant Protection,train
+a0642,62106,62106,Nutrient Management,train
+a0643,121161,121161,Animal Husbandry,train
+a0644,102698,390,Plant Protection,train
+a0645,70019,70019,Plant Protection,train
+a0646,57118,57118,Plant Protection,train
+a0647,90907,48020,Fisheries,test
+a0648,39036,4841,Fisheries,train
+a0649,83711,8621,Market Price,train
+a0650,51846,2534,Animal Husbandry,train
+a0651,20512,20512,Other,train
+a0652,95732,7356,Varietal Information,train
+a0653,77271,44644,Plant Protection,train
+a0654,88935,88935,Government Scheme,train
+a0655,100178,100178,Government Scheme,train
+a0656,6818,774,Fisheries,train
+a0657,66998,32856,Other,train
+a0658,121879,121879,Cultural Practices,train
+a0659,134050,4734,Plant Protection,train
+a0660,80010,80010,Nutrient Management,train
+a0661,93580,93580,Plant Protection,train
+a0662,69824,7252,Animal Husbandry,train
+a0663,69967,35296,Plant Protection,test
+a0664,14710,146,Nutrient Management,train
+a0665,22292,7,Animal Husbandry,train
+a0666,111144,111144,Weather,train
+a0667,100908,23480,Government Scheme,train
+a0668,39876,39876,Varietal Information,train
+a0669,88087,5279,Nutrient Management,train
+a0670,43501,1292,Plant Protection,train
+a0671,28311,28311,Cultural Practices,train
+a0672,127631,27648,Animal Husbandry,test
+a0673,120010,4164,Animal Husbandry,train
+a0674,133389,10958,Varietal Information,train
+a0675,106200,46220,Cultural Practices,test
+a0676,68287,6255,Cultural Practices,train
+a0677,67195,67195,Cultural Practices,test
+a0678,122500,122500,Other,train
+a0679,75156,75156,Cultural Practices,test
+a0680,122168,2838,Weather,test
+a0681,132144,3755,Plant Protection,train
+a0682,37142,5405,Nutrient Management,train
+a0683,92631,26957,Cultural Practices,train
+a0684,30392,30392,Plant Protection,train
+a0685,131396,2252,Cultural Practices,train
+a0686,1630,1630,Plant Protection,train
+a0687,116549,11498,Weather,train
+a0688,19890,601,Nutrient Management,test
+a0689,31946,31946,Plant Protection,train
+a0690,15638,15638,Cultural Practices,test
+a0691,90581,89554,Other,train
+a0692,9042,2358,Nutrient Management,train
+a0693,39796,14390,Nutrient Management,train
+a0694,66617,66617,Government Scheme,train
+a0695,55483,55483,Animal Husbandry,train
+a0696,74600,74600,Plant Protection,train
+a0697,110966,6326,Other,train
+a0698,46597,46597,Varietal Information,train
+a0699,117053,1521,Nutrient Management,train
+a0700,39564,16442,Varietal Information,train
+a0701,11909,1534,Plant Protection,train
+a0702,103481,619,Plant Protection,train
+a0703,6373,909,Plant Protection,train
+a0704,14444,14444,Cultural Practices,train
+a0705,136236,28139,Animal Husbandry,train
+a0706,2242,2242,Fisheries,train
+a0707,7867,7867,Plant Protection,train
+a0708,33804,33804,Fisheries,train
+a0709,83107,6103,Nutrient Management,train
+a0710,24591,24,Nutrient Management,train
+a0711,83460,11277,Nutrient Management,train
+a0712,77579,1435,Plant Protection,train
+a0713,120366,146,Nutrient Management,train
+a0714,129951,6255,Cultural Practices,train
+a0715,41608,41608,Nutrient Management,train
+a0716,30416,30416,Government Scheme,train
+a0717,37487,2142,Nutrient Management,train
+a0718,29582,2838,Weather,test
+a0719,99697,99697,Animal Husbandry,train
+a0720,135125,135125,Animal Husbandry,train
+a0721,37936,1435,Plant Protection,train
+a0722,65380,65380,Government Scheme,train
+a0723,67129,407,Other,train
+a0724,90387,90387,Animal Husbandry,train
+a0725,100418,862,Animal Husbandry,train
+a0726,123283,123283,Varietal Information,train
+a0727,51761,51761,Market Price,train
+a0728,36099,17187,Animal Husbandry,train
+a0729,120479,513,Government Scheme,train
+a0730,26711,2274,Cultural Practices,train
+a0731,61954,7806,Nutrient Management,train
+a0732,14969,14969,Government Scheme,test
+a0733,100282,100282,Plant Protection,train
+a0734,131406,131406,Weather,train
+a0735,106092,48020,Fisheries,test
+a0736,56224,56224,Animal Husbandry,test
+a0737,11530,4191,Fisheries,train
+a0738,10802,8,Plant Protection,train
+a0739,85102,85102,Fisheries,train
+a0740,67794,67794,Cultural Practices,test
+a0741,87898,87898,Weather,train
+a0742,64714,64714,Government Scheme,train
+a0743,48931,48,Plant Protection,train
+a0744,34499,34499,Cultural Practices,train
+a0745,2099,2041,Weather,train
+a0746,31361,21184,Animal Husbandry,train
+a0747,88593,3739,Fisheries,train
+a0748,79213,79213,Weather,train
+a0749,64335,64335,Cultural Practices,test
+a0750,110053,110053,Plant Protection,train
+a0751,111359,111359,Weather,train
+a0752,842,842,Cultural Practices,test
+a0753,107,74,Nutrient Management,test
+a0754,18664,2581,Nutrient Management,train
+a0755,103636,103636,Fisheries,train
+a0756,50157,13929,Cultural Practices,train
+a0757,35978,733,Plant Protection,train
+a0758,29824,2913,Government Scheme,train
+a0759,41942,769,Plant Protection,test
+a0760,63022,2358,Nutrient Management,train
+a0761,138079,8055,Cultural Practices,train
+a0762,16729,16729,Market Price,train
+a0763,3635,3635,Plant Protection,test
+a0764,107289,107289,Government Scheme,train
+a0765,7875,7875,Cultural Practices,test
+a0766,138768,138768,Plant Protection,train
+a0767,24756,72,Plant Protection,train
+a0768,73311,72,Plant Protection,train
+a0769,114113,114113,Plant Protection,train
+a0770,81768,81768,Cultural Practices,train
+a0771,62972,1042,Plant Protection,train
+a0772,89940,2330,Cultural Practices,train
+a0773,13041,13041,Varietal Information,train
+a0774,39003,38968,Government Scheme,train
+a0775,119267,5354,Animal Husbandry,train
+a0776,2052,2052,Plant Protection,test
+a0777,117838,117838,Government Scheme,train
+a0778,61625,166,Plant Protection,train
+a0779,105616,5564,Plant Protection,train
+a0780,133430,133430,Nutrient Management,train
+a0781,116651,5279,Nutrient Management,train
+a0782,23215,896,Cultural Practices,train
+a0783,41839,1083,Government Scheme,test
+a0784,33071,12036,Nutrient Management,test
+a0785,69188,69188,Nutrient Management,train
+a0786,47328,4182,Nutrient Management,train
+a0787,31625,31625,Animal Husbandry,train
+a0788,96280,2023,Nutrient Management,train
+a0789,85072,6840,Cultural Practices,train
+a0790,49300,49300,Plant Protection,train
+a0791,89771,37694,Cultural Practices,train
+a0792,84824,84824,Other,train
+a0793,114560,101964,Government Scheme,train
+a0794,47881,13198,Plant Protection,test
+a0795,81216,25838,Nutrient Management,train
+a0796,46826,14701,Plant Protection,train
+a0797,102618,24,Nutrient Management,train
+a0798,34251,1044,Plant Protection,train
+a0799,100929,100929,Animal Husbandry,train
+a0800,7433,7433,Fisheries,train
+a0801,37853,2329,Nutrient Management,test
+a0802,20968,3485,Animal Husbandry,train
+a0803,28913,774,Fisheries,train
+a0804,82354,82354,Plant Protection,train
+a0805,122448,122448,Fisheries,train
+a0806,21233,5817,Nutrient Management,train
+a0807,117980,117980,Cultural Practices,train
+a0808,127821,2838,Weather,test
+a0809,115869,495,Cultural Practices,test
+a0810,29066,13783,Plant Protection,train
+a0811,79572,8244,Plant Protection,train
+a0812,107522,107522,Animal Husbandry,train
+a0813,51720,51720,Nutrient Management,train
+a0814,68914,68914,Government Scheme,test
+a0815,133120,133120,Animal Husbandry,train
+a0816,31060,31060,Government Scheme,train
+a0817,44193,25144,Cultural Practices,train
+a0818,124605,697,Cultural Practices,test
+a0819,56624,3230,Animal Husbandry,train
+a0820,87225,56,Plant Protection,train
+a0821,47290,47290,Fisheries,train
+a0822,120175,21467,Nutrient Management,train
+a0823,99505,99505,Animal Husbandry,train
+a0824,66623,66623,Plant Protection,train
+a0825,31984,185,Animal Husbandry,test
+a0826,13336,1400,Fisheries,train
+a0827,73089,73089,Animal Husbandry,train
+a0828,52068,6519,Plant Protection,train
+a0829,12602,12602,Other,train
+a0830,33290,2830,Fisheries,train
+a0831,8949,8949,Government Scheme,train
+a0832,28035,28035,Fisheries,test
+a0833,49175,49175,Government Scheme,train
+a0834,13149,13149,Fisheries,train
+a0835,17289,296,Plant Protection,train
+a0836,87107,1412,Nutrient Management,train
+a0837,12860,784,Plant Protection,train
+a0838,125332,125332,Plant Protection,train
+a0839,130497,175,Animal Husbandry,train
+a0840,64568,6244,Nutrient Management,train
+a0841,86057,1607,Nutrient Management,train
+a0842,15754,15754,Plant Protection,train
+a0843,79232,22142,Plant Protection,train
+a0844,126724,126724,Cultural Practices,train
+a0845,83313,1666,Plant Protection,train
+a0846,71812,37309,Plant Protection,train
+a0847,41357,5278,Animal Husbandry,train
+a0848,63537,13627,Cultural Practices,train
+a0849,129098,121258,Government Scheme,train
+a0850,88566,88566,Fisheries,train
+a0851,85111,85111,Plant Protection,test
+a0852,79956,79956,Nutrient Management,train
+a0853,57292,57292,Government Scheme,train
+a0854,79817,177,Varietal Information,train
+a0855,136179,136179,Plant Protection,test
+a0856,20662,650,Fisheries,train
+a0857,99295,30596,Plant Protection,test
+a0858,31877,31877,Cultural Practices,train
+a0859,69089,1848,Varietal Information,train
+a0860,45645,45645,Animal Husbandry,train
+a0861,108167,5663,Plant Protection,train
+a0862,69618,69618,Cultural Practices,test
+a0863,10619,10619,Plant Protection,train
+a0864,52572,52572,Nutrient Management,train
+a0865,63707,1338,Plant Protection,train
+a0866,81305,4538,Nutrient Management,test
+a0867,16919,71,Nutrient Management,test
+a0868,111306,111306,Nutrient Management,train
+a0869,10776,10776,Plant Protection,train
+a0870,50875,589,Fisheries,train
+a0871,96427,96427,Animal Husbandry,train
+a0872,92028,92028,Fisheries,train
+a0873,15901,3849,Plant Protection,train
+a0874,105638,105638,Varietal Information,train
+a0875,104720,104720,Fisheries,train
+a0876,28929,14052,Nutrient Management,train
+a0877,120789,52434,Plant Protection,train
+a0878,61147,1077,Nutrient Management,train
+a0879,90428,89116,Cultural Practices,train
+a0880,62610,27217,Animal Husbandry,train
+a0881,53510,13640,Cultural Practices,train
+a0882,97463,63301,Varietal Information,train
+a0883,119001,10153,Plant Protection,train
+a0884,115058,3078,Government Scheme,train
+a0885,59516,59516,Nutrient Management,train
+a0886,18858,18858,Government Scheme,train
+a0887,97905,97905,Nutrient Management,train
+a0888,77364,77364,Cultural Practices,train
+a0889,18132,18132,Cultural Practices,train
+a0890,103678,7245,Nutrient Management,train
+a0891,115750,5383,Plant Protection,train
+a0892,1372,1372,Varietal Information,train
+a0893,20214,20214,Plant Protection,test
+a0894,69373,69373,Weather,train
+a0895,119874,70174,Plant Protection,train
+a0896,62720,62720,Nutrient Management,train
+a0897,23907,23907,Varietal Information,train
+a0898,17882,261,Animal Husbandry,test
+a0899,136042,1133,Animal Husbandry,train
+a0900,37435,37435,Plant Protection,train
+a0901,96587,7875,Cultural Practices,test
+a0902,58735,58735,Plant Protection,train
+a0903,117175,117175,Plant Protection,train
+a0904,25502,2972,Nutrient Management,train
+a0905,43503,1139,Government Scheme,train
+a0906,57111,571,Plant Protection,train
+a0907,111393,25171,Nutrient Management,train
+a0908,108294,108294,Cultural Practices,train
+a0909,123109,66481,Nutrient Management,train
+a0910,38988,38988,Government Scheme,train
+a0911,47977,47977,Cultural Practices,train
+a0912,149,149,Animal Husbandry,train
+a0913,126468,4187,Plant Protection,train
+a0914,136063,75085,Nutrient Management,test
+a0915,67218,67218,Government Scheme,train
+a0916,98061,2811,Cultural Practices,train
+a0917,69935,28046,Government Scheme,train
+a0918,83795,83795,Cultural Practices,train
+a0919,101077,24867,Other,train
+a0920,90423,90423,Animal Husbandry,train
+a0921,23981,5510,Animal Husbandry,test
+a0922,33762,33762,Government Scheme,train
+a0923,111523,111523,Weather,train
+a0924,117081,24233,Plant Protection,train
+a0925,118782,27277,Varietal Information,train
+a0926,21469,615,Cultural Practices,train
+a0927,22709,6787,Animal Husbandry,train
+a0928,122778,28003,Cultural Practices,train
+a0929,99782,99782,Cultural Practices,train
+a0930,131695,131695,Cultural Practices,train
+a0931,106064,1407,Nutrient Management,train
+a0932,876,876,Varietal Information,train
+a0933,61896,61896,Nutrient Management,train
+a0934,90413,202,Nutrient Management,train
+a0935,58664,38029,Nutrient Management,train
+a0936,72146,72146,Varietal Information,train
+a0937,123250,9730,Varietal Information,train
+a0938,43818,24,Nutrient Management,train
+a0939,55349,55349,Other,train
+a0940,108911,108911,Plant Protection,train
+a0941,34311,4088,Cultural Practices,test
+a0942,16031,16031,Varietal Information,test
+a0943,126608,126608,Market Price,train
+a0944,58906,58906,Plant Protection,test
+a0945,99709,651,Plant Protection,train
+a0946,8079,4155,Nutrient Management,train
+a0947,66888,56120,Fisheries,train
+a0948,27382,27382,Cultural Practices,train
+a0949,83389,23881,Cultural Practices,train
+a0950,104908,13263,Fisheries,train
+a0951,101720,19791,Cultural Practices,train
+a0952,53839,7994,Plant Protection,train
+a0953,10925,10925,Fisheries,train
+a0954,104168,1450,Nutrient Management,test
+a0955,20887,20887,Animal Husbandry,train
+a0956,56047,10147,Cultural Practices,train
+a0957,19189,19189,Nutrient Management,test
+a0958,58658,3666,Fisheries,train
+a0959,121023,8011,Plant Protection,train
+a0960,84962,84962,Fisheries,train
+a0961,77846,12566,Plant Protection,train
+a0962,79562,79523,Weather,train
+a0963,29552,29552,Government Scheme,train
+a0964,84271,36069,Cultural Practices,train
+a0965,106933,11847,Nutrient Management,train
+a0966,29589,29589,Cultural Practices,train
+a0967,46043,46043,Animal Husbandry,train
+a0968,122554,91849,Animal Husbandry,train
+a0969,15996,15996,Nutrient Management,train
+a0970,17952,5439,Cultural Practices,train
+a0971,135070,56,Plant Protection,train
+a0972,78257,52,Animal Husbandry,train
+a0973,87901,87901,Weather,train
+a0974,129518,129518,Government Scheme,train
+a0975,120780,120780,Cultural Practices,train
+a0976,36366,36366,Nutrient Management,train
+a0977,52713,2641,Varietal Information,train
+a0978,12963,7561,Weather,train
+a0979,63373,63373,Nutrient Management,test
+a0980,55883,55883,Fisheries,train
+a0981,61578,61578,Fisheries,train
+a0982,93137,92685,Cultural Practices,train
+a0983,52844,52844,Animal Husbandry,train
+a0984,62453,62453,Varietal Information,train
+a0985,68283,68283,Plant Protection,train
+a0986,137146,137146,Animal Husbandry,train
+a0987,91224,91224,Other,train
+a0988,103859,103859,Fisheries,train
+a0989,87061,87061,Varietal Information,train
+a0990,48287,2972,Nutrient Management,train
+a0991,7879,7879,Plant Protection,train
+a0992,39908,3271,Government Scheme,train
+a0993,137856,137856,Cultural Practices,train
+a0994,130089,1277,Weather,train
+a0995,63423,332,Varietal Information,test
+a0996,73899,73899,Other,train
+a0997,1954,1954,Varietal Information,train
+a0998,21671,750,Plant Protection,train
+a0999,67722,67722,Other,test
+a1000,37437,8804,Government Scheme,train
+a1001,27006,27006,Plant Protection,train
+a1002,22424,22424,Plant Protection,train
+a1003,82682,82682,Animal Husbandry,test
+a1004,44815,44815,Other,train
+a1005,128408,3027,Nutrient Management,train
+a1006,111308,111308,Plant Protection,train
+a1007,32293,32282,Cultural Practices,train
+a1008,135940,56,Plant Protection,train
+a1009,67169,67169,Fisheries,train
+a1010,136142,13688,Plant Protection,train
+a1011,99610,99610,Plant Protection,train
+a1012,56458,24,Nutrient Management,train
+a1013,46469,46469,Cultural Practices,train
+a1014,58197,1207,Nutrient Management,train
+a1015,40176,40176,Government Scheme,train
+a1016,2736,2736,Cultural Practices,test
+a1017,117134,13400,Plant Protection,test
+a1018,100676,100676,Plant Protection,train
+a1019,74221,74221,Nutrient Management,train
+a1020,65367,3678,Nutrient Management,test
+a1021,90432,90432,Animal Husbandry,train
+a1022,56029,5556,Varietal Information,train
+a1023,54761,332,Varietal Information,test
+a1024,28859,23451,Plant Protection,train
+a1025,79528,774,Fisheries,train
+a1026,42917,141,Varietal Information,train
+a1027,79599,51946,Animal Husbandry,train
+a1028,134736,99755,Cultural Practices,train
+a1029,28570,28570,Fisheries,train
+a1030,76952,938,Fisheries,test
+a1031,126486,10745,Fisheries,train
+a1032,990,990,Plant Protection,train
+a1033,100918,100918,Market Price,train
+a1034,53075,53075,Animal Husbandry,train
+a1035,16977,16977,Other,train
+a1036,87931,87931,Nutrient Management,train
+a1037,31862,8228,Fisheries,train
+a1038,45665,56,Plant Protection,train
+a1039,88147,34499,Cultural Practices,train
+a1040,89493,1967,Nutrient Management,train
+a1041,89753,89753,Animal Husbandry,train
+a1042,82278,82278,Fisheries,train
+a1043,28133,7482,Cultural Practices,train
+a1044,92511,5450,Other,train
+a1045,97022,1534,Plant Protection,train
+a1046,80924,27017,Cultural Practices,train
+a1047,138682,1387,Other,train
+a1048,86447,7538,Nutrient Management,train
+a1049,110389,24408,Plant Protection,train
+a1050,65027,65027,Nutrient Management,train
+a1051,91136,38868,Nutrient Management,train
+a1052,125212,31114,Cultural Practices,train
+a1053,61163,578,Government Scheme,train
+a1054,138684,138684,Cultural Practices,train
+a1055,29572,2838,Weather,test
+a1056,92038,787,Varietal Information,train
+a1057,100982,100982,Plant Protection,test
+a1058,123776,719,Cultural Practices,train
+a1059,100544,6255,Cultural Practices,train
+a1060,138422,138422,Plant Protection,train
+a1061,99739,46469,Cultural Practices,train
+a1062,7494,7494,Weather,train
+a1063,75803,75803,Cultural Practices,train
+a1064,106528,106528,Animal Husbandry,train
+a1065,40944,40944,Nutrient Management,train
+a1066,111097,111097,Plant Protection,train
+a1067,104601,19960,Nutrient Management,train
+a1068,77366,62639,Cultural Practices,train
+a1069,64199,56,Plant Protection,train
+a1070,1291,1291,Nutrient Management,train
+a1071,38330,38330,Varietal Information,train
+a1072,32682,132,Animal Husbandry,train
+a1073,46379,8711,Cultural Practices,train
+a1074,16393,16393,Animal Husbandry,train
+a1075,45992,7158,Plant Protection,test
+a1076,29698,14419,Fisheries,test
+a1077,130052,49649,Cultural Practices,train
+a1078,60668,23672,Nutrient Management,train
+a1079,131612,131612,Government Scheme,train
+a1080,15280,15280,Plant Protection,train
+a1081,133103,16598,Varietal Information,train
+a1082,39981,39981,Nutrient Management,train
+a1083,123454,259,Animal Husbandry,train
+a1084,34130,34130,Cultural Practices,test
+a1085,48924,48924,Varietal Information,train
+a1086,21424,21424,Cultural Practices,train
+a1087,82652,67704,Animal Husbandry,train
+a1088,109261,56,Plant Protection,train
+a1089,138369,138369,Varietal Information,train
+a1090,2999,2999,Market Price,train
+a1091,18281,18281,Nutrient Management,train
+a1092,115061,39,Government Scheme,train
+a1093,116548,78387,Weather,train
+a1094,26942,1431,Plant Protection,train
+a1095,68902,1042,Plant Protection,train
+a1096,23359,4336,Plant Protection,train
+a1097,95764,25456,Fisheries,train
+a1098,111567,111567,Animal Husbandry,train
+a1099,111438,111438,Nutrient Management,train
+a1100,51209,1181,Plant Protection,train
+a1101,40565,32,Varietal Information,train
+a1102,138763,138763,Plant Protection,train
+a1103,70408,31500,Cultural Practices,train
+a1104,81767,2287,Nutrient Management,train
+a1105,89599,89599,Cultural Practices,train
+a1106,124127,16857,Market Price,train
+a1107,7606,7606,Fisheries,train
+a1108,76360,1861,Plant Protection,train
+a1109,112732,31670,Nutrient Management,train
+a1110,75860,75860,Nutrient Management,train
+a1111,47281,3607,Other,train
+a1112,20684,6851,Plant Protection,train
+a1113,93232,5273,Other,train
+a1114,30973,30973,Government Scheme,train
+a1115,119847,637,Plant Protection,train
+a1116,71343,4917,Cultural Practices,train
+a1117,64913,64913,Government Scheme,train
+a1118,96379,2113,Varietal Information,train
+a1119,89306,24,Nutrient Management,train
+a1120,105878,1678,Plant Protection,train
+a1121,58348,1796,Nutrient Management,test
+a1122,105390,2004,Varietal Information,train
+a1123,59525,23298,Cultural Practices,train
+a1124,23023,23023,Plant Protection,test
+a1125,71023,71023,Weather,train
+a1126,242,242,Government Scheme,train
+a1127,120298,120298,Plant Protection,train
+a1128,59119,531,Plant Protection,train
+a1129,91882,91882,Cultural Practices,train
+a1130,130389,124548,Animal Husbandry,train
+a1131,14650,14650,Government Scheme,train
+a1132,43722,629,Government Scheme,test
+a1133,18490,18490,Fisheries,train
+a1134,96606,26280,Plant Protection,train
+a1135,90065,17794,Plant Protection,train
+a1136,94185,94185,Animal Husbandry,train
+a1137,124686,109137,Animal Husbandry,train
+a1138,42612,42612,Plant Protection,train
+a1139,54094,13096,Nutrient Management,train
+a1140,50046,1257,Cultural Practices,train
+a1141,122183,122183,Government Scheme,train
+a1142,52632,16161,Nutrient Management,train
+a1143,55228,55228,Government Scheme,train
+a1144,110560,202,Nutrient Management,train
+a1145,68882,3596,Government Scheme,train
+a1146,88090,88090,Plant Protection,train
+a1147,25050,25050,Animal Husbandry,train
+a1148,124124,562,Animal Husbandry,train
+a1149,107149,107149,Government Scheme,train
+a1150,65030,14544,Government Scheme,train
+a1151,42217,1233,Plant Protection,train
+a1152,73661,73661,Animal Husbandry,train
+a1153,15544,197,Plant Protection,train
+a1154,133679,133679,Cultural Practices,train
+a1155,134063,6074,Plant Protection,train
+a1156,53341,53341,Cultural Practices,train
+a1157,72939,1872,Other,train
+a1158,112317,112317,Other,train
+a1159,89212,89212,Plant Protection,train
+a1160,37429,7933,Plant Protection,train
+a1161,28017,513,Government Scheme,train
+a1162,25975,25975,Plant Protection,train
+a1163,94000,94000,Cultural Practices,train
+a1164,116582,146,Nutrient Management,train
+a1165,68239,7875,Cultural Practices,test
+a1166,7447,7447,Plant Protection,train
+a1167,97343,38483,Varietal Information,train
+a1168,86923,2653,Government Scheme,train
+a1169,77824,142,Plant Protection,train
+a1170,91942,91942,Cultural Practices,train
+a1171,32757,308,Animal Husbandry,train
+a1172,70217,70217,Varietal Information,test
+a1173,135893,13501,Plant Protection,train
+a1174,84208,84208,Cultural Practices,train
+a1175,56189,49813,Cultural Practices,train
+a1176,43868,43868,Fisheries,test
+a1177,108256,67499,Fisheries,train
+a1178,54478,1637,Plant Protection,train
+a1179,120185,120185,Weather,train
+a1180,43149,1129,Plant Protection,train
+a1181,52450,52450,Cultural Practices,train
+a1182,130772,130772,Government Scheme,train
+a1183,117344,45904,Varietal Information,train
+a1184,118397,118397,Animal Husbandry,test
+a1185,10067,54,Nutrient Management,train
+a1186,112619,13615,Plant Protection,train
+a1187,114557,24,Nutrient Management,train
+a1188,97006,4619,Plant Protection,train
+a1189,106228,106228,Fisheries,train
+a1190,52019,52019,Animal Husbandry,train
+a1191,131453,131453,Varietal Information,train
+a1192,62893,37237,Nutrient Management,train
+a1193,81205,2664,Animal Husbandry,test
+a1194,95976,95976,Nutrient Management,train
+a1195,96837,96837,Other,train
+a1196,100804,5273,Other,train
+a1197,16023,16023,Cultural Practices,train
+a1198,135251,1387,Other,train
+a1199,8577,8577,Fisheries,test
+a1200,18750,18750,Animal Husbandry,train
+a1201,128211,128211,Varietal Information,train
+a1202,9309,9309,Market Price,train
+a1203,48945,48945,Market Price,train
+a1204,29195,29195,Cultural Practices,train
+a1205,96648,13232,Plant Protection,train
+a1206,73686,1684,Plant Protection,train
+a1207,119510,2141,Animal Husbandry,test
+a1208,136103,26796,Government Scheme,train
+a1209,13355,13355,Plant Protection,test
+a1210,20159,6214,Plant Protection,test
+a1211,74223,74223,Nutrient Management,train
+a1212,18394,18394,Nutrient Management,train
+a1213,74127,74127,Plant Protection,train
+a1214,134269,47242,Cultural Practices,test
+a1215,53006,7961,Cultural Practices,train
+a1216,29548,29548,Other,train
+a1217,14224,14224,Varietal Information,train
+a1218,55864,3494,Nutrient Management,train
+a1219,13680,13680,Nutrient Management,train
+a1220,79701,5279,Nutrient Management,train
+a1221,42133,42133,Plant Protection,train
+a1222,6131,6131,Fisheries,train
+a1223,79540,24,Nutrient Management,train
+a1224,29808,14567,Government Scheme,train
+a1225,3417,3417,Government Scheme,test
+a1226,64342,2830,Fisheries,train
+a1227,17019,17019,Plant Protection,train
+a1228,26284,26284,Plant Protection,train
+a1229,96107,51711,Cultural Practices,train
+a1230,74798,601,Nutrient Management,test
+a1231,103102,41718,Fisheries,train
+a1232,79256,79256,Animal Husbandry,train
+a1233,126299,1450,Nutrient Management,test
+a1234,17443,5273,Other,train
+a1235,11961,1188,Varietal Information,train
+a1236,38142,2395,Fisheries,train
+a1237,82162,82162,Animal Husbandry,train
+a1238,96731,96731,Nutrient Management,train
+a1239,71856,443,Nutrient Management,train
+a1240,128513,128513,Animal Husbandry,train
+a1241,87474,4191,Fisheries,train
+a1242,85068,3,Varietal Information,train
+a1243,20317,20317,Plant Protection,test
+a1244,123982,123982,Cultural Practices,train
+a1245,65005,146,Nutrient Management,train
+a1246,82005,5617,Cultural Practices,train
+a1247,96764,96764,Plant Protection,train
+a1248,26715,26715,Cultural Practices,test
+a1249,19898,438,Plant Protection,test
+a1250,11818,11818,Cultural Practices,train
+a1251,82168,46536,Animal Husbandry,train
+a1252,100437,8613,Plant Protection,test
+a1253,81338,12203,Cultural Practices,train
+a1254,107256,84208,Cultural Practices,train
+a1255,118096,354,Plant Protection,train
+a1256,20428,4110,Plant Protection,train
+a1257,101838,101838,Cultural Practices,train
+a1258,7,7,Animal Husbandry,train
+a1259,36522,296,Plant Protection,train
+a1260,136805,4737,Plant Protection,train
+a1261,69101,63516,Animal Husbandry,test
+a1262,73356,73356,Plant Protection,train
+a1263,47752,4909,Government Scheme,train
+a1264,130479,130479,Fisheries,train
+a1265,98994,98994,Fisheries,train
+a1266,101205,25314,Cultural Practices,train
+a1267,27884,27884,Market Price,train
+a1268,126553,1846,Fisheries,train
+a1269,105088,25709,Plant Protection,test
+a1270,45607,45607,Weather,train
+a1271,126646,126646,Fisheries,train
+a1272,119659,14760,Nutrient Management,train
+a1273,45766,15269,Other,train
+a1274,97566,369,Animal Husbandry,train
+a1275,56078,16315,Cultural Practices,train
+a1276,22060,22060,Varietal Information,train
+a1277,82196,82196,Plant Protection,test
+a1278,83969,16745,Fisheries,train
+a1279,124791,11381,Plant Protection,train
+a1280,91667,91667,Animal Husbandry,train
+a1281,55459,55459,Plant Protection,train
+a1282,82514,2838,Weather,test
+a1283,87020,23298,Cultural Practices,train
+a1284,125415,1188,Varietal Information,train
+a1285,104377,579,Animal Husbandry,train
+a1286,91805,938,Fisheries,test
+a1287,18379,9529,Varietal Information,train
+a1288,138804,8922,Plant Protection,train
+a1289,100944,5164,Varietal Information,train
+a1290,40341,423,Cultural Practices,train
+a1291,7478,259,Animal Husbandry,train
+a1292,129609,208,Animal Husbandry,train
+a1293,105846,7875,Cultural Practices,test
+a1294,21979,39,Government Scheme,train
+a1295,59045,972,Government Scheme,train
+a1296,109935,77785,Weather,train
+a1297,78676,655,Plant Protection,train
+a1298,127207,24,Nutrient Management,train
+a1299,120042,1368,Plant Protection,test
+a1300,3458,3458,Plant Protection,train
+a1301,69604,69604,Cultural Practices,train
+a1302,127840,62903,Varietal Information,train
+a1303,118247,208,Animal Husbandry,train
+a1304,128679,128679,Other,train
+a1305,97220,150,Plant Protection,train
+a1306,39133,2838,Weather,test
+a1307,63115,6372,Plant Protection,train
+a1308,51837,39,Government Scheme,train
+a1309,131082,131082,Plant Protection,train
+a1310,89862,13786,Animal Husbandry,train
+a1311,45073,22435,Animal Husbandry,train
+a1312,23995,2358,Nutrient Management,train
+a1313,95896,1967,Nutrient Management,train
+a1314,23829,743,Plant Protection,train
+a1315,91845,91845,Cultural Practices,train
+a1316,99935,1494,Plant Protection,train
+a1317,14731,14731,Cultural Practices,train
+a1318,106390,106390,Other,train
+a1319,24708,24708,Other,train
+a1320,122532,122532,Varietal Information,train
+a1321,117025,4418,Animal Husbandry,train
+a1322,127614,6944,Plant Protection,train
+a1323,5034,5034,Government Scheme,train
+a1324,65960,65960,Other,train
+a1325,85331,5240,Animal Husbandry,train
+a1326,33805,1848,Varietal Information,train
+a1327,72508,72508,Government Scheme,train
+a1328,30752,30752,Government Scheme,train
+a1329,122093,2838,Weather,test
+a1330,52074,9342,Cultural Practices,test
+a1331,111138,45179,Nutrient Management,train
+a1332,14781,14604,Government Scheme,test
+a1333,40047,40047,Animal Husbandry,test
+a1334,37415,37415,Animal Husbandry,train
+a1335,20286,20286,Fisheries,train
+a1336,36444,36444,Fisheries,train
+a1337,41847,41847,Government Scheme,train
+a1338,83228,83228,Cultural Practices,train
+a1339,97020,97020,Cultural Practices,train
+a1340,55208,15227,Animal Husbandry,test
+a1341,20277,20277,Other,train
+a1342,88476,8608,Plant Protection,train
+a1343,45596,5279,Nutrient Management,train
+a1344,74161,74161,Weather,train
+a1345,5484,333,Nutrient Management,train
+a1346,46816,46816,Cultural Practices,train
+a1347,96155,2643,Varietal Information,train
+a1348,114092,318,Plant Protection,train
+a1349,112579,230,Cultural Practices,train
+a1350,117492,8607,Plant Protection,train
+a1351,47469,47469,Government Scheme,train
+a1352,110064,4180,Plant Protection,train
+a1353,65038,65038,Animal Husbandry,train
+a1354,62487,62487,Animal Husbandry,train
+a1355,105549,1479,Plant Protection,train
+a1356,81379,81379,Cultural Practices,train
+a1357,126150,126150,Plant Protection,train
+a1358,2955,2955,Varietal Information,train
+a1359,131074,105474,Other,train
+a1360,122436,122436,Varietal Information,train
+a1361,57079,57079,Animal Husbandry,train
+a1362,56996,10415,Fisheries,train
+a1363,52772,4463,Other,train
+a1364,111220,1120,Nutrient Management,train
+a1365,93756,93756,Weather,train
+a1366,5739,5739,Cultural Practices,train
+a1367,112103,112103,Varietal Information,train
+a1368,16639,16639,Varietal Information,train
+a1369,61850,13263,Fisheries,train
+a1370,123290,123290,Varietal Information,train
+a1371,94962,1779,Government Scheme,train
+a1372,77547,68786,Plant Protection,train
+a1373,80190,80190,Animal Husbandry,train
+a1374,72185,72185,Cultural Practices,train
+a1375,79046,24881,Plant Protection,train
+a1376,70163,19183,Animal Husbandry,train
+a1377,22634,22634,Cultural Practices,train
+a1378,106542,106542,Fisheries,test
+a1379,9364,9364,Plant Protection,train
+a1380,9943,9943,Fisheries,test
+a1381,127143,127143,Government Scheme,train
+a1382,130074,42877,Plant Protection,train
+a1383,106478,2254,Plant Protection,train
+a1384,138872,138872,Animal Husbandry,train
+a1385,79523,79523,Weather,train
+a1386,53229,13928,Nutrient Management,test
+a1387,135442,1781,Plant Protection,train
+a1388,69126,3783,Plant Protection,train
+a1389,133252,7875,Cultural Practices,test
+a1390,96614,87352,Other,train
+a1391,59910,23789,Nutrient Management,train
+a1392,120285,38020,Plant Protection,train
+a1393,92930,49200,Cultural Practices,train
+a1394,125683,82547,Plant Protection,train
+a1395,128717,5989,Plant Protection,test
+a1396,59188,45538,Cultural Practices,train
+a1397,115559,551,Plant Protection,train
+a1398,96819,2082,Plant Protection,train
+a1399,6548,1387,Other,train
+a1400,91121,91121,Cultural Practices,train
+a1401,128951,1386,Plant Protection,train
+a1402,111384,111384,Weather,train
+a1403,93072,93072,Plant Protection,train
+a1404,16400,16400,Market Price,train
+a1405,53974,53974,Cultural Practices,train
+a1406,91306,91306,Plant Protection,train
+a1407,63059,4588,Fisheries,train
+a1408,89995,605,Varietal Information,train
+a1409,100975,11047,Nutrient Management,train
+a1410,114509,2888,Government Scheme,train
+a1411,27547,7632,Cultural Practices,train
+a1412,51878,6877,Fisheries,train
+a1413,75182,5752,Cultural Practices,train
+a1414,34945,34945,Weather,train
+a1415,12744,12735,Weather,train
+a1416,43911,43911,Plant Protection,train
+a1417,41074,41074,Plant Protection,train
+a1418,97097,97097,Cultural Practices,train
+a1419,60976,60976,Fisheries,train
+a1420,113627,28482,Plant Protection,train
+a1421,37083,37083,Cultural Practices,train
+a1422,20672,11262,Plant Protection,train
+a1423,103755,22719,Plant Protection,train
+a1424,130520,130520,Nutrient Management,train
+a1425,98749,82334,Other,train
+a1426,125375,125375,Varietal Information,train
+a1427,5933,5933,Plant Protection,train
+a1428,77549,77549,Animal Husbandry,train
+a1429,126557,126557,Government Scheme,train
+a1430,64422,64422,Plant Protection,train
+a1431,107713,9368,Plant Protection,train
+a1432,61148,4491,Plant Protection,test
+a1433,73379,482,Plant Protection,test
+a1434,68047,6836,Nutrient Management,train
+a1435,105191,69077,Cultural Practices,train
+a1436,46079,37406,Cultural Practices,train
+a1437,130129,19928,Animal Husbandry,train
+a1438,25778,3444,Plant Protection,test
+a1439,123825,1174,Plant Protection,test
+a1440,129239,3044,Government Scheme,test
+a1441,41879,41879,Plant Protection,train
+a1442,21680,21680,Government Scheme,train
+a1443,29906,29906,Cultural Practices,train
+a1444,106848,106848,Animal Husbandry,train
+a1445,85066,3739,Fisheries,train
+a1446,132159,22461,Varietal Information,train
+a1447,25241,25241,Varietal Information,train
+a1448,120215,79123,Animal Husbandry,train
+a1449,107079,107079,Government Scheme,train
+a1450,128652,85,Animal Husbandry,test
+a1451,130957,130957,Other,train
+a1452,98692,98692,Cultural Practices,train
+a1453,8795,8795,Other,train
+a1454,137724,137724,Animal Husbandry,train
+a1455,38552,38552,Government Scheme,train
+a1456,110859,27802,Cultural Practices,train
+a1457,125940,125940,Fisheries,train
+a1458,98180,98180,Varietal Information,train
+a1459,84789,4734,Plant Protection,train
+a1460,7499,3739,Fisheries,train
+a1461,134014,443,Nutrient Management,train
+a1462,12735,12735,Weather,train
+a1463,29141,29141,Fisheries,train
+a1464,112858,112858,Plant Protection,train
+a1465,62131,26834,Plant Protection,test
+a1466,55811,298,Animal Husbandry,train
+a1467,86665,1566,Nutrient Management,train
+a1468,13651,13651,Other,train
+a1469,43014,838,Nutrient Management,test
+a1470,38670,1848,Varietal Information,train
+a1471,138335,138335,Other,train
+a1472,106076,12475,Nutrient Management,train
+a1473,59166,357,Other,train
+a1474,10709,10709,Other,train
+a1475,32718,32718,Cultural Practices,test
+a1476,24577,2156,Fisheries,train
+a1477,71273,71273,Varietal Information,test
+a1478,89072,6512,Cultural Practices,test
+a1479,73134,88,Animal Husbandry,train
+a1480,23175,1443,Plant Protection,train
+a1481,41288,41288,Fisheries,train
+a1482,116519,32,Varietal Information,train
+a1483,3527,3527,Fisheries,train
+a1484,115800,2358,Nutrient Management,train
+a1485,9253,1450,Nutrient Management,test
+a1486,29322,29322,Government Scheme,test
+a1487,57882,27227,Nutrient Management,train
+a1488,105669,105669,Plant Protection,test
+a1489,61408,2109,Nutrient Management,train
+a1490,22184,22090,Fisheries,train
+a1491,120935,72076,Animal Husbandry,train
+a1492,125934,11999,Plant Protection,train
+a1493,119230,78387,Weather,train
+a1494,13287,13287,Plant Protection,train
+a1495,32578,16242,Varietal Information,train
+a1496,125090,125090,Plant Protection,train
+a1497,61269,79,Cultural Practices,train
+a1498,38787,132,Animal Husbandry,train
+a1499,33232,482,Plant Protection,test
+a1500,42647,6264,Fisheries,train
+a1501,70456,5857,Government Scheme,test
+a1502,87891,1967,Nutrient Management,train
+a1503,110846,110846,Other,train
+a1504,50519,50519,Animal Husbandry,train
+a1505,37825,23704,Nutrient Management,train
+a1506,124377,7439,Varietal Information,train
+a1507,2879,39,Government Scheme,train
+a1508,51187,6747,Animal Husbandry,test
+a1509,87722,87722,Plant Protection,train
+a1510,34083,4191,Fisheries,train
+a1511,128332,128332,Animal Husbandry,train
+a1512,80663,35315,Varietal Information,train
+a1513,51430,51430,Market Price,test
+a1514,123692,120745,Plant Protection,train
+a1515,81967,1727,Nutrient Management,train
+a1516,55798,331,Animal Husbandry,train
+a1517,11912,2226,Government Scheme,train
+a1518,111666,111666,Nutrient Management,test
+a1519,101017,101017,Weather,train
+a1520,21958,296,Plant Protection,train
+a1521,114813,114813,Animal Husbandry,train
+a1522,29411,28195,Other,train
+a1523,89332,13627,Cultural Practices,train
+a1524,43064,202,Nutrient Management,train
+a1525,67132,9788,Cultural Practices,test
+a1526,14471,2863,Government Scheme,train
+a1527,40277,40277,Varietal Information,test
+a1528,26497,26497,Cultural Practices,train
+a1529,45835,7328,Nutrient Management,train
+a1530,125234,125234,Nutrient Management,test
+a1531,126607,13420,Nutrient Management,train
+a1532,127970,2924,Government Scheme,train
+a1533,25061,3467,Varietal Information,test
+a1534,83329,83276,Weather,train
+a1535,46438,2830,Fisheries,train
+a1536,19102,31,Animal Husbandry,train
+a1537,47240,1106,Cultural Practices,train
+a1538,45305,45160,Animal Husbandry,train
+a1539,52641,52641,Cultural Practices,train
+a1540,35490,2023,Nutrient Management,train
+a1541,30041,30041,Animal Husbandry,train
+a1542,119069,36645,Cultural Practices,train
+a1543,33570,1981,Plant Protection,train
+a1544,56670,110,Animal Husbandry,train
+a1545,110994,7875,Cultural Practices,test
+a1546,70380,70380,Other,train
+a1547,122699,115036,Government Scheme,test
+a1548,134626,134626,Weather,train
+a1549,120299,120299,Plant Protection,train
+a1550,98940,98940,Animal Husbandry,test
+a1551,63501,4520,Nutrient Management,train
+a1552,64270,64270,Other,train
+a1553,127038,127038,Cultural Practices,train
+a1554,84771,84771,Fisheries,train
+a1555,29123,1432,Other,train
+a1556,103587,103587,Fisheries,train
+a1557,7679,7679,Fisheries,train
+a1558,105139,105139,Varietal Information,train
+a1559,27675,3546,Plant Protection,train
+a1560,65223,65223,Other,test
+a1561,33990,33990,Government Scheme,train
+a1562,83410,1435,Plant Protection,train
+a1563,103216,5617,Cultural Practices,train
+a1564,78208,78208,Plant Protection,test
+a1565,54669,15863,Plant Protection,train
+a1566,77002,162,Animal Husbandry,train
+a1567,51694,51694,Animal Husbandry,train
+a1568,63475,63475,Animal Husbandry,train
+a1569,55282,55282,Plant Protection,train
+a1570,31030,31030,Government Scheme,train
+a1571,83925,83925,Plant Protection,train
+a1572,12142,12142,Plant Protection,train
+a1573,97021,97021,Plant Protection,train
+a1574,9045,5063,Government Scheme,train
+a1575,36983,36983,Plant Protection,train
+a1576,88051,88051,Cultural Practices,train
+a1577,26972,26972,Cultural Practices,test
+a1578,62563,62563,Cultural Practices,train
+a1579,81239,24,Nutrient Management,train
+a1580,128002,128002,Animal Husbandry,test
+a1581,82634,2839,Other,test
+a1582,7483,7483,Weather,train
+a1583,123514,123514,Plant Protection,train
+a1584,63457,63455,Plant Protection,train
+a1585,66221,49932,Cultural Practices,train
+a1586,15519,14353,Cultural Practices,train
+a1587,689,689,Fisheries,test
+a1588,138866,9491,Cultural Practices,train
+a1589,71888,7,Animal Husbandry,train
+a1590,46237,46237,Fisheries,train
+a1591,37188,37188,Weather,train
+a1592,36070,1845,Weather,train
+a1593,96887,14321,Cultural Practices,train
+a1594,89481,89481,Other,train
+a1595,70689,650,Fisheries,train
+a1596,128164,128164,Weather,train
+a1597,41353,41353,Market Price,train
+a1598,54254,54253,Animal Husbandry,test
+a1599,137491,137491,Cultural Practices,train
+a1600,111005,33,Nutrient Management,train
+a1601,119410,11395,Nutrient Management,train
+a1602,3742,329,Government Scheme,train
+a1603,88983,478,Varietal Information,train
+a1604,650,650,Fisheries,train
+a1605,19690,10190,Cultural Practices,train
+a1606,44702,1201,Plant Protection,train
+a1607,79016,9623,Plant Protection,train
+a1608,86343,86343,Fisheries,test
+a1609,21537,21537,Cultural Practices,train
+a1610,8171,103,Nutrient Management,train
+a1611,73242,73242,Animal Husbandry,train
+a1612,108410,108410,Animal Husbandry,train
+a1613,77548,77548,Plant Protection,train
+a1614,11457,11457,Weather,train
+a1615,50425,11822,Plant Protection,train
+a1616,10426,10426,Weather,train
+a1617,102282,102282,Cultural Practices,train
+a1618,13533,13533,Animal Husbandry,test
+a1619,31120,31120,Market Price,train
+a1620,91350,30817,Cultural Practices,train
+a1621,45339,24,Nutrient Management,train
+a1622,119537,5279,Nutrient Management,train
+a1623,74342,74342,Animal Husbandry,train
+a1624,54776,54776,Government Scheme,train
+a1625,47626,16461,Government Scheme,train
+a1626,38290,4737,Plant Protection,train
+a1627,115036,115036,Government Scheme,test
+a1628,123906,41463,Fisheries,train
+a1629,107225,47756,Government Scheme,train
+a1630,16891,740,Animal Husbandry,train
+a1631,60058,8645,Plant Protection,train
+a1632,65845,3122,Government Scheme,test
+a1633,16145,2571,Animal Husbandry,train
+a1634,93544,10978,Cultural Practices,test
+a1635,55219,55219,Nutrient Management,train
+a1636,28072,28018,Fisheries,train
+a1637,13624,2615,Nutrient Management,train
+a1638,60708,3669,Nutrient Management,train
+a1639,136797,127536,Animal Husbandry,train
+a1640,10306,24,Nutrient Management,train
+a1641,128493,31626,Plant Protection,train
+a1642,23180,601,Nutrient Management,test
+a1643,45998,443,Nutrient Management,train
+a1644,61199,26865,Cultural Practices,train
+a1645,138669,138669,Other,train
+a1646,100491,7683,Plant Protection,train
+a1647,137181,137181,Plant Protection,train
+a1648,103033,103033,Fisheries,test
+a1649,25216,1088,Plant Protection,train
+a1650,12796,2022,Nutrient Management,train
+a1651,78557,78557,Cultural Practices,test
+a1652,18364,18364,Cultural Practices,test
+a1653,72688,72688,Cultural Practices,train
+a1654,66552,66552,Fisheries,train
+a1655,66892,66892,Other,train
+a1656,55472,17151,Plant Protection,train
+a1657,108235,18784,Market Price,train
+a1658,12368,296,Plant Protection,train
+a1659,6891,6891,Market Price,train
+a1660,72844,63178,Animal Husbandry,train
+a1661,46594,1368,Plant Protection,test
+a1662,66005,66005,Market Price,test
+a1663,28798,28798,Other,test
+a1664,55380,55380,Plant Protection,train
+a1665,56259,56259,Nutrient Management,train
+a1666,78924,1093,Weather,train
+a1667,23786,23786,Weather,train
+a1668,60330,2035,Nutrient Management,test
+a1669,124100,3444,Plant Protection,test
+a1670,99533,2477,Varietal Information,train
+a1671,88623,6180,Animal Husbandry,train
+a1672,82495,82495,Nutrient Management,train
+a1673,109708,1656,Plant Protection,train
+a1674,2861,2861,Other,train
+a1675,121386,73168,Other,train
+a1676,114671,54322,Other,train
+a1677,18912,306,Animal Husbandry,test
+a1678,58753,58753,Animal Husbandry,train
+a1679,35980,35980,Plant Protection,train
+a1680,127350,127350,Other,train
+a1681,85217,1010,Animal Husbandry,train
+a1682,73188,73188,Nutrient Management,test
+a1683,54190,41732,Cultural Practices,train
+a1684,29379,29379,Cultural Practices,test
+a1685,25304,1993,Plant Protection,train
+a1686,29676,29676,Government Scheme,train
+a1687,83164,83164,Nutrient Management,train
+a1688,129099,129099,Government Scheme,test
+a1689,81738,2395,Fisheries,train
+a1690,114319,1642,Animal Husbandry,train
+a1691,64476,8525,Market Price,train
+a1692,71395,71394,Weather,train
+a1693,114105,114105,Government Scheme,train
+a1694,82499,448,Animal Husbandry,train
+a1695,110976,66557,Varietal Information,test
+a1696,107572,107572,Fisheries,train
+a1697,91231,91231,Weather,train
+a1698,92584,5542,Nutrient Management,train
+a1699,87359,87359,Cultural Practices,train
+a1700,25477,25477,Varietal Information,train
+a1701,112934,2399,Animal Husbandry,test
+a1702,96858,4725,Fisheries,train
+a1703,64783,64783,Animal Husbandry,train
+a1704,118170,132,Animal Husbandry,train
+a1705,30235,30235,Varietal Information,test
+a1706,112199,112199,Cultural Practices,train
+a1707,14661,14661,Plant Protection,train
+a1708,61595,61595,Plant Protection,train
+a1709,5916,5916,Varietal Information,train
+a1710,111475,111475,Fisheries,train
+a1711,93123,15613,Plant Protection,train
+a1712,8519,8519,Varietal Information,train
+a1713,71149,13148,Nutrient Management,train
+a1714,47560,14527,Government Scheme,train
+a1715,103639,24,Nutrient Management,train
+a1716,102788,52,Animal Husbandry,train
+a1717,122650,122650,Cultural Practices,train
+a1718,65016,5234,Cultural Practices,train
+a1719,13526,5279,Nutrient Management,train
+a1720,21059,217,Plant Protection,test
+a1721,94520,94520,Plant Protection,train
+a1722,112766,112766,Plant Protection,train
+a1723,117163,14353,Cultural Practices,train
+a1724,117873,117873,Plant Protection,test
+a1725,35090,35090,Fisheries,train
+a1726,42699,650,Fisheries,train
+a1727,58584,7608,Nutrient Management,train
+a1728,39518,39518,Animal Husbandry,train
+a1729,62870,8207,Plant Protection,train
+a1730,65493,1189,Government Scheme,train
+a1731,79095,1312,Other,train
+a1732,131686,2305,Animal Husbandry,train
+a1733,57615,650,Fisheries,train
+a1734,36433,36433,Other,train
+a1735,99192,30431,Animal Husbandry,train
+a1736,120998,120998,Weather,train
+a1737,30644,30644,Plant Protection,train
+a1738,79622,79622,Cultural Practices,train
+a1739,107480,107480,Fisheries,train
+a1740,87360,47189,Varietal Information,train
+a1741,74675,74675,Animal Husbandry,train
+a1742,37858,1450,Nutrient Management,test
+a1743,18053,296,Plant Protection,train
+a1744,19263,19263,Cultural Practices,train
+a1745,19879,19879,Fisheries,train
+a1746,107895,31,Animal Husbandry,train
+a1747,26787,26787,Other,test
+a1748,16962,1432,Other,train
+a1749,74577,74577,Other,train
+a1750,72602,2106,Plant Protection,train
+a1751,105603,105603,Plant Protection,train
+a1752,104697,718,Cultural Practices,train
+a1753,48312,48312,Plant Protection,train
+a1754,134107,2713,Animal Husbandry,test
+a1755,33002,33002,Cultural Practices,train
+a1756,35842,23830,Nutrient Management,train
+a1757,104488,104488,Cultural Practices,test
+a1758,90546,17187,Animal Husbandry,train
+a1759,130471,130471,Plant Protection,train
+a1760,1173,1173,Plant Protection,train
+a1761,8938,8936,Weather,train
+a1762,85818,39,Government Scheme,train
+a1763,29044,29044,Plant Protection,train
+a1764,45622,531,Plant Protection,train
+a1765,42238,42238,Nutrient Management,test
+a1766,58356,58356,Varietal Information,train
+a1767,24901,7158,Cultural Practices,test
+a1768,44211,25069,Varietal Information,train
+a1769,106203,106203,Government Scheme,train
+a1770,39477,934,Plant Protection,test
+a1771,101746,3057,Plant Protection,train
+a1772,2853,2838,Weather,test
+a1773,59407,641,Fisheries,train
+a1774,114817,39,Government Scheme,train
+a1775,119196,40126,Cultural Practices,train
+a1776,39845,19292,Plant Protection,train
+a1777,9704,9704,Plant Protection,train
+a1778,130059,130059,Plant Protection,train
+a1779,70317,22980,Plant Protection,test
+a1780,83994,85,Animal Husbandry,test
+a1781,46353,56,Plant Protection,train
+a1782,10078,10078,Animal Husbandry,train
+a1783,109928,22811,Plant Protection,train
+a1784,68817,68817,Animal Husbandry,train
+a1785,138780,3714,Government Scheme,test
+a1786,135006,134870,Animal Husbandry,train
+a1787,133974,4678,Varietal Information,train
+a1788,15449,15449,Varietal Information,test
+a1789,24800,12591,Plant Protection,train
+a1790,81700,2395,Fisheries,train
+a1791,121256,21849,Other,train
+a1792,62793,14227,Animal Husbandry,train
+a1793,122267,2914,Government Scheme,train
+a1794,53111,162,Animal Husbandry,train
+a1795,24605,24605,Weather,train
+a1796,25519,22626,Weather,train
+a1797,114371,64962,Varietal Information,test
+a1798,14546,2917,Government Scheme,test
+a1799,71114,22952,Plant Protection,test
+a1800,135060,135060,Animal Husbandry,train
+a1801,114762,1387,Other,train
+a1802,65282,65282,Government Scheme,train
+a1803,85401,412,Cultural Practices,train
+a1804,19965,19965,Plant Protection,train
+a1805,35002,1439,Plant Protection,train
+a1806,75484,50,Varietal Information,train
+a1807,125037,125037,Plant Protection,train
+a1808,110552,1387,Other,train
+a1809,94045,11947,Market Price,train
+a1810,108989,28137,Animal Husbandry,train
+a1811,74700,74700,Weather,train
+a1812,103364,24,Nutrient Management,train
+a1813,41333,509,Cultural Practices,train
+a1814,103296,103296,Plant Protection,test
+a1815,73815,39,Government Scheme,train
+a1816,43560,1036,Cultural Practices,train
+a1817,32703,552,Varietal Information,test
+a1818,100364,100364,Nutrient Management,train
+a1819,63607,63607,Nutrient Management,train
+a1820,3597,3597,Government Scheme,train
+a1821,48604,120,Cultural Practices,train
+a1822,121271,37237,Nutrient Management,train
+a1823,16510,16510,Plant Protection,train
+a1824,45510,45510,Varietal Information,train
+a1825,134723,134723,Plant Protection,train
+a1826,122422,122422,Plant Protection,train
+a1827,44558,7211,Varietal Information,train
+a1828,77826,77826,Fisheries,test
+a1829,74202,30057,Government Scheme,train
+a1830,11552,2232,Fisheries,train
+a1831,37474,166,Plant Protection,train
+a1832,102395,31669,Cultural Practices,test
+a1833,81975,26338,Plant Protection,train
+a1834,25873,25873,Plant Protection,train
+a1835,47808,47808,Government Scheme,test
+a1836,111874,111874,Cultural Practices,train
+a1837,34061,454,Other,test
+a1838,27576,15021,Plant Protection,train
+a1839,56785,1528,Plant Protection,train
+a1840,106813,106813,Animal Husbandry,train
+a1841,98105,2741,Animal Husbandry,train
+a1842,58575,3405,Fisheries,train
+a1843,25281,5564,Plant Protection,train
+a1844,138203,54,Nutrient Management,train
+a1845,81602,2472,Plant Protection,train
+a1846,78362,12011,Plant Protection,train
+a1847,10527,743,Plant Protection,train
+a1848,17536,17536,Cultural Practices,test
+a1849,119080,13929,Cultural Practices,train
+a1850,38623,38623,Animal Husbandry,test
+a1851,120572,120572,Plant Protection,train
+a1852,71103,629,Government Scheme,test
+a1853,39676,14642,Plant Protection,train
+a1854,2996,2996,Government Scheme,train
+a1855,101093,101093,Cultural Practices,train
+a1856,39224,39224,Government Scheme,train
+a1857,1816,1816,Market Price,train
+a1858,76145,807,Plant Protection,train
+a1859,31040,24,Nutrient Management,train
+a1860,137514,16578,Government Scheme,train
+a1861,96958,1122,Nutrient Management,train
+a1862,68594,18802,Cultural Practices,train
+a1863,87984,82,Plant Protection,train
+a1864,93640,45177,Varietal Information,train
+a1865,84932,84932,Animal Husbandry,train
+a1866,129550,129550,Cultural Practices,train
+a1867,46871,7806,Nutrient Management,train
+a1868,36451,36451,Weather,train
+a1869,49894,641,Fisheries,train
+a1870,62883,4583,Animal Husbandry,train
+a1871,113840,3057,Plant Protection,train
+a1872,125973,125973,Fisheries,train
+a1873,48917,132,Animal Husbandry,train
+a1874,83437,83437,Animal Husbandry,train
+a1875,54860,5008,Government Scheme,train
+a1876,3953,3953,Plant Protection,train
+a1877,75672,9771,Fisheries,train
+a1878,27933,4182,Nutrient Management,train
+a1879,46784,4199,Plant Protection,train
+a1880,36452,36452,Weather,train
+a1881,1306,1306,Government Scheme,train
+a1882,57217,650,Fisheries,train
+a1883,6719,6719,Cultural Practices,train
+a1884,94598,94598,Weather,train
+a1885,5032,3264,Government Scheme,train
+a1886,79227,175,Animal Husbandry,train
+a1887,83880,83880,Varietal Information,train
+a1888,49612,49612,Plant Protection,test
+a1889,93939,6379,Plant Protection,train
+a1890,20825,3936,Nutrient Management,train
+a1891,138156,138156,Animal Husbandry,train
+a1892,110029,86545,Government Scheme,test
+a1893,138613,138613,Plant Protection,train
+a1894,74213,74213,Nutrient Management,test
+a1895,81246,81246,Cultural Practices,train
+a1896,119811,59,Nutrient Management,test
+a1897,967,935,Animal Husbandry,train
+a1898,129736,862,Animal Husbandry,train
+a1899,49989,3444,Plant Protection,test
+a1900,136789,15143,Nutrient Management,train
+a1901,127902,2888,Government Scheme,train
+a1902,129320,39,Government Scheme,train
+a1903,80764,80764,Varietal Information,train
+a1904,87534,84853,Fisheries,train
+a1905,29956,2944,Plant Protection,train
+a1906,47770,47770,Animal Husbandry,train
+a1907,131517,91680,Varietal Information,train
+a1908,1828,1828,Plant Protection,train
+a1909,27860,27860,Cultural Practices,train
+a1910,77754,77754,Cultural Practices,test
+a1911,129904,20282,Plant Protection,train
+a1912,101062,101062,Animal Husbandry,train
+a1913,62257,146,Nutrient Management,train
+a1914,54583,54583,Plant Protection,train
+a1915,118098,135,Government Scheme,train
+a1916,46436,8156,Plant Protection,train
+a1917,37909,3032,Varietal Information,train
+a1918,75425,75425,Other,test
+a1919,17192,5617,Cultural Practices,train
+a1920,81326,81326,Plant Protection,train
+a1921,65303,65303,Animal Husbandry,train
+a1922,34677,7817,Weather,train
+a1923,94932,1075,Cultural Practices,train
+a1924,134410,2888,Government Scheme,train
+a1925,14158,14158,Cultural Practices,train
+a1926,52719,177,Varietal Information,train
+a1927,9141,2907,Government Scheme,train
+a1928,65433,3596,Government Scheme,train
+a1929,127894,62520,Plant Protection,train
+a1930,2542,2490,Animal Husbandry,train
+a1931,111121,79113,Plant Protection,train
+a1932,11156,1226,Other,train
+a1933,115777,743,Plant Protection,train
+a1934,61876,61876,Fisheries,train
+a1935,32876,32876,Nutrient Management,train
+a1936,107520,2632,Plant Protection,train
+a1937,90451,9001,Animal Husbandry,train
+a1938,112075,112075,Animal Husbandry,train
+a1939,21248,11045,Nutrient Management,train
+a1940,70574,70574,Market Price,train
+a1941,58836,58836,Nutrient Management,test
+a1942,90668,90668,Plant Protection,train
+a1943,15529,15529,Cultural Practices,train
+a1944,130664,130664,Plant Protection,train
+a1945,80203,2181,Fisheries,test
+a1946,138859,102325,Plant Protection,train
+a1947,61711,1724,Plant Protection,train
+a1948,39024,2973,Government Scheme,train
+a1949,47354,8702,Plant Protection,train
+a1950,5464,247,Plant Protection,train
+a1951,103826,2264,Plant Protection,train
+a1952,30875,30875,Cultural Practices,train
+a1953,29553,2907,Government Scheme,train
+a1954,120983,54552,Plant Protection,train
+a1955,100270,5674,Plant Protection,train
+a1956,51113,51113,Market Price,train
+a1957,33614,33614,Animal Husbandry,train
+a1958,18480,18480,Cultural Practices,train
+a1959,119312,655,Plant Protection,train
+a1960,867,867,Plant Protection,train
+a1961,88389,88389,Nutrient Management,train
+a1962,129065,129065,Other,train
+a1963,68792,21207,Plant Protection,train
+a1964,106823,106823,Plant Protection,train
+a1965,106094,2287,Nutrient Management,train
+a1966,15245,3271,Government Scheme,train
+a1967,128534,7817,Weather,train
+a1968,77760,6690,Cultural Practices,train
+a1969,40148,40148,Cultural Practices,train
+a1970,14724,14724,Government Scheme,train
+a1971,89804,89804,Animal Husbandry,train
+a1972,134905,134824,Animal Husbandry,train
+a1973,87433,7615,Animal Husbandry,train
+a1974,75408,75408,Fisheries,train
+a1975,6041,6041,Plant Protection,train
+a1976,108453,108453,Animal Husbandry,train
+a1977,72566,37136,Plant Protection,train
+a1978,132450,38261,Animal Husbandry,train
+a1979,27454,5632,Plant Protection,train
+a1980,60718,60718,Other,train
+a1981,81963,81963,Plant Protection,train
+a1982,43975,43975,Nutrient Management,train
+a1983,93363,499,Nutrient Management,test
+a1984,4119,2643,Varietal Information,train
+a1985,66391,66391,Cultural Practices,train
+a1986,56098,79,Cultural Practices,train
+a1987,28952,141,Varietal Information,train
+a1988,12438,12438,Weather,train
+a1989,63531,683,Nutrient Management,test
+a1990,43305,43305,Cultural Practices,train
+a1991,131572,131572,Fisheries,train
+a1992,15394,15394,Cultural Practices,train
+a1993,89663,4071,Cultural Practices,train
+a1994,21688,19766,Plant Protection,train
+a1995,79119,79119,Cultural Practices,train
+a1996,14833,14833,Government Scheme,train
+a1997,10095,10095,Government Scheme,train
+a1998,120852,37353,Varietal Information,train
+a1999,45375,45375,Weather,train
+a2000,93814,197,Plant Protection,train
+a2001,116768,116768,Nutrient Management,train
+a2002,46238,31026,Varietal Information,train
+a2003,101781,101781,Fisheries,train
+a2004,66410,66410,Government Scheme,train
+a2005,80854,80854,Plant Protection,train
+a2006,9121,9121,Plant Protection,train
+a2007,34696,34696,Other,train
+a2008,28023,16,Plant Protection,train
+a2009,40069,40069,Animal Husbandry,test
+a2010,127844,2838,Weather,test
+a2011,17424,17424,Other,train
+a2012,12532,33,Nutrient Management,train
+a2013,131319,131319,Cultural Practices,train
+a2014,10950,71,Nutrient Management,test
+a2015,119788,119788,Animal Husbandry,train
+a2016,69526,69526,Nutrient Management,train
+a2017,62887,27568,Cultural Practices,train
+a2018,55122,16483,Fisheries,train
+a2019,18060,18060,Fisheries,train
+a2020,53606,8296,Animal Husbandry,test
+a2021,94717,2165,Plant Protection,train
+a2022,3478,3478,Government Scheme,train
+a2023,16957,16957,Animal Husbandry,train
+a2024,123183,55254,Cultural Practices,train
+a2025,65018,25144,Cultural Practices,train
+a2026,22412,2648,Plant Protection,train
+a2027,128712,31,Animal Husbandry,train
+a2028,80520,7608,Nutrient Management,train
+a2029,46417,46417,Animal Husbandry,test
+a2030,10641,10641,Plant Protection,train
+a2031,29423,1726,Plant Protection,train
+a2032,115179,115179,Varietal Information,train
+a2033,122290,122290,Nutrient Management,train
+a2034,82963,82963,Animal Husbandry,train
+a2035,116274,6390,Plant Protection,train
+a2036,59073,59073,Animal Husbandry,train
+a2037,124927,13576,Cultural Practices,train
+a2038,12400,1502,Plant Protection,train
+a2039,37884,165,Varietal Information,test
+a2040,62134,1967,Nutrient Management,train
+a2041,37421,37421,Varietal Information,train
+a2042,11154,774,Fisheries,train
+a2043,115709,31864,Cultural Practices,train
+a2044,102187,102187,Animal Husbandry,train
+a2045,99962,99962,Animal Husbandry,train
+a2046,79313,79313,Weather,train
+a2047,24684,2837,Cultural Practices,train
+a2048,113174,113174,Animal Husbandry,train
+a2049,26992,26992,Cultural Practices,train
+a2050,64503,39198,Varietal Information,train
+a2051,50020,527,Cultural Practices,train
+a2052,44560,44560,Varietal Information,train
+a2053,27110,2972,Nutrient Management,train
+a2054,37177,37177,Plant Protection,train
+a2055,18077,412,Cultural Practices,train
+a2056,137151,137151,Fisheries,test
+a2057,36391,36391,Weather,train
+a2058,100447,100447,Plant Protection,train
+a2059,73116,6208,Plant Protection,train
+a2060,101883,2838,Weather,test
+a2061,105612,3767,Plant Protection,train
+a2062,37212,37212,Plant Protection,train
+a2063,123434,5554,Animal Husbandry,test
+a2064,61741,61741,Varietal Information,train
+a2065,66290,66290,Government Scheme,test
+a2066,26251,26251,Varietal Information,train
+a2067,31183,31183,Nutrient Management,train
+a2068,100971,100971,Nutrient Management,train
+a2069,36634,1365,Government Scheme,train
+a2070,114197,10745,Fisheries,train
+a2071,135017,135017,Animal Husbandry,train
+a2072,48377,48377,Fisheries,train
+a2073,11775,629,Government Scheme,test
+a2074,94201,84945,Plant Protection,train
+a2075,44526,4214,Government Scheme,train
+a2076,115177,3183,Government Scheme,train
+a2077,45376,45376,Weather,train
+a2078,25587,2097,Plant Protection,train
+a2079,53089,329,Government Scheme,train
+a2080,114947,114947,Plant Protection,train
+a2081,12689,12689,Fisheries,train
+a2082,111227,141,Varietal Information,train
+a2083,40145,14528,Plant Protection,train
+a2084,42230,42230,Varietal Information,train
+a2085,8464,8464,Nutrient Management,train
+a2086,64967,9036,Animal Husbandry,train
+a2087,24686,24686,Cultural Practices,train
+a2088,106252,46423,Animal Husbandry,train
+a2089,8540,8540,Cultural Practices,train
+a2090,733,733,Plant Protection,train
+a2091,21600,6787,Animal Husbandry,train
+a2092,1963,1963,Nutrient Management,train
+a2093,52803,146,Nutrient Management,train
+a2094,32430,3,Varietal Information,train
+a2095,64274,64274,Government Scheme,train
+a2096,29198,29198,Cultural Practices,train
+a2097,104356,11135,Fisheries,train
+a2098,111466,6898,Cultural Practices,train
+a2099,33998,33998,Plant Protection,train
+a2100,69823,69823,Plant Protection,train
+a2101,39589,39589,Animal Husbandry,test
+a2102,14433,14433,Other,train
+a2103,40414,2834,Nutrient Management,train
+a2104,129851,56,Plant Protection,train
+a2105,97680,97680,Cultural Practices,train
+a2106,122536,122536,Market Price,train
+a2107,88775,88775,Animal Husbandry,test
+a2108,12300,12300,Plant Protection,train
+a2109,30328,30328,Other,train
+a2110,67040,67040,Other,train
+a2111,30376,39,Government Scheme,train
+a2112,124789,124789,Plant Protection,test
+a2113,38875,38875,Market Price,train
+a2114,19119,2964,Plant Protection,train
+a2115,3985,3985,Cultural Practices,train
+a2116,43339,7615,Animal Husbandry,train
+a2117,136926,7776,Plant Protection,train
+a2118,105019,16487,Plant Protection,test
+a2119,91189,91187,Weather,train
+a2120,36777,36777,Plant Protection,train
+a2121,3607,3607,Other,train
+a2122,123667,296,Plant Protection,train
+a2123,44825,56,Plant Protection,train
+a2124,10590,10590,Fisheries,train
+a2125,106128,106128,Varietal Information,train
+a2126,71097,71097,Nutrient Management,train
+a2127,129224,534,Government Scheme,train
+a2128,62373,62373,Varietal Information,train
+a2129,5314,2358,Nutrient Management,train
+a2130,50796,50796,Government Scheme,test
+a2131,48297,5405,Nutrient Management,train
+a2132,120001,24,Nutrient Management,train
+a2133,118577,2358,Nutrient Management,train
+a2134,129514,129514,Government Scheme,test
+a2135,86152,13148,Nutrient Management,train
+a2136,66491,66491,Market Price,train
+a2137,6800,743,Plant Protection,train
+a2138,23344,0,Plant Protection,test
+a2139,134067,39,Government Scheme,train
+a2140,23870,23870,Plant Protection,train
+a2141,98978,1485,Plant Protection,train
+a2142,49978,2477,Varietal Information,train
+a2143,90088,90088,Cultural Practices,train
+a2144,122575,4924,Government Scheme,test
+a2145,70681,70681,Animal Husbandry,train
+a2146,64638,26451,Plant Protection,train
+a2147,30183,7015,Plant Protection,train
+a2148,3281,3199,Government Scheme,train
+a2149,3369,3369,Government Scheme,train
+a2150,2769,2769,Cultural Practices,train
+a2151,99029,99029,Animal Husbandry,train
+a2152,108681,19835,Plant Protection,train
+a2153,2986,2986,Animal Husbandry,train
+a2154,91258,91258,Animal Husbandry,train
+a2155,133704,1967,Nutrient Management,train
+a2156,105818,8959,Cultural Practices,train
+a2157,82752,4863,Government Scheme,train
+a2158,120845,9730,Varietal Information,train
+a2159,115687,115687,Cultural Practices,train
+a2160,25659,25659,Cultural Practices,train
+a2161,29942,8555,Nutrient Management,train
+a2162,14077,14077,Plant Protection,train
+a2163,46694,12994,Nutrient Management,train
+a2164,109937,6648,Nutrient Management,train
+a2165,97907,24,Nutrient Management,train
+a2166,96674,2141,Animal Husbandry,test
+a2167,124583,124583,Cultural Practices,test
+a2168,74515,74515,Government Scheme,train
+a2169,127362,89753,Animal Husbandry,train
+a2170,1834,498,Plant Protection,train
+a2171,2838,2838,Weather,test
+a2172,30358,30358,Animal Husbandry,train
+a2173,92407,92407,Varietal Information,train
+a2174,44462,44462,Plant Protection,train
+a2175,52039,146,Nutrient Management,train
+a2176,128062,128062,Varietal Information,test
+a2177,50499,50499,Animal Husbandry,train
+a2178,100062,100062,Other,train
+a2179,130774,1798,Nutrient Management,train
+a2180,49360,54,Nutrient Management,train
+a2181,11947,11947,Market Price,train
+a2182,15665,15665,Plant Protection,train
+a2183,115905,19045,Market Price,train
+a2184,105004,4191,Fisheries,train
+a2185,116083,116083,Nutrient Management,train
+a2186,41263,41263,Weather,train
+a2187,46363,46363,Cultural Practices,test
+a2188,138382,1997,Varietal Information,train
+a2189,54050,54050,Cultural Practices,test
+a2190,111872,6244,Nutrient Management,train
+a2191,14173,4112,Plant Protection,train
+a2192,81295,81295,Cultural Practices,test
+a2193,107045,2242,Fisheries,train
+a2194,55231,55231,Animal Husbandry,train
+a2195,61164,50,Varietal Information,train
+a2196,46020,46020,Animal Husbandry,train
+a2197,36998,23772,Plant Protection,train
+a2198,136928,18292,Plant Protection,test
+a2199,102078,99387,Government Scheme,train
+a2200,3062,3062,Government Scheme,train
+a2201,128824,128824,Fisheries,train
+a2202,30492,30492,Animal Husbandry,train
+a2203,19233,1188,Cultural Practices,train
+a2204,89096,251,Cultural Practices,train
+a2205,803,803,Fisheries,train
+a2206,41275,2023,Nutrient Management,train
+a2207,10217,10217,Nutrient Management,train
+a2208,48574,5374,Plant Protection,train
+a2209,58016,58016,Other,test
+a2210,90156,90156,Plant Protection,train
+a2211,125349,39999,Cultural Practices,train
+a2212,128499,128499,Government Scheme,train
+a2213,130844,24,Nutrient Management,train
+a2214,5952,4101,Government Scheme,train
+a2215,129586,129586,Market Price,train
+a2216,5584,39,Government Scheme,train
+a2217,19173,19173,Government Scheme,train
+a2218,101980,16388,Nutrient Management,train
+a2219,53467,53467,Weather,train
+a2220,132638,9661,Varietal Information,test
+a2221,65294,65294,Weather,train
+a2222,116778,603,Animal Husbandry,train
+a2223,45196,5759,Plant Protection,test
+a2224,3660,3660,Plant Protection,train
+a2225,104761,104761,Plant Protection,test
+a2226,112151,22998,Plant Protection,train
+a2227,105457,2503,Other,train
+a2228,127267,127267,Plant Protection,train
+a2229,51953,51953,Plant Protection,train
+a2230,99270,99270,Animal Husbandry,train
+a2231,1402,1402,Weather,train
+a2232,38040,38040,Cultural Practices,train
+a2233,46602,2165,Plant Protection,train
+a2234,132007,1285,Nutrient Management,test
+a2235,15219,2888,Government Scheme,train
+a2236,20368,20368,Government Scheme,train
+a2237,121055,121055,Government Scheme,train
+a2238,107501,5003,Government Scheme,test
+a2239,87053,6848,Nutrient Management,train
+a2240,13221,284,Plant Protection,train
+a2241,30247,30247,Animal Husbandry,train
+a2242,53662,296,Plant Protection,train
+a2243,124295,124295,Cultural Practices,test
+a2244,19901,19901,Plant Protection,train
+a2245,131659,131659,Fisheries,train
+a2246,51866,4434,Fisheries,test
+a2247,69420,69420,Animal Husbandry,train
+a2248,28054,2225,Nutrient Management,train
+a2249,108414,10336,Cultural Practices,train
+a2250,16969,9529,Varietal Information,train
+a2251,105116,7806,Nutrient Management,train
+a2252,15757,3763,Nutrient Management,train
+a2253,108475,108475,Government Scheme,train
+a2254,125596,125596,Plant Protection,train
+a2255,92015,92015,Varietal Information,train
+a2256,79505,29559,Plant Protection,train
+a2257,107425,7,Animal Husbandry,train
+a2258,33792,33792,Fisheries,train
+a2259,84082,84082,Fisheries,train
+a2260,5790,4511,Plant Protection,train
+a2261,125826,125826,Plant Protection,train
+a2262,43347,637,Plant Protection,train
+a2263,20463,296,Plant Protection,train
+a2264,76636,5824,Animal Husbandry,test
+a2265,127617,59855,Cultural Practices,train
+a2266,91078,54162,Government Scheme,train
+a2267,57514,57514,Fisheries,train
+a2268,107955,9824,Fisheries,train
+a2269,117196,117196,Animal Husbandry,train
+a2270,48454,31886,Nutrient Management,train
+a2271,118274,118274,Varietal Information,train
+a2272,109815,774,Fisheries,train
+a2273,27038,605,Varietal Information,train
+a2274,113669,113669,Plant Protection,train
+a2275,45528,26350,Plant Protection,train
+a2276,60279,34175,Varietal Information,train
+a2277,42653,52,Animal Husbandry,train
+a2278,62969,8555,Nutrient Management,train
+a2279,113562,113562,Cultural Practices,train
+a2280,101483,6668,Cultural Practices,train
+a2281,127991,15418,Varietal Information,train
+a2282,129279,14772,Government Scheme,train
+a2283,65882,65882,Animal Husbandry,train
+a2284,25754,2623,Plant Protection,train
+a2285,136741,136741,Animal Husbandry,train
+a2286,138508,138508,Fisheries,test
+a2287,9692,9692,Other,train
+a2288,48816,48816,Fisheries,train
+a2289,101968,101968,Varietal Information,train
+a2290,121848,2395,Fisheries,train
+a2291,126990,126990,Plant Protection,train
+a2292,87799,141,Varietal Information,train
+a2293,45990,1407,Nutrient Management,train
+a2294,109713,109713,Market Price,test
+a2295,4731,4731,Cultural Practices,train
+a2296,128660,128660,Other,train
+a2297,30144,1996,Plant Protection,train
+a2298,83984,83984,Animal Husbandry,train
+a2299,28663,1387,Other,train
+a2300,129879,297,Plant Protection,train
+a2301,91051,54552,Plant Protection,train
+a2302,28611,28611,Nutrient Management,train
+a2303,65594,65594,Plant Protection,train
+a2304,50018,50018,Animal Husbandry,train
+a2305,98361,98361,Cultural Practices,test
+a2306,126807,126807,Cultural Practices,test
+a2307,31781,31781,Animal Husbandry,test
+a2308,42794,42794,Other,test
+a2309,39840,16578,Government Scheme,train
+a2310,99425,1285,Nutrient Management,test
+a2311,102052,39170,Other,test
+a2312,136589,1387,Other,train
+a2313,99027,29135,Plant Protection,train
+a2314,32231,50,Varietal Information,train
+a2315,120179,120179,Animal Husbandry,train
+a2316,24441,24441,Other,train
+a2317,95652,95652,Plant Protection,train
+a2318,22253,1619,Plant Protection,test
+a2319,82230,166,Plant Protection,train
+a2320,16028,1448,Varietal Information,train
+a2321,114501,8754,Nutrient Management,train
+a2322,38756,38756,Weather,train
+a2323,74420,74420,Cultural Practices,train
+a2324,100891,5713,Plant Protection,train
+a2325,134274,134274,Animal Husbandry,train
+a2326,51118,51118,Nutrient Management,train
+a2327,62646,26291,Fisheries,train
+a2328,26303,13235,Varietal Information,train
+a2329,91647,91647,Government Scheme,train
+a2330,86287,22378,Cultural Practices,train
+a2331,45597,45597,Market Price,train
+a2332,126111,126110,Cultural Practices,train
+a2333,26344,26344,Plant Protection,train
+a2334,66208,66208,Animal Husbandry,train
+a2335,19235,19235,Other,train
+a2336,31510,31510,Cultural Practices,test
+a2337,61033,61033,Animal Husbandry,train
+a2338,84599,76141,Animal Husbandry,train
+a2339,80935,80935,Weather,train
+a2340,125953,987,Nutrient Management,train
+a2341,65825,5009,Government Scheme,test
+a2342,74438,39962,Animal Husbandry,train
+a2343,26243,6353,Plant Protection,train
+a2344,81496,52,Animal Husbandry,train
+a2345,36233,36233,Market Price,train
+a2346,57918,57918,Market Price,train
+a2347,138146,138146,Government Scheme,train
+a2348,122597,4835,Other,test
+a2349,5028,5028,Animal Husbandry,train
+a2350,83227,36755,Cultural Practices,train
+a2351,133077,133077,Other,test
+a2352,137891,59816,Plant Protection,train
+a2353,16643,16643,Cultural Practices,train
+a2354,58246,58246,Government Scheme,train
+a2355,119767,59988,Varietal Information,train
+a2356,42525,42525,Plant Protection,train
+a2357,43711,3669,Nutrient Management,train
+a2358,82922,13148,Nutrient Management,train
+a2359,118259,118259,Fisheries,train
+a2360,91975,91975,Animal Husbandry,train
+a2361,17297,164,Plant Protection,train
+a2362,96433,96433,Plant Protection,train
+a2363,109955,8621,Market Price,train
+a2364,55183,55183,Cultural Practices,train
+a2365,86549,72641,Animal Husbandry,test
+a2366,1130,1130,Government Scheme,train
+a2367,115078,98759,Fisheries,train
+a2368,40947,18101,Varietal Information,train
+a2369,28661,28661,Animal Husbandry,train
+a2370,8240,1295,Plant Protection,train
+a2371,60711,60711,Government Scheme,train
+a2372,125505,125505,Cultural Practices,train
+a2373,127046,127046,Plant Protection,train
+a2374,40958,1188,Varietal Information,train
+a2375,16963,1139,Government Scheme,train
+a2376,116795,1450,Nutrient Management,test
+a2377,116113,116113,Animal Husbandry,test
+a2378,25533,25533,Cultural Practices,train
+a2379,12378,2004,Varietal Information,train
+a2380,86120,7947,Fisheries,train
+a2381,45328,45328,Government Scheme,train
+a2382,98478,46269,Plant Protection,test
+a2383,98404,1596,Fisheries,train
+a2384,64696,64696,Government Scheme,train
+a2385,87183,46312,Cultural Practices,train
+a2386,125181,26992,Cultural Practices,train
+a2387,115859,329,Government Scheme,train
+a2388,133961,12070,Nutrient Management,train
+a2389,58566,58566,Fisheries,test
+a2390,45239,45239,Weather,train
+a2391,93854,12063,Other,train
+a2392,62073,62073,Nutrient Management,test
+a2393,25931,25931,Cultural Practices,train
+a2394,2252,2252,Cultural Practices,train
+a2395,82361,259,Animal Husbandry,train
+a2396,12629,528,Plant Protection,train
+a2397,46151,46151,Plant Protection,train
+a2398,32727,32727,Cultural Practices,train
+a2399,127608,127608,Fisheries,train
+a2400,76194,13987,Cultural Practices,train
+a2401,857,857,Plant Protection,train
+a2402,131117,27750,Cultural Practices,train
+a2403,16620,16620,Market Price,train
+a2404,115223,2225,Nutrient Management,train
+a2405,9710,9685,Nutrient Management,train
+a2406,65609,4978,Government Scheme,train
+a2407,80621,7953,Plant Protection,train
+a2408,32456,32456,Cultural Practices,train
+a2409,117468,117468,Other,train
+a2410,130896,1996,Plant Protection,train
+a2411,112486,6900,Nutrient Management,train
+a2412,96658,56151,Fisheries,test
+a2413,46184,193,Plant Protection,train
+a2414,97347,8158,Varietal Information,test
+a2415,89980,46988,Varietal Information,test
+a2416,86577,7065,Nutrient Management,test
+a2417,13135,10358,Plant Protection,test
+a2418,136629,784,Plant Protection,train
+a2419,40374,187,Plant Protection,train
+a2420,114166,2838,Weather,test
+a2421,103632,2763,Cultural Practices,train
+a2422,37171,37171,Cultural Practices,train
+a2423,61873,61873,Other,train
+a2424,83547,83547,Animal Husbandry,train
+a2425,126693,126693,Animal Husbandry,train
+a2426,56080,45814,Cultural Practices,train
+a2427,59022,296,Plant Protection,train
+a2428,61367,61367,Fisheries,train
+a2429,59214,22897,Other,test
+a2430,21015,761,Plant Protection,train
+a2431,37218,2115,Plant Protection,train
+a2432,104765,2232,Fisheries,train
+a2433,109127,109127,Animal Husbandry,train
+a2434,100424,100424,Nutrient Management,train
+a2435,114673,114673,Animal Husbandry,test
+a2436,77291,51019,Cultural Practices,train
+a2437,40512,14081,Plant Protection,train
+a2438,102346,63967,Cultural Practices,train
+a2439,66541,66541,Nutrient Management,train
+a2440,118419,9380,Plant Protection,test
+a2441,91107,39,Government Scheme,train
+a2442,89577,467,Fisheries,train
+a2443,118847,85414,Cultural Practices,test
+a2444,87974,87974,Fisheries,test
+a2445,136659,136659,Animal Husbandry,test
+a2446,60293,166,Plant Protection,train
+a2447,97832,97832,Market Price,test
+a2448,69409,68255,Animal Husbandry,train
+a2449,9384,9384,Varietal Information,train
+a2450,1190,143,Plant Protection,test
+a2451,137960,50030,Plant Protection,test
+a2452,65605,4960,Government Scheme,train
+a2453,42655,15623,Cultural Practices,train
+a2454,4347,1831,Government Scheme,train
+a2455,49611,52,Animal Husbandry,train
+a2456,46165,46165,Nutrient Management,train
+a2457,126799,1067,Cultural Practices,train
+a2458,47968,47968,Animal Husbandry,train
+a2459,138601,138601,Plant Protection,train
+a2460,107766,107760,Cultural Practices,train
+a2461,14194,14194,Animal Husbandry,test
+a2462,31392,14783,Government Scheme,train
+a2463,75372,48508,Other,train
+a2464,65741,65741,Government Scheme,train
+a2465,52088,4279,Plant Protection,train
+a2466,96613,939,Animal Husbandry,test
+a2467,102794,9552,Plant Protection,train
+a2468,107291,107291,Cultural Practices,train
+a2469,80919,80919,Animal Husbandry,train
+a2470,129464,38868,Nutrient Management,train
+a2471,58661,9633,Plant Protection,train
+a2472,91102,91102,Plant Protection,test
+a2473,60828,53848,Cultural Practices,train
+a2474,24685,24685,Fisheries,train
+a2475,49768,49768,Weather,train
+a2476,127266,127266,Plant Protection,train
+a2477,65073,65073,Cultural Practices,train
+a2478,15667,15667,Plant Protection,train
+a2479,137623,137623,Animal Husbandry,train
+a2480,108494,589,Fisheries,train
+a2481,5006,2888,Government Scheme,train
+a2482,131798,9211,Cultural Practices,train
+a2483,68521,68521,Animal Husbandry,train
+a2484,9349,9349,Animal Husbandry,train
+a2485,82178,82178,Nutrient Management,train
+a2486,55550,55550,Cultural Practices,train
+a2487,79534,54,Nutrient Management,train
+a2488,89970,89970,Cultural Practices,train
+a2489,10649,10649,Fisheries,train
+a2490,55548,55548,Plant Protection,train
+a2491,41335,41335,Varietal Information,train
+a2492,84085,9685,Nutrient Management,train
+a2493,51372,24045,Plant Protection,train
+a2494,14459,14459,Government Scheme,train
+a2495,20141,4338,Varietal Information,train
+a2496,65702,3264,Government Scheme,train
+a2497,4645,4645,Animal Husbandry,train
+a2498,94964,1656,Plant Protection,train
+a2499,18557,18557,Nutrient Management,train
+a2500,117781,117781,Cultural Practices,train
+a2501,96063,37117,Nutrient Management,train
+a2502,42306,3810,Plant Protection,train
+a2503,48020,48020,Fisheries,test
+a2504,96881,96881,Nutrient Management,test
+a2505,17485,17485,Other,train
+a2506,95664,15117,Animal Husbandry,train
+a2507,84326,17425,Fisheries,train
+a2508,79014,79014,Plant Protection,train
+a2509,135357,135357,Cultural Practices,train
+a2510,53272,166,Plant Protection,train
+a2511,8890,8890,Animal Husbandry,test
+a2512,57930,141,Varietal Information,train
+a2513,26416,1387,Other,train
+a2514,97150,6193,Plant Protection,train
+a2515,96640,605,Varietal Information,train
+a2516,21664,11499,Plant Protection,train
+a2517,39287,2913,Government Scheme,train
+a2518,50285,6787,Animal Husbandry,train
+a2519,101164,101164,Weather,train
+a2520,57886,945,Plant Protection,test
+a2521,52351,52351,Varietal Information,train
+a2522,48348,48348,Animal Husbandry,train
+a2523,105168,1323,Other,train
+a2524,117738,47756,Government Scheme,train
+a2525,117298,5759,Plant Protection,test
+a2526,35512,35512,Other,train
+a2527,29549,5248,Plant Protection,train
+a2528,124103,96970,Plant Protection,train
+a2529,65439,65439,Animal Husbandry,train
+a2530,15842,15842,Plant Protection,test
+a2531,20859,14303,Cultural Practices,train
+a2532,79928,202,Nutrient Management,train
+a2533,113114,4718,Nutrient Management,train
+a2534,55224,55224,Cultural Practices,test
+a2535,71823,71823,Cultural Practices,train
+a2536,82383,82383,Plant Protection,train
+a2537,3043,3043,Government Scheme,test
+a2538,64666,64666,Animal Husbandry,train
+a2539,23409,2761,Plant Protection,train
+a2540,68802,56,Plant Protection,train
+a2541,87956,87956,Nutrient Management,train
+a2542,60007,2740,Nutrient Management,train
+a2543,2332,2332,Nutrient Management,train
+a2544,135677,135677,Animal Husbandry,train
+a2545,90196,3061,Cultural Practices,train
+a2546,90321,52412,Animal Husbandry,train
+a2547,16555,16555,Government Scheme,train
+a2548,27261,27261,Other,train
+a2549,30321,30321,Cultural Practices,train
+a2550,1443,1443,Plant Protection,train
+a2551,99071,54528,Nutrient Management,train
+a2552,28009,28009,Varietal Information,train
+a2553,20133,683,Nutrient Management,test
+a2554,97484,27277,Varietal Information,train
+a2555,107337,107337,Plant Protection,train
+a2556,108536,9682,Nutrient Management,train
+a2557,39233,1779,Government Scheme,train
+a2558,109530,109530,Market Price,test
+a2559,86497,86497,Animal Husbandry,test
+a2560,117509,39,Government Scheme,train
+a2561,39220,39,Government Scheme,train
+a2562,113238,37555,Fisheries,train
+a2563,16030,16030,Fisheries,train
+a2564,87066,1188,Varietal Information,train
+a2565,91100,91100,Plant Protection,train
+a2566,126726,77,Plant Protection,train
+a2567,88695,88695,Cultural Practices,test
+a2568,101049,101049,Plant Protection,train
+a2569,41053,41053,Plant Protection,train
+a2570,79750,146,Nutrient Management,train
+a2571,117553,117553,Government Scheme,train
+a2572,6299,52,Animal Husbandry,train
+a2573,124107,11797,Plant Protection,train
+a2574,91514,4835,Other,test
+a2575,56796,1201,Plant Protection,train
+a2576,119091,56,Plant Protection,train
+a2577,83495,83495,Cultural Practices,train
+a2578,17683,17683,Other,train
+a2579,59112,2530,Cultural Practices,train
+a2580,21727,6422,Nutrient Management,train
+a2581,116801,116801,Weather,train
+a2582,83846,83846,Weather,train
+a2583,42274,526,Plant Protection,train
+a2584,123244,4351,Plant Protection,test
+a2585,13917,13917,Cultural Practices,train
+a2586,132630,132630,Cultural Practices,test
+a2587,65554,2907,Government Scheme,train
+a2588,744,744,Plant Protection,train
+a2589,104782,104782,Other,train
+a2590,4592,39,Government Scheme,train
+a2591,45629,45607,Weather,train
+a2592,120528,30233,Cultural Practices,train
+a2593,109776,109776,Varietal Information,train
+a2594,120882,16023,Cultural Practices,train
+a2595,65776,64335,Cultural Practices,test
+a2596,4432,3739,Fisheries,train
+a2597,116298,116298,Animal Husbandry,train
+a2598,67198,67198,Cultural Practices,train
+a2599,122580,122580,Animal Husbandry,train
+a2600,134353,134353,Market Price,train
+a2601,78797,78797,Plant Protection,train
+a2602,135328,11849,Nutrient Management,train
+a2603,31159,31159,Government Scheme,train
+a2604,67345,369,Animal Husbandry,train
+a2605,47430,47430,Plant Protection,train
+a2606,77902,77902,Animal Husbandry,train
+a2607,26146,7714,Plant Protection,train
+a2608,40194,22699,Plant Protection,train
+a2609,61101,8959,Cultural Practices,train
+a2610,87705,4165,Other,train
+a2611,90731,90731,Nutrient Management,train
+a2612,55276,55276,Fisheries,train
+a2613,39410,39410,Nutrient Management,train
+a2614,27586,27586,Fisheries,train
+a2615,47054,7746,Fisheries,train
+a2616,47224,9623,Plant Protection,train
+a2617,79781,5648,Nutrient Management,train
+a2618,6896,1748,Cultural Practices,train
+a2619,114950,31187,Animal Husbandry,train
+a2620,92214,32,Varietal Information,train
+a2621,126786,5279,Nutrient Management,train
+a2622,2884,2884,Market Price,train
+a2623,33223,77,Plant Protection,train
+a2624,38047,2156,Fisheries,train
+a2625,94877,94877,Nutrient Management,train
+a2626,98769,48086,Government Scheme,train
+a2627,78014,78014,Other,test
+a2628,40072,40072,Government Scheme,train
+a2629,2503,2503,Other,train
+a2630,30545,30545,Varietal Information,test
+a2631,65664,65664,Government Scheme,test
+a2632,38511,38511,Plant Protection,train
+a2633,79124,9046,Plant Protection,train
+a2634,119985,39,Government Scheme,train
+a2635,59349,17425,Fisheries,train
+a2636,92430,8,Plant Protection,train
+a2637,39524,1528,Plant Protection,train
+a2638,57078,57078,Market Price,test
+a2639,19118,19118,Plant Protection,train
+a2640,6806,6806,Nutrient Management,test
+a2641,91621,91621,Market Price,train
+a2642,125697,683,Nutrient Management,test
+a2643,119331,10190,Cultural Practices,train
+a2644,12217,12217,Plant Protection,train
+a2645,127236,81548,Plant Protection,test
+a2646,77083,641,Fisheries,train
+a2647,126218,126218,Cultural Practices,train
+a2648,68495,2088,Plant Protection,train
+a2649,6921,4191,Fisheries,train
+a2650,82407,28195,Other,train
+a2651,48861,329,Government Scheme,train
+a2652,96054,16315,Cultural Practices,train
+a2653,138454,16280,Nutrient Management,train
+a2654,83404,66536,Other,train
+a2655,122419,122419,Government Scheme,train
+a2656,34227,34227,Weather,train
+a2657,100592,141,Varietal Information,train
+a2658,81369,4729,Cultural Practices,train
+a2659,104623,104623,Plant Protection,train
+a2660,36544,36544,Other,train
+a2661,63905,63905,Fisheries,train
+a2662,126317,7747,Plant Protection,train
+a2663,50857,50857,Cultural Practices,train
+a2664,16547,16547,Government Scheme,train
+a2665,113764,113764,Plant Protection,train
+a2666,35133,4191,Fisheries,train
+a2667,96194,12808,Plant Protection,train
+a2668,59931,578,Government Scheme,train
+a2669,106761,2046,Nutrient Management,train
+a2670,129351,129351,Government Scheme,train
+a2671,7318,296,Plant Protection,train
+a2672,123893,1188,Cultural Practices,train
+a2673,132851,132851,Weather,train
+a2674,61441,443,Nutrient Management,train
+a2675,135066,135066,Cultural Practices,train
+a2676,105016,104277,Cultural Practices,train
+a2677,51688,11498,Weather,train
+a2678,122806,8228,Fisheries,train
+a2679,81167,6848,Nutrient Management,train
+a2680,137091,2888,Government Scheme,train
+a2681,58301,51390,Plant Protection,test
+a2682,98579,2838,Weather,test
+a2683,41127,446,Other,train
+a2684,46066,46066,Plant Protection,train
+a2685,72429,72429,Government Scheme,train
+a2686,97717,6189,Animal Husbandry,train
+a2687,89090,89090,Cultural Practices,train
+a2688,91370,91370,Plant Protection,train
+a2689,115999,43882,Plant Protection,test
+a2690,69986,1143,Plant Protection,test
+a2691,85277,85277,Cultural Practices,train
+a2692,131882,131882,Animal Husbandry,train
+a2693,90173,498,Plant Protection,train
+a2694,83973,16723,Fisheries,train
+a2695,29726,29726,Animal Husbandry,train
+a2696,67495,67495,Cultural Practices,test
+a2697,124782,296,Plant Protection,train
+a2698,31741,31741,Cultural Practices,train
+a2699,74156,74156,Government Scheme,train
+a2700,81042,1122,Nutrient Management,train
+a2701,44273,1748,Cultural Practices,train
+a2702,71731,71706,Plant Protection,train
+a2703,79045,79045,Weather,train
+a2704,106012,106012,Plant Protection,train
+a2705,116841,116841,Cultural Practices,test
+a2706,106425,106425,Government Scheme,train
+a2707,33941,33941,Nutrient Management,train
+a2708,68183,68183,Weather,train
+a2709,51028,146,Nutrient Management,train
+a2710,48310,48310,Animal Husbandry,train
+a2711,81058,7806,Nutrient Management,train
+a2712,11016,2023,Nutrient Management,train
+a2713,84365,667,Plant Protection,train
+a2714,13254,1915,Nutrient Management,train
+a2715,82543,2838,Weather,test
+a2716,22163,22163,Fisheries,train
+a2717,48911,9583,Animal Husbandry,train
+a2718,66954,66954,Other,test
+a2719,44670,7158,Plant Protection,test
+a2720,34791,1170,Cultural Practices,train
+a2721,54648,54648,Nutrient Management,train
+a2722,38545,38545,Cultural Practices,train
+a2723,90333,938,Fisheries,test
+a2724,90035,202,Nutrient Management,train
+a2725,86382,6712,Nutrient Management,train
+a2726,88342,88342,Cultural Practices,train
+a2727,104226,21144,Nutrient Management,train
+a2728,71110,71110,Weather,train
+a2729,131410,2078,Nutrient Management,train
+a2730,58558,58558,Other,train
+a2731,83453,83453,Cultural Practices,train
+a2732,121,121,Cultural Practices,train
+a2733,82733,29485,Government Scheme,train
+a2734,99038,12632,Plant Protection,train
+a2735,16953,31,Animal Husbandry,train
+a2736,101128,101128,Government Scheme,test
+a2737,45098,7,Animal Husbandry,train
+a2738,85484,18705,Cultural Practices,train
+a2739,56009,56009,Government Scheme,train
+a2740,24699,2371,Plant Protection,train
+a2741,117981,5262,Government Scheme,train
+a2742,61681,61681,Varietal Information,train
+a2743,66612,66612,Plant Protection,train
+a2744,33841,33841,Plant Protection,train
+a2745,41157,41157,Other,train
+a2746,74633,74633,Other,test
+a2747,35898,35898,Plant Protection,train
+a2748,106964,106964,Cultural Practices,train
+a2749,135032,134992,Animal Husbandry,train
+a2750,114421,114421,Cultural Practices,train
+a2751,29562,29562,Plant Protection,train
+a2752,90902,90902,Fisheries,train
+a2753,66920,66920,Plant Protection,train
+a2754,50871,50871,Nutrient Management,train
+a2755,97620,28778,Plant Protection,test
+a2756,66455,66455,Other,test
+a2757,16927,16927,Cultural Practices,train
+a2758,53159,1986,Varietal Information,train
+a2759,24772,6966,Plant Protection,train
+a2760,123139,123139,Plant Protection,train
+a2761,83456,83456,Plant Protection,train
+a2762,13001,13001,Plant Protection,train
+a2763,11149,546,Plant Protection,train
+a2764,131023,131023,Weather,train
+a2765,10214,7029,Plant Protection,train
+a2766,16940,16940,Cultural Practices,train
+a2767,28607,28607,Animal Husbandry,train
+a2768,8001,8001,Nutrient Management,test
+a2769,37308,6077,Fisheries,train
+a2770,75717,3739,Fisheries,train
+a2771,78035,22912,Nutrient Management,train
+a2772,66110,66110,Plant Protection,train
+a2773,104327,104327,Plant Protection,train
+a2774,120675,16087,Cultural Practices,train
+a2775,17738,17738,Fisheries,train
+a2776,49781,49781,Nutrient Management,train
+a2777,18216,18216,Fisheries,train
+a2778,113885,113885,Fisheries,train
+a2779,88554,88554,Animal Husbandry,test
+a2780,97432,2004,Varietal Information,train
+a2781,138162,4996,Government Scheme,train
+a2782,1692,1083,Government Scheme,test
+a2783,40838,40838,Fisheries,train
+a2784,80278,80278,Plant Protection,train
+a2785,53074,11095,Cultural Practices,train
+a2786,115099,115099,Cultural Practices,train
+a2787,7941,7941,Varietal Information,train
+a2788,52889,56,Plant Protection,train
+a2789,79100,22142,Plant Protection,train
+a2790,32633,141,Varietal Information,train
+a2791,118331,118331,Plant Protection,train
+a2792,50593,4152,Plant Protection,train
+a2793,87982,87898,Weather,train
+a2794,76960,76960,Government Scheme,train
+a2795,98309,98309,Cultural Practices,train
+a2796,29752,29752,Cultural Practices,train
+a2797,45211,3546,Plant Protection,train
+a2798,61195,61195,Weather,train
+a2799,116879,146,Nutrient Management,train
+a2800,73447,10147,Cultural Practices,train
+a2801,95060,85,Animal Husbandry,test
+a2802,20375,20375,Cultural Practices,test
+a2803,107853,40902,Cultural Practices,train
+a2804,36068,2226,Government Scheme,train
+a2805,30388,30388,Plant Protection,train
+a2806,128270,128270,Plant Protection,train
+a2807,86176,5617,Cultural Practices,train
+a2808,32939,32939,Cultural Practices,test
+a2809,76130,76130,Animal Husbandry,test
+a2810,135008,3405,Fisheries,train
+a2811,10818,1660,Nutrient Management,train
+a2812,57664,57664,Varietal Information,train
+a2813,137750,137750,Varietal Information,train
+a2814,29551,2838,Weather,test
+a2815,89065,33221,Cultural Practices,train
+a2816,118273,118273,Cultural Practices,train
+a2817,39161,8,Plant Protection,train
+a2818,131182,31722,Cultural Practices,test
+a2819,41929,294,Plant Protection,train
+a2820,129091,129091,Plant Protection,train
+a2821,61030,2581,Nutrient Management,train
+a2822,126853,4493,Plant Protection,train
+a2823,128885,128885,Plant Protection,train
+a2824,6766,120,Cultural Practices,train
+a2825,66021,2888,Government Scheme,train
+a2826,113050,2358,Nutrient Management,train
+a2827,9355,9355,Fisheries,test
+a2828,87037,10185,Cultural Practices,train
+a2829,111279,111279,Plant Protection,train
+a2830,103116,10334,Plant Protection,train
+a2831,28468,28468,Plant Protection,train
+a2832,25180,25180,Weather,train
+a2833,56977,56977,Plant Protection,train
+a2834,2922,2888,Government Scheme,train
+a2835,64579,64579,Government Scheme,test
+a2836,74855,27915,Plant Protection,train
+a2837,62853,1201,Plant Protection,train
+a2838,30313,30313,Nutrient Management,train
+a2839,36096,8546,Plant Protection,train
+a2840,12885,12885,Nutrient Management,train
+a2841,57027,57027,Weather,train
+a2842,86751,22757,Animal Husbandry,train
+a2843,21846,6690,Cultural Practices,train
+a2844,10164,10164,Cultural Practices,test
+a2845,138757,138757,Plant Protection,train
+a2846,102262,27648,Animal Husbandry,test
+a2847,56165,7351,Varietal Information,test
+a2848,127856,127856,Varietal Information,train
+a2849,15295,15295,Market Price,train
+a2850,14610,14610,Cultural Practices,train
+a2851,61895,60838,Fisheries,train
+a2852,116760,116760,Varietal Information,train
+a2853,120850,27754,Animal Husbandry,train
+a2854,120361,120361,Other,train
+a2855,133636,133636,Plant Protection,train
+a2856,39299,2825,Government Scheme,train
+a2857,54627,54627,Government Scheme,train
+a2858,52598,629,Government Scheme,test
+a2859,22249,22249,Cultural Practices,train
+a2860,37947,73,Plant Protection,train
+a2861,4728,4728,Plant Protection,train
+a2862,41534,5811,Cultural Practices,train
+a2863,14776,14776,Plant Protection,test
+a2864,53554,2763,Cultural Practices,train
+a2865,119918,119918,Animal Husbandry,train
+a2866,56462,822,Fisheries,train
+a2867,129263,8451,Plant Protection,train
+a2868,67581,67581,Plant Protection,train
+a2869,119120,48020,Fisheries,test
+a2870,92152,2358,Nutrient Management,train
+a2871,31642,31642,Plant Protection,train
+a2872,87469,1759,Nutrient Management,train
+a2873,43604,43604,Plant Protection,train
+a2874,46892,46892,Animal Husbandry,train
+a2875,39333,39333,Cultural Practices,test
+a2876,73988,38413,Cultural Practices,train
+a2877,94509,94509,Cultural Practices,train
+a2878,132687,132687,Animal Husbandry,test
+a2879,22401,701,Plant Protection,train
+a2880,82680,82680,Animal Husbandry,train
+a2881,105074,15600,Plant Protection,train
+a2882,126524,126524,Nutrient Management,train
+a2883,47747,47747,Nutrient Management,train
+a2884,133932,133932,Cultural Practices,train
+a2885,4238,4238,Cultural Practices,train
+a2886,36428,24316,Varietal Information,test
+a2887,39049,25237,Plant Protection,train
+a2888,15391,5617,Cultural Practices,train
+a2889,131562,192,Animal Husbandry,train
+a2890,17308,24,Nutrient Management,train
+a2891,46781,2643,Varietal Information,train
+a2892,48055,48055,Plant Protection,train
+a2893,100416,3777,Plant Protection,test
+a2894,22117,6690,Cultural Practices,train
+a2895,16270,16270,Government Scheme,train
+a2896,101349,7875,Cultural Practices,test
+a2897,18922,18922,Other,train
+a2898,78019,78019,Plant Protection,train
+a2899,129779,120,Cultural Practices,train
+a2900,124348,124348,Animal Husbandry,train
+a2901,133984,37255,Animal Husbandry,train
+a2902,86445,42,Cultural Practices,train
+a2903,60251,60250,Other,train
+a2904,102672,185,Animal Husbandry,test
+a2905,114639,114635,Government Scheme,train
+a2906,21916,21916,Plant Protection,train
+a2907,110479,73696,Plant Protection,train
+a2908,128322,128322,Cultural Practices,test
+a2909,40438,17547,Varietal Information,train
+a2910,82566,2838,Weather,test
+a2911,2693,2693,Cultural Practices,train
+a2912,67364,67364,Animal Husbandry,test
+a2913,87023,6653,Cultural Practices,train
+a2914,115997,774,Fisheries,train
+a2915,138755,2242,Fisheries,train
+a2916,87952,87952,Government Scheme,train
+a2917,128302,128302,Market Price,train
+a2918,100990,1796,Nutrient Management,test
+a2919,117910,117910,Varietal Information,train
+a2920,36748,2142,Nutrient Management,train
+a2921,15322,15285,Weather,train
+a2922,108976,108976,Animal Husbandry,train
+a2923,126663,126663,Cultural Practices,train
+a2924,3863,3863,Government Scheme,train
+a2925,113222,113222,Cultural Practices,train
+a2926,45241,45241,Weather,train
+a2927,48720,48720,Government Scheme,train
+a2928,122987,122987,Nutrient Management,train
+a2929,127901,73940,Government Scheme,train
+a2930,50847,49,Plant Protection,test
+a2931,134855,134855,Animal Husbandry,train
+a2932,74484,74484,Other,train
+a2933,38393,15719,Plant Protection,train
+a2934,15875,15875,Plant Protection,train
+a2935,86798,86798,Cultural Practices,train
+a2936,23110,4340,Plant Protection,train
+a2937,97622,97622,Varietal Information,train
+a2938,50355,50355,Plant Protection,train
+a2939,39182,2877,Government Scheme,train
+a2940,91072,91072,Varietal Information,train
+a2941,24917,24917,Plant Protection,train
+a2942,31431,31431,Cultural Practices,train
+a2943,3712,3712,Government Scheme,train
+a2944,43525,43525,Government Scheme,train
+a2945,126725,40492,Cultural Practices,train
+a2946,51572,51572,Nutrient Management,train
+a2947,73975,32,Varietal Information,train
+a2948,16576,16576,Government Scheme,train
+a2949,50958,50958,Animal Husbandry,train
+a2950,18775,18775,Animal Husbandry,test
+a2951,7711,7711,Nutrient Management,train
+a2952,112111,52527,Plant Protection,train
+a2953,70791,7252,Animal Husbandry,train
+a2954,64266,6848,Nutrient Management,train
+a2955,110756,82,Plant Protection,train
+a2956,16372,16372,Other,train
+a2957,39929,3207,Government Scheme,train
+a2958,118104,1181,Plant Protection,train
+a2959,69471,69471,Weather,train
+a2960,1020,1020,Fisheries,test
+a2961,58251,1273,Fisheries,train
+a2962,76506,76506,Cultural Practices,train
+a2963,130756,130756,Animal Husbandry,train
+a2964,43491,43491,Nutrient Management,train
+a2965,75221,75221,Other,test
+a2966,91172,3669,Nutrient Management,train
+a2967,18283,17425,Fisheries,train
+a2968,103680,3467,Varietal Information,test
+a2969,133993,133993,Fisheries,test
+a2970,115702,115702,Varietal Information,train
+a2971,15326,1207,Nutrient Management,train
+a2972,42256,42256,Nutrient Management,train
+a2973,77633,77633,Nutrient Management,train
+a2974,26957,26957,Cultural Practices,train
+a2975,26447,26447,Cultural Practices,train
+a2976,57378,938,Fisheries,test
+a2977,48621,48621,Varietal Information,train
+a2978,43217,43217,Cultural Practices,train
+a2979,60895,60895,Nutrient Management,test
+a2980,48409,48409,Plant Protection,train
+a2981,129976,129976,Market Price,train
+a2982,47398,47398,Plant Protection,train
+a2983,71753,27480,Cultural Practices,train
+a2984,121942,121942,Varietal Information,train
+a2985,40744,40744,Other,train
+a2986,40834,294,Plant Protection,train
+a2987,73828,73828,Plant Protection,train
+a2988,87486,35056,Plant Protection,train
+a2989,52208,412,Cultural Practices,train
+a2990,92227,9356,Plant Protection,train
+a2991,80984,2356,Plant Protection,train
+a2992,121807,121807,Market Price,train
+a2993,136555,136555,Nutrient Management,train
+a2994,5440,5440,Cultural Practices,train
+a2995,2672,1759,Nutrient Management,train
+a2996,66431,48396,Government Scheme,test
+a2997,70147,3618,Other,train
+a2998,127787,30348,Plant Protection,test
+a2999,104854,104854,Fisheries,train
+a3000,127588,32,Varietal Information,train
+a3001,55270,7746,Fisheries,train
+a3002,2164,798,Nutrient Management,test
+a3003,108008,108008,Plant Protection,test
+a3004,57964,23069,Varietal Information,test
+a3005,106543,45538,Cultural Practices,train
+a3006,121270,38792,Animal Husbandry,train
+a3007,38853,38853,Plant Protection,train
+a3008,67231,125,Plant Protection,train
+a3009,57396,10556,Fisheries,train
+a3010,15916,15916,Weather,train
+a3011,73698,2839,Animal Husbandry,test
+a3012,33775,4737,Plant Protection,train
+a3013,96766,15930,Plant Protection,test
+a3014,58921,58921,Plant Protection,train
+a3015,134983,134983,Animal Husbandry,train
+a3016,98196,98196,Animal Husbandry,train
+a3017,23367,6240,Plant Protection,train
+a3018,12190,12190,Market Price,train
+a3019,96114,45591,Plant Protection,train
+a3020,97242,2643,Varietal Information,train
+a3021,106884,50,Varietal Information,train
+a3022,76170,76170,Plant Protection,train
+a3023,134346,3,Varietal Information,train
+a3024,91361,5676,Varietal Information,train
+a3025,66433,20541,Varietal Information,train
+a3026,32888,7,Animal Husbandry,train
+a3027,121404,121404,Varietal Information,test
+a3028,126184,534,Government Scheme,train
+a3029,115039,4985,Government Scheme,train
+a3030,46879,13601,Animal Husbandry,train
+a3031,137958,137958,Weather,test
+a3032,46728,650,Fisheries,train
+a3033,116333,1181,Plant Protection,train
+a3034,79623,79523,Weather,train
+a3035,131330,82,Plant Protection,train
+a3036,68186,22620,Animal Husbandry,train
+a3037,50432,50432,Cultural Practices,test
+a3038,119386,119386,Weather,train
+a3039,134503,134503,Weather,train
+a3040,62404,62404,Animal Husbandry,test
+a3041,17981,299,Plant Protection,train
+a3042,76304,76304,Government Scheme,train
+a3043,100327,100327,Government Scheme,train
+a3044,14859,14859,Other,train
+a3045,101306,52449,Nutrient Management,train
+a3046,69939,26310,Varietal Information,train
+a3047,3744,3744,Fisheries,train
+a3048,31384,3183,Government Scheme,train
+a3049,92561,92561,Plant Protection,train
+a3050,38125,27850,Fisheries,train
+a3051,55762,55762,Cultural Practices,test
+a3052,89603,89603,Fisheries,train
+a3053,28196,2242,Fisheries,train
+a3054,50356,50356,Animal Husbandry,train
+a3055,131625,16598,Varietal Information,train
+a3056,104811,23914,Varietal Information,train
+a3057,55018,55018,Animal Husbandry,train
+a3058,116226,116226,Cultural Practices,test
+a3059,107555,107555,Animal Husbandry,train
+a3060,93803,42004,Nutrient Management,train
+a3061,30759,30759,Animal Husbandry,train
+a3062,58524,58524,Plant Protection,train
+a3063,118661,118661,Government Scheme,test
+a3064,129261,16598,Varietal Information,train
+a3065,137745,137745,Nutrient Management,train
+a3066,138678,138678,Other,train
+a3067,58612,58612,Animal Husbandry,train
+a3068,119017,119017,Plant Protection,train
+a3069,121366,81108,Animal Husbandry,train
+a3070,126110,126110,Cultural Practices,train
+a3071,59142,4365,Fisheries,test
+a3072,107686,138,Varietal Information,test
+a3073,112289,112289,Other,train
+a3074,49493,49493,Plant Protection,train
+a3075,84950,84950,Animal Husbandry,train
+a3076,133432,95300,Varietal Information,train
+a3077,110178,7806,Nutrient Management,train
+a3078,119112,412,Cultural Practices,train
+a3079,51047,14303,Cultural Practices,train
+a3080,94589,94589,Weather,train
+a3081,15682,15682,Plant Protection,test
+a3082,33057,24,Nutrient Management,train
+a3083,119321,23754,Cultural Practices,train
+a3084,38944,29412,Nutrient Management,train
+a3085,113980,113980,Fisheries,test
+a3086,6037,6037,Plant Protection,train
+a3087,134643,134503,Weather,train
+a3088,97866,2434,Other,train
+a3089,12157,11498,Weather,train
+a3090,107101,4818,Government Scheme,train
+a3091,67,67,Animal Husbandry,train
+a3092,61289,61289,Fisheries,train
+a3093,6461,6461,Cultural Practices,train
+a3094,63097,329,Government Scheme,train
+a3095,69191,85,Animal Husbandry,test
+a3096,14372,14372,Cultural Practices,train
+a3097,93444,21784,Plant Protection,train
+a3098,12316,12316,Cultural Practices,train
+a3099,3497,257,Nutrient Management,test
+a3100,97004,67058,Cultural Practices,train
+a3101,115898,5598,Fisheries,test
+a3102,137917,137917,Varietal Information,train
+a3103,36351,36351,Cultural Practices,train
+a3104,99036,99036,Cultural Practices,train
+a3105,26461,26461,Cultural Practices,train
+a3106,135992,106369,Animal Husbandry,test
+a3107,95749,95749,Animal Husbandry,train
+a3108,92347,92347,Cultural Practices,train
+a3109,107059,61946,Animal Husbandry,train
+a3110,137102,2888,Government Scheme,train
+a3111,61959,61959,Government Scheme,train
+a3112,115369,1164,Plant Protection,train
+a3113,77050,77050,Cultural Practices,train
+a3114,99070,99070,Cultural Practices,train
+a3115,64378,64378,Varietal Information,train
+a3116,95954,95954,Weather,train
+a3117,73830,73830,Nutrient Management,train
+a3118,14524,467,Fisheries,train
+a3119,92483,3444,Plant Protection,test
+a3120,99319,202,Nutrient Management,train
+a3121,125029,2141,Animal Husbandry,test
+a3122,1418,1418,Plant Protection,train
+a3123,42888,39228,Cultural Practices,train
+a3124,19051,19051,Nutrient Management,train
+a3125,101770,63992,Fisheries,train
+a3126,87425,5857,Government Scheme,test
+a3127,106006,16723,Fisheries,train
+a3128,102129,102129,Varietal Information,train
+a3129,69102,69102,Fisheries,train
+a3130,38976,38976,Fisheries,test
+a3131,12609,1950,Government Scheme,train
+a3132,28149,28149,Varietal Information,train
+a3133,60655,2506,Plant Protection,train
+a3134,60808,60808,Plant Protection,train
+a3135,132549,132549,Varietal Information,train
+a3136,110133,23302,Government Scheme,train
+a3137,64808,39,Government Scheme,train
+a3138,39140,860,Government Scheme,train
+a3139,59667,24047,Cultural Practices,test
+a3140,127002,8287,Nutrient Management,train
+a3141,13897,13897,Cultural Practices,train
+a3142,137567,601,Nutrient Management,test
+a3143,124067,6792,Plant Protection,train
+a3144,31478,16532,Cultural Practices,test
+a3145,129883,2358,Nutrient Management,train
+a3146,65043,2024,Nutrient Management,train
+a3147,109325,422,Cultural Practices,train
+a3148,115462,5291,Nutrient Management,train
+a3149,118199,118199,Fisheries,train
+a3150,93730,22466,Animal Husbandry,train
+a3151,63288,63288,Animal Husbandry,train
+a3152,120696,11283,Cultural Practices,test
+a3153,54518,2082,Plant Protection,train
+a3154,98269,98269,Animal Husbandry,train
+a3155,80937,14441,Nutrient Management,train
+a3156,132161,17889,Plant Protection,test
+a3157,111174,79584,Plant Protection,train
+a3158,107239,47325,Cultural Practices,train
+a3159,26937,26937,Animal Husbandry,train
+a3160,117161,117161,Plant Protection,train
+a3161,7975,7975,Plant Protection,test
+a3162,74399,74161,Weather,train
+a3163,78551,1582,Plant Protection,train
+a3164,118415,1077,Nutrient Management,train
+a3165,29557,29557,Varietal Information,train
+a3166,91911,15250,Animal Husbandry,train
+a3167,2400,2400,Plant Protection,test
+a3168,5648,5648,Nutrient Management,train
+a3169,73325,2318,Animal Husbandry,train
+a3170,128943,50998,Nutrient Management,train
+a3171,127184,2882,Nutrient Management,train
+a3172,88484,2078,Nutrient Management,train
+a3173,64392,578,Government Scheme,train
+a3174,7461,7461,Varietal Information,train
+a3175,96295,784,Plant Protection,train
+a3176,113873,56,Plant Protection,train
+a3177,76159,56,Plant Protection,train
+a3178,86056,284,Plant Protection,train
+a3179,135003,134992,Animal Husbandry,train
+a3180,26516,972,Government Scheme,train
+a3181,96642,96642,Cultural Practices,train
+a3182,118293,118293,Animal Husbandry,train
+a3183,57160,11613,Fisheries,train
+a3184,80823,78557,Cultural Practices,test
+a3185,64908,64908,Government Scheme,test
+a3186,50976,24,Nutrient Management,train
+a3187,5388,5387,Nutrient Management,test
+a3188,38852,8476,Animal Husbandry,train
+a3189,92875,92875,Plant Protection,train
+a3190,73979,2913,Government Scheme,train
+a3191,52941,52941,Varietal Information,train
+a3192,100869,100869,Animal Husbandry,train
+a3193,128685,128685,Plant Protection,test
+a3194,56126,56126,Cultural Practices,train
+a3195,129551,40767,Varietal Information,train
+a3196,135783,135742,Weather,train
+a3197,75402,75402,Varietal Information,train
+a3198,47265,7482,Cultural Practices,train
+a3199,4510,4510,Plant Protection,train
+a3200,80444,2106,Plant Protection,train
+a3201,22183,774,Fisheries,train
+a3202,78771,1776,Animal Husbandry,train
+a3203,68754,6595,Cultural Practices,train
+a3204,104652,21862,Varietal Information,train
+a3205,80042,80042,Other,train
+a3206,95667,95667,Animal Husbandry,train
+a3207,117138,1328,Plant Protection,train
+a3208,114523,114523,Plant Protection,train
+a3209,125229,1779,Government Scheme,train
+a3210,110738,110738,Plant Protection,train
+a3211,20266,20266,Plant Protection,train
+a3212,39068,4737,Plant Protection,train
+a3213,3540,3540,Fisheries,train
+a3214,98975,98975,Nutrient Management,train
+a3215,76514,76514,Government Scheme,train
+a3216,86495,498,Plant Protection,train
+a3217,122762,122762,Plant Protection,train
+a3218,27341,27341,Plant Protection,train
+a3219,32621,284,Plant Protection,train
+a3220,116341,5817,Nutrient Management,train
+a3221,17816,478,Varietal Information,train
+a3222,64133,64133,Animal Husbandry,train
+a3223,117331,117331,Fisheries,train
+a3224,74549,74549,Market Price,train
+a3225,2250,2250,Cultural Practices,test
+a3226,7439,7439,Varietal Information,train
+a3227,26483,26483,Animal Husbandry,train
+a3228,50329,700,Plant Protection,train
+a3229,136005,162,Animal Husbandry,train
+a3230,29677,21849,Other,train
+a3231,135711,1432,Other,train
+a3232,70676,70676,Weather,train
+a3233,53912,53912,Animal Husbandry,train
+a3234,5486,5486,Government Scheme,train
+a3235,48716,187,Plant Protection,train
+a3236,6840,6840,Cultural Practices,train
+a3237,42617,42617,Animal Husbandry,train
+a3238,22587,6669,Nutrient Management,train
+a3239,4175,119,Plant Protection,train
+a3240,12810,12810,Animal Husbandry,test
+a3241,121159,7,Animal Husbandry,train
+a3242,138312,138312,Plant Protection,train
+a3243,95244,2615,Nutrient Management,train
+a3244,15388,15388,Cultural Practices,train
+a3245,69313,3696,Plant Protection,train
+a3246,48317,48317,Government Scheme,train
+a3247,83388,23881,Cultural Practices,train
+a3248,24104,24104,Cultural Practices,train
+a3249,125748,12460,Market Price,train
+a3250,67569,82,Plant Protection,train
+a3251,94142,94142,Nutrient Management,train
+a3252,129494,35,Varietal Information,train
+a3253,96249,96249,Other,train
+a3254,101593,101562,Market Price,test
+a3255,124527,4390,Cultural Practices,train
+a3256,2843,2838,Weather,test
+a3257,14460,2838,Weather,test
+a3258,107358,3146,Government Scheme,train
+a3259,97950,97950,Cultural Practices,train
+a3260,57602,57602,Cultural Practices,train
+a3261,7135,1260,Plant Protection,train
+a3262,134634,134634,Plant Protection,test
+a3263,38220,2636,Cultural Practices,train
+a3264,132701,1967,Nutrient Management,train
+a3265,122999,122999,Animal Husbandry,train
+a3266,137093,2888,Government Scheme,train
+a3267,91659,53757,Other,train
+a3268,19034,19034,Cultural Practices,train
+a3269,56417,56417,Fisheries,train
+a3270,56689,56689,Plant Protection,train
+a3271,90114,1642,Animal Husbandry,train
+a3272,125412,125412,Nutrient Management,train
+a3273,40298,378,Cultural Practices,train
+a3274,6173,6173,Plant Protection,train
+a3275,46086,8593,Fisheries,train
+a3276,88367,27475,Cultural Practices,train
+a3277,45400,1412,Nutrient Management,train
+a3278,93801,59548,Animal Husbandry,train
+a3279,64507,2449,Plant Protection,train
+a3280,29755,29755,Government Scheme,train
+a3281,22854,3444,Plant Protection,test
+a3282,13578,13578,Cultural Practices,train
+a3283,84259,589,Fisheries,train
+a3284,13955,13955,Government Scheme,train
+a3285,5781,5781,Plant Protection,train
+a3286,19656,19656,Market Price,test
+a3287,72054,72054,Animal Husbandry,train
+a3288,129657,42,Cultural Practices,train
+a3289,123800,422,Cultural Practices,train
+a3290,947,947,Animal Husbandry,train
+a3291,28044,28044,Fisheries,train
+a3292,6513,48,Plant Protection,train
+a3293,120217,120217,Cultural Practices,train
+a3294,129465,39,Government Scheme,train
+a3295,32773,48,Plant Protection,train
+a3296,98980,531,Plant Protection,train
+a3297,16947,16783,Animal Husbandry,train
+a3298,8884,8884,Varietal Information,train
+a3299,32576,32576,Other,train
+a3300,33927,2400,Plant Protection,test
+a3301,106175,104250,Cultural Practices,train
+a3302,85099,85099,Cultural Practices,train
+a3303,82746,2913,Government Scheme,train
+a3304,66120,66120,Government Scheme,train
+a3305,98659,98659,Plant Protection,train
+a3306,105338,20931,Cultural Practices,test
+a3307,87312,87269,Nutrient Management,train
+a3308,31115,3264,Government Scheme,train
+a3309,13231,13231,Cultural Practices,train
+a3310,134786,134786,Animal Husbandry,train
+a3311,130809,130809,Varietal Information,test
+a3312,30070,2753,Other,train
+a3313,3218,3218,Government Scheme,train
+a3314,16189,16189,Nutrient Management,train
+a3315,79133,79133,Fisheries,train
+a3316,48028,3183,Government Scheme,train
+a3317,103384,1139,Government Scheme,train
+a3318,102554,16858,Cultural Practices,train
+a3319,42688,42688,Varietal Information,train
+a3320,124994,3444,Plant Protection,test
+a3321,72584,6387,Animal Husbandry,test
+a3322,90108,2344,Fisheries,train
+a3323,91936,91936,Cultural Practices,test
+a3324,120709,774,Fisheries,train
+a3325,81309,81309,Plant Protection,train
+a3326,60854,13335,Cultural Practices,train
+a3327,48459,48459,Other,train
+a3328,59778,1387,Other,train
+a3329,116462,116462,Cultural Practices,train
+a3330,129207,11939,Cultural Practices,train
+a3331,38464,38464,Varietal Information,train
+a3332,33000,9878,Fisheries,train
+a3333,101047,19374,Cultural Practices,train
+a3334,57440,57440,Plant Protection,train
+a3335,93205,93205,Cultural Practices,train
+a3336,56833,677,Nutrient Management,train
+a3337,111572,146,Nutrient Management,train
+a3338,73510,73510,Plant Protection,train
+a3339,292,292,Fisheries,test
+a3340,50507,19934,Plant Protection,train
+a3341,120,120,Cultural Practices,train
+a3342,27840,24,Nutrient Management,train
+a3343,15298,15298,Plant Protection,train
+a3344,46440,46440,Cultural Practices,train
+a3345,43888,43888,Cultural Practices,train
+a3346,5060,5009,Government Scheme,test
+a3347,45007,4807,Plant Protection,train
+a3348,48565,48565,Plant Protection,train
+a3349,89263,629,Government Scheme,test
+a3350,58870,439,Cultural Practices,train
+a3351,17313,164,Plant Protection,train
+a3352,15106,2888,Government Scheme,train
+a3353,25373,25373,Government Scheme,train
+a3354,9053,9053,Animal Husbandry,test
+a3355,7718,7718,Government Scheme,train
+a3356,99731,99731,Fisheries,test
+a3357,123890,123890,Plant Protection,train
+a3358,69498,69498,Plant Protection,train
+a3359,109406,109406,Plant Protection,train
+a3360,74387,74387,Varietal Information,train
+a3361,74500,74500,Animal Husbandry,train
+a3362,32281,17421,Plant Protection,test
+a3363,61779,61779,Plant Protection,train
+a3364,135014,135014,Animal Husbandry,train
+a3365,21295,0,Plant Protection,test
+a3366,5227,5227,Plant Protection,train
+a3367,32917,6243,Plant Protection,train
+a3368,14783,14783,Government Scheme,train
+a3369,94279,2944,Plant Protection,train
+a3370,1988,1988,Cultural Practices,train
+a3371,90042,350,Fisheries,train
+a3372,45445,45430,Weather,train
+a3373,35008,35008,Plant Protection,train
+a3374,9815,9815,Government Scheme,train
+a3375,72631,2348,Nutrient Management,test
+a3376,133272,133272,Fisheries,train
+a3377,122174,122174,Cultural Practices,train
+a3378,111233,111233,Varietal Information,train
+a3379,98317,98317,Varietal Information,train
+a3380,9223,5255,Animal Husbandry,train
+a3381,14663,14663,Government Scheme,train
+a3382,61687,13096,Nutrient Management,train
+a3383,18045,18045,Other,train
+a3384,4894,39,Government Scheme,train
+a3385,13359,13359,Fisheries,train
+a3386,28538,8175,Government Scheme,train
+a3387,107391,107391,Animal Husbandry,train
+a3388,68179,29620,Cultural Practices,train
+a3389,16284,2513,Government Scheme,test
+a3390,134823,13583,Animal Husbandry,train
+a3391,130606,88614,Plant Protection,train
+a3392,34954,1479,Plant Protection,train
+a3393,107637,107637,Varietal Information,train
+a3394,72515,773,Nutrient Management,test
+a3395,115752,9365,Varietal Information,train
+a3396,118197,329,Government Scheme,train
+a3397,30488,30488,Varietal Information,train
+a3398,84916,70403,Plant Protection,train
+a3399,31545,31545,Animal Husbandry,train
+a3400,92353,0,Plant Protection,test
+a3401,39599,39599,Cultural Practices,train
+a3402,31055,14528,Plant Protection,train
+a3403,75656,3526,Plant Protection,test
+a3404,10886,534,Government Scheme,train
+a3405,99872,2242,Fisheries,train
+a3406,17988,17988,Varietal Information,train
+a3407,116741,11159,Animal Husbandry,test
+a3408,90861,90861,Plant Protection,train
+a3409,109222,2055,Varietal Information,train
+a3410,100553,601,Nutrient Management,test
+a3411,123435,92397,Nutrient Management,test
+a3412,79714,79714,Weather,train
+a3413,24793,1604,Animal Husbandry,train
+a3414,76294,76294,Plant Protection,test
+a3415,91725,83653,Government Scheme,test
+a3416,102036,102036,Cultural Practices,train
+a3417,61105,61105,Nutrient Management,train
+a3418,67977,67977,Nutrient Management,test
+a3419,38382,1633,Plant Protection,train
+a3420,13866,2366,Cultural Practices,train
+a3421,125057,125057,Weather,train
+a3422,41111,41085,Plant Protection,train
+a3423,7089,617,Plant Protection,train
+a3424,121785,987,Nutrient Management,train
+a3425,102057,102057,Other,train
+a3426,86905,23298,Cultural Practices,train
+a3427,2717,2717,Varietal Information,train
+a3428,61786,61786,Fisheries,train
+a3429,6829,6829,Cultural Practices,train
+a3430,49936,49936,Nutrient Management,train
+a3431,43905,6764,Animal Husbandry,train
+a3432,40110,2944,Plant Protection,train
+a3433,95880,95880,Nutrient Management,train
+a3434,43338,43338,Nutrient Management,train
+a3435,1221,146,Nutrient Management,train
+a3436,29133,10994,Nutrient Management,train
+a3437,67852,7485,Weather,train
+a3438,126683,62376,Cultural Practices,test
+a3439,6765,774,Fisheries,train
+a3440,37561,50,Varietal Information,train
+a3441,19238,541,Plant Protection,train
+a3442,92893,92893,Cultural Practices,train
+a3443,120345,120345,Weather,train
+a3444,101780,1937,Nutrient Management,train
+a3445,39590,39590,Other,train
+a3446,86322,774,Fisheries,train
+a3447,107583,107583,Fisheries,train
+a3448,72758,11177,Animal Husbandry,train
+a3449,94987,94987,Nutrient Management,train
+a3450,109929,109929,Cultural Practices,train
+a3451,27071,2329,Nutrient Management,test
+a3452,137077,137077,Varietal Information,test
+a3453,68841,68841,Cultural Practices,train
+a3454,102062,6404,Cultural Practices,test
+a3455,131105,6668,Cultural Practices,train
+a3456,136881,2709,Nutrient Management,train
+a3457,138643,138643,Animal Husbandry,train
+a3458,93897,93897,Plant Protection,test
+a3459,94338,9701,Animal Husbandry,test
+a3460,118402,45186,Animal Husbandry,train
+a3461,117550,117550,Government Scheme,train
+a3462,123061,123061,Plant Protection,train
+a3463,95486,95486,Weather,train
+a3464,135381,67548,Plant Protection,test
+a3465,98268,98268,Nutrient Management,train
+a3466,38241,38241,Plant Protection,train
+a3467,118942,1075,Cultural Practices,train
+a3468,19845,6127,Plant Protection,train
+a3469,43583,22123,Fisheries,train
+a3470,134456,134456,Weather,train
+a3471,10751,10751,Other,train
+a3472,98910,98910,Animal Husbandry,train
+a3473,62569,110,Animal Husbandry,train
+a3474,20966,20966,Government Scheme,train
+a3475,126848,6848,Nutrient Management,train
+a3476,120788,120788,Cultural Practices,test
+a3477,105575,12540,Animal Husbandry,train
+a3478,17963,33,Nutrient Management,train
+a3479,130409,130409,Plant Protection,train
+a3480,128442,128442,Other,train
+a3481,87306,12247,Cultural Practices,train
+a3482,130731,130731,Plant Protection,train
+a3483,122517,122517,Plant Protection,train
+a3484,134495,88330,Cultural Practices,train
+a3485,114785,114785,Varietal Information,train
+a3486,37478,2643,Varietal Information,train
+a3487,99682,99682,Nutrient Management,train
+a3488,59444,59444,Varietal Information,test
+a3489,99310,99310,Plant Protection,train
+a3490,4187,4187,Plant Protection,train
+a3491,115851,115851,Animal Husbandry,train
+a3492,116094,116094,Cultural Practices,train
+a3493,22310,14765,Plant Protection,train
+a3494,125611,125589,Nutrient Management,train
+a3495,94512,110,Animal Husbandry,train

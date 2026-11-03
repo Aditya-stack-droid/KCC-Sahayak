@@ -1,0 +1,8 @@
+stratum,n
+near_duplicate,40
+potentially_unsafe,25
+common,80
+rare_intent,55
+insufficient_context,35
+ambiguous,35
+novel,30

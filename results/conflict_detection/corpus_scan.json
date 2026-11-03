@@ -1,0 +1,55 @@
+{
+  "protocol": {
+    "source": "Batch A grouped retrieval metadata + informative mask",
+    "grouping": "0.95 cosine question groups (Batch A)",
+    "sampled_groups": 1000,
+    "seed": 0,
+    "max_answers_per_group": 5,
+    "answer_dedup": "exact duplicate text removed within a group",
+    "informative_filter": "batch A informative mask + answer length >= 25"
+  },
+  "eligible_groups": 8619,
+  "sampled_groups": 1000,
+  "pairs_evaluated": 4918,
+  "pairs_with_conflict": 1258,
+  "pair_rule_fire_rate": 0.2558,
+  "groups_with_conflict": 382,
+  "group_rule_fire_rate": 0.382,
+  "pairs_by_kind": {
+    "product": 246,
+    "dosage": 406,
+    "dimension": 488,
+    "basis": 105,
+    "polarity": 2,
+    "interval": 12
+  },
+  "conflicts_by_severity": {
+    "high": 668,
+    "medium": 593
+  },
+  "by_group_size": {
+    "2": {
+      "groups": 404,
+      "groups_with_conflict": 78,
+      "rule_fire_rate": 0.1931
+    },
+    "3-5": {
+      "groups": 596,
+      "groups_with_conflict": 304,
+      "rule_fire_rate": 0.5101
+    }
+  },
+  "review_rows": 200,
+  "limitations": [
+    "Rule-fire rate, not an error rate: no human adjudicated these groups.",
+    "Groups can legitimately contain answers for different crops/stages, so some flags are context differences.",
+    "Only the train+val side of the grouped split is scanned; test rows are not included.",
+    "At most five answers per group and at most 200 review rows are kept."
+  ],
+  "dataset": {
+    "corpus_rows_in_grouped_index": 125044,
+    "informative_rows": 114066,
+    "rows_used_for_groups": 111816,
+    "groups_in_index": 39453
+  }
+}

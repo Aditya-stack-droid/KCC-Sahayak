@@ -1,0 +1,96 @@
+{
+  "protocol": {
+    "split": "grouped corpus split (StratifiedGroupKFold, 10 folds, seed 0; fold 0 test, fold 1 val)",
+    "index": "FAISS IndexFlatIP over grouped train+val questions",
+    "fusion": "alpha=0.4 (dense) + 0.6 (word TF-IDF), same as deployed weight",
+    "relevance": "retrieved weak keyword label == test weak keyword label (topical proxy, not correctness)",
+    "hybrid_sample": 3000
+  },
+  "n_index": 125044,
+  "n_test": 13831,
+  "informative_index_share": 0.9122,
+  "test_max_dense_similarity_to_index": {
+    "ge_0.95": 0.00094,
+    "ge_0.90": 0.699371,
+    "lt_0.80": 0.061456
+  },
+  "dense_all_test": {
+    "category_match_top1": 0.8519,
+    "category_match_top1_ci95": [
+      0.8462,
+      0.8576
+    ],
+    "answer_token_f1_top1_all": 0.3213,
+    "answer_token_f1_top1_informative_gold": 0.3293,
+    "recall_at_1": 0.8519,
+    "recall_at_3": 0.9304,
+    "recall_at_5": 0.9508,
+    "mrr_at_10": 0.8961,
+    "ndcg_at_5": 0.9071,
+    "n": 13831
+  },
+  "dense_sample": {
+    "category_match_top1": 0.8403,
+    "category_match_top1_ci95": [
+      0.8273,
+      0.8533
+    ],
+    "answer_token_f1_top1_all": 0.322,
+    "answer_token_f1_top1_informative_gold": 0.3323,
+    "recall_at_1": 0.8403,
+    "recall_at_3": 0.9233,
+    "recall_at_5": 0.945,
+    "mrr_at_10": 0.8881,
+    "ndcg_at_5": 0.899,
+    "n": 3000
+  },
+  "hybrid_sample": {
+    "category_match_top1": 0.8733,
+    "category_match_top1_ci95": [
+      0.8613,
+      0.8853
+    ],
+    "answer_token_f1_top1_all": 0.38,
+    "answer_token_f1_top1_informative_gold": 0.388,
+    "recall_at_1": 0.8733,
+    "recall_at_3": 0.9453,
+    "recall_at_5": 0.963,
+    "mrr_at_10": 0.9132,
+    "ndcg_at_5": 0.9236,
+    "n": 3000
+  },
+  "by_novelty_bucket": {
+    "novel": {
+      "n": 850,
+      "category_match_top1": 0.7812,
+      "recall_at_5": 0.9365,
+      "answer_token_f1_top1_all": 0.2325
+    },
+    "similar": {
+      "n": 3308,
+      "category_match_top1": 0.8168,
+      "recall_at_5": 0.9368,
+      "answer_token_f1_top1_all": 0.3134
+    },
+    "near_duplicate": {
+      "n": 9673,
+      "category_match_top1": 0.8702,
+      "recall_at_5": 0.9568,
+      "answer_token_f1_top1_all": 0.3319
+    }
+  },
+  "original_split_reference": {
+    "source": "results/research_eval.json (original row-level split)",
+    "near_duplicate_share_ge_0.95": 0.7073,
+    "retrieval_category_match_near_duplicate": 0.9807,
+    "retrieval_category_match_novel": 0.7365,
+    "note": "The original near-duplicate share is expected to fall to ~0 under the grouped split."
+  },
+  "limitations": [
+    "Relevance is a weak-label topical proxy, not human relevance or agronomic correctness.",
+    "Only one grouped split seed was run for retrieval because the index rebuild is expensive.",
+    "The hybrid evaluation uses a fixed 3,000-query sample; dense metrics use all grouped test rows.",
+    "Token-F1 is still single-reference; multi-reference evaluation is Batch B.",
+    "The corpus metadata has no district/date field, so temporal or district-held-out evaluation is not possible."
+  ]
+}

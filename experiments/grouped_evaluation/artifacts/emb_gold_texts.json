@@ -1,0 +1,7 @@
+{
+  "key": "gold_texts",
+  "n": 150,
+  "sha1": "18b07bb73f5a4c7c6363d713e1e18cd3ee1b9f0d",
+  "model": "paraphrase-multilingual-MiniLM-L12-v2",
+  "dim": 384
+}

@@ -1,0 +1,11 @@
+,Animal Husbandry,Cultural Practices,Fisheries,Government Scheme,Market Price,Nutrient Management,Other,Plant Protection,Varietal Information,Weather
+Animal Husbandry,61,0,0,0,0,0,0,1,1,0
+Cultural Practices,0,71,0,1,0,1,0,2,1,1
+Fisheries,1,1,35,0,0,0,1,1,0,0
+Government Scheme,0,0,1,45,0,0,2,0,0,0
+Market Price,0,0,0,0,7,0,1,0,1,0
+Nutrient Management,0,1,0,0,0,63,0,1,0,0
+Other,0,3,0,1,0,0,20,1,1,0
+Plant Protection,0,2,0,0,0,1,0,110,0,0
+Varietal Information,0,1,0,0,0,0,0,0,37,0
+Weather,0,0,0,0,0,0,0,0,0,22

@@ -1,0 +1,46 @@
+{
+  "schema": 1,
+  "name": "batch_b_protection_full",
+  "description": "Full protection inventory: original project, Batch A, Batch B Phases 1-2, Improvement 1 and Improvement 2. Additive files are listed; no protected file is rewritten.",
+  "baseline_manifest": "experiments/batch_b/manifests/baseline_hashes.json",
+  "roots": [
+    {"prefix": "experiments/privacy/", "group": "batch_b_phase1"},
+    {"prefix": "results/privacy_audit/", "group": "batch_b_phase1"},
+    {"prefix": "experiments/annotation/", "group": "batch_b_phase2"},
+    {"prefix": "results/annotation/", "group": "batch_b_phase2"},
+    {"prefix": "experiments/conflict_detection/", "group": "batch_b_improvement1"},
+    {"prefix": "results/conflict_detection/", "group": "batch_b_improvement1"},
+    {"prefix": "experiments/safety_evaluation/", "group": "batch_b_improvement2"},
+    {"prefix": "results/safety_evaluation/", "group": "batch_b_improvement2"}
+  ],
+  "files": [
+    {"path": "tests/unit/test_privacy.py", "group": "batch_b_phase1"},
+    {"path": "tests/unit/test_annotation.py", "group": "batch_b_phase2"},
+    {"path": "tests/unit/test_conflict_detection.py", "group": "batch_b_improvement1"},
+    {"path": "tests/unit/test_adversarial_safety.py", "group": "batch_b_improvement2"},
+    {"path": "experiments/batch_b/inventories/protection.json", "group": "inventory_config"}
+  ],
+  "immutable_prefixes": [
+    "data/",
+    "models/",
+    "src/",
+    "backend/",
+    "scripts/",
+    "experiments/grouped_evaluation/",
+    "results/improved_evaluation/",
+    "experiments/privacy/",
+    "results/privacy_audit/",
+    "experiments/annotation/",
+    "results/annotation/",
+    "experiments/conflict_detection/",
+    "results/conflict_detection/",
+    "experiments/safety_evaluation/",
+    "results/safety_evaluation/",
+    "tests/unit/"
+  ],
+  "addition_exempt_prefixes": [
+    "experiments/annotation/data/annotations/",
+    "experiments/annotation/data/adjudication.jsonl",
+    "experiments/annotation/data/exports/"
+  ]
+}

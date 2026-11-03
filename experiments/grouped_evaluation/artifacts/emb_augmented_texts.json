@@ -1,0 +1,7 @@
+{
+  "key": "augmented_texts",
+  "n": 1200,
+  "sha1": "993366d8b815c32691c71dab06e3ed7c48b3fabd",
+  "model": "paraphrase-multilingual-MiniLM-L12-v2",
+  "dim": 384
+}

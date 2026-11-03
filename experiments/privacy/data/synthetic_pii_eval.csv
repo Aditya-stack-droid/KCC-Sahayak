@@ -1,0 +1,88 @@
+id,language,text,entities,notes,synthetic
+en-phone-context,en,Call me at 9876543210 for the spray schedule.,"[{""start"":11,""end"":21,""type"":""PHONE"",""value"":""9876543210""}]",positive: strong phone cue,true
+en-phone-spaced,en,My mobile number is 98765 43210.,"[{""start"":20,""end"":31,""type"":""PHONE"",""value"":""98765 43210""}]",positive: 5+5 separator grouping,true
+en-phone-country,en,Contact +91-98765-43210 tomorrow morning.,"[{""start"":8,""end"":23,""type"":""PHONE"",""value"":""+91-98765-43210""}]",positive: +91 country prefix and separators,true
+en-phone-bare,en,Reach 9876543210.,"[{""start"":6,""end"":16,""type"":""PHONE"",""value"":""9876543210""}]",ambiguous: standalone 10-digit number; balanced policy accepts,true
+en-phone-whatsapp,en,WhatsApp 98765-43210 for seeds.,"[{""start"":9,""end"":20,""type"":""PHONE"",""value"":""98765-43210""}]",positive: WhatsApp cue,true
+en-phone-intl,en,Call +1 (415) 555-0132 anytime.,"[{""start"":5,""end"":22,""type"":""PHONE"",""value"":""+1 (415) 555-0132""}]",positive: international number with explicit +1,true
+en-email,en,Email me at rahul.sharma@example.com please.,"[{""start"":12,""end"":36,""type"":""EMAIL"",""value"":""rahul.sharma@example.com""}]",positive: email with dot and plus-safe local part,true
+en-name,en,My name is Rahul Sharma and I grow wheat.,"[{""start"":11,""end"":23,""type"":""PERSON"",""value"":""Rahul Sharma""}]",positive: anchored English name,true
+en-honorific,en,Mr. Verma advised a neem oil spray.,"[{""start"":4,""end"":9,""type"":""PERSON"",""value"":""Verma""}]",positive: honorific-anchored name,true
+en-name-colon,en,Name: Rahul Sharma,"[{""start"":6,""end"":18,""type"":""PERSON"",""value"":""Rahul Sharma""}]",positive: form-style name label,true
+en-name-lower,en,my name is rahul,"[{""start"":11,""end"":16,""type"":""PERSON"",""value"":""rahul""}]",positive: lowercase Roman-Hindi/English name after anchor,true
+en-aadhaar,en,Aadhaar 2345 6789 0124 is linked to the account.,"[{""start"":8,""end"":22,""type"":""AADHAAR"",""value"":""2345 6789 0124""}]",positive: valid Verhoeff checksum plus Aadhaar cue,true
+en-aadhaar-uid,en,UID 3456 7890 1238 was recorded.,"[{""start"":4,""end"":18,""type"":""AADHAAR"",""value"":""3456 7890 1238""}]",positive: UID cue,true
+en-aadhaar-checksum-only,en,The number 4567 8901 2341 belongs to the beneficiary.,"[{""start"":11,""end"":25,""type"":""AADHAAR"",""value"":""4567 8901 2341""}]",positive: valid checksum without an explicit Aadhaar cue,true
+en-ifsc,en,IFSC SBIN0001234 for the transfer.,"[{""start"":5,""end"":16,""type"":""IFSC"",""value"":""SBIN0001234""}]",positive: IFSC pattern,true
+en-bank,en,Account number 123456789012 at the bank.,"[{""start"":15,""end"":27,""type"":""BANK_ACCOUNT"",""value"":""123456789012""}]",positive: account cue; not treated as Aadhaar,true
+en-url,en,Profile: https://example.com/farmer/rahul,"[{""start"":9,""end"":41,""type"":""URL"",""value"":""https://example.com/farmer/rahul""}]",positive: URL,true
+en-multi-name-phone-email,en,"My name is Rahul Sharma, call 9876543210 or email rahul@example.com.","[{""start"":11,""end"":23,""type"":""PERSON"",""value"":""Rahul Sharma""},{""start"":30,""end"":40,""type"":""PHONE"",""value"":""9876543210""},{""start"":50,""end"":67,""type"":""EMAIL"",""value"":""rahul@example.com""}]",positive: multiple PII entities,true
+en-multi-aadhaar-phone,en,Aadhaar 3456 7890 1238; mobile 98765 43210.,"[{""start"":8,""end"":22,""type"":""AADHAAR"",""value"":""3456 7890 1238""},{""start"":31,""end"":42,""type"":""PHONE"",""value"":""98765 43210""}]",positive: multiple identifiers,true
+en-multi-all,en,"My name is Rahul, my number is 9876543210, my email is rahul@example.com, my Aadhaar is 2345 6789 0124.","[{""start"":11,""end"":16,""type"":""PERSON"",""value"":""Rahul""},{""start"":31,""end"":41,""type"":""PHONE"",""value"":""9876543210""},{""start"":55,""end"":72,""type"":""EMAIL"",""value"":""rahul@example.com""},{""start"":88,""end"":102,""type"":""AADHAAR"",""value"":""2345 6789 0124""}]",positive: four entity types in one sentence,true
+en-multi-aadhaar-ifsc,en,Aadhaar 4567 8901 2341 and IFSC HDFC0000123.,"[{""start"":8,""end"":22,""type"":""AADHAAR"",""value"":""4567 8901 2341""},{""start"":32,""end"":43,""type"":""IFSC"",""value"":""HDFC0000123""}]",positive: identifier plus bank code,true
+en-email-uppercase,en,Email RAHUL.SHARMA@EXAMPLE.COM now.,"[{""start"":6,""end"":30,""type"":""EMAIL"",""value"":""RAHUL.SHARMA@EXAMPLE.COM""}]",positive: uppercase email,true
+en-bank-ac,en,A/c 123456789012 at the branch.,"[{""start"":4,""end"":16,""type"":""BANK_ACCOUNT"",""value"":""123456789012""}]",positive: A/c abbreviation,true
+en-aadhaar-hyphen,en,Aadhaar 2345-6789-0124 was verified.,"[{""start"":8,""end"":22,""type"":""AADHAAR"",""value"":""2345-6789-0124""}]",positive: hyphen-grouped Aadhaar,true
+en-name-initials,en,My name is R. K. Sharma.,"[{""start"":11,""end"":23,""type"":""PERSON"",""value"":""R. K. Sharma""}]",hard: initials are not supported by the name heuristics,true
+en-honorific-lowercase,en,mr. verma advised a neem spray.,"[{""start"":4,""end"":9,""type"":""PERSON"",""value"":""verma""}]",hard: honorific matching is case-sensitive,true
+en-phone-dots,en,Call 98765.43210 now.,"[{""start"":5,""end"":16,""type"":""PHONE"",""value"":""98765.43210""}]",hard: dot-grouped mobile is not supported,true
+en-phone-trunk-zero,en,Call 09876543210 now.,"[{""start"":5,""end"":16,""type"":""PHONE"",""value"":""09876543210""}]",hard: Indian trunk prefix 0 is not supported,true
+hin-name-lowercase-surname,hinglish,mera naam Rahul sharma hai,"[{""start"":10,""end"":22,""type"":""PERSON"",""value"":""Rahul sharma""}]",hard: lowercase surname is only partially captured,true
+hi-phone-plus91,hi,संपर्क +91 98765 43210,"[{""start"":7,""end"":22,""type"":""PHONE"",""value"":""+91 98765 43210""}]",positive: +91 with a space before the national number,true
+hi-name-unanchored,hi,रमेश ने कहा कि फसल ठीक है।,[],scope limit: unanchored Devanagari names are not detected,true
+en-neg-dose,en,The dose is 2 kg urea per bigha.,[],"negative: unit/quantity, not a phone number",true
+en-neg-year,en,In 2024 the rainfall was low.,[],negative: year,true
+en-neg-price,en,Price is Rs 50000 per quintal.,[],negative: currency/quantity,true
+en-neg-plot,en,Plot number 9876543210 is near the canal.,[],ambiguous: 10 digits but plot context; must not be a phone,true
+en-neg-token,en,Token 9876543210 was issued.,[],ambiguous: token context,true
+en-neg-order-id,en,The sample ID is 9876543210-A.,[],ambiguous: sample ID,true
+en-neg-budget,en,Rs 9876543210 is the total budget.,[],ambiguous: currency context,true
+en-neg-9digit,en,The code is 987654321.,[],negative: 9 digits,true
+en-neg-11digit,en,The code is 98765432101.,[],"negative: 11 digits, must not match a 10-digit sub-span",true
+en-neg-wrong-start,en,The code is 5876543210.,[],negative: Indian mobiles start 6-9,true
+en-neg-pincode,en,PIN 110001,[],negative: 6-digit PIN code,true
+en-neg-invalid-aadhaar,en,Reference 1234 5678 9012 was logged.,[],"negative: 12 digits, invalid checksum, no Aadhaar cue",true
+en-neg-batch-valid-aadhaar,en,Batch 2345 6789 0124 was processed.,[],ambiguous: valid checksum but batch context; not treated as Aadhaar,true
+en-neg-org-name,en,My name is Kisan Call Centre.,[],negative: organisation after a name anchor,true
+en-neg-crop-honorific,en,Dr. Wheat visited the field.,[],negative: crop word after an honorific,true
+en-neg-bare-name,en,Rahul said the mandi rate is good.,[],scope limit: unanchored names are not detected,true
+en-neg-unknown-name,en,my name is not known,[],negative: stopword phrase after anchor,true
+en-neg-name-of-crop,en,The name of the crop is wheat.,[],negative: 'name of' is not a person,true
+en-neg-date,en,The meeting is on 12/05/2024.,[],negative: date,true
+hin-phone-name,hinglish,"mera naam Rahul hai, call 98765 43210","[{""start"":10,""end"":15,""type"":""PERSON"",""value"":""Rahul""},{""start"":26,""end"":37,""type"":""PHONE"",""value"":""98765 43210""}]",positive: Roman-Hindi anchor plus phone,true
+hin-ji-number,hinglish,Rahul ji ka number 9876543210 hai,"[{""start"":0,""end"":5,""type"":""PERSON"",""value"":""Rahul""},{""start"":19,""end"":29,""type"":""PHONE"",""value"":""9876543210""}]",positive: 'ji' name and weak number cue,true
+hin-email,hinglish,mera email rahul.kcc@example.com hai,"[{""start"":11,""end"":32,""type"":""EMAIL"",""value"":""rahul.kcc@example.com""}]",positive: email in Roman-Hindi,true
+hin-aadhaar,hinglish,mera aadhaar 2345 6789 0124 hai,"[{""start"":13,""end"":27,""type"":""AADHAAR"",""value"":""2345 6789 0124""}]",positive: Aadhaar cue in Roman-Hindi,true
+hin-aadhaar-invalid-context,hinglish,mera aadhaar number 1234 5678 9012 hai,"[{""start"":20,""end"":34,""type"":""AADHAAR"",""value"":""1234 5678 9012""}]","positive: explicit Aadhaar cue, invalid checksum (test-number case)",true
+hin-bank,hinglish,account number 123456789012 par paisa bhejo,"[{""start"":15,""end"":27,""type"":""BANK_ACCOUNT"",""value"":""123456789012""}]",positive: account cue,true
+hin-phone-sep,hinglish,mobile number 98765-43210,"[{""start"":14,""end"":25,""type"":""PHONE"",""value"":""98765-43210""}]",positive: mobile cue with separator,true
+hin-name-comma,hinglish,"naam Rahul Sharma, gaon Karnal","[{""start"":5,""end"":17,""type"":""PERSON"",""value"":""Rahul Sharma""}]",positive: form-style naam label,true
+hin-multi,hinglish,"Rahul ji, 9876543210, rahul@example.com","[{""start"":0,""end"":5,""type"":""PERSON"",""value"":""Rahul""},{""start"":10,""end"":20,""type"":""PHONE"",""value"":""9876543210""},{""start"":22,""end"":39,""type"":""EMAIL"",""value"":""rahul@example.com""}]",positive: multiple entities,true
+hin-name-year,hinglish,mera naam Rahul hai aur 2024 mein fasal kharab hui,"[{""start"":10,""end"":15,""type"":""PERSON"",""value"":""Rahul""}]",positive: name; year must not be redacted,true
+hin-name-phone,hinglish,"mera naam Priya hai, mera number 98765 43210 hai","[{""start"":10,""end"":15,""type"":""PERSON"",""value"":""Priya""},{""start"":33,""end"":44,""type"":""PHONE"",""value"":""98765 43210""}]",positive: name plus weak number cue,true
+hin-name-kisan,hinglish,kisan ka naam Ram Singh hai,"[{""start"":14,""end"":23,""type"":""PERSON"",""value"":""Ram Singh""}]",positive: name after a non-name subject,true
+hin-devanagari-phone,hinglish,mobile ९८७६५४३२१० hai,"[{""start"":7,""end"":17,""type"":""PHONE"",""value"":""९८७६५४३२१०""}]",positive: Devanagari digits in a Roman-Hindi sentence,true
+hin-neg-dose,hinglish,khet mein 2 kg urea dalna hai,[],negative: quantity/unit,true
+hin-neg-price,hinglish,aaj mandi ka bhav 5000 rupaye hai,[],negative: price,true
+hin-neg-wrong-start,hinglish,call 5876543210,[],negative: wrong mobile prefix,true
+hin-neg-order,hinglish,order id 9876543210,[],ambiguous: order context,true
+hin-neg-naam-verb,hinglish,naam likhwa do,[],"negative: 'naam' followed by a verb, not a person",true
+hi-name,hi,मेरा नाम राहुल शर्मा है।,"[{""start"":9,""end"":20,""type"":""PERSON"",""value"":""राहुल शर्मा""}]",positive: Devanagari name anchor,true
+hi-name-colon,hi,नाम: राहुल शर्मा,"[{""start"":5,""end"":16,""type"":""PERSON"",""value"":""राहुल शर्मा""}]",positive: Devanagari form label,true
+hi-phone,hi,मोबाइल नंबर 9876543210 है।,"[{""start"":12,""end"":22,""type"":""PHONE"",""value"":""9876543210""}]",positive: Hindi mobile cue,true
+hi-phone-contact,hi,संपर्क करें: 98765 43210,"[{""start"":13,""end"":24,""type"":""PHONE"",""value"":""98765 43210""}]","positive: Hindi contact cue, 5+5 grouping",true
+hi-phone-intl,hi,कॉल करें +1 (415) 555-0132,"[{""start"":9,""end"":26,""type"":""PHONE"",""value"":""+1 (415) 555-0132""}]",positive: international number in Hindi text,true
+hi-email,hi,मेरा ईमेल rahul@example.com है।,"[{""start"":10,""end"":27,""type"":""EMAIL"",""value"":""rahul@example.com""}]",positive: email in Devanagari sentence,true
+hi-aadhaar,hi,आधार 2345 6789 0124 दर्ज है।,"[{""start"":5,""end"":19,""type"":""AADHAAR"",""value"":""2345 6789 0124""}]",positive: Hindi Aadhaar cue,true
+hi-honorific,hi,श्री रमेश जी से बात करें,"[{""start"":5,""end"":9,""type"":""PERSON"",""value"":""रमेश""}]",positive: honorific plus ji; honorific and ji overlap,true
+hi-honorific-ji,hi,श्रीमती सुनीता जी,"[{""start"":8,""end"":14,""type"":""PERSON"",""value"":""सुनीता""}]",positive: feminine honorific plus ji,true
+hi-bank,hi,खाता संख्या 123456789012 है।,"[{""start"":12,""end"":24,""type"":""BANK_ACCOUNT"",""value"":""123456789012""}]",positive: Hindi account cue,true
+hi-multi,hi,"मेरा नाम राहुल है, फोन 9876543210, ईमेल rahul@example.com","[{""start"":9,""end"":14,""type"":""PERSON"",""value"":""राहुल""},{""start"":23,""end"":33,""type"":""PHONE"",""value"":""9876543210""},{""start"":40,""end"":57,""type"":""EMAIL"",""value"":""rahul@example.com""}]",positive: three entity types,true
+hi-devanagari-phone,hi,मोबाइल ९८७६५४३२१० है,"[{""start"":7,""end"":17,""type"":""PHONE"",""value"":""९८७६५४३२१०""}]",positive: Devanagari-digit phone,true
+hi-name-year,hi,मेरा नाम राहुल है और 2024 में सूखा पड़ा,"[{""start"":9,""end"":14,""type"":""PERSON"",""value"":""राहुल""}]",positive: name; year must not be redacted,true
+hi-neg-dose,hi,गेहूं में 2 किलो यूरिया डालें,[],negative: quantity/unit,true
+hi-neg-price,hi,कीमत 5000 रुपये प्रति क्विंटल,[],negative: price,true
+hi-neg-plot,hi,प्लॉट नंबर 9876543210,[],ambiguous: Hindi plot context,true
+hi-neg-invalid-aadhaar,hi,संख्या 1234 5678 9012 दर्ज है,[],"negative: 12 digits, no Aadhaar cue, invalid checksum",true
+hi-neg-naam-verb,hi,नाम लिखवा दो,[],negative: 'नाम' followed by a verb,true
+hi-neg-org-name,hi,मेरा नाम किसान केंद्र है,[],negative: organisation after a name anchor,true

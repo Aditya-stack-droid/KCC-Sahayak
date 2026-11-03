@@ -1,0 +1,36 @@
+{
+  "n_rows": 138875,
+  "n_groups": 48674,
+  "n_singleton_groups": 38024,
+  "largest_group": 1623,
+  "group_size_p50": 1,
+  "group_size_p95": 7,
+  "group_size_p99": 33,
+  "mean_group_size": 2.853,
+  "near_dup_threshold": 0.95,
+  "knn_k": 64,
+  "directed_pairs_ge_threshold": 2471228,
+  "union_edges_applied": 38372,
+  "exact_components_before_near_dup": 87046,
+  "original_split_leakage": {
+    "exact_test_question_in_train": 0.449813,
+    "test_in_group_with_train": {
+      "n_test": 13888,
+      "n_test_group_leaking": 9836,
+      "share_test_group_leaking": 0.708237,
+      "n_train_groups": 40793,
+      "n_test_groups": 7899
+    },
+    "test_in_group_with_train_or_val": {
+      "n_test": 13888,
+      "n_leaking": 9935,
+      "share": 0.715366
+    },
+    "test_max_dense_similarity_to_train_val": {
+      "ge_0.95": 0.713782,
+      "ge_0.90": 0.833165,
+      "lt_0.80": 0.047451
+    }
+  },
+  "note": "Group membership implies at least one >=threshold link, but the k-NN candidate cap (k=64) means very large duplicate clusters could in principle be split; the post-split maximum-similarity check in 03/05 verifies the actual grouped split."
+}

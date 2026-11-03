@@ -1,0 +1,20 @@
+{
+  "path": "experiments/privacy/data/synthetic_pii_eval.csv",
+  "n_examples": 87,
+  "synthetic": true,
+  "languages": {
+    "en": 47,
+    "hi": 21,
+    "hinglish": 19
+  },
+  "entity_counts": {
+    "AADHAAR": 10,
+    "BANK_ACCOUNT": 4,
+    "EMAIL": 8,
+    "IFSC": 2,
+    "PERSON": 22,
+    "PHONE": 23,
+    "URL": 1
+  },
+  "negative_or_ambiguous_examples": 31
+}

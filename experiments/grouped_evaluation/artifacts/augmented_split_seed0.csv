@@ -1,0 +1,1201 @@
+source_id,text,label,style,group_id,split
+a0001,How should I store my potatoes so I can use them as seed next season?,Other,en,3175,train
+a0001,"beej ke liye aloo ko store kaise karein, agle season mein lagane hain",Other,hinglish,3175,train
+a0001,अगले मौसम में बीज के लिए आलू को कैसे रखकर सुरक्षित करूं?,Other,hi,3175,train
+a0008,"The water in my fish pond doesn't look right, how do I keep it healthy for the fish?",Fisheries,en,10739,train
+a0008,"mere talab ka paani theek nahi lag raha, machhli ke liye paani kaise saaf rakhun",Fisheries,hinglish,10739,train
+a0008,"मेरे तालाब का पानी ठीक नहीं लग रहा, मछलियों के लिए पानी की गुणवत्ता कैसे बनाए रखूं?",Fisheries,hi,10739,train
+a0011,"Which weed killer can I spray in my paddy field, the grass is taking over",Plant Protection,en,42796,test
+a0011,"dhan ke khet mein ghaas bahut ho gayi hai, kaunsi weedicide chhidkun",Plant Protection,hinglish,42796,test
+a0011,"धान के खेत में खरपतवार बहुत हो गए हैं, कौन सी दवा छिड़कूं?",Plant Protection,hi,42796,test
+a0019,"I want to apply for PM-Kisan online, how do I fill in the form?",Government Scheme,en,64298,train
+a0019,pm kisan ke liye online form kaise bharna hai,Government Scheme,hinglish,64298,train
+a0019,पीएम किसान के लिए ऑनलाइन आवेदन कैसे करना है?,Government Scheme,hi,64298,train
+a0022,Can you tell me about the PM Kisan Samman Nidhi scheme and who gets it?,Government Scheme,en,2888,train
+a0022,pm kisan samman nidhi yojana kya hai aur kisko milti hai,Government Scheme,hinglish,2888,train
+a0022,पीएम किसान सम्मान निधि योजना क्या है और किसे मिलती है?,Government Scheme,hi,2888,train
+a0032,Are there any training programmes for farmers that I can join?,Other,en,3607,train
+a0032,kisano ke liye koi training program chal raha hai kya,Other,hinglish,3607,train
+a0032,किसानों के लिए कोई प्रशिक्षण कार्यक्रम चल रहा है क्या?,Other,hi,3607,train
+a0047,When is it going to rain next? My field is dry and waiting.,Weather,en,67761,train
+a0047,"baarish kab hone wali hai, khet sookha pada hai",Weather,hinglish,67761,train
+a0047,"बारिश कब होने वाली है, खेत सूखा पड़ा है",Weather,hi,67761,train
+a0075,Where can I sell my fully grown pigs and what price will I get?,Market Price,en,50223,train
+a0075,bade suar kahan bech sakta hoon aur kya bhav milega,Market Price,hinglish,50223,train
+a0075,बड़े सूअर कहां बेच सकता हूं और क्या दाम मिलेगा?,Market Price,hi,50223,train
+a0077,"My fish are not growing in the cold months, what should I feed them?",Fisheries,en,115648,train
+a0077,"sardi mein machhli badh nahi rahi, kya khilana chahiye",Fisheries,hinglish,115648,train
+a0077,"सर्दी में मछलियां बढ़ नहीं रहीं, उन्हें क्या खिलाना चाहिए?",Fisheries,hi,115648,train
+a0086,How and when should I put fish spawn into the pond?,Fisheries,en,42421,train
+a0086,talab mein machhli ke bachche kaise aur kab chhodne chahiye,Fisheries,hinglish,42421,train
+a0086,तालाब में मछली के बीज कब और कैसे छोड़ें?,Fisheries,hi,42421,train
+a0102,How can I check the status of my PM-Kisan payment?,Government Scheme,en,99859,train
+a0102,meri pm kisan ki kist ka status kaise dekhun,Government Scheme,hinglish,99859,train
+a0102,मेरी पीएम किसान की किस्त का स्टेटस कैसे देखूं?,Government Scheme,hi,99859,train
+a0106,Which mustard variety should I choose and when is the right time to sow it?,Varietal Information,en,39214,train
+a0106,sarson ki kaun si kism lagaun aur buwai kab karni chahiye,Varietal Information,hinglish,39214,train
+a0106,सरसों की कौन सी किस्म लगाऊं और बुवाई कब करनी चाहिए?,Varietal Information,hi,39214,train
+a0111,How much fertiliser should I give to my mango trees?,Nutrient Management,en,1762,train
+a0111,aam ke ped ko kitni khaad deni chahiye,Nutrient Management,hinglish,1762,train
+a0111,आम के पेड़ों को कितनी खाद देनी चाहिए?,Nutrient Management,hi,1762,train
+a0116,"I would like to join a training course for farmers, who do I contact?",Other,en,46696,train
+a0116,"kisan training mein shamil hona hai, kisse sampark karun",Other,hinglish,46696,train
+a0116,"किसान प्रशिक्षण में शामिल होना है, किससे संपर्क करूं?",Other,hi,46696,train
+a0128,Please explain the crop insurance scheme and how to enrol.,Government Scheme,en,37394,train
+a0128,fasal bima yojana mein naam kaise likhwaun,Government Scheme,hinglish,37394,train
+a0128,फसल बीमा योजना में नाम कैसे लिखवाऊं?,Government Scheme,hi,37394,train
+a0135,Will it rain in Dhemaji district in the coming days?,Weather,en,120505,train
+a0135,dhemaji mein agle kuch din baarish hogi kya,Weather,hinglish,120505,train
+a0135,धेमाजी में अगले कुछ दिनों में बारिश होगी क्या?,Weather,hi,120505,train
+a0141,What micronutrients does my ridge gourd need?,Nutrient Management,en,1796,train
+a0141,turai ki fasal ko kaun se micronutrient chahiye,Nutrient Management,hinglish,1796,train
+a0141,तोरई की फसल को कौन से सूक्ष्म पोषक तत्व चाहिए?,Nutrient Management,hi,1796,train
+a0145,"My tea plants have a fungal disease, how do I get rid of it?",Plant Protection,en,19307,train
+a0145,"chai ke paudhon mein fafund ki bimari lag gayi hai, kaise rokein",Plant Protection,hinglish,19307,train
+a0145,"चाय के पौधों में फफूंद की बीमारी लग गई है, कैसे रोकें?",Plant Protection,hi,19307,train
+a0149,How old should the seedlings be before I move them to the main field?,Cultural Practices,en,16023,train
+a0149,paudh kitne din ki ho jaye tab main khet mein lagayein,Cultural Practices,hinglish,16023,train
+a0149,पौध कितने दिन की हो जाए तब मुख्य खेत में रोपें?,Cultural Practices,hi,16023,train
+a0163,Will the FCI buy my paddy and where should I take it?,Market Price,en,138237,train
+a0163,"fci mere dhan ki kharid karega kya, kahan le jaana hai",Market Price,hinglish,138237,train
+a0163,"एफसीआई मेरा धान खरीदेगा क्या, कहां ले जाना है?",Market Price,hi,138237,train
+a0165,"I need a loan for farming, which scheme should I apply under?",Government Scheme,en,434,train
+a0165,"kheti ke liye loan chahiye, kis yojana mein apply karun",Government Scheme,hinglish,434,train
+a0165,"खेती के लिए कर्ज चाहिए, किस योजना में आवेदन करूं?",Government Scheme,hi,434,train
+a0166,"My cow's milk has gone down a lot recently, what could be wrong?",Animal Husbandry,en,7,train
+a0166,"meri gaay ka doodh bahut kam ho gaya hai, kya kaaran ho sakta hai",Animal Husbandry,hinglish,7,train
+a0166,"मेरी गाय का दूध बहुत कम हो गया है, क्या कारण हो सकता है?",Animal Husbandry,hi,7,train
+a0196,"My goat's hooves have grown very long and she is limping, what should I do?",Animal Husbandry,en,109520,test
+a0196,"bakri ke khur bahut lambe ho gaye hain aur wo langdati hai, kya karun",Animal Husbandry,hinglish,109520,test
+a0196,"बकरी के खुर बहुत लंबे हो गए हैं और वह लंगड़ाती है, क्या करूं?",Animal Husbandry,hi,109520,test
+a0199,"Something is wrong with my cow, can a vet advise me?",Animal Husbandry,en,14227,train
+a0199,"meri gaay ko kuch pareshani hai, doctor se salah chahiye",Animal Husbandry,hinglish,14227,train
+a0199,"मेरी गाय को कुछ परेशानी है, पशु चिकित्सक की सलाह चाहिए",Animal Husbandry,hi,14227,train
+a0200,Which paddy variety can survive if my field gets flooded?,Varietal Information,en,80565,train
+a0200,baadh wale ilake ke liye dhan ki kaun si kism theek rahegi,Varietal Information,hinglish,80565,train
+a0200,बाढ़ वाले इलाके के लिए धान की कौन सी किस्म ठीक रहेगी?,Varietal Information,hi,80565,train
+a0204,What is a good variety of sugarcane to plant?,Varietal Information,en,3452,train
+a0204,ganne ki achi kism kaun si hai,Varietal Information,hinglish,3452,train
+a0204,गन्ने की अच्छी किस्म कौन सी है?,Varietal Information,hi,3452,train
+a0205,What is the minimum support price for rice this year?,Market Price,en,102339,train
+a0205,chawal ka msp kitna hai is saal,Market Price,hinglish,102339,train
+a0205,इस साल चावल का एमएसपी कितना है?,Market Price,hi,102339,train
+a0206,What is the MSP for sesame and how are prices in the market?,Market Price,en,54993,train
+a0206,til ka msp kya hai aur bazaar mein bhav kaisa hai,Market Price,hinglish,54993,train
+a0206,तिल का एमएसपी क्या है और बाजार में भाव कैसा है?,Market Price,hi,54993,train
+a0207,Where can I find out about farming training programmes?,Other,en,1931,train
+a0207,kheti ki training ke baare mein jaankari kahan milegi,Other,hinglish,1931,train
+a0207,खेती के प्रशिक्षण की जानकारी कहां मिलेगी?,Other,hi,1931,train
+a0214,Can you tell me what the rainfall looks like for my area?,Weather,en,4494,train
+a0214,mere ilake mein baarish ka kya haal rahega,Weather,hinglish,4494,train
+a0214,मेरे इलाके में बारिश का क्या हाल रहेगा?,Weather,hi,4494,train
+a0239,How much rain is expected in Dibrugarh district?,Weather,en,94453,train
+a0239,dibrugarh mein kitni baarish hone ki ummeed hai,Weather,hinglish,94453,train
+a0239,डिब्रूगढ़ जिले में कितनी बारिश होने की उम्मीद है?,Weather,hi,94453,train
+a0249,How do I register for a Kisan Credit Card?,Government Scheme,en,3155,train
+a0249,kisan credit card ke liye registration kaise hoga,Government Scheme,hinglish,3155,train
+a0249,किसान क्रेडिट कार्ड के लिए पंजीकरण कैसे होगा?,Government Scheme,hi,3155,train
+a0252,How should I get my pond ready before putting fish in?,Fisheries,en,3666,train
+a0252,machhli daalne se pehle talab kaise taiyar karun,Fisheries,hinglish,3666,train
+a0252,मछली डालने से पहले तालाब कैसे तैयार करूं?,Fisheries,hi,3666,train
+a0274,What government schemes are there for farmers like me?,Government Scheme,en,1083,train
+a0274,mere jaise kisano ke liye sarkar ki kaun si yojanayein hain,Government Scheme,hinglish,1083,train
+a0274,मेरे जैसे किसानों के लिए सरकार की कौन सी योजनाएं हैं?,Government Scheme,hi,1083,train
+a0276,"What is the right time to sow pumpkin, and which kind should I pick?",Cultural Practices,en,30700,train
+a0276,kaddu ki buwai kab karni chahiye aur kaunsi kism achi hai,Cultural Practices,hinglish,30700,train
+a0276,कद्दू की बुवाई कब करनी चाहिए और कौन सी किस्म अच्छी है?,Cultural Practices,hi,30700,train
+a0279,How can I store onions for a long time without them rotting?,Other,en,35022,train
+a0279,pyaaz ko bina sade lambe samay tak kaise rakhein,Other,hinglish,35022,train
+a0279,प्याज को बिना सड़े लंबे समय तक कैसे रखें?,Other,hi,35022,train
+a0281,"I want to keep seed potatoes on my farm, how should I store them?",Other,en,19578,train
+a0281,khet par hi beej wale aloo ka bhandaran kaise karun,Other,hinglish,19578,train
+a0281,खेत पर ही बीज वाले आलू का भंडारण कैसे करूं?,Other,hi,19578,train
+a0302,Can I sell my produce directly to the government?,Market Price,en,29437,train
+a0302,kya main apni upaj seedhe sarkar ko bech sakta hoon,Market Price,hinglish,29437,train
+a0302,क्या मैं अपनी उपज सीधे सरकार को बेच सकता हूं?,Market Price,hi,29437,train
+a0331,How do I look after my fish pond properly?,Fisheries,en,650,train
+a0331,machhli ke talab ki dekhbhal kaise karni chahiye,Fisheries,hinglish,650,train
+a0331,मछली के तालाब की देखभाल कैसे करनी चाहिए?,Fisheries,hi,650,train
+a0342,"A foul smelling bug is sucking the grains in my rice, how can I control it?",Plant Protection,en,498,train
+a0342,"dhan mein gandhi bug aa gaya hai, bali ka ras choos raha hai, kaise rokun",Plant Protection,hinglish,498,train
+a0342,"धान में गंधी बग आ गया है, दानों का रस चूस रहा है, कैसे रोकूं?",Plant Protection,hi,498,train
+a0348,Is rain expected in Jorhat this week?,Weather,en,71394,train
+a0348,jorhat mein is hafte baarish hogi kya,Weather,hinglish,71394,train
+a0348,जोरहाट में इस हफ्ते बारिश होगी क्या?,Weather,hi,71394,train
+a0352,Can you give me the address of the marketing officer and the market committee?,Other,en,24155,train
+a0352,marketing officer aur mandi samiti ka pata chahiye,Other,hinglish,24155,train
+a0352,विपणन अधिकारी और मंडी समिति का पता चाहिए,Other,hi,24155,train
+a0364,When should I harvest wheat and how do I store the straw for my cattle?,Other,en,15005,train
+a0364,gehu ki katai kab karein aur bhusa pashuon ke liye kaise rakhein,Other,hinglish,15005,train
+a0364,गेहूं की कटाई कब करें और भूसा पशुओं के लिए कैसे रखें?,Other,hi,15005,train
+a0381,What fertiliser should I put on my potato crop?,Nutrient Management,en,146,train
+a0381,aloo ki fasal mein kaunsi khaad daalni chahiye,Nutrient Management,hinglish,146,train
+a0381,आलू की फसल में कौन सी खाद डालनी चाहिए?,Nutrient Management,hi,146,train
+a0385,"My cow looks weak, how can I improve her health?",Animal Husbandry,en,80983,train
+a0385,"meri gaay kamzor lag rahi hai, uski sehat kaise sudharun",Animal Husbandry,hinglish,80983,train
+a0385,"मेरी गाय कमजोर लग रही है, उसकी सेहत कैसे सुधारूं?",Animal Husbandry,hi,80983,train
+a0396,What is the rain forecast for Nagaon?,Weather,en,60468,train
+a0396,nagaon mein baarish ka kya anuman hai,Weather,hinglish,60468,train
+a0396,नगांव में बारिश का क्या अनुमान है?,Weather,hi,60468,train
+a0400,"The pond water has turned green and my fish have fungus, what do I do?",Fisheries,en,65025,train
+a0400,"talab ka paani hara ho gaya hai aur machhliyon mein fungus ho gaya hai, kya karun",Fisheries,hinglish,65025,train
+a0400,"तालाब का पानी हरा हो गया है और मछलियों में फफूंद लग गई है, क्या करूं?",Fisheries,hi,65025,train
+a0411,Which okra variety gives the best yield?,Varietal Information,en,46485,train
+a0411,bhindi ki sabse zyada paidawar wali kism kaun si hai,Varietal Information,hinglish,46485,train
+a0411,भिंडी की सबसे ज्यादा पैदावार वाली किस्म कौन सी है?,Varietal Information,hi,46485,train
+a0419,How far apart should I plant my chilli seedlings?,Cultural Practices,en,27908,train
+a0419,mirch ke paudhe ek doosre se kitni doori par lagaun,Cultural Practices,hinglish,27908,train
+a0419,मिर्च के पौधे एक दूसरे से कितनी दूरी पर लगाऊं?,Cultural Practices,hi,27908,train
+a0434,Can you tell me the names of some good tomato varieties?,Varietal Information,en,165,train
+a0434,tamatar ki kuch achi kismon ke naam batao,Varietal Information,hinglish,165,train
+a0434,टमाटर की कुछ अच्छी किस्मों के नाम बताइए,Varietal Information,hi,165,train
+a0438,What are the temperature and humidity going to be like tomorrow?,Weather,en,2838,test
+a0438,kal temperature aur nami kitni rahegi,Weather,hinglish,2838,test
+a0438,कल तापमान और नमी कितनी रहेगी?,Weather,hi,2838,test
+a0451,What is the MSP for jute and sesame?,Market Price,en,101793,train
+a0451,jute aur til ka msp kya hai,Market Price,hinglish,101793,train
+a0451,जूट और तिल का एमएसपी क्या है?,Market Price,hi,101793,train
+a0453,What mustard varieties are available for me to grow?,Varietal Information,en,332,train
+a0453,sarson ki kaun kaun si kismein milti hain,Varietal Information,hinglish,332,train
+a0453,सरसों की कौन-कौन सी किस्में मिलती हैं?,Varietal Information,hi,332,train
+a0454,"My animals are suffering in the heat, how do I protect them?",Animal Husbandry,en,136193,train
+a0454,"garmi se mere pashu pareshan hain, unhe kaise bachaun",Animal Husbandry,hinglish,136193,train
+a0454,"गर्मी से मेरे पशु परेशान हैं, उन्हें कैसे बचाऊं?",Animal Husbandry,hi,136193,train
+a0467,How much rain has fallen in Matia block?,Weather,en,8928,train
+a0467,matia block mein kitni baarish hui hai,Weather,hinglish,8928,train
+a0467,मटिया ब्लॉक में कितनी बारिश हुई है?,Weather,hi,8928,train
+a0469,Where can I see the daily price of crops?,Market Price,en,39963,train
+a0469,fasalon ke roz ke bhav kahan dekhne ko milenge,Market Price,hinglish,39963,train
+a0469,फसलों के रोज के भाव कहां देखने को मिलेंगे?,Market Price,hi,39963,train
+a0473,What will the rain be like over the next few days?,Weather,en,6902,train
+a0473,agle kuch dino mein baarish ka kya pattern rahega,Weather,hinglish,6902,train
+a0473,अगले कुछ दिनों में बारिश का क्या पैटर्न रहेगा?,Weather,hi,6902,train
+a0484,Where can I get earthworms to make vermicompost?,Nutrient Management,en,66353,train
+a0484,vermicompost banane ke liye kechue kahan se milenge,Nutrient Management,hinglish,66353,train
+a0484,वर्मीकम्पोस्ट बनाने के लिए केंचुए कहां से मिलेंगे?,Nutrient Management,hi,66353,train
+a0500,Will there be rain in the next five days?,Weather,en,135706,train
+a0500,agle paanch din mein baarish padegi kya,Weather,hinglish,135706,train
+a0500,अगले पांच दिनों में बारिश पड़ेगी क्या?,Weather,hi,135706,train
+a0505,Where can I get trained in mushroom production?,Other,en,1387,train
+a0505,mushroom ugane ki training kahan milti hai,Other,hinglish,1387,train
+a0505,मशरूम उगाने का प्रशिक्षण कहां मिलता है?,Other,hi,1387,train
+a0534,Which varieties of vegetables should I grow?,Varietal Information,en,30775,train
+a0534,kaun kaun si sabziyon ki kismein lagani chahiye,Varietal Information,hinglish,30775,train
+a0534,कौन-कौन सी सब्जियों की किस्में लगानी चाहिए?,Varietal Information,hi,30775,train
+a0553,"My cow got treated for mastitis but it keeps coming back, why?",Animal Husbandry,en,100464,train
+a0553,gaay ka thanela ka ilaaj karaya par bimari baar baar aa jati hai,Animal Husbandry,hinglish,100464,train
+a0553,गाय का थनैला का इलाज कराया पर बीमारी बार-बार आ जाती है,Animal Husbandry,hi,100464,train
+a0581,"My broccoli is showing a fungal infection, what can I spray?",Plant Protection,en,106322,train
+a0581,"broccoli mein fafund ki bimari aa gayi hai, kya chhidkun",Plant Protection,hinglish,106322,train
+a0581,"ब्रोकली में फफूंद की बीमारी आ गई है, क्या छिड़कूं?",Plant Protection,hi,106322,train
+a0589,"Caterpillars are eating the leaves of my black gram, what should I do?",Plant Protection,en,125068,train
+a0589,"urad ke patte illi kha rahi hai, kya karun",Plant Protection,hinglish,125068,train
+a0589,"उड़द के पत्तों को इल्ली खा रही है, क्या करूं?",Plant Protection,hi,125068,train
+a0590,"Many of my fish died soon after I stocked the pond, why?",Fisheries,en,88753,train
+a0590,"talab mein machhli daalte hi bahut si mar gayi, kya wajah hai",Fisheries,hinglish,88753,train
+a0590,"तालाब में मछली डालते ही बहुत सी मर गईं, क्या वजह है?",Fisheries,hi,88753,train
+a0602,How can I sell my paddy to FCI?,Market Price,en,66214,train
+a0602,fci ko dhan kaise bechun,Market Price,hinglish,66214,train
+a0602,एफसीआई को धान कैसे बेचूं?,Market Price,hi,66214,train
+a0614,Where can I buy black rice seed?,Varietal Information,en,62948,train
+a0614,kala chawal ka beej kahan se milega,Varietal Information,hinglish,62948,train
+a0614,काले चावल का बीज कहां से मिलेगा?,Varietal Information,hi,62948,train
+a0619,"I haven't received my sixth PM-Kisan instalment, what should I do?",Government Scheme,en,4978,train
+a0619,"meri pm kisan ki chhathi kist nahi aayi, kya karun",Government Scheme,hinglish,4978,train
+a0619,"मेरी पीएम किसान की छठी किस्त नहीं आई, क्या करूं?",Government Scheme,hi,4978,train
+a0623,Tell me about the PM Maan Dhan pension scheme for farmers.,Government Scheme,en,2888,train
+a0623,pm maan dhan yojana ke baare mein batao,Government Scheme,hinglish,2888,train
+a0623,पीएम मानधन योजना के बारे में बताइए,Government Scheme,hi,2888,train
+a0628,Is there any horticulture training I can attend?,Other,en,14859,test
+a0628,bagwani ki koi training hoti hai kya,Other,hinglish,14859,test
+a0628,बागवानी का कोई प्रशिक्षण होता है क्या?,Other,hi,14859,test
+a0634,Where can I learn flower farming?,Other,en,17137,train
+a0634,phoolon ki kheti seekhne ki training kahan hai,Other,hinglish,17137,train
+a0634,फूलों की खेती सीखने का प्रशिक्षण कहां है?,Other,hi,17137,train
+a0636,What nutrition do fish need to grow well?,Fisheries,en,10755,train
+a0636,machhli ko badhne ke liye kya poshan chahiye,Fisheries,hinglish,10755,train
+a0636,मछलियों को बढ़ने के लिए क्या पोषण चाहिए?,Fisheries,hi,10755,train
+a0640,Where can I sell ornamental fish in Guwahati?,Market Price,en,128704,train
+a0640,guwahati mein sajawati machhli kahan bechun,Market Price,hinglish,128704,train
+a0640,गुवाहाटी में सजावटी मछलियां कहां बेचूं?,Market Price,hi,128704,train
+a0654,Is there any government scheme for silk farming?,Government Scheme,en,88935,train
+a0654,resham palan ke liye sarkar ki koi yojana hai kya,Government Scheme,hinglish,88935,train
+a0654,रेशम पालन के लिए सरकार की कोई योजना है क्या?,Government Scheme,hi,88935,train
+a0655,Please explain the RKVY scheme for shallow tubewells.,Government Scheme,en,100178,train
+a0655,rkvy yojana mein tubewell ke liye kya milta hai,Government Scheme,hinglish,100178,train
+a0655,आरकेवीवाई योजना में नलकूप के लिए क्या मिलता है?,Government Scheme,hi,100178,train
+a0659,"My rice leaves are drying from the edges, I think it's bacterial blight, how do I control it?",Plant Protection,en,4734,train
+a0659,"dhan ke patte kinaron se sookh rahe hain, jeevanu jhulsa lagta hai, kaise rokun",Plant Protection,hinglish,4734,train
+a0659,"धान के पत्ते किनारों से सूख रहे हैं, जीवाणु झुलसा लगता है, कैसे रोकूं?",Plant Protection,hi,4734,train
+a0664,How much urea and DAP does potato need?,Nutrient Management,en,146,train
+a0664,aloo mein kitna urea aur dap lagta hai,Nutrient Management,hinglish,146,train
+a0664,आलू में कितना यूरिया और डीएपी लगता है?,Nutrient Management,hi,146,train
+a0677,Can I use a growth regulator on my tea garden?,Cultural Practices,en,67195,test
+a0677,chai ke bagan mein growth regulator use kar sakte hain kya,Cultural Practices,hinglish,67195,test
+a0677,चाय के बागान में ग्रोथ रेगुलेटर इस्तेमाल कर सकते हैं क्या?,Cultural Practices,hi,67195,test
+a0727,Where is the nearest market where I can sell my vegetables?,Market Price,en,51761,train
+a0727,sabzi bechne ke liye sabse paas ki mandi kahan hai,Market Price,hinglish,51761,train
+a0727,सब्जी बेचने के लिए सबसे पास की मंडी कहां है?,Market Price,hi,51761,train
+a0732,I want to see whether I am a beneficiary under PM-Kisan.,Government Scheme,en,14969,train
+a0732,dekhna hai ki pm kisan mein mera naam hai ya nahi,Government Scheme,hinglish,14969,train
+a0732,देखना है कि पीएम किसान में मेरा नाम है या नहीं,Government Scheme,hi,14969,train
+a0736,"My hens peck each other and eat their eggs, how do I stop it?",Animal Husbandry,en,56224,test
+a0736,"murgiyan ek doosre ko thonthti hain aur ande kha jati hain, kaise rokun",Animal Husbandry,hinglish,56224,test
+a0736,"मुर्गियां एक दूसरे को चोंच मारती हैं और अंडे खा जाती हैं, कैसे रोकूं?",Animal Husbandry,hi,56224,test
+a0739,Where can I get good quality fish fingerlings near Lakhimpur?,Fisheries,en,85102,train
+a0739,lakhimpur ke paas achhe machhli ke bachche kahan milenge,Fisheries,hinglish,85102,train
+a0739,लखीमपुर के पास अच्छे मछली के बीज कहां मिलेंगे?,Fisheries,hi,85102,train
+a0742,How does the Kisan Maandhan pension scheme work?,Government Scheme,en,64714,train
+a0742,kisan maandhan pension yojana kaise kaam karti hai,Government Scheme,hinglish,64714,train
+a0742,किसान मानधन पेंशन योजना कैसे काम करती है?,Government Scheme,hi,64714,train
+a0748,How hot will it get this week in Sivasagar?,Weather,en,79213,train
+a0748,sivasagar mein is hafte kitni garmi padegi,Weather,hinglish,79213,train
+a0748,शिवसागर में इस हफ्ते कितनी गर्मी पड़ेगी?,Weather,hi,79213,train
+a0758,Tell me how to join the PM Maan Dhan yojana.,Government Scheme,en,2913,train
+a0758,pm maan dhan yojana mein kaise judun,Government Scheme,hinglish,2913,train
+a0758,पीएम मानधन योजना से कैसे जुड़ूं?,Government Scheme,hi,2913,train
+a0760,How much fertiliser should I give my areca nut palms?,Nutrient Management,en,2358,train
+a0760,supari ke ped ko kitni khaad dena sahi rahega,Nutrient Management,hinglish,2358,train
+a0760,सुपारी के पेड़ को कितनी खाद देना सही रहेगा?,Nutrient Management,hi,2358,train
+a0762,Where can I buy ducklings and what do they cost?,Market Price,en,16729,train
+a0762,batakh ke bachche kahan se milenge aur kya daam hai,Market Price,hinglish,16729,train
+a0762,बत्तख के बच्चे कहां से मिलेंगे और क्या दाम है?,Market Price,hi,16729,train
+a0791,When and how should I prune my citrus trees?,Cultural Practices,en,37694,train
+a0791,nimbu ke ped ki kat-chhant kab aur kaise karni chahiye,Cultural Practices,hinglish,37694,train
+a0791,नींबू के पेड़ की कटाई-छंटाई कब और कैसे करनी चाहिए?,Cultural Practices,hi,37694,train
+a0792,Where can I take training on magur fish farming?,Other,en,84824,train
+a0792,magur machhli palan ki training kahan se lun,Other,hinglish,84824,train
+a0792,मांगुर मछली पालन का प्रशिक्षण कहां से लूं?,Other,hi,84824,train
+a0817,What spacing should I keep between brinjal plants?,Cultural Practices,en,25144,train
+a0817,baingan ke paudhon ke beech kitni doori rakhni chahiye,Cultural Practices,hinglish,25144,train
+a0817,बैंगन के पौधों के बीच कितनी दूरी रखनी चाहिए?,Cultural Practices,hi,25144,train
+a0821,How much lime should I put in my fish pond?,Fisheries,en,47290,train
+a0821,machhli ke talab mein kitna chuna daalna chahiye,Fisheries,hinglish,47290,train
+a0821,मछली के तालाब में कितना चूना डालना चाहिए?,Fisheries,hi,47290,train
+a0843,"A bug is damaging the young shoots of my tea, how do I control it?",Plant Protection,en,22142,train
+a0843,"chai ki naye patton par keede lag gaye hain, helopeltis ka ilaaj batao",Plant Protection,hinglish,22142,train
+a0843,"चाय की नई पत्तियों पर कीड़े लग गए हैं, हेलोपेल्टिस का इलाज बताइए",Plant Protection,hi,22142,train
+a0852,How much DAP should I apply?,Nutrient Management,en,79956,test
+a0852,dap kitna daalna chahiye,Nutrient Management,hinglish,79956,test
+a0852,डीएपी कितना डालना चाहिए?,Nutrient Management,hi,79956,test
+a0857,"My cabbage seedlings in the nursery are wilting and dying, what is the cure?",Plant Protection,en,30596,train
+a0857,"gobhi ki nursery ke paudhe murjha kar mar rahe hain, kya upay hai",Plant Protection,hinglish,30596,train
+a0857,"पत्तागोभी की नर्सरी के पौधे मुरझाकर मर रहे हैं, क्या उपाय है?",Plant Protection,hi,30596,train
+a0865,"Insects are attacking my ridge gourd, how can I protect the crop?",Plant Protection,en,1338,test
+a0865,"turai ki fasal mein keede lag gaye hain, kaise bachaun",Plant Protection,hinglish,1338,test
+a0865,"तोरई की फसल में कीड़े लग गए हैं, कैसे बचाऊं?",Plant Protection,hi,1338,test
+a0874,Which sesame variety would you recommend?,Varietal Information,en,105638,train
+a0874,til ki kaunsi kism achi rahegi,Varietal Information,hinglish,105638,train
+a0874,तिल की कौन सी किस्म अच्छी रहेगी?,Varietal Information,hi,105638,train
+a0882,What are the improved tomato seeds I can buy?,Varietal Information,en,63301,train
+a0882,tamatar ke sudhre hue beej kaun se milte hain,Varietal Information,hinglish,63301,train
+a0882,टमाटर के उन्नत बीज कौन से मिलते हैं?,Varietal Information,hi,63301,train
+a0897,How many days does this hybrid rice take to mature?,Varietal Information,en,23907,train
+a0897,ye hybrid dhan kitne din mein pakta hai,Varietal Information,hinglish,23907,train
+a0897,यह हाइब्रिड धान कितने दिन में पकता है?,Varietal Information,hi,23907,train
+a0925,Which paddy variety is suitable for my field?,Varietal Information,en,27277,train
+a0925,meri zameen ke liye dhan ki kaun si kism theek hai,Varietal Information,hinglish,27277,train
+a0925,मेरी जमीन के लिए धान की कौन सी किस्म ठीक है?,Varietal Information,hi,27277,train
+a0945,"Dark spots are spreading on my tomato leaves and fruit, how do I control the blight?",Plant Protection,en,651,train
+a0945,"tamatar ke patton aur phalon par kale dhabbe fail rahe hain, jhulsa kaise rokun",Plant Protection,hinglish,651,train
+a0945,"टमाटर के पत्तों और फलों पर काले धब्बे फैल रहे हैं, झुलसा कैसे रोकूं?",Plant Protection,hi,651,train
+a0962,What kind of rain can we expect in Sivasagar this week?,Weather,en,79523,train
+a0962,sivasagar mein is hafte kaisi baarish hogi,Weather,hinglish,79523,train
+a0962,शिवसागर में इस हफ्ते कैसी बारिश होगी?,Weather,hi,79523,train
+a0971,What can I do to protect my potatoes from late blight?,Plant Protection,en,56,train
+a0971,aloo ko pachheta jhulsa se kaise bachaun,Plant Protection,hinglish,56,train
+a0971,आलू को पछेती झुलसा से कैसे बचाऊं?,Plant Protection,hi,56,train
+a0983,What kind of grass should I grow to feed my goats?,Animal Husbandry,en,52844,train
+a0983,bakriyon ko khilane ke liye kaun si ghaas ugaun,Animal Husbandry,hinglish,52844,train
+a0983,बकरियों को खिलाने के लिए कौन सी घास उगाऊं?,Animal Husbandry,hi,52844,train
+a0988,How many fish fingerlings should I put in a small pond of one katha?,Fisheries,en,103859,test
+a0988,ek katha ke talab mein machhli ke kitne bachche daalun,Fisheries,hinglish,103859,test
+a0988,एक कट्ठा के तालाब में मछली के कितने बच्चे डालूं?,Fisheries,hi,103859,test
+a0989,Is there a late-season cauliflower variety I can grow?,Varietal Information,en,87061,train
+a0989,kya phoolgobhi ki koi der se hone wali kism hai,Varietal Information,hinglish,87061,train
+a0989,क्या फूलगोभी की कोई देर से होने वाली किस्म है?,Varietal Information,hi,87061,train
+a0994,Is it going to rain soon?,Weather,en,1277,train
+a0994,baarish jaldi hone wali hai kya,Weather,hinglish,1277,train
+a0994,बारिश जल्दी होने वाली है क्या?,Weather,hi,1277,train
+a0995,Can you suggest a few mustard variety names?,Varietal Information,en,332,train
+a0995,sarson ki kuch kismon ke naam suggest karo,Varietal Information,hinglish,332,train
+a0995,सरसों की कुछ किस्मों के नाम सुझाइए,Varietal Information,hi,332,train
+a1002,"Insects are spoiling the grain in my godown, how do I get rid of them?",Plant Protection,en,22424,train
+a1002,"godam mein anaj mein keede lag gaye hain, unhe kaise hataun",Plant Protection,hinglish,22424,train
+a1002,"गोदाम में अनाज में कीड़े लग गए हैं, उन्हें कैसे हटाऊं?",Plant Protection,hi,22424,train
+a1003,"My ducks have loose motions, what supplement and vaccine should I give?",Animal Husbandry,en,82682,train
+a1003,"meri batakhon ko dast lage hain, kaun si dawai aur teeka lagwaun",Animal Husbandry,hinglish,82682,train
+a1003,"मेरी बत्तखों को दस्त लगे हैं, कौन सी दवा और टीका लगवाऊं?",Animal Husbandry,hi,82682,train
+a1004,Where can I learn to repair and maintain farm machines?,Other,en,44815,train
+a1004,kheti ki machine ki marammat sikhne ki training kahan milegi,Other,hinglish,44815,train
+a1004,खेती की मशीनों की मरम्मत सीखने का प्रशिक्षण कहां मिलेगा?,Other,hi,44815,train
+a1009,What should I check in my pond water to keep fish healthy?,Fisheries,en,67169,train
+a1009,machhli ke liye talab ke paani mein kya kya dekhna chahiye,Fisheries,hinglish,67169,train
+a1009,मछली के लिए तालाब के पानी में क्या-क्या देखना चाहिए?,Fisheries,hi,67169,train
+a1022,Which boro rice varieties would you recommend for my area?,Varietal Information,en,5556,train
+a1022,mere ilake ke liye boro dhan ki kaun si kismein theek rahengi,Varietal Information,hinglish,5556,train
+a1022,मेरे इलाके के लिए बोरो धान की कौन सी किस्में ठीक रहेंगी?,Varietal Information,hi,5556,train
+a1063,How do I prepare a nursery bed for raising paddy seedlings?,Cultural Practices,en,75803,train
+a1063,dhan ki paudh ke liye nursery ki kyari kaise banaun,Cultural Practices,hinglish,75803,train
+a1063,धान की पौध के लिए नर्सरी की क्यारी कैसे बनाऊं?,Cultural Practices,hi,75803,train
+a1065,Is there any booster I can spray on my mustard to get a better yield?,Nutrient Management,en,40944,train
+a1065,sarson ki zyada paidawar ke liye kaun sa booster chhidak sakta hoon,Nutrient Management,hinglish,40944,train
+a1065,सरसों की ज्यादा पैदावार के लिए कौन सा बूस्टर छिड़क सकता हूं?,Nutrient Management,hi,40944,train
+a1084,How should I manage water in my fields?,Cultural Practices,en,34130,train
+a1084,khet mein paani ka intezaam kaise karun,Cultural Practices,hinglish,34130,train
+a1084,खेत में पानी का प्रबंधन कैसे करूं?,Cultural Practices,hi,34130,train
+a1093,What's the rain outlook for the next few days?,Weather,en,78387,train
+a1093,agle kuch dino ke liye baarish ka kya anuman hai,Weather,hinglish,78387,train
+a1093,अगले कुछ दिनों के लिए बारिश का क्या अनुमान है?,Weather,hi,78387,train
+a1097,"The fish are gasping at the surface, how can I get more oxygen into the pond?",Fisheries,en,25456,train
+a1097,"machhliyan paani ki sateh par haanf rahi hain, talab mein oxygen kaise badhaun",Fisheries,hinglish,25456,train
+a1097,"मछलियां पानी की सतह पर हांफ रही हैं, तालाब में ऑक्सीजन कैसे बढ़ाऊं?",Fisheries,hi,25456,train
+a1104,What nutrients does my rice crop need and when?,Nutrient Management,en,2287,train
+a1104,dhan ki fasal ko kaun se poshak tatv kab chahiye,Nutrient Management,hinglish,2287,train
+a1104,धान की फसल को कौन से पोषक तत्व कब चाहिए?,Nutrient Management,hi,2287,train
+a1106,Where can I market ornamental fish that I breed?,Market Price,en,16857,test
+a1106,main jo sajawati machhli paalta hoon use kahan bechun,Market Price,hinglish,16857,test
+a1106,मैं जो सजावटी मछली पालता हूं उसे कहां बेचूं?,Market Price,hi,16857,test
+a1113,Where can I get training in bee keeping?,Other,en,5273,train
+a1113,madhumakkhi palan ki training kahan milegi,Other,hinglish,5273,train
+a1113,मधुमक्खी पालन का प्रशिक्षण कहां मिलेगा?,Other,hi,5273,train
+a1141,How do I build a greenhouse and is there any subsidy for it?,Government Scheme,en,122183,train
+a1141,greenhouse kaise banate hain aur kya is par subsidy milti hai,Government Scheme,hinglish,122183,train
+a1141,ग्रीनहाउस कैसे बनाते हैं और क्या इस पर सब्सिडी मिलती है?,Government Scheme,hi,122183,train
+a1145,Is there any loan available for farmers?,Government Scheme,en,3596,train
+a1145,kya kisano ke liye koi loan milta hai,Government Scheme,hinglish,3596,train
+a1145,क्या किसानों के लिए कोई ऋण मिलता है?,Government Scheme,hi,3596,train
+a1186,"My chilli plants are wilting, how do I save them?",Plant Protection,en,13615,train
+a1186,"meri mirch ke paudhe murjha rahe hain, unhe kaise bachaun",Plant Protection,hinglish,13615,train
+a1186,"मेरी मिर्च के पौधे मुरझा रहे हैं, उन्हें कैसे बचाऊं?",Plant Protection,hi,13615,train
+a1189,How should I take care of my fish pond in winter?,Fisheries,en,106228,train
+a1189,sardi mein machhli ke talab ki dekhbhal kaise karun,Fisheries,hinglish,106228,train
+a1189,सर्दी में मछली के तालाब की देखभाल कैसे करूं?,Fisheries,hi,106228,train
+a1198,Where can I get trained in growing mushrooms?,Other,en,1387,train
+a1198,mushroom ugane ki training kahan se loon,Other,hinglish,1387,train
+a1198,मशरूम उगाने की ट्रेनिंग कहां से लूं?,Other,hi,1387,train
+a1202,What were the vegetable prices in the markets yesterday?,Market Price,en,9309,train
+a1202,kal alag alag mandiyon mein sabziyon ke kya bhav the,Market Price,hinglish,9309,train
+a1202,कल अलग-अलग मंडियों में सब्जियों के क्या भाव थे?,Market Price,hi,9309,train
+a1204,How do I manage my nursery properly?,Cultural Practices,en,29195,train
+a1204,apni nursery ka sahi se prabandhan kaise karun,Cultural Practices,hinglish,29195,train
+a1204,अपनी नर्सरी का सही से प्रबंधन कैसे करूं?,Cultural Practices,hi,29195,train
+a1211,"My cabbage leaves look discoloured, is it a nutrient deficiency?",Nutrient Management,en,74223,train
+a1211,"gobhi ke patte rang badal rahe hain, kya poshan ki kami hai",Nutrient Management,hinglish,74223,train
+a1211,"पत्तागोभी के पत्ते रंग बदल रहे हैं, क्या पोषण की कमी है?",Nutrient Management,hi,74223,train
+a1218,How much manure and fertiliser should I give per bigha for cauliflower?,Nutrient Management,en,3494,train
+a1218,phoolgobhi mein ek bigha ke liye kitni khaad aur urvarak dena hai,Nutrient Management,hinglish,3494,train
+a1218,फूलगोभी में एक बीघा के लिए कितनी खाद और उर्वरक देना है?,Nutrient Management,hi,3494,train
+a1220,What fertiliser dose is right for my mustard?,Nutrient Management,en,5279,train
+a1220,meri sarson ke liye khaad ki kitni matra sahi hai,Nutrient Management,hinglish,5279,train
+a1220,मेरी सरसों के लिए खाद की कितनी मात्रा सही है?,Nutrient Management,hi,5279,train
+a1238,"My rice seedlings are turning red, how do I fix it?",Nutrient Management,en,96731,train
+a1238,"dhan ki paudh laal ho rahi hai, iska ilaaj kya hai",Nutrient Management,hinglish,96731,train
+a1238,"धान की पौध लाल हो रही है, इसका इलाज क्या है?",Nutrient Management,hi,96731,train
+a1243,"A virus seems to have hit my brinjal plants, what can I do?",Plant Protection,en,20317,train
+a1243,"lagta hai baingan ke paudhon mein virus lag gaya hai, kya karun",Plant Protection,hinglish,20317,train
+a1243,"लगता है बैंगन के पौधों में वायरस लग गया है, क्या करूं?",Plant Protection,hi,20317,train
+a1254,What distance should I leave between tomato plants?,Cultural Practices,en,84208,test
+a1254,tamatar ke paudhon ke beech kitni doori chhodni chahiye,Cultural Practices,hinglish,84208,test
+a1254,टमाटर के पौधों के बीच कितनी दूरी छोड़नी चाहिए?,Cultural Practices,hi,84208,test
+a1265,Can I raise fish in a field inside my tea garden?,Fisheries,en,98994,train
+a1265,kya main chai ke bagan ke khet mein machhli pal sakta hoon,Fisheries,hinglish,98994,train
+a1265,क्या मैं चाय के बागान के खेत में मछली पाल सकता हूं?,Fisheries,hi,98994,train
+a1289,Where do I get mushroom spawn?,Varietal Information,en,5164,train
+a1289,mushroom ka beej kahan se milega,Varietal Information,hinglish,5164,train
+a1289,मशरूम का बीज कहां से मिलेगा?,Varietal Information,hi,5164,train
+a1294,How can I get a Kisan Credit Card?,Government Scheme,en,39,train
+a1294,kisan credit card kaise milta hai,Government Scheme,hinglish,39,train
+a1294,किसान क्रेडिट कार्ड कैसे मिलता है?,Government Scheme,hi,39,train
+a1295,Is there any scheme for fish farmers?,Government Scheme,en,972,test
+a1295,machhli palne walon ke liye koi yojana hai kya,Government Scheme,hinglish,972,test
+a1295,मछली पालने वालों के लिए कोई योजना है क्या?,Government Scheme,hi,972,test
+a1304,Where can I take training on fish breeding?,Other,en,128679,train
+a1304,machhli ke prajanan ki training kahan se lun,Other,hinglish,128679,train
+a1304,मछली प्रजनन की ट्रेनिंग कहां से लूं?,Other,hi,128679,train
+a1308,What is the procedure to get a loan on a Kisan Credit Card?,Government Scheme,en,39,train
+a1308,kisan credit card par loan lene ki prakriya kya hai,Government Scheme,hinglish,39,train
+a1308,किसान क्रेडिट कार्ड पर ऋण लेने की प्रक्रिया क्या है?,Government Scheme,hi,39,train
+a1322,"My plants are wilting from the roots up, could it be fusarium wilt, how do I control it?",Plant Protection,en,6944,test
+a1322,"paudhe jad se sookh rahe hain, fusarium wilt ho sakta hai, kaise rokun",Plant Protection,hinglish,6944,test
+a1322,"पौधे जड़ से सूख रहे हैं, फ्यूजेरियम विल्ट हो सकता है, कैसे रोकूं?",Plant Protection,hi,6944,test
+a1331,How much urea should I top-dress my paddy with and when?,Nutrient Management,en,45179,test
+a1331,dhan mein urea ki upari khuraak kab aur kitni deni hai,Nutrient Management,hinglish,45179,test
+a1331,धान में यूरिया की ऊपरी खुराक कब और कितनी देनी है?,Nutrient Management,hi,45179,test
+a1334,"My cow's eye is watering all the time, what is wrong?",Animal Husbandry,en,37415,train
+a1334,"meri gaay ki aankh se lagataar paani beh raha hai, kya hua hai",Animal Husbandry,hinglish,37415,train
+a1334,"मेरी गाय की आंख से लगातार पानी बह रहा है, क्या हुआ है?",Animal Husbandry,hi,37415,train
+a1340,"My goat has had diarrhoea since morning, what should I give her?",Animal Husbandry,en,15227,train
+a1340,"meri bakri ko subah se dast ho rahe hain, kya dun",Animal Husbandry,hinglish,15227,train
+a1340,"मेरी बकरी को सुबह से दस्त हो रहे हैं, क्या दूं?",Animal Husbandry,hi,15227,train
+a1358,Where can I buy French bean seed?,Varietal Information,en,2955,train
+a1358,french bean ka beej kahan se kharidun,Varietal Information,hinglish,2955,train
+a1358,फ्रेंच बीन का बीज कहां से खरीदूं?,Varietal Information,hi,2955,train
+a1362,How should I prepare a new pond for fish?,Fisheries,en,10415,train
+a1362,machhli ke liye naya talab kaise taiyar karun,Fisheries,hinglish,10415,train
+a1362,मछली के लिए नया तालाब कैसे तैयार करूं?,Fisheries,hi,10415,train
+a1363,Are there any farmer training and exposure visits I can join?,Other,en,4463,train
+a1363,kya koi kisan training ya bhraman karyakram hai jisme main shamil ho sakun,Other,hinglish,4463,train
+a1363,क्या कोई किसान प्रशिक्षण या भ्रमण कार्यक्रम है जिसमें मैं शामिल हो सकूं?,Other,hi,4463,train
+a1407,"There are gas bubbles and a bad smell in my nursery pond, what should I do?",Fisheries,en,4588,train
+a1407,"nursery wale talab mein bulbule aur badboo aa rahi hai, kya karun",Fisheries,hinglish,4588,train
+a1407,"नर्सरी वाले तालाब में बुलबुले और बदबू आ रही है, क्या करूं?",Fisheries,hi,4588,train
+a1414,Is it going to rain today in Barpeta?,Weather,en,34945,train
+a1414,aaj barpeta mein baarish hogi kya,Weather,hinglish,34945,train
+a1414,आज बारपेटा में बारिश होगी क्या?,Weather,hi,34945,train
+a1427,"Termites are eating my crop, how do I control them?",Plant Protection,en,5933,train
+a1427,"deemak meri fasal kha rahi hai, inhe kaise rokun",Plant Protection,hinglish,5933,train
+a1427,"दीमक मेरी फसल खा रही है, इन्हें कैसे रोकूं?",Plant Protection,hi,5933,train
+a1428,"My cow has just calved, how can I get her to give more milk?",Animal Husbandry,en,77549,train
+a1428,"meri gaay ne abhi bachhda diya hai, zyada doodh kaise lun",Animal Husbandry,hinglish,77549,train
+a1428,"मेरी गाय ने अभी बछड़ा दिया है, ज्यादा दूध कैसे लूं?",Animal Husbandry,hi,77549,train
+a1429,Is there a scheme to get a tractor or power tiller at a lower cost?,Government Scheme,en,126557,train
+a1429,kya tractor ya power tiller sasta dilane ki koi yojana hai,Government Scheme,hinglish,126557,train
+a1429,क्या ट्रैक्टर या पावर टिलर सस्ता दिलाने की कोई योजना है?,Government Scheme,hi,126557,train
+a1433,Which weedicide should I use in my field?,Plant Protection,en,482,train
+a1433,mere khet mein kaun si weedicide use karun,Plant Protection,hinglish,482,train
+a1433,मेरे खेत में कौन सी खरपतवारनाशी दवा इस्तेमाल करूं?,Plant Protection,hi,482,train
+a1453,Does the government give training on biofloc fish farming?,Other,en,8795,train
+a1453,kya sarkar biofloc machhli palan ki training deti hai,Other,hinglish,8795,train
+a1453,क्या सरकार बायोफ्लॉक मछली पालन की ट्रेनिंग देती है?,Other,hi,8795,train
+a1458,Which paddy varieties can stand waterlogging?,Varietal Information,en,98180,train
+a1458,dhan ki kaun si kismein pani bharne par bhi tik jati hain,Varietal Information,hinglish,98180,train
+a1458,धान की कौन सी किस्में पानी भरने पर भी टिक जाती हैं?,Varietal Information,hi,98180,train
+a1467,How much fertiliser do I need for one bigha of unirrigated land?,Nutrient Management,en,1566,train
+a1467,bina sinchai wali ek bigha zameen mein kitni khaad lagegi,Nutrient Management,hinglish,1566,train
+a1467,बिना सिंचाई वाली एक बीघा जमीन में कितनी खाद लगेगी?,Nutrient Management,hi,1566,train
+a1471,What is the USSD service for farmers and how do I use it?,Other,en,138335,test
+a1471,kisano ke liye ussd service kya hai aur kaise use karun,Other,hinglish,138335,test
+a1471,किसानों के लिए यूएसएसडी सेवा क्या है और कैसे इस्तेमाल करूं?,Other,hi,138335,test
+a1474,Can you give me the phone number of the Krishi Vigyan Kendra at Bilasipara?,Other,en,10709,train
+a1474,bilasipara krishi vigyan kendra ka phone number chahiye,Other,hinglish,10709,train
+a1474,बिलासीपारा कृषि विज्ञान केंद्र का फोन नंबर चाहिए,Other,hi,10709,train
+a1478,How should I grow mustard from start to harvest?,Cultural Practices,en,6512,train
+a1478,sarson ki kheti shuru se katai tak kaise karun,Cultural Practices,hinglish,6512,train
+a1478,सरसों की खेती शुरू से कटाई तक कैसे करूं?,Cultural Practices,hi,6512,train
+a1486,Which website do I use to fill the PM-Kisan form online?,Government Scheme,en,29322,train
+a1486,pm kisan ka form online bharne ki website kaun si hai,Government Scheme,hinglish,29322,train
+a1486,पीएम किसान का फॉर्म ऑनलाइन भरने की वेबसाइट कौन सी है?,Government Scheme,hi,29322,train
+a1497,How much cucumber seed do I need per acre?,Cultural Practices,en,79,train
+a1497,ek acre ke liye kheere ka kitna beej chahiye,Cultural Practices,hinglish,79,train
+a1497,एक एकड़ के लिए खीरे का कितना बीज चाहिए?,Cultural Practices,hi,79,train
+a1513,What are the market rates in Sonitpur district today?,Market Price,en,51430,train
+a1513,aaj sonitpur zile mein mandi ke bhav kya hain,Market Price,hinglish,51430,train
+a1513,आज सोनितपुर जिले में मंडी के भाव क्या हैं?,Market Price,hi,51430,train
+a1517,Can I get a loan to buy a tractor?,Government Scheme,en,2226,test
+a1517,kya tractor kharidne ke liye loan mil sakta hai,Government Scheme,hinglish,2226,test
+a1517,क्या ट्रैक्टर खरीदने के लिए ऋण मिल सकता है?,Government Scheme,hi,2226,test
+a1519,Will it rain over the next five days?,Weather,en,101017,train
+a1519,kya agle paanch dinon mein baarish hogi,Weather,hinglish,101017,train
+a1519,क्या अगले पांच दिनों में बारिश होगी?,Weather,hi,101017,train
+a1520,"Stem borer has attacked my paddy, how can I control it?",Plant Protection,en,296,train
+a1520,"dhan mein tana chhedak kida lag gaya hai, kaise rokun",Plant Protection,hinglish,296,train
+a1520,"धान में तना छेदक कीड़ा लग गया है, कैसे रोकूं?",Plant Protection,hi,296,train
+a1522,Where can I get training in pig farming?,Other,en,28195,train
+a1522,suar palan ki training kahan milegi,Other,hinglish,28195,train
+a1522,सूअर पालन की ट्रेनिंग कहां मिलेगी?,Other,hi,28195,train
+a1533,Which marigold variety is best for me?,Varietal Information,en,3467,train
+a1533,mere liye genda ki kaun si kism sabse achi hai,Varietal Information,hinglish,3467,train
+a1533,मेरे लिए गेंदे की कौन सी किस्म सबसे अच्छी है?,Varietal Information,hi,3467,train
+a1534,How much rain did Amguri block get?,Weather,en,83276,train
+a1534,amguri block mein kitni baarish hui,Weather,hinglish,83276,train
+a1534,अमगुड़ी ब्लॉक में कितनी बारिश हुई?,Weather,hi,83276,train
+a1538,Do my ducklings need a calcium supplement?,Animal Husbandry,en,45160,train
+a1538,kya meri batakh ke bachchon ko calcium ki zarurat hai,Animal Husbandry,hinglish,45160,train
+a1538,क्या मेरे बत्तख के बच्चों को कैल्शियम की जरूरत है?,Animal Husbandry,hi,45160,train
+a1540,What is the recommended fertiliser dose for chilli?,Nutrient Management,en,2023,train
+a1540,mirch ke liye khaad ki sahi matra kya hai,Nutrient Management,hinglish,2023,train
+a1540,मिर्च के लिए खाद की सही मात्रा क्या है?,Nutrient Management,hi,2023,train
+a1546,Where can I find out about farm tools and machinery?,Other,en,70380,train
+a1546,kheti ke auzaar aur machine ke baare mein jaankari kahan milegi,Other,hinglish,70380,train
+a1546,खेती के औजार और मशीनों की जानकारी कहां मिलेगी?,Other,hi,70380,train
+a1563,When is the best time to plant banana?,Cultural Practices,en,5617,train
+a1563,kela lagane ka sabse achha samay kya hai,Cultural Practices,hinglish,5617,train
+a1563,केला लगाने का सबसे अच्छा समय क्या है?,Cultural Practices,hi,5617,train
+a1566,"I want to start a broiler poultry farm, what should I know?",Animal Husbandry,en,162,train
+a1566,"main broiler murgi farm shuru karna chahta hoon, kya jaanna zaroori hai",Animal Husbandry,hinglish,162,train
+a1566,"मैं ब्रॉयलर मुर्गी फार्म शुरू करना चाहता हूं, क्या जानना जरूरी है?",Animal Husbandry,hi,162,train
+a1569,"Borers are damaging my French beans, how can I control them?",Plant Protection,en,55282,train
+a1569,"french bean ki fali mein kida lag gaya hai, kaise rokun",Plant Protection,hinglish,55282,train
+a1569,"फ्रेंच बीन की फली में कीड़ा लग गया है, कैसे रोकूं?",Plant Protection,hi,55282,train
+a1577,How much lentil seed should I use?,Cultural Practices,en,26972,train
+a1577,masoor ka kitna beej daalna chahiye,Cultural Practices,hinglish,26972,train
+a1577,मसूर का कितना बीज डालना चाहिए?,Cultural Practices,hi,26972,train
+a1578,How often should I irrigate my crop?,Cultural Practices,en,62563,train
+a1578,meri fasal mein kitni baar sinchai karni chahiye,Cultural Practices,hinglish,62563,train
+a1578,मेरी फसल में कितनी बार सिंचाई करनी चाहिए?,Cultural Practices,hi,62563,train
+a1581,"I need to speak to a veterinary expert, how can I reach one?",Other,en,2839,train
+a1581,"mujhe pashu doctor se baat karni hai, kaise sampark karun",Other,hinglish,2839,train
+a1581,"मुझे पशु चिकित्सक से बात करनी है, कैसे संपर्क करूं?",Other,hi,2839,train
+a1582,How much did it rain in Goalpara on the 29th of July?,Weather,en,7483,train
+a1582,29 july ko goalpara mein kitni baarish hui thi,Weather,hinglish,7483,train
+a1582,29 जुलाई को गोलपारा में कितनी बारिश हुई थी?,Weather,hi,7483,train
+a1586,How often should I water my potato crop?,Cultural Practices,en,14353,train
+a1586,aloo ki fasal ko kitni baar paani dena chahiye,Cultural Practices,hinglish,14353,train
+a1586,आलू की फसल को कितनी बार पानी देना चाहिए?,Cultural Practices,hi,14353,train
+a1591,What will the weather be like until the 20th of April?,Weather,en,37188,train
+a1591,20 april tak mausam kaisa rahega,Weather,hinglish,37188,train
+a1591,20 अप्रैल तक मौसम कैसा रहेगा?,Weather,hi,37188,train
+a1593,How much mustard seed do I need to sow?,Cultural Practices,en,14321,train
+a1593,sarson ka kitna beej boun,Cultural Practices,hinglish,14321,train
+a1593,सरसों का कितना बीज बोऊं?,Cultural Practices,hi,14321,train
+a1597,What does a Jersey cow cost?,Market Price,en,41353,train
+a1597,jersey gaay ka kya daam hai,Market Price,hinglish,41353,train
+a1597,जर्सी गाय का क्या दाम है?,Market Price,hi,41353,train
+a1598,How do I get my goat inseminated artificially?,Animal Husbandry,en,54253,train
+a1598,apni bakri ka kritrim garbhadhan kaise karwaun,Animal Husbandry,hinglish,54253,train
+a1598,अपनी बकरी का कृत्रिम गर्भाधान कैसे करवाऊं?,Animal Husbandry,hi,54253,train
+a1601,What fertiliser should I apply on my betel vine?,Nutrient Management,en,11395,test
+a1601,paan ki bel mein kaunsi khaad daalni chahiye,Nutrient Management,hinglish,11395,test
+a1601,पान की बेल में कौन सी खाद डालनी चाहिए?,Nutrient Management,hi,11395,test
+a1604,What are the basics of looking after a fish pond?,Fisheries,en,650,train
+a1604,machhli ke talab ki dekhbhal ki buniyadi baatein kya hain,Fisheries,hinglish,650,train
+a1604,मछली के तालाब की देखभाल की बुनियादी बातें क्या हैं?,Fisheries,hi,650,train
+a1619,Where can I sell seed?,Market Price,en,31120,test
+a1619,beej kahan bech sakta hoon,Market Price,hinglish,31120,test
+a1619,बीज कहां बेच सकता हूं?,Market Price,hi,31120,test
+a1631,"My litchi flowers are dropping off, how do I stop it?",Plant Protection,en,8645,train
+a1631,"meri leechi ke phool jhad rahe hain, kaise rokun",Plant Protection,hinglish,8645,train
+a1631,"मेरी लीची के फूल झड़ रहे हैं, कैसे रोकूं?",Plant Protection,hi,8645,train
+a1632,Why have I not received my PM-Kisan instalment?,Government Scheme,en,3122,train
+a1632,mujhe pm kisan ki kist kyon nahi mili,Government Scheme,hinglish,3122,train
+a1632,मुझे पीएम किसान की किस्त क्यों नहीं मिली?,Government Scheme,hi,3122,train
+a1634,How do I grow leafy vegetables properly?,Cultural Practices,en,10978,train
+a1634,patte wali sabziyan sahi tareeke se kaise ugaun,Cultural Practices,hinglish,10978,train
+a1634,पत्ते वाली सब्जियां सही तरीके से कैसे उगाऊं?,Cultural Practices,hi,10978,train
+a1650,How much fertiliser does coriander need?,Nutrient Management,en,2022,test
+a1650,dhaniya ko kitni khaad chahiye,Nutrient Management,hinglish,2022,test
+a1650,धनिया को कितनी खाद चाहिए?,Nutrient Management,hi,2022,test
+a1651,What distance should I keep when planting king chilli?,Cultural Practices,en,78557,train
+a1651,bhoot jolokia lagate samay kitni doori rakhni chahiye,Cultural Practices,hinglish,78557,train
+a1651,भूत जोलोकिया लगाते समय कितनी दूरी रखनी चाहिए?,Cultural Practices,hi,78557,train
+a1657,Where is the market and what are they paying today?,Market Price,en,18784,train
+a1657,mandi kahan hai aur aaj kya bhav chal raha hai,Market Price,hinglish,18784,train
+a1657,मंडी कहां है और आज क्या भाव चल रहा है?,Market Price,hi,18784,train
+a1659,What is the price of brinjal in the market?,Market Price,en,6891,train
+a1659,baingan ka mandi mein kya bhav hai,Market Price,hinglish,6891,train
+a1659,बैंगन का मंडी में क्या भाव है?,Market Price,hi,6891,train
+a1667,What are the chances of rain in rural Kamrup?,Weather,en,23786,train
+a1667,kamrup grameen mein baarish hone ki kitni sambhavna hai,Weather,hinglish,23786,train
+a1667,कामरूप ग्रामीण में बारिश होने की कितनी संभावना है?,Weather,hi,23786,train
+a1680,Where can I get training in mushroom cultivation?,Other,en,127350,train
+a1680,mushroom ki kheti ki training kahan milegi,Other,hinglish,127350,train
+a1680,मशरूम की खेती की ट्रेनिंग कहां मिलेगी?,Other,hi,127350,train
+a1696,"How do I raise fish scientifically, and what about ornamental fish?",Fisheries,en,107572,train
+a1696,"machhli palan vaigyanik tareeke se kaise karun, sajawati machhli ka bhi batao",Fisheries,hinglish,107572,train
+a1696,"मछली पालन वैज्ञानिक तरीके से कैसे करूं, सजावटी मछली के बारे में भी बताइए",Fisheries,hi,107572,train
+a1697,How much has it rained in Ghilamara block?,Weather,en,91231,train
+a1697,ghilamara block mein kitni baarish hui hai,Weather,hinglish,91231,train
+a1697,घिलामारा ब्लॉक में कितनी बारिश हुई है?,Weather,hi,91231,train
+a1726,What are the best practices for running a fish pond?,Fisheries,en,650,train
+a1726,machhli ka talab chalane ke achhe tareeke kya hain,Fisheries,hinglish,650,train
+a1726,मछली का तालाब चलाने के अच्छे तरीके क्या हैं?,Fisheries,hi,650,train
+a1736,How heavy will the rain be in Dhemaji over the next five days?,Weather,en,120998,train
+a1736,agle paanch din dhemaji mein baarish kitni tez hogi,Weather,hinglish,120998,train
+a1736,अगले पांच दिन धेमाजी में बारिश कितनी तेज होगी?,Weather,hi,120998,train
+a1747,Where can I get training on honey bee farming?,Other,en,26787,train
+a1747,madhumakkhi palan ki training kahan se milegi,Other,hinglish,26787,train
+a1747,मधुमक्खी पालन की ट्रेनिंग कहां से मिलेगी?,Other,hi,26787,train
+a1758,When should I vaccinate my broiler chickens?,Animal Husbandry,en,17187,train
+a1758,apne broiler murgiyon ko teeka kab lagwana chahiye,Animal Husbandry,hinglish,17187,train
+a1758,अपने ब्रॉयलर मुर्गियों को टीका कब लगवाना चाहिए?,Animal Husbandry,hi,17187,train
+a1761,How much rain did Matia block in Goalpara get this week?,Weather,en,8936,train
+a1761,goalpara ke matia block mein is hafte kitni baarish hui,Weather,hinglish,8936,train
+a1761,गोलपारा के मटिया ब्लॉक में इस हफ्ते कितनी बारिश हुई?,Weather,hi,8936,train
+a1762,Can I take a loan against my Kisan Credit Card?,Government Scheme,en,39,train
+a1762,kya main kisan credit card par loan le sakta hoon,Government Scheme,hinglish,39,train
+a1762,क्या मैं किसान क्रेडिट कार्ड पर कर्ज ले सकता हूं?,Government Scheme,hi,39,train
+a1773,"Should I give vitamins to my fish, and which ones?",Fisheries,en,641,train
+a1773,"kya machhliyon ko vitamin dena chahiye, kaun se",Fisheries,hinglish,641,train
+a1773,"क्या मछलियों को विटामिन देना चाहिए, कौन से?",Fisheries,hi,641,train
+a1787,Can you recommend an improved rice variety?,Varietal Information,en,4678,test
+a1787,dhan ki koi sudhri hui kism batao,Varietal Information,hinglish,4678,test
+a1787,धान की कोई उन्नत किस्म बताइए,Varietal Information,hi,4678,test
+a1789,"Fruit flies are ruining my brinjal, how do I control them?",Plant Protection,en,12591,train
+a1789,"baingan mein fal makkhi lag gayi hai, ise kaise rokun",Plant Protection,hinglish,12591,train
+a1789,"बैंगन में फल मक्खी लग गई है, इसे कैसे रोकूं?",Plant Protection,hi,12591,train
+a1793,What is the Pradhan Mantri Kisan Maan Dhan scheme about?,Government Scheme,en,2914,train
+a1793,pradhan mantri kisan maan dhan yojana kya hai,Government Scheme,hinglish,2914,train
+a1793,प्रधानमंत्री किसान मानधन योजना क्या है?,Government Scheme,hi,2914,train
+a1795,Is it going to rain in my district soon?,Weather,en,24605,train
+a1795,mere zile mein jaldi baarish hone wali hai kya,Weather,hinglish,24605,train
+a1795,मेरे जिले में जल्दी बारिश होने वाली है क्या?,Weather,hi,24605,train
+a1809,What are the market rates today?,Market Price,en,11947,train
+a1809,aaj mandi mein kya bhav chal rahe hain,Market Price,hinglish,11947,train
+a1809,आज मंडी में क्या भाव चल रहे हैं?,Market Price,hi,11947,train
+a1818,Which fertiliser should I use for my chilli plants?,Nutrient Management,en,100364,train
+a1818,meri mirch ke paudhon mein kaun si khaad daalun,Nutrient Management,hinglish,100364,train
+a1818,मेरी मिर्च के पौधों में कौन सी खाद डालूं?,Nutrient Management,hi,100364,train
+a1819,How much basal fertiliser does boro paddy need?,Nutrient Management,en,63607,train
+a1819,boro dhan mein buwai ke samay kitni khaad deni hai,Nutrient Management,hinglish,63607,train
+a1819,बोरो धान में बुवाई के समय कितनी खाद देनी है?,Nutrient Management,hi,63607,train
+a1837,"I have a general question about farming, who can I ask?",Other,en,454,train
+a1837,"kheti ke baare mein kuch poochna hai, kisse poochun",Other,hinglish,454,train
+a1837,"खेती के बारे में कुछ पूछना है, किससे पूछूं?",Other,hi,454,train
+a1839,"My flowers are dropping before fruiting, how do I stop that?",Plant Protection,en,1528,train
+a1839,"mere phool fal banne se pehle hi jhad rahe hain, kaise rokun",Plant Protection,hinglish,1528,train
+a1839,"मेरे फूल फल बनने से पहले ही झड़ रहे हैं, कैसे रोकूं?",Plant Protection,hi,1528,train
+a1868,"It has rained non-stop for three days and my crops are ruined, what now?",Weather,en,36451,train
+a1868,"teen din se lagataar baarish ho rahi hai, fasal kharab ho gayi, ab kya karun",Weather,hinglish,36451,train
+a1868,"तीन दिन से लगातार बारिश हो रही है, फसल खराब हो गई, अब क्या करूं?",Weather,hi,36451,train
+a1873,"My cow has mastitis, what treatment should I give?",Animal Husbandry,en,132,train
+a1873,"meri gaay ko thanela ho gaya hai, kya ilaaj karun",Animal Husbandry,hinglish,132,train
+a1873,"मेरी गाय को थनैला हो गया है, क्या इलाज करूं?",Animal Husbandry,hi,132,train
+a1878,Should I spray vitamins on my crop and how?,Nutrient Management,en,4182,train
+a1878,kya fasal par vitamin chhidakna chahiye aur kaise,Nutrient Management,hinglish,4182,train
+a1878,क्या फसल पर विटामिन छिड़कना चाहिए और कैसे?,Nutrient Management,hi,4182,train
+a1884,"What will tomorrow's weather be like, will it rain?",Weather,en,94598,train
+a1884,"kal mausam kaisa rahega, baarish hogi kya",Weather,hinglish,94598,train
+a1884,"कल मौसम कैसा रहेगा, बारिश होगी क्या?",Weather,hi,94598,train
+a1907,Where can I buy hybrid seeds?,Varietal Information,en,91680,train
+a1907,hybrid beej kahan se kharidun,Varietal Information,hinglish,91680,train
+a1907,हाइब्रिड बीज कहां से खरीदूं?,Varietal Information,hi,91680,train
+a1913,How much fertiliser does potato need?,Nutrient Management,en,146,train
+a1913,aloo ko kitni khaad chahiye hoti hai,Nutrient Management,hinglish,146,train
+a1913,आलू को कितनी खाद चाहिए होती है?,Nutrient Management,hi,146,train
+a1923,How do I grow potatoes the right way?,Cultural Practices,en,1075,train
+a1923,aloo ki kheti sahi tareeke se kaise karein,Cultural Practices,hinglish,1075,train
+a1923,आलू की खेती सही तरीके से कैसे करें?,Cultural Practices,hi,1075,train
+a1925,What spacing and how many arecanut plants fit in one bigha?,Cultural Practices,en,14158,train
+a1925,ek bigha mein supari ke kitne paudhe aur kitni doori par lagaun,Cultural Practices,hinglish,14158,train
+a1925,एक बीघा में सुपारी के कितने पौधे और कितनी दूरी पर लगाऊं?,Cultural Practices,hi,14158,train
+a1937,I keep local chickens and need some advice on looking after them,Animal Husbandry,en,9001,test
+a1937,"mere paas desi murgiyan hain, unki dekhbhal ke baare mein salah chahiye",Animal Husbandry,hinglish,9001,test
+a1937,"मेरे पास देसी मुर्गियां हैं, उनकी देखभाल के बारे में सलाह चाहिए",Animal Husbandry,hi,9001,test
+a1950,"White powder is covering my cucumber leaves, what should I do?",Plant Protection,en,247,train
+a1950,"kheere ke patton par safed powder jam gaya hai, kya karun",Plant Protection,hinglish,247,train
+a1950,"खीरे के पत्तों पर सफेद पाउडर जम गया है, क्या करूं?",Plant Protection,hi,247,train
+a1956,What MSP has the government fixed for paddy?,Market Price,en,51113,train
+a1956,sarkar ne dhan ka msp kitna tay kiya hai,Market Price,hinglish,51113,train
+a1956,सरकार ने धान का एमएसपी कितना तय किया है?,Market Price,hi,51113,train
+a1962,Which flowers can I grow in each season?,Other,en,129065,train
+a1962,har mausam mein kaun se phool ugaye ja sakte hain,Other,hinglish,129065,train
+a1962,हर मौसम में कौन से फूल उगाए जा सकते हैं?,Other,hi,129065,train
+a1965,What nutrients does a rice crop require?,Nutrient Management,en,2287,train
+a1965,dhan ki fasal ko kya kya poshan chahiye,Nutrient Management,hinglish,2287,train
+a1965,धान की फसल को क्या-क्या पोषण चाहिए?,Nutrient Management,hi,2287,train
+a1973,"My cow is not getting pregnant, what could be the problem?",Animal Husbandry,en,7615,train
+a1973,"meri gaay gabhin nahi ho rahi, kya dikkat ho sakti hai",Animal Husbandry,hinglish,7615,train
+a1973,"मेरी गाय गाभिन नहीं हो रही, क्या दिक्कत हो सकती है?",Animal Husbandry,hi,7615,train
+a1977,"Weeds are choking my paddy, how do I manage them?",Plant Protection,en,37136,test
+a1977,"dhan mein kharpatwar bahut ho gaye hain, unka kya karun",Plant Protection,hinglish,37136,test
+a1977,"धान में खरपतवार बहुत हो गए हैं, उनका क्या करूं?",Plant Protection,hi,37136,test
+a1984,Which papaya variety should I plant?,Varietal Information,en,2643,train
+a1984,papite ki kaun si kism lagaun,Varietal Information,hinglish,2643,train
+a1984,पपीते की कौन सी किस्म लगाऊं?,Varietal Information,hi,2643,train
+a1996,I am having trouble applying for a Kisan Credit Card online,Government Scheme,en,14833,train
+a1996,kisan credit card ke liye online apply karne mein dikkat aa rahi hai,Government Scheme,hinglish,14833,train
+a1996,किसान क्रेडिट कार्ड के लिए ऑनलाइन आवेदन करने में दिक्कत आ रही है,Government Scheme,hi,14833,train
+a2001,What basal dose of fertiliser should I give to my sali paddy?,Nutrient Management,en,116768,train
+a2001,sali dhan mein buwai ke samay kitni khaad daalni chahiye,Nutrient Management,hinglish,116768,train
+a2001,साली धान में बुवाई के समय कितनी खाद डालनी चाहिए?,Nutrient Management,hi,116768,train
+a2005,"The leaves of my cabbage are curling, what is causing it?",Plant Protection,en,80854,train
+a2005,"meri gobhi ke patte mud rahe hain, iska kya kaaran hai",Plant Protection,hinglish,80854,train
+a2005,"मेरी गोभी के पत्ते मुड़ रहे हैं, इसका क्या कारण है?",Plant Protection,hi,80854,train
+a2012,What is the recommended fertiliser dose for sali rice?,Nutrient Management,en,33,test
+a2012,sali dhan ke liye khaad ki sahi matra kya hai,Nutrient Management,hinglish,33,test
+a2012,साली धान के लिए खाद की सही मात्रा क्या है?,Nutrient Management,hi,33,test
+a2018,How can I increase fish production in my pond?,Fisheries,en,16483,train
+a2018,apne talab mein machhli ka utpadan kaise badhaun,Fisheries,hinglish,16483,train
+a2018,अपने तालाब में मछली का उत्पादन कैसे बढ़ाऊं?,Fisheries,hi,16483,train
+a2027,At what age should I castrate my male goat kids?,Animal Husbandry,en,31,train
+a2027,nar bakri ke bachchon ko kis umra mein khassi karna chahiye,Animal Husbandry,hinglish,31,train
+a2027,नर बकरी के बच्चों को किस उम्र में बधिया करना चाहिए?,Animal Husbandry,hi,31,train
+a2032,Which drumstick variety gives a good yield?,Varietal Information,en,115179,train
+a2032,sahjan ki kaun si kism achhi paidawar deti hai,Varietal Information,hinglish,115179,train
+a2032,सहजन की कौन सी किस्म अच्छी पैदावार देती है?,Varietal Information,hi,115179,train
+a2037,How should I manage water in my rice field?,Cultural Practices,en,13576,train
+a2037,dhan ke khet mein paani ka prabandh kaise karun,Cultural Practices,hinglish,13576,train
+a2037,धान के खेत में पानी का प्रबंधन कैसे करूं?,Cultural Practices,hi,13576,train
+a2039,What is a good tomato variety to grow?,Varietal Information,en,165,train
+a2039,tamatar ki achhi kism kaun si lagaun,Varietal Information,hinglish,165,train
+a2039,टमाटर की अच्छी किस्म कौन सी लगाऊं?,Varietal Information,hi,165,train
+a2040,What nutrients should I give my coconut palms?,Nutrient Management,en,1967,train
+a2040,nariyal ke pedon ko kaun se poshak tatv dene chahiye,Nutrient Management,hinglish,1967,train
+a2040,नारियल के पेड़ों को कौन से पोषक तत्व देने चाहिए?,Nutrient Management,hi,1967,train
+a2041,Where can I get sunflower seed to sow?,Varietal Information,en,37421,test
+a2041,sunflower ka beej bone ke liye kahan se milega,Varietal Information,hinglish,37421,test
+a2041,सूरजमुखी का बीज बोने के लिए कहां से मिलेगा?,Varietal Information,hi,37421,test
+a2046,Can you give me the weather report for my area?,Weather,en,79313,train
+a2046,mere ilake ka mausam ka haal bata do,Weather,hinglish,79313,train
+a2046,मेरे इलाके का मौसम का हाल बता दीजिए,Weather,hi,79313,train
+a2068,Is there a booster I can spray to get more yield?,Nutrient Management,en,100971,train
+a2068,zyada paidawar ke liye koi booster chhidak sakta hoon kya,Nutrient Management,hinglish,100971,train
+a2068,ज्यादा पैदावार के लिए कोई बूस्टर छिड़क सकता हूं क्या?,Nutrient Management,hi,100971,train
+a2073,What government schemes can I benefit from?,Government Scheme,en,629,train
+a2073,main sarkar ki kis yojana ka laabh le sakta hoon,Government Scheme,hinglish,629,train
+a2073,मैं सरकार की किस योजना का लाभ ले सकता हूं?,Government Scheme,hi,629,train
+a2086,When do I vaccinate my adult ducks?,Animal Husbandry,en,9036,test
+a2086,bade batakhon ko teeka kab lagwana chahiye,Animal Husbandry,hinglish,9036,test
+a2086,बड़ी बत्तखों को टीका कब लगवाना चाहिए?,Animal Husbandry,hi,9036,test
+a2099,"Shoot borer is attacking my sugarcane, how do I stop it?",Plant Protection,en,33998,train
+a2099,"ganne mein shoot borer lag gaya hai, kaise rokun",Plant Protection,hinglish,33998,train
+a2099,"गन्ने में शूट बोरर लग गया है, कैसे रोकूं?",Plant Protection,hi,33998,train
+a2106,What is the price of a combine harvester?,Market Price,en,122536,train
+a2106,combine harvester ka kya daam hai,Market Price,hinglish,122536,train
+a2106,कंबाइन हार्वेस्टर का क्या दाम है?,Market Price,hi,122536,train
+a2107,"My cow has a uterine infection after calving, what should I do?",Animal Husbandry,en,88775,train
+a2107,"meri gaay ko bachcha dene ke baad bachhedani ka sankraman ho gaya hai, kya karun",Animal Husbandry,hinglish,88775,train
+a2107,"मेरी गाय को बच्चा देने के बाद बच्चेदानी का संक्रमण हो गया है, क्या करूं?",Animal Husbandry,hi,88775,train
+a2113,What is the MSP for paddy?,Market Price,en,38875,test
+a2113,dhan ka msp kitna hai,Market Price,hinglish,38875,test
+a2113,धान का एमएसपी कितना है?,Market Price,hi,38875,test
+a2119,How much rain is there in Ghilamara block of Lakhimpur?,Weather,en,91187,train
+a2119,lakhimpur ke ghilamara block mein kitni baarish ho rahi hai,Weather,hinglish,91187,train
+a2119,लखीमपुर के घिलामारा ब्लॉक में कितनी बारिश हो रही है?,Weather,hi,91187,train
+a2121,Is there any agricultural training I can sign up for?,Other,en,3607,train
+a2121,kya koi krishi training hai jisme main naam likhwa sakun,Other,hinglish,3607,train
+a2121,क्या कोई कृषि प्रशिक्षण है जिसमें मैं नाम लिखवा सकूं?,Other,hi,3607,train
+a2142,Which pumpkin variety do you suggest?,Varietal Information,en,2477,train
+a2142,kaddu ki kaun si kism aap batayenge,Varietal Information,hinglish,2477,train
+a2142,कद्दू की कौन सी किस्म आप बताएंगे?,Varietal Information,hi,2477,train
+a2154,My goat has an eye infection and looks very weak,Animal Husbandry,en,91258,train
+a2154,meri bakri ki aankh mein infection ho gaya hai aur wo bahut kamzor lag rahi hai,Animal Husbandry,hinglish,91258,train
+a2154,मेरी बकरी की आंख में संक्रमण हो गया है और वह बहुत कमजोर लग रही है,Animal Husbandry,hi,91258,train
+a2165,How much fertiliser should I give a coconut tree older than six years?,Nutrient Management,en,24,train
+a2165,chhah saal se purane nariyal ke ped ko kitni khaad deni chahiye,Nutrient Management,hinglish,24,train
+a2165,छह साल से पुराने नारियल के पेड़ को कितनी खाद देनी चाहिए?,Nutrient Management,hi,24,train
+a2171,What will the temperature and humidity be tomorrow?,Weather,en,2838,test
+a2171,kal tapman aur nami kitni rahegi,Weather,hinglish,2838,test
+a2171,कल तापमान और नमी कितनी रहेगी?,Weather,hi,2838,test
+a2215,What price will I get if I sell my rice now?,Market Price,en,129586,train
+a2215,abhi chawal bechun to kya rate milega,Market Price,hinglish,129586,train
+a2215,अभी चावल बेचूं तो क्या रेट मिलेगा?,Market Price,hi,129586,train
+a2223,How do I protect my rice crop from pests and diseases?,Plant Protection,en,5759,train
+a2223,apni dhan ki fasal ko keedon aur bimariyon se kaise bachaun,Plant Protection,hinglish,5759,train
+a2223,अपनी धान की फसल को कीड़ों और बीमारियों से कैसे बचाऊं?,Plant Protection,hi,5759,train
+a2257,How can I get more milk from my cow?,Animal Husbandry,en,7,train
+a2257,apni gaay se zyada doodh kaise lun,Animal Husbandry,hinglish,7,train
+a2257,अपनी गाय से ज्यादा दूध कैसे लूं?,Animal Husbandry,hi,7,train
+a2264,"My pig has a high fever, what treatment should I give?",Animal Husbandry,en,5824,train
+a2264,"mere suar ko tez bukhar hai, kya ilaaj dun",Animal Husbandry,hinglish,5824,train
+a2264,"मेरे सूअर को तेज बुखार है, क्या इलाज दूं?",Animal Husbandry,hi,5824,train
+a2274,What is the right dose of Gamoxin to spray?,Plant Protection,en,113669,train
+a2274,gamoxin ki kitni matra chhidakni chahiye,Plant Protection,hinglish,113669,train
+a2274,गैमोक्सिन की कितनी मात्रा छिड़कनी चाहिए?,Plant Protection,hi,113669,train
+a2282,"My third PM-Kisan instalment has not come, why?",Government Scheme,en,14772,train
+a2282,"meri pm kisan ki teesri kist nahi aayi, kyon",Government Scheme,hinglish,14772,train
+a2282,"मेरी पीएम किसान की तीसरी किस्त नहीं आई, क्यों?",Government Scheme,hi,14772,train
+a2294,What is the price of tomatoes in the market now?,Market Price,en,109713,train
+a2294,abhi mandi mein tamatar ka kya bhav hai,Market Price,hinglish,109713,train
+a2294,अभी मंडी में टमाटर का क्या भाव है?,Market Price,hi,109713,train
+a2298,Where do I get semen and liquid nitrogen for artificial insemination of my cow?,Animal Husbandry,en,83984,train
+a2298,gaay ke kritrim garbhadhan ke liye semen aur liquid nitrogen kahan se milega,Animal Husbandry,hinglish,83984,train
+a2298,गाय के कृत्रिम गर्भाधान के लिए वीर्य और लिक्विड नाइट्रोजन कहां से मिलेगा?,Animal Husbandry,hi,83984,train
+a2311,Are there training programmes for animal health workers?,Other,en,39170,train
+a2311,kya pashu swasthya ke liye koi training karyakram hain,Other,hinglish,39170,train
+a2311,क्या पशु स्वास्थ्य के लिए कोई प्रशिक्षण कार्यक्रम हैं?,Other,hi,39170,train
+a2312,How can I get trained in mushroom cultivation?,Other,en,1387,train
+a2312,mushroom ki kheti ki training kaise le sakta hoon,Other,hinglish,1387,train
+a2312,मशरूम की खेती की ट्रेनिंग कैसे ले सकता हूं?,Other,hi,1387,train
+a2314,Can you suggest a good potato variety?,Varietal Information,en,50,train
+a2314,aloo ki koi achi kism suggest kijiye,Varietal Information,hinglish,50,train
+a2314,आलू की कोई अच्छी किस्म सुझाइए,Varietal Information,hi,50,train
+a2321,How much fertiliser should I give my paddy after transplanting?,Nutrient Management,en,8754,train
+a2321,ropai ke baad dhan mein kitni khaad deni chahiye,Nutrient Management,hinglish,8754,train
+a2321,रोपाई के बाद धान में कितनी खाद देनी चाहिए?,Nutrient Management,hi,8754,train
+a2325,Tell me about the Brahma cattle breed,Animal Husbandry,en,134274,train
+a2325,brahma nasl ki gaay ke baare mein batao,Animal Husbandry,hinglish,134274,train
+a2325,ब्रह्मा नस्ल की गाय के बारे में बताइए,Animal Husbandry,hi,134274,train
+a2331,What is the going rate for paddy in Darrang district?,Market Price,en,45597,train
+a2331,darrang zile mein dhan ka abhi kya bhav chal raha hai,Market Price,hinglish,45597,train
+a2331,दरंग जिले में धान का अभी क्या भाव चल रहा है?,Market Price,hi,45597,train
+a2339,What is the weather like in Sivasagar?,Weather,en,80935,train
+a2339,sivasagar mein mausam kaisa hai,Weather,hinglish,80935,train
+a2339,शिवसागर में मौसम कैसा है?,Weather,hi,80935,train
+a2345,What is the market price of garlic?,Market Price,en,36233,train
+a2345,lahsun ka bazaar bhav kya hai,Market Price,hinglish,36233,train
+a2345,लहसुन का बाजार भाव क्या है?,Market Price,hi,36233,train
+a2346,Is there a market for aloe vera and who buys it?,Market Price,en,57918,test
+a2346,aloe vera ka bazaar hai kya aur kaun kharidta hai,Market Price,hinglish,57918,test
+a2346,एलोवेरा का बाजार है क्या और कौन खरीदता है?,Market Price,hi,57918,test
+a2348,How do I get in touch with a fisheries expert?,Other,en,4835,train
+a2348,machhli palan ke visheshagya se kaise sampark karun,Other,hinglish,4835,train
+a2348,मत्स्य पालन विशेषज्ञ से कैसे संपर्क करूं?,Other,hi,4835,train
+a2359,How many fish and chickens can I keep together in a one bigha pond?,Fisheries,en,118259,train
+a2359,ek bigha ke talab mein kitni machhli aur murgiyan saath mein pal sakta hoon,Fisheries,hinglish,118259,train
+a2359,एक बीघा के तालाब में कितनी मछली और मुर्गियां साथ में पाल सकता हूं?,Fisheries,hi,118259,train
+a2363,Where can I sell my fish and at what price?,Market Price,en,8621,train
+a2363,apni machhli kahan bechun aur kis daam par,Market Price,hinglish,8621,train
+a2363,अपनी मछली कहां बेचूं और किस दाम पर?,Market Price,hi,8621,train
+a2370,"Fruit flies have attacked my ridge gourd, how do I get rid of them?",Plant Protection,en,1295,train
+a2370,"turai mein fal makkhi lag gayi hai, ise kaise hataun",Plant Protection,hinglish,1295,train
+a2370,"तोरई में फल मक्खी लग गई है, इसे कैसे हटाऊं?",Plant Protection,hi,1295,train
+a2372,When should I sow transplanted ahu rice?,Cultural Practices,en,125505,train
+a2372,ropai wale ahu dhan ki buwai kab karni chahiye,Cultural Practices,hinglish,125505,train
+a2372,रोपाई वाले अहू धान की बुवाई कब करनी चाहिए?,Cultural Practices,hi,125505,train
+a2385,How much maize seed should I sow?,Cultural Practices,en,46312,train
+a2385,makke ka kitna beej boun,Cultural Practices,hinglish,46312,train
+a2385,मक्के का कितना बीज बोऊं?,Cultural Practices,hi,46312,train
+a2389,How much lime do I need to keep the pond water in good condition?,Fisheries,en,58566,test
+a2389,talab ka paani achha rakhne ke liye kitna chuna chahiye,Fisheries,hinglish,58566,test
+a2389,तालाब का पानी अच्छा रखने के लिए कितना चूना चाहिए?,Fisheries,hi,58566,test
+a2395,Which goat breed should I raise?,Animal Husbandry,en,259,train
+a2395,main bakri ki kaun si nasl paalun,Animal Husbandry,hinglish,259,train
+a2395,मैं बकरी की कौन सी नस्ल पालूं?,Animal Husbandry,hi,259,train
+a2403,Where is the nearest place to sell crops at MSP?,Market Price,en,16620,train
+a2403,msp par fasal bechne ka sabse paas ka kendra kahan hai,Market Price,hinglish,16620,train
+a2403,एमएसपी पर फसल बेचने का सबसे पास का केंद्र कहां है?,Market Price,hi,16620,train
+a2404,What nutrients does ridge gourd need?,Nutrient Management,en,2225,test
+a2404,turai ko kaun se poshak tatv chahiye,Nutrient Management,hinglish,2225,test
+a2404,तोरई को कौन से पोषक तत्व चाहिए?,Nutrient Management,hi,2225,test
+a2408,When is the right time to plant cowpea?,Cultural Practices,en,32456,train
+a2408,lobiya lagane ka sahi samay kya hai,Cultural Practices,hinglish,32456,train
+a2408,लोबिया लगाने का सही समय क्या है?,Cultural Practices,hi,32456,train
+a2414,Can you name some good okra varieties?,Varietal Information,en,8158,train
+a2414,bhindi ki kuch achi kismon ke naam batao,Varietal Information,hinglish,8158,train
+a2414,भिंडी की कुछ अच्छी किस्मों के नाम बताइए,Varietal Information,hi,8158,train
+a2415,Tell me about the Bordhan rice variety,Varietal Information,en,46988,train
+a2415,borodhan dhan ki kism ke baare mein batao,Varietal Information,hinglish,46988,train
+a2415,बोरोधान धान की किस्म के बारे में बताइए,Varietal Information,hi,46988,train
+a2417,"Yellow stem borer has hit my paddy, how do I treat it?",Plant Protection,en,10358,train
+a2417,"dhan mein peela tana chhedak aa gaya hai, ilaaj kya hai",Plant Protection,hinglish,10358,train
+a2417,"धान में पीला तना छेदक आ गया है, इलाज क्या है?",Plant Protection,hi,10358,train
+a2423,"I want to grow medicinal plants, where do I begin?",Other,en,61873,test
+a2423,"main aushadhiya paudhe ugana chahta hoon, kahan se shuru karun",Other,hinglish,61873,test
+a2423,"मैं औषधीय पौधे उगाना चाहता हूं, कहां से शुरू करूं?",Other,hi,61873,test
+a2428,How do I know if the oxygen in my pond is low?,Fisheries,en,61367,train
+a2428,"mere talab mein oxygen kam hai ya nahi, kaise pata chalega",Fisheries,hinglish,61367,train
+a2428,"मेरे तालाब में ऑक्सीजन कम है या नहीं, कैसे पता चलेगा?",Fisheries,hi,61367,train
+a2429,"I want to build a green house, what do I need to know?",Other,en,22897,train
+a2429,"mujhe green house banana hai, kya kya jaanna zaroori hai",Other,hinglish,22897,train
+a2429,"मुझे ग्रीन हाउस बनाना है, क्या-क्या जानना जरूरी है?",Other,hi,22897,train
+a2438,How much cowpea seed do I need?,Cultural Practices,en,63967,train
+a2438,lobiya ka kitna beej lagega,Cultural Practices,hinglish,63967,train
+a2438,लोबिया का कितना बीज लगेगा?,Cultural Practices,hi,63967,train
+a2447,Is there a market for tulsi and what price does it fetch?,Market Price,en,97832,test
+a2447,tulsi ka bazaar hai kya aur kya daam milta hai,Market Price,hinglish,97832,test
+a2447,तुलसी का बाजार है क्या और क्या दाम मिलता है?,Market Price,hi,97832,test
+a2467,"Case worms are attacking my boro rice, how do I control them?",Plant Protection,en,9552,train
+a2467,"boro dhan mein case worm lag gaya hai, kaise rokun",Plant Protection,hinglish,9552,train
+a2467,"बोरो धान में केस वर्म लग गया है, कैसे रोकूं?",Plant Protection,hi,9552,train
+a2469,"My pig looks sick and is not eating, what should I do?",Animal Husbandry,en,80919,train
+a2469,"mera suar bimar lag raha hai aur kuch kha nahi raha, kya karun",Animal Husbandry,hinglish,80919,train
+a2469,"मेरा सूअर बीमार लग रहा है और कुछ खा नहीं रहा, क्या करूं?",Animal Husbandry,hi,80919,train
+a2479,"My Jersey cross cow gives little milk and her calf is twenty days old, should I deworm her?",Animal Husbandry,en,137623,train
+a2479,"meri jersey cross gaay kam doodh de rahi hai aur bachhda bees din ka hai, kya kide ki dawai dun",Animal Husbandry,hinglish,137623,train
+a2479,"मेरी जर्सी क्रॉस गाय कम दूध दे रही है और बछड़ा बीस दिन का है, क्या कीड़े की दवा दूं?",Animal Husbandry,hi,137623,train
+a2485,Where can I buy vermicompost?,Nutrient Management,en,82178,train
+a2485,vermicompost kahan se kharidun,Nutrient Management,hinglish,82178,train
+a2485,वर्मीकम्पोस्ट कहां से खरीदूं?,Nutrient Management,hi,82178,train
+a2505,"The shop near me is selling fertiliser at a higher price, who do I complain to?",Other,en,17485,train
+a2505,"mere paas ki dukan khaad zyada daam par bech rahi hai, shikayat kisse karun",Other,hinglish,17485,train
+a2505,"मेरे पास की दुकान खाद ज्यादा दाम पर बेच रही है, शिकायत किससे करूं?",Other,hi,17485,train
+a2513,"I'd like to learn mushroom cultivation, is there a course?",Other,en,1387,train
+a2513,"mujhe mushroom ki kheti seekhni hai, koi course hai kya",Other,hinglish,1387,train
+a2513,"मुझे मशरूम की खेती सीखनी है, कोई कोर्स है क्या?",Other,hi,1387,train
+a2515,Which cucumber variety is good?,Varietal Information,en,605,train
+a2515,kheere ki kaun si kism achi hai,Varietal Information,hinglish,605,train
+a2515,खीरे की कौन सी किस्म अच्छी है?,Varietal Information,hi,605,train
+a2524,"My PM-Kisan instalment has not arrived, what should I do?",Government Scheme,en,47756,train
+a2524,"meri pm kisan ki kist nahi aayi hai, kya karun",Government Scheme,hinglish,47756,train
+a2524,"मेरी पीएम किसान की किस्त नहीं आई है, क्या करूं?",Government Scheme,hi,47756,train
+a2533,What nutrients does an areca nut plantation need?,Nutrient Management,en,4718,train
+a2533,supari ke bagan ko kaun se poshak tatv chahiye,Nutrient Management,hinglish,4718,train
+a2533,सुपारी के बागान को कौन से पोषक तत्व चाहिए?,Nutrient Management,hi,4718,train
+a2537,What is the bank procedure to get a KCC loan?,Government Scheme,en,3043,train
+a2537,kcc loan lene ke liye bank mein kya prakriya hoti hai,Government Scheme,hinglish,3043,train
+a2537,केसीसी लोन लेने के लिए बैंक में क्या प्रक्रिया होती है?,Government Scheme,hi,3043,train
+a2547,What is PM Kisan Samman Nidhi and how do I benefit?,Government Scheme,en,16555,test
+a2547,pm kisan samman nidhi kya hai aur mujhe iska laabh kaise milega,Government Scheme,hinglish,16555,test
+a2547,पीएम किसान सम्मान निधि क्या है और मुझे इसका लाभ कैसे मिलेगा?,Government Scheme,hi,16555,test
+a2553,How much fertiliser do banana plants need?,Nutrient Management,en,683,train
+a2553,kele ke paudhon ko kitni khaad chahiye,Nutrient Management,hinglish,683,train
+a2553,केले के पौधों को कितनी खाद चाहिए?,Nutrient Management,hi,683,train
+a2558,What price is milk fetching in the market right now?,Market Price,en,109530,test
+a2558,abhi bazaar mein doodh ka kya rate chal raha hai,Market Price,hinglish,109530,test
+a2558,अभी बाजार में दूध का क्या रेट चल रहा है?,Market Price,hi,109530,test
+a2566,"My tomato plants keep wilting, how do I control it?",Plant Protection,en,77,train
+a2566,"mere tamatar ke paudhe murjha rahe hain, ise kaise rokun",Plant Protection,hinglish,77,train
+a2566,"मेरे टमाटर के पौधे मुरझा रहे हैं, इसे कैसे रोकूं?",Plant Protection,hi,77,train
+a2571,What are the benefits of the PM-Kisan scheme?,Government Scheme,en,117553,train
+a2571,pm kisan yojana ke kya fayde hain,Government Scheme,hinglish,117553,train
+a2571,पीएम किसान योजना के क्या फायदे हैं?,Government Scheme,hi,117553,train
+a2582,How much rain has Sivasagar had recently?,Weather,en,83846,train
+a2582,sivasagar mein haal mein kitni baarish hui hai,Weather,hinglish,83846,train
+a2582,शिवसागर में हाल में कितनी बारिश हुई है?,Weather,hi,83846,train
+a2588,"My litchi trees are growing poorly and look sickly, what could be wrong?",Plant Protection,en,744,train
+a2588,"meri leechi ke ped theek se badh nahi rahe aur bimar lag rahe hain, kya dikkat hai",Plant Protection,hinglish,744,train
+a2588,"मेरी लीची के पेड़ ठीक से बढ़ नहीं रहे और बीमार लग रहे हैं, क्या दिक्कत है?",Plant Protection,hi,744,train
+a2591,What is the rainfall forecast for Darrang district?,Weather,en,45607,train
+a2591,darrang zile mein baarish ka kya anuman hai,Weather,hinglish,45607,train
+a2591,दरंग जिले में बारिश का क्या अनुमान है?,Weather,hi,45607,train
+a2600,What price does hybrid boro rice fetch in the market?,Market Price,en,134353,train
+a2600,hybrid boro dhan ka bazaar mein kya bhav milta hai,Market Price,hinglish,134353,train
+a2600,हाइब्रिड बोरो धान का बाजार में क्या भाव मिलता है?,Market Price,hi,134353,train
+a2604,Where can I get a pure breed of pig?,Animal Husbandry,en,369,train
+a2604,shuddh nasl ka suar kahan se milega,Animal Husbandry,hinglish,369,train
+a2604,शुद्ध नस्ल का सूअर कहां से मिलेगा?,Animal Husbandry,hi,369,train
+a2616,"Dark sunken spots have appeared on my fruit, how do I control anthracnose?",Plant Protection,en,9623,train
+a2616,"mere phalon par kale dhanse hue dhabbe aa gaye hain, anthracnose kaise rokun",Plant Protection,hinglish,9623,train
+a2616,"मेरे फलों पर काले धंसे हुए धब्बे आ गए हैं, एंथ्रेक्नोज कैसे रोकूं?",Plant Protection,hi,9623,train
+a2618,When is the right time to sow?,Cultural Practices,en,1748,test
+a2618,buwai ka sahi samay kya hai,Cultural Practices,hinglish,1748,test
+a2618,बुवाई का सही समय क्या है?,Cultural Practices,hi,1748,test
+a2622,How much does a power tiller cost?,Market Price,en,2884,train
+a2622,power tiller ka kya daam hai,Market Price,hinglish,2884,train
+a2622,पावर टिलर का क्या दाम है?,Market Price,hi,2884,train
+a2624,"My carp are falling sick, what could be the disease?",Fisheries,en,2156,train
+a2624,"meri carp machhliyan bimar ho rahi hain, kaun si bimari ho sakti hai",Fisheries,hinglish,2156,train
+a2624,"मेरी कार्प मछलियां बीमार हो रही हैं, कौन सी बीमारी हो सकती है?",Fisheries,hi,2156,train
+a2626,What is the last date to apply for PM-Kisan?,Government Scheme,en,48086,train
+a2626,pm kisan ke liye aavedan ki aakhri tareekh kya hai,Government Scheme,hinglish,48086,train
+a2626,पीएम किसान के लिए आवेदन की आखिरी तारीख क्या है?,Government Scheme,hi,48086,train
+a2641,Why has the price of fertiliser gone up so much?,Market Price,en,91621,train
+a2641,khaad ka daam itna kyon badh gaya hai,Market Price,hinglish,91621,train
+a2641,खाद का दाम इतना क्यों बढ़ गया है?,Market Price,hi,91621,train
+a2649,"My pond is low on oxygen, what can I do about it?",Fisheries,en,4191,test
+a2649,"mere talab mein oxygen ki kami ho gayi hai, kya karun",Fisheries,hinglish,4191,test
+a2649,"मेरे तालाब में ऑक्सीजन की कमी हो गई है, क्या करूं?",Fisheries,hi,4191,test
+a2654,Is there any training for growing flowers?,Other,en,66536,train
+a2654,phool ugane ki koi training hai kya,Other,hinglish,66536,train
+a2654,फूल उगाने की कोई ट्रेनिंग है क्या?,Other,hi,66536,train
+a2666,How do I stop oxygen from running low in my fish pond?,Fisheries,en,4191,test
+a2666,machhli ke talab mein oxygen kam hone se kaise rokun,Fisheries,hinglish,4191,test
+a2666,मछली के तालाब में ऑक्सीजन कम होने से कैसे रोकूं?,Fisheries,hi,4191,test
+a2694,When and how do I lime my pond?,Fisheries,en,16723,train
+a2694,talab mein chuna kab aur kaise daalun,Fisheries,hinglish,16723,train
+a2694,तालाब में चूना कब और कैसे डालूं?,Fisheries,hi,16723,train
+a2703,What is the weather forecast?,Weather,en,79045,train
+a2703,mausam ka poorvanuman kya hai,Weather,hinglish,79045,train
+a2703,मौसम का पूर्वानुमान क्या है?,Weather,hi,79045,train
+a2713,"Pests are bothering my chilli crop, what should I do?",Plant Protection,en,667,train
+a2713,"meri mirch ki fasal mein keede pareshan kar rahe hain, kya karun",Plant Protection,hinglish,667,train
+a2713,"मेरी मिर्च की फसल में कीड़े परेशान कर रहे हैं, क्या करूं?",Plant Protection,hi,667,train
+a2764,Will it rain in Tinsukia today?,Weather,en,131023,train
+a2764,aaj tinsukia mein baarish hogi kya,Weather,hinglish,131023,train
+a2764,आज तिनसुकिया में बारिश होगी क्या?,Weather,hi,131023,train
+a2770,What do carp eat and how often do they feed?,Fisheries,en,3739,train
+a2770,carp machhli kya khati hai aur kitni baar,Fisheries,hinglish,3739,train
+a2770,कार्प मछली क्या खाती है और कितनी बार?,Fisheries,hi,3739,train
+a2772,"White flies are on my bottle gourd, what should I spray and how often?",Plant Protection,en,66110,test
+a2772,"lauki mein safed makkhi lag gayi hai, kya chhidkun aur kitni baar",Plant Protection,hinglish,66110,test
+a2772,"लौकी में सफेद मक्खी लग गई है, क्या छिड़कूं और कितनी बार?",Plant Protection,hi,66110,test
+a2776,"My jackfruit tree seems to be missing some nutrient, what is it?",Nutrient Management,en,49781,test
+a2776,"mere kathal ke ped mein koi poshak tatv ki kami lagti hai, kaun sa",Nutrient Management,hinglish,49781,test
+a2776,"मेरे कटहल के पेड़ में कोई पोषक तत्व की कमी लगती है, कौन सा?",Nutrient Management,hi,49781,test
+a2780,Which brinjal variety suits my farm?,Varietal Information,en,2004,train
+a2780,baingan ki kaun si kism meri kheti ke liye theek hai,Varietal Information,hinglish,2004,train
+a2780,बैंगन की कौन सी किस्म मेरी खेती के लिए ठीक है?,Varietal Information,hi,2004,train
+a2786,How should I sow tomato seeds?,Cultural Practices,en,115099,train
+a2786,tamatar ke beej kaise boun,Cultural Practices,hinglish,115099,train
+a2786,टमाटर के बीज कैसे बोऊं?,Cultural Practices,hi,115099,train
+a2790,Which cabbage variety can I sow early?,Varietal Information,en,141,test
+a2790,gobhi ki kaun si kism jaldi boi ja sakti hai,Varietal Information,hinglish,141,test
+a2790,गोभी की कौन सी किस्म जल्दी बोई जा सकती है?,Varietal Information,hi,141,test
+a2799,What fertiliser should I use on potatoes?,Nutrient Management,en,146,train
+a2799,aloo mein kaun si khaad istemal karun,Nutrient Management,hinglish,146,train
+a2799,आलू में कौन सी खाद इस्तेमाल करूं?,Nutrient Management,hi,146,train
+a2810,"My fish died overnight because of low oxygen, how do I prevent that?",Fisheries,en,3405,train
+a2810,"oxygen ki kami se meri machhliyan raat mein mar gayin, ise kaise rokun",Fisheries,hinglish,3405,train
+a2810,"ऑक्सीजन की कमी से मेरी मछलियां रात में मर गईं, इसे कैसे रोकूं?",Fisheries,hi,3405,train
+a2835,What is the process to apply for PM-Kisan?,Government Scheme,en,64579,test
+a2835,pm kisan ke liye aavedan karne ki prakriya kya hai,Government Scheme,hinglish,64579,test
+a2835,पीएम किसान के लिए आवेदन करने की प्रक्रिया क्या है?,Government Scheme,hi,64579,test
+a2841,Is there a chance of rain in the coming days?,Weather,en,57027,train
+a2841,aane wale dino mein baarish ke aasaar hain kya,Weather,hinglish,57027,train
+a2841,आने वाले दिनों में बारिश के आसार हैं क्या?,Weather,hi,57027,train
+a2849,Where can I buy fertiliser and at what rate?,Market Price,en,15295,test
+a2849,khaad kahan milti hai aur kis rate par,Market Price,hinglish,15295,test
+a2849,खाद कहां मिलती है और किस रेट पर?,Market Price,hi,15295,test
+a2852,Where can I get certified Ranjit paddy seed in Bongaigaon?,Varietal Information,en,116760,test
+a2852,bongaigaon mein ranjit dhan ka pramanit beej kahan milega,Varietal Information,hinglish,116760,test
+a2852,बोंगाईगांव में रंजीत धान का प्रमाणित बीज कहां मिलेगा?,Varietal Information,hi,116760,test
+a2869,"My pond has turned thick green with algae, what should I do?",Fisheries,en,48020,train
+a2869,"mere talab mein bahut zyada hari kaai jam gayi hai, kya karun",Fisheries,hinglish,48020,train
+a2869,"मेरे तालाब में बहुत ज्यादा हरी काई जम गई है, क्या करूं?",Fisheries,hi,48020,train
+a2888,When should I plant banana suckers?,Cultural Practices,en,5617,train
+a2888,kele ke paudhe kab lagaun,Cultural Practices,hinglish,5617,train
+a2888,केले के पौधे कब लगाऊं?,Cultural Practices,hi,5617,train
+a2899,How far apart should I plant brinjal?,Cultural Practices,en,120,test
+a2899,baingan kitni doori par lagana chahiye,Cultural Practices,hinglish,120,test
+a2899,बैंगन कितनी दूरी पर लगाना चाहिए?,Cultural Practices,hi,120,test
+a2902,"How is potato grown, step by step?",Cultural Practices,en,42,train
+a2902,aloo ki kheti kadam dar kadam kaise hoti hai,Cultural Practices,hinglish,42,train
+a2902,आलू की खेती कदम दर कदम कैसे होती है?,Cultural Practices,hi,42,train
+a2915,Why are my fish dying?,Fisheries,en,2242,train
+a2915,meri machhliyan kyon mar rahi hain,Fisheries,hinglish,2242,train
+a2915,मेरी मछलियां क्यों मर रही हैं?,Fisheries,hi,2242,train
+a2917,"I plan to grow rice next year, what price can I expect for it?",Market Price,en,128302,test
+a2917,"agle saal dhan ugane ka soch raha hoon, uska kya bhav milne ki ummeed hai",Market Price,hinglish,128302,test
+a2917,"अगले साल धान उगाने का सोच रहा हूं, उसका क्या भाव मिलने की उम्मीद है?",Market Price,hi,128302,test
+a2921,"How much rain fell in Agamoni, Dhubri yesterday?",Weather,en,15285,train
+a2921,kal dhubri ke agamoni mein kitni baarish hui,Weather,hinglish,15285,train
+a2921,कल धुबरी के आगमनी में कितनी बारिश हुई?,Weather,hi,15285,train
+a2927,Is there any government scheme to help me start goat farming?,Government Scheme,en,48720,train
+a2927,bakri palan shuru karne ke liye sarkar ki koi madad yojana hai kya,Government Scheme,hinglish,48720,train
+a2927,बकरी पालन शुरू करने के लिए सरकार की कोई मदद योजना है क्या?,Government Scheme,hi,48720,train
+a2937,Which high yielding hybrid seed would you suggest?,Varietal Information,en,97622,train
+a2937,zyada paidawar wala kaun sa hybrid beej aap batayenge,Varietal Information,hinglish,97622,train
+a2937,ज्यादा पैदावार वाला कौन सा हाइब्रिड बीज आप बताएंगे?,Varietal Information,hi,97622,train
+a2939,How do I make a Kisan Credit Card?,Government Scheme,en,2877,test
+a2939,kisan credit card kaise banwaun,Government Scheme,hinglish,2877,test
+a2939,किसान क्रेडिट कार्ड कैसे बनवाऊं?,Government Scheme,hi,2877,test
+a2945,What spacing is right for French beans?,Cultural Practices,en,40492,train
+a2945,french bean ke liye kitni doori sahi hai,Cultural Practices,hinglish,40492,train
+a2945,फ्रेंच बीन के लिए कितनी दूरी सही है?,Cultural Practices,hi,40492,train
+a2956,Where can I learn hydroponic farming?,Other,en,16372,test
+a2956,hydroponic kheti kahan seekh sakta hoon,Other,hinglish,16372,test
+a2956,हाइड्रोपोनिक खेती कहां सीख सकता हूं?,Other,hi,16372,test
+a2957,I have a question about PM-Kisan,Government Scheme,en,3207,train
+a2957,mujhe pm kisan ke baare mein kuch poochna hai,Government Scheme,hinglish,3207,train
+a2957,मुझे पीएम किसान के बारे में कुछ पूछना है,Government Scheme,hi,3207,train
+a2958,"Cutworms are cutting my potato plants at the base, how do I control them?",Plant Protection,en,1181,train
+a2958,"aloo ke paudhe jad se kat rahe hain, cutworm ko kaise rokun",Plant Protection,hinglish,1181,train
+a2958,"आलू के पौधे जड़ से कट रहे हैं, कटवर्म को कैसे रोकूं?",Plant Protection,hi,1181,train
+a2967,Can I raise fish and poultry together on my farm?,Fisheries,en,17425,train
+a2967,kya main ek hi jagah machhli aur murgi dono pal sakta hoon,Fisheries,hinglish,17425,train
+a2967,क्या मैं एक ही जगह मछली और मुर्गी दोनों पाल सकता हूं?,Fisheries,hi,17425,train
+a2981,What is the market rate for green tea leaf?,Market Price,en,129976,train
+a2981,hari chai patti ka bazaar bhav kya hai,Market Price,hinglish,129976,train
+a2981,हरी चाय पत्ती का बाजार भाव क्या है?,Market Price,hi,129976,train
+a2987,"Wasps are damaging my snake gourd, how can I control them?",Plant Protection,en,73828,train
+a2987,"chichinda mein tarwa makkhi lag gayi hai, kaise rokun",Plant Protection,hinglish,73828,train
+a2987,"चिचिंडा में ततैया लग गई है, कैसे रोकूं?",Plant Protection,hi,73828,train
+a2996,How do I check my PM-Kisan account status?,Government Scheme,en,48396,train
+a2996,meri pm kisan ke khate ka status kaise dekhun,Government Scheme,hinglish,48396,train
+a2996,मेरे पीएम किसान के खाते का स्टेटस कैसे देखूं?,Government Scheme,hi,48396,train
+a3004,Can you tell me about different crop varieties?,Varietal Information,en,23069,train
+a3004,alag alag fasalon ki kismon ke baare mein batao,Varietal Information,hinglish,23069,train
+a3004,अलग-अलग फसलों की किस्मों के बारे में बताइए,Varietal Information,hi,23069,train
+a3018,What is today's mandi rate for potato?,Market Price,en,12190,train
+a3018,aaj mandi mein aloo ka kya bhav hai,Market Price,hinglish,12190,train
+a3018,आज मंडी में आलू का क्या भाव है?,Market Price,hi,12190,train
+a3023,Which rice variety is best for me?,Varietal Information,en,3,train
+a3023,dhan ki kaun si kism mere liye sabse achhi hai,Varietal Information,hinglish,3,train
+a3023,धान की कौन सी किस्म मेरे लिए सबसे अच्छी है?,Varietal Information,hi,3,train
+a3040,"My cow is thin and weak, how do I get her healthy again?",Animal Husbandry,en,62404,train
+a3040,"meri gaay patli aur kamzor hai, use dobara tandurust kaise karun",Animal Husbandry,hinglish,62404,train
+a3040,"मेरी गाय पतली और कमजोर है, उसे दोबारा तंदुरुस्त कैसे करूं?",Animal Husbandry,hi,62404,train
+a3053,"Fish keep dying in my pond, what could be causing it?",Fisheries,en,2242,train
+a3053,"mere talab mein machhliyan lagataar mar rahi hain, iska kya kaaran ho sakta hai",Fisheries,hinglish,2242,train
+a3053,"मेरे तालाब में मछलियां लगातार मर रही हैं, इसका क्या कारण हो सकता है?",Fisheries,hi,2242,train
+a3063,Is there an agricultural loan scheme I can use?,Government Scheme,en,118661,test
+a3063,kya koi krishi loan yojana hai jiska main laabh le sakun,Government Scheme,hinglish,118661,test
+a3063,क्या कोई कृषि ऋण योजना है जिसका मैं लाभ ले सकूं?,Government Scheme,hi,118661,test
+a3066,Where can I do a bee keeping training course?,Other,en,138678,train
+a3066,madhumakkhi palan ka training course kahan kar sakta hoon,Other,hinglish,138678,train
+a3066,मधुमक्खी पालन का ट्रेनिंग कोर्स कहां कर सकता हूं?,Other,hi,138678,train
+a3072,Can you give me the names of some chilli varieties?,Varietal Information,en,138,train
+a3072,mirch ki kuch kismon ke naam bata do,Varietal Information,hinglish,138,train
+a3072,मिर्च की कुछ किस्मों के नाम बता दो,Varietal Information,hi,138,train
+a3073,Is there a training course on artificial insemination?,Other,en,112289,train
+a3073,kya kritrim garbhadhan ka koi training course hai,Other,hinglish,112289,train
+a3073,क्या कृत्रिम गर्भाधान का कोई ट्रेनिंग कोर्स है?,Other,hi,112289,train
+a3078,How do I plant banana the right way?,Cultural Practices,en,412,train
+a3078,kela sahi tareeke se kaise lagaun,Cultural Practices,hinglish,412,train
+a3078,केला सही तरीके से कैसे लगाऊं?,Cultural Practices,hi,412,train
+a3087,How much rain is expected in Kalaigaon block this week?,Weather,en,134503,train
+a3087,kalaigaon block mein is hafte kitni baarish hone wali hai,Weather,hinglish,134503,train
+a3087,कलाईगांव ब्लॉक में इस हफ्ते कितनी बारिश होने वाली है?,Weather,hi,134503,train
+a3093,How can I get more yield from my betel vine?,Cultural Practices,en,6461,train
+a3093,paan ki bel se zyada paidawar kaise lun,Cultural Practices,hinglish,6461,train
+a3093,पान की बेल से ज्यादा पैदावार कैसे लूं?,Cultural Practices,hi,6461,train
+a3095,"My country chickens have white droppings and are dying, what is it?",Animal Husbandry,en,85,train
+a3095,"meri desi murgiyon ki safed potty ho rahi hai aur wo mar rahi hain, ye kya hai",Animal Husbandry,hinglish,85,train
+a3095,"मेरी देसी मुर्गियों की सफेद बीट हो रही है और वे मर रही हैं, यह क्या है?",Animal Husbandry,hi,85,train
+a3105,"Is it too late to sow paddy now, and what should I do differently?",Cultural Practices,en,26461,train
+a3105,"kya ab dhan ki buwai mein der ho gayi hai, kya alag karna hoga",Cultural Practices,hinglish,26461,train
+a3105,"क्या अब धान की बुवाई में देर हो गई है, क्या अलग करना होगा?",Cultural Practices,hi,26461,train
+a3106,"A dog has bitten my goat, what should I do?",Animal Husbandry,en,106369,train
+a3106,"mere bakri ko kutte ne kaat liya hai, kya karun",Animal Husbandry,hinglish,106369,train
+a3106,"मेरी बकरी को कुत्ते ने काट लिया है, क्या करूं?",Animal Husbandry,hi,106369,train
+a3116,How much rain is forecast for Dibrugarh?,Weather,en,95954,train
+a3116,dibrugarh mein kitni baarish hone ka anuman hai,Weather,hinglish,95954,train
+a3116,डिब्रूगढ़ में कितनी बारिश होने का अनुमान है?,Weather,hi,95954,train
+a3132,Is there a quick-maturing cabbage variety?,Varietal Information,en,28149,train
+a3132,kya gobhi ki jaldi taiyar hone wali kism hai,Varietal Information,hinglish,28149,train
+a3132,क्या गोभी की जल्दी तैयार होने वाली किस्म है?,Varietal Information,hi,28149,train
+a3146,How much fertiliser do capsicum plants need?,Nutrient Management,en,2024,train
+a3146,shimla mirch ke paudhon ko kitni khaad chahiye,Nutrient Management,hinglish,2024,train
+a3146,शिमला मिर्च के पौधों को कितनी खाद चाहिए?,Nutrient Management,hi,2024,train
+a3148,What fertiliser dose should I follow for boro rice?,Nutrient Management,en,5291,train
+a3148,boro dhan mein kitni khaad deni chahiye,Nutrient Management,hinglish,5291,train
+a3148,बोरो धान में कितनी खाद देनी चाहिए?,Nutrient Management,hi,5291,train
+a3158,"What spacing should I follow for cauliflower, cabbage and brinjal?",Cultural Practices,en,47325,train
+a3158,"phoolgobhi, patta gobhi aur baingan ke liye kitni doori rakhni chahiye",Cultural Practices,hinglish,47325,train
+a3158,"फूलगोभी, पत्तागोभी और बैंगन के लिए कितनी दूरी रखनी चाहिए?",Cultural Practices,hi,47325,train
+a3160,"The leaves of my laisak are rotting, how can I control it?",Plant Protection,en,117161,test
+a3160,"meri laisak ke patte sad rahe hain, ise kaise rokun",Plant Protection,hinglish,117161,test
+a3160,"मेरी लाइशाक के पत्ते सड़ रहे हैं, इसे कैसे रोकूं?",Plant Protection,hi,117161,test
+a3199,"My French bean plants are wilting from a fungus, what should I do?",Plant Protection,en,4510,train
+a3199,"french bean ke paudhe fafund se murjha rahe hain, kya karun",Plant Protection,hinglish,4510,train
+a3199,"फ्रेंच बीन के पौधे फफूंद से मुरझा रहे हैं, क्या करूं?",Plant Protection,hi,4510,train
+a3224,Where should I sell my rice and for how much?,Market Price,en,74549,train
+a3224,chawal kahan bechun aur kitne mein,Market Price,hinglish,74549,train
+a3224,चावल कहां बेचूं और कितने में?,Market Price,hi,74549,train
+a3233,"My cattle have blisters in the mouth and are drooling, I think it's foot and mouth disease",Animal Husbandry,en,53912,train
+a3233,"mere pashuon ke munh mein chhale hain aur laar tapak rahi hai, khurpka mouthpaka lagta hai",Animal Husbandry,hinglish,53912,train
+a3233,"मेरे पशुओं के मुंह में छाले हैं और लार टपक रही है, खुरपका-मुंहपका लगता है",Animal Husbandry,hi,53912,train
+a3236,How do I prepare a seed bed for paddy?,Cultural Practices,en,6840,train
+a3236,dhan ki nursery ke liye kyari kaise taiyar karun,Cultural Practices,hinglish,6840,train
+a3236,धान की नर्सरी के लिए क्यारी कैसे तैयार करूं?,Cultural Practices,hi,6840,train
+a3243,How much fertiliser does maize need?,Nutrient Management,en,2615,train
+a3243,makke ko kitni khaad chahiye,Nutrient Management,hinglish,2615,train
+a3243,मक्के को कितनी खाद चाहिए?,Nutrient Management,hi,2615,train
+a3248,How far apart should I transplant boro paddy?,Cultural Practices,en,24104,test
+a3248,boro dhan ki ropai kitni doori par karni chahiye,Cultural Practices,hinglish,24104,test
+a3248,बोरो धान की रोपाई कितनी दूरी पर करनी चाहिए?,Cultural Practices,hi,24104,test
+a3252,Which brinjal variety suits the conditions in Assam?,Varietal Information,en,35,train
+a3252,assam ki jalvayu ke liye baingan ki kaun si kism theek hai,Varietal Information,hinglish,35,train
+a3252,असम की जलवायु के लिए बैंगन की कौन सी किस्म ठीक है?,Varietal Information,hi,35,train
+a3253,How is curd made from milk on a commercial scale?,Other,en,96249,train
+a3253,doodh se dahi vyavsayik star par kaise banti hai,Other,hinglish,96249,train
+a3253,दूध से दही व्यावसायिक स्तर पर कैसे बनती है?,Other,hi,96249,train
+a3254,What is the market price of maize?,Market Price,en,101562,train
+a3254,makke ka bazaar bhav kya hai,Market Price,hinglish,101562,train
+a3254,मक्के का बाजार भाव क्या है?,Market Price,hi,101562,train
+a3269,What is composite fish culture and how do I start?,Fisheries,en,56417,train
+a3269,composite machhli palan kya hota hai aur kaise shuru karun,Fisheries,hinglish,56417,train
+a3269,कंपोजिट मछली पालन क्या होता है और कैसे शुरू करूं?,Fisheries,hi,56417,train
+a3278,"My chickens have diarrhoea, what should I give them?",Animal Husbandry,en,59548,train
+a3278,"meri murgiyon ko dast lage hain, kya dun",Animal Husbandry,hinglish,59548,train
+a3278,"मेरी मुर्गियों को दस्त लगे हैं, क्या दूं?",Animal Husbandry,hi,59548,train
+a3283,Can you explain composite fish farming to me?,Fisheries,en,589,train
+a3283,mujhe composite machhli palan samjhao,Fisheries,hinglish,589,train
+a3283,मुझे कंपोजिट मछली पालन समझाइए,Fisheries,hi,589,train
+a3289,How do I grow chilli from start to finish?,Cultural Practices,en,422,train
+a3289,mirch ki kheti shuru se aakhir tak kaise karun,Cultural Practices,hinglish,422,train
+a3289,मिर्च की खेती शुरू से आखिर तक कैसे करूं?,Cultural Practices,hi,422,train
+a3291,I have some questions about fish farming,Fisheries,en,28044,train
+a3291,mujhe machhli palan ke baare mein kuch poochna hai,Fisheries,hinglish,28044,train
+a3291,मुझे मछली पालन के बारे में कुछ पूछना है,Fisheries,hi,28044,train
+a3311,Where can I get boro rice seed?,Varietal Information,en,130809,test
+a3311,boro dhan ka beej kahan milega,Varietal Information,hinglish,130809,test
+a3311,बोरो धान का बीज कहां मिलेगा?,Varietal Information,hi,130809,test
+a3313,When will my PM-Kisan instalment arrive?,Government Scheme,en,3218,train
+a3313,meri pm kisan ki kist kab aayegi,Government Scheme,hinglish,3218,train
+a3313,मेरी पीएम किसान की किस्त कब आएगी?,Government Scheme,hi,3218,train
+a3315,Can I add a mineral mixture to fish feed?,Fisheries,en,79133,train
+a3315,kya machhli ke chare mein mineral mixture mila sakte hain,Fisheries,hinglish,79133,train
+a3315,क्या मछली के चारे में मिनरल मिक्सचर मिला सकते हैं?,Fisheries,hi,79133,train
+a3375,What nutrients does a pomegranate orchard need?,Nutrient Management,en,2348,train
+a3375,anar ke bagh ko kaun se poshak tatv chahiye,Nutrient Management,hinglish,2348,train
+a3375,अनार के बाग को कौन से पोषक तत्व चाहिए?,Nutrient Management,hi,2348,train
+a3376,"The pond water has gone bad and oxygen is low, how do I fix it?",Fisheries,en,133272,train
+a3376,"talab ka paani kharab ho gaya hai aur oxygen kam hai, kaise theek karun",Fisheries,hinglish,133272,train
+a3376,"तालाब का पानी खराब हो गया है और ऑक्सीजन कम है, कैसे ठीक करूं?",Fisheries,hi,133272,train
+a3387,When is the right time to mate my goat?,Animal Husbandry,en,107391,test
+a3387,meri bakri ko garbhit karwane ka sahi samay kya hai,Animal Husbandry,hinglish,107391,test
+a3387,मेरी बकरी को गाभिन कराने का सही समय क्या है?,Animal Husbandry,hi,107391,test
+a3437,Is it going to rain?,Weather,en,7485,train
+a3437,kya baarish hone wali hai,Weather,hinglish,7485,train
+a3437,क्या बारिश होने वाली है?,Weather,hi,7485,train
+a3444,When should I top-dress with urea?,Nutrient Management,en,1937,train
+a3444,urea ki upari khuraak kab deni chahiye,Nutrient Management,hinglish,1937,train
+a3444,यूरिया की ऊपरी खुराक कब देनी चाहिए?,Nutrient Management,hi,1937,train
+a3457,"My milking cow keeps regurgitating her food, what is wrong?",Animal Husbandry,en,138643,train
+a3457,"meri doodh dene wali gaay baar baar khana ugal rahi hai, kya hua hai",Animal Husbandry,hinglish,138643,train
+a3457,"मेरी दूध देने वाली गाय बार-बार खाना उगल रही है, क्या हुआ है?",Animal Husbandry,hi,138643,train
+a3470,Will it rain over the next six days?,Weather,en,134456,train
+a3470,agle chhah dinon mein baarish hogi kya,Weather,hinglish,134456,train
+a3470,अगले छह दिनों में बारिश होगी क्या?,Weather,hi,134456,train
+a3473,"My calf has worms, what dewormer should I give?",Animal Husbandry,en,110,test
+a3473,"mere bachhde ko pet ke keede ho gaye hain, kaun si dawai dun",Animal Husbandry,hinglish,110,test
+a3473,"मेरे बछड़े को पेट के कीड़े हो गए हैं, कौन सी दवा दूं?",Animal Husbandry,hi,110,test
+a3484,When is papaya ready to harvest?,Cultural Practices,en,88330,train
+a3484,papita kab todne layak hota hai,Cultural Practices,hinglish,88330,train
+a3484,पपीता कब तोड़ने लायक होता है?,Cultural Practices,hi,88330,train
+a3495,"My cow has worms in her stomach, how do I treat her?",Animal Husbandry,en,110,test
+a3495,"meri gaay ke pet mein keede hain, uska ilaaj kaise karun",Animal Husbandry,hinglish,110,test
+a3495,"मेरी गाय के पेट में कीड़े हैं, उसका इलाज कैसे करूं?",Animal Husbandry,hi,110,test
