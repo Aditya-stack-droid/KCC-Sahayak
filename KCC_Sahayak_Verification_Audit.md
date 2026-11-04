@@ -2,7 +2,7 @@
 
 **Repository:** `KCC-Sahayak` (branch `improvements`, single commit `cf6aab3`, “Initial commit from ZIP source”)
 **Audit date:** 1 November 2026
-**Last updated:** 3 November 2026 — post-audit improvement status added as §10; §11 remains the artefact index.
+**Last updated:** 4 November 2026 — §10 now covers Batch A through Improvement 5; §11 remains the artefact index.
 **Auditor role:** independent technical audit; no application, training script, dataset or model file was modified.
 **Companion documents:** `KCC_Sahayak_Research_Report.pdf`, `KCC_Sahayak_Research_Report.docx`, `KCC_Sahayak_Presentation.pptx`, `KCC_Sahayak_Diagrams/`.
 
@@ -22,7 +22,7 @@
 
 **Most important finding:** the quantitative results are more honest than the surrounding prose. The model is real and the main metrics reproduce; the evidence base (labels, gold set, speech) is synthetic, and the paper overstates the extent of human verification and privacy protection.
 
-**Update, 3 November 2026:** Batch A (grouped, leakage-resistant evaluation) and Batch B (privacy, annotation infrastructure, answer conflict detection, adversarial safety evaluation) were added **around** the audited system. Nothing in `src/`, `backend/`, `data/`, `models/` or any original result file was changed. The findings above remain the audit of record for the shipped project; current status, newly verified metrics, known limitations and remaining gaps are in §10.
+**Update, 4 November 2026:** Batch A (grouped, leakage-resistant evaluation) and Batch B (privacy, annotation infrastructure, answer conflict detection, adversarial safety evaluation, multi-reference retrieval evaluation, out-of-scope detection) were added **around** the audited system. Nothing in `src/`, `backend/`, `data/`, `models/` or any original result file was changed. The findings above remain the audit of record for the shipped project; current status, newly verified metrics, known limitations and remaining gaps are in §10.
 
 ---
 
@@ -159,7 +159,7 @@ Status labels: **VERIFIED** (independently reproduced), **PARTIALLY VERIFIED** (
 | Calibration ECE silver 0.0177→0.0237 | `calibration.json` | Yes | **0.0177 / 0.0237** | VERIFIED | Recomputed from saved head |
 | Calibration ECE out-of-fold 0.0381→0.0060 | `calibration.json` | No | — | NOT REPRODUCED | Requires 5-fold refit; not attempted |
 | Encoder comparison: IndicBERTv2 91.3% > deployed 89.3% | `encoder_comparison.json` | No | — | PARTIALLY VERIFIED | File declares itself partial; fine-tuning not run |
-| 41 unit/API tests pass | `tests/` | Yes | **41 passed** | VERIFIED | `pytest -q` at audit time; the suite is now 161 tests across legacy + Batch A/B files (§10.2) |
+| 41 unit/API tests pass | `tests/` | Yes | **41 passed** | VERIFIED | `pytest -q` at audit time; the suite is now 188 tests across legacy + Batch A/B files (§10.2) |
 | Demo query “which tomato variety is good for me?” auto-answered | `README.md` | Yes | AUTO_ANSWER, similarity 0.845 | VERIFIED | Run with `OMP_NUM_THREADS=1`; Hinglish pest and Hindi price queries escalated |
 | Original 99% accuracy claim | Earlier project version | No | Keyword agreement only | INCORRECT | Withdrawn in README; same model scores 65.7% against meaning labels |
 | Paper: 8.2% call-log answers | `paper/generated/numbers.tex` | Yes | **8.75%** | INCORRECT | Stale generated asset |
@@ -385,7 +385,7 @@ You should **not** claim:
 
 ---
 
-## 10. Post-audit improvement status (Batch A – Improvement 2), 3 November 2026
+## 10. Post-audit improvement status (Batch A – Improvement 4), 4 November 2026
 
 This section records work completed **after** the audit above. It is additive:
 the audited code paths, datasets, models and original result files are
@@ -401,7 +401,9 @@ evidence type; no result in this section is human-validated.
 | Batch B Phase 2 — human annotation infrastructure | Infrastructure complete; **annotation PENDING** | `experiments/annotation/`, `results/annotation/` | No human labels exist yet |
 | Improvement 1 — answer conflict detection | Complete (synthetic pairs + descriptive corpus scan) | `experiments/conflict_detection/`, `results/conflict_detection/` | Synthetic authored pairs; rule-fire rates |
 | Improvement 2 — adversarial safety evaluation | Complete (synthetic adversarial set) | `experiments/safety_evaluation/`, `results/safety_evaluation/` | Synthetic authored cases; production rules unmodified |
-| Improvement 3 — out-of-scope detection | **Not started** | — | — |
+| Improvement 3 — multi-reference retrieval evaluation | Complete (corpus evaluation) | `experiments/multi_reference/`, `results/multi_reference/` | Historical advisor answers as references; agreement, not correctness |
+| Improvement 4 — out-of-scope detection | Complete (synthetic negatives) | `experiments/out_of_scope/`, `results/out_of_scope/` | Authored synthetic non-agricultural queries; real agricultural test rows |
+| Improvement 5 — behavioural regression testing | Complete (authored synthetic probes) | `experiments/behavioural_regression/`, `results/behavioural_regression/` | 168 deterministic synthetic probes over deployed rule-based components; no model loading |
 
 ### 10.2 Verified test counts
 
@@ -414,7 +416,10 @@ evidence type; no result in this section is human-validated.
 | Batch B Phase 2 | `tests/unit/test_annotation.py` | 30 |
 | Improvement 1 | `tests/unit/test_conflict_detection.py` | 30 |
 | Improvement 2 | `tests/unit/test_adversarial_safety.py` | 13 |
-| **Current full suite** | `pytest -q` with `OMP_NUM_THREADS=1` | **161 passed** |
+| Improvement 3 | `tests/unit/test_multi_reference.py` | 27 |
+| Improvement 4 | `tests/unit/test_out_of_scope.py` | 25 |
+| Improvement 5 | `tests/unit/test_behavioural_regression.py` | 11 |
+| **Current full suite** | `pytest -q` with `OMP_NUM_THREADS=1` | **224 passed** |
 
 **Correction:** intermediate Batch B summaries described “52 original
 tests”. That label was wrong: 52 was the pre-Batch-B total (41 original +
@@ -532,49 +537,170 @@ token, and non-standard measures (`bottle`, `tank`, `bori`). Because the set is
 synthetic and same-author, these scores are **not** real-world safety estimates,
 and detecting a pattern is not evidence of agronomic correctness.
 
-### 10.8 Metric classification and comparability
+### 10.8 Improvement 3 — multi-reference retrieval evaluation (corpus)
+
+Scores a retrieved answer against every distinct answer advisors logged for the
+same question group (Batch A grouping, test side only) instead of only the
+single answer attached to the row. No reference is generated: pools are
+historical answers. Production retrieval is untouched.
+
+**Pool adequacy (measured against pre-registered criteria):** 13,831 grouped
+test rows in 4,850 groups; **11,747** distinct informative references in 4,457
+groups. 96.6% of test rows have ≥1 reference, **69.9% have ≥2**, 58.2% have ≥5;
+469 rows (3.4%) have none and are excluded. The distribution is skewed — 2.64
+references per group (median 1) but 175 per row (median 10), with 21.9% of rows
+inside groups holding ≥100 references. References are genuinely different
+advice rather than restatements: mean max pairwise token-F1 within a group is
+0.6201, and 64.2% of sampled multi-reference groups fall below 0.80. Verdict:
+**multi-reference evaluation is supported**, with the skew disclosed.
+
+**Batch A reproduction gate (7/7 PASS):** the rebuilt rankings reproduce the
+frozen Batch A values before any new metric is reported — dense all-test
+own-reference F1 0.321342 vs 0.3213, informative-gold 0.329323 vs 0.3293, topic
+match 0.851927 vs 0.8519; 3,000-sample dense 0.321968/0.840333 vs 0.3220/0.8403;
+hybrid 0.379990/0.873333 vs 0.3800/0.8733. The gate caught two implementation
+bugs during development (sample-answer misalignment and a sparse-matrix length
+error) before any result was reported.
+
+**Dense, all 13,831 test rows** (bootstrap 2,000 resamples, seed 0):
+
+| Metric | Rows | Mean |
+|---|---:|---:|
+| Own-reference F1 (original metric) | 13,831 | 0.3217 |
+| Max-reference F1 | 13,831 | 0.5096 |
+| Max-other-reference F1 | 9,669 | 0.5788 |
+| Random-other-reference F1 (chance control) | 9,669 | 0.2948 |
+| Max semantic similarity (not correctness) | 9,669 | 0.7755 |
+
+Paired deltas: max-other − own **+0.2415** (95% CI [0.2362, 0.2465], n=9,768,
+80.9% improved, 12.3% worse, d_z 0.91); restricted to informative own answers
+**+0.2453** ([0.2402, 0.2501], n=9,029, d_z 1.00); max − own +0.1867
+([0.1827, 0.1907], n=13,346). The **chance control is negative**: random-other
+− own −0.0393 ([−0.0431, −0.0353]), so the gain is not merely the effect of
+having more chances to match, although part of it is mechanical.
+
+**Dense vs hybrid, identical 3,000 queries:** own-reference 0.3222 vs 0.3802
+(+0.0581, CI [0.0480, 0.0676], d_z 0.21); max-other (informative own answers)
++0.0244 (CI [0.0120, 0.0370], d_z 0.086). With informative-only screening the
+same ordering holds (+0.0532 own, +0.0182 max-other). Hybrid's advantage
+**shrinks but does not vanish** when the reference set is widened — it was not an
+artefact of one reference answer.
+
+Single-reference “misses” recovered by another advisor answer: of 7,212 rows
+with own F1 < 0.5, **3,773 (52.3%)** matched some other reference at ≥0.5.
+Subsets: exactly one reference n=3,693 own 0.2954; ≥20 references n=5,721 own
+0.3263 / max-other 0.6641; novel bucket n=850 own 0.2330 / max-other 0.5603.
+
+Interpretation limits, unchanged: these are **historical advisor answers, not
+gold**. Contradictory advice can share a pool (Improvement 1 shows it does), so
+matching any of it is agreement, not agronomic correctness; semantic similarity
+is wording closeness; one grouped split seed only; no human relevance labels
+exist (Phase 2 PENDING). A known artefact is documented rather than hidden:
+1,208 rows (8.7%) have a call-log note as their own “answer”, so the original
+metric scores against a non-answer there; those rows are excluded from the
+informative-own comparison and reported separately. Full report:
+`results/multi_reference/REPORT.md`; raw metrics: `metrics.json`; per-query
+scores: `per_query_dense_all.csv`, `per_query_paired_sample.csv`. A rerun after
+the module rename reproduced `metrics.json` (excluding its timestamp) and both
+CSVs byte-for-byte.
+
+### 10.9 Improvement 4 — out-of-scope detection (synthetic negatives)
+
+Standalone comparison of two rejection strategies over the existing MiniLM
+encoder. The production intent classifier, retriever and safety gate are
+untouched. In-scope rows are real logged agricultural questions from Batch A's
+grouped test split; out-of-scope rows are **180 authored synthetic queries**
+(60 question families × English/Hindi/Hinglish, 12 non-agricultural categories).
+Families are the split unit (36 train / 12 val / 12 test), so no translation or
+paraphrase of a test question is visible during training or threshold selection.
+
+| Approach | Threshold | Precision | Recall | F1 | F1 95% CI | AUROC | False accept (out-of-scope answered) | False reject (agricultural rejected) |
+|---|---:|---:|---:|---:|---|---:|---:|---:|
+| A. kNN distance (k=5, grouped index) | 0.7670 | 0.8537 | 0.9722 | **0.9091** | [0.8315, 0.9706] | 0.9873 | 0.0278 (1/36) | 0.0417 (6/144) |
+| B. MiniLM + logistic regression | 0.8093 | 0.8780 | 1.0000 | **0.9351** | [0.8710, 0.9851] | 0.9927 | 0.0000 (0/36) | 0.0347 (5/144) |
+
+Benchmark: 144 agricultural grouped-test queries (seeded sample) + 36 synthetic
+negatives. Thresholds were selected on **validation only** (5,000 agricultural +
+36 synthetic) under a fixed policy — maximise out-of-scope recall subject to
+≤2% false rejection — giving validation FRR 1.98% for both. The benchmark
+sample is optimistic for the false-rejection quantity: on the **full** 13,831-row
+agricultural test set it is **6.25%** (kNN, 864 rows) and **3.63%** (LR, 502
+rows). Both figures are reported; neither is a deployment estimate.
+
+Synthetic negatives by register: English 12/12 rejected by both detectors, Hindi
+12/12 by both, Hinglish kNN 11/12 and LR 12/12. This says nothing about false
+rejections for Hindi/Hinglish, because no in-scope Hindi/Hinglish evaluation
+data exists — the corpus is English by the project's register detector.
+
+Descriptive sets (excluded from threshold selection and from the benchmark):
+16 ambiguous queries → kNN gives 11 `ambiguous`, 4 `out_of_scope`, 1 `in_scope`
+(75.0% not accepted); LR gives 7 `ambiguous`, 3 `out_of_scope`, 6 `in_scope`
+(56.3% not accepted). 16 mixed-intent queries → kNN 15 `ambiguous`, 1
+`in_scope`; LR 10 `ambiguous`, **6 `in_scope`**, so the LR detector can accept a
+query that also contains an unrelated request. Neither detector implements
+multi-intent handling (Improvement 5), and neither is wired into production.
+
+### 10.10 Metric classification and comparability
 
 | Evidence class | Where it appears |
 |---|---|
 | **Human-validated / expert-reviewed** | **None.** No human labels, no kappa, no agronomist review, no adjudicated ground truth. |
 | **Corpus evaluation with LLM labels** | Original 93.75% silver / 90.0% gold; Batch A grouped intent 0.9372 and grouped retrieval scores. |
-| **Synthetic evaluation** | Phase 1 PII metrics; Improvement 1 pair metrics; Improvement 2 adversarial metrics; original synthetic speech WER. |
+| **Synthetic evaluation** | Phase 1 PII metrics; Improvement 1 pair metrics; Improvement 2 adversarial metrics; Improvement 4 out-of-scope metrics (synthetic negatives); original synthetic speech WER. |
 | **Descriptive corpus statistics** | Improvement 1 rule-fire rates; original leakage and call-log-note shares. |
 | **Pending** | Human annotation, human–human/human–LLM agreement, expert safety review, real Hindi/Hinglish speech, PII prevalence on the corpus. |
 
 The F1 values in §10 are **not comparable with each other**: 0.9559 (PII entity
 span detection), 0.9495 (pairwise conflict detection on authored pairs), 0.8136
-and 0.7222 (conflict detection subsets) and 0.7545 (safety-rule detection) score
-different tasks on different, non-overlapping samples. Averaging or combining
+and 0.7222 (conflict detection subsets) 0.7545 (safety-rule detection) and 0.9351/0.9091 (out-of-scope detection on
+authored synthetic negatives) score different tasks on different,
+non-overlapping samples. Averaging or combining
 them would be meaningless.
 
-### 10.9 Integrity and protection verification
+### 10.11 Integrity and protection verification
 
-- Full suite: **161 passed** (`OMP_NUM_THREADS=1`, macOS).
-- Original + Batch A manifest (`baseline_hashes.json`): **270 files**, 0 changed,
-  0 missing, 0 additions.
-- Pre-Improvement-1 snapshot: **308 files**, 0 changed, 0 missing.
-- Post-Improvement-1 snapshot: **325 files**, 0 changed, 0 missing, 0 additions.
-- Full protection inventory (`batch_b_protection_full.json`): **339 files** —
+- Full suite: **224 passed** (`OMP_NUM_THREADS=1`, macOS); 25 of them are the
+  Improvement 4 focused tests (`pytest tests/unit/test_out_of_scope.py -q`).
+- Improvement 5 focused tests: **11 passed** (`pytest tests/unit/test_behavioural_regression.py -q`).
+- Improvement 4 snapshot (`batch_b_improvement4_hashes.json`): **379 files** —
   220 original, 50 Batch A, 14 Phase 1, 24 Phase 2, 17 Improvement 1,
-  13 Improvement 2, 1 inventory config — 0 changed, 0 missing, 0 unexpected
-  additions before this documentation update.
+  13 Improvement 2, 22 Improvement 3, **18 Improvement 4**, 1 inventory config.
+  `--check batch_b_improvement4_hashes` → **PASS** (0 changed, 0 missing,
+  0 additions).
+- Improvement 5 snapshot (`batch_b_improvement5_hashes.json`): **389 files** —
+  all prior groups plus **10 Improvement 5** (4 experiment modules, 1 runner,
+  4 results files, 1 focused test). `--check batch_b_improvement5_hashes` →
+  **PASS** (0 changed, 0 missing, 0 additions).
+- Improvement 5 rerun end-to-end: `metrics.json`, `cases.csv`, `failures.json`
+  and `REPORT.md` are **byte-identical** across two runs; the case digest and
+  metrics agree (`case_sha256` stable).
+- **Older snapshots now report exactly one changed protected file: this audit.**
+  The audit is itself a hash-recorded original document and Improvements 3–5
+  were required to update it in place. Measured counts: `baseline_hashes.json`
+  (270 files) → 1 changed (audit); 308-file snapshot → 1 changed (audit) + 16
+  approved additions from Improvements 1–2; 325-file snapshot → 1 changed
+  (audit); 339-file snapshot → audit and the protection config changed;
+  361-file Improvement 3 snapshot → config changed + the Improvement 4 test
+  added; 379-file Improvement 4 snapshot → audit changed + the Improvement 5
+  test added. No production source, model, dataset or previous experiment output is
+  among the differences.
+- **Correction:** the earlier statement here that the 270-file baseline showed
+  “0 changed” became inaccurate the moment the audit was edited for Improvement
+  3. It is replaced by the measured counts above; the only changed protected file
+  is the audit itself, and nothing was silently fixed.
 - Pre-existing uncommitted state preserved: `results/calibration.json`,
   `results/hybrid_retrieval.json`, `results/model_selection.json`,
   `scripts/13_hybrid_retrieval.py` (26 insertions / 26 deletions total) and the
   untracked `.venv312/`.
-- No production source (`src/`, `backend/`), model, dataset or experiment output
-  was modified by any Batch A/B improvement.
-- **Expected exception:** this audit file is itself hash-recorded, and the task
-  required editing it in place. After the update the verification scripts report
-  exactly one changed protected file — `KCC_Sahayak_Verification_Audit.md` — and
-  nothing else. The change is documentation only.
+- No production source (`src/`, `backend/`), model, dataset, Batch A output,
+  Phase 1/2 output or Improvement 1/2/3 output was modified by Improvement 4.
+  The two detectors are standalone and are not imported by `src/` or `backend/`.
 
-### 10.10 Issues discovered during this consistency check
+### 10.12 Issues discovered during this consistency check
 
 1. **Test-count label (documentation only).** Intermediate summaries called 52
-   tests “original”; the correct split is 41 original + 11 Batch A = 52 before
-   Batch B, and 161 now (§10.2). No test was skipped or weakened.
+   tests "original"; the correct split is 41 original + 11 Batch A = 52 before
+   Batch B, and 224 now (§10.2). No test was skipped or weakened.
 2. **Stale “41 tests” row in §3.2.** It was accurate at audit time but no longer
    describes `pytest -q` now that `tests/unit/` exists; annotated rather than
    rewritten, and the current count is reported in §10.2.
@@ -587,8 +713,26 @@ them would be meaningless.
 5. **Unchanged limitations.** Grouped retrieval used one split seed; Phase 1 has
    no corpus scan; Improvement 1 has no expert adjudication; Improvement 2 is
    synthetic-only; the annotation study remains PENDING.
+6. **Improvement 3 module-name collision (fixed).** The first version put
+   `metrics.py`/`report.py`/`ranking.py` on `sys.path`; under the full suite
+   these shadowed other experiments' modules in `sys.modules` and produced 12
+   failures that did not appear when the file ran alone. The modules were renamed
+   to `mref_*`; the full suite now passes 224 tests. No assertion was weakened.
+7. **Improvement 3 pool-size statistic (corrected before publication).** The
+   first report printed one row mixing a row-weighted mean (175) with a per-row
+   median (10). Per-row and per-group distributions plus the ≥100-reference skew
+   are now reported separately.
+8. **Stale protection claim (documentation only, now corrected).** §10.10
+   previously reported the 270-file baseline as “0 changed”. That was true only
+   before the audit itself was edited for Improvement 3; the check now reports
+   the audit as the single changed file. The measured counts and the reason are
+   recorded in §10.11 rather than hidden.
+9. **Improvement 4 scope of evidence.** Its negatives are author-written, not
+   real traffic, and the LR detector accepts 6 of 16 mixed-intent queries. No
+   human scope labels and no Hindi/Hinglish in-scope data exist, so the reported
+   F1 values describe synthetic-negative detection only.
 
-### 10.11 Remaining research gaps
+### 10.13 Remaining research gaps
 
 - Complete the 300-query human annotation (two independent annotators), report
   human–human and human–LLM kappa, adjudicate disagreements; extend to Hindi and
@@ -599,9 +743,15 @@ them would be meaningless.
   intent/retrieval/safety effects.
 - PII prevalence measured on the real corpus (not only the synthetic set) and
   redaction wired into indexing/display behind an access-controlled design.
-- Multi-seed retrieval evaluation and multi-reference answer scoring.
-- Out-of-scope detection, multi-intent handling and missing-context
-  clarification (Improvement 3 onwards) — not started.
+- Multi-seed retrieval evaluation (multi-reference answer scoring is now done
+  for one grouped split, without human relevance labels).
+- Multi-intent detection and missing-context clarification — **Improvement 5
+  confirms multi-intent detection is absent**: 17 of 18 authored multi-intent
+  probes fail with `single_label_only`, and no production component was modified.
+  Out-of-scope detection exists only as a standalone experiment on synthetic
+  negatives and is not wired into production.
+- Real (not authored) non-agricultural traffic with human scope labels, to
+  estimate prevalence and detector precision outside the synthetic set.
 - Learned risk classification compared with the regex backstop, with
   coverage–risk curves and validated thresholds.
 
@@ -611,6 +761,34 @@ synthetic or LLM-labelled. The strongest defensible claim remains the
 grouped-split intent and retrieval performance on real logged text, with the
 explicit caveat that labels are LLM-generated. No claim of human verification,
 expert agronomic correctness or real-world safety is supported.
+
+**Addition after Improvement 3:** the single-reference answer metric understates
+retrieval usefulness on this corpus. On rows where another advisor answer to the
+same question exists, max-other-reference F1 exceeds own-reference F1 by +0.24
+(95% CI [0.24, 0.25]) while the random-reference control is below zero, and the
+dense-vs-hybrid gap shrinks but survives the wider reference set. This measures
+agreement with historical advice, not correctness, and no human relevance or
+expert agronomic label exists.
+
+**Addition after Improvement 4:** both out-of-scope detectors separate authored
+synthetic non-agricultural queries from real agricultural test queries with high
+F1 (kNN 0.9091, LR 0.9351) and low false-accept rates (2.8% and 0%). That is
+synthetic-negative performance only: on the full 13,831-row agricultural test
+set the false-rejection rates are 6.25% and 3.63%, the negatives are
+author-written with no human scope labels, no Hindi/Hinglish in-scope evaluation
+data exists, and neither detector is integrated into production.
+
+**Addition after Improvement 5:** a 168-case authored behavioural probe suite
+(`experiments/behavioural_regression/`, `results/behavioural_regression/`) runs
+the deployed rule-based components (register detection, glossary NER, weak-label
+intent, safety gate, conflict detection, PII detection/redaction, out-of-scope
+decision, ASR transcript normalisation, data cleaning, API schema) read-only and
+records expected-versus-observed behaviour. It is deterministic, synthetic and
+explicitly not a production safety or accuracy estimate. Measured: 109/168 passed
+(64.88%), 59 failed, 0 crashes. Failures: 6 degraded, 24 false negatives, 10
+false positives, 18 missing capability, 1 validation gap. Multi-intent detection
+remains absent: 17 of 18 multi-intent cases fail with `single_label_only`.
+No production component was modified.
 
 ---
 

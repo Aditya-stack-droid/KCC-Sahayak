@@ -1,0 +1,42 @@
+{
+  "protocol": {
+    "source": "data/processed/{train,val,test}.csv",
+    "normalisation": "lowercase, collapse whitespace",
+    "note": "row-split leakage; exact/answer/record overlap recomputed, near-duplicate quoted from Batch A"
+  },
+  "sizes": {
+    "train": 111100,
+    "val": 13887,
+    "test": 13888,
+    "index": 124987
+  },
+  "exact_question_leakage": {
+    "test_rows": 13888,
+    "test_question_in_train": 6247,
+    "test_question_in_val": 3053,
+    "test_question_in_index_share": 0.4634
+  },
+  "answer_leakage": {
+    "test_rows_whose_answer_appears_in_index": 5004,
+    "share": 0.3603
+  },
+  "record_leakage": {
+    "test_rows_whose_full_record_appears_in_index": 0,
+    "share": 0.0
+  },
+  "test_internal_duplicates": {
+    "duplicate_question_groups": 1948
+  },
+  "grouped_reference": {
+    "source": "grouped_retrieval.json",
+    "near_duplicate_share_ge_0.95": 0.00094,
+    "near_duplicate_share_ge_0.90": 0.699371,
+    "novel_share_lt_0.80": 0.061456,
+    "note": "after question-grouping; the row split is ~70% near-duplicate, the grouped split ~0.1%"
+  },
+  "interpretation": [
+    "Row-level metrics overstate generalisation because the same question (often an exact string) appears in train and test.",
+    "These are descriptive counts on the shipped splits, not model measurements.",
+    "The grouped split (Batch A) removes near-duplicate leakage by construction and is the leakage-resistant protocol."
+  ]
+}

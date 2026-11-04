@@ -1,8 +1,8 @@
 {
   "temperature": 0.75,
   "ece_silver_uncalibrated": 0.0177,
-  "ece_silver_calibrated": 0.0232,
-  "ece_oof_uncalibrated": 0.0378,
-  "ece_oof_calibrated": 0.0051,
+  "ece_silver_calibrated": 0.0237,
+  "ece_oof_uncalibrated": 0.0381,
+  "ece_oof_calibrated": 0.006,
   "model": "combo_lr_C10_w1"
 }

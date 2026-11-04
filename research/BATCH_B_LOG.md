@@ -629,3 +629,261 @@ inventory config. Improvement 2 files: `experiments/safety_evaluation/` (7),
 - Future approved improvements add roots to `protection.json` and rebuild the
   full manifest; the tool code itself is not inside the inventory.
 - Improvement 3 was not started.
+
+---
+
+## 2026-11-04 — Improvement 3: multi-reference retrieval evaluation
+
+**Status:** COMPLETE for the approved scope (one grouped split, corpus references).
+**Why:** the original answer metric scores a retrieved answer against the single
+answer attached to the row. The corpus holds several advisor answers for the same
+question, so that metric can understate retrieval usefulness.
+
+### Files created
+
+| File | Purpose |
+|---|---|
+| `experiments/multi_reference/mref_refdata.py` | Reference-pool construction, split-leakage assertions, pool diagnostics |
+| `experiments/multi_reference/mref_metrics.py` | Max-reference / max-other / random-control F1, paired bootstrap, effect size |
+| `experiments/multi_reference/mref_embeddings.py` | Content-addressed MiniLM embeddings for answer similarity |
+| `experiments/multi_reference/mref_ranking.py` | Rebuilds Batch A dense + hybrid rankings (200 candidates, seed 42 sample) |
+| `experiments/multi_reference/run_evaluation.py` | Runs P1/P2 protocols, reproduction gate, writes metrics + per-query CSVs |
+| `experiments/multi_reference/mref_report.py` | Renders `results/multi_reference/REPORT.md` from metrics only |
+| `experiments/multi_reference/README.md` | Protocol, metrics, reproduce commands |
+| `tests/unit/test_multi_reference.py` | 27 focused tests |
+| `results/multi_reference/metrics.json` | Raw metrics, gate checks, seed/environment record |
+| `results/multi_reference/per_query_dense_all.csv` | Per-query scores, dense, all test rows |
+| `results/multi_reference/per_query_paired_sample.csv` | Paired dense/hybrid/screened sample scores |
+| `results/multi_reference/REPORT.md` | Generated report |
+| `experiments/batch_b/manifests/batch_b_improvement3_hashes.json` | 361-file protection baseline |
+
+Modified: `experiments/batch_b/inventories/protection.json` (added Improvement 3
+roots + test), `KCC_Sahayak_Verification_Audit.md` (§10 in place),
+`research/BATCH_B_LOG.md` (this entry). No production file, model, dataset,
+Batch A/B output or original result was touched.
+
+### Reference pools
+
+13,831 grouped test rows, 4,850 groups, 11,747 distinct informative references.
+96.6% of rows have >=1 reference, 69.9% >=2, 58.2% >=5; 469 rows (3.4%) excluded.
+Skew: 2.64 references per group (median 1) vs 175 per row (median 10); 21.9% of
+rows sit in groups with >=100 references. Diversity: mean max pairwise token-F1
+0.6201; 64.2% of sampled multi-reference groups < 0.80. Verdict: supported.
+
+### Results (dense, all test rows; paired bootstrap, 2,000 resamples, seed 0)
+
+| Metric | Value |
+|---|---|
+| Own-reference F1 (original) | 0.3217 |
+| Max-reference F1 | 0.5096 |
+| Max-other-reference F1 (n=9,669) | 0.5788 |
+| Random-other-reference F1 (chance control) | 0.2948 |
+| Max semantic similarity (not correctness) | 0.7755 |
+| Max-other − own | +0.2415, CI [0.2362, 0.2465], n=9,768, d_z 0.91 |
+| Max-other − own, informative own only | +0.2453, CI [0.2402, 0.2501], n=9,029 |
+| Random-other − own | −0.0393, CI [−0.0431, −0.0353] |
+| Hybrid − dense, own-reference | +0.0581, CI [0.0480, 0.0676], n=2,998 |
+| Hybrid − dense, max-other (informative own) | +0.0244, CI [0.0120, 0.0370], n=1,947 |
+
+Single-reference misses recovered: 3,773 of 7,212 (52.3%).
+
+### Verification
+
+| Check | Result |
+|---|---|
+| Batch A reproduction gate | **7/7 PASS** (max abs diff 4.2e-5) |
+| Focused tests | **27 passed** |
+| Full regression suite | **188 passed** in 7.07 s |
+| Rerun reproducibility | metrics (minus timestamp) and both CSVs **byte-identical** |
+| Protection snapshot | 361 files; `--check batch_b_improvement3_hashes` PASS |
+| Production code / datasets / previous outputs | unchanged |
+
+### Notes and limitations
+
+- References are historical advisor answers, not gold; contradictory advice can
+  share a pool. Agreement is not correctness.
+- 1,208 rows (8.7%) have a call-log note as their own answer; the original metric
+  scores against non-answers there. Excluded from the informative-own comparison
+  and reported separately.
+- One grouped split seed only; no human relevance labels (Phase 2 PENDING).
+- Module names were prefixed `mref_` after a `sys.modules` collision with other
+  experiments' `metrics`/`report` modules caused 12 suite failures; no assertion
+  was weakened.
+- Improvement 4 was not started.
+
+---
+
+## 2026-11-04 — Improvement 4: out-of-scope detection
+
+**Status:** COMPLETE for the approved scope (synthetic negatives, grouped split).
+**Why:** the deployed classifier must return one of ten agricultural categories, so
+it cannot express "this is not an agricultural question". This is a standalone
+experiment, not a production code path.
+
+### Files created
+
+| File | Purpose |
+|---|---|
+| `experiments/out_of_scope/__init__.py` | Package marker |
+| `experiments/out_of_scope/oos_data.py` | Authored synthetic families, ambiguous/mixed sets, family split, corpus loader |
+| `experiments/out_of_scope/oos_metrics.py` | Binary metrics, bootstrap F1 CI, validation-only threshold policy, sweep |
+| `experiments/out_of_scope/oos_detectors.py` | kNN-distance rejector, embedding+LR detector, three-way decision with evidence override |
+| `experiments/out_of_scope/run_oos_evaluation.py` | Fits/scores both detectors, writes metrics and per-query CSVs |
+| `experiments/out_of_scope/oos_report.py` | Renders `results/out_of_scope/REPORT.md` from metrics only |
+| `experiments/out_of_scope/README.md` | Protocol, evidence class, reproduce commands |
+| `experiments/out_of_scope/data/*.csv` | 180 synthetic negatives, 16 ambiguous, 16 mixed-intent (all authored) |
+| `results/out_of_scope/metrics.json` | Thresholds, metrics, CIs, sensitivity, environment |
+| `results/out_of_scope/per_query_benchmark.csv` | 144 corpus + 36 synthetic per-query scores/decisions |
+| `results/out_of_scope/per_query_in_scope.csv` | All 13,831 agricultural test rows |
+| `results/out_of_scope/REPORT.md` | Generated report |
+| `tests/unit/test_out_of_scope.py` | 25 focused tests |
+| `experiments/batch_b/manifests/batch_b_improvement4_hashes.json` | 379-file protection baseline |
+
+Modified: `experiments/batch_b/inventories/protection.json` (Improvement 4 roots +
+focused test), `experiments/batch_b/README.md` (phase row), `KCC_Sahayak_Verification_Audit.md`
+(§10 in place), `research/BATCH_B_LOG.md` (this entry). No production file, model,
+dataset or previous experiment output was touched.
+
+### Protocol
+
+- In-scope: 13,831 real agricultural rows from Batch A's grouped test split
+  (English by the project register detector).
+- Out-of-scope: 180 authored synthetic queries, 60 families x 3 registers, 12
+  categories; family-level split 36/12/12 (no translation or paraphrase leakage).
+- Thresholds: highest threshold with validation FRR <= 2%, maximising out-of-scope
+  recall; selection on validation only (5,000 agricultural + 36 synthetic).
+- Benchmark: 144 seeded agricultural test rows + 36 synthetic test negatives.
+
+### Results (measured; dataset seed 42, bootstrap seed 0)
+
+| Approach | Threshold | P | R | F1 | F1 95% CI | AUROC | FAR | FRR |
+|---|---:|---:|---:|---:|---|---:|---:|---:|
+| kNN distance (k=5) | 0.7670 | 0.8537 | 0.9722 | 0.9091 | [0.8315, 0.9706] | 0.9873 | 0.0278 | 0.0417 |
+| MiniLM + LR | 0.8093 | 0.8780 | 1.0000 | 0.9351 | [0.8710, 0.9851] | 0.9927 | 0.0000 | 0.0347 |
+
+Full 13,831-row agricultural test set: false rejection 6.25% (kNN, 864 rows) and
+3.63% (LR, 502 rows). Synthetic negatives rejected: en 12/12 both; hi 12/12 both;
+hinglish 11/12 kNN, 12/12 LR. Ambiguous (16): 75.0% / 56.3% not accepted. Mixed
+intent (16): kNN 15 ambiguous + 1 in_scope; LR 10 ambiguous + 6 in_scope.
+
+### Verification
+
+| Check | Result |
+|---|---|
+| Focused tests | **25 passed** |
+| Full regression suite | **213 passed** in 8.39 s |
+| Improvement 4 snapshot | 379 files; `--check batch_b_improvement4_hashes` PASS |
+| Rerun reproducibility | metrics (minus timestamp) and both CSVs byte-identical |
+| JSON vs CSV | confusion counts identical for both detectors |
+| Older snapshots | only the audit changed (documentation edit); no production/result drift |
+
+### Limitations
+
+- Negatives are authored synthetic text, not real traffic; no human scope labels.
+- No Hindi/Hinglish in-scope data, so no multilingual in-scope claim is made.
+- The benchmark FRR understates the full-test FRR (4.2%/3.5% vs 6.3%/3.6%).
+- LR accepts 6 of 16 mixed-intent queries; multi-intent handling is Improvement 5.
+- kNN's in-scope advantage is partly by construction (same logged corpus).
+- Neither detector is integrated into production; the gate and retriever are
+  unchanged.
+
+### Next
+
+Improvement 5 (behavioural regression testing) is **not started**; it waits for
+explicit approval.
+
+---
+
+## 2026-11-04 — Improvement 5: comprehensive behavioural regression testing
+
+**Status:** COMPLETE for the approved scope (authored synthetic probes over
+deployed rule-based components). No production component was modified and no
+model was tuned against the cases.
+
+**Why:** ordinary unit tests verify single functions in isolation. The deployed
+system is a chain of rule-based components (register detection, glossary NER,
+weak-label intent, safety gate, conflict detection, PII detection/redaction,
+out-of-scope decision, ASR transcript normalisation, data cleaning, API schema)
+whose interactions, edge cases and failure modes are not exercised by focused
+unit tests. This improvement adds a deterministic, authored probe suite that
+runs the components read-only and records expected-versus-observed behaviour,
+separating false positives, false negatives, degraded behaviour, missing
+capabilities and validation gaps.
+
+### Files created
+
+| File | Purpose |
+|---|---|
+| `experiments/behavioural_regression/__init__.py` | Package marker |
+| `experiments/behavioural_regression/br_cases.py` | 168 authored synthetic cases across 8 categories |
+| `experiments/behavioural_regression/br_probes.py` | Read-only adapters from cases to production/Batch B components |
+| `experiments/behavioural_regression/br_report.py` | Deterministic metrics, case digest, Markdown renderer |
+| `experiments/behavioural_regression/run_evaluation.py` | Writes `metrics.json`, `cases.csv`, `failures.json`, `REPORT.md` |
+| `tests/unit/test_behavioural_regression.py` | 11 focused tests (inventory, determinism, baseline, gaps, controls) |
+| `results/behavioural_regression/metrics.json` | Raw measured metrics |
+| `results/behavioural_regression/cases.csv` | Per-case expected/observed records |
+| `results/behavioural_regression/failures.json` | Failure records only |
+| `results/behavioural_regression/REPORT.md` | Generated report |
+| `experiments/batch_b/manifests/batch_b_improvement5_hashes.json` | 393-file protection baseline |
+
+Modified: `experiments/batch_b/inventories/protection.json` (Improvement 5 roots
++ focused test), `experiments/batch_b/README.md` (phase row),
+`KCC_Sahayak_Verification_Audit.md` (§10 in place),
+`research/BATCH_B_LOG.md` (this entry). No production file, model, dataset or
+previous experiment output was touched.
+
+### Case categories
+
+| Code | Category | Cases | Passed | Failed |
+|---|---|---:|---:|---:|
+| A | Typo and spelling robustness | 24 | 12 | 12 |
+| B | Hindi / Roman-Hindi / Hinglish | 24 | 13 | 11 |
+| C | Negation and prohibitions | 18 | 8 | 10 |
+| D | Numbers, units, dosage and ambiguity | 23 | 16 | 7 |
+| E | Ambiguous or underspecified queries | 9 | 9 | 0 |
+| F | Multi-intent queries | 18 | 1 | 17 |
+| G | Empty, malformed and oversized input | 27 | 26 | 1 |
+| H | Cross-component interactions | 25 | 24 | 1 |
+| **Total** | | **168** | **109** | **59** |
+
+### Results (measured; deterministic, seed-free)
+
+Pass rate **64.88%** (109/168), **0 unhandled crashes**. Failure types:
+degraded 6, false negative 24, false positive 10, missing capability 18,
+validation gap 1.
+
+Multi-intent: 17 of 18 cases fail with `single_label_only` — the deployed
+weak-label classifier returns one category and no multi-intent signal exists.
+Case F18 (single-intent control) passes. This is a documented capability gap,
+not a harness error.
+
+### Verification
+
+| Check | Result |
+|---|---|
+| Focused tests | **11 passed** |
+| Full regression suite | **224 passed** in 9.60 s |
+| Determinism | two evaluation runs produce byte-identical `metrics.json`, `cases.csv`, `failures.json`, `REPORT.md` |
+| Case digest | `case_sha256` stable and matches the test fixture |
+| Improvement 5 snapshot | 393 files; `--check batch_b_improvement5_hashes` PASS |
+| Older snapshots | only the audit changed (documentation edit); no production/result drift |
+| Pre-existing uncommitted state | `results/calibration.json`, `results/hybrid_retrieval.json`, `results/model_selection.json`, `scripts/13_hybrid_retrieval.py` unchanged |
+
+### Limitations
+
+- All 168 cases are authored synthetic probes, not a representative sample of
+  farmer traffic. Pass/fail encodes expected component behaviour, not agronomic
+  correctness.
+- No MiniLM/FAISS model is loaded: retrieval and end-to-end answer correctness
+  are not exercised.
+- Expected values were fixed before the evaluator was written and no threshold,
+  rule, lexicon or model was tuned against these cases afterwards.
+- Hindi/Hinglish coverage is limited to register detection, glossary NER,
+  weak-label intent, PII and conflict detection; no Hindi/Hinglish in-scope
+  retrieval or ASR evaluation exists.
+- Multi-intent detection is confirmed absent; no mitigation was attempted.
+- No human labels, kappa, expert review or adjudicated ground truth exist.
+
+### Next
+
+No further improvement is approved. Batch C remains not started.

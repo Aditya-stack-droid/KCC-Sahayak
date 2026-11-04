@@ -23,9 +23,28 @@ from answer_quality import informative_mask
 ROOT = Path(__file__).resolve().parents[1]
 INDEX_DIR = ROOT / "models" / "retrieval_index"
 
+# Files the dense/TF-IDF index needs. `models/` is gitignored, so a fresh clone must
+# build them (scripts/03_build_retrieval_index.py) before the app can start.
+REQUIRED_INDEX_FILES = ("kcc_index.faiss", "corpus_metadata.csv", "embeddings.npy")
+
+
+def missing_index_files(index_dir: Path = INDEX_DIR) -> list[str]:
+    """Names of required retrieval-index files absent from ``index_dir``."""
+    index_dir = Path(index_dir)
+    return [name for name in REQUIRED_INDEX_FILES if not (index_dir / name).exists()]
+
 
 class HybridRetriever:
     def __init__(self, index_dir: Path = INDEX_DIR):
+        index_dir = Path(index_dir)
+        missing = missing_index_files(index_dir)
+        if missing:
+            raise FileNotFoundError(
+                f"Retrieval index is missing at '{index_dir}' "
+                f"(absent: {', '.join(missing)}).\n"
+                "Model artefacts are not committed; build them once with:\n"
+                "    python scripts/03_build_retrieval_index.py"
+            )
         self.index = faiss.read_index(str(index_dir / "kcc_index.faiss"))
         self.meta = pd.read_csv(index_dir / "corpus_metadata.csv")
         self.emb = np.load(index_dir / "embeddings.npy", mmap_mode="r")

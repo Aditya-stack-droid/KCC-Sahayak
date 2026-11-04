@@ -1,0 +1,1581 @@
+{
+  "protocol": {
+    "dataset": "experiments/multi_intent/data/multi_intent_cases.csv",
+    "synthetic": true,
+    "provenance": "authored for this evaluation by the person who wrote the decomposer; not adjudicated",
+    "definition": "multi-intent = the query asks for two or more distinct intent classes",
+    "baseline": "src/weak_labels.label_query (existing single-label keyword rule)",
+    "candidate": "experiments/multi_intent/decompose.decompose (rule-based, escalate-only)",
+    "labels": [
+      "Animal Husbandry",
+      "Cultural Practices",
+      "Fisheries",
+      "Government Scheme",
+      "Market Price",
+      "Nutrient Management",
+      "Other",
+      "Plant Protection",
+      "Varietal Information",
+      "Weather"
+    ]
+  },
+  "counts": {
+    "total": 110,
+    "multi": 74,
+    "single": 36,
+    "safety_positive": 80,
+    "by_language": {
+      "en": 81,
+      "devanagari": 10,
+      "roman_hindi": 11,
+      "hinglish": 8
+    },
+    "by_category": {
+      "two_unrelated": 30,
+      "two_related": 40,
+      "three_intent": 5,
+      "shared_entities": 3,
+      "different_crops": 3,
+      "mixed_high_risk": 4,
+      "single_control": 25
+    }
+  },
+  "single": {
+    "exact_set_match": 0.2182,
+    "micro": {
+      "tp": 85,
+      "fp": 25,
+      "fn": 104,
+      "precision": 0.7727,
+      "recall": 0.4497,
+      "f1": 0.5686
+    },
+    "macro": {
+      "per_label": {
+        "Animal Husbandry": {
+          "tp": 8,
+          "fp": 0,
+          "fn": 6,
+          "precision": 1.0,
+          "recall": 0.5714,
+          "f1": 0.7273
+        },
+        "Cultural Practices": {
+          "tp": 0,
+          "fp": 0,
+          "fn": 22,
+          "precision": null,
+          "recall": 0.0,
+          "f1": null
+        },
+        "Fisheries": {
+          "tp": 4,
+          "fp": 0,
+          "fn": 4,
+          "precision": 1.0,
+          "recall": 0.5,
+          "f1": 0.6667
+        },
+        "Government Scheme": {
+          "tp": 4,
+          "fp": 0,
+          "fn": 3,
+          "precision": 1.0,
+          "recall": 0.5714,
+          "f1": 0.7273
+        },
+        "Market Price": {
+          "tp": 9,
+          "fp": 0,
+          "fn": 18,
+          "precision": 1.0,
+          "recall": 0.3333,
+          "f1": 0.5
+        },
+        "Nutrient Management": {
+          "tp": 21,
+          "fp": 1,
+          "fn": 8,
+          "precision": 0.9545,
+          "recall": 0.7241,
+          "f1": 0.8235
+        },
+        "Other": {
+          "tp": 3,
+          "fp": 24,
+          "fn": 10,
+          "precision": 0.1111,
+          "recall": 0.2308,
+          "f1": 0.15
+        },
+        "Plant Protection": {
+          "tp": 18,
+          "fp": 0,
+          "fn": 16,
+          "precision": 1.0,
+          "recall": 0.5294,
+          "f1": 0.6923
+        },
+        "Varietal Information": {
+          "tp": 12,
+          "fp": 0,
+          "fn": 12,
+          "precision": 1.0,
+          "recall": 0.5,
+          "f1": 0.6667
+        },
+        "Weather": {
+          "tp": 6,
+          "fp": 0,
+          "fn": 5,
+          "precision": 1.0,
+          "recall": 0.5455,
+          "f1": 0.7059
+        }
+      },
+      "macro_f1": 0.6289
+    },
+    "missed_intent_rate": 0.5503,
+    "extra_intent_rate": 0.2273,
+    "decomposition_accuracy": 0.0,
+    "safety": {
+      "tp": 59,
+      "fp": 0,
+      "fn": 21,
+      "tn": 30,
+      "precision": 1.0,
+      "recall": 0.7375
+    }
+  },
+  "multi": {
+    "exact_set_match": 0.7818,
+    "micro": {
+      "tp": 167,
+      "fp": 13,
+      "fn": 22,
+      "precision": 0.9278,
+      "recall": 0.8836,
+      "f1": 0.9051
+    },
+    "macro": {
+      "per_label": {
+        "Animal Husbandry": {
+          "tp": 14,
+          "fp": 0,
+          "fn": 0,
+          "precision": 1.0,
+          "recall": 1.0,
+          "f1": 1.0
+        },
+        "Cultural Practices": {
+          "tp": 14,
+          "fp": 0,
+          "fn": 8,
+          "precision": 1.0,
+          "recall": 0.6364,
+          "f1": 0.7778
+        },
+        "Fisheries": {
+          "tp": 7,
+          "fp": 0,
+          "fn": 1,
+          "precision": 1.0,
+          "recall": 0.875,
+          "f1": 0.9333
+        },
+        "Government Scheme": {
+          "tp": 7,
+          "fp": 0,
+          "fn": 0,
+          "precision": 1.0,
+          "recall": 1.0,
+          "f1": 1.0
+        },
+        "Market Price": {
+          "tp": 21,
+          "fp": 0,
+          "fn": 6,
+          "precision": 1.0,
+          "recall": 0.7778,
+          "f1": 0.875
+        },
+        "Nutrient Management": {
+          "tp": 29,
+          "fp": 1,
+          "fn": 0,
+          "precision": 0.9667,
+          "recall": 1.0,
+          "f1": 0.9831
+        },
+        "Other": {
+          "tp": 13,
+          "fp": 12,
+          "fn": 0,
+          "precision": 0.52,
+          "recall": 1.0,
+          "f1": 0.6842
+        },
+        "Plant Protection": {
+          "tp": 29,
+          "fp": 0,
+          "fn": 5,
+          "precision": 1.0,
+          "recall": 0.8529,
+          "f1": 0.9206
+        },
+        "Varietal Information": {
+          "tp": 22,
+          "fp": 0,
+          "fn": 2,
+          "precision": 1.0,
+          "recall": 0.9167,
+          "f1": 0.9565
+        },
+        "Weather": {
+          "tp": 11,
+          "fp": 0,
+          "fn": 0,
+          "precision": 1.0,
+          "recall": 1.0,
+          "f1": 1.0
+        }
+      },
+      "macro_f1": 0.913
+    },
+    "missed_intent_rate": 0.1164,
+    "extra_intent_rate": 0.0722,
+    "decomposition_accuracy": 0.9054,
+    "safety": {
+      "tp": 76,
+      "fp": 0,
+      "fn": 4,
+      "tn": 30,
+      "precision": 1.0,
+      "recall": 0.95
+    }
+  },
+  "by_language": {
+    "devanagari": {
+      "n": 10,
+      "single": {
+        "exact_set_match": 0.0,
+        "micro": {
+          "tp": 0,
+          "fp": 10,
+          "fn": 17,
+          "precision": 0.0,
+          "recall": 0.0,
+          "f1": null
+        },
+        "macro": {
+          "per_label": {
+            "Animal Husbandry": {
+              "tp": 0,
+              "fp": 0,
+              "fn": 1,
+              "precision": null,
+              "recall": 0.0,
+              "f1": null
+            },
+            "Cultural Practices": {
+              "tp": 0,
+              "fp": 0,
+              "fn": 2,
+              "precision": null,
+              "recall": 0.0,
+              "f1": null
+            },
+            "Fisheries": {
+              "tp": 0,
+              "fp": 0,
+              "fn": 1,
+              "precision": null,
+              "recall": 0.0,
+              "f1": null
+            },
+            "Government Scheme": {
+              "tp": 0,
+              "fp": 0,
+              "fn": 1,
+              "precision": null,
+              "recall": 0.0,
+              "f1": null
+            },
+            "Market Price": {
+              "tp": 0,
+              "fp": 0,
+              "fn": 3,
+              "precision": null,
+              "recall": 0.0,
+              "f1": null
+            },
+            "Nutrient Management": {
+              "tp": 0,
+              "fp": 0,
+              "fn": 3,
+              "precision": null,
+              "recall": 0.0,
+              "f1": null
+            },
+            "Other": {
+              "tp": 0,
+              "fp": 10,
+              "fn": 0,
+              "precision": 0.0,
+              "recall": null,
+              "f1": null
+            },
+            "Plant Protection": {
+              "tp": 0,
+              "fp": 0,
+              "fn": 3,
+              "precision": null,
+              "recall": 0.0,
+              "f1": null
+            },
+            "Varietal Information": {
+              "tp": 0,
+              "fp": 0,
+              "fn": 2,
+              "precision": null,
+              "recall": 0.0,
+              "f1": null
+            },
+            "Weather": {
+              "tp": 0,
+              "fp": 0,
+              "fn": 1,
+              "precision": null,
+              "recall": 0.0,
+              "f1": null
+            }
+          },
+          "macro_f1": null
+        },
+        "missed_intent_rate": 1.0,
+        "extra_intent_rate": 1.0,
+        "decomposition_accuracy": 0.0
+      },
+      "multi": {
+        "exact_set_match": 0.9,
+        "micro": {
+          "tp": 16,
+          "fp": 0,
+          "fn": 1,
+          "precision": 1.0,
+          "recall": 0.9412,
+          "f1": 0.9697
+        },
+        "macro": {
+          "per_label": {
+            "Animal Husbandry": {
+              "tp": 1,
+              "fp": 0,
+              "fn": 0,
+              "precision": 1.0,
+              "recall": 1.0,
+              "f1": 1.0
+            },
+            "Cultural Practices": {
+              "tp": 2,
+              "fp": 0,
+              "fn": 0,
+              "precision": 1.0,
+              "recall": 1.0,
+              "f1": 1.0
+            },
+            "Fisheries": {
+              "tp": 1,
+              "fp": 0,
+              "fn": 0,
+              "precision": 1.0,
+              "recall": 1.0,
+              "f1": 1.0
+            },
+            "Government Scheme": {
+              "tp": 1,
+              "fp": 0,
+              "fn": 0,
+              "precision": 1.0,
+              "recall": 1.0,
+              "f1": 1.0
+            },
+            "Market Price": {
+              "tp": 3,
+              "fp": 0,
+              "fn": 0,
+              "precision": 1.0,
+              "recall": 1.0,
+              "f1": 1.0
+            },
+            "Nutrient Management": {
+              "tp": 3,
+              "fp": 0,
+              "fn": 0,
+              "precision": 1.0,
+              "recall": 1.0,
+              "f1": 1.0
+            },
+            "Other": {
+              "tp": 0,
+              "fp": 0,
+              "fn": 0,
+              "precision": null,
+              "recall": null,
+              "f1": null
+            },
+            "Plant Protection": {
+              "tp": 2,
+              "fp": 0,
+              "fn": 1,
+              "precision": 1.0,
+              "recall": 0.6667,
+              "f1": 0.8
+            },
+            "Varietal Information": {
+              "tp": 2,
+              "fp": 0,
+              "fn": 0,
+              "precision": 1.0,
+              "recall": 1.0,
+              "f1": 1.0
+            },
+            "Weather": {
+              "tp": 1,
+              "fp": 0,
+              "fn": 0,
+              "precision": 1.0,
+              "recall": 1.0,
+              "f1": 1.0
+            }
+          },
+          "macro_f1": 0.9778
+        },
+        "missed_intent_rate": 0.0588,
+        "extra_intent_rate": 0.0,
+        "decomposition_accuracy": 0.8571
+      }
+    },
+    "en": {
+      "n": 81,
+      "single": {
+        "exact_set_match": 0.284,
+        "micro": {
+          "tp": 74,
+          "fp": 7,
+          "fn": 65,
+          "precision": 0.9136,
+          "recall": 0.5324,
+          "f1": 0.6727
+        },
+        "macro": {
+          "per_label": {
+            "Animal Husbandry": {
+              "tp": 8,
+              "fp": 0,
+              "fn": 3,
+              "precision": 1.0,
+              "recall": 0.7273,
+              "f1": 0.8421
+            },
+            "Cultural Practices": {
+              "tp": 0,
+              "fp": 0,
+              "fn": 18,
+              "precision": null,
+              "recall": 0.0,
+              "f1": null
+            },
+            "Fisheries": {
+              "tp": 4,
+              "fp": 0,
+              "fn": 1,
+              "precision": 1.0,
+              "recall": 0.8,
+              "f1": 0.8889
+            },
+            "Government Scheme": {
+              "tp": 2,
+              "fp": 0,
+              "fn": 2,
+              "precision": 1.0,
+              "recall": 0.5,
+              "f1": 0.6667
+            },
+            "Market Price": {
+              "tp": 6,
+              "fp": 0,
+              "fn": 11,
+              "precision": 1.0,
+              "recall": 0.3529,
+              "f1": 0.5217
+            },
+            "Nutrient Management": {
+              "tp": 18,
+              "fp": 1,
+              "fn": 3,
+              "precision": 0.9474,
+              "recall": 0.8571,
+              "f1": 0.9
+            },
+            "Other": {
+              "tp": 3,
+              "fp": 6,
+              "fn": 10,
+              "precision": 0.3333,
+              "recall": 0.2308,
+              "f1": 0.2727
+            },
+            "Plant Protection": {
+              "tp": 16,
+              "fp": 0,
+              "fn": 8,
+              "precision": 1.0,
+              "recall": 0.6667,
+              "f1": 0.8
+            },
+            "Varietal Information": {
+              "tp": 11,
+              "fp": 0,
+              "fn": 7,
+              "precision": 1.0,
+              "recall": 0.6111,
+              "f1": 0.7586
+            },
+            "Weather": {
+              "tp": 6,
+              "fp": 0,
+              "fn": 2,
+              "precision": 1.0,
+              "recall": 0.75,
+              "f1": 0.8571
+            }
+          },
+          "macro_f1": 0.7231
+        },
+        "missed_intent_rate": 0.4676,
+        "extra_intent_rate": 0.0864,
+        "decomposition_accuracy": 0.0
+      },
+      "multi": {
+        "exact_set_match": 0.7407,
+        "micro": {
+          "tp": 120,
+          "fp": 12,
+          "fn": 19,
+          "precision": 0.9091,
+          "recall": 0.8633,
+          "f1": 0.8856
+        },
+        "macro": {
+          "per_label": {
+            "Animal Husbandry": {
+              "tp": 11,
+              "fp": 0,
+              "fn": 0,
+              "precision": 1.0,
+              "recall": 1.0,
+              "f1": 1.0
+            },
+            "Cultural Practices": {
+              "tp": 10,
+              "fp": 0,
+              "fn": 8,
+              "precision": 1.0,
+              "recall": 0.5556,
+              "f1": 0.7143
+            },
+            "Fisheries": {
+              "tp": 4,
+              "fp": 0,
+              "fn": 1,
+              "precision": 1.0,
+              "recall": 0.8,
+              "f1": 0.8889
+            },
+            "Government Scheme": {
+              "tp": 4,
+              "fp": 0,
+              "fn": 0,
+              "precision": 1.0,
+              "recall": 1.0,
+              "f1": 1.0
+            },
+            "Market Price": {
+              "tp": 11,
+              "fp": 0,
+              "fn": 6,
+              "precision": 1.0,
+              "recall": 0.6471,
+              "f1": 0.7857
+            },
+            "Nutrient Management": {
+              "tp": 21,
+              "fp": 1,
+              "fn": 0,
+              "precision": 0.9545,
+              "recall": 1.0,
+              "f1": 0.9767
+            },
+            "Other": {
+              "tp": 13,
+              "fp": 11,
+              "fn": 0,
+              "precision": 0.5417,
+              "recall": 1.0,
+              "f1": 0.7027
+            },
+            "Plant Protection": {
+              "tp": 22,
+              "fp": 0,
+              "fn": 2,
+              "precision": 1.0,
+              "recall": 0.9167,
+              "f1": 0.9565
+            },
+            "Varietal Information": {
+              "tp": 16,
+              "fp": 0,
+              "fn": 2,
+              "precision": 1.0,
+              "recall": 0.8889,
+              "f1": 0.9412
+            },
+            "Weather": {
+              "tp": 8,
+              "fp": 0,
+              "fn": 0,
+              "precision": 1.0,
+              "recall": 1.0,
+              "f1": 1.0
+            }
+          },
+          "macro_f1": 0.8966
+        },
+        "missed_intent_rate": 0.1367,
+        "extra_intent_rate": 0.0909,
+        "decomposition_accuracy": 0.9057
+      }
+    },
+    "hinglish": {
+      "n": 8,
+      "single": {
+        "exact_set_match": 0.0,
+        "micro": {
+          "tp": 6,
+          "fp": 2,
+          "fn": 8,
+          "precision": 0.75,
+          "recall": 0.4286,
+          "f1": 0.5455
+        },
+        "macro": {
+          "per_label": {
+            "Animal Husbandry": {
+              "tp": 0,
+              "fp": 0,
+              "fn": 2,
+              "precision": null,
+              "recall": 0.0,
+              "f1": null
+            },
+            "Cultural Practices": {
+              "tp": 0,
+              "fp": 0,
+              "fn": 1,
+              "precision": null,
+              "recall": 0.0,
+              "f1": null
+            },
+            "Fisheries": {
+              "tp": 0,
+              "fp": 0,
+              "fn": 0,
+              "precision": null,
+              "recall": null,
+              "f1": null
+            },
+            "Government Scheme": {
+              "tp": 1,
+              "fp": 0,
+              "fn": 0,
+              "precision": 1.0,
+              "recall": 1.0,
+              "f1": 1.0
+            },
+            "Market Price": {
+              "tp": 1,
+              "fp": 0,
+              "fn": 1,
+              "precision": 1.0,
+              "recall": 0.5,
+              "f1": 0.6667
+            },
+            "Nutrient Management": {
+              "tp": 1,
+              "fp": 0,
+              "fn": 2,
+              "precision": 1.0,
+              "recall": 0.3333,
+              "f1": 0.5
+            },
+            "Other": {
+              "tp": 0,
+              "fp": 2,
+              "fn": 0,
+              "precision": 0.0,
+              "recall": null,
+              "f1": null
+            },
+            "Plant Protection": {
+              "tp": 2,
+              "fp": 0,
+              "fn": 1,
+              "precision": 1.0,
+              "recall": 0.6667,
+              "f1": 0.8
+            },
+            "Varietal Information": {
+              "tp": 1,
+              "fp": 0,
+              "fn": 0,
+              "precision": 1.0,
+              "recall": 1.0,
+              "f1": 1.0
+            },
+            "Weather": {
+              "tp": 0,
+              "fp": 0,
+              "fn": 1,
+              "precision": null,
+              "recall": 0.0,
+              "f1": null
+            }
+          },
+          "macro_f1": 0.7933
+        },
+        "missed_intent_rate": 0.5714,
+        "extra_intent_rate": 0.25,
+        "decomposition_accuracy": 0.0
+      },
+      "multi": {
+        "exact_set_match": 1.0,
+        "micro": {
+          "tp": 14,
+          "fp": 0,
+          "fn": 0,
+          "precision": 1.0,
+          "recall": 1.0,
+          "f1": 1.0
+        },
+        "macro": {
+          "per_label": {
+            "Animal Husbandry": {
+              "tp": 2,
+              "fp": 0,
+              "fn": 0,
+              "precision": 1.0,
+              "recall": 1.0,
+              "f1": 1.0
+            },
+            "Cultural Practices": {
+              "tp": 1,
+              "fp": 0,
+              "fn": 0,
+              "precision": 1.0,
+              "recall": 1.0,
+              "f1": 1.0
+            },
+            "Fisheries": {
+              "tp": 0,
+              "fp": 0,
+              "fn": 0,
+              "precision": null,
+              "recall": null,
+              "f1": null
+            },
+            "Government Scheme": {
+              "tp": 1,
+              "fp": 0,
+              "fn": 0,
+              "precision": 1.0,
+              "recall": 1.0,
+              "f1": 1.0
+            },
+            "Market Price": {
+              "tp": 2,
+              "fp": 0,
+              "fn": 0,
+              "precision": 1.0,
+              "recall": 1.0,
+              "f1": 1.0
+            },
+            "Nutrient Management": {
+              "tp": 3,
+              "fp": 0,
+              "fn": 0,
+              "precision": 1.0,
+              "recall": 1.0,
+              "f1": 1.0
+            },
+            "Other": {
+              "tp": 0,
+              "fp": 0,
+              "fn": 0,
+              "precision": null,
+              "recall": null,
+              "f1": null
+            },
+            "Plant Protection": {
+              "tp": 3,
+              "fp": 0,
+              "fn": 0,
+              "precision": 1.0,
+              "recall": 1.0,
+              "f1": 1.0
+            },
+            "Varietal Information": {
+              "tp": 1,
+              "fp": 0,
+              "fn": 0,
+              "precision": 1.0,
+              "recall": 1.0,
+              "f1": 1.0
+            },
+            "Weather": {
+              "tp": 1,
+              "fp": 0,
+              "fn": 0,
+              "precision": 1.0,
+              "recall": 1.0,
+              "f1": 1.0
+            }
+          },
+          "macro_f1": 1.0
+        },
+        "missed_intent_rate": 0.0,
+        "extra_intent_rate": 0.0,
+        "decomposition_accuracy": 1.0
+      }
+    },
+    "roman_hindi": {
+      "n": 11,
+      "single": {
+        "exact_set_match": 0.0909,
+        "micro": {
+          "tp": 5,
+          "fp": 6,
+          "fn": 14,
+          "precision": 0.4545,
+          "recall": 0.2632,
+          "f1": 0.3333
+        },
+        "macro": {
+          "per_label": {
+            "Animal Husbandry": {
+              "tp": 0,
+              "fp": 0,
+              "fn": 0,
+              "precision": null,
+              "recall": null,
+              "f1": null
+            },
+            "Cultural Practices": {
+              "tp": 0,
+              "fp": 0,
+              "fn": 1,
+              "precision": null,
+              "recall": 0.0,
+              "f1": null
+            },
+            "Fisheries": {
+              "tp": 0,
+              "fp": 0,
+              "fn": 2,
+              "precision": null,
+              "recall": 0.0,
+              "f1": null
+            },
+            "Government Scheme": {
+              "tp": 1,
+              "fp": 0,
+              "fn": 0,
+              "precision": 1.0,
+              "recall": 1.0,
+              "f1": 1.0
+            },
+            "Market Price": {
+              "tp": 2,
+              "fp": 0,
+              "fn": 3,
+              "precision": 1.0,
+              "recall": 0.4,
+              "f1": 0.5714
+            },
+            "Nutrient Management": {
+              "tp": 2,
+              "fp": 0,
+              "fn": 0,
+              "precision": 1.0,
+              "recall": 1.0,
+              "f1": 1.0
+            },
+            "Other": {
+              "tp": 0,
+              "fp": 6,
+              "fn": 0,
+              "precision": 0.0,
+              "recall": null,
+              "f1": null
+            },
+            "Plant Protection": {
+              "tp": 0,
+              "fp": 0,
+              "fn": 4,
+              "precision": null,
+              "recall": 0.0,
+              "f1": null
+            },
+            "Varietal Information": {
+              "tp": 0,
+              "fp": 0,
+              "fn": 3,
+              "precision": null,
+              "recall": 0.0,
+              "f1": null
+            },
+            "Weather": {
+              "tp": 0,
+              "fp": 0,
+              "fn": 1,
+              "precision": null,
+              "recall": 0.0,
+              "f1": null
+            }
+          },
+          "macro_f1": 0.8571
+        },
+        "missed_intent_rate": 0.7368,
+        "extra_intent_rate": 0.5455,
+        "decomposition_accuracy": 0.0
+      },
+      "multi": {
+        "exact_set_match": 0.8182,
+        "micro": {
+          "tp": 17,
+          "fp": 1,
+          "fn": 2,
+          "precision": 0.9444,
+          "recall": 0.8947,
+          "f1": 0.9189
+        },
+        "macro": {
+          "per_label": {
+            "Animal Husbandry": {
+              "tp": 0,
+              "fp": 0,
+              "fn": 0,
+              "precision": null,
+              "recall": null,
+              "f1": null
+            },
+            "Cultural Practices": {
+              "tp": 1,
+              "fp": 0,
+              "fn": 0,
+              "precision": 1.0,
+              "recall": 1.0,
+              "f1": 1.0
+            },
+            "Fisheries": {
+              "tp": 2,
+              "fp": 0,
+              "fn": 0,
+              "precision": 1.0,
+              "recall": 1.0,
+              "f1": 1.0
+            },
+            "Government Scheme": {
+              "tp": 1,
+              "fp": 0,
+              "fn": 0,
+              "precision": 1.0,
+              "recall": 1.0,
+              "f1": 1.0
+            },
+            "Market Price": {
+              "tp": 5,
+              "fp": 0,
+              "fn": 0,
+              "precision": 1.0,
+              "recall": 1.0,
+              "f1": 1.0
+            },
+            "Nutrient Management": {
+              "tp": 2,
+              "fp": 0,
+              "fn": 0,
+              "precision": 1.0,
+              "recall": 1.0,
+              "f1": 1.0
+            },
+            "Other": {
+              "tp": 0,
+              "fp": 1,
+              "fn": 0,
+              "precision": 0.0,
+              "recall": null,
+              "f1": null
+            },
+            "Plant Protection": {
+              "tp": 2,
+              "fp": 0,
+              "fn": 2,
+              "precision": 1.0,
+              "recall": 0.5,
+              "f1": 0.6667
+            },
+            "Varietal Information": {
+              "tp": 3,
+              "fp": 0,
+              "fn": 0,
+              "precision": 1.0,
+              "recall": 1.0,
+              "f1": 1.0
+            },
+            "Weather": {
+              "tp": 1,
+              "fp": 0,
+              "fn": 0,
+              "precision": 1.0,
+              "recall": 1.0,
+              "f1": 1.0
+            }
+          },
+          "macro_f1": 0.9583
+        },
+        "missed_intent_rate": 0.1053,
+        "extra_intent_rate": 0.0556,
+        "decomposition_accuracy": 0.875
+      }
+    }
+  },
+  "failures": {
+    "multi_missed_intents": [
+      {
+        "case_id": "mi-001",
+        "text": "What is the price of urea and how much should I apply to my wheat crop?",
+        "gold": [
+          "Market Price",
+          "Nutrient Management"
+        ],
+        "predicted": [
+          "Nutrient Management",
+          "Other"
+        ],
+        "missing": [
+          "Market Price"
+        ]
+      },
+      {
+        "case_id": "mi-020",
+        "text": "My tomato leaves are turning yellow and insects are eating them. What pesticide should I use?",
+        "gold": [
+          "Cultural Practices",
+          "Plant Protection"
+        ],
+        "predicted": [
+          "Other",
+          "Plant Protection"
+        ],
+        "missing": [
+          "Cultural Practices"
+        ]
+      },
+      {
+        "case_id": "mi-026",
+        "text": "What is the price of DAP, how much do I apply to wheat, and which variety is best?",
+        "gold": [
+          "Market Price",
+          "Nutrient Management",
+          "Varietal Information"
+        ],
+        "predicted": [
+          "Nutrient Management",
+          "Varietal Information"
+        ],
+        "missing": [
+          "Market Price"
+        ]
+      },
+      {
+        "case_id": "mi-027",
+        "text": "How do I control termites, when should I irrigate, and what is the MSP for sugarcane?",
+        "gold": [
+          "Cultural Practices",
+          "Market Price",
+          "Plant Protection"
+        ],
+        "predicted": [
+          "Cultural Practices",
+          "Market Price"
+        ],
+        "missing": [
+          "Plant Protection"
+        ]
+      },
+      {
+        "case_id": "mi-028",
+        "text": "My cow is sick, my pond is dry, and what is the weather tomorrow?",
+        "gold": [
+          "Animal Husbandry",
+          "Fisheries",
+          "Weather"
+        ],
+        "predicted": [
+          "Animal Husbandry",
+          "Weather"
+        ],
+        "missing": [
+          "Fisheries"
+        ]
+      },
+      {
+        "case_id": "mi-029",
+        "text": "Which seed for mustard, how much urea, and how do I spray for aphids?",
+        "gold": [
+          "Nutrient Management",
+          "Plant Protection",
+          "Varietal Information"
+        ],
+        "predicted": [
+          "Nutrient Management",
+          "Plant Protection"
+        ],
+        "missing": [
+          "Varietal Information"
+        ]
+      },
+      {
+        "case_id": "mi-030",
+        "text": "Tell me the wheat variety, the fertiliser dose, and the market rate.",
+        "gold": [
+          "Market Price",
+          "Nutrient Management",
+          "Varietal Information"
+        ],
+        "predicted": [
+          "Market Price",
+          "Nutrient Management"
+        ],
+        "missing": [
+          "Varietal Information"
+        ]
+      },
+      {
+        "case_id": "mi-036",
+        "text": "\u0938\u0930\u0938\u094b\u0902 \u092e\u0947\u0902 \u0915\u0940\u0921\u093c\u093e \u0932\u0917\u093e \u0939\u0948 \u0914\u0930 \u092c\u0940\u091c \u0915\u094c\u0928 \u0938\u093e \u092c\u094b\u090f\u0902?",
+        "gold": [
+          "Plant Protection",
+          "Varietal Information"
+        ],
+        "predicted": [
+          "Varietal Information"
+        ],
+        "missing": [
+          "Plant Protection"
+        ]
+      },
+      {
+        "case_id": "mi-040",
+        "text": "gehu me ratua hai aur urea kitna dalen?",
+        "gold": [
+          "Nutrient Management",
+          "Plant Protection"
+        ],
+        "predicted": [
+          "Nutrient Management"
+        ],
+        "missing": [
+          "Plant Protection"
+        ]
+      },
+      {
+        "case_id": "mi-057",
+        "text": "How do I sow wheat and what is the monocrotophos dose for aphids?",
+        "gold": [
+          "Cultural Practices",
+          "Plant Protection"
+        ],
+        "predicted": [
+          "Cultural Practices",
+          "Nutrient Management"
+        ],
+        "missing": [
+          "Plant Protection"
+        ]
+      },
+      {
+        "case_id": "mi-067",
+        "text": "gehu me ratua hai kya karein?",
+        "gold": [
+          "Plant Protection"
+        ],
+        "predicted": [
+          "Other"
+        ],
+        "missing": [
+          "Plant Protection"
+        ]
+      },
+      {
+        "case_id": "mi-081",
+        "text": "My tomato leaves are turning yellow.",
+        "gold": [
+          "Cultural Practices"
+        ],
+        "predicted": [
+          "Other"
+        ],
+        "missing": [
+          "Cultural Practices"
+        ]
+      },
+      {
+        "case_id": "mi-086",
+        "text": "What is the DAP price and the urea dose for wheat?",
+        "gold": [
+          "Market Price",
+          "Nutrient Management"
+        ],
+        "predicted": [
+          "Nutrient Management"
+        ],
+        "missing": [
+          "Market Price"
+        ]
+      },
+      {
+        "case_id": "mi-087",
+        "text": "How do I store wheat and where can I sell it?",
+        "gold": [
+          "Cultural Practices",
+          "Market Price"
+        ],
+        "predicted": [
+          "Other"
+        ],
+        "missing": [
+          "Cultural Practices",
+          "Market Price"
+        ]
+      },
+      {
+        "case_id": "mi-088",
+        "text": "Which fungicide for blight and when should I spray it?",
+        "gold": [
+          "Cultural Practices",
+          "Plant Protection"
+        ],
+        "predicted": [
+          "Plant Protection"
+        ],
+        "missing": [
+          "Cultural Practices"
+        ]
+      },
+      {
+        "case_id": "mi-091",
+        "text": "How do I test my soil and how much zinc do I add?",
+        "gold": [
+          "Cultural Practices",
+          "Nutrient Management"
+        ],
+        "predicted": [
+          "Nutrient Management",
+          "Other"
+        ],
+        "missing": [
+          "Cultural Practices"
+        ]
+      },
+      {
+        "case_id": "mi-096",
+        "text": "What is the urea price and is it good for paddy?",
+        "gold": [
+          "Market Price",
+          "Nutrient Management"
+        ],
+        "predicted": [
+          "Nutrient Management",
+          "Other"
+        ],
+        "missing": [
+          "Market Price"
+        ]
+      },
+      {
+        "case_id": "mi-097",
+        "text": "Tell me the mustard variety and the sowing time.",
+        "gold": [
+          "Cultural Practices",
+          "Varietal Information"
+        ],
+        "predicted": [
+          "Varietal Information"
+        ],
+        "missing": [
+          "Cultural Practices"
+        ]
+      },
+      {
+        "case_id": "mi-108",
+        "text": "How do I increase tomato yield and which variety should I buy?",
+        "gold": [
+          "Cultural Practices",
+          "Varietal Information"
+        ],
+        "predicted": [
+          "Other",
+          "Varietal Information"
+        ],
+        "missing": [
+          "Cultural Practices"
+        ]
+      },
+      {
+        "case_id": "mi-109",
+        "text": "My goat is sick and what is the price of goat milk?",
+        "gold": [
+          "Animal Husbandry",
+          "Market Price"
+        ],
+        "predicted": [
+          "Animal Husbandry"
+        ],
+        "missing": [
+          "Market Price"
+        ]
+      },
+      {
+        "case_id": "mi-110",
+        "text": "Which crop after paddy and how much fertiliser for it?",
+        "gold": [
+          "Cultural Practices",
+          "Nutrient Management"
+        ],
+        "predicted": [
+          "Nutrient Management",
+          "Other"
+        ],
+        "missing": [
+          "Cultural Practices"
+        ]
+      }
+    ],
+    "multi_extra_intents": [
+      {
+        "case_id": "mi-001",
+        "text": "What is the price of urea and how much should I apply to my wheat crop?",
+        "gold": [
+          "Market Price",
+          "Nutrient Management"
+        ],
+        "predicted": [
+          "Nutrient Management",
+          "Other"
+        ],
+        "extra": [
+          "Other"
+        ]
+      },
+      {
+        "case_id": "mi-020",
+        "text": "My tomato leaves are turning yellow and insects are eating them. What pesticide should I use?",
+        "gold": [
+          "Cultural Practices",
+          "Plant Protection"
+        ],
+        "predicted": [
+          "Other",
+          "Plant Protection"
+        ],
+        "extra": [
+          "Other"
+        ]
+      },
+      {
+        "case_id": "mi-051",
+        "text": "Wheat has rust and the wheat price is falling; what should I do?",
+        "gold": [
+          "Market Price",
+          "Plant Protection"
+        ],
+        "predicted": [
+          "Market Price",
+          "Other",
+          "Plant Protection"
+        ],
+        "extra": [
+          "Other"
+        ]
+      },
+      {
+        "case_id": "mi-057",
+        "text": "How do I sow wheat and what is the monocrotophos dose for aphids?",
+        "gold": [
+          "Cultural Practices",
+          "Plant Protection"
+        ],
+        "predicted": [
+          "Cultural Practices",
+          "Nutrient Management"
+        ],
+        "extra": [
+          "Nutrient Management"
+        ]
+      },
+      {
+        "case_id": "mi-067",
+        "text": "gehu me ratua hai kya karein?",
+        "gold": [
+          "Plant Protection"
+        ],
+        "predicted": [
+          "Other"
+        ],
+        "extra": [
+          "Other"
+        ]
+      },
+      {
+        "case_id": "mi-081",
+        "text": "My tomato leaves are turning yellow.",
+        "gold": [
+          "Cultural Practices"
+        ],
+        "predicted": [
+          "Other"
+        ],
+        "extra": [
+          "Other"
+        ]
+      },
+      {
+        "case_id": "mi-087",
+        "text": "How do I store wheat and where can I sell it?",
+        "gold": [
+          "Cultural Practices",
+          "Market Price"
+        ],
+        "predicted": [
+          "Other"
+        ],
+        "extra": [
+          "Other"
+        ]
+      },
+      {
+        "case_id": "mi-091",
+        "text": "How do I test my soil and how much zinc do I add?",
+        "gold": [
+          "Cultural Practices",
+          "Nutrient Management"
+        ],
+        "predicted": [
+          "Nutrient Management",
+          "Other"
+        ],
+        "extra": [
+          "Other"
+        ]
+      },
+      {
+        "case_id": "mi-094",
+        "text": "How do I prepare a fish pond and which species to stock?",
+        "gold": [
+          "Fisheries"
+        ],
+        "predicted": [
+          "Fisheries",
+          "Other"
+        ],
+        "extra": [
+          "Other"
+        ]
+      },
+      {
+        "case_id": "mi-096",
+        "text": "What is the urea price and is it good for paddy?",
+        "gold": [
+          "Market Price",
+          "Nutrient Management"
+        ],
+        "predicted": [
+          "Nutrient Management",
+          "Other"
+        ],
+        "extra": [
+          "Other"
+        ]
+      },
+      {
+        "case_id": "mi-098",
+        "text": "My pond has low oxygen and how do I treat it?",
+        "gold": [
+          "Fisheries"
+        ],
+        "predicted": [
+          "Fisheries",
+          "Other"
+        ],
+        "extra": [
+          "Other"
+        ]
+      },
+      {
+        "case_id": "mi-108",
+        "text": "How do I increase tomato yield and which variety should I buy?",
+        "gold": [
+          "Cultural Practices",
+          "Varietal Information"
+        ],
+        "predicted": [
+          "Other",
+          "Varietal Information"
+        ],
+        "extra": [
+          "Other"
+        ]
+      },
+      {
+        "case_id": "mi-110",
+        "text": "Which crop after paddy and how much fertiliser for it?",
+        "gold": [
+          "Cultural Practices",
+          "Nutrient Management"
+        ],
+        "predicted": [
+          "Nutrient Management",
+          "Other"
+        ],
+        "extra": [
+          "Other"
+        ]
+      }
+    ],
+    "safety_missed": [
+      "mi-036",
+      "mi-067",
+      "mi-087",
+      "mi-109"
+    ]
+  },
+  "limitations": [
+    "Cases are synthetic and authored by the decomposer's author; not real traffic.",
+    "Gold intent sets are authored judgements; multi-intent labelling is inherently subjective.",
+    "The baseline is the keyword rule, not the deployed ML classifier (no model loaded here).",
+    "The decomposer reuses English keyword rules plus a small bilingual cue lexicon; it is not a trained multi-label model.",
+    "It is not wired into the production gate; it would only add an escalation signal."
+  ]
+}

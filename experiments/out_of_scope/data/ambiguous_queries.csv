@@ -1,0 +1,17 @@
+query_id,family_id,category,register,text,label,synthetic,source
+amb-01,amb-01,ambiguous,en,Is it safe to use pesticide spray in my kitchen garden?,ambiguous,True,authored_synthetic
+amb-02,amb-02,ambiguous,en,"My dog has a skin infection, which medicine should I give?",ambiguous,True,authored_synthetic
+amb-03,amb-03,ambiguous,en,What is the price of tomatoes in the supermarket today?,ambiguous,True,authored_synthetic
+amb-04,amb-04,ambiguous,en,Can I get a loan for a small shop in my village?,ambiguous,True,authored_synthetic
+amb-05,amb-05,ambiguous,en,Which smartphone app gives weather alerts?,ambiguous,True,authored_synthetic
+amb-06,amb-06,ambiguous,en,How do I compost kitchen waste at home?,ambiguous,True,authored_synthetic
+amb-07,amb-07,ambiguous,en,Is cow milk good for a baby?,ambiguous,True,authored_synthetic
+amb-08,amb-08,ambiguous,en,How much does a tractor cost?,ambiguous,True,authored_synthetic
+amb-09,amb-09,ambiguous,en,What is the best fertiliser for a balcony plant?,ambiguous,True,authored_synthetic
+amb-10,amb-10,ambiguous,en,How do I keep rats out of my house?,ambiguous,True,authored_synthetic
+amb-11,amb-11,ambiguous,en,Should I buy crop insurance or a health policy?,ambiguous,True,authored_synthetic
+amb-12,amb-12,ambiguous,en,Which fish is good for eating?,ambiguous,True,authored_synthetic
+amb-13,amb-13,ambiguous,en,How do I grow grass on my lawn?,ambiguous,True,authored_synthetic
+amb-14,amb-14,ambiguous,en,What is the mandi rate for onions today?,ambiguous,True,authored_synthetic
+amb-15,amb-15,ambiguous,en,Is honey good for health?,ambiguous,True,authored_synthetic
+amb-16,amb-16,ambiguous,en,How do I protect my garden from monkeys?,ambiguous,True,authored_synthetic

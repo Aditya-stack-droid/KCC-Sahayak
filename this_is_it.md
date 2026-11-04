@@ -1,6 +1,6 @@
 # KCC-Sahayak: Complete Reverse-Engineering and Operating Guide
 
-**Snapshot:** repository at `/Users/chiranthml/Downloads/KCC-Sahayak-main`, commit `cf6aab3` (“Initial commit from ZIP source”). The tree was clean before this document was added; `this_is_it.md` is the only new file.
+**Snapshot:** repository root, commit `cf6aab3` (“Initial commit from ZIP source”). The tree was clean before this document was added; `this_is_it.md` is the only new file.
 
 **Purpose of this document:** explain what the project is, how every part works, what data and models it uses, what the results actually mean, how to run and rebuild it, what is missing, and what you can safely claim in a demo, viva, report, or interview. It is written from the code, data, and result artifacts in this repository, not from the project pitch alone.
 
@@ -1740,7 +1740,7 @@ Or double-click `run_app.bat` after the artifacts exist.
 ### 12.4 macOS / Linux setup
 
 ```bash
-cd /Users/chiranthml/Downloads/KCC-Sahayak-main
+cd KCC-Sahayak-main
 python3 -m venv .venv
 source .venv/bin/activate
 python -m pip install --upgrade pip

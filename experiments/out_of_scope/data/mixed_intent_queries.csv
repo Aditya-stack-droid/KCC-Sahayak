@@ -1,0 +1,17 @@
+query_id,family_id,category,register,text,label,synthetic,source
+mix-01,mix-01,mixed_intent,en,My tomato leaves are turning yellow and also write a Python program for me.,mixed_intent,True,authored_synthetic
+mix-02,mix-02,mixed_intent,en,Which fertiliser is best for paddy and what is the capital of Japan?,mixed_intent,True,authored_synthetic
+mix-03,mix-03,mixed_intent,en,My buffalo is not eating and please book a train ticket to Delhi.,mixed_intent,True,authored_synthetic
+mix-04,mix-04,mixed_intent,en,How do I control aphids in mustard and who won yesterday's cricket match?,mixed_intent,True,authored_synthetic
+mix-05,mix-05,mixed_intent,en,What is the urea dose for wheat and explain blockchain technology.,mixed_intent,True,authored_synthetic
+mix-06,mix-06,mixed_intent,en,My mango tree has white spots and what is a mutual fund?,mixed_intent,True,authored_synthetic
+mix-07,mix-07,mixed_intent,en,Tell me the market price of cotton and write a poem about rain.,mixed_intent,True,authored_synthetic
+mix-08,mix-08,mixed_intent,en,How do I sow bajra and how do I open a savings account?,mixed_intent,True,authored_synthetic
+mix-09,mix-09,mixed_intent,en,My cow has fever and which movie won the award?,mixed_intent,True,authored_synthetic
+mix-10,mix-10,mixed_intent,en,What pesticide for bollworm and how do I apply for a passport?,mixed_intent,True,authored_synthetic
+mix-11,mix-11,mixed_intent,en,Best seed variety for gram and what is the interest rate on fixed deposit?,mixed_intent,True,authored_synthetic
+mix-12,mix-12,mixed_intent,en,My brinjal crop has wilt and give me a recipe for brinjal curry.,mixed_intent,True,authored_synthetic
+mix-13,mix-13,mixed_intent,en,How do I irrigate sugarcane and who is the prime minister?,mixed_intent,True,authored_synthetic
+mix-14,mix-14,mixed_intent,en,Which fungicide for blight and how do I fix my laptop battery?,mixed_intent,True,authored_synthetic
+mix-15,mix-15,mixed_intent,en,My goat is limping and what is the schedule of the next train?,mixed_intent,True,authored_synthetic
+mix-16,mix-16,mixed_intent,en,Fertilizer for tomato plants and what is the boiling point of water?,mixed_intent,True,authored_synthetic

@@ -1,0 +1,39 @@
+{
+  "system": "fine_tuned_encoder",
+  "base_model": "paraphrase-multilingual-MiniLM-L12-v2",
+  "protocol": {
+    "seed": 42,
+    "max_pairs": 4000,
+    "corpus_size": 20000,
+    "queries": 500,
+    "epochs": 1,
+    "batch": 32,
+    "loss": "MultipleNegativesRankingLoss",
+    "split": "grouped train for training; grouped test for evaluation"
+  },
+  "feasibility": {
+    "grouped_train_rows": 111213,
+    "informative_train_rows": 101590,
+    "call_log_note_share": 0.0865,
+    "proposed_pairs": 4000,
+    "pair_digest_sha1": "9f59d112bd6452d59d04101c27218061ae0c3f4a",
+    "supervision": "weak: query paired with its own logged advisor answer; no human relevance labels",
+    "suitability": "limited: weak, noisy positives and a 10-class topic proxy mean a fine-tune can overfit label noise and may not improve topical retrieval; run as a bounded check only"
+  },
+  "status": "failed",
+  "environment": {
+    "python": "3.12.13",
+    "platform": "macOS-26.6.2-arm64-arm-64bit",
+    "versions": {
+      "numpy": "2.5.4",
+      "pandas": "3.1.0",
+      "sentence_transformers": "6.2.0",
+      "torch": "2.15.0",
+      "faiss": "1.15.1",
+      "sklearn": "1.9.1"
+    }
+  },
+  "error": "ImportError: Please install `datasets` to use this function: `pip install datasets`.",
+  "blocker": "sentence-transformers `fit` requires the `datasets` package, which is not part of the project environment. It was NOT installed, to avoid adding a dependency the original application does not need. The feasibility analysis and full training / evaluation configuration above are complete and reproducible once `datasets` is available in an isolated environment.",
+  "next_step": "pip install datasets in an isolated env, then re-run fine_tuning.py --overwrite"
+}

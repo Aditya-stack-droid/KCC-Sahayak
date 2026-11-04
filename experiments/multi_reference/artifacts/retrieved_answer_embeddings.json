@@ -1,0 +1,9 @@
+{
+  "name": "retrieved_answer_embeddings",
+  "model": "paraphrase-multilingual-MiniLM-L12-v2",
+  "n": 6312,
+  "dim": 384,
+  "sha1": "18dc630a6efb37611cb14589c4bce70971d42051",
+  "normalised": true,
+  "note": "Texts are not stored; only their hash and vectors."
+}

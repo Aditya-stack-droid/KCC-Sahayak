@@ -1,0 +1,111 @@
+{
+  "protocol": {
+    "sources": "committed result artefacts only; no new model run",
+    "no_fabrication": "dimensions without ground truth are marked unavailable rather than scored"
+  },
+  "dimensions": {
+    "retrieval_relevance": {
+      "status": "measured",
+      "source": "results/improved_evaluation/grouped_retrieval.json",
+      "what": "topical retrieval quality on the grouped test split (weak-label relevance)",
+      "metrics": {
+        "recall_at_1": 0.8519,
+        "recall_at_5": 0.9508,
+        "mrr_at_10": 0.8961,
+        "ndcg_at_5": 0.9071
+      }
+    },
+    "answer_completeness": {
+      "status": "proxy",
+      "source": "results/multi_reference/per_query_dense_all.csv",
+      "what": "token overlap between the retrieved answer and the row's own logged answer",
+      "metrics": {
+        "mean_own_f1": 0.3217,
+        "rows": 13815
+      }
+    },
+    "semantic_similarity": {
+      "status": "proxy",
+      "source": "results/multi_reference/per_query_dense_all.csv",
+      "what": "max embedding similarity to any reference answer (wording closeness, NOT correctness)",
+      "metrics": {
+        "mean_max_semantic": 0.6989
+      }
+    },
+    "factual_consistency": {
+      "status": "proxy",
+      "source": "results/multi_reference/per_query_dense_all.csv",
+      "what": "agreement with other historical answers to the same question (agreement, not truth)",
+      "metrics": {
+        "mean_max_other_f1": 0.5749
+      }
+    },
+    "crop_entity_consistency": {
+      "status": "unavailable",
+      "reason": "no per-row crop/entity ground truth for retrieved answers"
+    },
+    "dosage_consistency": {
+      "status": "proxy",
+      "source": "results/conflict_detection/metrics.json",
+      "what": "rule-fired dosage conflicts between answers to the same question (rule match, not truth)",
+      "metrics": {
+        "pair_precision": 1.0,
+        "pair_recall": 0.9038
+      }
+    },
+    "unit_consistency": {
+      "status": "proxy",
+      "source": "results/conflict_detection/metrics.json",
+      "what": "basis/dimension conflicts detected by the same rules",
+      "metrics": {
+        "basis_f1": 0.9091,
+        "dimension_f1": 1.0
+      }
+    },
+    "safety_compliance": {
+      "status": "measured",
+      "source": "results/answer_screening/metrics.json",
+      "what": "content safety rule agreement on authored cases (v1 shipped vs v2 candidate)",
+      "metrics": {
+        "v1_f1": 0.5882,
+        "v2_f1": 0.9714
+      }
+    },
+    "escalation_correctness": {
+      "status": "proxy",
+      "source": "results/selective_eval.json",
+      "what": "coverage / selective intent accuracy / rule-defined violation rate of the gate",
+      "metrics": {
+        "coverage": 0.2641,
+        "selective_accuracy": 0.9542,
+        "violation_rate": 0.0229
+      }
+    },
+    "unsupported_claim_rate": {
+      "status": "proxy",
+      "source": "results/multi_reference/per_query_dense_all.csv",
+      "what": "share of rows whose retrieved answer barely overlaps its own logged answer (own_f1 < 0.2)",
+      "metrics": {
+        "share": 0.3648,
+        "definition": "own_f1 < 0.2; a low-support proxy, not a factual check"
+      }
+    },
+    "agronomic_correctness": {
+      "status": "unavailable",
+      "reason": "no agronomist or expert labels exist; correctness cannot be measured from the corpus",
+      "next_step": "add verified reference labels and re-run; the framework slots them in as 'measured'"
+    }
+  },
+  "headline": {
+    "retrieval_topic_match_at_1": 0.8519,
+    "answer_own_token_f1": 0.3217,
+    "answer_max_other_token_f1": 0.5749,
+    "unsupported_claim_rate_proxy": 0.3648,
+    "agronomic_correctness": "unavailable"
+  },
+  "warnings": [
+    "Similarity, agreement and token overlap are NOT agricultural correctness.",
+    "No agronomist has reviewed any answer; no expert labels exist.",
+    "Proxy metrics use historical advisor answers as references, which may be contradictory or outdated."
+  ]
+}

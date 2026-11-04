@@ -36,7 +36,7 @@ Deployed artefact on the same grouped test sets (contaminated share is disclosed
 | 3 | 0.9840 | 85.20% |
 | 4 | 0.9940 | 85.40% |
 
-Full detail: `/Users/chiranthml/Downloads/KCC-Sahayak-main/results/improved_evaluation/GROUPED_INTENT_REPORT.md`
+Full detail: `results/improved_evaluation/GROUPED_INTENT_REPORT.md`
 
 ## 3. Grouped retrieval evaluation
 
@@ -45,7 +45,7 @@ Full detail: `/Users/chiranthml/Downloads/KCC-Sahayak-main/results/improved_eval
 - Dense topic match @1: **0.8519** (95% CI [0.8462, 0.8576]); recall@5 0.9508; MRR@10 0.8961; nDCG@5 0.9071.
 - Hybrid (alpha=0.4, n=3000) topic match @1: 0.8733; recall@5 0.9630; answer token-F1 0.3800.
 
-Full detail: `/Users/chiranthml/Downloads/KCC-Sahayak-main/results/improved_evaluation/GROUPED_RETRIEVAL_REPORT.md`
+Full detail: `results/improved_evaluation/GROUPED_RETRIEVAL_REPORT.md`
 
 ## 4. What changed and what did not
 

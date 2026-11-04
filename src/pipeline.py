@@ -29,7 +29,7 @@ from confidence_gate import GateThresholds, decide  # noqa: E402
 from intent_model import IntentHead  # noqa: E402
 from lang import detect_register  # noqa: E402
 from ner import extract_entities  # noqa: E402
-from retrieval import HybridRetriever  # noqa: E402
+from retrieval import INDEX_DIR, HybridRetriever, missing_index_files  # noqa: E402
 
 LEGACY_INTENT_DIR = ROOT / "models" / "intent_classifier"
 LR_PATH = ROOT / "models" / "intent_embed_lr" / "model.joblib"
@@ -46,6 +46,25 @@ class KCCSahayakPipeline:
     def __init__(self, thresholds: GateThresholds | None = None):
         self.thresholds = thresholds or GateThresholds()
         self._lock = threading.Lock()
+
+        # Fail fast with an actionable message when the (gitignored) model artefacts are
+        # absent, instead of a cryptic error from deep inside faiss/transformers.
+        if not LR_PATH.exists() and not LEGACY_INTENT_DIR.exists():
+            raise FileNotFoundError(
+                "Intent model artefacts are missing.\n"
+                f"  expected: {LR_PATH}\n"
+                f"  or legacy: {LEGACY_INTENT_DIR}\n"
+                "Model artefacts are not committed; build the production head with:\n"
+                "    python scripts/16_model_selection.py --save"
+            )
+        missing_idx = missing_index_files()
+        if missing_idx:
+            raise FileNotFoundError(
+                f"Retrieval index is missing at '{INDEX_DIR}' "
+                f"(absent: {', '.join(missing_idx)}).\n"
+                "Model artefacts are not committed; build the index with:\n"
+                "    python scripts/03_build_retrieval_index.py"
+            )
 
         print("Loading multilingual encoder ...")
         self.embed_model = SentenceTransformer(RETRIEVAL_MODEL_NAME)

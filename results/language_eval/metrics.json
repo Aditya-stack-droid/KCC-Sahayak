@@ -1,0 +1,59 @@
+{
+  "protocol": {
+    "gold": "data/gold/gold_queries.csv (50 en / 50 hinglish / 50 hi, LLM-authored)",
+    "no_training": "components reused read-only; nothing retrained"
+  },
+  "register_and_entities": {
+    "en": {
+      "n": 50,
+      "register_detection_accuracy": 1.0,
+      "entity_coverage": 0.58
+    },
+    "hi": {
+      "n": 50,
+      "register_detection_accuracy": 1.0,
+      "entity_coverage": 0.0
+    },
+    "hinglish": {
+      "n": 50,
+      "register_detection_accuracy": 1.0,
+      "entity_coverage": 0.02
+    }
+  },
+  "intent_accuracy": {
+    "en": 0.94,
+    "hinglish": 0.9,
+    "hi": 0.86,
+    "source": "results/research_eval.json main['production (emb+char, aug)']",
+    "roman_hindi": null,
+    "roman_hindi_reason": "no separate Roman-Hindi gold queries were authored"
+  },
+  "dosage_detection_recall": {
+    "en": {
+      "n": 2,
+      "v1_recall": 1.0,
+      "v2_recall": 1.0
+    },
+    "hinglish": {
+      "n": 2,
+      "v1_recall": 1.0,
+      "v2_recall": 1.0
+    },
+    "roman_hindi": {
+      "n": 2,
+      "v1_recall": 1.0,
+      "v2_recall": 1.0
+    },
+    "devanagari": {
+      "n": 2,
+      "v1_recall": 0.0,
+      "v2_recall": 1.0
+    }
+  },
+  "limitations": [
+    "Gold set is small (n=50 per register) and LLM-authored, not human-verified.",
+    "Entity coverage counts any crop/pest hit; there is no entity ground truth, so no precision/recall.",
+    "Roman-Hindi has no separate gold queries; its intent accuracy is not measured here.",
+    "Devanagari register detection is script-based and near-perfect; it says nothing about understanding."
+  ]
+}

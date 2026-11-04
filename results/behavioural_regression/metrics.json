@@ -1,0 +1,126 @@
+{
+  "by_category": {
+    "A": {
+      "failed": 12,
+      "failure_types": {
+        "degraded": 1,
+        "false_negative": 11
+      },
+      "label": "Typo and spelling robustness",
+      "passed": 12,
+      "total": 24
+    },
+    "B": {
+      "failed": 11,
+      "failure_types": {
+        "degraded": 5,
+        "false_negative": 5,
+        "missing_capability": 1
+      },
+      "label": "Hindi / Roman-Hindi / Hinglish",
+      "passed": 13,
+      "total": 24
+    },
+    "C": {
+      "failed": 10,
+      "failure_types": {
+        "false_positive": 10
+      },
+      "label": "Negation and prohibitions",
+      "passed": 8,
+      "total": 18
+    },
+    "D": {
+      "failed": 7,
+      "failure_types": {
+        "false_negative": 7
+      },
+      "label": "Numbers, units, dosage and ambiguity",
+      "passed": 16,
+      "total": 23
+    },
+    "E": {
+      "failed": 0,
+      "failure_types": {},
+      "label": "Ambiguous or underspecified queries",
+      "passed": 9,
+      "total": 9
+    },
+    "F": {
+      "failed": 17,
+      "failure_types": {
+        "missing_capability": 17
+      },
+      "label": "Multi-intent queries",
+      "passed": 1,
+      "total": 18
+    },
+    "G": {
+      "failed": 1,
+      "failure_types": {
+        "validation_gap": 1
+      },
+      "label": "Empty, malformed and oversized input",
+      "passed": 26,
+      "total": 27
+    },
+    "H": {
+      "failed": 1,
+      "failure_types": {
+        "false_negative": 1
+      },
+      "label": "Cross-component interactions",
+      "passed": 24,
+      "total": 25
+    }
+  },
+  "by_failure_type": {
+    "degraded": 6,
+    "false_negative": 24,
+    "false_positive": 10,
+    "missing_capability": 18,
+    "validation_gap": 1
+  },
+  "by_probe": {
+    "asr_then_intent": 1,
+    "clean_then_entities": 1,
+    "clean_then_intent": 1,
+    "conflict": 17,
+    "conflict_gate": 2,
+    "conflict_many": 2,
+    "entities": 21,
+    "evidence": 4,
+    "gate": 9,
+    "intent": 16,
+    "malformed_call": 4,
+    "multi_intent": 18,
+    "oos_decision": 6,
+    "privacy_types": 4,
+    "query_request": 9,
+    "redaction": 3,
+    "redaction_idempotent": 1,
+    "register": 13,
+    "risk": 36
+  },
+  "case_sha256": "ed71cef9b848724adc70a1e644903eba9ea2d680decbc27365284b5573cb0ea0",
+  "categories": [
+    "A",
+    "B",
+    "C",
+    "D",
+    "E",
+    "F",
+    "G",
+    "H"
+  ],
+  "crashes": 0,
+  "evidence_class": "authored synthetic behavioural probes; no human labels or expert review",
+  "experiment": "batch_b_improvement5_behavioural_regression",
+  "failed": 59,
+  "interpretation": "Expected values encode the behaviour this study treats as correct; a failure is a documented capability gap, not a harness error. These are synthetic probes, not a representative sample and not a production safety or accuracy estimate.",
+  "n_cases": 168,
+  "pass_rate": 0.6488,
+  "passed": 109,
+  "schema": 1,
+  "synthetic": true
+}

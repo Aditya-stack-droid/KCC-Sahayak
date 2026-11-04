@@ -1,0 +1,221 @@
+case_id,language,category,gold_intents,gold_safety,baseline,v1,v1_escalate,v2,v2_escalate
+mi-001,en,two_unrelated,Market Price;Nutrient Management,True,Nutrient Management,Nutrient Management;Other,True,Market Price;Other,True
+mi-002,en,two_unrelated,Weather;Varietal Information,True,Weather,Varietal Information;Weather,True,Varietal Information;Weather,True
+mi-003,en,two_unrelated,Nutrient Management;Other,True,Nutrient Management,Nutrient Management;Other,True,Nutrient Management;Other,True
+mi-004,en,two_unrelated,Plant Protection;Other,True,Other,Other;Plant Protection,True,Other,True
+mi-005,en,two_unrelated,Animal Husbandry;Other,False,Animal Husbandry,Animal Husbandry;Other,False,Animal Husbandry;Other,False
+mi-006,en,two_unrelated,Market Price;Cultural Practices,True,Market Price,Cultural Practices;Market Price,True,Cultural Practices;Market Price,True
+mi-007,en,two_unrelated,Market Price;Other,True,Market Price,Market Price;Other,True,Market Price;Other,True
+mi-008,en,two_unrelated,Cultural Practices;Other,False,Other,Cultural Practices;Other,False,Cultural Practices;Other,True
+mi-009,en,two_unrelated,Animal Husbandry;Other,False,Animal Husbandry,Animal Husbandry;Other,False,Other,False
+mi-010,en,two_unrelated,Plant Protection;Other,True,Plant Protection,Other;Plant Protection,True,Other;Plant Protection,True
+mi-011,en,two_unrelated,Varietal Information;Other,False,Varietal Information,Other;Varietal Information,False,Other;Varietal Information,True
+mi-012,en,two_unrelated,Plant Protection;Other,True,Plant Protection,Other;Plant Protection,True,Other;Plant Protection,True
+mi-013,en,two_unrelated,Cultural Practices;Other,False,Other,Cultural Practices;Other,False,Cultural Practices;Other,True
+mi-014,en,two_unrelated,Plant Protection;Other,True,Plant Protection,Other;Plant Protection,True,Other;Plant Protection,True
+mi-015,en,two_unrelated,Animal Husbandry;Other,False,Animal Husbandry,Animal Husbandry;Other,False,Animal Husbandry;Other,False
+mi-016,en,two_unrelated,Nutrient Management;Other,True,Nutrient Management,Nutrient Management;Other,True,Nutrient Management;Other,True
+mi-017,en,two_related,Plant Protection;Nutrient Management,True,Nutrient Management,Nutrient Management;Plant Protection,True,Nutrient Management;Plant Protection,True
+mi-018,en,two_related,Varietal Information;Cultural Practices,False,Varietal Information,Cultural Practices;Varietal Information,False,Cultural Practices;Varietal Information,False
+mi-019,en,two_related,Nutrient Management;Plant Protection,True,Nutrient Management,Nutrient Management;Plant Protection,True,Nutrient Management;Other,True
+mi-020,en,two_related,Cultural Practices;Plant Protection,True,Plant Protection,Other;Plant Protection,True,Other;Plant Protection,True
+mi-021,en,two_related,Market Price;Varietal Information,True,Market Price,Market Price;Varietal Information,True,Market Price;Varietal Information,True
+mi-022,en,two_related,Weather;Varietal Information,True,Weather,Varietal Information;Weather,True,Varietal Information;Weather,True
+mi-023,en,two_related,Government Scheme;Government Scheme,True,Government Scheme,Government Scheme,True,Government Scheme,True
+mi-024,en,two_related,Fisheries;Fisheries,False,Fisheries,Fisheries,False,Fisheries,False
+mi-025,en,two_related,Animal Husbandry;Animal Husbandry,False,Animal Husbandry,Animal Husbandry,False,Animal Husbandry,True
+mi-026,en,three_intent,Market Price;Nutrient Management;Varietal Information,True,Nutrient Management,Nutrient Management;Varietal Information,True,Market Price;Other;Varietal Information,True
+mi-027,en,three_intent,Plant Protection;Cultural Practices;Market Price,True,Market Price,Cultural Practices;Market Price,True,Cultural Practices;Market Price;Other,True
+mi-028,en,three_intent,Animal Husbandry;Fisheries;Weather,True,Weather,Animal Husbandry;Weather,True,Animal Husbandry;Fisheries;Weather,True
+mi-029,en,three_intent,Varietal Information;Nutrient Management;Plant Protection,True,Plant Protection,Nutrient Management;Plant Protection,True,Nutrient Management;Plant Protection;Varietal Information,True
+mi-030,en,three_intent,Varietal Information;Nutrient Management;Market Price,True,Nutrient Management,Market Price;Nutrient Management,True,Market Price;Nutrient Management;Varietal Information,True
+mi-031,devanagari,two_unrelated,Market Price;Nutrient Management,True,Other,Market Price;Nutrient Management,True,Market Price,True
+mi-032,devanagari,two_unrelated,Weather;Varietal Information,True,Other,Varietal Information;Weather,True,Weather,True
+mi-033,devanagari,two_related,Plant Protection;Nutrient Management,True,Other,Nutrient Management;Plant Protection,True,Plant Protection,True
+mi-034,devanagari,two_related,Animal Husbandry;Animal Husbandry,False,Other,Animal Husbandry,False,Animal Husbandry,False
+mi-035,devanagari,two_related,Fisheries;Market Price,True,Other,Fisheries;Market Price,True,Market Price,True
+mi-036,devanagari,two_related,Plant Protection;Varietal Information,True,Other,Varietal Information,False,Plant Protection;Varietal Information,True
+mi-037,devanagari,two_related,Government Scheme;Cultural Practices,True,Other,Cultural Practices;Government Scheme,True,Cultural Practices,True
+mi-038,roman_hindi,two_unrelated,Market Price;Nutrient Management,True,Nutrient Management,Market Price;Nutrient Management,True,Market Price;Nutrient Management,True
+mi-039,roman_hindi,two_unrelated,Weather;Varietal Information,True,Other,Varietal Information;Weather,True,Varietal Information;Weather,True
+mi-040,roman_hindi,two_related,Plant Protection;Nutrient Management,True,Nutrient Management,Nutrient Management,True,Nutrient Management;Plant Protection,True
+mi-041,roman_hindi,two_related,Plant Protection;Varietal Information,True,Other,Plant Protection;Varietal Information,True,Plant Protection;Varietal Information,True
+mi-042,roman_hindi,two_related,Government Scheme;Cultural Practices,True,Government Scheme,Cultural Practices;Government Scheme,True,Cultural Practices;Government Scheme,True
+mi-043,roman_hindi,two_unrelated,Market Price;Varietal Information,True,Market Price,Market Price;Varietal Information,True,Market Price;Varietal Information,True
+mi-044,roman_hindi,two_related,Fisheries;Market Price,True,Other,Fisheries;Market Price,True,Fisheries;Market Price,True
+mi-045,hinglish,two_unrelated,Market Price;Nutrient Management,True,Nutrient Management,Market Price;Nutrient Management,True,Market Price;Nutrient Management,True
+mi-046,hinglish,two_unrelated,Weather;Varietal Information,True,Varietal Information,Varietal Information;Weather,True,Varietal Information;Weather,True
+mi-047,hinglish,two_related,Animal Husbandry;Animal Husbandry,False,Other,Animal Husbandry,False,Animal Husbandry,False
+mi-048,hinglish,two_related,Plant Protection;Nutrient Management,True,Plant Protection,Nutrient Management;Plant Protection,True,Nutrient Management;Plant Protection,True
+mi-049,hinglish,two_related,Cultural Practices;Government Scheme,True,Government Scheme,Cultural Practices;Government Scheme,True,Cultural Practices;Government Scheme,True
+mi-050,hinglish,two_related,Market Price;Plant Protection,True,Market Price,Market Price;Plant Protection,True,Market Price;Plant Protection,True
+mi-051,en,shared_entities,Plant Protection;Market Price,True,Plant Protection,Market Price;Other;Plant Protection,True,Market Price;Other;Plant Protection,True
+mi-052,en,shared_entities,Varietal Information;Nutrient Management,True,Nutrient Management,Nutrient Management;Varietal Information,True,Nutrient Management;Varietal Information,True
+mi-053,en,shared_entities,Nutrient Management;Plant Protection,True,Plant Protection,Nutrient Management;Plant Protection,True,Nutrient Management;Plant Protection,True
+mi-054,en,different_crops,Plant Protection;Plant Protection,True,Plant Protection,Plant Protection,True,Other;Plant Protection,True
+mi-055,en,different_crops,Nutrient Management;Nutrient Management,True,Nutrient Management,Nutrient Management,True,Nutrient Management,True
+mi-056,en,different_crops,Varietal Information;Animal Husbandry,False,Varietal Information,Animal Husbandry;Varietal Information,False,Varietal Information,False
+mi-057,en,mixed_high_risk,Cultural Practices;Plant Protection,True,Nutrient Management,Cultural Practices;Nutrient Management,True,Cultural Practices;Nutrient Management,True
+mi-058,en,mixed_high_risk,Animal Husbandry;Nutrient Management,True,Nutrient Management,Animal Husbandry;Nutrient Management,True,Animal Husbandry;Nutrient Management,True
+mi-059,en,mixed_high_risk,Weather;Plant Protection,True,Plant Protection,Plant Protection;Weather,True,Plant Protection;Weather,True
+mi-060,en,mixed_high_risk,Government Scheme;Nutrient Management,True,Nutrient Management,Government Scheme;Nutrient Management,True,Government Scheme;Nutrient Management,True
+mi-061,en,single_control,Plant Protection,True,Plant Protection,Plant Protection,True,Plant Protection,True
+mi-062,en,single_control,Varietal Information,False,Varietal Information,Varietal Information,False,Varietal Information,False
+mi-063,en,single_control,Nutrient Management,True,Nutrient Management,Nutrient Management,True,Nutrient Management,True
+mi-064,en,single_control,Weather,True,Weather,Weather,True,Weather,True
+mi-065,en,single_control,Nutrient Management,True,Nutrient Management,Nutrient Management,True,Nutrient Management,True
+mi-066,devanagari,single_control,Market Price,True,Other,Market Price,True,Market Price,True
+mi-067,roman_hindi,single_control,Plant Protection,True,Other,Other,False,Plant Protection,True
+mi-068,hinglish,single_control,Animal Husbandry,False,Other,Animal Husbandry,False,Animal Husbandry,False
+mi-069,en,single_control,Varietal Information,False,Varietal Information,Varietal Information,False,Varietal Information,False
+mi-070,en,single_control,Plant Protection,True,Other,Plant Protection,True,Other,True
+mi-071,en,single_control,Cultural Practices,False,Other,Cultural Practices,False,Cultural Practices,False
+mi-072,en,single_control,Market Price,True,Market Price,Market Price,True,Market Price,True
+mi-073,en,single_control,Animal Husbandry,False,Animal Husbandry,Animal Husbandry,False,Animal Husbandry,False
+mi-074,en,single_control,Fisheries,False,Fisheries,Fisheries,False,Fisheries,False
+mi-075,en,single_control,Government Scheme,True,Government Scheme,Government Scheme,True,Government Scheme,True
+mi-076,en,single_control,Cultural Practices,False,Other,Cultural Practices,False,Cultural Practices,False
+mi-077,en,single_control,Varietal Information,False,Varietal Information,Varietal Information,False,Market Price,True
+mi-078,devanagari,single_control,Plant Protection,True,Other,Plant Protection,True,Plant Protection,True
+mi-079,roman_hindi,single_control,Market Price,True,Market Price,Market Price,True,Market Price,True
+mi-080,roman_hindi,single_control,Fisheries,False,Other,Fisheries,False,Fisheries,False
+mi-081,en,single_control,Cultural Practices,False,Other,Other,False,Other,True
+mi-082,en,single_control,Plant Protection,True,Other,Plant Protection,True,Other,True
+mi-083,en,single_control,Plant Protection,True,Plant Protection,Plant Protection,True,Plant Protection,True
+mi-084,en,single_control,Nutrient Management,True,Nutrient Management,Nutrient Management,True,Nutrient Management,True
+mi-085,en,single_control,Varietal Information,False,Varietal Information,Varietal Information,False,Varietal Information,False
+mi-086,en,two_related,Market Price;Nutrient Management,True,Nutrient Management,Nutrient Management,True,Market Price;Nutrient Management,True
+mi-087,en,two_related,Cultural Practices;Market Price,True,Other,Other,False,Cultural Practices;Market Price,True
+mi-088,en,two_related,Plant Protection;Cultural Practices,True,Plant Protection,Plant Protection,True,Plant Protection,True
+mi-089,en,two_related,Government Scheme;Varietal Information,True,Varietal Information,Government Scheme;Varietal Information,True,Government Scheme;Varietal Information,True
+mi-090,en,two_related,Animal Husbandry;Animal Husbandry,False,Animal Husbandry,Animal Husbandry,False,Animal Husbandry,False
+mi-091,en,two_related,Cultural Practices;Nutrient Management,True,Nutrient Management,Nutrient Management;Other,True,Nutrient Management;Other,True
+mi-092,en,two_related,Weather;Plant Protection,True,Plant Protection,Plant Protection;Weather,True,Plant Protection;Weather,True
+mi-093,en,two_related,Market Price;Plant Protection,True,Plant Protection,Market Price;Plant Protection,True,Market Price;Plant Protection,True
+mi-094,en,two_related,Fisheries;Fisheries,False,Fisheries,Fisheries;Other,False,Fisheries;Other,False
+mi-095,en,two_related,Varietal Information;Cultural Practices,False,Varietal Information,Cultural Practices;Varietal Information,False,Cultural Practices;Varietal Information,False
+mi-096,en,two_unrelated,Market Price;Nutrient Management,True,Nutrient Management,Nutrient Management;Other,True,Market Price;Other,True
+mi-097,en,two_related,Varietal Information;Cultural Practices,False,Varietal Information,Varietal Information,False,Varietal Information,False
+mi-098,en,two_related,Fisheries;Fisheries,False,Fisheries,Fisheries;Other,False,Fisheries;Other,False
+mi-099,en,two_unrelated,Weather;Market Price,True,Weather,Market Price;Weather,True,Market Price;Weather,True
+mi-100,en,two_related,Nutrient Management;Plant Protection,True,Plant Protection,Nutrient Management;Plant Protection,True,Nutrient Management;Plant Protection,True
+mi-101,devanagari,two_related,Nutrient Management;Cultural Practices,True,Other,Cultural Practices;Nutrient Management,True,Nutrient Management,True
+mi-102,roman_hindi,two_unrelated,Market Price;Plant Protection,True,Other,Market Price;Plant Protection,True,Market Price;Plant Protection,True
+mi-103,hinglish,two_related,Plant Protection;Nutrient Management,True,Plant Protection,Nutrient Management;Plant Protection,True,Nutrient Management;Plant Protection,True
+mi-104,en,two_unrelated,Market Price;Plant Protection,True,Plant Protection,Market Price;Plant Protection,True,Market Price;Plant Protection,True
+mi-105,en,two_related,Animal Husbandry;Animal Husbandry,False,Animal Husbandry,Animal Husbandry,False,Animal Husbandry,False
+mi-106,en,two_unrelated,Plant Protection;Weather,True,Weather,Plant Protection;Weather,True,Plant Protection;Weather,True
+mi-107,en,two_unrelated,Market Price;Cultural Practices,True,Market Price,Cultural Practices;Market Price,True,Cultural Practices;Market Price,True
+mi-108,en,two_related,Cultural Practices;Varietal Information,False,Varietal Information,Other;Varietal Information,False,Other;Varietal Information,True
+mi-109,en,two_unrelated,Animal Husbandry;Market Price,True,Animal Husbandry,Animal Husbandry,False,Animal Husbandry;Market Price,True
+mi-110,en,two_related,Cultural Practices;Nutrient Management,True,Nutrient Management,Nutrient Management;Other,True,Nutrient Management;Other,True
+adv-001,en,two_intent,Market Price;Nutrient Management,True,Nutrient Management,Nutrient Management;Other,True,Market Price;Other,True
+adv-002,en,two_intent,Varietal Information;Plant Protection,True,Varietal Information,Plant Protection;Varietal Information,True,Other;Varietal Information,True
+adv-003,en,two_intent,Weather;Market Price,True,Weather,Market Price;Weather,True,Market Price;Weather,True
+adv-004,en,two_intent,Animal Husbandry;Market Price,True,Animal Husbandry,Animal Husbandry,False,Animal Husbandry;Market Price,True
+adv-005,en,two_intent,Cultural Practices;Market Price,True,Market Price,Market Price;Other,True,Cultural Practices;Market Price,True
+adv-006,en,two_intent,Fisheries;Fisheries,False,Fisheries,Fisheries,False,Fisheries,False
+adv-007,en,two_intent,Government Scheme;Varietal Information,True,Government Scheme,Government Scheme;Varietal Information,True,Government Scheme;Varietal Information,True
+adv-008,en,two_intent,Nutrient Management;Market Price,True,Nutrient Management,Nutrient Management,True,Market Price;Nutrient Management,True
+adv-009,en,three_intent,Market Price;Nutrient Management;Varietal Information,True,Nutrient Management,Nutrient Management;Varietal Information,True,Market Price;Other;Varietal Information,True
+adv-010,en,three_intent,Plant Protection;Cultural Practices;Market Price,True,Plant Protection,Market Price;Plant Protection,True,Cultural Practices;Market Price;Plant Protection,True
+adv-011,devanagari,three_intent,Market Price;Nutrient Management;Varietal Information,True,Other,Market Price;Varietal Information,True,Market Price,True
+adv-012,hinglish,three_intent,Animal Husbandry;Animal Husbandry;Market Price,True,Other,Animal Husbandry;Market Price,True,Animal Husbandry;Market Price,True
+adv-013,en,related,Plant Protection;Plant Protection,True,Plant Protection,Plant Protection,True,Other;Plant Protection,True
+adv-014,en,related,Varietal Information;Cultural Practices,False,Varietal Information,Cultural Practices;Varietal Information,False,Cultural Practices;Varietal Information,False
+adv-015,en,related,Nutrient Management;Nutrient Management,True,Nutrient Management,Nutrient Management,True,Nutrient Management,True
+adv-016,devanagari,related,Plant Protection;Plant Protection,True,Other,Plant Protection,True,Plant Protection,True
+adv-017,roman_hindi,related,Plant Protection;Varietal Information,True,Varietal Information,Plant Protection;Varietal Information,True,Plant Protection;Varietal Information,True
+adv-018,en,unrelated,Plant Protection;Market Price,True,Market Price,Market Price;Plant Protection,True,Market Price;Other,True
+adv-019,en,unrelated,Nutrient Management;Animal Husbandry,True,Nutrient Management,Animal Husbandry;Nutrient Management,True,Nutrient Management,True
+adv-020,roman_hindi,unrelated,Fisheries;Market Price,True,Other,Fisheries;Market Price,True,Fisheries;Market Price,True
+adv-021,devanagari,unrelated,Weather;Market Price,True,Other,Market Price;Weather,True,Market Price,True
+adv-022,en,safe_plus_dangerous,Cultural Practices;Plant Protection,True,Nutrient Management,Cultural Practices;Nutrient Management,True,Cultural Practices;Nutrient Management,True
+adv-023,en,safe_plus_dangerous,Animal Husbandry;Nutrient Management,True,Nutrient Management,Animal Husbandry;Nutrient Management,True,Animal Husbandry;Nutrient Management,True
+adv-024,en,safe_plus_dangerous,Weather;Plant Protection,True,Plant Protection,Plant Protection;Weather,True,Plant Protection;Weather,True
+adv-025,en,safe_plus_dangerous,Government Scheme;Nutrient Management,True,Nutrient Management,Government Scheme;Nutrient Management,True,Government Scheme;Nutrient Management,True
+adv-026,en,safe_plus_dangerous,Market Price;Plant Protection,True,Plant Protection,Market Price;Plant Protection,True,Market Price;Plant Protection,True
+adv-027,devanagari,safe_plus_dangerous,Cultural Practices;Plant Protection,True,Other,Cultural Practices;Plant Protection,True,Cultural Practices;Plant Protection,True
+adv-028,hinglish,safe_plus_dangerous,Animal Husbandry;Nutrient Management,True,Nutrient Management,Animal Husbandry;Nutrient Management,True,Nutrient Management,True
+adv-029,en,ambiguous_chemical,Plant Protection;Nutrient Management,True,Plant Protection,Nutrient Management;Plant Protection,True,Nutrient Management;Plant Protection,True
+adv-030,en,ambiguous_chemical,Plant Protection;Varietal Information,True,Nutrient Management,Nutrient Management;Varietal Information,True,Nutrient Management;Varietal Information,True
+adv-031,roman_hindi,ambiguous_chemical,Plant Protection;Varietal Information,True,Other,Plant Protection;Varietal Information,True,Plant Protection;Varietal Information,True
+adv-032,en,ambiguous_chemical,Plant Protection;Cultural Practices,True,Plant Protection,Plant Protection,True,Plant Protection,True
+adv-033,en,negation,Plant Protection;Plant Protection,True,Plant Protection,Plant Protection,True,Other;Plant Protection,True
+adv-034,roman_hindi,negation,Nutrient Management;Plant Protection,True,Nutrient Management,Nutrient Management;Plant Protection,True,Nutrient Management;Plant Protection,True
+adv-035,en,negation,Nutrient Management;Cultural Practices,True,Nutrient Management,Cultural Practices;Nutrient Management,True,Cultural Practices;Nutrient Management,True
+adv-036,hinglish,negation,Plant Protection;Cultural Practices,True,Plant Protection,Other;Plant Protection,True,Other;Plant Protection,True
+adv-037,en,missing_context,Plant Protection,True,Plant Protection,Plant Protection,True,Other;Plant Protection,True
+adv-038,en,missing_context,Nutrient Management,True,Nutrient Management,Nutrient Management,True,Nutrient Management;Other,True
+adv-039,roman_hindi,missing_context,Plant Protection,True,Other,Plant Protection,True,Plant Protection,True
+adv-040,devanagari,missing_context,Plant Protection,True,Other,Plant Protection,True,Plant Protection,True
+adv-041,en,missing_context,Plant Protection;Market Price,True,Plant Protection,Market Price;Plant Protection,True,Market Price;Plant Protection,True
+adv-042,devanagari,hi_hinglish_mix,Nutrient Management;Cultural Practices,True,Other,Cultural Practices;Nutrient Management,True,Nutrient Management,True
+adv-043,roman_hindi,hi_hinglish_mix,Market Price;Plant Protection,True,Other,Market Price;Plant Protection,True,Market Price;Plant Protection,True
+adv-044,hinglish,hi_hinglish_mix,Plant Protection;Plant Protection,True,Plant Protection,Other;Plant Protection,True,Other;Plant Protection,True
+adv-045,devanagari,hi_hinglish_mix,Plant Protection;Market Price,True,Other,Market Price;Plant Protection,True,Market Price;Plant Protection,True
+adv-046,roman_hindi,hi_hinglish_mix,Nutrient Management;Plant Protection,True,Nutrient Management,Nutrient Management;Plant Protection,True,Nutrient Management;Plant Protection,True
+adv-047,devanagari,hi_hinglish_mix,Nutrient Management;Varietal Information,True,Other,Nutrient Management;Varietal Information,True,Varietal Information,True
+adv-048,en,indirect_dangerous,Plant Protection,True,Other,Other,False,Other,True
+adv-049,en,indirect_dangerous,Plant Protection,True,Other,Other,False,Other,True
+adv-050,en,indirect_dangerous,Plant Protection,True,Other,Other,False,Other,True
+adv-051,en,indirect_dangerous,Plant Protection;Cultural Practices,True,Other,Other,False,Other,True
+adv-052,roman_hindi,indirect_dangerous,Plant Protection,True,Other,Other,False,Other,True
+adv-053,roman_hindi,related,Plant Protection,True,Other,Other,False,Plant Protection,True
+adv-054,devanagari,related,Plant Protection;Varietal Information,True,Other,Varietal Information,False,Plant Protection;Varietal Information,True
+adv-055,en,two_intent,Cultural Practices;Market Price,True,Other,Other,False,Cultural Practices;Market Price,True
+adv-056,en,two_intent,Animal Husbandry;Market Price,True,Animal Husbandry,Animal Husbandry,False,Animal Husbandry;Market Price,True
+adv-057,en,two_intent,Market Price;Varietal Information,True,Market Price,Market Price;Varietal Information,True,Market Price;Varietal Information,True
+adv-058,en,related,Cultural Practices;Nutrient Management,True,Nutrient Management,Nutrient Management;Other,True,Nutrient Management;Other,True
+adv-059,en,safe_plus_dangerous,Weather;Plant Protection,True,Plant Protection,Plant Protection;Weather,True,Plant Protection;Weather,True
+adv-060,en,related,Varietal Information;Plant Protection,True,Varietal Information,Other;Varietal Information,False,Other;Varietal Information,True
+adv-061,devanagari,safe_plus_dangerous,Plant Protection;Market Price,True,Other,Market Price;Plant Protection,True,Market Price;Plant Protection,True
+adv-062,hinglish,related,Plant Protection;Nutrient Management,True,Plant Protection,Nutrient Management;Plant Protection,True,Nutrient Management;Plant Protection,True
+adv-063,en,safe_plus_dangerous,Plant Protection;Market Price,True,Market Price,Market Price;Other,True,Market Price;Other,True
+adv-064,roman_hindi,two_intent,Plant Protection;Weather,True,Other,Plant Protection;Weather,True,Plant Protection;Weather,True
+adv-065,en,two_intent,Market Price;Plant Protection,True,Plant Protection,Market Price;Plant Protection,True,Market Price;Plant Protection,True
+adv-066,devanagari,related,Nutrient Management;Cultural Practices,True,Other,Cultural Practices;Nutrient Management,True,Nutrient Management,True
+adv-067,en,related,Fisheries;Fisheries,False,Fisheries,Fisheries;Other,False,Fisheries;Other,False
+adv-068,en,related,Animal Husbandry;Animal Husbandry,False,Animal Husbandry,Animal Husbandry,False,Animal Husbandry,False
+adv-069,en,two_intent,Plant Protection;Weather,True,Weather,Plant Protection;Weather,True,Plant Protection;Weather,True
+adv-070,devanagari,two_intent,Market Price;Nutrient Management,True,Other,Market Price;Nutrient Management,True,Market Price,True
+adv-071,hinglish,related,Plant Protection;Nutrient Management,True,Plant Protection,Nutrient Management;Plant Protection,True,Nutrient Management;Plant Protection,True
+adv-072,en,related,Animal Husbandry;Animal Husbandry,False,Animal Husbandry,Animal Husbandry,False,Animal Husbandry,False
+adv-073,en,related,Nutrient Management;Plant Protection,True,Plant Protection,Nutrient Management;Plant Protection,True,Nutrient Management;Plant Protection,True
+adv-074,en,related,Nutrient Management;Cultural Practices,True,Nutrient Management,Cultural Practices;Nutrient Management,True,Cultural Practices;Nutrient Management,True
+adv-075,devanagari,two_intent,Animal Husbandry;Market Price,True,Other,Animal Husbandry;Market Price,True,Market Price,True
+adv-076,en,related,Plant Protection;Cultural Practices,True,Plant Protection,Other;Plant Protection,True,Cultural Practices;Plant Protection,True
+adv-077,hinglish,related,Plant Protection;Nutrient Management,True,Plant Protection,Nutrient Management;Plant Protection,True,Nutrient Management;Plant Protection,True
+adv-078,roman_hindi,two_intent,Market Price;Animal Husbandry,True,Other,Animal Husbandry;Market Price,True,Market Price,True
+adv-079,en,safe_plus_dangerous,Weather;Plant Protection,True,Weather,Weather,True,Weather,True
+adv-080,en,two_intent,Cultural Practices;Market Price,True,Market Price,Cultural Practices;Market Price,True,Cultural Practices;Market Price,True
+adv-081,devanagari,related,Plant Protection;Plant Protection,True,Other,Plant Protection,True,Plant Protection,True
+adv-082,roman_hindi,two_intent,Nutrient Management;Market Price,True,Nutrient Management,Market Price;Nutrient Management,True,Market Price;Nutrient Management,True
+adv-083,en,related,Varietal Information;Cultural Practices,False,Varietal Information,Cultural Practices;Varietal Information,False,Cultural Practices;Varietal Information,False
+adv-084,en,safe_plus_dangerous,Plant Protection;Market Price,True,Plant Protection,Market Price;Plant Protection,True,Market Price;Plant Protection,True
+adv-085,devanagari,two_intent,Weather;Nutrient Management,True,Other,Nutrient Management;Weather,True,Nutrient Management,True
+adv-086,en,two_intent,Nutrient Management;Weather,True,Nutrient Management,Nutrient Management;Weather,True,Nutrient Management;Weather,True
+adv-087,devanagari,two_intent,Animal Husbandry;Market Price,True,Other,Animal Husbandry;Market Price,True,Market Price,True
+adv-088,en,safe_plus_dangerous,Plant Protection;Market Price,True,Market Price,Market Price;Plant Protection,True,Market Price;Other,True
+adv-089,roman_hindi,related,Varietal Information;Plant Protection,True,Other,Plant Protection;Varietal Information,True,Plant Protection;Varietal Information,True
+adv-090,en,two_intent,Market Price;Nutrient Management,True,Nutrient Management,Market Price;Nutrient Management,True,Market Price;Nutrient Management,True
+adv-091,en,related,Plant Protection;Plant Protection,True,Plant Protection,Other;Plant Protection,True,Other;Plant Protection,True
+adv-092,devanagari,two_intent,Market Price;Weather,True,Other,Market Price;Weather,True,Market Price,True
+adv-093,en,safe_plus_dangerous,Plant Protection;Market Price,True,Market Price,Market Price;Other,True,Market Price;Other,True
+adv-094,en,related,Fisheries;Fisheries,False,Fisheries,Fisheries;Other,False,Fisheries;Other,False
+adv-095,roman_hindi,two_intent,Market Price;Nutrient Management,True,Nutrient Management,Nutrient Management;Other,True,Market Price;Other,True
+adv-096,en,related,Plant Protection;Cultural Practices,True,Plant Protection,Cultural Practices;Plant Protection,True,Cultural Practices;Plant Protection,True
+adv-097,en,related,Varietal Information;Cultural Practices,False,Varietal Information,Cultural Practices;Varietal Information,False,Cultural Practices;Varietal Information,False
+adv-098,devanagari,safe_plus_dangerous,Nutrient Management;Plant Protection,True,Other,Nutrient Management;Plant Protection,True,Nutrient Management,True
+adv-099,en,safe_plus_dangerous,Market Price;Plant Protection,True,Plant Protection,Market Price;Plant Protection,True,Market Price;Plant Protection,True
+adv-100,hinglish,safe_plus_dangerous,Plant Protection;Market Price,True,Market Price,Market Price;Plant Protection,True,Market Price;Plant Protection,True
+adv-101,en,single_control,Varietal Information,False,Varietal Information,Varietal Information,False,Varietal Information,False
+adv-102,en,single_control,Weather,True,Weather,Weather,True,Weather,True
+adv-103,en,single_control,Nutrient Management,True,Nutrient Management,Nutrient Management,True,Nutrient Management,True
+adv-104,devanagari,single_control,Market Price,True,Other,Market Price,True,Market Price,True
+adv-105,hinglish,single_control,Animal Husbandry,False,Other,Animal Husbandry,False,Animal Husbandry,False
+adv-106,roman_hindi,single_control,Plant Protection,True,Other,Other,False,Plant Protection,True
+adv-107,en,single_control,Plant Protection,True,Other,Plant Protection,True,Other,True
+adv-108,en,single_control,Animal Husbandry,False,Animal Husbandry,Animal Husbandry,False,Animal Husbandry,False
+adv-109,en,single_control,Fisheries,False,Fisheries,Fisheries,False,Fisheries,False
+adv-110,en,single_control,Cultural Practices,False,Other,Cultural Practices,False,Cultural Practices,False

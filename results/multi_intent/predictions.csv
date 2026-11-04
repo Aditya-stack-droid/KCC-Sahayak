@@ -1,0 +1,111 @@
+case_id,language,category,gold,single,multi,gold_safety,multi_safety,text
+mi-001,en,two_unrelated,Market Price;Nutrient Management,Nutrient Management,Nutrient Management;Other,True,True,What is the price of urea and how much should I apply to my wheat crop?
+mi-002,en,two_unrelated,Varietal Information;Weather,Weather,Varietal Information;Weather,True,True,What is the weather forecast and which tomato variety should I sow?
+mi-003,en,two_unrelated,Nutrient Management;Other,Nutrient Management,Nutrient Management;Other,True,True,Which fertiliser is best for paddy and what is the capital of Japan?
+mi-004,en,two_unrelated,Other;Plant Protection,Other,Other;Plant Protection,True,True,How do I control aphids in mustard and who won yesterday's cricket match?
+mi-005,en,two_unrelated,Animal Husbandry;Other,Animal Husbandry,Animal Husbandry;Other,False,False,My buffalo is not eating and please book a train ticket to Delhi.
+mi-006,en,two_unrelated,Cultural Practices;Market Price,Market Price,Cultural Practices;Market Price,True,True,What is the MSP for cotton and how do I irrigate sugarcane?
+mi-007,en,two_unrelated,Market Price;Other,Market Price,Market Price;Other,True,True,Tell me the market price of wheat and write a poem about rain.
+mi-008,en,two_unrelated,Cultural Practices;Other,Other,Cultural Practices;Other,False,False,How do I sow bajra and how do I open a savings account?
+mi-009,en,two_unrelated,Animal Husbandry;Other,Animal Husbandry,Animal Husbandry;Other,False,False,My cow has fever and which movie won the award?
+mi-010,en,two_unrelated,Other;Plant Protection,Plant Protection,Other;Plant Protection,True,True,What pesticide for bollworm and how do I apply for a passport?
+mi-011,en,two_unrelated,Other;Varietal Information,Varietal Information,Other;Varietal Information,False,False,Best seed variety for gram and what is the interest rate on fixed deposit?
+mi-012,en,two_unrelated,Other;Plant Protection,Plant Protection,Other;Plant Protection,True,True,My brinjal crop has wilt and give me a recipe for brinjal curry.
+mi-013,en,two_unrelated,Cultural Practices;Other,Other,Cultural Practices;Other,False,False,How do I irrigate sugarcane and who is the prime minister?
+mi-014,en,two_unrelated,Other;Plant Protection,Plant Protection,Other;Plant Protection,True,True,Which fungicide for blight and how do I fix my laptop battery?
+mi-015,en,two_unrelated,Animal Husbandry;Other,Animal Husbandry,Animal Husbandry;Other,False,False,My goat is limping and what is the schedule of the next train?
+mi-016,en,two_unrelated,Nutrient Management;Other,Nutrient Management,Nutrient Management;Other,True,True,Fertilizer for tomato plants and what is the boiling point of water?
+mi-017,en,two_related,Nutrient Management;Plant Protection,Nutrient Management,Nutrient Management;Plant Protection,True,True,wheat rust control and urea dose for wheat
+mi-018,en,two_related,Cultural Practices;Varietal Information,Varietal Information,Cultural Practices;Varietal Information,False,False,Which variety of paddy is good and when should I transplant it?
+mi-019,en,two_related,Nutrient Management;Plant Protection,Nutrient Management,Nutrient Management;Plant Protection,True,True,How much urea for wheat and how do I control weeds in it?
+mi-020,en,two_related,Cultural Practices;Plant Protection,Plant Protection,Other;Plant Protection,True,True,My tomato leaves are turning yellow and insects are eating them. What pesticide should I use?
+mi-021,en,two_related,Market Price;Varietal Information,Market Price,Market Price;Varietal Information,True,True,What is the mandi rate for mustard and which variety gives the best yield?
+mi-022,en,two_related,Varietal Information;Weather,Weather,Varietal Information;Weather,True,True,Tell me the weather for sowing and recommend a wheat variety.
+mi-023,en,two_related,Government Scheme,Government Scheme,Government Scheme,True,True,How do I apply for PM-Kisan and what is the subsidy on drip irrigation?
+mi-024,en,two_related,Fisheries,Fisheries,Fisheries,False,False,My fish pond has algae and how do I increase fish growth?
+mi-025,en,two_related,Animal Husbandry,Animal Husbandry,Animal Husbandry,False,False,Which fodder crop for my cattle and how do I treat my cow's wound?
+mi-026,en,three_intent,Market Price;Nutrient Management;Varietal Information,Nutrient Management,Nutrient Management;Varietal Information,True,True,"What is the price of DAP, how much do I apply to wheat, and which variety is best?"
+mi-027,en,three_intent,Cultural Practices;Market Price;Plant Protection,Market Price,Cultural Practices;Market Price,True,True,"How do I control termites, when should I irrigate, and what is the MSP for sugarcane?"
+mi-028,en,three_intent,Animal Husbandry;Fisheries;Weather,Weather,Animal Husbandry;Weather,True,True,"My cow is sick, my pond is dry, and what is the weather tomorrow?"
+mi-029,en,three_intent,Nutrient Management;Plant Protection;Varietal Information,Plant Protection,Nutrient Management;Plant Protection,True,True,"Which seed for mustard, how much urea, and how do I spray for aphids?"
+mi-030,en,three_intent,Market Price;Nutrient Management;Varietal Information,Nutrient Management,Market Price;Nutrient Management,True,True,"Tell me the wheat variety, the fertiliser dose, and the market rate."
+mi-031,devanagari,two_unrelated,Market Price;Nutrient Management,Other,Market Price;Nutrient Management,True,True,गेहूं का भाव क्या है और यूरिया कितना डालें?
+mi-032,devanagari,two_unrelated,Varietal Information;Weather,Other,Varietal Information;Weather,True,True,मौसम कैसा रहेगा और कौन सी किस्म बोएं?
+mi-033,devanagari,two_related,Nutrient Management;Plant Protection,Other,Nutrient Management;Plant Protection,True,True,गेहूं में रतुआ है और यूरिया कितना डालें?
+mi-034,devanagari,two_related,Animal Husbandry,Other,Animal Husbandry,False,False,मेरी भैंस बीमार है और दूध कम दे रही है।
+mi-035,devanagari,two_related,Fisheries;Market Price,Other,Fisheries;Market Price,True,True,मछली तालाब की देखभाल कैसे करें और मछली का बाजार भाव क्या है?
+mi-036,devanagari,two_related,Plant Protection;Varietal Information,Other,Varietal Information,True,False,सरसों में कीड़ा लगा है और बीज कौन सा बोएं?
+mi-037,devanagari,two_related,Cultural Practices;Government Scheme,Other,Cultural Practices;Government Scheme,True,True,योजना का लाभ कैसे लें और गेहूं की सिंचाई कब करें?
+mi-038,roman_hindi,two_unrelated,Market Price;Nutrient Management,Nutrient Management,Market Price;Nutrient Management,True,True,gehu ka bhav kya hai aur urea kitna dalen?
+mi-039,roman_hindi,two_unrelated,Varietal Information;Weather,Other,Varietal Information;Weather,True,True,mausam kaisa rahega aur kaunsi kism boyen?
+mi-040,roman_hindi,two_related,Nutrient Management;Plant Protection,Nutrient Management,Nutrient Management,True,True,gehu me ratua hai aur urea kitna dalen?
+mi-041,roman_hindi,two_related,Plant Protection;Varietal Information,Other,Plant Protection;Varietal Information,True,True,sarson me keeda lag gaya hai aur beej kaunsa boyen?
+mi-042,roman_hindi,two_related,Cultural Practices;Government Scheme,Government Scheme,Cultural Practices;Government Scheme,True,True,yojana ka labh kaise lein aur sinchai kab kare?
+mi-043,roman_hindi,two_unrelated,Market Price;Varietal Information,Market Price,Market Price;Varietal Information,True,True,mandi me sarson ka bhav kya hai aur kism kaunsi hai?
+mi-044,roman_hindi,two_related,Fisheries;Market Price,Other,Fisheries;Market Price,True,True,talab me machhli kaise badhayen aur machhli ka bhav kya hai?
+mi-045,hinglish,two_unrelated,Market Price;Nutrient Management,Nutrient Management,Market Price;Nutrient Management,True,True,Gehu ka rate kya chal raha hai aur urea kitna dalna hai?
+mi-046,hinglish,two_unrelated,Varietal Information;Weather,Varietal Information,Varietal Information;Weather,True,True,Mausam kaisa hai aur tomato ki kaunsi variety lagayein?
+mi-047,hinglish,two_related,Animal Husbandry,Other,Animal Husbandry,False,False,Meri gaay bimar hai aur doodh kam de rahi hai.
+mi-048,hinglish,two_related,Nutrient Management;Plant Protection,Plant Protection,Nutrient Management;Plant Protection,True,True,Paddy me stem borer hai aur khaad kitna dalen?
+mi-049,hinglish,two_related,Cultural Practices;Government Scheme,Government Scheme,Cultural Practices;Government Scheme,True,True,Sinchai kab karein aur kheti ke liye loan kaise milega?
+mi-050,hinglish,two_related,Market Price;Plant Protection,Market Price,Market Price;Plant Protection,True,True,Mandi me kapas ka bhav kya hai aur kapas me keeda lag gaya hai?
+mi-051,en,shared_entities,Market Price;Plant Protection,Plant Protection,Market Price;Other;Plant Protection,True,True,Wheat has rust and the wheat price is falling; what should I do?
+mi-052,en,shared_entities,Nutrient Management;Varietal Information,Nutrient Management,Nutrient Management;Varietal Information,True,True,For tomato: which variety and what urea dose?
+mi-053,en,shared_entities,Nutrient Management;Plant Protection,Plant Protection,Nutrient Management;Plant Protection,True,True,My paddy needs fertiliser and also protection from stem borer.
+mi-054,en,different_crops,Plant Protection,Plant Protection,Plant Protection,True,True,How do I control aphids in mustard and whitefly in cotton?
+mi-055,en,different_crops,Nutrient Management,Nutrient Management,Nutrient Management,True,True,Urea dose for wheat and potash dose for sugarcane?
+mi-056,en,different_crops,Animal Husbandry;Varietal Information,Varietal Information,Animal Husbandry;Varietal Information,False,False,Best variety for paddy and best breed of buffalo?
+mi-057,en,mixed_high_risk,Cultural Practices;Plant Protection,Nutrient Management,Cultural Practices;Nutrient Management,True,True,How do I sow wheat and what is the monocrotophos dose for aphids?
+mi-058,en,mixed_high_risk,Animal Husbandry;Nutrient Management,Nutrient Management,Animal Husbandry;Nutrient Management,True,True,Which cow breed is good and how much urea for wheat?
+mi-059,en,mixed_high_risk,Plant Protection;Weather,Plant Protection,Plant Protection;Weather,True,True,What is the weather tomorrow and what pesticide for bollworm?
+mi-060,en,mixed_high_risk,Government Scheme;Nutrient Management,Nutrient Management,Government Scheme;Nutrient Management,True,True,How to get a subsidy and what is the fertiliser dose for paddy?
+mi-061,en,single_control,Plant Protection,Plant Protection,Plant Protection,True,True,What is the control measure for aphid infestation in mustard?
+mi-062,en,single_control,Varietal Information,Varietal Information,Varietal Information,False,False,Which tomato variety is good for me?
+mi-063,en,single_control,Nutrient Management,Nutrient Management,Nutrient Management,True,True,Apply 50 kg urea per acre to wheat.
+mi-064,en,single_control,Weather,Weather,Weather,True,True,Tell me the weather forecast for tomorrow.
+mi-065,en,single_control,Nutrient Management,Nutrient Management,Nutrient Management,True,True,How much urea for wheat?
+mi-066,devanagari,single_control,Market Price,Other,Market Price,True,True,गेहूं का भाव क्या है?
+mi-067,roman_hindi,single_control,Plant Protection,Other,Other,True,False,gehu me ratua hai kya karein?
+mi-068,hinglish,single_control,Animal Husbandry,Other,Animal Husbandry,False,False,Meri gaay bimar hai.
+mi-069,en,single_control,Varietal Information,Varietal Information,Varietal Information,False,False,Which variety of paddy is best?
+mi-070,en,single_control,Plant Protection,Other,Plant Protection,True,True,How do I control insects in my brinjal crop?
+mi-071,en,single_control,Cultural Practices,Other,Cultural Practices,False,False,When should I irrigate the wheat field?
+mi-072,en,single_control,Market Price,Market Price,Market Price,True,True,What is the market price of mustard today?
+mi-073,en,single_control,Animal Husbandry,Animal Husbandry,Animal Husbandry,False,False,How do I increase milk yield in my buffalo?
+mi-074,en,single_control,Fisheries,Fisheries,Fisheries,False,False,Which is the best fish for a farm pond?
+mi-075,en,single_control,Government Scheme,Government Scheme,Government Scheme,True,True,How do I apply for crop insurance?
+mi-076,en,single_control,Cultural Practices,Other,Cultural Practices,False,False,How should I sow bajra this season?
+mi-077,en,single_control,Varietal Information,Varietal Information,Varietal Information,False,False,What is the recommended seed rate for wheat?
+mi-078,devanagari,single_control,Plant Protection,Other,Plant Protection,True,True,गेहूं में रतुआ है तो क्या करें?
+mi-079,roman_hindi,single_control,Market Price,Market Price,Market Price,True,True,Mandi me gehu ka bhav kya hai?
+mi-080,roman_hindi,single_control,Fisheries,Other,Fisheries,False,False,Talab me machhli kaise paalna hai?
+mi-081,en,single_control,Cultural Practices,Other,Other,False,False,My tomato leaves are turning yellow.
+mi-082,en,single_control,Plant Protection,Other,Plant Protection,True,True,Insects are eating my wheat plants.
+mi-083,en,single_control,Plant Protection,Plant Protection,Plant Protection,True,True,My crop has a disease.
+mi-084,en,single_control,Nutrient Management,Nutrient Management,Nutrient Management,True,True,How much urea and how much DAP for wheat?
+mi-085,en,single_control,Varietal Information,Varietal Information,Varietal Information,False,False,Which variety is early and which variety is high-yielding?
+mi-086,en,two_related,Market Price;Nutrient Management,Nutrient Management,Nutrient Management,True,True,What is the DAP price and the urea dose for wheat?
+mi-087,en,two_related,Cultural Practices;Market Price,Other,Other,True,False,How do I store wheat and where can I sell it?
+mi-088,en,two_related,Cultural Practices;Plant Protection,Plant Protection,Plant Protection,True,True,Which fungicide for blight and when should I spray it?
+mi-089,en,two_related,Government Scheme;Varietal Information,Varietal Information,Government Scheme;Varietal Information,True,True,What is the subsidy for seeds and which seed variety is best?
+mi-090,en,two_related,Animal Husbandry,Animal Husbandry,Animal Husbandry,False,False,My buffalo has a fever and she is not giving milk.
+mi-091,en,two_related,Cultural Practices;Nutrient Management,Nutrient Management,Nutrient Management;Other,True,True,How do I test my soil and how much zinc do I add?
+mi-092,en,two_related,Plant Protection;Weather,Plant Protection,Plant Protection;Weather,True,True,Will it rain tomorrow and should I spray now?
+mi-093,en,two_related,Market Price;Plant Protection,Plant Protection,Market Price;Plant Protection,True,True,What is the cotton MSP and how do I control bollworm?
+mi-094,en,two_related,Fisheries,Fisheries,Fisheries;Other,False,False,How do I prepare a fish pond and which species to stock?
+mi-095,en,two_related,Cultural Practices;Varietal Information,Varietal Information,Cultural Practices;Varietal Information,False,False,Which wheat variety tolerates heat and when do I irrigate?
+mi-096,en,two_unrelated,Market Price;Nutrient Management,Nutrient Management,Nutrient Management;Other,True,True,What is the urea price and is it good for paddy?
+mi-097,en,two_related,Cultural Practices;Varietal Information,Varietal Information,Varietal Information,False,False,Tell me the mustard variety and the sowing time.
+mi-098,en,two_related,Fisheries,Fisheries,Fisheries;Other,False,False,My pond has low oxygen and how do I treat it?
+mi-099,en,two_unrelated,Market Price;Weather,Weather,Market Price;Weather,True,True,What is the weather now and what is the mandi rate?
+mi-100,en,two_related,Nutrient Management;Plant Protection,Plant Protection,Nutrient Management;Plant Protection,True,True,How much fertiliser for tomato and which pest is attacking it?
+mi-101,devanagari,two_related,Cultural Practices;Nutrient Management,Other,Cultural Practices;Nutrient Management,True,True,गेहूं में यूरिया कितना डालें और सिंचाई कब करें?
+mi-102,roman_hindi,two_unrelated,Market Price;Plant Protection,Other,Market Price;Plant Protection,True,True,sarson ka bhav kya hai aur keeda kaise hatayein?
+mi-103,hinglish,two_related,Nutrient Management;Plant Protection,Plant Protection,Nutrient Management;Plant Protection,True,True,Kapas me bollworm hai aur fertiliser kitna dalen?
+mi-104,en,two_unrelated,Market Price;Plant Protection,Plant Protection,Market Price;Plant Protection,True,True,What is the price of paddy and how do I control stem borer?
+mi-105,en,two_related,Animal Husbandry,Animal Husbandry,Animal Husbandry,False,False,Which cow breed for milk and how much fodder to feed?
+mi-106,en,two_unrelated,Plant Protection;Weather,Weather,Plant Protection;Weather,True,True,How do I control whitefly and what is the weather forecast?
+mi-107,en,two_unrelated,Cultural Practices;Market Price,Market Price,Cultural Practices;Market Price,True,True,Tell me the sugarcane price and the best irrigation method.
+mi-108,en,two_related,Cultural Practices;Varietal Information,Varietal Information,Other;Varietal Information,False,False,How do I increase tomato yield and which variety should I buy?
+mi-109,en,two_unrelated,Animal Husbandry;Market Price,Animal Husbandry,Animal Husbandry,True,False,My goat is sick and what is the price of goat milk?
+mi-110,en,two_related,Cultural Practices;Nutrient Management,Nutrient Management,Nutrient Management;Other,True,True,Which crop after paddy and how much fertiliser for it?

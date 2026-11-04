@@ -59,8 +59,8 @@ def main():
     test = test[informative_mask(test["answers"])].reset_index(drop=True)
     print(f"test rows with a real (informative) gold answer: {len(test)} / {n_before}")
     embed = SentenceTransformer("paraphrase-multilingual-MiniLM-L12-v2")
-    Q = embed.encode(test["questions"].astype(str).tolist(), batch_size=128,
-                     normalize_embeddings=True, show_progress_bar=False).astype("float32")
+    Q = embed.encode(test["questions"].astype(str).tolist(), batch_size=16,
+                 normalize_embeddings=True, show_progress_bar=True).astype("float32")
 
     results = {}
     for alpha in [0.0, 0.2, 0.4, 0.5, 0.6, 0.8, 1.0]:

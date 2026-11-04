@@ -74,7 +74,7 @@ def main() -> None:
             d = r["deployed_artifact_on_grouped_test"]
             lines.append(f"| {s} | {d['accuracy']:.4f} | "
                          f"{d['share_test_seen_in_deployed_training_pool']:.2%} |")
-        lines += ["", f"Full detail: `{OUT / 'GROUPED_INTENT_REPORT.md'}`", ""]
+        lines += ["", "Full detail: `results/improved_evaluation/GROUPED_INTENT_REPORT.md`", ""]
     else:
         lines += ["_Pending: run `04_evaluate_grouped_intent.py`._", ""]
 
@@ -92,7 +92,7 @@ def main() -> None:
             f"- Hybrid (alpha=0.4, n={retrieval['protocol']['hybrid_sample']}) topic match @1: "
             f"{h['category_match_top1']:.4f}; recall@5 {h['recall_at_5']:.4f}; "
             f"answer token-F1 {h['answer_token_f1_top1_all']:.4f}.",
-            "", f"Full detail: `{OUT / 'GROUPED_RETRIEVAL_REPORT.md'}`", "",
+            "", "Full detail: `results/improved_evaluation/GROUPED_RETRIEVAL_REPORT.md`", "",
         ]
     else:
         lines += ["_Pending: run `05_evaluate_grouped_retrieval.py`._", ""]

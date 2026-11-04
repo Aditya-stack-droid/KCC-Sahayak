@@ -28,13 +28,13 @@
       "selection_score": 0.8804
     },
     "combo_lr_C10_w1": {
-      "silver": 0.9355,
+      "silver": 0.9375,
       "gold": 0.9,
       "gold_en": 0.94,
       "gold_hinglish": 0.9,
       "gold_hi": 0.86,
       "hinglish_perturbed": 0.884,
-      "selection_score": 0.9049
+      "selection_score": 0.9054
     },
     "combo_lr_C10_w2": {
       "silver": 0.9355,
@@ -42,8 +42,8 @@
       "gold_en": 0.94,
       "gold_hinglish": 0.8,
       "gold_hi": 0.82,
-      "hinglish_perturbed": 0.78,
-      "selection_score": 0.8689
+      "hinglish_perturbed": 0.776,
+      "selection_score": 0.8679
     },
     "combo_lr_C10_w3": {
       "silver": 0.9274,
@@ -64,13 +64,13 @@
       "selection_score": 0.9039
     },
     "combo_lr_C30_w2": {
-      "silver": 0.9355,
+      "silver": 0.9294,
       "gold": 0.8533,
       "gold_en": 0.94,
       "gold_hinglish": 0.8,
       "gold_hi": 0.82,
-      "hinglish_perturbed": 0.76,
-      "selection_score": 0.8639
+      "hinglish_perturbed": 0.764,
+      "selection_score": 0.8634
     },
     "combo_lr_C30_w3": {
       "silver": 0.9355,

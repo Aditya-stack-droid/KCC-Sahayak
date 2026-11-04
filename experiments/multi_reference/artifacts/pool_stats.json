@@ -1,0 +1,48 @@
+{
+  "n_test_rows": 13831,
+  "n_test_groups": 4850,
+  "n_groups_with_references": 4457,
+  "n_unique_references": 11747,
+  "n_rows_with_reference": 13362,
+  "n_rows_with_2plus_references": 9669,
+  "n_rows_with_5plus_references": 8050,
+  "n_rows_without_reference": 469,
+  "share_rows_with_reference": 0.966091,
+  "share_rows_with_2plus_references": 0.699082,
+  "share_rows_with_5plus_references": 0.582026,
+  "share_rows_without_reference": 0.033909,
+  "references_per_test_row": {
+    "mean": 175.2293,
+    "median": 10.0,
+    "p90": 1247.0,
+    "max": 1247,
+    "note": "Row-weighted: rows inside very large near-duplicate groups pull the mean up."
+  },
+  "references_per_group": {
+    "n_groups": 4457,
+    "mean": 2.6356,
+    "median": 1.0,
+    "p90": 3.0,
+    "max": 1247
+  },
+  "skew": {
+    "n_rows_in_groups_with_ge_100_references": 3024,
+    "share_rows_in_groups_with_ge_100_references": 0.2186,
+    "note": "The reference distribution is highly skewed: a few very large transitive near-duplicate clusters hold hundreds of answers. Per-group and per-row statistics are reported separately."
+  },
+  "reference_diversity": {
+    "n_groups_sampled": 500,
+    "seed": 42,
+    "cap_per_group": 12,
+    "mean_max_pairwise_token_f1": 0.6201,
+    "median_max_pairwise_token_f1": 0.7101,
+    "share_groups_below_0_80": 0.642,
+    "note": "Pairwise token-F1 between reference answers in the same group. Low values mean the group holds genuinely different advice, not restatements of one answer."
+  },
+  "criteria": {
+    "min_share_rows_with_2plus_references": 0.5,
+    "min_share_diverse_multi_ref_groups": 0.5
+  },
+  "supports_multi_reference": true,
+  "summary_line": "11,747 distinct references in 4,457 test groups; 69.9% of test rows have >=2; mean max pairwise reference F1 0.6201; supports_multi_reference=True"
+}

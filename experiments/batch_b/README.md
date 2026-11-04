@@ -24,9 +24,9 @@ writes only to new paths.
 | 2 | Human annotation infrastructure | complete (infrastructure only; human labels PENDING) |
 | 3 | Independent safety evaluation | complete for Improvement 2 (synthetic adversarial set; no expert review) |
 | 4 | Answer conflict detection | complete for Improvement 1 (synthetic pair set + descriptive corpus scan; no expert adjudication) |
-| 5 | Out-of-scope and multi-intent detection | not started |
+| 5 | Out-of-scope and multi-intent detection | partial: out-of-scope complete (synthetic negatives, Improvement 4); multi-intent not started |
 | 6 | Extended retrieval evaluation | not started |
-| 7 | Behavioural and regression testing | not started |
+| 7 | Behavioural and regression testing | complete for Improvement 5 (authored synthetic behavioural probes; no model tuning) |
 | 8 | Documentation and final comparison | not started |
 
 ## Baseline manifest
@@ -75,6 +75,8 @@ After an approved improvement adds files, add its roots to the config and
 rebuild with `--snapshot --force`; `--allow-additions` verifies only that no
 protected file changed while the new files are reviewed. The older 308-file and
 325-file manifests are intentionally left untouched as historical baselines.
+Post-Improvement snapshots are `batch_b_improvement3_hashes.json` (361 files)
+and `batch_b_improvement4_hashes.json` (379 files, adding out-of-scope detection).
 
 ## Environment
 

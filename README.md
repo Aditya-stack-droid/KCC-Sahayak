@@ -33,15 +33,33 @@ added to the retrieval memory.
 
 ## Run the demo
 
-Double-click **`run_app.bat`** (first start takes about a minute while models load), or:
+This starts one process that serves both the API and the static front end on
+<http://localhost:8420>. Pages: Live Demo (voice or text), Advisor Console, Operations
+(live log statistics), Evaluation (the honest numbers), System, About.
 
-```bash
-.venv/Scripts/python.exe -m uvicorn app:app --app-dir backend --port 8420
+**Windows** — double-click **`run_app.bat`** (first start takes about a minute while models
+load), or:
+
+```bat
+.venv\Scripts\python.exe -m uvicorn app:app --app-dir backend --port 8420
 ```
 
-Open <http://localhost:8420>. Pages: Live Demo (voice or text), Advisor Console, Operations
-(live log statistics), Evaluation (the honest numbers), System, About.
-Voice input needs `ffmpeg` (installed with `winget install Gyan.FFmpeg`).
+**macOS / Linux** — run:
+
+```bash
+.venv/bin/python -m uvicorn app:app --app-dir backend --port 8420
+```
+
+(A virtual environment uses `Scripts/` on Windows and `bin/` on macOS/Linux; the commands
+below use the macOS/Linux form.)
+
+Voice input needs `ffmpeg`: `winget install Gyan.FFmpeg` (Windows), `brew install ffmpeg`
+(macOS), `sudo apt-get install ffmpeg` (Debian/Ubuntu).
+
+**macOS note:** PyTorch and FAISS both link OpenMP, which can segfault during retrieval on
+some macOS builds. If that happens, prefix the command with `OMP_NUM_THREADS=1`, e.g.
+`OMP_NUM_THREADS=1 python -m uvicorn app:app --app-dir backend --port 8420`. Windows and
+Linux do not need this.
 
 Try: *"which tomato variety is good for me?"* (auto-answered), *"gehu mein peela rust aa gaya hai
 kya spray karun"* (escalated: pest advice), *"आज मंडी में सरसों का भाव क्या चल रहा है?"*
@@ -56,7 +74,7 @@ kya spray karun"* (escalated: pest advice), *"आज मंडी में स�
 | Hinglish with random re-spelling | 85.6% |
 | Same model **without** spoken-style training text, gold set | 60.0% |
 | Gate: share auto-answered / accuracy of those / policy violations (held-out) | 26.4% / 95.4% / 2.3% |
-| Confidence thresholds alone (no safety rules) | 92.3% auto-answered, **72.3% policy violations** |
+| Confidence thresholds alone (no safety rules) | 92.5% auto-answered, **71.7% policy violations** |
 | Answer F1 vs advisor's real answer: dense -> hybrid (novel queries) | 0.451 -> 0.467 (0.189 -> 0.245) |
 
 Honest comparisons:
@@ -91,8 +109,22 @@ keyword labels but 65.7% against labels by meaning.
 ## Reproduce
 
 ```bash
-python -m venv .venv && .venv/Scripts/python.exe -m pip install -r requirements.txt
+python -m venv .venv
+.venv/bin/python -m pip install -r requirements.txt          # macOS / Linux
+# .venv\Scripts\python.exe -m pip install -r requirements.txt   # Windows
 ```
+
+Model artefacts (the intent head and the FAISS/TF-IDF index) are **not committed** — they
+are large and `models/` is in `.gitignore`. Build them once after installing dependencies:
+
+```bash
+python scripts/03_build_retrieval_index.py     # dense FAISS index + TF-IDF
+python scripts/16_model_selection.py --save    # calibrated production intent head
+python scripts/13_hybrid_retrieval.py          # optional: hybrid fusion weight
+```
+
+If the artefacts are absent the app stops with a clear message naming the missing file and
+the script that builds it. No GPU is required; everything runs on CPU.
 
 | Script | Purpose |
 |---|---|

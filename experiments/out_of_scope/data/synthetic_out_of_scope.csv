@@ -1,0 +1,181 @@
+query_id,family_id,category,register,text,label,synthetic,source,split
+programming-01-en,programming-01,programming,en,Write a Python program to sort a list.,out_of_scope,True,authored_synthetic,train
+programming-01-hi,programming-01,programming,hi,पायथन में सूची को क्रमबद्ध करने का प्रोग्राम लिखें।,out_of_scope,True,authored_synthetic,train
+programming-01-hinglish,programming-01,programming,hinglish,Python me list sort karne ka program likho.,out_of_scope,True,authored_synthetic,train
+programming-02-en,programming-02,programming,en,How do I fix an error in my JavaScript code?,out_of_scope,True,authored_synthetic,train
+programming-02-hi,programming-02,programming,hi,मेरे जावास्क्रिप्ट कोड में त्रुटि कैसे ठीक करें?,out_of_scope,True,authored_synthetic,train
+programming-02-hinglish,programming-02,programming,hinglish,Mere JavaScript code me error kaise thik karein?,out_of_scope,True,authored_synthetic,train
+programming-03-en,programming-03,programming,en,Explain how a for loop works in C.,out_of_scope,True,authored_synthetic,test
+programming-03-hi,programming-03,programming,hi,बताइए कि सी भाषा में फॉर लूप कैसे काम करता है।,out_of_scope,True,authored_synthetic,test
+programming-03-hinglish,programming-03,programming,hinglish,C language me for loop kaise kaam karta hai samjhao.,out_of_scope,True,authored_synthetic,test
+programming-04-en,programming-04,programming,en,What is the difference between a list and a tuple?,out_of_scope,True,authored_synthetic,train
+programming-04-hi,programming-04,programming,hi,सूची और टपल में क्या अंतर है?,out_of_scope,True,authored_synthetic,train
+programming-04-hinglish,programming-04,programming,hinglish,List aur tuple me kya antar hai?,out_of_scope,True,authored_synthetic,train
+programming-05-en,programming-05,programming,en,Write SQL to find the top ten customers.,out_of_scope,True,authored_synthetic,val
+programming-05-hi,programming-05,programming,hi,शीर्ष दस ग्राहकों को खोजने के लिए एसक्यूएल लिखें।,out_of_scope,True,authored_synthetic,val
+programming-05-hinglish,programming-05,programming,hinglish,Top ten customers dhoondhne ki SQL query likho.,out_of_scope,True,authored_synthetic,val
+general_knowledge-06-en,general_knowledge-06,general_knowledge,en,What is the capital of Japan?,out_of_scope,True,authored_synthetic,train
+general_knowledge-06-hi,general_knowledge-06,general_knowledge,hi,जापान की राजधानी क्या है?,out_of_scope,True,authored_synthetic,train
+general_knowledge-06-hinglish,general_knowledge-06,general_knowledge,hinglish,Japan ki rajdhani kya hai?,out_of_scope,True,authored_synthetic,train
+general_knowledge-07-en,general_knowledge-07,general_knowledge,en,Who wrote the play Hamlet?,out_of_scope,True,authored_synthetic,val
+general_knowledge-07-hi,general_knowledge-07,general_knowledge,hi,हैमलेट नाटक किसने लिखा था?,out_of_scope,True,authored_synthetic,val
+general_knowledge-07-hinglish,general_knowledge-07,general_knowledge,hinglish,Hamlet natak kisne likha tha?,out_of_scope,True,authored_synthetic,val
+general_knowledge-08-en,general_knowledge-08,general_knowledge,en,How many continents are there on Earth?,out_of_scope,True,authored_synthetic,train
+general_knowledge-08-hi,general_knowledge-08,general_knowledge,hi,पृथ्वी पर कितने महाद्वीप हैं?,out_of_scope,True,authored_synthetic,train
+general_knowledge-08-hinglish,general_knowledge-08,general_knowledge,hinglish,Prithvi par kitne mahadweep hain?,out_of_scope,True,authored_synthetic,train
+general_knowledge-09-en,general_knowledge-09,general_knowledge,en,What is the boiling point of water at sea level?,out_of_scope,True,authored_synthetic,test
+general_knowledge-09-hi,general_knowledge-09,general_knowledge,hi,समुद्र तल पर पानी का क्वथनांक क्या है?,out_of_scope,True,authored_synthetic,test
+general_knowledge-09-hinglish,general_knowledge-09,general_knowledge,hinglish,Samudra tal par pani ka boiling point kya hai?,out_of_scope,True,authored_synthetic,test
+general_knowledge-10-en,general_knowledge-10,general_knowledge,en,Which is the largest ocean in the world?,out_of_scope,True,authored_synthetic,train
+general_knowledge-10-hi,general_knowledge-10,general_knowledge,hi,विश्व का सबसे बड़ा महासागर कौन सा है?,out_of_scope,True,authored_synthetic,train
+general_knowledge-10-hinglish,general_knowledge-10,general_knowledge,hinglish,Duniya ka sabse bada ocean kaunsa hai?,out_of_scope,True,authored_synthetic,train
+sports-11-en,sports-11,sports,en,Who won yesterday's cricket match?,out_of_scope,True,authored_synthetic,val
+sports-11-hi,sports-11,sports,hi,कल का क्रिकेट मैच किसने जीता?,out_of_scope,True,authored_synthetic,val
+sports-11-hinglish,sports-11,sports,hinglish,Kal ka cricket match kisne jeeta?,out_of_scope,True,authored_synthetic,val
+sports-12-en,sports-12,sports,en,What is the offside rule in football?,out_of_scope,True,authored_synthetic,train
+sports-12-hi,sports-12,sports,hi,फुटबॉल में ऑफसाइड नियम क्या है?,out_of_scope,True,authored_synthetic,train
+sports-12-hinglish,sports-12,sports,hinglish,Football me offside rule kya hai?,out_of_scope,True,authored_synthetic,train
+sports-13-en,sports-13,sports,en,When are the next Olympic Games?,out_of_scope,True,authored_synthetic,train
+sports-13-hi,sports-13,sports,hi,अगले ओलंपिक खेल कब होंगे?,out_of_scope,True,authored_synthetic,train
+sports-13-hinglish,sports-13,sports,hinglish,Next Olympic games kab honge?,out_of_scope,True,authored_synthetic,train
+sports-14-en,sports-14,sports,en,How many players are on a basketball team?,out_of_scope,True,authored_synthetic,train
+sports-14-hi,sports-14,sports,hi,बास्केटबॉल टीम में कितने खिलाड़ी होते हैं?,out_of_scope,True,authored_synthetic,train
+sports-14-hinglish,sports-14,sports,hinglish,Basketball team me kitne players hote hain?,out_of_scope,True,authored_synthetic,train
+sports-15-en,sports-15,sports,en,Who is the captain of the Indian hockey team?,out_of_scope,True,authored_synthetic,test
+sports-15-hi,sports-15,sports,hi,भारतीय हॉकी टीम का कप्तान कौन है?,out_of_scope,True,authored_synthetic,test
+sports-15-hinglish,sports-15,sports,hinglish,Indian hockey team ka captain kaun hai?,out_of_scope,True,authored_synthetic,test
+human_health-16-en,human_health-16,human_health,en,What is a normal blood pressure reading?,out_of_scope,True,authored_synthetic,train
+human_health-16-hi,human_health-16,human_health,hi,सामान्य रक्तचाप कितना होता है?,out_of_scope,True,authored_synthetic,train
+human_health-16-hinglish,human_health-16,human_health,hinglish,Normal blood pressure kitna hota hai?,out_of_scope,True,authored_synthetic,train
+human_health-17-en,human_health-17,human_health,en,How do I treat a headache at home?,out_of_scope,True,authored_synthetic,test
+human_health-17-hi,human_health-17,human_health,hi,घर पर सिरदर्द का इलाज कैसे करें?,out_of_scope,True,authored_synthetic,test
+human_health-17-hinglish,human_health-17,human_health,hinglish,Ghar par sar dard ka ilaj kaise karein?,out_of_scope,True,authored_synthetic,test
+human_health-18-en,human_health-18,human_health,en,Which vitamins are good for the eyes?,out_of_scope,True,authored_synthetic,train
+human_health-18-hi,human_health-18,human_health,hi,आंखों के लिए कौन से विटामिन अच्छे हैं?,out_of_scope,True,authored_synthetic,train
+human_health-18-hinglish,human_health-18,human_health,hinglish,Aankhon ke liye kaun se vitamin acche hain?,out_of_scope,True,authored_synthetic,train
+human_health-19-en,human_health-19,human_health,en,How much water should an adult drink daily?,out_of_scope,True,authored_synthetic,val
+human_health-19-hi,human_health-19,human_health,hi,एक वयस्क को रोज कितना पानी पीना चाहिए?,out_of_scope,True,authored_synthetic,val
+human_health-19-hinglish,human_health-19,human_health,hinglish,Ek adult ko roz kitna pani peena chahiye?,out_of_scope,True,authored_synthetic,val
+human_health-20-en,human_health-20,human_health,en,What causes a sore throat?,out_of_scope,True,authored_synthetic,train
+human_health-20-hi,human_health-20,human_health,hi,गले में खराश क्यों होती है?,out_of_scope,True,authored_synthetic,train
+human_health-20-hinglish,human_health-20,human_health,hinglish,Gale me kharash kyun hoti hai?,out_of_scope,True,authored_synthetic,train
+personal_finance-21-en,personal_finance-21,personal_finance,en,How do I open a savings account?,out_of_scope,True,authored_synthetic,train
+personal_finance-21-hi,personal_finance-21,personal_finance,hi,बचत खाता कैसे खोलें?,out_of_scope,True,authored_synthetic,train
+personal_finance-21-hinglish,personal_finance-21,personal_finance,hinglish,Savings account kaise kholein?,out_of_scope,True,authored_synthetic,train
+personal_finance-22-en,personal_finance-22,personal_finance,en,What is a mutual fund?,out_of_scope,True,authored_synthetic,test
+personal_finance-22-hi,personal_finance-22,personal_finance,hi,म्यूचुअल फंड क्या है?,out_of_scope,True,authored_synthetic,test
+personal_finance-22-hinglish,personal_finance-22,personal_finance,hinglish,Mutual fund kya hai?,out_of_scope,True,authored_synthetic,test
+personal_finance-23-en,personal_finance-23,personal_finance,en,How is income tax calculated?,out_of_scope,True,authored_synthetic,train
+personal_finance-23-hi,personal_finance-23,personal_finance,hi,आयकर की गणना कैसे होती है?,out_of_scope,True,authored_synthetic,train
+personal_finance-23-hinglish,personal_finance-23,personal_finance,hinglish,Income tax kaise calculate hota hai?,out_of_scope,True,authored_synthetic,train
+personal_finance-24-en,personal_finance-24,personal_finance,en,Should I invest in gold or stocks?,out_of_scope,True,authored_synthetic,val
+personal_finance-24-hi,personal_finance-24,personal_finance,hi,मुझे सोने में निवेश करना चाहिए या शेयरों में?,out_of_scope,True,authored_synthetic,val
+personal_finance-24-hinglish,personal_finance-24,personal_finance,hinglish,Mujhe gold me invest karna chahiye ya stocks me?,out_of_scope,True,authored_synthetic,val
+personal_finance-25-en,personal_finance-25,personal_finance,en,What is the interest rate on a fixed deposit?,out_of_scope,True,authored_synthetic,train
+personal_finance-25-hi,personal_finance-25,personal_finance,hi,सावधि जमा पर ब्याज दर क्या है?,out_of_scope,True,authored_synthetic,train
+personal_finance-25-hinglish,personal_finance-25,personal_finance,hinglish,Fixed deposit par interest rate kya hai?,out_of_scope,True,authored_synthetic,train
+entertainment-26-en,entertainment-26,entertainment,en,Which movie won the best picture award?,out_of_scope,True,authored_synthetic,train
+entertainment-26-hi,entertainment-26,entertainment,hi,सर्वश्रेष्ठ फिल्म का पुरस्कार किसे मिला?,out_of_scope,True,authored_synthetic,train
+entertainment-26-hinglish,entertainment-26,entertainment,hinglish,Best picture award kis film ko mila?,out_of_scope,True,authored_synthetic,train
+entertainment-27-en,entertainment-27,entertainment,en,What are the best songs of this year?,out_of_scope,True,authored_synthetic,train
+entertainment-27-hi,entertainment-27,entertainment,hi,इस साल के सबसे अच्छे गाने कौन से हैं?,out_of_scope,True,authored_synthetic,train
+entertainment-27-hinglish,entertainment-27,entertainment,hinglish,Is saal ke best songs kaun se hain?,out_of_scope,True,authored_synthetic,train
+entertainment-28-en,entertainment-28,entertainment,en,Who is your favourite actor?,out_of_scope,True,authored_synthetic,val
+entertainment-28-hi,entertainment-28,entertainment,hi,आपके पसंदीदा अभिनेता कौन हैं?,out_of_scope,True,authored_synthetic,val
+entertainment-28-hinglish,entertainment-28,entertainment,hinglish,Aapke favourite actor kaun hain?,out_of_scope,True,authored_synthetic,val
+entertainment-29-en,entertainment-29,entertainment,en,When does the new web series release?,out_of_scope,True,authored_synthetic,train
+entertainment-29-hi,entertainment-29,entertainment,hi,नई वेब सीरीज कब रिलीज होगी?,out_of_scope,True,authored_synthetic,train
+entertainment-29-hinglish,entertainment-29,entertainment,hinglish,Nayi web series kab release hogi?,out_of_scope,True,authored_synthetic,train
+entertainment-30-en,entertainment-30,entertainment,en,Recommend a good comedy show.,out_of_scope,True,authored_synthetic,test
+entertainment-30-hi,entertainment-30,entertainment,hi,कोई अच्छा कॉमेडी शो सुझाएं।,out_of_scope,True,authored_synthetic,test
+entertainment-30-hinglish,entertainment-30,entertainment,hinglish,Koi accha comedy show suggest karo.,out_of_scope,True,authored_synthetic,test
+politics-31-en,politics-31,politics,en,Who is the current prime minister?,out_of_scope,True,authored_synthetic,train
+politics-31-hi,politics-31,politics,hi,वर्तमान प्रधानमंत्री कौन हैं?,out_of_scope,True,authored_synthetic,train
+politics-31-hinglish,politics-31,politics,hinglish,Current prime minister kaun hain?,out_of_scope,True,authored_synthetic,train
+politics-32-en,politics-32,politics,en,When is the next election?,out_of_scope,True,authored_synthetic,test
+politics-32-hi,politics-32,politics,hi,अगला चुनाव कब है?,out_of_scope,True,authored_synthetic,test
+politics-32-hinglish,politics-32,politics,hinglish,Agla election kab hai?,out_of_scope,True,authored_synthetic,test
+politics-33-en,politics-33,politics,en,What is the role of parliament?,out_of_scope,True,authored_synthetic,val
+politics-33-hi,politics-33,politics,hi,संसद की भूमिका क्या है?,out_of_scope,True,authored_synthetic,val
+politics-33-hinglish,politics-33,politics,hinglish,Parliament ki bhumika kya hai?,out_of_scope,True,authored_synthetic,val
+politics-34-en,politics-34,politics,en,Which party won the last state election?,out_of_scope,True,authored_synthetic,train
+politics-34-hi,politics-34,politics,hi,पिछले राज्य चुनाव में कौन सी पार्टी जीती?,out_of_scope,True,authored_synthetic,train
+politics-34-hinglish,politics-34,politics,hinglish,Pichle state election me kaun si party jeeti?,out_of_scope,True,authored_synthetic,train
+politics-35-en,politics-35,politics,en,How does a bill become a law?,out_of_scope,True,authored_synthetic,train
+politics-35-hi,politics-35,politics,hi,विधेयक कानून कैसे बनता है?,out_of_scope,True,authored_synthetic,train
+politics-35-hinglish,politics-35,politics,hinglish,Bill kanun kaise banta hai?,out_of_scope,True,authored_synthetic,train
+travel-36-en,travel-36,travel,en,What is the best time to visit Goa?,out_of_scope,True,authored_synthetic,test
+travel-36-hi,travel-36,travel,hi,गोवा घूमने का सबसे अच्छा समय क्या है?,out_of_scope,True,authored_synthetic,test
+travel-36-hinglish,travel-36,travel,hinglish,Goa ghoomne ka best time kya hai?,out_of_scope,True,authored_synthetic,test
+travel-37-en,travel-37,travel,en,How much does a train ticket to Delhi cost?,out_of_scope,True,authored_synthetic,train
+travel-37-hi,travel-37,travel,hi,दिल्ली की ट्रेन टिकट कितने की है?,out_of_scope,True,authored_synthetic,train
+travel-37-hinglish,travel-37,travel,hinglish,Delhi ki train ticket kitne ki hai?,out_of_scope,True,authored_synthetic,train
+travel-38-en,travel-38,travel,en,Which hotel is near the airport?,out_of_scope,True,authored_synthetic,train
+travel-38-hi,travel-38,travel,hi,हवाई अड्डे के पास कौन सा होटल है?,out_of_scope,True,authored_synthetic,train
+travel-38-hinglish,travel-38,travel,hinglish,Airport ke paas kaun sa hotel hai?,out_of_scope,True,authored_synthetic,train
+travel-39-en,travel-39,travel,en,Do I need a visa for Thailand?,out_of_scope,True,authored_synthetic,val
+travel-39-hi,travel-39,travel,hi,थाईलैंड के लिए वीजा चाहिए?,out_of_scope,True,authored_synthetic,val
+travel-39-hinglish,travel-39,travel,hinglish,Thailand ke liye visa chahiye?,out_of_scope,True,authored_synthetic,val
+travel-40-en,travel-40,travel,en,What are good places to visit in Rajasthan?,out_of_scope,True,authored_synthetic,train
+travel-40-hi,travel-40,travel,hi,राजस्थान में घूमने की अच्छी जगहें कौन सी हैं?,out_of_scope,True,authored_synthetic,train
+travel-40-hinglish,travel-40,travel,hinglish,Rajasthan me ghoomne ki acchi jagah kaun si hain?,out_of_scope,True,authored_synthetic,train
+education-41-en,education-41,education,en,How can I prepare for the civil services exam?,out_of_scope,True,authored_synthetic,test
+education-41-hi,education-41,education,hi,सिविल सेवा परीक्षा की तैयारी कैसे करें?,out_of_scope,True,authored_synthetic,test
+education-41-hinglish,education-41,education,hinglish,Civil services exam ki taiyari kaise karein?,out_of_scope,True,authored_synthetic,test
+education-42-en,education-42,education,en,What is the syllabus for class ten mathematics?,out_of_scope,True,authored_synthetic,val
+education-42-hi,education-42,education,hi,दसवीं गणित का पाठ्यक्रम क्या है?,out_of_scope,True,authored_synthetic,val
+education-42-hinglish,education-42,education,hinglish,Class ten maths ka syllabus kya hai?,out_of_scope,True,authored_synthetic,val
+education-43-en,education-43,education,en,Which college is best for engineering?,out_of_scope,True,authored_synthetic,train
+education-43-hi,education-43,education,hi,इंजीनियरिंग के लिए कौन सा कॉलेज सबसे अच्छा है?,out_of_scope,True,authored_synthetic,train
+education-43-hinglish,education-43,education,hinglish,Engineering ke liye kaun sa college best hai?,out_of_scope,True,authored_synthetic,train
+education-44-en,education-44,education,en,How do I apply for a scholarship?,out_of_scope,True,authored_synthetic,train
+education-44-hi,education-44,education,hi,छात्रवृत्ति के लिए आवेदन कैसे करें?,out_of_scope,True,authored_synthetic,train
+education-44-hinglish,education-44,education,hinglish,Scholarship ke liye apply kaise karein?,out_of_scope,True,authored_synthetic,train
+education-45-en,education-45,education,en,Explain photosynthesis for a school project.,out_of_scope,True,authored_synthetic,train
+education-45-hi,education-45,education,hi,स्कूल प्रोजेक्ट के लिए प्रकाश संश्लेषण समझाइए।,out_of_scope,True,authored_synthetic,train
+education-45-hinglish,education-45,education,hinglish,School project ke liye photosynthesis samjhao.,out_of_scope,True,authored_synthetic,train
+technology-46-en,technology-46,technology,en,How does blockchain work?,out_of_scope,True,authored_synthetic,train
+technology-46-hi,technology-46,technology,hi,ब्लॉकचेन कैसे काम करता है?,out_of_scope,True,authored_synthetic,train
+technology-46-hinglish,technology-46,technology,hinglish,Blockchain kaise kaam karta hai?,out_of_scope,True,authored_synthetic,train
+technology-47-en,technology-47,technology,en,Which laptop is best under fifty thousand?,out_of_scope,True,authored_synthetic,test
+technology-47-hi,technology-47,technology,hi,पचास हजार में कौन सा लैपटॉप अच्छा है?,out_of_scope,True,authored_synthetic,test
+technology-47-hinglish,technology-47,technology,hinglish,Pachas hazaar me kaun sa laptop accha hai?,out_of_scope,True,authored_synthetic,test
+technology-48-en,technology-48,technology,en,Why is my phone battery draining fast?,out_of_scope,True,authored_synthetic,train
+technology-48-hi,technology-48,technology,hi,मेरे फोन की बैटरी जल्दी खत्म क्यों होती है?,out_of_scope,True,authored_synthetic,train
+technology-48-hinglish,technology-48,technology,hinglish,Mere phone ki battery jaldi khatam kyun hoti hai?,out_of_scope,True,authored_synthetic,train
+technology-49-en,technology-49,technology,en,How do I create an email account?,out_of_scope,True,authored_synthetic,train
+technology-49-hi,technology-49,technology,hi,ईमेल खाता कैसे बनाएं?,out_of_scope,True,authored_synthetic,train
+technology-49-hinglish,technology-49,technology,hinglish,Email account kaise banayein?,out_of_scope,True,authored_synthetic,train
+technology-50-en,technology-50,technology,en,What is artificial intelligence?,out_of_scope,True,authored_synthetic,val
+technology-50-hi,technology-50,technology,hi,कृत्रिम बुद्धिमत्ता क्या है?,out_of_scope,True,authored_synthetic,val
+technology-50-hinglish,technology-50,technology,hinglish,Artificial intelligence kya hai?,out_of_scope,True,authored_synthetic,val
+law-51-en,law-51,law,en,How do I file a police complaint?,out_of_scope,True,authored_synthetic,train
+law-51-hi,law-51,law,hi,पुलिस में शिकायत कैसे दर्ज करें?,out_of_scope,True,authored_synthetic,train
+law-51-hinglish,law-51,law,hinglish,Police me complaint kaise darj karein?,out_of_scope,True,authored_synthetic,train
+law-52-en,law-52,law,en,What is the punishment for theft?,out_of_scope,True,authored_synthetic,train
+law-52-hi,law-52,law,hi,चोरी की सजा क्या है?,out_of_scope,True,authored_synthetic,train
+law-52-hinglish,law-52,law,hinglish,Chori ki saza kya hai?,out_of_scope,True,authored_synthetic,train
+law-53-en,law-53,law,en,How can I get a divorce?,out_of_scope,True,authored_synthetic,val
+law-53-hi,law-53,law,hi,तलाक कैसे लें?,out_of_scope,True,authored_synthetic,val
+law-53-hinglish,law-53,law,hinglish,Talak kaise lein?,out_of_scope,True,authored_synthetic,val
+law-54-en,law-54,law,en,What are my rights as a tenant?,out_of_scope,True,authored_synthetic,test
+law-54-hi,law-54,law,hi,किरायेदार के रूप में मेरे अधिकार क्या हैं?,out_of_scope,True,authored_synthetic,test
+law-54-hinglish,law-54,law,hinglish,Kirayedar ke roop me mere adhikar kya hain?,out_of_scope,True,authored_synthetic,test
+law-55-en,law-55,law,en,How do I write a will?,out_of_scope,True,authored_synthetic,train
+law-55-hi,law-55,law,hi,वसीयत कैसे लिखें?,out_of_scope,True,authored_synthetic,train
+law-55-hinglish,law-55,law,hinglish,Vasiyat kaise likhein?,out_of_scope,True,authored_synthetic,train
+relationships-56-en,relationships-56,relationships,en,How do I apologise to a friend?,out_of_scope,True,authored_synthetic,train
+relationships-56-hi,relationships-56,relationships,hi,दोस्त से माफी कैसे मांगें?,out_of_scope,True,authored_synthetic,train
+relationships-56-hinglish,relationships-56,relationships,hinglish,Dost se maafi kaise maangein?,out_of_scope,True,authored_synthetic,train
+relationships-57-en,relationships-57,relationships,en,What should I gift my wife on her birthday?,out_of_scope,True,authored_synthetic,train
+relationships-57-hi,relationships-57,relationships,hi,पत्नी को जन्मदिन पर क्या तोहफा दें?,out_of_scope,True,authored_synthetic,train
+relationships-57-hinglish,relationships-57,relationships,hinglish,Patni ko birthday par kya gift dein?,out_of_scope,True,authored_synthetic,train
+relationships-58-en,relationships-58,relationships,en,How can I improve my relationship with my parents?,out_of_scope,True,authored_synthetic,train
+relationships-58-hi,relationships-58,relationships,hi,माता-पिता के साथ संबंध कैसे सुधारें?,out_of_scope,True,authored_synthetic,train
+relationships-58-hinglish,relationships-58,relationships,hinglish,Maa-baap ke saath relation kaise improve karein?,out_of_scope,True,authored_synthetic,train
+relationships-59-en,relationships-59,relationships,en,"My friend is not talking to me, what should I do?",out_of_scope,True,authored_synthetic,test
+relationships-59-hi,relationships-59,relationships,hi,"मेरा दोस्त मुझसे बात नहीं कर रहा, क्या करूं?",out_of_scope,True,authored_synthetic,test
+relationships-59-hinglish,relationships-59,relationships,hinglish,"Mera dost mujhse baat nahi kar raha, kya karun?",out_of_scope,True,authored_synthetic,test
+relationships-60-en,relationships-60,relationships,en,How do I say no without hurting someone?,out_of_scope,True,authored_synthetic,val
+relationships-60-hi,relationships-60,relationships,hi,किसी को दुखाए बिना मना कैसे करें?,out_of_scope,True,authored_synthetic,val
+relationships-60-hinglish,relationships-60,relationships,hinglish,Kisi ko dukhaye bina mana kaise karein?,out_of_scope,True,authored_synthetic,val

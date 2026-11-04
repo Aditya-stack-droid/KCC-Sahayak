@@ -1,0 +1,8 @@
+{
+  "name": "synthetic_query_embeddings",
+  "model": "paraphrase-multilingual-MiniLM-L12-v2",
+  "n": 212,
+  "dim": 384,
+  "sha1": "f9afe9378b2fbb5849de47456081ea9c22e947c0",
+  "normalised": true
+}

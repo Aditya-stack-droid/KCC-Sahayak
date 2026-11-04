@@ -1,0 +1,917 @@
+{
+  "case_sha256": "ed71cef9b848724adc70a1e644903eba9ea2d680decbc27365284b5573cb0ea0",
+  "evidence_class": "authored synthetic behavioural probes; no human labels or expert review",
+  "experiment": "batch_b_improvement5_behavioural_regression",
+  "failures": [
+    {
+      "case_id": "A03",
+      "category": "A",
+      "error": "",
+      "expected": {
+        "crop": [
+          "wheat"
+        ],
+        "symptom": [
+          "rust"
+        ]
+      },
+      "failure_type": "false_negative",
+      "input": "whea rust control",
+      "note": "One missing letter in a crop name.",
+      "observed": {
+        "crop": [],
+        "symptom": [
+          "rust"
+        ]
+      },
+      "probe": "entities",
+      "status": "fail",
+      "synthetic": true
+    },
+    {
+      "case_id": "A04",
+      "category": "A",
+      "error": "",
+      "expected": {
+        "crop": [
+          "wheat"
+        ],
+        "symptom": [
+          "rust"
+        ]
+      },
+      "failure_type": "false_negative",
+      "input": "wheatt rustt",
+      "note": "Trailing-letter typos in both terms.",
+      "observed": {
+        "crop": [],
+        "symptom": []
+      },
+      "probe": "entities",
+      "status": "fail",
+      "synthetic": true
+    },
+    {
+      "case_id": "A05",
+      "category": "A",
+      "error": "",
+      "expected": {
+        "crop": [
+          "wheat"
+        ],
+        "symptom": [
+          "rust"
+        ]
+      },
+      "failure_type": "false_negative",
+      "input": "wheatrust control",
+      "note": "Missing word boundary between crop and symptom.",
+      "observed": {
+        "crop": [],
+        "symptom": []
+      },
+      "probe": "entities",
+      "status": "fail",
+      "synthetic": true
+    },
+    {
+      "case_id": "A06",
+      "category": "A",
+      "error": "",
+      "expected": {
+        "crop": [
+          "mustard"
+        ],
+        "symptom": [
+          "aphid"
+        ]
+      },
+      "failure_type": "false_negative",
+      "input": "mustrad aphid",
+      "note": "Typo in mustard.",
+      "observed": {
+        "crop": [],
+        "symptom": [
+          "aphid"
+        ]
+      },
+      "probe": "entities",
+      "status": "fail",
+      "synthetic": true
+    },
+    {
+      "case_id": "A07",
+      "category": "A",
+      "error": "",
+      "expected": {
+        "crop": [
+          "cotton"
+        ],
+        "symptom": [
+          "bollworm"
+        ]
+      },
+      "failure_type": "false_negative",
+      "input": "cottton bollworm",
+      "note": "Repeated letter in cotton.",
+      "observed": {
+        "crop": [],
+        "symptom": [
+          "bollworm"
+        ]
+      },
+      "probe": "entities",
+      "status": "fail",
+      "synthetic": true
+    },
+    {
+      "case_id": "A08",
+      "category": "A",
+      "error": "",
+      "expected": {
+        "crop": [
+          "tomato"
+        ],
+        "symptom": [
+          "blight"
+        ]
+      },
+      "failure_type": "false_negative",
+      "input": "tomatoe blight",
+      "note": "Extra vowel in tomato.",
+      "observed": {
+        "crop": [],
+        "symptom": [
+          "blight"
+        ]
+      },
+      "probe": "entities",
+      "status": "fail",
+      "synthetic": true
+    },
+    {
+      "case_id": "A09",
+      "category": "A",
+      "error": "",
+      "expected": {
+        "crop": [
+          "paddy"
+        ],
+        "symptom": [
+          "stem borer"
+        ]
+      },
+      "failure_type": "false_negative",
+      "input": "paddyy stem borer",
+      "note": "Repeated letter in paddy.",
+      "observed": {
+        "crop": [],
+        "symptom": [
+          "stem borer"
+        ]
+      },
+      "probe": "entities",
+      "status": "fail",
+      "synthetic": true
+    },
+    {
+      "case_id": "A10",
+      "category": "A",
+      "error": "",
+      "expected": {
+        "crop": [
+          "cotton"
+        ],
+        "symptom": [
+          "whitefly"
+        ]
+      },
+      "failure_type": "false_negative",
+      "input": "whiteflyy on cotton",
+      "note": "Repeated letter in whitefly.",
+      "observed": {
+        "crop": [
+          "cotton"
+        ],
+        "symptom": []
+      },
+      "probe": "entities",
+      "status": "fail",
+      "synthetic": true
+    },
+    {
+      "case_id": "A12",
+      "category": "A",
+      "error": "",
+      "expected": "Plant Protection",
+      "failure_type": "degraded",
+      "input": "wheatt rustt",
+      "note": "Intent should survive two typos.",
+      "observed": "Other",
+      "probe": "intent",
+      "status": "fail",
+      "synthetic": true
+    },
+    {
+      "case_id": "A18",
+      "category": "A",
+      "error": "",
+      "expected": true,
+      "failure_type": "false_negative",
+      "input": "use monocrotophus",
+      "note": "Typo in a hazardous product name without a dose.",
+      "observed": false,
+      "probe": "risk",
+      "status": "fail",
+      "synthetic": true
+    },
+    {
+      "case_id": "A20",
+      "category": "A",
+      "error": "",
+      "expected": true,
+      "failure_type": "false_negative",
+      "input": "dose 2 gram per ltr",
+      "note": "Non-canonical unit spelling.",
+      "observed": false,
+      "probe": "risk",
+      "status": "fail",
+      "synthetic": true
+    },
+    {
+      "case_id": "A21",
+      "category": "A",
+      "error": "",
+      "expected": {
+        "crop": [
+          "mustard"
+        ],
+        "symptom": [
+          "aphid"
+        ]
+      },
+      "failure_type": "false_negative",
+      "input": "aphidd infestation in mustard",
+      "note": "Typo in the pest name.",
+      "observed": {
+        "crop": [
+          "mustard"
+        ],
+        "symptom": [
+          "infestation"
+        ]
+      },
+      "probe": "entities",
+      "status": "fail",
+      "synthetic": true
+    },
+    {
+      "case_id": "B03",
+      "category": "B",
+      "error": "",
+      "expected": "hinglish",
+      "failure_type": "degraded",
+      "input": "gehu me ratua",
+      "note": "Excluded English-ambiguous function word.",
+      "observed": "en",
+      "probe": "register",
+      "status": "fail",
+      "synthetic": true
+    },
+    {
+      "case_id": "B04",
+      "category": "B",
+      "error": "",
+      "expected": "hinglish",
+      "failure_type": "degraded",
+      "input": "gehun me peela rust",
+      "note": "Alternate Roman spelling, no recognised function word.",
+      "observed": "en",
+      "probe": "register",
+      "status": "fail",
+      "synthetic": true
+    },
+    {
+      "case_id": "B05",
+      "category": "B",
+      "error": "",
+      "expected": "hinglish",
+      "failure_type": "degraded",
+      "input": "gayhoon me peela ratua",
+      "note": "Alternate Roman spelling of wheat.",
+      "observed": "en",
+      "probe": "register",
+      "status": "fail",
+      "synthetic": true
+    },
+    {
+      "case_id": "B09",
+      "category": "B",
+      "error": "",
+      "expected": {
+        "crop": [
+          "wheat"
+        ],
+        "symptom": [
+          "rust"
+        ]
+      },
+      "failure_type": "false_negative",
+      "input": "गेहूं में पीला रतुआ",
+      "note": "Hindi crop and symptom names.",
+      "observed": {
+        "crop": [],
+        "symptom": []
+      },
+      "probe": "entities",
+      "status": "fail",
+      "synthetic": true
+    },
+    {
+      "case_id": "B10",
+      "category": "B",
+      "error": "",
+      "expected": {
+        "crop": [
+          "wheat"
+        ],
+        "symptom": [
+          "rust"
+        ]
+      },
+      "failure_type": "false_negative",
+      "input": "gehu me rust",
+      "note": "Roman-Hindi crop name.",
+      "observed": {
+        "crop": [],
+        "symptom": [
+          "rust"
+        ]
+      },
+      "probe": "entities",
+      "status": "fail",
+      "synthetic": true
+    },
+    {
+      "case_id": "B11",
+      "category": "B",
+      "error": "",
+      "expected": "Nutrient Management",
+      "failure_type": "degraded",
+      "input": "गेहूं में यूरिया डालें",
+      "note": "Hindi urea question.",
+      "observed": "Other",
+      "probe": "intent",
+      "status": "fail",
+      "synthetic": true
+    },
+    {
+      "case_id": "B13",
+      "category": "B",
+      "error": "",
+      "expected": "Market Price",
+      "failure_type": "degraded",
+      "input": "gehu ka bhav kya hai",
+      "note": "Hinglish price question.",
+      "observed": "Other",
+      "probe": "intent",
+      "status": "fail",
+      "synthetic": true
+    },
+    {
+      "case_id": "B17",
+      "category": "B",
+      "error": "",
+      "expected": true,
+      "failure_type": "false_negative",
+      "input": "प्रति लीटर पानी में 2 मिली रोगोर मिलाकर छिड़काव करें",
+      "note": "Hindi dose and product name.",
+      "observed": false,
+      "probe": "risk",
+      "status": "fail",
+      "synthetic": true
+    },
+    {
+      "case_id": "B19",
+      "category": "B",
+      "error": "",
+      "expected": true,
+      "failure_type": "false_negative",
+      "input": "dawa 2 mili prati litre dalen",
+      "note": "Hinglish dose without a product name.",
+      "observed": false,
+      "probe": "risk",
+      "status": "fail",
+      "synthetic": true
+    },
+    {
+      "case_id": "B22",
+      "category": "B",
+      "error": "",
+      "expected": [
+        "basis"
+      ],
+      "failure_type": "false_negative",
+      "input": "50 किलो यूरिया प्रति एकड़ डालें। || 50 किलो यूरिया प्रति बीघा डालें।",
+      "note": "Hindi area-basis wording should be comparable after language-aware unit parsing.",
+      "observed": [],
+      "probe": "conflict",
+      "status": "fail",
+      "synthetic": true
+    },
+    {
+      "case_id": "B23",
+      "category": "B",
+      "error": "",
+      "expected": true,
+      "failure_type": "missing_capability",
+      "input": "गेहूं में पीला रतुआ",
+      "note": "Hindi agricultural evidence should be visible.",
+      "observed": [],
+      "probe": "evidence",
+      "status": "fail",
+      "synthetic": true
+    },
+    {
+      "case_id": "C01",
+      "category": "C",
+      "error": "",
+      "expected": false,
+      "failure_type": "false_positive",
+      "input": "Do not spray chlorpyrifos.",
+      "note": "Negated chemical instruction is not an instruction to apply it.",
+      "observed": true,
+      "probe": "risk",
+      "status": "fail",
+      "synthetic": true
+    },
+    {
+      "case_id": "C02",
+      "category": "C",
+      "error": "",
+      "expected": false,
+      "failure_type": "false_positive",
+      "input": "Never apply urea at this stage.",
+      "note": "Negated fertilizer instruction.",
+      "observed": true,
+      "probe": "risk",
+      "status": "fail",
+      "synthetic": true
+    },
+    {
+      "case_id": "C03",
+      "category": "C",
+      "error": "",
+      "expected": false,
+      "failure_type": "false_positive",
+      "input": "Spraying should be avoided when honey bees are active.",
+      "note": "Avoidance warning.",
+      "observed": true,
+      "probe": "risk",
+      "status": "fail",
+      "synthetic": true
+    },
+    {
+      "case_id": "C04",
+      "category": "C",
+      "error": "",
+      "expected": false,
+      "failure_type": "false_positive",
+      "input": "Do not apply 50 kg urea per acre.",
+      "note": "Negated dose.",
+      "observed": true,
+      "probe": "risk",
+      "status": "fail",
+      "synthetic": true
+    },
+    {
+      "case_id": "C05",
+      "category": "C",
+      "error": "",
+      "expected": false,
+      "failure_type": "false_positive",
+      "input": "No need to spray anything.",
+      "note": "Negated spray action.",
+      "observed": true,
+      "probe": "risk",
+      "status": "fail",
+      "synthetic": true
+    },
+    {
+      "case_id": "C06",
+      "category": "C",
+      "error": "",
+      "expected": false,
+      "failure_type": "false_positive",
+      "input": "Avoid using monocrotophos; it is banned.",
+      "note": "Banned-product warning.",
+      "observed": true,
+      "probe": "risk",
+      "status": "fail",
+      "synthetic": true
+    },
+    {
+      "case_id": "C08",
+      "category": "C",
+      "error": "",
+      "expected": false,
+      "failure_type": "false_positive",
+      "input": "spray mat karein",
+      "note": "Hinglish prohibition.",
+      "observed": true,
+      "probe": "risk",
+      "status": "fail",
+      "synthetic": true
+    },
+    {
+      "case_id": "C10",
+      "category": "C",
+      "error": "",
+      "expected": false,
+      "failure_type": "false_positive",
+      "input": "do not apply 2 ml monocrotophos per litre",
+      "note": "Negated dose and product.",
+      "observed": true,
+      "probe": "risk",
+      "status": "fail",
+      "synthetic": true
+    },
+    {
+      "case_id": "C11",
+      "category": "C",
+      "error": "",
+      "expected": false,
+      "failure_type": "false_positive",
+      "input": "2 ml per litre spray mat karein",
+      "note": "Hinglish prohibition with a dose.",
+      "observed": true,
+      "probe": "risk",
+      "status": "fail",
+      "synthetic": true
+    },
+    {
+      "case_id": "C13",
+      "category": "C",
+      "error": "",
+      "expected": false,
+      "failure_type": "false_positive",
+      "input": "the label warns not to spray when windy",
+      "note": "Label warning, not an instruction.",
+      "observed": true,
+      "probe": "risk",
+      "status": "fail",
+      "synthetic": true
+    },
+    {
+      "case_id": "D07",
+      "category": "D",
+      "error": "",
+      "expected": true,
+      "failure_type": "false_negative",
+      "input": "Apply two bottles",
+      "note": "Number word and container unit, no Latin digits.",
+      "observed": false,
+      "probe": "risk",
+      "status": "fail",
+      "synthetic": true
+    },
+    {
+      "case_id": "D08",
+      "category": "D",
+      "error": "",
+      "expected": true,
+      "failure_type": "false_negative",
+      "input": "Apply 1 bottle dawa 1 tank",
+      "note": "Container-based dose without a standard unit.",
+      "observed": false,
+      "probe": "risk",
+      "status": "fail",
+      "synthetic": true
+    },
+    {
+      "case_id": "D12",
+      "category": "D",
+      "error": "",
+      "expected": true,
+      "failure_type": "false_negative",
+      "input": "Apply 50 dawa",
+      "note": "Ambiguous quantity with an unnamed product.",
+      "observed": false,
+      "probe": "risk",
+      "status": "fail",
+      "synthetic": true
+    },
+    {
+      "case_id": "D17",
+      "category": "D",
+      "error": "",
+      "expected": [
+        "basis"
+      ],
+      "failure_type": "false_negative",
+      "input": "Apply 2 ml per gallon water. || Apply 5 ml per 10 litre water.",
+      "note": "Gallon is not convertible by the current parser.",
+      "observed": [],
+      "probe": "conflict",
+      "status": "fail",
+      "synthetic": true
+    },
+    {
+      "case_id": "D18",
+      "category": "D",
+      "error": "",
+      "expected": [
+        "dosage"
+      ],
+      "failure_type": "false_negative",
+      "input": "Apply 1 sachet per 20 litre water. || Apply 3 sachet per 20 litre water.",
+      "note": "Sachet count is a dose in ordinary usage.",
+      "observed": [],
+      "probe": "conflict",
+      "status": "fail",
+      "synthetic": true
+    },
+    {
+      "case_id": "D19",
+      "category": "D",
+      "error": "",
+      "expected": [
+        "dosage"
+      ],
+      "failure_type": "false_negative",
+      "input": "Apply 1 bori per acre. || Apply 2 bori per acre.",
+      "note": "Bori count is a dose.",
+      "observed": [],
+      "probe": "conflict",
+      "status": "fail",
+      "synthetic": true
+    },
+    {
+      "case_id": "D20",
+      "category": "D",
+      "error": "",
+      "expected": [
+        "dosage"
+      ],
+      "failure_type": "false_negative",
+      "input": "Apply 2 chammach per 10 litre water. || Apply 4 chammach per 10 litre water.",
+      "note": "Household spoon measure is a dose.",
+      "observed": [],
+      "probe": "conflict",
+      "status": "fail",
+      "synthetic": true
+    },
+    {
+      "case_id": "F01",
+      "category": "F",
+      "error": "",
+      "expected": "multi_intent_signal",
+      "failure_type": "missing_capability",
+      "input": "My tomato leaves are turning yellow and also write a Python program for me.",
+      "note": "Agricultural and programming request.",
+      "observed": "single_label_only",
+      "probe": "multi_intent",
+      "status": "fail",
+      "synthetic": true
+    },
+    {
+      "case_id": "F02",
+      "category": "F",
+      "error": "",
+      "expected": "multi_intent_signal",
+      "failure_type": "missing_capability",
+      "input": "Which fertiliser is best for paddy and what is the capital of Japan?",
+      "note": "Agricultural and general-knowledge request.",
+      "observed": "single_label_only",
+      "probe": "multi_intent",
+      "status": "fail",
+      "synthetic": true
+    },
+    {
+      "case_id": "F03",
+      "category": "F",
+      "error": "",
+      "expected": "multi_intent_signal",
+      "failure_type": "missing_capability",
+      "input": "My buffalo is not eating and please book a train ticket to Delhi.",
+      "note": "Animal-health and travel request.",
+      "observed": "single_label_only",
+      "probe": "multi_intent",
+      "status": "fail",
+      "synthetic": true
+    },
+    {
+      "case_id": "F04",
+      "category": "F",
+      "error": "",
+      "expected": "multi_intent_signal",
+      "failure_type": "missing_capability",
+      "input": "How do I control aphids in mustard and who won yesterday's cricket match?",
+      "note": "Pest-control and sports request.",
+      "observed": "single_label_only",
+      "probe": "multi_intent",
+      "status": "fail",
+      "synthetic": true
+    },
+    {
+      "case_id": "F05",
+      "category": "F",
+      "error": "",
+      "expected": "multi_intent_signal",
+      "failure_type": "missing_capability",
+      "input": "What is the urea dose for wheat and explain blockchain technology.",
+      "note": "Nutrient and technology request.",
+      "observed": "single_label_only",
+      "probe": "multi_intent",
+      "status": "fail",
+      "synthetic": true
+    },
+    {
+      "case_id": "F06",
+      "category": "F",
+      "error": "",
+      "expected": "multi_intent_signal",
+      "failure_type": "missing_capability",
+      "input": "My mango tree has white spots and what is a mutual fund?",
+      "note": "Crop-health and finance request.",
+      "observed": "single_label_only",
+      "probe": "multi_intent",
+      "status": "fail",
+      "synthetic": true
+    },
+    {
+      "case_id": "F07",
+      "category": "F",
+      "error": "",
+      "expected": "multi_intent_signal",
+      "failure_type": "missing_capability",
+      "input": "Tell me the market price of cotton and write a poem about rain.",
+      "note": "Market and creative-writing request.",
+      "observed": "single_label_only",
+      "probe": "multi_intent",
+      "status": "fail",
+      "synthetic": true
+    },
+    {
+      "case_id": "F08",
+      "category": "F",
+      "error": "",
+      "expected": "multi_intent_signal",
+      "failure_type": "missing_capability",
+      "input": "How do I sow bajra and how do I open a savings account?",
+      "note": "Two unrelated how-to requests.",
+      "observed": "single_label_only",
+      "probe": "multi_intent",
+      "status": "fail",
+      "synthetic": true
+    },
+    {
+      "case_id": "F09",
+      "category": "F",
+      "error": "",
+      "expected": "multi_intent_signal",
+      "failure_type": "missing_capability",
+      "input": "My cow has fever and which movie won the award?",
+      "note": "Animal-health and entertainment request.",
+      "observed": "single_label_only",
+      "probe": "multi_intent",
+      "status": "fail",
+      "synthetic": true
+    },
+    {
+      "case_id": "F10",
+      "category": "F",
+      "error": "",
+      "expected": "multi_intent_signal",
+      "failure_type": "missing_capability",
+      "input": "What pesticide for bollworm and how do I apply for a passport?",
+      "note": "Pesticide and civic request.",
+      "observed": "single_label_only",
+      "probe": "multi_intent",
+      "status": "fail",
+      "synthetic": true
+    },
+    {
+      "case_id": "F11",
+      "category": "F",
+      "error": "",
+      "expected": "multi_intent_signal",
+      "failure_type": "missing_capability",
+      "input": "Best seed variety for gram and what is the interest rate on fixed deposit?",
+      "note": "Seed and finance request.",
+      "observed": "single_label_only",
+      "probe": "multi_intent",
+      "status": "fail",
+      "synthetic": true
+    },
+    {
+      "case_id": "F12",
+      "category": "F",
+      "error": "",
+      "expected": "multi_intent_signal",
+      "failure_type": "missing_capability",
+      "input": "My brinjal crop has wilt and give me a recipe for brinjal curry.",
+      "note": "Crop-health and cooking request.",
+      "observed": "single_label_only",
+      "probe": "multi_intent",
+      "status": "fail",
+      "synthetic": true
+    },
+    {
+      "case_id": "F13",
+      "category": "F",
+      "error": "",
+      "expected": "multi_intent_signal",
+      "failure_type": "missing_capability",
+      "input": "How do I irrigate sugarcane and who is the prime minister?",
+      "note": "Irrigation and politics request.",
+      "observed": "single_label_only",
+      "probe": "multi_intent",
+      "status": "fail",
+      "synthetic": true
+    },
+    {
+      "case_id": "F14",
+      "category": "F",
+      "error": "",
+      "expected": "multi_intent_signal",
+      "failure_type": "missing_capability",
+      "input": "Which fungicide for blight and how do I fix my laptop battery?",
+      "note": "Fungicide and technology request.",
+      "observed": "single_label_only",
+      "probe": "multi_intent",
+      "status": "fail",
+      "synthetic": true
+    },
+    {
+      "case_id": "F15",
+      "category": "F",
+      "error": "",
+      "expected": "multi_intent_signal",
+      "failure_type": "missing_capability",
+      "input": "My goat is limping and what is the schedule of the next train?",
+      "note": "Animal-health and travel request.",
+      "observed": "single_label_only",
+      "probe": "multi_intent",
+      "status": "fail",
+      "synthetic": true
+    },
+    {
+      "case_id": "F16",
+      "category": "F",
+      "error": "",
+      "expected": "multi_intent_signal",
+      "failure_type": "missing_capability",
+      "input": "Fertilizer for tomato plants and what is the boiling point of water?",
+      "note": "Fertilizer and science request.",
+      "observed": "single_label_only",
+      "probe": "multi_intent",
+      "status": "fail",
+      "synthetic": true
+    },
+    {
+      "case_id": "F17",
+      "category": "F",
+      "error": "",
+      "expected": "multi_intent_signal",
+      "failure_type": "missing_capability",
+      "input": "wheat rust control and urea dose for wheat",
+      "note": "Two agricultural intents in one query.",
+      "observed": "single_label_only",
+      "probe": "multi_intent",
+      "status": "fail",
+      "synthetic": true
+    },
+    {
+      "case_id": "G26",
+      "category": "G",
+      "error": "",
+      "expected": "invalid",
+      "failure_type": "validation_gap",
+      "input": "{\"text\": \"  \"}",
+      "note": "Whitespace-only text is semantically empty.",
+      "observed": "valid",
+      "probe": "query_request",
+      "status": "fail",
+      "synthetic": true
+    },
+    {
+      "case_id": "H25",
+      "category": "H",
+      "error": "",
+      "expected": [
+        "PHONE"
+      ],
+      "failure_type": "false_negative",
+      "input": "Call ०९८७६५४३२१० for details",
+      "note": "Trunk-prefixed Devanagari number should be recognised.",
+      "observed": [],
+      "probe": "privacy_types",
+      "status": "fail",
+      "synthetic": true
+    }
+  ],
+  "n_cases": 168,
+  "n_failures": 59,
+  "synthetic": true
+}

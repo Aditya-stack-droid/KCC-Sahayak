@@ -1,0 +1,451 @@
+{
+  "improvement": "Improvement 4 - out-of-scope detection",
+  "generated_utc": "2026-11-04T12:36:06+00:00",
+  "protocol": {
+    "task": "binary in-scope vs out-of-scope, positive class = out-of-scope",
+    "approaches": {
+      "knn_distance": "mean cosine to the k=5 nearest grouped-index questions (train+val)",
+      "embedding_lr": "logistic regression (C=1, balanced) over MiniLM embeddings"
+    },
+    "threshold_policy": "highest threshold with validation false-rejection rate <= 0.02; selection on validation only",
+    "ambiguity_band": {
+      "knn_distance": 0.03,
+      "embedding_lr": 0.05
+    },
+    "benchmark": "144 agricultural grouped-test queries (seeded sample) + 36 synthetic out-of-scope queries",
+    "in_scope_source": "Batch A grouped split, test side",
+    "out_of_scope_source": "authored synthetic queries, grouped by family",
+    "decisions": "in_scope / out_of_scope / ambiguous; binary metrics use score vs threshold"
+  },
+  "seeds": {
+    "dataset": 42,
+    "bootstrap": 0
+  },
+  "data": {
+    "corpus_rows": 138875,
+    "corpus_split_counts": {
+      "train": 111213,
+      "test": 13831,
+      "val": 13831
+    },
+    "corpus_registers_test_sample": {
+      "en": 5000
+    },
+    "synthetic": {
+      "n_queries": 180,
+      "n_families": 60,
+      "n_categories": 12,
+      "per_split_queries": {
+        "train": 108,
+        "test": 36,
+        "val": 36
+      },
+      "per_split_families": {
+        "test": 12,
+        "train": 36,
+        "val": 12
+      },
+      "per_register": {
+        "en": 60,
+        "hi": 60,
+        "hinglish": 60
+      },
+      "synthetic": true
+    },
+    "ambiguous_queries": 16,
+    "mixed_intent_queries": 16,
+    "split_checks": {
+      "synthetic_families_spanning_splits": 0,
+      "corpus_groups_spanning_splits": 0
+    }
+  },
+  "thresholds": {
+    "knn_distance": {
+      "threshold": 0.767047,
+      "val_false_rejection_rate": 0.0198,
+      "val_recall": 1.0,
+      "policy": "max out-of-scope recall subject to validation FRR <= 0.02",
+      "target_frr": 0.02,
+      "n_val_in_scope": 5000,
+      "n_val_out_of_scope": 36
+    },
+    "embedding_lr": {
+      "threshold": 0.809259,
+      "val_false_rejection_rate": 0.0198,
+      "val_recall": 1.0,
+      "policy": "max out-of-scope recall subject to validation FRR <= 0.02",
+      "target_frr": 0.02,
+      "n_val_in_scope": 5000,
+      "n_val_out_of_scope": 36
+    }
+  },
+  "benchmark": {
+    "knn_distance": {
+      "n": 180,
+      "n_in_scope": 144,
+      "n_out_of_scope": 36,
+      "tp": 35,
+      "fp": 6,
+      "fn": 1,
+      "tn": 138,
+      "confusion": {
+        "tp": 35,
+        "fp": 6,
+        "fn": 1,
+        "tn": 138
+      },
+      "precision": 0.853659,
+      "recall": 0.972222,
+      "f1": 0.909091,
+      "balanced_accuracy": 0.965278,
+      "false_acceptance_rate": 0.027778,
+      "false_rejection_rate": 0.041667,
+      "auroc": 0.9873,
+      "f1_ci95": [
+        0.8315,
+        0.9706
+      ],
+      "mean_score_in_scope": 0.8843,
+      "mean_score_out_of_scope": 0.5077
+    },
+    "embedding_lr": {
+      "n": 180,
+      "n_in_scope": 144,
+      "n_out_of_scope": 36,
+      "tp": 36,
+      "fp": 5,
+      "fn": 0,
+      "tn": 139,
+      "confusion": {
+        "tp": 36,
+        "fp": 5,
+        "fn": 0,
+        "tn": 139
+      },
+      "precision": 0.878049,
+      "recall": 1.0,
+      "f1": 0.935065,
+      "balanced_accuracy": 0.982639,
+      "false_acceptance_rate": 0.0,
+      "false_rejection_rate": 0.034722,
+      "auroc": 0.9927,
+      "f1_ci95": [
+        0.871,
+        0.9851
+      ],
+      "mean_score_in_scope": 0.9651,
+      "mean_score_out_of_scope": 0.117
+    }
+  },
+  "full_in_scope_test": {
+    "knn_distance": {
+      "n": 13831,
+      "n_rejected": 864,
+      "false_rejection_rate": 0.062468,
+      "note": "All grouped-test agricultural queries, not a sample."
+    },
+    "embedding_lr": {
+      "n": 13831,
+      "n_rejected": 502,
+      "false_rejection_rate": 0.036295,
+      "note": "All grouped-test agricultural queries, not a sample."
+    }
+  },
+  "by_register_out_of_scope": {
+    "en": {
+      "n": 12,
+      "knn_distance": {
+        "n_rejected": 12,
+        "rejection_rate": 1.0
+      },
+      "embedding_lr": {
+        "n_rejected": 12,
+        "rejection_rate": 1.0
+      }
+    },
+    "hi": {
+      "n": 12,
+      "knn_distance": {
+        "n_rejected": 12,
+        "rejection_rate": 1.0
+      },
+      "embedding_lr": {
+        "n_rejected": 12,
+        "rejection_rate": 1.0
+      }
+    },
+    "hinglish": {
+      "n": 12,
+      "knn_distance": {
+        "n_rejected": 11,
+        "rejection_rate": 0.9167
+      },
+      "embedding_lr": {
+        "n_rejected": 12,
+        "rejection_rate": 1.0
+      }
+    }
+  },
+  "ambiguous": {
+    "knn_distance": {
+      "n": 16,
+      "decision_counts": {
+        "ambiguous": 11,
+        "out_of_scope": 4,
+        "in_scope": 1
+      },
+      "n_rejected": 12,
+      "rejection_rate": 0.75
+    },
+    "embedding_lr": {
+      "n": 16,
+      "decision_counts": {
+        "ambiguous": 7,
+        "in_scope": 6,
+        "out_of_scope": 3
+      },
+      "n_rejected": 9,
+      "rejection_rate": 0.5625
+    }
+  },
+  "mixed_intent": {
+    "knn_distance": {
+      "n": 16,
+      "decision_counts": {
+        "ambiguous": 15,
+        "in_scope": 1
+      },
+      "n_rejected": 15,
+      "rejection_rate": 0.9375
+    },
+    "embedding_lr": {
+      "n": 16,
+      "decision_counts": {
+        "ambiguous": 10,
+        "in_scope": 6
+      },
+      "n_rejected": 8,
+      "rejection_rate": 0.5
+    }
+  },
+  "evidence": {
+    "corpus_val_sample": {
+      "n": 5000,
+      "with_evidence": 4125
+    },
+    "synthetic_test_out_of_scope": {
+      "n": 36,
+      "with_evidence": 0
+    },
+    "ambiguous": {
+      "n": 16,
+      "with_evidence": 10
+    },
+    "mixed_intent": {
+      "n": 16,
+      "with_evidence": 16
+    },
+    "note": "Conservative English glossary rule; used to flag, never to accept silently."
+  },
+  "threshold_sensitivity": {
+    "knn_distance": [
+      {
+        "threshold": 0.3,
+        "false_acceptance_rate": 0.972222,
+        "false_rejection_rate": 0.0,
+        "f1": 0.054054,
+        "precision": 1.0,
+        "recall": 0.027778
+      },
+      {
+        "threshold": 0.35,
+        "false_acceptance_rate": 0.916667,
+        "false_rejection_rate": 0.0,
+        "f1": 0.153846,
+        "precision": 1.0,
+        "recall": 0.083333
+      },
+      {
+        "threshold": 0.4,
+        "false_acceptance_rate": 0.888889,
+        "false_rejection_rate": 0.0,
+        "f1": 0.2,
+        "precision": 1.0,
+        "recall": 0.111111
+      },
+      {
+        "threshold": 0.45,
+        "false_acceptance_rate": 0.666667,
+        "false_rejection_rate": 0.006944,
+        "f1": 0.489796,
+        "precision": 0.923077,
+        "recall": 0.333333
+      },
+      {
+        "threshold": 0.5,
+        "false_acceptance_rate": 0.416667,
+        "false_rejection_rate": 0.006944,
+        "f1": 0.724138,
+        "precision": 0.954545,
+        "recall": 0.583333
+      },
+      {
+        "threshold": 0.55,
+        "false_acceptance_rate": 0.333333,
+        "false_rejection_rate": 0.006944,
+        "f1": 0.786885,
+        "precision": 0.96,
+        "recall": 0.666667
+      },
+      {
+        "threshold": 0.6,
+        "false_acceptance_rate": 0.25,
+        "false_rejection_rate": 0.020833,
+        "f1": 0.818182,
+        "precision": 0.9,
+        "recall": 0.75
+      },
+      {
+        "threshold": 0.65,
+        "false_acceptance_rate": 0.111111,
+        "false_rejection_rate": 0.020833,
+        "f1": 0.901408,
+        "precision": 0.914286,
+        "recall": 0.888889
+      },
+      {
+        "threshold": 0.7,
+        "false_acceptance_rate": 0.055556,
+        "false_rejection_rate": 0.020833,
+        "f1": 0.931507,
+        "precision": 0.918919,
+        "recall": 0.944444
+      },
+      {
+        "threshold": 0.75,
+        "false_acceptance_rate": 0.027778,
+        "false_rejection_rate": 0.034722,
+        "f1": 0.921053,
+        "precision": 0.875,
+        "recall": 0.972222
+      },
+      {
+        "threshold": 0.8,
+        "false_acceptance_rate": 0.027778,
+        "false_rejection_rate": 0.083333,
+        "f1": 0.843373,
+        "precision": 0.744681,
+        "recall": 0.972222
+      }
+    ],
+    "embedding_lr": [
+      {
+        "threshold": 0.05,
+        "false_acceptance_rate": 0.5,
+        "false_rejection_rate": 0.0,
+        "f1": 0.666667,
+        "precision": 1.0,
+        "recall": 0.5
+      },
+      {
+        "threshold": 0.15,
+        "false_acceptance_rate": 0.25,
+        "false_rejection_rate": 0.013889,
+        "f1": 0.830769,
+        "precision": 0.931034,
+        "recall": 0.75
+      },
+      {
+        "threshold": 0.25,
+        "false_acceptance_rate": 0.194444,
+        "false_rejection_rate": 0.013889,
+        "f1": 0.865672,
+        "precision": 0.935484,
+        "recall": 0.805556
+      },
+      {
+        "threshold": 0.35,
+        "false_acceptance_rate": 0.111111,
+        "false_rejection_rate": 0.013889,
+        "f1": 0.914286,
+        "precision": 0.941176,
+        "recall": 0.888889
+      },
+      {
+        "threshold": 0.45,
+        "false_acceptance_rate": 0.027778,
+        "false_rejection_rate": 0.013889,
+        "f1": 0.958904,
+        "precision": 0.945946,
+        "recall": 0.972222
+      },
+      {
+        "threshold": 0.55,
+        "false_acceptance_rate": 0.027778,
+        "false_rejection_rate": 0.027778,
+        "f1": 0.933333,
+        "precision": 0.897436,
+        "recall": 0.972222
+      },
+      {
+        "threshold": 0.65,
+        "false_acceptance_rate": 0.0,
+        "false_rejection_rate": 0.027778,
+        "f1": 0.947368,
+        "precision": 0.9,
+        "recall": 1.0
+      },
+      {
+        "threshold": 0.75,
+        "false_acceptance_rate": 0.0,
+        "false_rejection_rate": 0.027778,
+        "f1": 0.947368,
+        "precision": 0.9,
+        "recall": 1.0
+      },
+      {
+        "threshold": 0.85,
+        "false_acceptance_rate": 0.0,
+        "false_rejection_rate": 0.055556,
+        "f1": 0.9,
+        "precision": 0.818182,
+        "recall": 1.0
+      },
+      {
+        "threshold": 0.95,
+        "false_acceptance_rate": 0.0,
+        "false_rejection_rate": 0.111111,
+        "f1": 0.818182,
+        "precision": 0.692308,
+        "recall": 1.0
+      }
+    ]
+  },
+  "limitations": [
+    "Out-of-scope queries are authored synthetic text, not real KCC traffic; these are synthetic-negative results, not deployment estimates.",
+    "The synthetic set is small (180 queries / 60 families) and same-author, so confidence intervals are wide and vocabulary overlap with training templates cannot be excluded.",
+    "In-scope corpus queries are English by the project register detector; no Hindi or Hinglish in-scope evaluation data exists, so no multilingual in-scope claim is made. Hindi/Hinglish appear only as synthetic negatives.",
+    "Thresholds were selected on validation data; the test split was scored once, but the ambiguity band widths are design choices, not tuned quantities.",
+    "The agricultural-evidence override uses an English glossary only; it cannot flag Devanagari or Roman-Hindi farm terms.",
+    "No human annotation of scope exists; agreement with the synthetic labels is not a validated measure of real-world out-of-scope detection.",
+    "The kNN reference set and the corpus are the same logged call text, so in-scope queries are lexically and semantically close to the index by construction; that is what the detector exploits."
+  ],
+  "environment": {
+    "python": "3.12.13",
+    "platform": "macOS-26.6.2-arm64-arm-64bit",
+    "machine": "arm64",
+    "versions": {
+      "numpy": "2.5.4",
+      "pandas": "3.1.0",
+      "sklearn": "1.9.1",
+      "scipy": "1.18.1",
+      "sentence_transformers": "6.2.0",
+      "faiss": "1.15.1",
+      "joblib": "1.6.0",
+      "torch": "2.15.0",
+      "transformers": "5.22.1",
+      "pytest": "9.2.0"
+    },
+    "encoder": "paraphrase-multilingual-MiniLM-L12-v2"
+  }
+}

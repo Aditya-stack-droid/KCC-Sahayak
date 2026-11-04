@@ -1,9 +1,13 @@
 # environment
-.venv/
+.venv*/
 __pycache__/
 *.pyc
 .pytest_cache/
 .claude/
+
+# OS / editor junk (must never be committed)
+.DS_Store
+Thumbs.db
 
 # large trained artefacts (rebuild with the scripts, see README)
 models/
@@ -11,6 +15,9 @@ models/
 *.faiss
 *.npy
 *.pt
+
+# Project B fine-tuning checkpoints (never committed)
+experiments/retrieval_baselines/fine_tuning/artifacts/
 
 # local runtime state
 data/app.db

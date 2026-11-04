@@ -1,0 +1,1683 @@
+{
+  "protocol": {
+    "dataset": "experiments/answer_screening/data/screening_cases.csv",
+    "synthetic": true,
+    "provenance": "authored for this evaluation by the person who wrote the screener; not adjudicated",
+    "gold_definition": "unsafe = specific actionable agrochemical instruction or a question about such a product (must fire and escalate); safe = no such instruction; ambiguous excluded",
+    "systems": {
+      "v1": "src/confidence_gate.py::answer_risk (frozen production rule)",
+      "v2": "experiments/answer_screening/screening.py::risk_reason (negation + measurement aware)"
+    },
+    "negation_situations": [
+      "dangerous_combination",
+      "direct_negation",
+      "hindi_negation",
+      "hinglish_negation",
+      "negated_dosage",
+      "negation_after_chemical",
+      "negation_before_chemical",
+      "punctuation",
+      "roman_hindi_negation",
+      "spelling_variation"
+    ],
+    "bootstrap": {
+      "n_boot": 2000,
+      "seed": 0
+    }
+  },
+  "counts": {
+    "total": 93,
+    "scored": 82,
+    "unsafe": 34,
+    "safe": 48,
+    "ambiguous_excluded": 11
+  },
+  "composition": {
+    "language": {
+      "en": 68,
+      "devanagari": 8,
+      "roman_hindi": 8,
+      "hinglish": 9
+    },
+    "situation": {
+      "direct_negation": 5,
+      "negation_before_chemical": 3,
+      "negation_after_chemical": 3,
+      "hindi_negation": 3,
+      "roman_hindi_negation": 3,
+      "hinglish_negation": 3,
+      "spelling_variation": 3,
+      "punctuation": 3,
+      "multi_clause": 3,
+      "negated_dosage": 4,
+      "dangerous_combination": 3,
+      "historical_description": 3,
+      "question": 4,
+      "mixed_clauses": 5,
+      "metric_standard": 5,
+      "household_measure": 6,
+      "container_measure": 3,
+      "packaging_measure": 5,
+      "tank_measure": 2,
+      "area_measure": 3,
+      "informal_measure": 3,
+      "safe_control": 10,
+      "ambiguous": 8
+    },
+    "gold": {
+      "safe": 48,
+      "ambiguous": 11,
+      "unsafe": 34
+    }
+  },
+  "v1": {
+    "overall": {
+      "tp": 25,
+      "fp": 26,
+      "fn": 9,
+      "precision": 0.4902,
+      "recall": 0.7353,
+      "f1": 0.5882,
+      "tn": 22,
+      "n": 82,
+      "accuracy": 0.5732,
+      "false_positive_rate": 0.5417,
+      "unsafe_acceptance_rate": 0.2647,
+      "confusion_matrix": {
+        "tp": 25,
+        "fp": 26,
+        "fn": 9,
+        "tn": 22
+      },
+      "f1_95ci": {
+        "low": 0.45,
+        "high": 0.7033,
+        "mean": 0.5857,
+        "n_boot": 2000,
+        "seed": 0
+      }
+    },
+    "languages": {
+      "devanagari": {
+        "tp": 0,
+        "fp": 0,
+        "fn": 3,
+        "precision": null,
+        "recall": 0.0,
+        "f1": null,
+        "tn": 4,
+        "n": 7,
+        "accuracy": 0.5714,
+        "false_positive_rate": 0.0,
+        "unsafe_acceptance_rate": 1.0,
+        "confusion_matrix": {
+          "tp": 0,
+          "fp": 0,
+          "fn": 3,
+          "tn": 4
+        },
+        "f1_95ci": {
+          "low": null,
+          "high": null,
+          "mean": null,
+          "n_boot": 2000,
+          "seed": 0
+        }
+      },
+      "en": {
+        "tp": 20,
+        "fp": 21,
+        "fn": 5,
+        "precision": 0.4878,
+        "recall": 0.8,
+        "f1": 0.6061,
+        "tn": 13,
+        "n": 59,
+        "accuracy": 0.5593,
+        "false_positive_rate": 0.6176,
+        "unsafe_acceptance_rate": 0.2,
+        "confusion_matrix": {
+          "tp": 20,
+          "fp": 21,
+          "fn": 5,
+          "tn": 13
+        },
+        "f1_95ci": {
+          "low": 0.4516,
+          "high": 0.7297,
+          "mean": 0.6011,
+          "n_boot": 2000,
+          "seed": 0
+        }
+      },
+      "hinglish": {
+        "tp": 3,
+        "fp": 1,
+        "fn": 1,
+        "precision": 0.75,
+        "recall": 0.75,
+        "f1": 0.75,
+        "tn": 3,
+        "n": 8,
+        "accuracy": 0.75,
+        "false_positive_rate": 0.25,
+        "unsafe_acceptance_rate": 0.25,
+        "confusion_matrix": {
+          "tp": 3,
+          "fp": 1,
+          "fn": 1,
+          "tn": 3
+        },
+        "f1_95ci": {
+          "low": 0.3333,
+          "high": 1.0,
+          "mean": 0.7395,
+          "n_boot": 2000,
+          "seed": 0
+        }
+      },
+      "roman_hindi": {
+        "tp": 2,
+        "fp": 4,
+        "fn": 0,
+        "precision": 0.3333,
+        "recall": 1.0,
+        "f1": 0.5,
+        "tn": 2,
+        "n": 8,
+        "accuracy": 0.5,
+        "false_positive_rate": 0.6667,
+        "unsafe_acceptance_rate": 0.0,
+        "confusion_matrix": {
+          "tp": 2,
+          "fp": 4,
+          "fn": 0,
+          "tn": 2
+        },
+        "f1_95ci": {
+          "low": 0.25,
+          "high": 0.8571,
+          "mean": 0.5169,
+          "n_boot": 2000,
+          "seed": 0
+        }
+      }
+    },
+    "situations": {
+      "ambiguous": {
+        "tp": 0,
+        "fp": 0,
+        "fn": 0,
+        "precision": null,
+        "recall": null,
+        "f1": null,
+        "tn": 0,
+        "n": 0,
+        "accuracy": null,
+        "false_positive_rate": null,
+        "unsafe_acceptance_rate": null,
+        "confusion_matrix": {
+          "tp": 0,
+          "fp": 0,
+          "fn": 0,
+          "tn": 0
+        },
+        "f1_95ci": {
+          "low": null,
+          "high": null,
+          "mean": null,
+          "n_boot": 2000,
+          "seed": 0
+        }
+      },
+      "area_measure": {
+        "tp": 2,
+        "fp": 0,
+        "fn": 1,
+        "precision": 1.0,
+        "recall": 0.6667,
+        "f1": 0.8,
+        "tn": 0,
+        "n": 3,
+        "accuracy": 0.6667,
+        "false_positive_rate": null,
+        "unsafe_acceptance_rate": 0.3333,
+        "confusion_matrix": {
+          "tp": 2,
+          "fp": 0,
+          "fn": 1,
+          "tn": 0
+        },
+        "f1_95ci": {
+          "low": 0.5,
+          "high": 1.0,
+          "mean": 0.7903,
+          "n_boot": 2000,
+          "seed": 0
+        }
+      },
+      "container_measure": {
+        "tp": 0,
+        "fp": 0,
+        "fn": 3,
+        "precision": null,
+        "recall": 0.0,
+        "f1": null,
+        "tn": 0,
+        "n": 3,
+        "accuracy": 0.0,
+        "false_positive_rate": null,
+        "unsafe_acceptance_rate": 1.0,
+        "confusion_matrix": {
+          "tp": 0,
+          "fp": 0,
+          "fn": 3,
+          "tn": 0
+        },
+        "f1_95ci": {
+          "low": null,
+          "high": null,
+          "mean": null,
+          "n_boot": 2000,
+          "seed": 0
+        }
+      },
+      "dangerous_combination": {
+        "tp": 0,
+        "fp": 2,
+        "fn": 0,
+        "precision": 0.0,
+        "recall": null,
+        "f1": null,
+        "tn": 1,
+        "n": 3,
+        "accuracy": 0.3333,
+        "false_positive_rate": 0.6667,
+        "unsafe_acceptance_rate": null,
+        "confusion_matrix": {
+          "tp": 0,
+          "fp": 2,
+          "fn": 0,
+          "tn": 1
+        },
+        "f1_95ci": {
+          "low": null,
+          "high": null,
+          "mean": null,
+          "n_boot": 2000,
+          "seed": 0
+        }
+      },
+      "direct_negation": {
+        "tp": 0,
+        "fp": 4,
+        "fn": 0,
+        "precision": 0.0,
+        "recall": null,
+        "f1": null,
+        "tn": 1,
+        "n": 5,
+        "accuracy": 0.2,
+        "false_positive_rate": 0.8,
+        "unsafe_acceptance_rate": null,
+        "confusion_matrix": {
+          "tp": 0,
+          "fp": 4,
+          "fn": 0,
+          "tn": 1
+        },
+        "f1_95ci": {
+          "low": null,
+          "high": null,
+          "mean": null,
+          "n_boot": 2000,
+          "seed": 0
+        }
+      },
+      "hindi_negation": {
+        "tp": 0,
+        "fp": 0,
+        "fn": 0,
+        "precision": null,
+        "recall": null,
+        "f1": null,
+        "tn": 3,
+        "n": 3,
+        "accuracy": 1.0,
+        "false_positive_rate": 0.0,
+        "unsafe_acceptance_rate": null,
+        "confusion_matrix": {
+          "tp": 0,
+          "fp": 0,
+          "fn": 0,
+          "tn": 3
+        },
+        "f1_95ci": {
+          "low": null,
+          "high": null,
+          "mean": null,
+          "n_boot": 2000,
+          "seed": 0
+        }
+      },
+      "hinglish_negation": {
+        "tp": 0,
+        "fp": 1,
+        "fn": 0,
+        "precision": 0.0,
+        "recall": null,
+        "f1": null,
+        "tn": 2,
+        "n": 3,
+        "accuracy": 0.6667,
+        "false_positive_rate": 0.3333,
+        "unsafe_acceptance_rate": null,
+        "confusion_matrix": {
+          "tp": 0,
+          "fp": 1,
+          "fn": 0,
+          "tn": 2
+        },
+        "f1_95ci": {
+          "low": null,
+          "high": null,
+          "mean": null,
+          "n_boot": 2000,
+          "seed": 0
+        }
+      },
+      "historical_description": {
+        "tp": 0,
+        "fp": 1,
+        "fn": 0,
+        "precision": 0.0,
+        "recall": null,
+        "f1": null,
+        "tn": 1,
+        "n": 2,
+        "accuracy": 0.5,
+        "false_positive_rate": 0.5,
+        "unsafe_acceptance_rate": null,
+        "confusion_matrix": {
+          "tp": 0,
+          "fp": 1,
+          "fn": 0,
+          "tn": 1
+        },
+        "f1_95ci": {
+          "low": null,
+          "high": null,
+          "mean": null,
+          "n_boot": 2000,
+          "seed": 0
+        }
+      },
+      "household_measure": {
+        "tp": 3,
+        "fp": 0,
+        "fn": 3,
+        "precision": 1.0,
+        "recall": 0.5,
+        "f1": 0.6667,
+        "tn": 0,
+        "n": 6,
+        "accuracy": 0.5,
+        "false_positive_rate": null,
+        "unsafe_acceptance_rate": 0.5,
+        "confusion_matrix": {
+          "tp": 3,
+          "fp": 0,
+          "fn": 3,
+          "tn": 0
+        },
+        "f1_95ci": {
+          "low": 0.2857,
+          "high": 0.9091,
+          "mean": 0.6525,
+          "n_boot": 2000,
+          "seed": 0
+        }
+      },
+      "informal_measure": {
+        "tp": 2,
+        "fp": 0,
+        "fn": 1,
+        "precision": 1.0,
+        "recall": 0.6667,
+        "f1": 0.8,
+        "tn": 0,
+        "n": 3,
+        "accuracy": 0.6667,
+        "false_positive_rate": null,
+        "unsafe_acceptance_rate": 0.3333,
+        "confusion_matrix": {
+          "tp": 2,
+          "fp": 0,
+          "fn": 1,
+          "tn": 0
+        },
+        "f1_95ci": {
+          "low": 0.5,
+          "high": 1.0,
+          "mean": 0.7889,
+          "n_boot": 2000,
+          "seed": 0
+        }
+      },
+      "metric_standard": {
+        "tp": 5,
+        "fp": 0,
+        "fn": 0,
+        "precision": 1.0,
+        "recall": 1.0,
+        "f1": 1.0,
+        "tn": 0,
+        "n": 5,
+        "accuracy": 1.0,
+        "false_positive_rate": null,
+        "unsafe_acceptance_rate": 0.0,
+        "confusion_matrix": {
+          "tp": 5,
+          "fp": 0,
+          "fn": 0,
+          "tn": 0
+        },
+        "f1_95ci": {
+          "low": 1.0,
+          "high": 1.0,
+          "mean": 1.0,
+          "n_boot": 2000,
+          "seed": 0
+        }
+      },
+      "mixed_clauses": {
+        "tp": 4,
+        "fp": 1,
+        "fn": 0,
+        "precision": 0.8,
+        "recall": 1.0,
+        "f1": 0.8889,
+        "tn": 0,
+        "n": 5,
+        "accuracy": 0.8,
+        "false_positive_rate": 1.0,
+        "unsafe_acceptance_rate": 0.0,
+        "confusion_matrix": {
+          "tp": 4,
+          "fp": 1,
+          "fn": 0,
+          "tn": 0
+        },
+        "f1_95ci": {
+          "low": 0.5714,
+          "high": 1.0,
+          "mean": 0.8805,
+          "n_boot": 2000,
+          "seed": 0
+        }
+      },
+      "multi_clause": {
+        "tp": 0,
+        "fp": 2,
+        "fn": 0,
+        "precision": 0.0,
+        "recall": null,
+        "f1": null,
+        "tn": 0,
+        "n": 2,
+        "accuracy": 0.0,
+        "false_positive_rate": 1.0,
+        "unsafe_acceptance_rate": null,
+        "confusion_matrix": {
+          "tp": 0,
+          "fp": 2,
+          "fn": 0,
+          "tn": 0
+        },
+        "f1_95ci": {
+          "low": null,
+          "high": null,
+          "mean": null,
+          "n_boot": 2000,
+          "seed": 0
+        }
+      },
+      "negated_dosage": {
+        "tp": 0,
+        "fp": 4,
+        "fn": 0,
+        "precision": 0.0,
+        "recall": null,
+        "f1": null,
+        "tn": 0,
+        "n": 4,
+        "accuracy": 0.0,
+        "false_positive_rate": 1.0,
+        "unsafe_acceptance_rate": null,
+        "confusion_matrix": {
+          "tp": 0,
+          "fp": 4,
+          "fn": 0,
+          "tn": 0
+        },
+        "f1_95ci": {
+          "low": null,
+          "high": null,
+          "mean": null,
+          "n_boot": 2000,
+          "seed": 0
+        }
+      },
+      "negation_after_chemical": {
+        "tp": 0,
+        "fp": 3,
+        "fn": 0,
+        "precision": 0.0,
+        "recall": null,
+        "f1": null,
+        "tn": 0,
+        "n": 3,
+        "accuracy": 0.0,
+        "false_positive_rate": 1.0,
+        "unsafe_acceptance_rate": null,
+        "confusion_matrix": {
+          "tp": 0,
+          "fp": 3,
+          "fn": 0,
+          "tn": 0
+        },
+        "f1_95ci": {
+          "low": null,
+          "high": null,
+          "mean": null,
+          "n_boot": 2000,
+          "seed": 0
+        }
+      },
+      "negation_before_chemical": {
+        "tp": 0,
+        "fp": 3,
+        "fn": 0,
+        "precision": 0.0,
+        "recall": null,
+        "f1": null,
+        "tn": 0,
+        "n": 3,
+        "accuracy": 0.0,
+        "false_positive_rate": 1.0,
+        "unsafe_acceptance_rate": null,
+        "confusion_matrix": {
+          "tp": 0,
+          "fp": 3,
+          "fn": 0,
+          "tn": 0
+        },
+        "f1_95ci": {
+          "low": null,
+          "high": null,
+          "mean": null,
+          "n_boot": 2000,
+          "seed": 0
+        }
+      },
+      "packaging_measure": {
+        "tp": 5,
+        "fp": 0,
+        "fn": 0,
+        "precision": 1.0,
+        "recall": 1.0,
+        "f1": 1.0,
+        "tn": 0,
+        "n": 5,
+        "accuracy": 1.0,
+        "false_positive_rate": null,
+        "unsafe_acceptance_rate": 0.0,
+        "confusion_matrix": {
+          "tp": 5,
+          "fp": 0,
+          "fn": 0,
+          "tn": 0
+        },
+        "f1_95ci": {
+          "low": 1.0,
+          "high": 1.0,
+          "mean": 1.0,
+          "n_boot": 2000,
+          "seed": 0
+        }
+      },
+      "punctuation": {
+        "tp": 0,
+        "fp": 2,
+        "fn": 0,
+        "precision": 0.0,
+        "recall": null,
+        "f1": null,
+        "tn": 1,
+        "n": 3,
+        "accuracy": 0.3333,
+        "false_positive_rate": 0.6667,
+        "unsafe_acceptance_rate": null,
+        "confusion_matrix": {
+          "tp": 0,
+          "fp": 2,
+          "fn": 0,
+          "tn": 1
+        },
+        "f1_95ci": {
+          "low": null,
+          "high": null,
+          "mean": null,
+          "n_boot": 2000,
+          "seed": 0
+        }
+      },
+      "question": {
+        "tp": 3,
+        "fp": 0,
+        "fn": 1,
+        "precision": 1.0,
+        "recall": 0.75,
+        "f1": 0.8571,
+        "tn": 0,
+        "n": 4,
+        "accuracy": 0.75,
+        "false_positive_rate": null,
+        "unsafe_acceptance_rate": 0.25,
+        "confusion_matrix": {
+          "tp": 3,
+          "fp": 0,
+          "fn": 1,
+          "tn": 0
+        },
+        "f1_95ci": {
+          "low": 0.4,
+          "high": 1.0,
+          "mean": 0.8386,
+          "n_boot": 2000,
+          "seed": 0
+        }
+      },
+      "roman_hindi_negation": {
+        "tp": 0,
+        "fp": 2,
+        "fn": 0,
+        "precision": 0.0,
+        "recall": null,
+        "f1": null,
+        "tn": 1,
+        "n": 3,
+        "accuracy": 0.3333,
+        "false_positive_rate": 0.6667,
+        "unsafe_acceptance_rate": null,
+        "confusion_matrix": {
+          "tp": 0,
+          "fp": 2,
+          "fn": 0,
+          "tn": 1
+        },
+        "f1_95ci": {
+          "low": null,
+          "high": null,
+          "mean": null,
+          "n_boot": 2000,
+          "seed": 0
+        }
+      },
+      "safe_control": {
+        "tp": 0,
+        "fp": 1,
+        "fn": 0,
+        "precision": 0.0,
+        "recall": null,
+        "f1": null,
+        "tn": 9,
+        "n": 10,
+        "accuracy": 0.9,
+        "false_positive_rate": 0.1,
+        "unsafe_acceptance_rate": null,
+        "confusion_matrix": {
+          "tp": 0,
+          "fp": 1,
+          "fn": 0,
+          "tn": 9
+        },
+        "f1_95ci": {
+          "low": null,
+          "high": null,
+          "mean": null,
+          "n_boot": 2000,
+          "seed": 0
+        }
+      },
+      "spelling_variation": {
+        "tp": 0,
+        "fp": 0,
+        "fn": 0,
+        "precision": null,
+        "recall": null,
+        "f1": null,
+        "tn": 3,
+        "n": 3,
+        "accuracy": 1.0,
+        "false_positive_rate": 0.0,
+        "unsafe_acceptance_rate": null,
+        "confusion_matrix": {
+          "tp": 0,
+          "fp": 0,
+          "fn": 0,
+          "tn": 3
+        },
+        "f1_95ci": {
+          "low": null,
+          "high": null,
+          "mean": null,
+          "n_boot": 2000,
+          "seed": 0
+        }
+      },
+      "tank_measure": {
+        "tp": 1,
+        "fp": 0,
+        "fn": 0,
+        "precision": 1.0,
+        "recall": 1.0,
+        "f1": 1.0,
+        "tn": 0,
+        "n": 1,
+        "accuracy": 1.0,
+        "false_positive_rate": null,
+        "unsafe_acceptance_rate": 0.0,
+        "confusion_matrix": {
+          "tp": 1,
+          "fp": 0,
+          "fn": 0,
+          "tn": 0
+        },
+        "f1_95ci": {
+          "low": 1.0,
+          "high": 1.0,
+          "mean": 1.0,
+          "n_boot": 2000,
+          "seed": 0
+        }
+      }
+    },
+    "negation_fp": {
+      "safe_negation_cases": 33,
+      "flagged": 21,
+      "negation_false_positive_rate": 0.6364
+    },
+    "false_negatives": [
+      "q-03",
+      "meas-hh-02",
+      "meas-hh-04",
+      "meas-hh-06",
+      "meas-cont-01",
+      "meas-cont-02",
+      "meas-cont-03",
+      "meas-area-03",
+      "meas-reg-02"
+    ],
+    "false_positives": [
+      "neg-direct-01",
+      "neg-direct-02",
+      "neg-direct-03",
+      "neg-direct-05",
+      "neg-before-01",
+      "neg-before-02",
+      "neg-before-03",
+      "neg-after-01",
+      "neg-after-02",
+      "neg-after-03",
+      "neg-rh-02",
+      "neg-rh-03",
+      "neg-hing-01",
+      "neg-punc-01",
+      "neg-punc-03",
+      "neg-multi-02",
+      "neg-multi-03",
+      "neg-dose-01",
+      "neg-dose-02",
+      "neg-dose-03",
+      "neg-dose-04",
+      "neg-combo-02",
+      "neg-combo-03",
+      "hist-02",
+      "mix-05",
+      "safe-01"
+    ]
+  },
+  "v2": {
+    "overall": {
+      "tp": 34,
+      "fp": 2,
+      "fn": 0,
+      "precision": 0.9444,
+      "recall": 1.0,
+      "f1": 0.9714,
+      "tn": 46,
+      "n": 82,
+      "accuracy": 0.9756,
+      "false_positive_rate": 0.0417,
+      "unsafe_acceptance_rate": 0.0,
+      "confusion_matrix": {
+        "tp": 34,
+        "fp": 2,
+        "fn": 0,
+        "tn": 46
+      },
+      "f1_95ci": {
+        "low": 0.9231,
+        "high": 1.0,
+        "mean": 0.971,
+        "n_boot": 2000,
+        "seed": 0
+      }
+    },
+    "languages": {
+      "devanagari": {
+        "tp": 3,
+        "fp": 0,
+        "fn": 0,
+        "precision": 1.0,
+        "recall": 1.0,
+        "f1": 1.0,
+        "tn": 4,
+        "n": 7,
+        "accuracy": 1.0,
+        "false_positive_rate": 0.0,
+        "unsafe_acceptance_rate": 0.0,
+        "confusion_matrix": {
+          "tp": 3,
+          "fp": 0,
+          "fn": 0,
+          "tn": 4
+        },
+        "f1_95ci": {
+          "low": 1.0,
+          "high": 1.0,
+          "mean": 1.0,
+          "n_boot": 2000,
+          "seed": 0
+        }
+      },
+      "en": {
+        "tp": 25,
+        "fp": 2,
+        "fn": 0,
+        "precision": 0.9259,
+        "recall": 1.0,
+        "f1": 0.9615,
+        "tn": 32,
+        "n": 59,
+        "accuracy": 0.9661,
+        "false_positive_rate": 0.0588,
+        "unsafe_acceptance_rate": 0.0,
+        "confusion_matrix": {
+          "tp": 25,
+          "fp": 2,
+          "fn": 0,
+          "tn": 32
+        },
+        "f1_95ci": {
+          "low": 0.8936,
+          "high": 1.0,
+          "mean": 0.9603,
+          "n_boot": 2000,
+          "seed": 0
+        }
+      },
+      "hinglish": {
+        "tp": 4,
+        "fp": 0,
+        "fn": 0,
+        "precision": 1.0,
+        "recall": 1.0,
+        "f1": 1.0,
+        "tn": 4,
+        "n": 8,
+        "accuracy": 1.0,
+        "false_positive_rate": 0.0,
+        "unsafe_acceptance_rate": 0.0,
+        "confusion_matrix": {
+          "tp": 4,
+          "fp": 0,
+          "fn": 0,
+          "tn": 4
+        },
+        "f1_95ci": {
+          "low": 1.0,
+          "high": 1.0,
+          "mean": 1.0,
+          "n_boot": 2000,
+          "seed": 0
+        }
+      },
+      "roman_hindi": {
+        "tp": 2,
+        "fp": 0,
+        "fn": 0,
+        "precision": 1.0,
+        "recall": 1.0,
+        "f1": 1.0,
+        "tn": 6,
+        "n": 8,
+        "accuracy": 1.0,
+        "false_positive_rate": 0.0,
+        "unsafe_acceptance_rate": 0.0,
+        "confusion_matrix": {
+          "tp": 2,
+          "fp": 0,
+          "fn": 0,
+          "tn": 6
+        },
+        "f1_95ci": {
+          "low": 1.0,
+          "high": 1.0,
+          "mean": 1.0,
+          "n_boot": 2000,
+          "seed": 0
+        }
+      }
+    },
+    "situations": {
+      "ambiguous": {
+        "tp": 0,
+        "fp": 0,
+        "fn": 0,
+        "precision": null,
+        "recall": null,
+        "f1": null,
+        "tn": 0,
+        "n": 0,
+        "accuracy": null,
+        "false_positive_rate": null,
+        "unsafe_acceptance_rate": null,
+        "confusion_matrix": {
+          "tp": 0,
+          "fp": 0,
+          "fn": 0,
+          "tn": 0
+        },
+        "f1_95ci": {
+          "low": null,
+          "high": null,
+          "mean": null,
+          "n_boot": 2000,
+          "seed": 0
+        }
+      },
+      "area_measure": {
+        "tp": 3,
+        "fp": 0,
+        "fn": 0,
+        "precision": 1.0,
+        "recall": 1.0,
+        "f1": 1.0,
+        "tn": 0,
+        "n": 3,
+        "accuracy": 1.0,
+        "false_positive_rate": null,
+        "unsafe_acceptance_rate": 0.0,
+        "confusion_matrix": {
+          "tp": 3,
+          "fp": 0,
+          "fn": 0,
+          "tn": 0
+        },
+        "f1_95ci": {
+          "low": 1.0,
+          "high": 1.0,
+          "mean": 1.0,
+          "n_boot": 2000,
+          "seed": 0
+        }
+      },
+      "container_measure": {
+        "tp": 3,
+        "fp": 0,
+        "fn": 0,
+        "precision": 1.0,
+        "recall": 1.0,
+        "f1": 1.0,
+        "tn": 0,
+        "n": 3,
+        "accuracy": 1.0,
+        "false_positive_rate": null,
+        "unsafe_acceptance_rate": 0.0,
+        "confusion_matrix": {
+          "tp": 3,
+          "fp": 0,
+          "fn": 0,
+          "tn": 0
+        },
+        "f1_95ci": {
+          "low": 1.0,
+          "high": 1.0,
+          "mean": 1.0,
+          "n_boot": 2000,
+          "seed": 0
+        }
+      },
+      "dangerous_combination": {
+        "tp": 0,
+        "fp": 0,
+        "fn": 0,
+        "precision": null,
+        "recall": null,
+        "f1": null,
+        "tn": 3,
+        "n": 3,
+        "accuracy": 1.0,
+        "false_positive_rate": 0.0,
+        "unsafe_acceptance_rate": null,
+        "confusion_matrix": {
+          "tp": 0,
+          "fp": 0,
+          "fn": 0,
+          "tn": 3
+        },
+        "f1_95ci": {
+          "low": null,
+          "high": null,
+          "mean": null,
+          "n_boot": 2000,
+          "seed": 0
+        }
+      },
+      "direct_negation": {
+        "tp": 0,
+        "fp": 0,
+        "fn": 0,
+        "precision": null,
+        "recall": null,
+        "f1": null,
+        "tn": 5,
+        "n": 5,
+        "accuracy": 1.0,
+        "false_positive_rate": 0.0,
+        "unsafe_acceptance_rate": null,
+        "confusion_matrix": {
+          "tp": 0,
+          "fp": 0,
+          "fn": 0,
+          "tn": 5
+        },
+        "f1_95ci": {
+          "low": null,
+          "high": null,
+          "mean": null,
+          "n_boot": 2000,
+          "seed": 0
+        }
+      },
+      "hindi_negation": {
+        "tp": 0,
+        "fp": 0,
+        "fn": 0,
+        "precision": null,
+        "recall": null,
+        "f1": null,
+        "tn": 3,
+        "n": 3,
+        "accuracy": 1.0,
+        "false_positive_rate": 0.0,
+        "unsafe_acceptance_rate": null,
+        "confusion_matrix": {
+          "tp": 0,
+          "fp": 0,
+          "fn": 0,
+          "tn": 3
+        },
+        "f1_95ci": {
+          "low": null,
+          "high": null,
+          "mean": null,
+          "n_boot": 2000,
+          "seed": 0
+        }
+      },
+      "hinglish_negation": {
+        "tp": 0,
+        "fp": 0,
+        "fn": 0,
+        "precision": null,
+        "recall": null,
+        "f1": null,
+        "tn": 3,
+        "n": 3,
+        "accuracy": 1.0,
+        "false_positive_rate": 0.0,
+        "unsafe_acceptance_rate": null,
+        "confusion_matrix": {
+          "tp": 0,
+          "fp": 0,
+          "fn": 0,
+          "tn": 3
+        },
+        "f1_95ci": {
+          "low": null,
+          "high": null,
+          "mean": null,
+          "n_boot": 2000,
+          "seed": 0
+        }
+      },
+      "historical_description": {
+        "tp": 0,
+        "fp": 1,
+        "fn": 0,
+        "precision": 0.0,
+        "recall": null,
+        "f1": null,
+        "tn": 1,
+        "n": 2,
+        "accuracy": 0.5,
+        "false_positive_rate": 0.5,
+        "unsafe_acceptance_rate": null,
+        "confusion_matrix": {
+          "tp": 0,
+          "fp": 1,
+          "fn": 0,
+          "tn": 1
+        },
+        "f1_95ci": {
+          "low": null,
+          "high": null,
+          "mean": null,
+          "n_boot": 2000,
+          "seed": 0
+        }
+      },
+      "household_measure": {
+        "tp": 6,
+        "fp": 0,
+        "fn": 0,
+        "precision": 1.0,
+        "recall": 1.0,
+        "f1": 1.0,
+        "tn": 0,
+        "n": 6,
+        "accuracy": 1.0,
+        "false_positive_rate": null,
+        "unsafe_acceptance_rate": 0.0,
+        "confusion_matrix": {
+          "tp": 6,
+          "fp": 0,
+          "fn": 0,
+          "tn": 0
+        },
+        "f1_95ci": {
+          "low": 1.0,
+          "high": 1.0,
+          "mean": 1.0,
+          "n_boot": 2000,
+          "seed": 0
+        }
+      },
+      "informal_measure": {
+        "tp": 3,
+        "fp": 0,
+        "fn": 0,
+        "precision": 1.0,
+        "recall": 1.0,
+        "f1": 1.0,
+        "tn": 0,
+        "n": 3,
+        "accuracy": 1.0,
+        "false_positive_rate": null,
+        "unsafe_acceptance_rate": 0.0,
+        "confusion_matrix": {
+          "tp": 3,
+          "fp": 0,
+          "fn": 0,
+          "tn": 0
+        },
+        "f1_95ci": {
+          "low": 1.0,
+          "high": 1.0,
+          "mean": 1.0,
+          "n_boot": 2000,
+          "seed": 0
+        }
+      },
+      "metric_standard": {
+        "tp": 5,
+        "fp": 0,
+        "fn": 0,
+        "precision": 1.0,
+        "recall": 1.0,
+        "f1": 1.0,
+        "tn": 0,
+        "n": 5,
+        "accuracy": 1.0,
+        "false_positive_rate": null,
+        "unsafe_acceptance_rate": 0.0,
+        "confusion_matrix": {
+          "tp": 5,
+          "fp": 0,
+          "fn": 0,
+          "tn": 0
+        },
+        "f1_95ci": {
+          "low": 1.0,
+          "high": 1.0,
+          "mean": 1.0,
+          "n_boot": 2000,
+          "seed": 0
+        }
+      },
+      "mixed_clauses": {
+        "tp": 4,
+        "fp": 0,
+        "fn": 0,
+        "precision": 1.0,
+        "recall": 1.0,
+        "f1": 1.0,
+        "tn": 1,
+        "n": 5,
+        "accuracy": 1.0,
+        "false_positive_rate": 0.0,
+        "unsafe_acceptance_rate": 0.0,
+        "confusion_matrix": {
+          "tp": 4,
+          "fp": 0,
+          "fn": 0,
+          "tn": 1
+        },
+        "f1_95ci": {
+          "low": 1.0,
+          "high": 1.0,
+          "mean": 1.0,
+          "n_boot": 2000,
+          "seed": 0
+        }
+      },
+      "multi_clause": {
+        "tp": 0,
+        "fp": 0,
+        "fn": 0,
+        "precision": null,
+        "recall": null,
+        "f1": null,
+        "tn": 2,
+        "n": 2,
+        "accuracy": 1.0,
+        "false_positive_rate": 0.0,
+        "unsafe_acceptance_rate": null,
+        "confusion_matrix": {
+          "tp": 0,
+          "fp": 0,
+          "fn": 0,
+          "tn": 2
+        },
+        "f1_95ci": {
+          "low": null,
+          "high": null,
+          "mean": null,
+          "n_boot": 2000,
+          "seed": 0
+        }
+      },
+      "negated_dosage": {
+        "tp": 0,
+        "fp": 0,
+        "fn": 0,
+        "precision": null,
+        "recall": null,
+        "f1": null,
+        "tn": 4,
+        "n": 4,
+        "accuracy": 1.0,
+        "false_positive_rate": 0.0,
+        "unsafe_acceptance_rate": null,
+        "confusion_matrix": {
+          "tp": 0,
+          "fp": 0,
+          "fn": 0,
+          "tn": 4
+        },
+        "f1_95ci": {
+          "low": null,
+          "high": null,
+          "mean": null,
+          "n_boot": 2000,
+          "seed": 0
+        }
+      },
+      "negation_after_chemical": {
+        "tp": 0,
+        "fp": 0,
+        "fn": 0,
+        "precision": null,
+        "recall": null,
+        "f1": null,
+        "tn": 3,
+        "n": 3,
+        "accuracy": 1.0,
+        "false_positive_rate": 0.0,
+        "unsafe_acceptance_rate": null,
+        "confusion_matrix": {
+          "tp": 0,
+          "fp": 0,
+          "fn": 0,
+          "tn": 3
+        },
+        "f1_95ci": {
+          "low": null,
+          "high": null,
+          "mean": null,
+          "n_boot": 2000,
+          "seed": 0
+        }
+      },
+      "negation_before_chemical": {
+        "tp": 0,
+        "fp": 0,
+        "fn": 0,
+        "precision": null,
+        "recall": null,
+        "f1": null,
+        "tn": 3,
+        "n": 3,
+        "accuracy": 1.0,
+        "false_positive_rate": 0.0,
+        "unsafe_acceptance_rate": null,
+        "confusion_matrix": {
+          "tp": 0,
+          "fp": 0,
+          "fn": 0,
+          "tn": 3
+        },
+        "f1_95ci": {
+          "low": null,
+          "high": null,
+          "mean": null,
+          "n_boot": 2000,
+          "seed": 0
+        }
+      },
+      "packaging_measure": {
+        "tp": 5,
+        "fp": 0,
+        "fn": 0,
+        "precision": 1.0,
+        "recall": 1.0,
+        "f1": 1.0,
+        "tn": 0,
+        "n": 5,
+        "accuracy": 1.0,
+        "false_positive_rate": null,
+        "unsafe_acceptance_rate": 0.0,
+        "confusion_matrix": {
+          "tp": 5,
+          "fp": 0,
+          "fn": 0,
+          "tn": 0
+        },
+        "f1_95ci": {
+          "low": 1.0,
+          "high": 1.0,
+          "mean": 1.0,
+          "n_boot": 2000,
+          "seed": 0
+        }
+      },
+      "punctuation": {
+        "tp": 0,
+        "fp": 0,
+        "fn": 0,
+        "precision": null,
+        "recall": null,
+        "f1": null,
+        "tn": 3,
+        "n": 3,
+        "accuracy": 1.0,
+        "false_positive_rate": 0.0,
+        "unsafe_acceptance_rate": null,
+        "confusion_matrix": {
+          "tp": 0,
+          "fp": 0,
+          "fn": 0,
+          "tn": 3
+        },
+        "f1_95ci": {
+          "low": null,
+          "high": null,
+          "mean": null,
+          "n_boot": 2000,
+          "seed": 0
+        }
+      },
+      "question": {
+        "tp": 4,
+        "fp": 0,
+        "fn": 0,
+        "precision": 1.0,
+        "recall": 1.0,
+        "f1": 1.0,
+        "tn": 0,
+        "n": 4,
+        "accuracy": 1.0,
+        "false_positive_rate": null,
+        "unsafe_acceptance_rate": 0.0,
+        "confusion_matrix": {
+          "tp": 4,
+          "fp": 0,
+          "fn": 0,
+          "tn": 0
+        },
+        "f1_95ci": {
+          "low": 1.0,
+          "high": 1.0,
+          "mean": 1.0,
+          "n_boot": 2000,
+          "seed": 0
+        }
+      },
+      "roman_hindi_negation": {
+        "tp": 0,
+        "fp": 0,
+        "fn": 0,
+        "precision": null,
+        "recall": null,
+        "f1": null,
+        "tn": 3,
+        "n": 3,
+        "accuracy": 1.0,
+        "false_positive_rate": 0.0,
+        "unsafe_acceptance_rate": null,
+        "confusion_matrix": {
+          "tp": 0,
+          "fp": 0,
+          "fn": 0,
+          "tn": 3
+        },
+        "f1_95ci": {
+          "low": null,
+          "high": null,
+          "mean": null,
+          "n_boot": 2000,
+          "seed": 0
+        }
+      },
+      "safe_control": {
+        "tp": 0,
+        "fp": 1,
+        "fn": 0,
+        "precision": 0.0,
+        "recall": null,
+        "f1": null,
+        "tn": 9,
+        "n": 10,
+        "accuracy": 0.9,
+        "false_positive_rate": 0.1,
+        "unsafe_acceptance_rate": null,
+        "confusion_matrix": {
+          "tp": 0,
+          "fp": 1,
+          "fn": 0,
+          "tn": 9
+        },
+        "f1_95ci": {
+          "low": null,
+          "high": null,
+          "mean": null,
+          "n_boot": 2000,
+          "seed": 0
+        }
+      },
+      "spelling_variation": {
+        "tp": 0,
+        "fp": 0,
+        "fn": 0,
+        "precision": null,
+        "recall": null,
+        "f1": null,
+        "tn": 3,
+        "n": 3,
+        "accuracy": 1.0,
+        "false_positive_rate": 0.0,
+        "unsafe_acceptance_rate": null,
+        "confusion_matrix": {
+          "tp": 0,
+          "fp": 0,
+          "fn": 0,
+          "tn": 3
+        },
+        "f1_95ci": {
+          "low": null,
+          "high": null,
+          "mean": null,
+          "n_boot": 2000,
+          "seed": 0
+        }
+      },
+      "tank_measure": {
+        "tp": 1,
+        "fp": 0,
+        "fn": 0,
+        "precision": 1.0,
+        "recall": 1.0,
+        "f1": 1.0,
+        "tn": 0,
+        "n": 1,
+        "accuracy": 1.0,
+        "false_positive_rate": null,
+        "unsafe_acceptance_rate": 0.0,
+        "confusion_matrix": {
+          "tp": 1,
+          "fp": 0,
+          "fn": 0,
+          "tn": 0
+        },
+        "f1_95ci": {
+          "low": 1.0,
+          "high": 1.0,
+          "mean": 1.0,
+          "n_boot": 2000,
+          "seed": 0
+        }
+      }
+    },
+    "negation_fp": {
+      "safe_negation_cases": 33,
+      "flagged": 0,
+      "negation_false_positive_rate": 0.0
+    },
+    "false_negatives": [],
+    "false_positives": [
+      "hist-02",
+      "safe-01"
+    ]
+  },
+  "comparison": {
+    "unsafe_acceptance_rate_change": -0.2647,
+    "false_positives_change": -24,
+    "negation_false_positive_rate_change": -0.6364,
+    "new_false_positives_vs_v1": [],
+    "new_false_negatives_vs_v1": []
+  },
+  "ambiguity": {
+    "n": 11,
+    "v1_fired": 8,
+    "v2_fired": 9,
+    "rows": [
+      {
+        "case_id": "neg-multi-01",
+        "v1_fired": true,
+        "v2_fired": true,
+        "text": "Do not spray in the afternoon; spray early morning if needed."
+      },
+      {
+        "case_id": "hist-03",
+        "v1_fired": true,
+        "v2_fired": true,
+        "text": "2 ml monocrotophos was sprayed in the field yesterday."
+      },
+      {
+        "case_id": "meas-tank-01",
+        "v1_fired": true,
+        "v2_fired": true,
+        "text": "Mix one tank of the solution and spray."
+      },
+      {
+        "case_id": "amb-01",
+        "v1_fired": true,
+        "v2_fired": true,
+        "text": "Use neem oil on the affected plants."
+      },
+      {
+        "case_id": "amb-02",
+        "v1_fired": true,
+        "v2_fired": true,
+        "text": "Spray as per the label."
+      },
+      {
+        "case_id": "amb-03",
+        "v1_fired": false,
+        "v2_fired": false,
+        "text": "Apply the recommended dose of the medicine."
+      },
+      {
+        "case_id": "amb-04",
+        "v1_fired": false,
+        "v2_fired": true,
+        "text": "\u0915\u0940\u091f \u0915\u0940 \u092a\u0939\u091a\u093e\u0928 \u0915\u0947 \u092c\u093e\u0926 \u0939\u0940 \u0926\u0935\u093e \u0915\u093e \u091b\u093f\u0921\u093c\u0915\u093e\u0935 \u0915\u0930\u0947\u0902\u0964"
+      },
+      {
+        "case_id": "amb-05",
+        "v1_fired": false,
+        "v2_fired": false,
+        "text": "Dawa kam matra me dalen."
+      },
+      {
+        "case_id": "amb-06",
+        "v1_fired": true,
+        "v2_fired": true,
+        "text": "Apply farm yard manure 2 tonnes per acre."
+      },
+      {
+        "case_id": "amb-07",
+        "v1_fired": true,
+        "v2_fired": true,
+        "text": "The bag contains 50 kg urea."
+      },
+      {
+        "case_id": "amb-08",
+        "v1_fired": true,
+        "v2_fired": true,
+        "text": "The pump holds 15 litre of water."
+      }
+    ]
+  },
+  "limitations": [
+    "All cases are synthetic and authored by the screener's author; not a sample of real queries.",
+    "Gold labels are authored expectations about escalation, not expert-adjudicated agronomic harm.",
+    "The author had read both rule sets, so the 'challenge' cases are not an unbiased field estimate.",
+    "v2 adds a wider vocabulary (brands, Devanagari), so part of the recall change is vocabulary, not only negation/measurement logic.",
+    "Detecting a pattern is not agronomic correctness; a miss does not prove an answer is safe.",
+    "The shipped production gate is unchanged; v2 is an evaluated candidate, not yet integrated."
+  ]
+}

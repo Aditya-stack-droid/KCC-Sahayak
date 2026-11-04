@@ -1,0 +1,4053 @@
+{
+  "improvement": "Improvement 3 - multi-reference retrieval evaluation",
+  "generated_utc": "2026-11-04T11:12:14+00:00",
+  "protocol": {
+    "split": "Batch A grouped corpus split (StratifiedGroupKFold, seed 0)",
+    "index": "Batch A grouped dense index (train+val only)",
+    "fusion": "alpha=0.4, same as deployed and Batch A",
+    "reference_definition": "Distinct informative advisor answers logged on the test side of the query's question group. No reference is invented and no pool contains an index-side row.",
+    "reference_source": "test side of the grouped split only",
+    "answer_text_policy": "Answer text is not written to any result file; reports and artefacts carry ids, hashes and metrics only.",
+    "P1": "unscreened grouped index (comparable with Batch A)",
+    "P2": "informative-only candidates (deployed screening)",
+    "hybrid_sample": 3000
+  },
+  "seeds": {
+    "hybrid_sample": 42,
+    "bootstrap": 0,
+    "random_reference_draws": 42,
+    "random_reference_draw_count": 5
+  },
+  "split_checks": {
+    "groups_spanning_splits": 0,
+    "n_groups": 48674,
+    "split_counts": {
+      "train": 111213,
+      "test": 13831,
+      "val": 13831
+    },
+    "reference_source_split": "test only"
+  },
+  "reference_pools": {
+    "n_test_rows": 13831,
+    "n_test_groups": 4850,
+    "n_groups_with_references": 4457,
+    "n_unique_references": 11747,
+    "n_rows_with_reference": 13362,
+    "n_rows_with_2plus_references": 9669,
+    "n_rows_with_5plus_references": 8050,
+    "n_rows_without_reference": 469,
+    "share_rows_with_reference": 0.966091,
+    "share_rows_with_2plus_references": 0.699082,
+    "share_rows_with_5plus_references": 0.582026,
+    "share_rows_without_reference": 0.033909,
+    "references_per_test_row": {
+      "mean": 175.2293,
+      "median": 10.0,
+      "p90": 1247.0,
+      "max": 1247,
+      "note": "Row-weighted: rows inside very large near-duplicate groups pull the mean up."
+    },
+    "references_per_group": {
+      "n_groups": 4457,
+      "mean": 2.6356,
+      "median": 1.0,
+      "p90": 3.0,
+      "max": 1247
+    },
+    "skew": {
+      "n_rows_in_groups_with_ge_100_references": 3024,
+      "share_rows_in_groups_with_ge_100_references": 0.2186,
+      "note": "The reference distribution is highly skewed: a few very large transitive near-duplicate clusters hold hundreds of answers. Per-group and per-row statistics are reported separately."
+    },
+    "reference_diversity": {
+      "n_groups_sampled": 500,
+      "seed": 42,
+      "cap_per_group": 12,
+      "mean_max_pairwise_token_f1": 0.6201,
+      "median_max_pairwise_token_f1": 0.7101,
+      "share_groups_below_0_80": 0.642,
+      "note": "Pairwise token-F1 between reference answers in the same group. Low values mean the group holds genuinely different advice, not restatements of one answer."
+    },
+    "criteria": {
+      "min_share_rows_with_2plus_references": 0.5,
+      "min_share_diverse_multi_ref_groups": 0.5
+    },
+    "supports_multi_reference": true,
+    "summary_line": "11,747 distinct references in 4,457 test groups; 69.9% of test rows have >=2; mean max pairwise reference F1 0.6201; supports_multi_reference=True"
+  },
+  "reproduction_gate": {
+    "source": "results/improved_evaluation/grouped_retrieval.json (frozen Batch A output)",
+    "checks": [
+      {
+        "check": "dense all test | own-reference token-F1",
+        "batch_a_value": 0.3213,
+        "recomputed_value": 0.321342,
+        "abs_diff": 4.211e-05,
+        "tolerance": 0.001,
+        "ok": true
+      },
+      {
+        "check": "dense all test | own-reference token-F1 (informative gold)",
+        "batch_a_value": 0.3293,
+        "recomputed_value": 0.329323,
+        "abs_diff": 2.25e-05,
+        "tolerance": 0.001,
+        "ok": true
+      },
+      {
+        "check": "dense all test | topic match @1",
+        "batch_a_value": 0.8519,
+        "recomputed_value": 0.851927,
+        "abs_diff": 2.683e-05,
+        "tolerance": 0.001,
+        "ok": true
+      },
+      {
+        "check": "dense 3k sample | own-reference token-F1",
+        "batch_a_value": 0.322,
+        "recomputed_value": 0.321968,
+        "abs_diff": 3.203e-05,
+        "tolerance": 0.001,
+        "ok": true
+      },
+      {
+        "check": "dense 3k sample | topic match @1",
+        "batch_a_value": 0.8403,
+        "recomputed_value": 0.840333,
+        "abs_diff": 3.333e-05,
+        "tolerance": 0.001,
+        "ok": true
+      },
+      {
+        "check": "hybrid 3k sample | own-reference token-F1",
+        "batch_a_value": 0.38,
+        "recomputed_value": 0.37999,
+        "abs_diff": 1.02e-05,
+        "tolerance": 0.001,
+        "ok": true
+      },
+      {
+        "check": "hybrid 3k sample | topic match @1",
+        "batch_a_value": 0.8733,
+        "recomputed_value": 0.873333,
+        "abs_diff": 3.333e-05,
+        "tolerance": 0.001,
+        "ok": true
+      }
+    ],
+    "ok": true,
+    "n_sample_queries": 3000,
+    "sample_seed": 42,
+    "note": "Rankings are rebuilt from Batch A's own artefacts. If these do not match, the comparison is invalid and the run stops."
+  },
+  "systems": {
+    "P1_dense_all": {
+      "system": "dense",
+      "rows": "all 13,831 test rows",
+      "candidate_condition": "unscreened",
+      "n_rows": 13831,
+      "subsets": {
+        "all": {
+          "n_rows": 13831,
+          "own_reference_f1": {
+            "n": 13815,
+            "n_missing": 16,
+            "mean": 0.321714,
+            "ci95": [
+              0.3175,
+              0.3259
+            ],
+            "median": 0.285714
+          },
+          "max_reference_f1": {
+            "n": 13362,
+            "n_missing": 469,
+            "mean": 0.509645,
+            "ci95": [
+              0.5048,
+              0.5147
+            ],
+            "median": 0.5
+          },
+          "max_other_reference_f1": {
+            "n": 9784,
+            "n_missing": 4047,
+            "mean": 0.574594,
+            "ci95": [
+              0.5688,
+              0.5803
+            ],
+            "median": 0.625
+          },
+          "random_other_reference_f1": {
+            "n": 9784,
+            "n_missing": 4047,
+            "mean": 0.293895,
+            "ci95": [
+              0.29,
+              0.2977
+            ],
+            "median": 0.287467
+          },
+          "max_reference_semantic": {
+            "n": 13362,
+            "n_missing": 469,
+            "mean": 0.698727,
+            "ci95": [
+              0.6943,
+              0.7033
+            ],
+            "median": 0.770021
+          },
+          "recovered_misses": {
+            "threshold": 0.5,
+            "n_comparable": 9768,
+            "n_single_reference_miss": 7290,
+            "n_recovered_by_another_reference": 3783,
+            "share_of_misses_recovered": 0.5189,
+            "note": "Agreement with another historical advisor answer, not evidence of agricultural correctness."
+          }
+        },
+        "gold_informative": {
+          "n_rows": 12623,
+          "own_reference_f1": {
+            "n": 12607,
+            "n_missing": 16,
+            "mean": 0.32974,
+            "ci95": [
+              0.3254,
+              0.3342
+            ],
+            "median": 0.296296
+          },
+          "max_reference_f1": {
+            "n": 12623,
+            "n_missing": 0,
+            "mean": 0.515766,
+            "ci95": [
+              0.5106,
+              0.5215
+            ],
+            "median": 0.525253
+          },
+          "max_other_reference_f1": {
+            "n": 9045,
+            "n_missing": 3578,
+            "mean": 0.588443,
+            "ci95": [
+              0.5828,
+              0.5942
+            ],
+            "median": 0.64
+          },
+          "random_other_reference_f1": {
+            "n": 9045,
+            "n_missing": 3578,
+            "mean": 0.304357,
+            "ci95": [
+              0.3005,
+              0.3084
+            ],
+            "median": 0.298231
+          },
+          "max_reference_semantic": {
+            "n": 12623,
+            "n_missing": 0,
+            "mean": 0.70341,
+            "ci95": [
+              0.6987,
+              0.7081
+            ],
+            "median": 0.775173
+          },
+          "recovered_misses": {
+            "threshold": 0.5,
+            "n_comparable": 9029,
+            "n_single_reference_miss": 6693,
+            "n_recovered_by_another_reference": 3577,
+            "share_of_misses_recovered": 0.5344,
+            "note": "Agreement with another historical advisor answer, not evidence of agricultural correctness."
+          }
+        },
+        "pool_ge_2": {
+          "n_rows": 9669,
+          "own_reference_f1": {
+            "n": 9658,
+            "n_missing": 11,
+            "mean": 0.333704,
+            "ci95": [
+              0.3284,
+              0.3388
+            ],
+            "median": 0.300538
+          },
+          "max_reference_f1": {
+            "n": 9669,
+            "n_missing": 0,
+            "mean": 0.592559,
+            "ci95": [
+              0.5867,
+              0.5978
+            ],
+            "median": 0.64
+          },
+          "max_other_reference_f1": {
+            "n": 9669,
+            "n_missing": 0,
+            "mean": 0.578831,
+            "ci95": [
+              0.5728,
+              0.5843
+            ],
+            "median": 0.625
+          },
+          "random_other_reference_f1": {
+            "n": 9669,
+            "n_missing": 0,
+            "mean": 0.294793,
+            "ci95": [
+              0.2908,
+              0.2986
+            ],
+            "median": 0.288741
+          },
+          "max_reference_semantic": {
+            "n": 9669,
+            "n_missing": 0,
+            "mean": 0.775522,
+            "ci95": [
+              0.771,
+              0.7799
+            ],
+            "median": 0.840158
+          },
+          "recovered_misses": {
+            "threshold": 0.5,
+            "n_comparable": 9658,
+            "n_single_reference_miss": 7212,
+            "n_recovered_by_another_reference": 3773,
+            "share_of_misses_recovered": 0.5232,
+            "note": "Agreement with another historical advisor answer, not evidence of agricultural correctness."
+          },
+          "pool_stats": {
+            "mean_pool_size": 250.2745,
+            "median_pool_size": 37.0,
+            "max_pool_size": 1247
+          }
+        },
+        "pool_eq_1": {
+          "n_rows": 3693,
+          "own_reference_f1": {
+            "n": 3688,
+            "n_missing": 5,
+            "mean": 0.295396,
+            "ci95": [
+              0.2875,
+              0.3039
+            ],
+            "median": 0.24
+          },
+          "max_reference_f1": {
+            "n": 3693,
+            "n_missing": 0,
+            "mean": 0.292562,
+            "ci95": [
+              0.2843,
+              0.3003
+            ],
+            "median": 0.235294
+          },
+          "max_other_reference_f1": {
+            "n": 115,
+            "n_missing": 3578,
+            "mean": 0.218411,
+            "ci95": [
+              0.1705,
+              0.2692
+            ],
+            "median": 0.08
+          },
+          "random_other_reference_f1": {
+            "n": 115,
+            "n_missing": 3578,
+            "mean": 0.218411,
+            "ci95": [
+              0.1705,
+              0.2692
+            ],
+            "median": 0.08
+          },
+          "max_reference_semantic": {
+            "n": 3693,
+            "n_missing": 0,
+            "mean": 0.497662,
+            "ci95": [
+              0.4891,
+              0.5064
+            ],
+            "median": 0.512432
+          },
+          "recovered_misses": {
+            "threshold": 0.5,
+            "n_comparable": 110,
+            "n_single_reference_miss": 78,
+            "n_recovered_by_another_reference": 10,
+            "share_of_misses_recovered": 0.1282,
+            "note": "Agreement with another historical advisor answer, not evidence of agricultural correctness."
+          }
+        },
+        "pool_ge_20": {
+          "n_rows": 5721,
+          "own_reference_f1": {
+            "n": 5713,
+            "n_missing": 8,
+            "mean": 0.326269,
+            "ci95": [
+              0.32,
+              0.3327
+            ],
+            "median": 0.301887
+          },
+          "max_reference_f1": {
+            "n": 5721,
+            "n_missing": 0,
+            "mean": 0.667089,
+            "ci95": [
+              0.6603,
+              0.6736
+            ],
+            "median": 0.72
+          },
+          "max_other_reference_f1": {
+            "n": 5721,
+            "n_missing": 0,
+            "mean": 0.664121,
+            "ci95": [
+              0.6574,
+              0.6707
+            ],
+            "median": 0.72
+          },
+          "random_other_reference_f1": {
+            "n": 5721,
+            "n_missing": 0,
+            "mean": 0.279299,
+            "ci95": [
+              0.2749,
+              0.2836
+            ],
+            "median": 0.290237
+          },
+          "max_reference_semantic": {
+            "n": 5721,
+            "n_missing": 0,
+            "mean": 0.835135,
+            "ci95": [
+              0.8302,
+              0.8401
+            ],
+            "median": 0.899831
+          },
+          "recovered_misses": {
+            "threshold": 0.5,
+            "n_comparable": 5713,
+            "n_single_reference_miss": 4381,
+            "n_recovered_by_another_reference": 2957,
+            "share_of_misses_recovered": 0.675,
+            "note": "Agreement with another historical advisor answer, not evidence of agricultural correctness."
+          }
+        },
+        "pool_eq_0": {
+          "n_rows": 469,
+          "own_reference_f1": {
+            "n": 469,
+            "n_missing": 0,
+            "mean": 0.281776,
+            "ci95": [
+              0.2511,
+              0.3132
+            ],
+            "median": 0.071429
+          },
+          "max_reference_f1": {
+            "n": 0,
+            "n_missing": 469,
+            "mean": null,
+            "ci95": [
+              null,
+              null
+            ],
+            "median": null
+          },
+          "max_other_reference_f1": {
+            "n": 0,
+            "n_missing": 469,
+            "mean": null,
+            "ci95": [
+              null,
+              null
+            ],
+            "median": null
+          },
+          "random_other_reference_f1": {
+            "n": 0,
+            "n_missing": 469,
+            "mean": null,
+            "ci95": [
+              null,
+              null
+            ],
+            "median": null
+          },
+          "max_reference_semantic": {
+            "n": 0,
+            "n_missing": 469,
+            "mean": null,
+            "ci95": [
+              null,
+              null
+            ],
+            "median": null
+          },
+          "recovered_misses": {
+            "threshold": 0.5,
+            "n_comparable": 0,
+            "n_single_reference_miss": 0,
+            "n_recovered_by_another_reference": 0,
+            "share_of_misses_recovered": null,
+            "note": "Agreement with another historical advisor answer, not evidence of agricultural correctness."
+          }
+        },
+        "gold_note": {
+          "n_rows": 1208,
+          "own_reference_f1": {
+            "n": 1208,
+            "n_missing": 0,
+            "mean": 0.237951,
+            "ci95": [
+              0.2206,
+              0.2548
+            ],
+            "median": 0.041277
+          },
+          "max_reference_f1": {
+            "n": 739,
+            "n_missing": 469,
+            "mean": 0.405091,
+            "ci95": [
+              0.385,
+              0.4269
+            ],
+            "median": 0.333333
+          },
+          "max_other_reference_f1": {
+            "n": 739,
+            "n_missing": 469,
+            "mean": 0.405091,
+            "ci95": [
+              0.385,
+              0.4269
+            ],
+            "median": 0.333333
+          },
+          "random_other_reference_f1": {
+            "n": 739,
+            "n_missing": 469,
+            "mean": 0.165845,
+            "ci95": [
+              0.154,
+              0.1774
+            ],
+            "median": 0.135948
+          },
+          "max_reference_semantic": {
+            "n": 739,
+            "n_missing": 469,
+            "mean": 0.618744,
+            "ci95": [
+              0.5995,
+              0.6383
+            ],
+            "median": 0.65645
+          },
+          "recovered_misses": {
+            "threshold": 0.5,
+            "n_comparable": 739,
+            "n_single_reference_miss": 597,
+            "n_recovered_by_another_reference": 206,
+            "share_of_misses_recovered": 0.3451,
+            "note": "Agreement with another historical advisor answer, not evidence of agricultural correctness."
+          }
+        },
+        "pool_eq_1_gold_informative": {
+          "n_rows": 3583,
+          "own_reference_f1": {
+            "n": 3578,
+            "n_missing": 5,
+            "mean": 0.294945,
+            "ci95": [
+              0.2863,
+              0.3033
+            ],
+            "median": 0.24
+          },
+          "max_reference_f1": {
+            "n": 3583,
+            "n_missing": 0,
+            "mean": 0.294533,
+            "ci95": [
+              0.2858,
+              0.3027
+            ],
+            "median": 0.24
+          },
+          "max_other_reference_f1": {
+            "n": 5,
+            "n_missing": 3578,
+            "mean": 0.0,
+            "ci95": [
+              0.0,
+              0.0
+            ],
+            "median": 0.0
+          },
+          "random_other_reference_f1": {
+            "n": 5,
+            "n_missing": 3578,
+            "mean": 0.0,
+            "ci95": [
+              0.0,
+              0.0
+            ],
+            "median": 0.0
+          },
+          "max_reference_semantic": {
+            "n": 3583,
+            "n_missing": 0,
+            "mean": 0.501828,
+            "ci95": [
+              0.4928,
+              0.5105
+            ],
+            "median": 0.519154
+          },
+          "recovered_misses": {
+            "threshold": 0.5,
+            "n_comparable": 0,
+            "n_single_reference_miss": 0,
+            "n_recovered_by_another_reference": 0,
+            "share_of_misses_recovered": null,
+            "note": "Agreement with another historical advisor answer, not evidence of agricultural correctness."
+          }
+        },
+        "pool_ge_2_gold_informative": {
+          "n_rows": 9040,
+          "own_reference_f1": {
+            "n": 9029,
+            "n_missing": 11,
+            "mean": 0.343529,
+            "ci95": [
+              0.3386,
+              0.3491
+            ],
+            "median": 0.3125
+          },
+          "max_reference_f1": {
+            "n": 9040,
+            "n_missing": 0,
+            "mean": 0.603452,
+            "ci95": [
+              0.5977,
+              0.6094
+            ],
+            "median": 0.65
+          },
+          "max_other_reference_f1": {
+            "n": 9040,
+            "n_missing": 0,
+            "mean": 0.588769,
+            "ci95": [
+              0.5832,
+              0.5949
+            ],
+            "median": 0.64
+          },
+          "random_other_reference_f1": {
+            "n": 9040,
+            "n_missing": 0,
+            "mean": 0.304525,
+            "ci95": [
+              0.3005,
+              0.3086
+            ],
+            "median": 0.298379
+          },
+          "max_reference_semantic": {
+            "n": 9040,
+            "n_missing": 0,
+            "mean": 0.783306,
+            "ci95": [
+              0.7789,
+              0.7879
+            ],
+            "median": 0.848327
+          },
+          "recovered_misses": {
+            "threshold": 0.5,
+            "n_comparable": 9029,
+            "n_single_reference_miss": 6693,
+            "n_recovered_by_another_reference": 3577,
+            "share_of_misses_recovered": 0.5344,
+            "note": "Agreement with another historical advisor answer, not evidence of agricultural correctness."
+          }
+        },
+        "novel": {
+          "n_rows": 850,
+          "own_reference_f1": {
+            "n": 848,
+            "n_missing": 2,
+            "mean": 0.23301,
+            "ci95": [
+              0.218,
+              0.2486
+            ],
+            "median": 0.181818
+          },
+          "max_reference_f1": {
+            "n": 791,
+            "n_missing": 59,
+            "mean": 0.296986,
+            "ci95": [
+              0.2763,
+              0.3183
+            ],
+            "median": 0.2
+          },
+          "max_other_reference_f1": {
+            "n": 190,
+            "n_missing": 660,
+            "mean": 0.560343,
+            "ci95": [
+              0.5106,
+              0.6087
+            ],
+            "median": 0.666667
+          },
+          "random_other_reference_f1": {
+            "n": 190,
+            "n_missing": 660,
+            "mean": 0.307853,
+            "ci95": [
+              0.2809,
+              0.3343
+            ],
+            "median": 0.362713
+          },
+          "max_reference_semantic": {
+            "n": 791,
+            "n_missing": 59,
+            "mean": 0.488106,
+            "ci95": [
+              0.4667,
+              0.5083
+            ],
+            "median": 0.473277
+          },
+          "recovered_misses": {
+            "threshold": 0.5,
+            "n_comparable": 188,
+            "n_single_reference_miss": 151,
+            "n_recovered_by_another_reference": 85,
+            "share_of_misses_recovered": 0.5629,
+            "note": "Agreement with another historical advisor answer, not evidence of agricultural correctness."
+          }
+        },
+        "similar": {
+          "n_rows": 3308,
+          "own_reference_f1": {
+            "n": 3306,
+            "n_missing": 2,
+            "mean": 0.313631,
+            "ci95": [
+              0.3048,
+              0.3229
+            ],
+            "median": 0.26087
+          },
+          "max_reference_f1": {
+            "n": 3121,
+            "n_missing": 187,
+            "mean": 0.414605,
+            "ci95": [
+              0.4045,
+              0.4249
+            ],
+            "median": 0.363636
+          },
+          "max_other_reference_f1": {
+            "n": 1615,
+            "n_missing": 1693,
+            "mean": 0.522018,
+            "ci95": [
+              0.5075,
+              0.5372
+            ],
+            "median": 0.545455
+          },
+          "random_other_reference_f1": {
+            "n": 1615,
+            "n_missing": 1693,
+            "mean": 0.317416,
+            "ci95": [
+              0.3071,
+              0.3286
+            ],
+            "median": 0.286195
+          },
+          "max_reference_semantic": {
+            "n": 3121,
+            "n_missing": 187,
+            "mean": 0.613126,
+            "ci95": [
+              0.6031,
+              0.623
+            ],
+            "median": 0.648229
+          },
+          "recovered_misses": {
+            "threshold": 0.5,
+            "n_comparable": 1613,
+            "n_single_reference_miss": 1142,
+            "n_recovered_by_another_reference": 449,
+            "share_of_misses_recovered": 0.3932,
+            "note": "Agreement with another historical advisor answer, not evidence of agricultural correctness."
+          }
+        },
+        "near_duplicate": {
+          "n_rows": 9673,
+          "own_reference_f1": {
+            "n": 9661,
+            "n_missing": 12,
+            "mean": 0.332267,
+            "ci95": [
+              0.3271,
+              0.3374
+            ],
+            "median": 0.3
+          },
+          "max_reference_f1": {
+            "n": 9450,
+            "n_missing": 223,
+            "mean": 0.558834,
+            "ci95": [
+              0.5529,
+              0.5648
+            ],
+            "median": 0.597015
+          },
+          "max_other_reference_f1": {
+            "n": 7979,
+            "n_missing": 1694,
+            "mean": 0.585576,
+            "ci95": [
+              0.5793,
+              0.5918
+            ],
+            "median": 0.631579
+          },
+          "random_other_reference_f1": {
+            "n": 7979,
+            "n_missing": 1694,
+            "mean": 0.288802,
+            "ci95": [
+              0.2848,
+              0.2929
+            ],
+            "median": 0.286325
+          },
+          "max_reference_semantic": {
+            "n": 9450,
+            "n_missing": 223,
+            "mean": 0.744628,
+            "ci95": [
+              0.7398,
+              0.7493
+            ],
+            "median": 0.812468
+          },
+          "recovered_misses": {
+            "threshold": 0.5,
+            "n_comparable": 7967,
+            "n_single_reference_miss": 5997,
+            "n_recovered_by_another_reference": 3249,
+            "share_of_misses_recovered": 0.5418,
+            "note": "Agreement with another historical advisor answer, not evidence of agricultural correctness."
+          }
+        }
+      }
+    },
+    "P1_dense_sample": {
+      "system": "dense",
+      "rows": "fixed 3,000-query sample",
+      "candidate_condition": "unscreened",
+      "n_rows": 3000,
+      "subsets": {
+        "all": {
+          "n_rows": 3000,
+          "own_reference_f1": {
+            "n": 2998,
+            "n_missing": 2,
+            "mean": 0.322183,
+            "ci95": [
+              0.3125,
+              0.3312
+            ],
+            "median": 0.285714
+          },
+          "max_reference_f1": {
+            "n": 2910,
+            "n_missing": 90,
+            "mean": 0.511494,
+            "ci95": [
+              0.5007,
+              0.5222
+            ],
+            "median": 0.507042
+          },
+          "max_other_reference_f1": {
+            "n": 2149,
+            "n_missing": 851,
+            "mean": 0.575816,
+            "ci95": [
+              0.5636,
+              0.5883
+            ],
+            "median": 0.625
+          },
+          "random_other_reference_f1": {
+            "n": 2149,
+            "n_missing": 851,
+            "mean": 0.291897,
+            "ci95": [
+              0.284,
+              0.2997
+            ],
+            "median": 0.283892
+          },
+          "max_reference_semantic": {
+            "n": 2910,
+            "n_missing": 90,
+            "mean": 0.700116,
+            "ci95": [
+              0.6904,
+              0.7094
+            ],
+            "median": 0.77374
+          },
+          "recovered_misses": {
+            "threshold": 0.5,
+            "n_comparable": 2147,
+            "n_single_reference_miss": 1585,
+            "n_recovered_by_another_reference": 830,
+            "share_of_misses_recovered": 0.5237,
+            "note": "Agreement with another historical advisor answer, not evidence of agricultural correctness."
+          }
+        },
+        "gold_informative": {
+          "n_rows": 2708,
+          "own_reference_f1": {
+            "n": 2706,
+            "n_missing": 2,
+            "mean": 0.332512,
+            "ci95": [
+              0.3232,
+              0.3424
+            ],
+            "median": 0.3
+          },
+          "max_reference_f1": {
+            "n": 2708,
+            "n_missing": 0,
+            "mean": 0.520858,
+            "ci95": [
+              0.5092,
+              0.5323
+            ],
+            "median": 0.538462
+          },
+          "max_other_reference_f1": {
+            "n": 1947,
+            "n_missing": 761,
+            "mean": 0.595514,
+            "ci95": [
+              0.583,
+              0.6085
+            ],
+            "median": 0.65
+          },
+          "random_other_reference_f1": {
+            "n": 1947,
+            "n_missing": 761,
+            "mean": 0.304245,
+            "ci95": [
+              0.2957,
+              0.3127
+            ],
+            "median": 0.295692
+          },
+          "max_reference_semantic": {
+            "n": 2708,
+            "n_missing": 0,
+            "mean": 0.707718,
+            "ci95": [
+              0.6975,
+              0.7175
+            ],
+            "median": 0.784532
+          },
+          "recovered_misses": {
+            "threshold": 0.5,
+            "n_comparable": 1945,
+            "n_single_reference_miss": 1424,
+            "n_recovered_by_another_reference": 775,
+            "share_of_misses_recovered": 0.5442,
+            "note": "Agreement with another historical advisor answer, not evidence of agricultural correctness."
+          }
+        },
+        "pool_ge_2": {
+          "n_rows": 2111,
+          "own_reference_f1": {
+            "n": 2109,
+            "n_missing": 2,
+            "mean": 0.335727,
+            "ci95": [
+              0.3247,
+              0.3459
+            ],
+            "median": 0.3
+          },
+          "max_reference_f1": {
+            "n": 2111,
+            "n_missing": 0,
+            "mean": 0.595677,
+            "ci95": [
+              0.5836,
+              0.6077
+            ],
+            "median": 0.645161
+          },
+          "max_other_reference_f1": {
+            "n": 2111,
+            "n_missing": 0,
+            "mean": 0.582095,
+            "ci95": [
+              0.5701,
+              0.5938
+            ],
+            "median": 0.631579
+          },
+          "random_other_reference_f1": {
+            "n": 2111,
+            "n_missing": 0,
+            "mean": 0.293066,
+            "ci95": [
+              0.2857,
+              0.301
+            ],
+            "median": 0.285027
+          },
+          "max_reference_semantic": {
+            "n": 2111,
+            "n_missing": 0,
+            "mean": 0.77889,
+            "ci95": [
+              0.7694,
+              0.788
+            ],
+            "median": 0.844482
+          },
+          "recovered_misses": {
+            "threshold": 0.5,
+            "n_comparable": 2109,
+            "n_single_reference_miss": 1561,
+            "n_recovered_by_another_reference": 826,
+            "share_of_misses_recovered": 0.5291,
+            "note": "Agreement with another historical advisor answer, not evidence of agricultural correctness."
+          },
+          "pool_stats": {
+            "mean_pool_size": 259.6627,
+            "median_pool_size": 37.0,
+            "max_pool_size": 1247
+          }
+        },
+        "pool_eq_1": {
+          "n_rows": 799,
+          "own_reference_f1": {
+            "n": 799,
+            "n_missing": 0,
+            "mean": 0.295861,
+            "ci95": [
+              0.2784,
+              0.3128
+            ],
+            "median": 0.24
+          },
+          "max_reference_f1": {
+            "n": 799,
+            "n_missing": 0,
+            "mean": 0.289077,
+            "ci95": [
+              0.2726,
+              0.3058
+            ],
+            "median": 0.24
+          },
+          "max_other_reference_f1": {
+            "n": 38,
+            "n_missing": 761,
+            "mean": 0.226988,
+            "ci95": [
+              0.1415,
+              0.3189
+            ],
+            "median": 0.079937
+          },
+          "random_other_reference_f1": {
+            "n": 38,
+            "n_missing": 761,
+            "mean": 0.226988,
+            "ci95": [
+              0.1415,
+              0.3189
+            ],
+            "median": 0.079937
+          },
+          "max_reference_semantic": {
+            "n": 799,
+            "n_missing": 0,
+            "mean": 0.49199,
+            "ci95": [
+              0.4732,
+              0.5095
+            ],
+            "median": 0.513145
+          },
+          "recovered_misses": {
+            "threshold": 0.5,
+            "n_comparable": 38,
+            "n_single_reference_miss": 24,
+            "n_recovered_by_another_reference": 4,
+            "share_of_misses_recovered": 0.1667,
+            "note": "Agreement with another historical advisor answer, not evidence of agricultural correctness."
+          }
+        },
+        "pool_ge_20": {
+          "n_rows": 1267,
+          "own_reference_f1": {
+            "n": 1265,
+            "n_missing": 2,
+            "mean": 0.332227,
+            "ci95": [
+              0.3184,
+              0.3464
+            ],
+            "median": 0.307692
+          },
+          "max_reference_f1": {
+            "n": 1267,
+            "n_missing": 0,
+            "mean": 0.676275,
+            "ci95": [
+              0.6614,
+              0.6908
+            ],
+            "median": 0.746667
+          },
+          "max_other_reference_f1": {
+            "n": 1267,
+            "n_missing": 0,
+            "mean": 0.673145,
+            "ci95": [
+              0.6585,
+              0.6872
+            ],
+            "median": 0.736842
+          },
+          "random_other_reference_f1": {
+            "n": 1267,
+            "n_missing": 0,
+            "mean": 0.282841,
+            "ci95": [
+              0.2735,
+              0.2918
+            ],
+            "median": 0.289325
+          },
+          "max_reference_semantic": {
+            "n": 1267,
+            "n_missing": 0,
+            "mean": 0.839528,
+            "ci95": [
+              0.8285,
+              0.8499
+            ],
+            "median": 0.906017
+          },
+          "recovered_misses": {
+            "threshold": 0.5,
+            "n_comparable": 1265,
+            "n_single_reference_miss": 954,
+            "n_recovered_by_another_reference": 656,
+            "share_of_misses_recovered": 0.6876,
+            "note": "Agreement with another historical advisor answer, not evidence of agricultural correctness."
+          }
+        },
+        "pool_eq_0": {
+          "n_rows": 90,
+          "own_reference_f1": {
+            "n": 90,
+            "n_missing": 0,
+            "mean": 0.238484,
+            "ci95": [
+              0.172,
+              0.3097
+            ],
+            "median": 0.0
+          },
+          "max_reference_f1": {
+            "n": 0,
+            "n_missing": 90,
+            "mean": null,
+            "ci95": [
+              null,
+              null
+            ],
+            "median": null
+          },
+          "max_other_reference_f1": {
+            "n": 0,
+            "n_missing": 90,
+            "mean": null,
+            "ci95": [
+              null,
+              null
+            ],
+            "median": null
+          },
+          "random_other_reference_f1": {
+            "n": 0,
+            "n_missing": 90,
+            "mean": null,
+            "ci95": [
+              null,
+              null
+            ],
+            "median": null
+          },
+          "max_reference_semantic": {
+            "n": 0,
+            "n_missing": 90,
+            "mean": null,
+            "ci95": [
+              null,
+              null
+            ],
+            "median": null
+          },
+          "recovered_misses": {
+            "threshold": 0.5,
+            "n_comparable": 0,
+            "n_single_reference_miss": 0,
+            "n_recovered_by_another_reference": 0,
+            "share_of_misses_recovered": null,
+            "note": "Agreement with another historical advisor answer, not evidence of agricultural correctness."
+          }
+        },
+        "gold_note": {
+          "n_rows": 292,
+          "own_reference_f1": {
+            "n": 292,
+            "n_missing": 0,
+            "mean": 0.226459,
+            "ci95": [
+              0.1911,
+              0.2636
+            ],
+            "median": 0.0
+          },
+          "max_reference_f1": {
+            "n": 202,
+            "n_missing": 90,
+            "mean": 0.385956,
+            "ci95": [
+              0.343,
+              0.427
+            ],
+            "median": 0.28869
+          },
+          "max_other_reference_f1": {
+            "n": 202,
+            "n_missing": 90,
+            "mean": 0.385956,
+            "ci95": [
+              0.343,
+              0.427
+            ],
+            "median": 0.28869
+          },
+          "random_other_reference_f1": {
+            "n": 202,
+            "n_missing": 90,
+            "mean": 0.172879,
+            "ci95": [
+              0.149,
+              0.1977
+            ],
+            "median": 0.133744
+          },
+          "max_reference_semantic": {
+            "n": 202,
+            "n_missing": 90,
+            "mean": 0.598201,
+            "ci95": [
+              0.5572,
+              0.6372
+            ],
+            "median": 0.644864
+          },
+          "recovered_misses": {
+            "threshold": 0.5,
+            "n_comparable": 202,
+            "n_single_reference_miss": 161,
+            "n_recovered_by_another_reference": 55,
+            "share_of_misses_recovered": 0.3416,
+            "note": "Agreement with another historical advisor answer, not evidence of agricultural correctness."
+          }
+        },
+        "pool_eq_1_gold_informative": {
+          "n_rows": 761,
+          "own_reference_f1": {
+            "n": 761,
+            "n_missing": 0,
+            "mean": 0.292177,
+            "ci95": [
+              0.2749,
+              0.3095
+            ],
+            "median": 0.24
+          },
+          "max_reference_f1": {
+            "n": 761,
+            "n_missing": 0,
+            "mean": 0.292177,
+            "ci95": [
+              0.2749,
+              0.3095
+            ],
+            "median": 0.24
+          },
+          "max_other_reference_f1": {
+            "n": 0,
+            "n_missing": 761,
+            "mean": null,
+            "ci95": [
+              null,
+              null
+            ],
+            "median": null
+          },
+          "random_other_reference_f1": {
+            "n": 0,
+            "n_missing": 761,
+            "mean": null,
+            "ci95": [
+              null,
+              null
+            ],
+            "median": null
+          },
+          "max_reference_semantic": {
+            "n": 761,
+            "n_missing": 0,
+            "mean": 0.500611,
+            "ci95": [
+              0.4823,
+              0.5192
+            ],
+            "median": 0.523161
+          },
+          "recovered_misses": {
+            "threshold": 0.5,
+            "n_comparable": 0,
+            "n_single_reference_miss": 0,
+            "n_recovered_by_another_reference": 0,
+            "share_of_misses_recovered": null,
+            "note": "Agreement with another historical advisor answer, not evidence of agricultural correctness."
+          }
+        },
+        "pool_ge_2_gold_informative": {
+          "n_rows": 1947,
+          "own_reference_f1": {
+            "n": 1945,
+            "n_missing": 2,
+            "mean": 0.348294,
+            "ci95": [
+              0.3373,
+              0.3595
+            ],
+            "median": 0.315789
+          },
+          "max_reference_f1": {
+            "n": 1947,
+            "n_missing": 0,
+            "mean": 0.61024,
+            "ci95": [
+              0.5979,
+              0.6231
+            ],
+            "median": 0.666667
+          },
+          "max_other_reference_f1": {
+            "n": 1947,
+            "n_missing": 0,
+            "mean": 0.595514,
+            "ci95": [
+              0.583,
+              0.6085
+            ],
+            "median": 0.65
+          },
+          "random_other_reference_f1": {
+            "n": 1947,
+            "n_missing": 0,
+            "mean": 0.304245,
+            "ci95": [
+              0.2957,
+              0.3127
+            ],
+            "median": 0.295692
+          },
+          "max_reference_semantic": {
+            "n": 1947,
+            "n_missing": 0,
+            "mean": 0.788668,
+            "ci95": [
+              0.7792,
+              0.7985
+            ],
+            "median": 0.852571
+          },
+          "recovered_misses": {
+            "threshold": 0.5,
+            "n_comparable": 1945,
+            "n_single_reference_miss": 1424,
+            "n_recovered_by_another_reference": 775,
+            "share_of_misses_recovered": 0.5442,
+            "note": "Agreement with another historical advisor answer, not evidence of agricultural correctness."
+          }
+        },
+        "novel": {
+          "n_rows": 189,
+          "own_reference_f1": {
+            "n": 189,
+            "n_missing": 0,
+            "mean": 0.218075,
+            "ci95": [
+              0.1822,
+              0.2535
+            ],
+            "median": 0.148148
+          },
+          "max_reference_f1": {
+            "n": 172,
+            "n_missing": 17,
+            "mean": 0.285671,
+            "ci95": [
+              0.2433,
+              0.3316
+            ],
+            "median": 0.183502
+          },
+          "max_other_reference_f1": {
+            "n": 49,
+            "n_missing": 140,
+            "mean": 0.492481,
+            "ci95": [
+              0.389,
+              0.5934
+            ],
+            "median": 0.553191
+          },
+          "random_other_reference_f1": {
+            "n": 49,
+            "n_missing": 140,
+            "mean": 0.278149,
+            "ci95": [
+              0.2241,
+              0.3342
+            ],
+            "median": 0.331623
+          },
+          "max_reference_semantic": {
+            "n": 172,
+            "n_missing": 17,
+            "mean": 0.491153,
+            "ci95": [
+              0.4471,
+              0.5329
+            ],
+            "median": 0.478678
+          },
+          "recovered_misses": {
+            "threshold": 0.5,
+            "n_comparable": 49,
+            "n_single_reference_miss": 42,
+            "n_recovered_by_another_reference": 20,
+            "share_of_misses_recovered": 0.4762,
+            "note": "Agreement with another historical advisor answer, not evidence of agricultural correctness."
+          }
+        },
+        "similar": {
+          "n_rows": 717,
+          "own_reference_f1": {
+            "n": 717,
+            "n_missing": 0,
+            "mean": 0.316821,
+            "ci95": [
+              0.2985,
+              0.338
+            ],
+            "median": 0.266667
+          },
+          "max_reference_f1": {
+            "n": 680,
+            "n_missing": 37,
+            "mean": 0.422892,
+            "ci95": [
+              0.4002,
+              0.4454
+            ],
+            "median": 0.373941
+          },
+          "max_other_reference_f1": {
+            "n": 364,
+            "n_missing": 353,
+            "mean": 0.524964,
+            "ci95": [
+              0.4943,
+              0.554
+            ],
+            "median": 0.555556
+          },
+          "random_other_reference_f1": {
+            "n": 364,
+            "n_missing": 353,
+            "mean": 0.322826,
+            "ci95": [
+              0.2999,
+              0.3455
+            ],
+            "median": 0.293256
+          },
+          "max_reference_semantic": {
+            "n": 680,
+            "n_missing": 37,
+            "mean": 0.617056,
+            "ci95": [
+              0.5958,
+              0.6385
+            ],
+            "median": 0.656706
+          },
+          "recovered_misses": {
+            "threshold": 0.5,
+            "n_comparable": 364,
+            "n_single_reference_miss": 251,
+            "n_recovered_by_another_reference": 101,
+            "share_of_misses_recovered": 0.4024,
+            "note": "Agreement with another historical advisor answer, not evidence of agricultural correctness."
+          }
+        },
+        "near_duplicate": {
+          "n_rows": 2094,
+          "own_reference_f1": {
+            "n": 2092,
+            "n_missing": 2,
+            "mean": 0.333426,
+            "ci95": [
+              0.323,
+              0.3443
+            ],
+            "median": 0.3
+          },
+          "max_reference_f1": {
+            "n": 2058,
+            "n_missing": 36,
+            "mean": 0.559643,
+            "ci95": [
+              0.5472,
+              0.5722
+            ],
+            "median": 0.6
+          },
+          "max_other_reference_f1": {
+            "n": 1736,
+            "n_missing": 358,
+            "mean": 0.588831,
+            "ci95": [
+              0.5761,
+              0.6016
+            ],
+            "median": 0.64
+          },
+          "random_other_reference_f1": {
+            "n": 1736,
+            "n_missing": 358,
+            "mean": 0.2858,
+            "ci95": [
+              0.2776,
+              0.294
+            ],
+            "median": 0.282635
+          },
+          "max_reference_semantic": {
+            "n": 2058,
+            "n_missing": 36,
+            "mean": 0.745025,
+            "ci95": [
+              0.7353,
+              0.7553
+            ],
+            "median": 0.818743
+          },
+          "recovered_misses": {
+            "threshold": 0.5,
+            "n_comparable": 1734,
+            "n_single_reference_miss": 1292,
+            "n_recovered_by_another_reference": 709,
+            "share_of_misses_recovered": 0.5488,
+            "note": "Agreement with another historical advisor answer, not evidence of agricultural correctness."
+          }
+        }
+      }
+    },
+    "P1_hybrid_sample": {
+      "system": "hybrid",
+      "rows": "fixed 3,000-query sample",
+      "candidate_condition": "unscreened",
+      "n_rows": 3000,
+      "subsets": {
+        "all": {
+          "n_rows": 3000,
+          "own_reference_f1": {
+            "n": 2998,
+            "n_missing": 2,
+            "mean": 0.380243,
+            "ci95": [
+              0.3696,
+              0.3899
+            ],
+            "median": 0.356349
+          },
+          "max_reference_f1": {
+            "n": 2910,
+            "n_missing": 90,
+            "mean": 0.540923,
+            "ci95": [
+              0.5293,
+              0.5517
+            ],
+            "median": 0.555556
+          },
+          "max_other_reference_f1": {
+            "n": 2149,
+            "n_missing": 851,
+            "mean": 0.596485,
+            "ci95": [
+              0.5847,
+              0.6079
+            ],
+            "median": 0.631579
+          },
+          "random_other_reference_f1": {
+            "n": 2149,
+            "n_missing": 851,
+            "mean": 0.308853,
+            "ci95": [
+              0.3006,
+              0.3169
+            ],
+            "median": 0.296149
+          },
+          "max_reference_semantic": {
+            "n": 2910,
+            "n_missing": 90,
+            "mean": 0.716715,
+            "ci95": [
+              0.7067,
+              0.726
+            ],
+            "median": 0.784357
+          },
+          "recovered_misses": {
+            "threshold": 0.5,
+            "n_comparable": 2147,
+            "n_single_reference_miss": 1354,
+            "n_recovered_by_another_reference": 751,
+            "share_of_misses_recovered": 0.5547,
+            "note": "Agreement with another historical advisor answer, not evidence of agricultural correctness."
+          }
+        },
+        "gold_informative": {
+          "n_rows": 2708,
+          "own_reference_f1": {
+            "n": 2706,
+            "n_missing": 2,
+            "mean": 0.388306,
+            "ci95": [
+              0.378,
+              0.3981
+            ],
+            "median": 0.367884
+          },
+          "max_reference_f1": {
+            "n": 2708,
+            "n_missing": 0,
+            "mean": 0.553655,
+            "ci95": [
+              0.5422,
+              0.565
+            ],
+            "median": 0.571429
+          },
+          "max_other_reference_f1": {
+            "n": 1947,
+            "n_missing": 761,
+            "mean": 0.619957,
+            "ci95": [
+              0.6083,
+              0.6319
+            ],
+            "median": 0.666667
+          },
+          "random_other_reference_f1": {
+            "n": 1947,
+            "n_missing": 761,
+            "mean": 0.326227,
+            "ci95": [
+              0.318,
+              0.3347
+            ],
+            "median": 0.314135
+          },
+          "max_reference_semantic": {
+            "n": 2708,
+            "n_missing": 0,
+            "mean": 0.729172,
+            "ci95": [
+              0.7195,
+              0.7387
+            ],
+            "median": 0.800233
+          },
+          "recovered_misses": {
+            "threshold": 0.5,
+            "n_comparable": 1945,
+            "n_single_reference_miss": 1214,
+            "n_recovered_by_another_reference": 700,
+            "share_of_misses_recovered": 0.5766,
+            "note": "Agreement with another historical advisor answer, not evidence of agricultural correctness."
+          }
+        },
+        "pool_ge_2": {
+          "n_rows": 2111,
+          "own_reference_f1": {
+            "n": 2109,
+            "n_missing": 2,
+            "mean": 0.399143,
+            "ci95": [
+              0.3872,
+              0.4106
+            ],
+            "median": 0.382353
+          },
+          "max_reference_f1": {
+            "n": 2111,
+            "n_missing": 0,
+            "mean": 0.623515,
+            "ci95": [
+              0.6115,
+              0.6355
+            ],
+            "median": 0.666667
+          },
+          "max_other_reference_f1": {
+            "n": 2111,
+            "n_missing": 0,
+            "mean": 0.604066,
+            "ci95": [
+              0.592,
+              0.6164
+            ],
+            "median": 0.631579
+          },
+          "random_other_reference_f1": {
+            "n": 2111,
+            "n_missing": 0,
+            "mean": 0.311257,
+            "ci95": [
+              0.3026,
+              0.3197
+            ],
+            "median": 0.298373
+          },
+          "max_reference_semantic": {
+            "n": 2111,
+            "n_missing": 0,
+            "mean": 0.792007,
+            "ci95": [
+              0.7828,
+              0.8011
+            ],
+            "median": 0.855013
+          },
+          "recovered_misses": {
+            "threshold": 0.5,
+            "n_comparable": 2109,
+            "n_single_reference_miss": 1334,
+            "n_recovered_by_another_reference": 750,
+            "share_of_misses_recovered": 0.5622,
+            "note": "Agreement with another historical advisor answer, not evidence of agricultural correctness."
+          },
+          "pool_stats": {
+            "mean_pool_size": 259.6627,
+            "median_pool_size": 37.0,
+            "max_pool_size": 1247
+          }
+        },
+        "pool_eq_1": {
+          "n_rows": 799,
+          "own_reference_f1": {
+            "n": 799,
+            "n_missing": 0,
+            "mean": 0.335882,
+            "ci95": [
+              0.3175,
+              0.3549
+            ],
+            "median": 0.285714
+          },
+          "max_reference_f1": {
+            "n": 799,
+            "n_missing": 0,
+            "mean": 0.322712,
+            "ci95": [
+              0.3049,
+              0.3421
+            ],
+            "median": 0.272727
+          },
+          "max_other_reference_f1": {
+            "n": 38,
+            "n_missing": 761,
+            "mean": 0.175304,
+            "ci95": [
+              0.1059,
+              0.2524
+            ],
+            "median": 0.082763
+          },
+          "random_other_reference_f1": {
+            "n": 38,
+            "n_missing": 761,
+            "mean": 0.175304,
+            "ci95": [
+              0.1059,
+              0.2524
+            ],
+            "median": 0.082763
+          },
+          "max_reference_semantic": {
+            "n": 799,
+            "n_missing": 0,
+            "mean": 0.517789,
+            "ci95": [
+              0.5,
+              0.5367
+            ],
+            "median": 0.546263
+          },
+          "recovered_misses": {
+            "threshold": 0.5,
+            "n_comparable": 38,
+            "n_single_reference_miss": 20,
+            "n_recovered_by_another_reference": 1,
+            "share_of_misses_recovered": 0.05,
+            "note": "Agreement with another historical advisor answer, not evidence of agricultural correctness."
+          }
+        },
+        "pool_ge_20": {
+          "n_rows": 1267,
+          "own_reference_f1": {
+            "n": 1265,
+            "n_missing": 2,
+            "mean": 0.412456,
+            "ci95": [
+              0.3979,
+              0.428
+            ],
+            "median": 0.4
+          },
+          "max_reference_f1": {
+            "n": 1267,
+            "n_missing": 0,
+            "mean": 0.70418,
+            "ci95": [
+              0.6922,
+              0.7166
+            ],
+            "median": 0.727273
+          },
+          "max_other_reference_f1": {
+            "n": 1267,
+            "n_missing": 0,
+            "mean": 0.69686,
+            "ci95": [
+              0.6851,
+              0.7095
+            ],
+            "median": 0.714286
+          },
+          "random_other_reference_f1": {
+            "n": 1267,
+            "n_missing": 0,
+            "mean": 0.301519,
+            "ci95": [
+              0.2927,
+              0.311
+            ],
+            "median": 0.301587
+          },
+          "max_reference_semantic": {
+            "n": 1267,
+            "n_missing": 0,
+            "mean": 0.853975,
+            "ci95": [
+              0.8458,
+              0.8632
+            ],
+            "median": 0.916545
+          },
+          "recovered_misses": {
+            "threshold": 0.5,
+            "n_comparable": 1265,
+            "n_single_reference_miss": 780,
+            "n_recovered_by_another_reference": 583,
+            "share_of_misses_recovered": 0.7474,
+            "note": "Agreement with another historical advisor answer, not evidence of agricultural correctness."
+          }
+        },
+        "pool_eq_0": {
+          "n_rows": 90,
+          "own_reference_f1": {
+            "n": 90,
+            "n_missing": 0,
+            "mean": 0.331192,
+            "ci95": [
+              0.2522,
+              0.4096
+            ],
+            "median": 0.113238
+          },
+          "max_reference_f1": {
+            "n": 0,
+            "n_missing": 90,
+            "mean": null,
+            "ci95": [
+              null,
+              null
+            ],
+            "median": null
+          },
+          "max_other_reference_f1": {
+            "n": 0,
+            "n_missing": 90,
+            "mean": null,
+            "ci95": [
+              null,
+              null
+            ],
+            "median": null
+          },
+          "random_other_reference_f1": {
+            "n": 0,
+            "n_missing": 90,
+            "mean": null,
+            "ci95": [
+              null,
+              null
+            ],
+            "median": null
+          },
+          "max_reference_semantic": {
+            "n": 0,
+            "n_missing": 90,
+            "mean": null,
+            "ci95": [
+              null,
+              null
+            ],
+            "median": null
+          },
+          "recovered_misses": {
+            "threshold": 0.5,
+            "n_comparable": 0,
+            "n_single_reference_miss": 0,
+            "n_recovered_by_another_reference": 0,
+            "share_of_misses_recovered": null,
+            "note": "Agreement with another historical advisor answer, not evidence of agricultural correctness."
+          }
+        },
+        "gold_note": {
+          "n_rows": 292,
+          "own_reference_f1": {
+            "n": 292,
+            "n_missing": 0,
+            "mean": 0.305527,
+            "ci95": [
+              0.2624,
+              0.3476
+            ],
+            "median": 0.074074
+          },
+          "max_reference_f1": {
+            "n": 202,
+            "n_missing": 90,
+            "mean": 0.370242,
+            "ci95": [
+              0.3311,
+              0.4091
+            ],
+            "median": 0.363636
+          },
+          "max_other_reference_f1": {
+            "n": 202,
+            "n_missing": 90,
+            "mean": 0.370242,
+            "ci95": [
+              0.3311,
+              0.4091
+            ],
+            "median": 0.363636
+          },
+          "random_other_reference_f1": {
+            "n": 202,
+            "n_missing": 90,
+            "mean": 0.141388,
+            "ci95": [
+              0.1209,
+              0.1638
+            ],
+            "median": 0.105263
+          },
+          "max_reference_semantic": {
+            "n": 202,
+            "n_missing": 90,
+            "mean": 0.549709,
+            "ci95": [
+              0.511,
+              0.5887
+            ],
+            "median": 0.556995
+          },
+          "recovered_misses": {
+            "threshold": 0.5,
+            "n_comparable": 202,
+            "n_single_reference_miss": 140,
+            "n_recovered_by_another_reference": 51,
+            "share_of_misses_recovered": 0.3643,
+            "note": "Agreement with another historical advisor answer, not evidence of agricultural correctness."
+          }
+        },
+        "pool_eq_1_gold_informative": {
+          "n_rows": 761,
+          "own_reference_f1": {
+            "n": 761,
+            "n_missing": 0,
+            "mean": 0.330073,
+            "ci95": [
+              0.3105,
+              0.3496
+            ],
+            "median": 0.285714
+          },
+          "max_reference_f1": {
+            "n": 761,
+            "n_missing": 0,
+            "mean": 0.330073,
+            "ci95": [
+              0.3105,
+              0.3496
+            ],
+            "median": 0.285714
+          },
+          "max_other_reference_f1": {
+            "n": 0,
+            "n_missing": 761,
+            "mean": null,
+            "ci95": [
+              null,
+              null
+            ],
+            "median": null
+          },
+          "random_other_reference_f1": {
+            "n": 0,
+            "n_missing": 761,
+            "mean": null,
+            "ci95": [
+              null,
+              null
+            ],
+            "median": null
+          },
+          "max_reference_semantic": {
+            "n": 761,
+            "n_missing": 0,
+            "mean": 0.530238,
+            "ci95": [
+              0.5111,
+              0.548
+            ],
+            "median": 0.561207
+          },
+          "recovered_misses": {
+            "threshold": 0.5,
+            "n_comparable": 0,
+            "n_single_reference_miss": 0,
+            "n_recovered_by_another_reference": 0,
+            "share_of_misses_recovered": null,
+            "note": "Agreement with another historical advisor answer, not evidence of agricultural correctness."
+          }
+        },
+        "pool_ge_2_gold_informative": {
+          "n_rows": 1947,
+          "own_reference_f1": {
+            "n": 1945,
+            "n_missing": 2,
+            "mean": 0.41109,
+            "ci95": [
+              0.399,
+              0.4225
+            ],
+            "median": 0.4
+          },
+          "max_reference_f1": {
+            "n": 1947,
+            "n_missing": 0,
+            "mean": 0.641044,
+            "ci95": [
+              0.6293,
+              0.6528
+            ],
+            "median": 0.666667
+          },
+          "max_other_reference_f1": {
+            "n": 1947,
+            "n_missing": 0,
+            "mean": 0.619957,
+            "ci95": [
+              0.6083,
+              0.6319
+            ],
+            "median": 0.666667
+          },
+          "random_other_reference_f1": {
+            "n": 1947,
+            "n_missing": 0,
+            "mean": 0.326227,
+            "ci95": [
+              0.318,
+              0.3347
+            ],
+            "median": 0.314135
+          },
+          "max_reference_semantic": {
+            "n": 1947,
+            "n_missing": 0,
+            "mean": 0.806927,
+            "ci95": [
+              0.7982,
+              0.816
+            ],
+            "median": 0.866976
+          },
+          "recovered_misses": {
+            "threshold": 0.5,
+            "n_comparable": 1945,
+            "n_single_reference_miss": 1214,
+            "n_recovered_by_another_reference": 700,
+            "share_of_misses_recovered": 0.5766,
+            "note": "Agreement with another historical advisor answer, not evidence of agricultural correctness."
+          }
+        },
+        "novel": {
+          "n_rows": 189,
+          "own_reference_f1": {
+            "n": 189,
+            "n_missing": 0,
+            "mean": 0.258378,
+            "ci95": [
+              0.2213,
+              0.2955
+            ],
+            "median": 0.2
+          },
+          "max_reference_f1": {
+            "n": 172,
+            "n_missing": 17,
+            "mean": 0.302009,
+            "ci95": [
+              0.2587,
+              0.3487
+            ],
+            "median": 0.206541
+          },
+          "max_other_reference_f1": {
+            "n": 49,
+            "n_missing": 140,
+            "mean": 0.477102,
+            "ci95": [
+              0.3755,
+              0.5787
+            ],
+            "median": 0.444444
+          },
+          "random_other_reference_f1": {
+            "n": 49,
+            "n_missing": 140,
+            "mean": 0.291739,
+            "ci95": [
+              0.2303,
+              0.351
+            ],
+            "median": 0.355789
+          },
+          "max_reference_semantic": {
+            "n": 172,
+            "n_missing": 17,
+            "mean": 0.503851,
+            "ci95": [
+              0.4613,
+              0.5479
+            ],
+            "median": 0.53835
+          },
+          "recovered_misses": {
+            "threshold": 0.5,
+            "n_comparable": 49,
+            "n_single_reference_miss": 40,
+            "n_recovered_by_another_reference": 14,
+            "share_of_misses_recovered": 0.35,
+            "note": "Agreement with another historical advisor answer, not evidence of agricultural correctness."
+          }
+        },
+        "similar": {
+          "n_rows": 717,
+          "own_reference_f1": {
+            "n": 717,
+            "n_missing": 0,
+            "mean": 0.371781,
+            "ci95": [
+              0.3514,
+              0.3933
+            ],
+            "median": 0.333333
+          },
+          "max_reference_f1": {
+            "n": 680,
+            "n_missing": 37,
+            "mean": 0.458197,
+            "ci95": [
+              0.435,
+              0.4813
+            ],
+            "median": 0.444444
+          },
+          "max_other_reference_f1": {
+            "n": 364,
+            "n_missing": 353,
+            "mean": 0.540624,
+            "ci95": [
+              0.5091,
+              0.5714
+            ],
+            "median": 0.6
+          },
+          "random_other_reference_f1": {
+            "n": 364,
+            "n_missing": 353,
+            "mean": 0.325475,
+            "ci95": [
+              0.3025,
+              0.347
+            ],
+            "median": 0.310851
+          },
+          "max_reference_semantic": {
+            "n": 680,
+            "n_missing": 37,
+            "mean": 0.636784,
+            "ci95": [
+              0.6152,
+              0.6578
+            ],
+            "median": 0.696939
+          },
+          "recovered_misses": {
+            "threshold": 0.5,
+            "n_comparable": 364,
+            "n_single_reference_miss": 203,
+            "n_recovered_by_another_reference": 82,
+            "share_of_misses_recovered": 0.4039,
+            "note": "Agreement with another historical advisor answer, not evidence of agricultural correctness."
+          }
+        },
+        "near_duplicate": {
+          "n_rows": 2094,
+          "own_reference_f1": {
+            "n": 2092,
+            "n_missing": 2,
+            "mean": 0.394153,
+            "ci95": [
+              0.3824,
+              0.4061
+            ],
+            "median": 0.375
+          },
+          "max_reference_f1": {
+            "n": 2058,
+            "n_missing": 36,
+            "mean": 0.588225,
+            "ci95": [
+              0.5764,
+              0.6006
+            ],
+            "median": 0.608696
+          },
+          "max_other_reference_f1": {
+            "n": 1736,
+            "n_missing": 358,
+            "mean": 0.611567,
+            "ci95": [
+              0.5994,
+              0.6243
+            ],
+            "median": 0.631579
+          },
+          "random_other_reference_f1": {
+            "n": 1736,
+            "n_missing": 358,
+            "mean": 0.30585,
+            "ci95": [
+              0.2968,
+              0.3145
+            ],
+            "median": 0.291168
+          },
+          "max_reference_semantic": {
+            "n": 2058,
+            "n_missing": 36,
+            "mean": 0.760916,
+            "ci95": [
+              0.7509,
+              0.7707
+            ],
+            "median": 0.827317
+          },
+          "recovered_misses": {
+            "threshold": 0.5,
+            "n_comparable": 1734,
+            "n_single_reference_miss": 1111,
+            "n_recovered_by_another_reference": 655,
+            "share_of_misses_recovered": 0.5896,
+            "note": "Agreement with another historical advisor answer, not evidence of agricultural correctness."
+          }
+        }
+      }
+    },
+    "P2_dense_sample": {
+      "system": "dense",
+      "rows": "fixed 3,000-query sample",
+      "candidate_condition": "informative-only candidates",
+      "n_rows": 3000,
+      "subsets": {
+        "all": {
+          "n_rows": 3000,
+          "own_reference_f1": {
+            "n": 2998,
+            "n_missing": 2,
+            "mean": 0.315491,
+            "ci95": [
+              0.3066,
+              0.3243
+            ],
+            "median": 0.285714
+          },
+          "max_reference_f1": {
+            "n": 2910,
+            "n_missing": 90,
+            "mean": 0.525627,
+            "ci95": [
+              0.5154,
+              0.5364
+            ],
+            "median": 0.533333
+          },
+          "max_other_reference_f1": {
+            "n": 2149,
+            "n_missing": 851,
+            "mean": 0.593401,
+            "ci95": [
+              0.5815,
+              0.6054
+            ],
+            "median": 0.64
+          },
+          "random_other_reference_f1": {
+            "n": 2149,
+            "n_missing": 851,
+            "mean": 0.301714,
+            "ci95": [
+              0.2942,
+              0.309
+            ],
+            "median": 0.291561
+          },
+          "max_reference_semantic": {
+            "n": 2910,
+            "n_missing": 90,
+            "mean": 0.717734,
+            "ci95": [
+              0.7085,
+              0.7265
+            ],
+            "median": 0.784532
+          },
+          "recovered_misses": {
+            "threshold": 0.5,
+            "n_comparable": 2147,
+            "n_single_reference_miss": 1609,
+            "n_recovered_by_another_reference": 859,
+            "share_of_misses_recovered": 0.5339,
+            "note": "Agreement with another historical advisor answer, not evidence of agricultural correctness."
+          }
+        },
+        "gold_informative": {
+          "n_rows": 2708,
+          "own_reference_f1": {
+            "n": 2706,
+            "n_missing": 2,
+            "mean": 0.341829,
+            "ci95": [
+              0.3327,
+              0.3517
+            ],
+            "median": 0.304348
+          },
+          "max_reference_f1": {
+            "n": 2708,
+            "n_missing": 0,
+            "mean": 0.53407,
+            "ci95": [
+              0.5227,
+              0.5451
+            ],
+            "median": 0.555556
+          },
+          "max_other_reference_f1": {
+            "n": 1947,
+            "n_missing": 761,
+            "mean": 0.612175,
+            "ci95": [
+              0.5999,
+              0.6249
+            ],
+            "median": 0.666667
+          },
+          "random_other_reference_f1": {
+            "n": 1947,
+            "n_missing": 761,
+            "mean": 0.314781,
+            "ci95": [
+              0.3069,
+              0.3228
+            ],
+            "median": 0.301937
+          },
+          "max_reference_semantic": {
+            "n": 2708,
+            "n_missing": 0,
+            "mean": 0.723664,
+            "ci95": [
+              0.7139,
+              0.7328
+            ],
+            "median": 0.792789
+          },
+          "recovered_misses": {
+            "threshold": 0.5,
+            "n_comparable": 1945,
+            "n_single_reference_miss": 1411,
+            "n_recovered_by_another_reference": 798,
+            "share_of_misses_recovered": 0.5656,
+            "note": "Agreement with another historical advisor answer, not evidence of agricultural correctness."
+          }
+        },
+        "pool_ge_2": {
+          "n_rows": 2111,
+          "own_reference_f1": {
+            "n": 2109,
+            "n_missing": 2,
+            "mean": 0.336398,
+            "ci95": [
+              0.3254,
+              0.3469
+            ],
+            "median": 0.30137
+          },
+          "max_reference_f1": {
+            "n": 2111,
+            "n_missing": 0,
+            "mean": 0.614119,
+            "ci95": [
+              0.6024,
+              0.6257
+            ],
+            "median": 0.666667
+          },
+          "max_other_reference_f1": {
+            "n": 2111,
+            "n_missing": 0,
+            "mean": 0.600732,
+            "ci95": [
+              0.5891,
+              0.6127
+            ],
+            "median": 0.65
+          },
+          "random_other_reference_f1": {
+            "n": 2111,
+            "n_missing": 0,
+            "mean": 0.303794,
+            "ci95": [
+              0.2965,
+              0.3115
+            ],
+            "median": 0.293242
+          },
+          "max_reference_semantic": {
+            "n": 2111,
+            "n_missing": 0,
+            "mean": 0.798942,
+            "ci95": [
+              0.7904,
+              0.8076
+            ],
+            "median": 0.853535
+          },
+          "recovered_misses": {
+            "threshold": 0.5,
+            "n_comparable": 2109,
+            "n_single_reference_miss": 1572,
+            "n_recovered_by_another_reference": 853,
+            "share_of_misses_recovered": 0.5426,
+            "note": "Agreement with another historical advisor answer, not evidence of agricultural correctness."
+          },
+          "pool_stats": {
+            "mean_pool_size": 259.6627,
+            "median_pool_size": 37.0,
+            "max_pool_size": 1247
+          }
+        },
+        "pool_eq_1": {
+          "n_rows": 799,
+          "own_reference_f1": {
+            "n": 799,
+            "n_missing": 0,
+            "mean": 0.287297,
+            "ci95": [
+              0.2708,
+              0.3037
+            ],
+            "median": 0.24
+          },
+          "max_reference_f1": {
+            "n": 799,
+            "n_missing": 0,
+            "mean": 0.291828,
+            "ci95": [
+              0.2755,
+              0.3081
+            ],
+            "median": 0.24
+          },
+          "max_other_reference_f1": {
+            "n": 38,
+            "n_missing": 761,
+            "mean": 0.186147,
+            "ci95": [
+              0.1243,
+              0.2546
+            ],
+            "median": 0.085455
+          },
+          "random_other_reference_f1": {
+            "n": 38,
+            "n_missing": 761,
+            "mean": 0.186147,
+            "ci95": [
+              0.1243,
+              0.2546
+            ],
+            "median": 0.085455
+          },
+          "max_reference_semantic": {
+            "n": 799,
+            "n_missing": 0,
+            "mean": 0.503178,
+            "ci95": [
+              0.4863,
+              0.5199
+            ],
+            "median": 0.520451
+          },
+          "recovered_misses": {
+            "threshold": 0.5,
+            "n_comparable": 38,
+            "n_single_reference_miss": 37,
+            "n_recovered_by_another_reference": 6,
+            "share_of_misses_recovered": 0.1622,
+            "note": "Agreement with another historical advisor answer, not evidence of agricultural correctness."
+          }
+        },
+        "pool_ge_20": {
+          "n_rows": 1267,
+          "own_reference_f1": {
+            "n": 1265,
+            "n_missing": 2,
+            "mean": 0.342722,
+            "ci95": [
+              0.3291,
+              0.3569
+            ],
+            "median": 0.32
+          },
+          "max_reference_f1": {
+            "n": 1267,
+            "n_missing": 0,
+            "mean": 0.701373,
+            "ci95": [
+              0.6882,
+              0.7148
+            ],
+            "median": 0.75
+          },
+          "max_other_reference_f1": {
+            "n": 1267,
+            "n_missing": 0,
+            "mean": 0.698239,
+            "ci95": [
+              0.685,
+              0.7116
+            ],
+            "median": 0.75
+          },
+          "random_other_reference_f1": {
+            "n": 1267,
+            "n_missing": 0,
+            "mean": 0.298186,
+            "ci95": [
+              0.2899,
+              0.3067
+            ],
+            "median": 0.296525
+          },
+          "max_reference_semantic": {
+            "n": 1267,
+            "n_missing": 0,
+            "mean": 0.862908,
+            "ci95": [
+              0.8542,
+              0.8717
+            ],
+            "median": 0.908773
+          },
+          "recovered_misses": {
+            "threshold": 0.5,
+            "n_comparable": 1265,
+            "n_single_reference_miss": 951,
+            "n_recovered_by_another_reference": 682,
+            "share_of_misses_recovered": 0.7171,
+            "note": "Agreement with another historical advisor answer, not evidence of agricultural correctness."
+          }
+        },
+        "pool_eq_0": {
+          "n_rows": 90,
+          "own_reference_f1": {
+            "n": 90,
+            "n_missing": 0,
+            "mean": 0.075863,
+            "ci95": [
+              0.0469,
+              0.1074
+            ],
+            "median": 0.0
+          },
+          "max_reference_f1": {
+            "n": 0,
+            "n_missing": 90,
+            "mean": null,
+            "ci95": [
+              null,
+              null
+            ],
+            "median": null
+          },
+          "max_other_reference_f1": {
+            "n": 0,
+            "n_missing": 90,
+            "mean": null,
+            "ci95": [
+              null,
+              null
+            ],
+            "median": null
+          },
+          "random_other_reference_f1": {
+            "n": 0,
+            "n_missing": 90,
+            "mean": null,
+            "ci95": [
+              null,
+              null
+            ],
+            "median": null
+          },
+          "max_reference_semantic": {
+            "n": 0,
+            "n_missing": 90,
+            "mean": null,
+            "ci95": [
+              null,
+              null
+            ],
+            "median": null
+          },
+          "recovered_misses": {
+            "threshold": 0.5,
+            "n_comparable": 0,
+            "n_single_reference_miss": 0,
+            "n_recovered_by_another_reference": 0,
+            "share_of_misses_recovered": null,
+            "note": "Agreement with another historical advisor answer, not evidence of agricultural correctness."
+          }
+        },
+        "gold_note": {
+          "n_rows": 292,
+          "own_reference_f1": {
+            "n": 292,
+            "n_missing": 0,
+            "mean": 0.071409,
+            "ci95": [
+              0.0567,
+              0.087
+            ],
+            "median": 0.0
+          },
+          "max_reference_f1": {
+            "n": 202,
+            "n_missing": 90,
+            "mean": 0.412444,
+            "ci95": [
+              0.374,
+              0.4505
+            ],
+            "median": 0.285714
+          },
+          "max_other_reference_f1": {
+            "n": 202,
+            "n_missing": 90,
+            "mean": 0.412444,
+            "ci95": [
+              0.374,
+              0.4505
+            ],
+            "median": 0.285714
+          },
+          "random_other_reference_f1": {
+            "n": 202,
+            "n_missing": 90,
+            "mean": 0.17577,
+            "ci95": [
+              0.1533,
+              0.1986
+            ],
+            "median": 0.132393
+          },
+          "max_reference_semantic": {
+            "n": 202,
+            "n_missing": 90,
+            "mean": 0.638234,
+            "ci95": [
+              0.604,
+              0.6708
+            ],
+            "median": 0.65645
+          },
+          "recovered_misses": {
+            "threshold": 0.5,
+            "n_comparable": 202,
+            "n_single_reference_miss": 198,
+            "n_recovered_by_another_reference": 61,
+            "share_of_misses_recovered": 0.3081,
+            "note": "Agreement with another historical advisor answer, not evidence of agricultural correctness."
+          }
+        },
+        "pool_eq_1_gold_informative": {
+          "n_rows": 761,
+          "own_reference_f1": {
+            "n": 761,
+            "n_missing": 0,
+            "mean": 0.297105,
+            "ci95": [
+              0.2795,
+              0.314
+            ],
+            "median": 0.243902
+          },
+          "max_reference_f1": {
+            "n": 761,
+            "n_missing": 0,
+            "mean": 0.297105,
+            "ci95": [
+              0.2795,
+              0.314
+            ],
+            "median": 0.243902
+          },
+          "max_other_reference_f1": {
+            "n": 0,
+            "n_missing": 761,
+            "mean": null,
+            "ci95": [
+              null,
+              null
+            ],
+            "median": null
+          },
+          "random_other_reference_f1": {
+            "n": 0,
+            "n_missing": 761,
+            "mean": null,
+            "ci95": [
+              null,
+              null
+            ],
+            "median": null
+          },
+          "max_reference_semantic": {
+            "n": 761,
+            "n_missing": 0,
+            "mean": 0.512333,
+            "ci95": [
+              0.4948,
+              0.5295
+            ],
+            "median": 0.528171
+          },
+          "recovered_misses": {
+            "threshold": 0.5,
+            "n_comparable": 0,
+            "n_single_reference_miss": 0,
+            "n_recovered_by_another_reference": 0,
+            "share_of_misses_recovered": null,
+            "note": "Agreement with another historical advisor answer, not evidence of agricultural correctness."
+          }
+        },
+        "pool_ge_2_gold_informative": {
+          "n_rows": 1947,
+          "own_reference_f1": {
+            "n": 1945,
+            "n_missing": 2,
+            "mean": 0.359328,
+            "ci95": [
+              0.3486,
+              0.37
+            ],
+            "median": 0.324324
+          },
+          "max_reference_f1": {
+            "n": 1947,
+            "n_missing": 0,
+            "mean": 0.62669,
+            "ci95": [
+              0.6146,
+              0.6385
+            ],
+            "median": 0.666667
+          },
+          "max_other_reference_f1": {
+            "n": 1947,
+            "n_missing": 0,
+            "mean": 0.612175,
+            "ci95": [
+              0.5999,
+              0.6249
+            ],
+            "median": 0.666667
+          },
+          "random_other_reference_f1": {
+            "n": 1947,
+            "n_missing": 0,
+            "mean": 0.314781,
+            "ci95": [
+              0.3069,
+              0.3228
+            ],
+            "median": 0.301937
+          },
+          "max_reference_semantic": {
+            "n": 1947,
+            "n_missing": 0,
+            "mean": 0.806265,
+            "ci95": [
+              0.7975,
+              0.8149
+            ],
+            "median": 0.858269
+          },
+          "recovered_misses": {
+            "threshold": 0.5,
+            "n_comparable": 1945,
+            "n_single_reference_miss": 1411,
+            "n_recovered_by_another_reference": 798,
+            "share_of_misses_recovered": 0.5656,
+            "note": "Agreement with another historical advisor answer, not evidence of agricultural correctness."
+          }
+        },
+        "novel": {
+          "n_rows": 189,
+          "own_reference_f1": {
+            "n": 189,
+            "n_missing": 0,
+            "mean": 0.196596,
+            "ci95": [
+              0.1672,
+              0.2262
+            ],
+            "median": 0.133333
+          },
+          "max_reference_f1": {
+            "n": 172,
+            "n_missing": 17,
+            "mean": 0.281308,
+            "ci95": [
+              0.2401,
+              0.3255
+            ],
+            "median": 0.177866
+          },
+          "max_other_reference_f1": {
+            "n": 49,
+            "n_missing": 140,
+            "mean": 0.493173,
+            "ci95": [
+              0.3904,
+              0.5942
+            ],
+            "median": 0.553191
+          },
+          "random_other_reference_f1": {
+            "n": 49,
+            "n_missing": 140,
+            "mean": 0.278287,
+            "ci95": [
+              0.2242,
+              0.3343
+            ],
+            "median": 0.331623
+          },
+          "max_reference_semantic": {
+            "n": 172,
+            "n_missing": 17,
+            "mean": 0.499202,
+            "ci95": [
+              0.4568,
+              0.5412
+            ],
+            "median": 0.478678
+          },
+          "recovered_misses": {
+            "threshold": 0.5,
+            "n_comparable": 49,
+            "n_single_reference_miss": 43,
+            "n_recovered_by_another_reference": 20,
+            "share_of_misses_recovered": 0.4651,
+            "note": "Agreement with another historical advisor answer, not evidence of agricultural correctness."
+          }
+        },
+        "similar": {
+          "n_rows": 717,
+          "own_reference_f1": {
+            "n": 717,
+            "n_missing": 0,
+            "mean": 0.312408,
+            "ci95": [
+              0.294,
+              0.3323
+            ],
+            "median": 0.26087
+          },
+          "max_reference_f1": {
+            "n": 680,
+            "n_missing": 37,
+            "mean": 0.436016,
+            "ci95": [
+              0.4138,
+              0.4581
+            ],
+            "median": 0.379665
+          },
+          "max_other_reference_f1": {
+            "n": 364,
+            "n_missing": 353,
+            "mean": 0.541956,
+            "ci95": [
+              0.5136,
+              0.5695
+            ],
+            "median": 0.568323
+          },
+          "random_other_reference_f1": {
+            "n": 364,
+            "n_missing": 353,
+            "mean": 0.33567,
+            "ci95": [
+              0.3135,
+              0.3575
+            ],
+            "median": 0.307692
+          },
+          "max_reference_semantic": {
+            "n": 680,
+            "n_missing": 37,
+            "mean": 0.638565,
+            "ci95": [
+              0.6182,
+              0.6586
+            ],
+            "median": 0.668447
+          },
+          "recovered_misses": {
+            "threshold": 0.5,
+            "n_comparable": 364,
+            "n_single_reference_miss": 256,
+            "n_recovered_by_another_reference": 104,
+            "share_of_misses_recovered": 0.4062,
+            "note": "Agreement with another historical advisor answer, not evidence of agricultural correctness."
+          }
+        },
+        "near_duplicate": {
+          "n_rows": 2094,
+          "own_reference_f1": {
+            "n": 2092,
+            "n_missing": 2,
+            "mean": 0.327289,
+            "ci95": [
+              0.3166,
+              0.3377
+            ],
+            "median": 0.297585
+          },
+          "max_reference_f1": {
+            "n": 2058,
+            "n_missing": 36,
+            "mean": 0.575656,
+            "ci95": [
+              0.5634,
+              0.5884
+            ],
+            "median": 0.6
+          },
+          "max_other_reference_f1": {
+            "n": 1736,
+            "n_missing": 358,
+            "mean": 0.607017,
+            "ci95": [
+              0.5952,
+              0.6202
+            ],
+            "median": 0.65
+          },
+          "random_other_reference_f1": {
+            "n": 1736,
+            "n_missing": 358,
+            "mean": 0.295255,
+            "ci95": [
+              0.2874,
+              0.3036
+            ],
+            "median": 0.29036
+          },
+          "max_reference_semantic": {
+            "n": 2058,
+            "n_missing": 36,
+            "mean": 0.762157,
+            "ci95": [
+              0.7528,
+              0.772
+            ],
+            "median": 0.826254
+          },
+          "recovered_misses": {
+            "threshold": 0.5,
+            "n_comparable": 1734,
+            "n_single_reference_miss": 1310,
+            "n_recovered_by_another_reference": 735,
+            "share_of_misses_recovered": 0.5611,
+            "note": "Agreement with another historical advisor answer, not evidence of agricultural correctness."
+          }
+        }
+      }
+    },
+    "P2_hybrid_sample": {
+      "system": "hybrid",
+      "rows": "fixed 3,000-query sample",
+      "candidate_condition": "informative-only candidates",
+      "n_rows": 3000,
+      "subsets": {
+        "all": {
+          "n_rows": 3000,
+          "own_reference_f1": {
+            "n": 2998,
+            "n_missing": 2,
+            "mean": 0.368676,
+            "ci95": [
+              0.3583,
+              0.3782
+            ],
+            "median": 0.333333
+          },
+          "max_reference_f1": {
+            "n": 2910,
+            "n_missing": 90,
+            "mean": 0.555138,
+            "ci95": [
+              0.5439,
+              0.5653
+            ],
+            "median": 0.571429
+          },
+          "max_other_reference_f1": {
+            "n": 2149,
+            "n_missing": 851,
+            "mean": 0.611632,
+            "ci95": [
+              0.6007,
+              0.6228
+            ],
+            "median": 0.636364
+          },
+          "random_other_reference_f1": {
+            "n": 2149,
+            "n_missing": 851,
+            "mean": 0.320184,
+            "ci95": [
+              0.3124,
+              0.3281
+            ],
+            "median": 0.303066
+          },
+          "max_reference_semantic": {
+            "n": 2910,
+            "n_missing": 90,
+            "mean": 0.737306,
+            "ci95": [
+              0.7279,
+              0.7457
+            ],
+            "median": 0.800541
+          },
+          "recovered_misses": {
+            "threshold": 0.5,
+            "n_comparable": 2147,
+            "n_single_reference_miss": 1397,
+            "n_recovered_by_another_reference": 772,
+            "share_of_misses_recovered": 0.5526,
+            "note": "Agreement with another historical advisor answer, not evidence of agricultural correctness."
+          }
+        },
+        "gold_informative": {
+          "n_rows": 2708,
+          "own_reference_f1": {
+            "n": 2706,
+            "n_missing": 2,
+            "mean": 0.399302,
+            "ci95": [
+              0.3893,
+              0.4091
+            ],
+            "median": 0.375
+          },
+          "max_reference_f1": {
+            "n": 2708,
+            "n_missing": 0,
+            "mean": 0.56641,
+            "ci95": [
+              0.5557,
+              0.5773
+            ],
+            "median": 0.6
+          },
+          "max_other_reference_f1": {
+            "n": 1947,
+            "n_missing": 761,
+            "mean": 0.633171,
+            "ci95": [
+              0.6221,
+              0.6446
+            ],
+            "median": 0.666667
+          },
+          "random_other_reference_f1": {
+            "n": 1947,
+            "n_missing": 761,
+            "mean": 0.336656,
+            "ci95": [
+              0.3287,
+              0.345
+            ],
+            "median": 0.319796
+          },
+          "max_reference_semantic": {
+            "n": 2708,
+            "n_missing": 0,
+            "mean": 0.745744,
+            "ci95": [
+              0.7366,
+              0.7545
+            ],
+            "median": 0.809381
+          },
+          "recovered_misses": {
+            "threshold": 0.5,
+            "n_comparable": 1945,
+            "n_single_reference_miss": 1198,
+            "n_recovered_by_another_reference": 702,
+            "share_of_misses_recovered": 0.586,
+            "note": "Agreement with another historical advisor answer, not evidence of agricultural correctness."
+          }
+        },
+        "pool_ge_2": {
+          "n_rows": 2111,
+          "own_reference_f1": {
+            "n": 2109,
+            "n_missing": 2,
+            "mean": 0.395898,
+            "ci95": [
+              0.3842,
+              0.4074
+            ],
+            "median": 0.375
+          },
+          "max_reference_f1": {
+            "n": 2111,
+            "n_missing": 0,
+            "mean": 0.639844,
+            "ci95": [
+              0.6285,
+              0.651
+            ],
+            "median": 0.666667
+          },
+          "max_other_reference_f1": {
+            "n": 2111,
+            "n_missing": 0,
+            "mean": 0.619555,
+            "ci95": [
+              0.608,
+              0.631
+            ],
+            "median": 0.666667
+          },
+          "random_other_reference_f1": {
+            "n": 2111,
+            "n_missing": 0,
+            "mean": 0.322861,
+            "ci95": [
+              0.3144,
+              0.3308
+            ],
+            "median": 0.304113
+          },
+          "max_reference_semantic": {
+            "n": 2111,
+            "n_missing": 0,
+            "mean": 0.813411,
+            "ci95": [
+              0.8054,
+              0.8215
+            ],
+            "median": 0.861047
+          },
+          "recovered_misses": {
+            "threshold": 0.5,
+            "n_comparable": 2109,
+            "n_single_reference_miss": 1359,
+            "n_recovered_by_another_reference": 766,
+            "share_of_misses_recovered": 0.5636,
+            "note": "Agreement with another historical advisor answer, not evidence of agricultural correctness."
+          },
+          "pool_stats": {
+            "mean_pool_size": 259.6627,
+            "median_pool_size": 37.0,
+            "max_pool_size": 1247
+          }
+        },
+        "pool_eq_1": {
+          "n_rows": 799,
+          "own_reference_f1": {
+            "n": 799,
+            "n_missing": 0,
+            "mean": 0.326949,
+            "ci95": [
+              0.3087,
+              0.3453
+            ],
+            "median": 0.277778
+          },
+          "max_reference_f1": {
+            "n": 799,
+            "n_missing": 0,
+            "mean": 0.331341,
+            "ci95": [
+              0.3133,
+              0.3496
+            ],
+            "median": 0.285714
+          },
+          "max_other_reference_f1": {
+            "n": 38,
+            "n_missing": 761,
+            "mean": 0.171509,
+            "ci95": [
+              0.1129,
+              0.2392
+            ],
+            "median": 0.085145
+          },
+          "random_other_reference_f1": {
+            "n": 38,
+            "n_missing": 761,
+            "mean": 0.171509,
+            "ci95": [
+              0.1129,
+              0.2392
+            ],
+            "median": 0.085145
+          },
+          "max_reference_semantic": {
+            "n": 799,
+            "n_missing": 0,
+            "mean": 0.536233,
+            "ci95": [
+              0.5187,
+              0.5548
+            ],
+            "median": 0.562261
+          },
+          "recovered_misses": {
+            "threshold": 0.5,
+            "n_comparable": 38,
+            "n_single_reference_miss": 38,
+            "n_recovered_by_another_reference": 6,
+            "share_of_misses_recovered": 0.1579,
+            "note": "Agreement with another historical advisor answer, not evidence of agricultural correctness."
+          }
+        },
+        "pool_ge_20": {
+          "n_rows": 1267,
+          "own_reference_f1": {
+            "n": 1265,
+            "n_missing": 2,
+            "mean": 0.414242,
+            "ci95": [
+              0.3998,
+              0.4294
+            ],
+            "median": 0.4
+          },
+          "max_reference_f1": {
+            "n": 1267,
+            "n_missing": 0,
+            "mean": 0.717612,
+            "ci95": [
+              0.7063,
+              0.7291
+            ],
+            "median": 0.746667
+          },
+          "max_other_reference_f1": {
+            "n": 1267,
+            "n_missing": 0,
+            "mean": 0.710294,
+            "ci95": [
+              0.699,
+              0.7219
+            ],
+            "median": 0.727273
+          },
+          "random_other_reference_f1": {
+            "n": 1267,
+            "n_missing": 0,
+            "mean": 0.313549,
+            "ci95": [
+              0.3049,
+              0.3219
+            ],
+            "median": 0.305792
+          },
+          "max_reference_semantic": {
+            "n": 1267,
+            "n_missing": 0,
+            "mean": 0.870813,
+            "ci95": [
+              0.8635,
+              0.8785
+            ],
+            "median": 0.916545
+          },
+          "recovered_misses": {
+            "threshold": 0.5,
+            "n_comparable": 1265,
+            "n_single_reference_miss": 786,
+            "n_recovered_by_another_reference": 588,
+            "share_of_misses_recovered": 0.7481,
+            "note": "Agreement with another historical advisor answer, not evidence of agricultural correctness."
+          }
+        },
+        "pool_eq_0": {
+          "n_rows": 90,
+          "own_reference_f1": {
+            "n": 90,
+            "n_missing": 0,
+            "mean": 0.101228,
+            "ci95": [
+              0.069,
+              0.1374
+            ],
+            "median": 0.0
+          },
+          "max_reference_f1": {
+            "n": 0,
+            "n_missing": 90,
+            "mean": null,
+            "ci95": [
+              null,
+              null
+            ],
+            "median": null
+          },
+          "max_other_reference_f1": {
+            "n": 0,
+            "n_missing": 90,
+            "mean": null,
+            "ci95": [
+              null,
+              null
+            ],
+            "median": null
+          },
+          "random_other_reference_f1": {
+            "n": 0,
+            "n_missing": 90,
+            "mean": null,
+            "ci95": [
+              null,
+              null
+            ],
+            "median": null
+          },
+          "max_reference_semantic": {
+            "n": 0,
+            "n_missing": 90,
+            "mean": null,
+            "ci95": [
+              null,
+              null
+            ],
+            "median": null
+          },
+          "recovered_misses": {
+            "threshold": 0.5,
+            "n_comparable": 0,
+            "n_single_reference_miss": 0,
+            "n_recovered_by_another_reference": 0,
+            "share_of_misses_recovered": null,
+            "note": "Agreement with another historical advisor answer, not evidence of agricultural correctness."
+          }
+        },
+        "gold_note": {
+          "n_rows": 292,
+          "own_reference_f1": {
+            "n": 292,
+            "n_missing": 0,
+            "mean": 0.084861,
+            "ci95": [
+              0.0689,
+              0.1012
+            ],
+            "median": 0.0
+          },
+          "max_reference_f1": {
+            "n": 202,
+            "n_missing": 90,
+            "mean": 0.404029,
+            "ci95": [
+              0.3697,
+              0.4387
+            ],
+            "median": 0.363636
+          },
+          "max_other_reference_f1": {
+            "n": 202,
+            "n_missing": 90,
+            "mean": 0.404029,
+            "ci95": [
+              0.3697,
+              0.4387
+            ],
+            "median": 0.363636
+          },
+          "random_other_reference_f1": {
+            "n": 202,
+            "n_missing": 90,
+            "mean": 0.161418,
+            "ci95": [
+              0.1415,
+              0.1807
+            ],
+            "median": 0.131739
+          },
+          "max_reference_semantic": {
+            "n": 202,
+            "n_missing": 90,
+            "mean": 0.624189,
+            "ci95": [
+              0.5892,
+              0.6581
+            ],
+            "median": 0.63989
+          },
+          "recovered_misses": {
+            "threshold": 0.5,
+            "n_comparable": 202,
+            "n_single_reference_miss": 199,
+            "n_recovered_by_another_reference": 70,
+            "share_of_misses_recovered": 0.3518,
+            "note": "Agreement with another historical advisor answer, not evidence of agricultural correctness."
+          }
+        },
+        "pool_eq_1_gold_informative": {
+          "n_rows": 761,
+          "own_reference_f1": {
+            "n": 761,
+            "n_missing": 0,
+            "mean": 0.339322,
+            "ci95": [
+              0.3202,
+              0.3591
+            ],
+            "median": 0.285714
+          },
+          "max_reference_f1": {
+            "n": 761,
+            "n_missing": 0,
+            "mean": 0.339322,
+            "ci95": [
+              0.3202,
+              0.3591
+            ],
+            "median": 0.285714
+          },
+          "max_other_reference_f1": {
+            "n": 0,
+            "n_missing": 761,
+            "mean": null,
+            "ci95": [
+              null,
+              null
+            ],
+            "median": null
+          },
+          "random_other_reference_f1": {
+            "n": 0,
+            "n_missing": 761,
+            "mean": null,
+            "ci95": [
+              null,
+              null
+            ],
+            "median": null
+          },
+          "max_reference_semantic": {
+            "n": 761,
+            "n_missing": 0,
+            "mean": 0.546729,
+            "ci95": [
+              0.5288,
+              0.5642
+            ],
+            "median": 0.570118
+          },
+          "recovered_misses": {
+            "threshold": 0.5,
+            "n_comparable": 0,
+            "n_single_reference_miss": 0,
+            "n_recovered_by_another_reference": 0,
+            "share_of_misses_recovered": null,
+            "note": "Agreement with another historical advisor answer, not evidence of agricultural correctness."
+          }
+        },
+        "pool_ge_2_gold_informative": {
+          "n_rows": 1947,
+          "own_reference_f1": {
+            "n": 1945,
+            "n_missing": 2,
+            "mean": 0.42277,
+            "ci95": [
+              0.4111,
+              0.4338
+            ],
+            "median": 0.4
+          },
+          "max_reference_f1": {
+            "n": 1947,
+            "n_missing": 0,
+            "mean": 0.655169,
+            "ci95": [
+              0.6446,
+              0.666
+            ],
+            "median": 0.666667
+          },
+          "max_other_reference_f1": {
+            "n": 1947,
+            "n_missing": 0,
+            "mean": 0.633171,
+            "ci95": [
+              0.6221,
+              0.6446
+            ],
+            "median": 0.666667
+          },
+          "random_other_reference_f1": {
+            "n": 1947,
+            "n_missing": 0,
+            "mean": 0.336656,
+            "ci95": [
+              0.3287,
+              0.345
+            ],
+            "median": 0.319796
+          },
+          "max_reference_semantic": {
+            "n": 1947,
+            "n_missing": 0,
+            "mean": 0.82353,
+            "ci95": [
+              0.8164,
+              0.8312
+            ],
+            "median": 0.873238
+          },
+          "recovered_misses": {
+            "threshold": 0.5,
+            "n_comparable": 1945,
+            "n_single_reference_miss": 1198,
+            "n_recovered_by_another_reference": 702,
+            "share_of_misses_recovered": 0.586,
+            "note": "Agreement with another historical advisor answer, not evidence of agricultural correctness."
+          }
+        },
+        "novel": {
+          "n_rows": 189,
+          "own_reference_f1": {
+            "n": 189,
+            "n_missing": 0,
+            "mean": 0.24386,
+            "ci95": [
+              0.2097,
+              0.2773
+            ],
+            "median": 0.2
+          },
+          "max_reference_f1": {
+            "n": 172,
+            "n_missing": 17,
+            "mean": 0.307132,
+            "ci95": [
+              0.2644,
+              0.3536
+            ],
+            "median": 0.212406
+          },
+          "max_other_reference_f1": {
+            "n": 49,
+            "n_missing": 140,
+            "mean": 0.48723,
+            "ci95": [
+              0.3874,
+              0.5834
+            ],
+            "median": 0.444444
+          },
+          "random_other_reference_f1": {
+            "n": 49,
+            "n_missing": 140,
+            "mean": 0.299261,
+            "ci95": [
+              0.2398,
+              0.3567
+            ],
+            "median": 0.355789
+          },
+          "max_reference_semantic": {
+            "n": 172,
+            "n_missing": 17,
+            "mean": 0.52016,
+            "ci95": [
+              0.4799,
+              0.5625
+            ],
+            "median": 0.539914
+          },
+          "recovered_misses": {
+            "threshold": 0.5,
+            "n_comparable": 49,
+            "n_single_reference_miss": 40,
+            "n_recovered_by_another_reference": 14,
+            "share_of_misses_recovered": 0.35,
+            "note": "Agreement with another historical advisor answer, not evidence of agricultural correctness."
+          }
+        },
+        "similar": {
+          "n_rows": 717,
+          "own_reference_f1": {
+            "n": 717,
+            "n_missing": 0,
+            "mean": 0.36226,
+            "ci95": [
+              0.3418,
+              0.3833
+            ],
+            "median": 0.315789
+          },
+          "max_reference_f1": {
+            "n": 680,
+            "n_missing": 37,
+            "mean": 0.476643,
+            "ci95": [
+              0.4536,
+              0.4995
+            ],
+            "median": 0.461538
+          },
+          "max_other_reference_f1": {
+            "n": 364,
+            "n_missing": 353,
+            "mean": 0.560971,
+            "ci95": [
+              0.5321,
+              0.5892
+            ],
+            "median": 0.622845
+          },
+          "random_other_reference_f1": {
+            "n": 364,
+            "n_missing": 353,
+            "mean": 0.343594,
+            "ci95": [
+              0.3216,
+              0.3641
+            ],
+            "median": 0.322572
+          },
+          "max_reference_semantic": {
+            "n": 680,
+            "n_missing": 37,
+            "mean": 0.663208,
+            "ci95": [
+              0.6435,
+              0.6829
+            ],
+            "median": 0.713084
+          },
+          "recovered_misses": {
+            "threshold": 0.5,
+            "n_comparable": 364,
+            "n_single_reference_miss": 212,
+            "n_recovered_by_another_reference": 87,
+            "share_of_misses_recovered": 0.4104,
+            "note": "Agreement with another historical advisor answer, not evidence of agricultural correctness."
+          }
+        },
+        "near_duplicate": {
+          "n_rows": 2094,
+          "own_reference_f1": {
+            "n": 2092,
+            "n_missing": 2,
+            "mean": 0.382152,
+            "ci95": [
+              0.3714,
+              0.3933
+            ],
+            "median": 0.357143
+          },
+          "max_reference_f1": {
+            "n": 2058,
+            "n_missing": 36,
+            "mean": 0.601802,
+            "ci95": [
+              0.59,
+              0.6139
+            ],
+            "median": 0.625
+          },
+          "max_other_reference_f1": {
+            "n": 1736,
+            "n_missing": 358,
+            "mean": 0.625766,
+            "ci95": [
+              0.6141,
+              0.6376
+            ],
+            "median": 0.647854
+          },
+          "random_other_reference_f1": {
+            "n": 1736,
+            "n_missing": 358,
+            "mean": 0.315866,
+            "ci95": [
+              0.3075,
+              0.3242
+            ],
+            "median": 0.298459
+          },
+          "max_reference_semantic": {
+            "n": 2058,
+            "n_missing": 36,
+            "mean": 0.779938,
+            "ci95": [
+              0.7712,
+              0.7893
+            ],
+            "median": 0.836341
+          },
+          "recovered_misses": {
+            "threshold": 0.5,
+            "n_comparable": 1734,
+            "n_single_reference_miss": 1145,
+            "n_recovered_by_another_reference": 671,
+            "share_of_misses_recovered": 0.586,
+            "note": "Agreement with another historical advisor answer, not evidence of agricultural correctness."
+          }
+        }
+      }
+    }
+  },
+  "paired_comparisons": {
+    "P1_dense_all | max-other-reference vs own-reference": {
+      "n": 9768,
+      "mean_delta": 0.241451,
+      "ci95": [
+        0.236165,
+        0.246476
+      ],
+      "share_improved": 0.8088,
+      "share_unchanged": 0.0682,
+      "share_worse": 0.1231,
+      "cohens_dz": 0.9101,
+      "significant_at_0_05": true,
+      "comparison": "P1_dense_all | max-other-reference vs own-reference"
+    },
+    "P1_dense_all | max-reference vs own-reference": {
+      "n": 13346,
+      "mean_delta": 0.186665,
+      "ci95": [
+        0.182669,
+        0.190672
+      ],
+      "share_improved": 0.5919,
+      "share_unchanged": 0.3933,
+      "share_worse": 0.0148,
+      "cohens_dz": 0.7837,
+      "significant_at_0_05": true,
+      "comparison": "P1_dense_all | max-reference vs own-reference"
+    },
+    "P1_dense_all | random-other-reference vs own-reference": {
+      "n": 9768,
+      "mean_delta": -0.03934,
+      "ci95": [
+        -0.04305,
+        -0.035275
+      ],
+      "share_improved": 0.4231,
+      "share_unchanged": 0.0659,
+      "share_worse": 0.511,
+      "cohens_dz": -0.1947,
+      "significant_at_0_05": true,
+      "comparison": "P1_dense_all | random-other-reference vs own-reference"
+    },
+    "P1_dense_all | max-other vs own | informative own answer only": {
+      "n": 9029,
+      "mean_delta": 0.245257,
+      "ci95": [
+        0.240189,
+        0.250143
+      ],
+      "share_improved": 0.8198,
+      "share_unchanged": 0.0689,
+      "share_worse": 0.1113,
+      "cohens_dz": 0.9974,
+      "significant_at_0_05": true,
+      "comparison": "P1_dense_all | max-other vs own | informative own answer only"
+    },
+    "P1_sample | hybrid vs dense | own-reference": {
+      "n": 2998,
+      "mean_delta": 0.058061,
+      "ci95": [
+        0.048018,
+        0.067563
+      ],
+      "share_improved": 0.4513,
+      "share_unchanged": 0.2358,
+      "share_worse": 0.3129,
+      "cohens_dz": 0.2103,
+      "significant_at_0_05": true,
+      "comparison": "P1_sample | hybrid vs dense | own-reference"
+    },
+    "P1_sample | hybrid vs dense | max-other-reference": {
+      "n": 2149,
+      "mean_delta": 0.020669,
+      "ci95": [
+        0.008838,
+        0.032499
+      ],
+      "share_improved": 0.416,
+      "share_unchanged": 0.1736,
+      "share_worse": 0.4104,
+      "cohens_dz": 0.0732,
+      "significant_at_0_05": true,
+      "comparison": "P1_sample | hybrid vs dense | max-other-reference"
+    },
+    "P1_sample | hybrid vs dense | max-reference": {
+      "n": 2910,
+      "mean_delta": 0.029429,
+      "ci95": [
+        0.019087,
+        0.039272
+      ],
+      "share_improved": 0.4172,
+      "share_unchanged": 0.2055,
+      "share_worse": 0.3773,
+      "cohens_dz": 0.107,
+      "significant_at_0_05": true,
+      "comparison": "P1_sample | hybrid vs dense | max-reference"
+    },
+    "P1_sample | hybrid vs dense | max-other | informative own answer only": {
+      "n": 1947,
+      "mean_delta": 0.024443,
+      "ci95": [
+        0.011955,
+        0.03701
+      ],
+      "share_improved": 0.4212,
+      "share_unchanged": 0.1715,
+      "share_worse": 0.4073,
+      "cohens_dz": 0.0863,
+      "significant_at_0_05": true,
+      "comparison": "P1_sample | hybrid vs dense | max-other | informative own answer only"
+    },
+    "P2_sample | hybrid vs dense | own-reference": {
+      "n": 2998,
+      "mean_delta": 0.053186,
+      "ci95": [
+        0.044213,
+        0.061525
+      ],
+      "share_improved": 0.446,
+      "share_unchanged": 0.2462,
+      "share_worse": 0.3079,
+      "cohens_dz": 0.2133,
+      "significant_at_0_05": true,
+      "comparison": "P2_sample | hybrid vs dense | own-reference"
+    },
+    "P2_sample | hybrid vs dense | max-other-reference": {
+      "n": 2149,
+      "mean_delta": 0.018231,
+      "ci95": [
+        0.006602,
+        0.029425
+      ],
+      "share_improved": 0.4081,
+      "share_unchanged": 0.1843,
+      "share_worse": 0.4076,
+      "cohens_dz": 0.0674,
+      "significant_at_0_05": true,
+      "comparison": "P2_sample | hybrid vs dense | max-other-reference"
+    }
+  },
+  "diagnostics": {
+    "non_informative_own_rows": {
+      "n": 1208,
+      "share_of_test_rows": 0.0873,
+      "mean_own_f1_against_note": 0.237951,
+      "mean_max_other_f1": 0.405091,
+      "note": "On these rows the own logged 'answer' is a call-log note, not advice. The original metric still scores the retrieved answer against it, which is why single-reference F1 can exceed the informative-reference maximum on rows with one reference. This baseline is not an answer."
+    },
+    "semantic_scale": {
+      "note": "Max semantic similarity grows with pool size because it is a maximum over more candidates; it is a wording-closeness statistic, not correctness and not a calibrated probability."
+    }
+  },
+  "limitations": [
+    "References are historical advisor answers, not verified-correct advice; agreement with them is not agricultural correctness.",
+    "Near-duplicate grouping is transitive at cosine >= 0.95, so some large groups may merge related but not identical questions.",
+    "Contradictory answers can coexist in one pool (Improvement 1 shows such conflicts exist); max-reference F1 rewards matching any of them.",
+    "Semantic similarity measures wording closeness only; it is not correctness and is reported separately from F1.",
+    "No human relevance or expert agronomic judgement exists for these pools (Batch B Phase 2 annotation remains PENDING).",
+    "Max-reference F1 and max semantic similarity both rise mechanically with pool size, because both are maxima over more candidates; the random-reference control is reported for that reason.",
+    "On rows whose own logged answer is a call-log note, the original single-reference metric scores against that note; those rows are reported separately and excluded from the informative-own paired comparison.",
+    "Only one grouped split seed was used, because the index rebuild is expensive; results are conditional on that split."
+  ],
+  "environment": {
+    "python": "3.12.13",
+    "platform": "macOS-26.6.2-arm64-arm-64bit",
+    "machine": "arm64",
+    "versions": {
+      "numpy": "2.5.4",
+      "pandas": "3.1.0",
+      "sklearn": "1.9.1",
+      "scipy": "1.18.1",
+      "sentence_transformers": "6.2.0",
+      "faiss": "1.15.1",
+      "joblib": "1.6.0",
+      "torch": "2.15.0",
+      "transformers": "5.22.1",
+      "pytest": "9.2.0"
+    },
+    "multi_reference_encoder": "paraphrase-multilingual-MiniLM-L12-v2"
+  }
+}
