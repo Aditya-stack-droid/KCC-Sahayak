@@ -1,9 +1,11 @@
 import sys
 from pathlib import Path
 
+import pytest
+
 sys.path.insert(0, str(Path(__file__).resolve().parents[1] / "src"))
 
-from query_match import coverage_problem  # noqa: E402
+from query_match import coverage_problem, temporal_problem  # noqa: E402
 
 
 def test_crop_named_by_farmer_but_missing_from_match_is_flagged():
@@ -26,3 +28,32 @@ def test_crop_found_in_the_answer_counts():
 
 def test_no_crops_and_no_comparison_never_flags():
     assert coverage_problem("how to start a poultry farm", "asking about poultry farm loan", "contact bank") is None
+
+
+@pytest.mark.parametrize("q", [
+    "Is it going to rain in the next three days? I want to decide whether to harvest my wheat now.",
+    "will it rain tomorrow",
+    "agle teen din mein baarish hogi kya",
+    "aaj tomato ka bhav kya hai",
+    "what is the price of onion",
+    "आज मंडी में सरसों का भाव क्या चल रहा है?",
+    "wheat mandi rate",
+])
+def test_live_or_price_questions_are_flagged(q):
+    assert temporal_problem(q)
+
+
+@pytest.mark.parametrize("q", [
+    "what is the seed rate for paddy",
+    "what is the sowing time for mustard",
+    "which is the best variety of wheat for sowing in november",
+    "how to control aphids in mustard",
+])
+def test_ordinary_questions_are_not_flagged(q):
+    assert temporal_problem(q) is None
+
+
+def test_gate_escalates_temporal_even_for_a_safe_topic():
+    from confidence_gate import decide
+    d = decide("Cultural Practices", 0.99, 0.99, answer="sow in november", temporal_problem="live weather")
+    assert d.action == "ESCALATE" and d.code == "time_sensitive"

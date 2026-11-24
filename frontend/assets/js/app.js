@@ -23,7 +23,7 @@
   }
   const post = (path, body) => api(path, { method: "POST", headers: { "Content-Type": "application/json" }, body: JSON.stringify(body) });
   const sleep = (ms) => new Promise((r) => setTimeout(r, ms));
-  const REG = { en: "English", hinglish: "Hinglish", hi: "हिंदी" };
+  const REG = { en: "English", hinglish: "Hinglish", hi: "हिंदी", as: "অসমীয়া" };
 
   // ------------------------------------------------------------------ theme
   const applyTheme = (t) => (t ? document.documentElement.setAttribute("data-theme", t) : document.documentElement.removeAttribute("data-theme"));
@@ -63,7 +63,16 @@
     set("corpus", num(state.info && state.info.corpus_size));
     set("silver_acc", prod ? pct(prod.silver.acc) : "—");
     set("gold_acc", prod ? pct(prod.gold_all.acc) : "—");
-    set("sel_acc", pct(pick(s, "selective_eval.silver_default.selective_accuracy")));
+    const sel = pick(s, "selective_eval.silver_default");
+    set("coverage", sel ? pct(sel.coverage) : "—");
+    // every figure carries its sample size so it is not read as a bigger claim than it is
+    const ci = (o) => (o && o.ci95 ? `, 95% CI ${pct(o.ci95[0])}–${pct(o.ci95[1])}` : "");
+    const lab = (k, t) => document.querySelectorAll(`[data-label="${k}"]`).forEach((e) => (e.textContent = t));
+    if (prod) {
+      lab("silver_acc", `topic accuracy on ${num(prod.silver.n)} held-out calls${ci(prod.silver)}`);
+      lab("gold_acc", `topic accuracy on ${num(prod.gold_all.n)} author-written EN / Hinglish / Hindi queries${ci(prod.gold_all)}`);
+    }
+    if (sel) lab("coverage", `of questions answered fully automatically. The other ${pct(1 - sel.coverage)} get provisional guidance (a safe past answer and an AI suggestion) while a human advisor confirms. Topic correct in ${pct(sel.selective_accuracy)} of the automatic ones`);
   }
 
   function fillAbout() {
@@ -140,19 +149,38 @@
     renderDecision(r);
   }
 
+  // The corpus is English. When the farmer asked in Hindi, Hinglish or Assamese, show the answer in that language too.
+  // Machine translation (Gemini), always labelled unverified; the English original stays visible.
+  function translateBelow(id, text, r) {
+    const lang = r.register;
+    if (!text || !["hi", "hinglish", "as"].includes(lang)) return;
+    const el = $(id), box = document.createElement("div"), qid = r.query_id;
+    box.className = "translation"; box.dataset.trFor = id; box.textContent = "Translating…";
+    el.before(box);
+    post("/translate", { text, lang }).then((t) => {
+      if (state.lastId !== qid || !t.text) { box.remove(); return; }
+      box.innerHTML = `<small>${esc(REG[lang])} · AI translation, not verified</small><div>${esc(t.text)}</div><small class="orig-label">Original from the KCC corpus (English):</small>`;
+      el.classList.add("is-original");
+    }).catch(() => box.remove());
+  }
+
   function renderDecision(r) {
     state.lastId = r.query_id;
+    document.querySelectorAll(".translation").forEach((e) => e.remove());
+    document.querySelectorAll(".is-original").forEach((e) => e.classList.remove("is-original"));
     const card = $("decisionCard");
     card.hidden = false;
     const auto = r.decision === "AUTO_ANSWER";
     card.className = `decision-card ${auto ? "answer" : "escalate"}`;
     $("decisionBadge").textContent = auto ? "✅" : "🚦";
-    $("decisionQuestion").textContent = r.input_text ? `Your question: “${r.input_text}”` : "";
-    $("decisionTitle").textContent = auto ? "Answered automatically" : "No automatic answer: sent to a human advisor";
+    $("decisionQuestion").textContent = r.translation_error ? `Your question: “${r.input_text}”  ·  translation unavailable (${r.translation_error}), matched directly, so the answer may differ from the English one` : r.original_text ? `Your question: “${r.original_text}”  ·  understood as: “${r.input_text}”` : (r.input_text ? `Your question: “${r.input_text}”` : "");
+    $("decisionTitle").textContent = auto ? "Answered automatically"
+      : r.decision_code === "time_sensitive" ? "Needs live data: sources below, advisor notified"
+      : "Provisional guidance below · an advisor will confirm";
     $("decisionReason").textContent = r.decision_reason;
     $("answerBlock").hidden = !auto;
     $("escalateBlock").hidden = auto;
-    if (auto) { $("answerText").textContent = r.suggested_answer; $("fbUp").disabled = $("fbDown").disabled = false; }
+    if (auto) { $("answerText").textContent = r.suggested_answer; $("fbUp").disabled = $("fbDown").disabled = false; translateBelow("answerText", r.suggested_answer, r); }
     $("candidatesList").innerHTML = r.retrieved_top3.filter((c) => c.matched_question).map((c) =>
       `<li><span class="cand-sim">${pct(c.similarity, 0)}</span> “${esc(c.matched_question)}”${c.source === "advisor" ? ' <span class="badge answer">advisor-verified</span>' : ""}<div class="cand-ans">${esc(c.answer)}</div></li>`).join("");
     loadHistory(); loadQueue(); loadOps();
@@ -165,16 +193,39 @@
     const box = $("compareBox"), top = (r.retrieved_top3 || []).find((c) => c.reference_ok);
     box.hidden = false;
     $("cmpCorpus").hidden = auto;     // when auto-answered, the corpus answer is already shown above
-    if (!auto && !top) { $("cmpCorpusText").textContent = "No solid answer in the KCC corpus for this question."; $("cmpCorpusQ").textContent = "The closest past answers were off-topic, contained a dose or chemical instruction, or were only call-log notes."; }
-    if (!auto && top) { $("cmpCorpusText").textContent = top.answer; $("cmpCorpusQ").textContent = `Matched past question: “${top.matched_question}” (${pct(top.similarity, 0)} match)`; }
-    const out = $("cmpGeminiText"), id = r.query_id;
-    out.className = ""; out.textContent = "Asking Gemini…";
-    post("/gemini", { text: r.input_text }).then((g) => {
+    const close = (r.retrieved_top3 || []).find((c) => c.similarity >= 0.55);
+    const live = !auto && r.decision_code === "time_sensitive";
+    if (live) {
+      $("cmpCorpusText").textContent = "Not answerable from the KCC corpus: it is a record of past calls, so it cannot know today's or upcoming weather, and prices change daily and by mandi and region.";
+      $("cmpCorpusQ").textContent = "Live data needed: IMD / Meghdoot app for weather, Agmarknet or e-NAM for mandi prices, or a Farm Tele Advisor.";
+    } else if (!auto && !top && close) { $("cmpCorpusText").textContent = "The KCC corpus has close past answers, but they name pesticides or doses, so they are withheld here."; $("cmpCorpusQ").textContent = `Closest logged question: “${close.matched_question}” (${pct(close.similarity, 0)} match). A human advisor confirms the product and dose for your case.`; }
+    else if (!auto && !top) { $("cmpCorpusText").textContent = "No solid answer in the KCC corpus for this question."; $("cmpCorpusQ").textContent = "The closest past answers were off-topic or were only call-log notes."; }
+    if (!auto && top && !live) { translateBelow("cmpCorpusText", top.answer, r); $("cmpCorpusText").textContent = top.answer; $("cmpCorpusQ").textContent = `Matched past question: “${top.matched_question}” (${pct(top.similarity, 0)} match)`; }
+    // RAG: Gemini writes the reply from the retrieved KCC answers and cites them. Without safe sources it falls
+    // back to plain Gemini advice and the card says so. Display only: never changes the decision.
+    const out = $("cmpGeminiText"), id = r.query_id, src = $("cmpSources"), notes = $("cmpNotes"), plainBtn = $("plainGeminiBtn"), plain = $("plainGeminiText");
+    out.className = ""; out.textContent = "Reading the KCC answers…";
+    src.hidden = true; src.innerHTML = ""; notes.textContent = ""; plainBtn.hidden = true; plain.hidden = true; plain.textContent = "";
+    $("cmpGeminiTitle").textContent = "AI answer from KCC sources";
+    post("/rag", { text: r.input_text, original_text: r.original_text || r.input_text }).then((g) => {
       if (state.lastId !== id) return;          // a newer query replaced this one
-      if (!g.available) { out.className = "cmp-muted"; out.textContent = "Gemini is not set up on this server (add GEMINI_API_KEY to .env)."; }
+      if (!g.available) { out.className = "cmp-muted"; out.textContent = "Gemini is not set up on this server (add GEMINI_API_KEY to .env)."; return; }
+      $("cmpGeminiTitle").textContent = g.grounded ? "AI answer grounded in KCC answers (RAG)" : "Gemini suggestion (general advice, not grounded in the corpus)";
+      if (g.withheld) { out.className = "cmp-muted"; out.textContent = "The generated answer contained a dose or quantity, so it is withheld."; }
       else if (g.error || !g.text) { out.className = "cmp-muted"; out.textContent = g.error || "No suggestion returned."; }
       else out.textContent = g.text;
-    }).catch(() => { if (state.lastId === id) { out.className = "cmp-muted"; out.textContent = "Could not get a Gemini suggestion."; } });
+      if (g.grounded && g.sources.length) {
+        src.innerHTML = g.sources.map((s) => `<li class="${(g.cited || []).includes(s.n) ? "cited" : ""}">[${s.n}] “${esc(s.question)}” (${pct(s.similarity, 0)}): ${esc(s.answer)}</li>`).join("");
+        src.hidden = false;
+        plainBtn.hidden = false;
+      }
+      notes.textContent = (g.notes || []).join(" ");
+    }).catch(() => { if (state.lastId === id) { out.className = "cmp-muted"; out.textContent = "Could not get an AI answer."; } });
+    plainBtn.onclick = () => {
+      plainBtn.disabled = true; plain.hidden = false; plain.textContent = "Asking Gemini without the corpus…";
+      post("/gemini", { text: r.original_text || r.input_text }).then((g) => { plain.textContent = "Without the corpus: " + (g.text || g.error || "no answer"); })
+        .catch(() => { plain.textContent = "Could not reach Gemini."; }).finally(() => { plainBtn.disabled = false; });
+    };
   }
 
   // ------------------------------------------------------------------ query

@@ -3,6 +3,7 @@
 Returns one of:
   "hi"       Devanagari Hindi
   "hinglish" Hindi written in Roman script
+  "as"       Assamese (Bengali-Assamese script; Bengali shares the script and is treated the same)
   "en"       English / everything else
 
 A heuristic for display and analytics, not something the pipeline depends on:
@@ -19,6 +20,7 @@ on purpose.
 import re
 
 _DEVANAGARI = re.compile(r"[ऀ-ॿ]")
+_ASSAMESE = re.compile(r"[ঀ-৿]")
 
 _FUNCTION = {
     "ke", "ka", "ki", "ko", "mein", "hai", "hain", "hoga", "hogi", "honge", "kya", "kaise",
@@ -45,6 +47,8 @@ def detect_register(text: str) -> str:
         deva = sum(1 for c in letters if _DEVANAGARI.match(c))
         if deva / len(letters) > 0.3:
             return "hi"
+        if sum(1 for c in letters if _ASSAMESE.match(c)) / len(letters) > 0.3:
+            return "as"
     tokens = re.findall(r"[a-z]+", text.lower())
     if not tokens:
         return "en"

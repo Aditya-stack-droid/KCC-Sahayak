@@ -32,8 +32,10 @@ sys.path.insert(0, str(ROOT / "backend"))
 
 import db  # noqa: E402
 import gemini  # noqa: E402
+import rag  # noqa: E402
 from answer_quality import is_informative  # noqa: E402
 from confidence_gate import GateThresholds, answer_risk  # noqa: E402
+from lang import detect_register  # noqa: E402
 from query_match import coverage_problem  # noqa: E402
 from pipeline import KCCSahayakPipeline  # noqa: E402
 
@@ -197,11 +199,14 @@ def samples():
     }
 
 
-def _run_and_log(text: str | None, audio_path: str | None, th: GateThresholds, source: str) -> dict:
+def _run_and_log(text: str | None, audio_path: str | None, th: GateThresholds, source: str,
+                 register: str | None = None) -> dict:
     t0 = time.perf_counter()
     result = _pipe().run(text, from_audio=audio_path, thresholds=th)
     latency_ms = (time.perf_counter() - t0) * 1000
     out = _serialize(result, source, latency_ms)
+    if register:
+        out["register"] = register
     out["query_id"] = db.insert_query(out)
     return out
 
@@ -213,7 +218,19 @@ def query(req: QueryRequest):
         retrieval_similarity=req.retrieval_similarity_threshold,
         screen_answer=req.screen_answer,
     )
-    return _run_and_log(req.text.strip(), None, th, "text")
+    text = req.text.strip()
+    reg = detect_register(text)
+    if reg == "en":
+        return _run_and_log(text, None, th, "text")
+    # The corpus is English. Matching an English question against it is more precise than matching Hindi or Assamese
+    # directly (a Hindi "late sowing in December" question retrieved a normal-sowing answer), so the question is
+    # translated first and the original is kept for display. If translation is unavailable we fall back to the
+    # original text, which the multilingual encoder can still handle.
+    tr = gemini.translate(text, "en")
+    out = _run_and_log(tr["text"] or text, None, th, "text", register=reg)
+    out["original_text"] = text
+    out["translation_error"] = None if tr["text"] else tr["error"]
+    return out
 
 
 class GeminiRequest(BaseModel):
@@ -223,6 +240,28 @@ class GeminiRequest(BaseModel):
 @app.get("/api/gemini/status")
 def gemini_status():
     return {"configured": gemini.configured(), "model": gemini.model_name()}
+
+
+class TranslateRequest(BaseModel):
+    text: str = Field(min_length=1, max_length=2000)
+    lang: str = Field(min_length=2, max_length=10)
+
+
+@app.post("/api/translate")
+def translate(req: TranslateRequest):
+    """Machine translation of an English answer into the farmer's language. Display only."""
+    return gemini.translate(req.text, req.lang)
+
+
+class RagRequest(BaseModel):
+    text: str = Field(min_length=2, max_length=1000)           # question as used for retrieval (English)
+    original_text: str | None = Field(default=None, max_length=1000)   # what the farmer typed, sets the reply language
+
+
+@app.post("/api/rag")
+def rag_answer(req: RagRequest):
+    """Gemini reply grounded in retrieved KCC answers, with sources. Display only: never changes the gate."""
+    return rag.answer(_pipe(), req.text.strip(), (req.original_text or "").strip() or None)
 
 
 @app.post("/api/gemini")

@@ -61,6 +61,19 @@ forbids exact pesticide/fertiliser doses and points the farmer to a KVK or the K
 
 The text of the question is sent to Google when this is on. Optional `GEMINI_MODEL` overrides the default model name.
 
+### RAG: an AI answer grounded in the KCC corpus
+
+The Gemini card is retrieval-augmented (`backend/rag.py`, `POST /api/rag`). Instead of answering from its own memory, Gemini
+is given the retrieved past advisor answers and writes a short reply from them only, citing them as [1], [2]; the sources are
+listed under the reply. Rules: only past answers that are informative, free of dose/chemical text, similar enough (>= 0.55) and
+that address the question (crop and comparison checks) are passed in; a reply containing a dose or quantity is withheld;
+numbers that are in neither the sources nor the question are flagged; the reply never changes the gate decision. With no safe
+sources, or for live-data questions (weather, prices), there is nothing to ground on, so the card falls back to plain Gemini
+advice and is labelled "not grounded in the corpus". A button compares against Gemini without the corpus.
+
+RAG is **not yet evaluated** for correctness or faithfulness beyond these automatic checks; `tests/test_rag.py` covers the
+checks with a mocked model. It costs one extra Gemini call per question (free-tier quota is small).
+
 ## Data source (cite this)
 
 The corpus (`data/raw/kcc_mapping_full.csv`, 139,542 raw question/answer rows; 138,875 queries after cleaning) was

@@ -71,6 +71,19 @@ def answer_risk(answer: str | None) -> str | None:
     return None
 
 
+def dose_in_text(text: str | None) -> str | None:
+    """Narrower than answer_risk: only quantities, doses and veterinary drug schedules, not words like
+    'pesticide'. Used on AI-generated text, where general advice such as "use bio-pesticides" is fine but a
+    number to spray or inject is not."""
+    if not text:
+        return None
+    if _DOSE.search(text):
+        return "dosage/quantity instruction"
+    if _VET_DRUG.search(text):
+        return "veterinary drug or treatment schedule"
+    return None
+
+
 @dataclass
 class GateThresholds:
     intent_confidence: float = 0.70
@@ -96,6 +109,7 @@ def decide(
     answer: str | None = None,
     retrieved_type: str | None = None,
     coverage_problem: str | None = None,
+    temporal_problem: str | None = None,
 ) -> GateDecision:
     if thresholds.block_high_stakes and query_type in HIGH_STAKES_TYPES:
         return GateDecision(
@@ -103,6 +117,8 @@ def decide(
             f"high-stakes query type '{query_type}' always routed to a human FTA",
             "high_stakes",
         )
+    if thresholds.block_time_sensitive and temporal_problem:
+        return GateDecision("ESCALATE", temporal_problem, "time_sensitive")
     if thresholds.block_time_sensitive and query_type in TIME_SENSITIVE_TYPES:
         return GateDecision(
             "ESCALATE",

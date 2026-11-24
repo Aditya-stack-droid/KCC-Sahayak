@@ -90,3 +90,23 @@ def test_identical_questions_are_cached(monkeypatch):
     gemini.suggest("same question")
     gemini.suggest("same question")
     assert len(calls) == 1
+
+
+def test_translate_uses_target_language_and_is_cached_per_language(monkeypatch):
+    monkeypatch.setenv("GEMINI_API_KEY", "k")
+    seen = []
+
+    def fake(req, timeout):
+        seen.append(json.loads(req.data)["systemInstruction"]["parts"][0]["text"])
+        return FakeResp(json.dumps({"candidates": [{"content": {"parts": [{"text": "অনুবাদ"}]}}]}).encode())
+    monkeypatch.setattr(gemini.urllib.request, "urlopen", fake)
+    assert gemini.translate("sow in november", "as")["text"] == "অনুবাদ"
+    gemini.translate("sow in november", "hi")
+    gemini.translate("sow in november", "as")          # cached
+    assert len(seen) == 2 and "Assamese" in seen[0] and "Hindi" in seen[1]
+
+
+def test_translate_rejects_unknown_language_without_network(monkeypatch):
+    monkeypatch.setenv("GEMINI_API_KEY", "k")
+    monkeypatch.setattr(gemini.urllib.request, "urlopen", lambda *a, **k: (_ for _ in ()).throw(AssertionError("no call")))
+    assert gemini.translate("hello", "xx")["text"] is None

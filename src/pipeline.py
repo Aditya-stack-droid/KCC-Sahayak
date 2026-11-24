@@ -29,7 +29,7 @@ from confidence_gate import GateThresholds, decide  # noqa: E402
 from intent_model import IntentHead  # noqa: E402
 from lang import detect_register  # noqa: E402
 from ner import extract_entities  # noqa: E402
-from query_match import coverage_problem  # noqa: E402
+from query_match import coverage_problem, temporal_problem  # noqa: E402
 from retrieval import HybridRetriever  # noqa: E402
 
 LEGACY_INTENT_DIR = ROOT / "models" / "intent_classifier"
@@ -181,6 +181,7 @@ class KCCSahayakPipeline:
             thresholds=th,
             answer=top["answer"],
             retrieved_type=top.get("type"),
+            temporal_problem=temporal_problem(text),
             coverage_problem=coverage_problem(text, top.get("matched_question", ""), top.get("answer", "")) if top.get("matched_question") else None,
         )
         return {

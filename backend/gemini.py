@@ -25,12 +25,16 @@ TIMEOUT_S = 25
 
 SYSTEM_PROMPT = (
     "You are an agricultural extension assistant for Indian farmers, supporting the Kisan Call Centre. "
-    "Reply in the same language and script as the farmer's question (English, Hinglish in Roman script, or Hindi in Devanagari). "
+    "Reply in the same language and script as the farmer's question: a question written in English gets an English reply, "
+    "Hinglish in Roman script gets Hinglish, Hindi in Devanagari gets Hindi. "
     "Be practical and concise: at most 90 words, plain sentences, no markdown, no headings. "
     "NEVER give exact pesticide, herbicide, fungicide or fertiliser doses, concentrations or mixing ratios, and never name a "
     "specific brand. For pest, disease or nutrient questions give only general integrated-management steps (scouting, "
     "cultural and biological options, the type of product) and tell the farmer to confirm the product and dose with the "
     "local Krishi Vigyan Kendra (KVK) or the Kisan Call Centre on 1800-180-1551. "
+    "You have no live data and no regional price data: if the question is about current or upcoming weather, market "
+    "prices, or other real-time conditions, say you cannot know them and point to the IMD / Meghdoot app, Agmarknet "
+    "or e-NAM, or the Kisan Call Centre. "
     "If the question is not about agriculture, farming, livestock or fisheries, say you can only help with farming questions. "
     "If you are unsure, say so."
 )
@@ -62,20 +66,21 @@ def model_name() -> str:
     return os.environ.get("GEMINI_MODEL", DEFAULT_MODEL)
 
 
-def suggest(text: str) -> dict:
+def _generate(system: str, text: str, temperature: float = 0.3, tag: str = "") -> dict:
     """Return {"available": bool, "text": str|None, "model": str, "error": str|None}. Never raises."""
     model = model_name()
     if not configured():
         return {"available": False, "text": None, "model": model,
                 "error": "Gemini is not configured. Add GEMINI_API_KEY to a .env file and restart the server."}
-    key_text = text.strip()
+    user_text = text.strip()
+    key_text = f"{tag}|{user_text}"
     if key_text in _cache:
         _cache.move_to_end(key_text)
         return _cache[key_text]
     body = {
-        "systemInstruction": {"parts": [{"text": SYSTEM_PROMPT}]},
-        "contents": [{"role": "user", "parts": [{"text": key_text}]}],
-        "generationConfig": {"temperature": 0.3, "maxOutputTokens": 2048},
+        "systemInstruction": {"parts": [{"text": system}]},
+        "contents": [{"role": "user", "parts": [{"text": user_text}]}],
+        "generationConfig": {"temperature": temperature, "maxOutputTokens": 2048},
     }
     req = urllib.request.Request(
         ENDPOINT.format(model=model), data=json.dumps(body).encode("utf-8"), method="POST",
@@ -101,3 +106,30 @@ def suggest(text: str) -> dict:
     while len(_cache) > _CACHE_MAX:
         _cache.popitem(last=False)
     return result
+
+
+def suggest(text: str) -> dict:
+    """Second-opinion advice for a farmer's question."""
+    return _generate(SYSTEM_PROMPT, text)
+
+
+# Target-language instructions. The KCC corpus is English, so other languages are handled by translating the
+# question to English before retrieval and the answer back afterwards. Machine translation: shown as unverified.
+LANGUAGES = {
+    "en": "English",
+    "hi": "Hindi in Devanagari script",
+    "hinglish": "Hinglish (Hindi written in Roman script)",
+    "as": "Assamese in Assamese script",
+}
+
+
+def translate(text: str, lang: str) -> dict:
+    """Translate `text` into the language code `lang` (en, hi, hinglish, as). Same return shape as suggest()."""
+    target = LANGUAGES.get(lang)
+    if target is None:
+        return {"available": True, "text": None, "model": model_name(), "error": f"Unsupported language '{lang}'."}
+    system = (f"You translate Indian farming text into {target}. Output only the translation: no notes, quotes or "
+              "markdown. Keep crop and variety names, numbers, units, phone numbers and abbreviations (KVK, IMD) "
+              "exactly as given. If the text is already in the target language, return it unchanged.")
+    return _generate(system, text, temperature=0.1, tag=f"tr:{lang}")
+

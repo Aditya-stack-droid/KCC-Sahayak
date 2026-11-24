@@ -307,6 +307,12 @@ input[type="range"] { width: 100%; accent-color: var(--green-600); }
 .cmp-card p { font-size: 1.05rem; line-height: 1.45; color: var(--text); }
 .cmp-card small { display: block; margin-top: 8px; color: var(--text-faint); font-size: 0.74rem; }
 .cmp-muted { color: var(--text-faint) !important; font-size: 0.9rem !important; }
+.cmp-label .cmp-title { display: inline; font-size: 0.8rem; font-weight: 700; color: var(--text); margin: 0; }
+.cmp-sources { margin: 10px 0 0; padding-left: 20px; font-size: 0.82rem; color: var(--text-muted); display: flex; flex-direction: column; gap: 4px; }
+.cmp-sources li.cited { color: var(--text); font-weight: 600; }
+#cmpNotes { color: #b45309; }
+#plainGeminiBtn { margin-top: 10px; }
+#plainGeminiText { margin-top: 8px; padding-top: 8px; border-top: 1px dashed var(--border); }
 
 /* ============ History ============ */
 .history-wrap { margin-top: 40px; }
@@ -410,11 +416,16 @@ details.threshold-box[open] summary { margin-bottom: 14px; }
 .answer-actions { display: flex; gap: 8px; flex-wrap: wrap; }
 .escalate-block { margin-top: 12px; font-size: 0.9rem; color: var(--text-muted); }
 .escalate-block a { color: var(--green-700); font-weight: 600; }
-details.candidates { margin-top: 14px; font-size: 0.86rem; }
-details.candidates summary { cursor: pointer; color: var(--text-muted); font-weight: 600; }
-details.candidates ol { margin: 10px 0 0; padding-left: 20px; display: flex; flex-direction: column; gap: 10px; }
-.cand-sim { font-variant-numeric: tabular-nums; font-weight: 700; color: var(--green-700); margin-right: 4px; }
-.cand-ans { color: var(--text-faint); font-size: 0.8rem; margin-top: 2px; }
+.translation { margin-top: 10px; padding: 10px 14px; border-left: 3px solid var(--green-700); font-size: 1.3rem; line-height: 1.5; }
+.is-original { font-size: 1rem !important; font-weight: 400 !important; color: var(--text-muted) !important; }
+.translation > div { font-size: 1.7rem; font-weight: 600; }
+.translation .orig-label { margin: 10px 0 0; }
+.translation small { display: block; font-size: 0.75rem; color: var(--text-faint); margin-bottom: 4px; }
+.candidates { margin-top: 20px; padding-top: 16px; border-top: 1px dashed var(--border); }
+.candidates h4 { margin: 0 0 12px; font-size: 1.05rem; color: var(--text); }
+.candidates ol { margin: 0; padding-left: 24px; display: flex; flex-direction: column; gap: 14px; font-size: 1.12rem; line-height: 1.45; color: var(--text); }
+.cand-sim { font-variant-numeric: tabular-nums; font-weight: 700; color: var(--green-700); margin-right: 6px; }
+.cand-ans { color: var(--text-muted); font-size: 1.02rem; margin-top: 4px; }
 .badge.reg { background: var(--surface-2); color: var(--text-muted); border: 1px solid var(--border); margin-right: 6px; }
 
 /* advisor console */

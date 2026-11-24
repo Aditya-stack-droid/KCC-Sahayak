@@ -8,7 +8,7 @@
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;500;600;700;800&family=Inter:wght@400;500;600;700&family=Noto+Sans+Devanagari:wght@400;600&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="assets/css/styles.css?v=20261101b">
+<link rel="stylesheet" href="assets/css/styles.css?v=20261103a">
 </head>
 <body>
 <div class="bg-decor" aria-hidden="true"></div>
@@ -59,9 +59,9 @@
     </div>
     <div class="hero-stats">
       <div class="hstat"><span class="hstat-num" data-stat="corpus">—</span><span class="hstat-label">logged Q/A pairs searched</span></div>
-      <div class="hstat"><span class="hstat-num" data-stat="silver_acc">—</span><span class="hstat-label">intent accuracy, held-out calls</span></div>
-      <div class="hstat"><span class="hstat-num" data-stat="gold_acc">—</span><span class="hstat-label">on independent EN / Hinglish / Hindi queries</span></div>
-      <div class="hstat"><span class="hstat-num" data-stat="sel_acc">—</span><span class="hstat-label">accuracy of the auto-answered subset</span></div>
+      <div class="hstat"><span class="hstat-num" data-stat="silver_acc">—</span><span class="hstat-label" data-label="silver_acc">topic accuracy on held-out calls</span></div>
+      <div class="hstat"><span class="hstat-num" data-stat="gold_acc">—</span><span class="hstat-label" data-label="gold_acc">topic accuracy on independent EN / Hinglish / Hindi queries</span></div>
+      <div class="hstat"><span class="hstat-num" data-stat="coverage">—</span><span class="hstat-label" data-label="coverage">of questions answered fully automatically; the rest get provisional guidance while a human confirms</span></div>
     </div>
   </div>
 </section>
@@ -180,6 +180,10 @@
           <button class="btn btn-ghost btn-sm" id="fbDown" aria-label="Not helpful">👎 Not helpful</button>
         </div>
       </div>
+      <section class="candidates" id="candidatesBox">
+        <h4>Closest questions in the KCC corpus</h4>
+        <ol id="candidatesList"></ol>
+      </section>
       <div id="escalateBlock" class="escalate-block" hidden>
         <p>This query is now waiting in the <a href="#advisor">Advisor Console</a>. When an advisor answers it, the answer is added to the system's memory.</p>
       </div>
@@ -190,14 +194,14 @@
           <small id="cmpCorpusQ"></small>
         </div>
         <div class="cmp-card cmp-gemini" id="cmpGemini">
-          <div class="cmp-label">Gemini suggestion <span>AI-generated · not verified · never sent automatically</span></div>
+          <div class="cmp-label"><span class="cmp-title" id="cmpGeminiTitle">AI answer from KCC sources</span> <span id="cmpGeminiSub">AI-generated · not verified · never sent automatically</span></div>
           <p id="cmpGeminiText">Asking Gemini…</p>
+          <ol id="cmpSources" class="cmp-sources" hidden></ol>
+          <small id="cmpNotes"></small>
+          <button class="btn btn-ghost btn-sm" id="plainGeminiBtn" hidden>Compare: Gemini without the corpus</button>
+          <p id="plainGeminiText" class="cmp-muted" hidden></p>
         </div>
       </div>
-      <details class="candidates" id="candidatesBox">
-        <summary>Closest logged questions</summary>
-        <ol id="candidatesList"></ol>
-      </details>
     </div>
   </div>
 
@@ -333,6 +337,6 @@
 <div id="toast" class="toast" hidden></div>
 
 <script src="https://cdn.jsdelivr.net/npm/chart.js@4.4.4/dist/chart.umd.min.js"></script>
-<script src="assets/js/app.js?v=20261101c"></script>
+<script src="assets/js/app.js?v=20261103a"></script>
 </body>
 </html>
